@@ -1,8 +1,29 @@
-Title: Cookbook - Textextraction
+---
+license: Licensed to the Apache Software Foundation (ASF) under one
+         or more contributor license agreements.  See the NOTICE file
+         distributed with this work for additional information
+         regarding copyright ownership.  The ASF licenses this file
+         to you under the Apache License, Version 2.0 (the
+         "License"); you may not use this file except in compliance
+         with the License.  You may obtain a copy of the License at
 
-## Textextraction
+           http://www.apache.org/licenses/LICENSE-2.0
 
-### Extracting Text
+         Unless required by applicable law or agreed to in writing,
+         software distributed under the License is distributed on an
+         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+         specific language governing permissions and limitations
+         under the License.
+         
+title: Cookbook - Textextraction
+---
+
+Textextraction
+==============
+
+Extracting Text
+---------------
 
 See class:org.apache.pdfbox.util.PDFTextStripper  
 See class:org.apache.pdfbox.searchengine.lucene.LucenePDFDocument  
@@ -13,7 +34,8 @@ from a variety of PDF documents. This functionality is encapsulated in the
 org.apache.pdfbox.util.PDFTextStripper and can be easily executed on the command line with 
 org.apache.pdfbox.ExtractText.
 
-### Lucene Integration
+Lucene Integration
+------------------
 
 Lucene is an open source text search library from the Apache Jakarta Project. In order for
 Lucene to be able to index a PDF document it must first be converted to text. PDFBox provides 
@@ -29,14 +51,16 @@ shows details on those fields. This approach is very simple and should be suffic
 most users, if not then you can use some of the advanced text extraction techniques 
 described in the next section.
 
-### Advanced Text Extraction
+Advanced Text Extraction
+------------------------
 
 Some applications will have complex text extraction requiments and neither the command 
 line application nor the LucenePDFDocument will be able to fulfill those requirements. 
 It is possible for users to utilize or extend the PDFTextStripper class to meet some of 
 these requirements.
 
-#### Limiting The Extracted Text
+Limiting The Extracted Text
+---------------------------
 
 There are several ways that we can limit the text that is extracted during the extraction 
 process. The simplest is to specify the range of pages that you want to be extracted. 
@@ -81,13 +105,15 @@ The table below will describe how PDFBox behaves in the various scenarios:
 
 NOTE: PDFTextStripper will check both the startPage/endPage and the startBookmark/endBookmark to determine if text should be extracted from the current page.
 
-#### External Glyph List
+External Glyph List
+-------------------
 
 Some PDF files need to map between glyph names and Unicode values during text extraction. 
 PDFBox comes with an Adobe Glyph List, but you may encounter files with glyph names that 
 are not in that map. To use your own glyphlist file, supply the file name to the ``glyphlist_ext`` JVM property.
 
-#### Right to Left Text
+Right to Left Text
+------------------
 
 Extracting text in languages whose text goes from right to left (such as Arabic and Hebrew)
 in PDF files can result in text that is backwards. PDFBox can normalize and reverse the text

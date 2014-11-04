@@ -16,12 +16,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          specific language governing permissions and limitations
          under the License.
          
-Title: Cookbook - Working with Attachments
+title: Cookbook - Working with Attachments
 ---
 
-# Working with Attachments
+Working with Attachments
+========================
 
-## The PDF File Specification
+The PDF File Specification
+--------------------------
 
 See package:org.apache.pdfbox.pdmodel.common.filespecification  
 See example:EmbeddedFiles  
@@ -39,7 +41,8 @@ the file reference.
 It is also possible to embed a file directly into a PDF. Instead of setting the file 
 attribute of the PDComplexFileSpecification, the EmbeddedFile attribute can be used instead.
 
-## Adding a File Attachment
+Adding a File Attachment
+------------------------
 
 PDF documents can contain file attachments that are accessed from the Document->File Attachments 
 menu. PDFBox allows attachments to be added to and extracted from PDF documents. 
