@@ -1,8 +1,29 @@
-Title: Cookbook - Working with Metadata
+---
+license: Licensed to the Apache Software Foundation (ASF) under one
+         or more contributor license agreements.  See the NOTICE file
+         distributed with this work for additional information
+         regarding copyright ownership.  The ASF licenses this file
+         to you under the Apache License, Version 2.0 (the
+         "License"); you may not use this file except in compliance
+         with the License.  You may obtain a copy of the License at
 
-## Working with Metadata
+           http://www.apache.org/licenses/LICENSE-2.0
 
-### Introduction
+         Unless required by applicable law or agreed to in writing,
+         software distributed under the License is distributed on an
+         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+         specific language governing permissions and limitations
+         under the License.
+         
+title: Cookbook - Working with Metadata
+----
+
+Working with Metadata
+=====================
+
+Introduction
+------------
 
 PDF documents can contain information describing the document itself or certain objects 
 within the document such as the author of the document or it's creation date. 
@@ -28,7 +49,8 @@ provides a high level API to that information:
     System.out.println( "Trapped=" + info.getTrapped() );      
       
 
-### Accessing PDF Metadata
+Accessing PDF Metadata
+----------------------
 
 See class:org.apache.pdfbox.pdmodel.common.PDMetadata  
 See example:AddMetadataFromDocInfo  

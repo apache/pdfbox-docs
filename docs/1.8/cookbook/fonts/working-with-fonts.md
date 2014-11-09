@@ -1,8 +1,29 @@
-Title: Cookbook - Working with Fonts
+---
+license: Licensed to the Apache Software Foundation (ASF) under one
+         or more contributor license agreements.  See the NOTICE file
+         distributed with this work for additional information
+         regarding copyright ownership.  The ASF licenses this file
+         to you under the Apache License, Version 2.0 (the
+         "License"); you may not use this file except in compliance
+         with the License.  You may obtain a copy of the License at
 
-## Working with Fonts
+           http://www.apache.org/licenses/LICENSE-2.0
 
-### Standard 14 Fonts
+         Unless required by applicable law or agreed to in writing,
+         software distributed under the License is distributed on an
+         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+         specific language governing permissions and limitations
+         under the License.
+         
+title: Cookbook - Working with Fonts
+---
+
+Working with Fonts
+==================
+
+Standard 14 Fonts
+-----------------
 
 The PDF specification states that a standard set of 14 fonts will always be available when consuming PDF documents. In PDFBox these are defined as constants in the PDType1Font class.
 
@@ -23,7 +44,8 @@ The PDF specification states that a standard set of 14 fonts will always be avai
 | PDType1Font.SYMBOL | Symbol Set |
 | PDType1Font.ZAPF_DINGBATS | Dingbat Typeface |
 
-### Hello World using a PDF base font
+Hello World using a PDF base font
+---------------------------------
 
 This small sample shows how to create a new document and print the text "Hello World" using one of the PDF base fonts.
 
@@ -53,7 +75,8 @@ This small sample shows how to create a new document and print the text "Hello W
 	document.save( "Hello World.pdf");
 	document.close();
 
-### Hello World using a TrueType font
+Hello World using a TrueType font
+---------------------------------
 
 This small sample shows how to create a new document and print the text "Hello World" using a TrueType font.
 
@@ -92,7 +115,8 @@ names to TTF font files. The UNKNOWN_FONT property in that file will tell PDFBox
 use when no mapping exists. 
 
 
-### Hello World using a Postscript Type1 font
+Hello World using a Postscript Type1 font
+-----------------------------------------
 
 This small sample shows how to create a new document and print the text "Hello World" using a Postscript Type1 font.
 
