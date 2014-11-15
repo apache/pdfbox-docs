@@ -39,7 +39,7 @@ Get the docoument catalog and the AcroForm which might be contained within.
 	PDDocumentCatalog docCatalog = pdfDocument.getDocumentCatalog();
     PDAcroForm acroForm = docCatalog.getAcroForm();
 
-Retrieve an individual field and set it's value.
+Retrieve an individual field and set its value.
 
 	:::java
     // as there might not be an AcroForm entry a null check is necessary
