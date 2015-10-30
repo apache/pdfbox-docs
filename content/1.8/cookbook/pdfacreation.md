@@ -1,7 +1,5 @@
 ---
-layout: default
-title:     Create a valid PDF/A document
-Notice:    Licensed to the Apache Software Foundation (ASF) under one
+license:   Licensed to the Apache Software Foundation (ASF) under one
            or more contributor license agreements.  See the NOTICE file
            distributed with this work for additional information
            regarding copyright ownership.  The ASF licenses this file
@@ -17,6 +15,9 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
            KIND, either express or implied.  See the License for the
            specific language governing permissions and limitations
            under the License.
+
+layout:    default
+title:     Create a valid PDF/A document
 ---
 
 # PDF/A Creation
