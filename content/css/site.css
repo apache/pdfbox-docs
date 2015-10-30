@@ -1,0 +1,155 @@
+/*
+* Licensed to the Apache Software Foundation (ASF) under one or more
+* contributor license agreements.  See the NOTICE file distributed with
+* this work for additional information regarding copyright ownership.
+* The ASF licenses this file to You under the Apache License, Version 2.0
+* (the "License"); you may not use this file except in compliance with
+* the License.  You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+/*
+ *  The follwing rules are in addition to the base bootstrap css
+ *  Some of the CSS is copied over from bootstrap as markdown, the primary
+ *  format used to add content, doesn't allow to classes to the elements
+ */
+
+body > .container {
+  min-width: 750px;
+  max-width: none !important;
+  padding-top: 20px;
+}
+
+/* Add some space around the pdfbox logo */
+.logo {
+    padding: 12px 0px;
+    width: 200px;
+}
+
+/* Styling for the copyright footer */
+.footer {
+    height: 150px;
+    margin-top: 70px;
+    padding: 30px 0;
+    color: #e8e8e8;
+    border-top: 1px solid #e5e5e5;
+    background: url("/images/footer.png") #3f3f3f;
+}
+
+/*
+ * Typography overwrites to bootstrap 
+ */
+
+/* headings */
+h1, h2, h3, h4, h5 {
+    font-family: "OpenSans", "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
+    font-weight: 300;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+/* features list */
+h4 .oi {
+    position: relative;
+    top: 5px;
+    font-size: 24px;
+    margin-right: 8px;
+    color: #0088cc;
+}
+
+code, pre {
+    color: darkslategrey;
+}
+
+/* 
+ * Default styling for the tables copied over from bootstrap 
+ * to get basic styling for tables created through markdown 
+ */
+table {
+    width: 100%;
+}
+
+table th, table td {
+    padding: 8px;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+table tr:nth-child(even) td, table tr.even td { 
+    background: #f9f9f9; 
+}
+
+/*
+ * Completed items on the "ideas" list.
+ */
+
+.complete {
+  text-decoration: line-through;
+  color: #bbb;
+ }
+
+/*
+ * Custom sidebar, replaces Bootstrap .nav with nested tree.
+ */
+
+.sidebar ul {
+    padding-left: 20px;
+}
+
+.sidebar, .sidebar > ul {
+    padding-left: 0;
+}
+
+.sidebar li {
+    list-style: none;
+}
+
+.sidebar li a {
+    display: block;
+    padding: .20em 15px;
+}
+
+.sidebar li a:hover, .sidebar li a:focus {
+    text-decoration: none;
+    background-color: #eee;
+}
+
+.sidebar-header {
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #999999;
+    text-transform: uppercase;
+}
+
+.sidebar li + .sidebar-header {
+    margin-top: 8px;
+}
+
+.sidebar .sidebar-node > a::before {
+  content: '\e034';
+  font-family: Icons;
+  font-size: 10px;
+  padding-right: 3px;
+}
+
+.sidebar li.sidebar-node > a {
+    padding-left: 5px;
+}
+
+.sidebar-node.collapsed > ul{
+  display: none;
+}
+
+.sidebar-node.collapsed > a::before {
+  content: '\e036';
+}

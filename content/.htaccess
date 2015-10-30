@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteRule ^apidocs(/?)$ /docs/1.8.10/javadocs [R=301,L]
+RewriteRule ^commandlineutilities(/?)(.*)$ /commandline [R=301,L]
+RewriteRule ^downloads\.html$ /download.cgi
+RewriteRule ^downloads\.cgi$ /download.cgi
+
+ErrorDocument 403 /errors/403.html
+ErrorDocument 404 /errors/404.html
+
+Options -Indexes

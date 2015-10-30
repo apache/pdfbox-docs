@@ -1,0 +1,15 @@
+---
+layout: default
+title:  Page Not Found
+---
+# 404
+
+We're sorry, but the page you requested cannot be found. 
+
+Maybe you 
+
+* typed the address incorrectly
+* followed a link from another site that pointed to this page.
+
+
+If you came by following a broken link, please report the [issue](https://issues.apache.org/jira/browse/pdfbox).
