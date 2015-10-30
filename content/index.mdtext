@@ -23,22 +23,6 @@ The project is a volunteer effort and we're always looking for interested people
 us improve PDFBox. There are a multitude of ways that you can help us depending on your
 skills. Subscribe to the [Mailing Lists](/mailinglists.html) and find out how you can help.
 
-
-<h2 id="subprojects">Subprojects</h2>
-
-<div class="row">
-    <div class="col-md-4">
-        <p>FontBox</p>
-    </div>
-    <div class="col-md-4">
-        <p>Preflight</p>
-    </div>
-    <div class="col-md-4">
-        <p>XMPBox</p>
-    </div>
-</div>
-
-
 <h2 id="features">Features</h2>
 
 <div class="row">
