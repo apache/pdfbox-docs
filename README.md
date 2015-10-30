@@ -1,23 +1,10 @@
 Apache PDFBox Documentation
 ===========================
 
-***We are moving our documentation sources over to this site. At this point in time the content is limited.***
-
-The documentation project for [Apache PDFBox](http://pdfbox.apache.org/).
-
-The project provides the content for the documentation, which will be pulled from a build process based on the [ASF Content Management System](http://www.apache.org/dev/cms.html).
-
 Documentation Format
 --------------------
 
 All of the [Apache PDFBox](http://pdfbox.apache.org/) documentation is written with [markdown](http://daringfireball.net/projects/markdown/syntax). 
-
-Documentation Structure
------------------------
-
-    docs/
-    docs/VERSION
-    docs/VERSION/CHAPTER
 
 Contributing
 ------------
