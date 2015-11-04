@@ -100,7 +100,7 @@ for(PDPage page : document.getPages())
 ~~~
 
 ### PDF Rendering
-With PDFBox 2.0.0 `PDPage.convertToImage`has been removed. Instead the new `PDFRenderer` class shall be used.
+With PDFBox 2.0.0 `PDPage.convertToImage` has been removed. Instead the new `PDFRenderer` class shall be used.
 
 ~~~java
 PDDocument document = PDDocument.load(new File(pdfFilename));
@@ -115,6 +115,8 @@ for (PDPage page : document.getPages())
 }
 document.close();
 ~~~
+
+`ImageIOUtil` has been moved into the `org.apache.pdfbox.tools.imageio` package.
 
 ### PDF Printing
 With PDFBox 2.0.0 `PDFPrinter` has been removed.
