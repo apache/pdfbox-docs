@@ -44,38 +44,7 @@
     {% if headers.notice %}
         <!-- {{ headers.notice }} -->
     {% endif %}
-    
-    <!-- Twitter Bootstrap and jQuery after this line. -->
-    <script src="//code.jquery.com/jquery-latest.js"></script>
-    <script src="/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            // collapse tree nodes dynamically to support noscript
-            $('.sidebar-node').addClass('collapsed');
-            
 
-            // toggle expand/collapse
-            $('.sidebar-node > a').click(function(e) {
-                $(this).parent().toggleClass('collapsed');
-                e.preventDefault();
-            });
-
-            // preserve expand/collapse across page navigation
-            var path = document.location.pathname;
-            if (path.indexOf('/2.0') == 0) {
-                $('#v2-0').removeClass('collapsed');
-                if (path.indexOf('/2.0/cookbook') == 0) {
-                    $('#v2-0-cookbook').removeClass('collapsed');
-                }
-            } else {
-                $('#v1-8').removeClass('collapsed');
-                if (path.indexOf('/1.8/cookbook') == 0) {
-                    $('#v1-8-cookbook').removeClass('collapsed');
-                }
-            }
-
-        });
-    </script>
 </head>
 
 <body>
@@ -85,14 +54,17 @@
           <a href="/index.html">
             <img class="logo" src="/images/logo-head.gif">
           </a>
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Menu</button>
+          </p>
         </div>
       </div>
     </nav>
     
     <div class="container">
         
-        <div class="row">
-            <div class="col-xs-3">
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
                 
                 <ul class="sidebar">
                     <li class="sidebar-header">Apache PDFBox</li>
@@ -163,7 +135,7 @@
                     <li><a href="http://www.apache.org/security/">Security</a></li>
                 </ul>
             </div>
-            <div class="col-xs-9">
+            <div class="col-xs-12 col-sm-9">
                 {{ content }}
             </div>
         </div>
@@ -182,6 +154,46 @@
             </div>
         </div>
     </footer>
+
+        <!-- Twitter Bootstrap and jQuery after this line. -->
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        
+        $(document).ready(function () {
+                $('[data-toggle="offcanvas"]').click(function () {
+                $('.row-offcanvas').toggleClass('active')
+            });
+        });
+        
+        $(function() {
+            // collapse tree nodes dynamically to support noscript
+            $('.sidebar-node').addClass('collapsed');
+            
+
+            // toggle expand/collapse
+            $('.sidebar-node > a').click(function(e) {
+                $(this).parent().toggleClass('collapsed');
+                e.preventDefault();
+            });
+
+            // preserve expand/collapse across page navigation
+            var path = document.location.pathname;
+            if (path.indexOf('/2.0') == 0) {
+                $('#v2-0').removeClass('collapsed');
+                if (path.indexOf('/2.0/cookbook') == 0) {
+                    $('#v2-0-cookbook').removeClass('collapsed');
+                }
+            } else {
+                $('#v1-8').removeClass('collapsed');
+                if (path.indexOf('/1.8/cookbook') == 0) {
+                    $('#v1-8-cookbook').removeClass('collapsed');
+                }
+            }
+
+        });
+    </script>
+
 </body>
 
 </html>
