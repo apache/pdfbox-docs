@@ -169,7 +169,7 @@ This application will take a list of pdf documents and merge them, saving the re
 
 usage: ``java -jar pdfbox-app-x.y.z.jar PDFMerger <Source PDF files (2 ..n)> <Target PDF file>``
 
-## PDFSplit ## {#pdfSplit}
+## PDFSplit ##
 
 This application will take an existing PDF document and split it into a number of other documents
 
