@@ -118,6 +118,18 @@ document.close();
 
 `ImageIOUtil` has been moved into the `org.apache.pdfbox.tools.imageio` package.
 
+<p class="alert alert-warning">Important notice when using PDFBox with Java 8
+</p>
+Due to the change of the java color management module towards "LittleCMS", users can experience slow performance in color operations.
+Solution: disable LittleCMS in favour of the old KCMS (Kodak Color Management System):
+
+- start with ``-Dsun.java2d.cmm=sun.java2d.cmm.kcms.KcmsServiceProvider``or call
+- ``System.setProperty("sun.java2d.cmm", "sun.java2d.cmm.kcms.KcmsServiceProvider");``
+
+Sources:  
+http://www.subshell.com/en/subshell/blog/Wrong-Colors-in-Images-with-Java8-100.html  
+https://bugs.openjdk.java.net/browse/JDK-8041125
+
 ### PDF Printing
 With PDFBox 2.0.0 `PDFPrinter` has been removed.
 
