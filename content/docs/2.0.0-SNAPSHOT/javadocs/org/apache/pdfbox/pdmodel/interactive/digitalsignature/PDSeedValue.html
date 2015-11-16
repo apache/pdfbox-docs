@@ -1,0 +1,995 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PDSeedValue (Apache PDFBox 2.0.0-SNAPSHOT API)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="PDSeedValue (Apache PDFBox 2.0.0-SNAPSHOT API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/PDSeedValue.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDPropBuildDataDict.html" title="class in org.apache.pdfbox.pdmodel.interactive.digitalsignature"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValueMDP.html" title="class in org.apache.pdfbox.pdmodel.interactive.digitalsignature"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html" target="_top">Frames</a></li>
+<li><a href="PDSeedValue.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.apache.pdfbox.pdmodel.interactive.digitalsignature</div>
+<h2 title="Class PDSeedValue" class="title">Class PDSeedValue</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>org.apache.pdfbox.pdmodel.interactive.digitalsignature.PDSeedValue</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObjectable.html" title="interface in org.apache.pdfbox.pdmodel.common">COSObjectable</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">PDSeedValue</span>
+extends <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
+implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObjectable.html" title="interface in org.apache.pdfbox.pdmodel.common">COSObjectable</a></pre>
+<div class="block">This represents a pdf signature seed value dictionary.</div>
+<dl><dt><span class="strong">Author:</span></dt>
+  <dd>Thomas Chojecki</dd></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#FLAG_ADD_REV_INFO">FLAG_ADD_REV_INFO</a></strong></code>
+<div class="block">A Ff flag.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#FLAG_DIGEST_METHOD">FLAG_DIGEST_METHOD</a></strong></code>
+<div class="block">A Ff flag.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#FLAG_FILTER">FLAG_FILTER</a></strong></code>
+<div class="block">A Ff flag.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#FLAG_LEGAL_ATTESTATION">FLAG_LEGAL_ATTESTATION</a></strong></code>
+<div class="block">A Ff flag.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#FLAG_REASON">FLAG_REASON</a></strong></code>
+<div class="block">A Ff flag.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#FLAG_SUBFILTER">FLAG_SUBFILTER</a></strong></code>
+<div class="block">A Ff flag.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#FLAG_V">FLAG_V</a></strong></code>
+<div class="block">A Ff flag.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#PDSeedValue()">PDSeedValue</a></strong>()</code>
+<div class="block">Default constructor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#PDSeedValue(org.apache.pdfbox.cos.COSDictionary)">PDSeedValue</a></strong>(<a href="../../../../../../org/apache/pdfbox/cos/COSDictionary.html" title="class in org.apache.pdfbox.cos">COSDictionary</a>&nbsp;dict)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/cos/COSDictionary.html" title="class in org.apache.pdfbox.cos">COSDictionary</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#getCOSObject()">getCOSObject</a></strong>()</code>
+<div class="block">Convert this standard java object to a COS dictionary.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#getDigestMethod()">getDigestMethod</a></strong>()</code>
+<div class="block">An array of names indicating acceptable digest algorithms to use when
+ signing.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#getFilter()">getFilter</a></strong>()</code>
+<div class="block">If <b>Filter</b> is not null and the <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#isFilterRequired()"><code>isFilterRequired()</code></a> indicates this entry is a
+ required constraint, then the signature handler specified by this entry shall be used when
+ signing; otherwise, signing shall not take place.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#getLegalAttestation()">getLegalAttestation</a></strong>()</code>
+<div class="block">(Optional, PDF 1.6) An array of text strings that specifying possible legal
+ attestations.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValueMDP.html" title="class in org.apache.pdfbox.pdmodel.interactive.digitalsignature">PDSeedValueMDP</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#getMDP()">getMDP</a></strong>()</code>
+<div class="block">(Optional; PDF 1.6) A dictionary containing a single entry whose key is P
+ and whose value is an integer between 0 and 3.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#getReasons()">getReasons</a></strong>()</code>
+<div class="block">If the Reasons array is provided and <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#isReasonRequired()"><code>isReasonRequired()</code></a> indicates that
+ Reasons is a required constraint, one of the reasons in the array shall be used
+ for the signature dictionary; otherwise signing shall not take place.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#getSubFilter()">getSubFilter</a></strong>()</code>
+<div class="block">If <b>SubFilter</b> is not null and the <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#isSubFilterRequired()"><code>isSubFilterRequired()</code></a> indicates this
+ entry is a required constraint, then the first matching encodings shall be used when
+ signing; otherwise, signing shall not take place.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValueTimeStamp.html" title="class in org.apache.pdfbox.pdmodel.interactive.digitalsignature">PDSeedValueTimeStamp</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#getTimeStamp()">getTimeStamp</a></strong>()</code>
+<div class="block">(Optional; PDF 1.6) A time stamp dictionary containing two entries.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>float</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#getV()">getV</a></strong>()</code>
+<div class="block">The minimum required capability of the signature field seed value
+ dictionary parser.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#isAddRevInfoRequired()">isAddRevInfoRequired</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#isDigestMethodRequired()">isDigestMethodRequired</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#isFilterRequired()">isFilterRequired</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#isLegalAttestationRequired()">isLegalAttestationRequired</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#isReasonRequired()">isReasonRequired</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#isSubFilterRequired()">isSubFilterRequired</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#isVRequired()">isVRequired</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#setAddRevInfoRequired(boolean)">setAddRevInfoRequired</a></strong>(boolean&nbsp;flag)</code>
+<div class="block">set true if the AddRevInfo shall be required.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#setDigestMethod(java.util.List)">setDigestMethod</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&gt;&nbsp;digestMethod)</code>
+<div class="block">(Optional, PDF 1.7) An array of names indicating acceptable digest
+ algorithms to use when signing.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#setDigestMethodRequired(boolean)">setDigestMethodRequired</a></strong>(boolean&nbsp;flag)</code>
+<div class="block">set true if the DigestMethod shall be required.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#setFilter(org.apache.pdfbox.cos.COSName)">setFilter</a></strong>(<a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&nbsp;filter)</code>
+<div class="block">(Optional) The signature handler that shall be used to sign the signature field.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#setFilterRequired(boolean)">setFilterRequired</a></strong>(boolean&nbsp;flag)</code>
+<div class="block">set true if the filter shall be required.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#setLegalAttestation(java.util.List)">setLegalAttestation</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;legalAttestation)</code>
+<div class="block">(Optional, PDF 1.6) An array of text strings that specifying possible legal
+ attestations.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#setLegalAttestationRequired(boolean)">setLegalAttestationRequired</a></strong>(boolean&nbsp;flag)</code>
+<div class="block">set true if the LegalAttestation shall be required.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#setMPD(org.apache.pdfbox.pdmodel.interactive.digitalsignature.PDSeedValueMDP)">setMPD</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValueMDP.html" title="class in org.apache.pdfbox.pdmodel.interactive.digitalsignature">PDSeedValueMDP</a>&nbsp;mdp)</code>
+<div class="block">(Optional; PDF 1.6) A dictionary containing a single entry whose key is P
+ and whose value is an integer between 0 and 3.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#setReasonRequired(boolean)">setReasonRequired</a></strong>(boolean&nbsp;flag)</code>
+<div class="block">set true if the Reason shall be required.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#setReasonsd(java.util.List)">setReasonsd</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;reasons)</code>
+<div class="block">(Optional) An array of text strings that specifying possible reasons for signing
+ a document.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#setSubFilter(java.util.List)">setSubFilter</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&gt;&nbsp;subfilter)</code>
+<div class="block">(Optional) An array of names indicating encodings to use when signing.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#setSubFilterRequired(boolean)">setSubFilterRequired</a></strong>(boolean&nbsp;flag)</code>
+<div class="block">set true if the subfilter shall be required.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#setTimeStamp(org.apache.pdfbox.pdmodel.interactive.digitalsignature.PDSeedValueTimeStamp)">setTimeStamp</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValueTimeStamp.html" title="class in org.apache.pdfbox.pdmodel.interactive.digitalsignature">PDSeedValueTimeStamp</a>&nbsp;timestamp)</code>
+<div class="block">(Optional; PDF 1.6) A time stamp dictionary containing two entries.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#setV(float)">setV</a></strong>(float&nbsp;minimumRequiredCapability)</code>
+<div class="block">(Optional) The minimum required capability of the signature field seed value
+ dictionary parser.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#setVRequired(boolean)">setVRequired</a></strong>(boolean&nbsp;flag)</code>
+<div class="block">set true if the V entry shall be required.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="FLAG_FILTER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FLAG_FILTER</h4>
+<pre>public static final&nbsp;int FLAG_FILTER</pre>
+<div class="block">A Ff flag.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.pdfbox.pdmodel.interactive.digitalsignature.PDSeedValue.FLAG_FILTER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FLAG_SUBFILTER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FLAG_SUBFILTER</h4>
+<pre>public static final&nbsp;int FLAG_SUBFILTER</pre>
+<div class="block">A Ff flag.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.pdfbox.pdmodel.interactive.digitalsignature.PDSeedValue.FLAG_SUBFILTER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FLAG_V">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FLAG_V</h4>
+<pre>public static final&nbsp;int FLAG_V</pre>
+<div class="block">A Ff flag.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.pdfbox.pdmodel.interactive.digitalsignature.PDSeedValue.FLAG_V">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FLAG_REASON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FLAG_REASON</h4>
+<pre>public static final&nbsp;int FLAG_REASON</pre>
+<div class="block">A Ff flag.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.pdfbox.pdmodel.interactive.digitalsignature.PDSeedValue.FLAG_REASON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FLAG_LEGAL_ATTESTATION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FLAG_LEGAL_ATTESTATION</h4>
+<pre>public static final&nbsp;int FLAG_LEGAL_ATTESTATION</pre>
+<div class="block">A Ff flag.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.pdfbox.pdmodel.interactive.digitalsignature.PDSeedValue.FLAG_LEGAL_ATTESTATION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FLAG_ADD_REV_INFO">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FLAG_ADD_REV_INFO</h4>
+<pre>public static final&nbsp;int FLAG_ADD_REV_INFO</pre>
+<div class="block">A Ff flag.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.pdfbox.pdmodel.interactive.digitalsignature.PDSeedValue.FLAG_ADD_REV_INFO">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FLAG_DIGEST_METHOD">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>FLAG_DIGEST_METHOD</h4>
+<pre>public static final&nbsp;int FLAG_DIGEST_METHOD</pre>
+<div class="block">A Ff flag.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.pdfbox.pdmodel.interactive.digitalsignature.PDSeedValue.FLAG_DIGEST_METHOD">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="PDSeedValue()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PDSeedValue</h4>
+<pre>public&nbsp;PDSeedValue()</pre>
+<div class="block">Default constructor.</div>
+</li>
+</ul>
+<a name="PDSeedValue(org.apache.pdfbox.cos.COSDictionary)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>PDSeedValue</h4>
+<pre>public&nbsp;PDSeedValue(<a href="../../../../../../org/apache/pdfbox/cos/COSDictionary.html" title="class in org.apache.pdfbox.cos">COSDictionary</a>&nbsp;dict)</pre>
+<div class="block">Constructor.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>dict</code> - The signature dictionary.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getCOSObject()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCOSObject</h4>
+<pre>public&nbsp;<a href="../../../../../../org/apache/pdfbox/cos/COSDictionary.html" title="class in org.apache.pdfbox.cos">COSDictionary</a>&nbsp;getCOSObject()</pre>
+<div class="block">Convert this standard java object to a COS dictionary.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObjectable.html#getCOSObject()">getCOSObject</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObjectable.html" title="interface in org.apache.pdfbox.pdmodel.common">COSObjectable</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>The COS dictionary that matches this Java object.</dd></dl>
+</li>
+</ul>
+<a name="isFilterRequired()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isFilterRequired</h4>
+<pre>public&nbsp;boolean&nbsp;isFilterRequired()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the Filter is required</dd></dl>
+</li>
+</ul>
+<a name="setFilterRequired(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setFilterRequired</h4>
+<pre>public&nbsp;void&nbsp;setFilterRequired(boolean&nbsp;flag)</pre>
+<div class="block">set true if the filter shall be required.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>flag</code> - if true, the specified Filter shall be used when signing.</dd></dl>
+</li>
+</ul>
+<a name="isSubFilterRequired()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isSubFilterRequired</h4>
+<pre>public&nbsp;boolean&nbsp;isSubFilterRequired()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the SubFilter is required</dd></dl>
+</li>
+</ul>
+<a name="setSubFilterRequired(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSubFilterRequired</h4>
+<pre>public&nbsp;void&nbsp;setSubFilterRequired(boolean&nbsp;flag)</pre>
+<div class="block">set true if the subfilter shall be required.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>flag</code> - if true, the first supported SubFilter in the array shall be used when signing.</dd></dl>
+</li>
+</ul>
+<a name="isDigestMethodRequired()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isDigestMethodRequired</h4>
+<pre>public&nbsp;boolean&nbsp;isDigestMethodRequired()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the DigestMethod is required</dd></dl>
+</li>
+</ul>
+<a name="setDigestMethodRequired(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDigestMethodRequired</h4>
+<pre>public&nbsp;void&nbsp;setDigestMethodRequired(boolean&nbsp;flag)</pre>
+<div class="block">set true if the DigestMethod shall be required.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>flag</code> - if true, one digest from the array shall be used.</dd></dl>
+</li>
+</ul>
+<a name="isVRequired()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isVRequired</h4>
+<pre>public&nbsp;boolean&nbsp;isVRequired()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the V entry is required</dd></dl>
+</li>
+</ul>
+<a name="setVRequired(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setVRequired</h4>
+<pre>public&nbsp;void&nbsp;setVRequired(boolean&nbsp;flag)</pre>
+<div class="block">set true if the V entry shall be required.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>flag</code> - if true, the V entry shall be used.</dd></dl>
+</li>
+</ul>
+<a name="isReasonRequired()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isReasonRequired</h4>
+<pre>public&nbsp;boolean&nbsp;isReasonRequired()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the Reason is required</dd></dl>
+</li>
+</ul>
+<a name="setReasonRequired(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setReasonRequired</h4>
+<pre>public&nbsp;void&nbsp;setReasonRequired(boolean&nbsp;flag)</pre>
+<div class="block">set true if the Reason shall be required.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>flag</code> - if true, the Reason entry shall be used.</dd></dl>
+</li>
+</ul>
+<a name="isLegalAttestationRequired()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isLegalAttestationRequired</h4>
+<pre>public&nbsp;boolean&nbsp;isLegalAttestationRequired()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the LegalAttestation is required</dd></dl>
+</li>
+</ul>
+<a name="setLegalAttestationRequired(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setLegalAttestationRequired</h4>
+<pre>public&nbsp;void&nbsp;setLegalAttestationRequired(boolean&nbsp;flag)</pre>
+<div class="block">set true if the LegalAttestation shall be required.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>flag</code> - if true, the LegalAttestation entry shall be used.</dd></dl>
+</li>
+</ul>
+<a name="isAddRevInfoRequired()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isAddRevInfoRequired</h4>
+<pre>public&nbsp;boolean&nbsp;isAddRevInfoRequired()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the AddRevInfo is required</dd></dl>
+</li>
+</ul>
+<a name="setAddRevInfoRequired(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setAddRevInfoRequired</h4>
+<pre>public&nbsp;void&nbsp;setAddRevInfoRequired(boolean&nbsp;flag)</pre>
+<div class="block">set true if the AddRevInfo shall be required.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>flag</code> - if true, the AddRevInfo shall be used.</dd></dl>
+</li>
+</ul>
+<a name="getFilter()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFilter</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getFilter()</pre>
+<div class="block">If <b>Filter</b> is not null and the <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#isFilterRequired()"><code>isFilterRequired()</code></a> indicates this entry is a
+ required constraint, then the signature handler specified by this entry shall be used when
+ signing; otherwise, signing shall not take place. If <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#isFilterRequired()"><code>isFilterRequired()</code></a> indicates
+ that this is an optional constraint, this handler may be used if it is available. If it is
+ not available, a different handler may be used instead.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the filter that shall be used by the signature handler</dd></dl>
+</li>
+</ul>
+<a name="setFilter(org.apache.pdfbox.cos.COSName)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setFilter</h4>
+<pre>public&nbsp;void&nbsp;setFilter(<a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&nbsp;filter)</pre>
+<div class="block">(Optional) The signature handler that shall be used to sign the signature field.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>filter</code> - is the filter that shall be used by the signature handler</dd></dl>
+</li>
+</ul>
+<a name="getSubFilter()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSubFilter</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;getSubFilter()</pre>
+<div class="block">If <b>SubFilter</b> is not null and the <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#isSubFilterRequired()"><code>isSubFilterRequired()</code></a> indicates this
+ entry is a required constraint, then the first matching encodings shall be used when
+ signing; otherwise, signing shall not take place. If <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#isSubFilterRequired()"><code>isSubFilterRequired()</code></a>
+ indicates that this is an optional constraint, then the first matching encoding shall
+ be used if it is available. If it is not available, a different encoding may be used
+ instead.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the subfilter that shall be used by the signature handler</dd></dl>
+</li>
+</ul>
+<a name="setSubFilter(java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSubFilter</h4>
+<pre>public&nbsp;void&nbsp;setSubFilter(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&gt;&nbsp;subfilter)</pre>
+<div class="block">(Optional) An array of names indicating encodings to use when signing. The first name
+ in the array that matches an encoding supported by the signature handler shall be the
+ encoding that is actually used for signing.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>subfilter</code> - is the name that shall be used for encoding</dd></dl>
+</li>
+</ul>
+<a name="getDigestMethod()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDigestMethod</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;getDigestMethod()</pre>
+<div class="block">An array of names indicating acceptable digest algorithms to use when
+ signing. The value shall be one of <b>SHA1</b>, <b>SHA256</b>, <b>SHA384</b>,
+ <b>SHA512</b>, <b>RIPEMD160</b>. The default value is implementation-specific.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the digest method that shall be used by the signature handler</dd></dl>
+</li>
+</ul>
+<a name="setDigestMethod(java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDigestMethod</h4>
+<pre>public&nbsp;void&nbsp;setDigestMethod(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&gt;&nbsp;digestMethod)</pre>
+<div class="block"><p>(Optional, PDF 1.7) An array of names indicating acceptable digest
+ algorithms to use when signing. The value shall be one of <b>SHA1</b>,
+ <b>SHA256</b>, <b>SHA384</b>, <b>SHA512</b>, <b>RIPEMD160</b>. The default
+ value is implementation-specific.</p>
+
+ <p>This property is only applicable if the digital credential signing contains RSA
+ public/privat keys</p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>digestMethod</code> - is a list of possible names of the digests, that should be
+ used for signing.</dd></dl>
+</li>
+</ul>
+<a name="getV()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getV</h4>
+<pre>public&nbsp;float&nbsp;getV()</pre>
+<div class="block">The minimum required capability of the signature field seed value
+ dictionary parser. A value of 1 specifies that the parser shall be able to
+ recognize all seed value dictionary entries in a PDF 1.5 file. A value of 2
+ specifies that it shall be able to recognize all seed value dictionary entries
+ specified.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the minimum required capability of the signature field seed value
+ dictionary parser</dd></dl>
+</li>
+</ul>
+<a name="setV(float)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setV</h4>
+<pre>public&nbsp;void&nbsp;setV(float&nbsp;minimumRequiredCapability)</pre>
+<div class="block">(Optional) The minimum required capability of the signature field seed value
+ dictionary parser. A value of 1 specifies that the parser shall be able to
+ recognize all seed value dictionary entries in a PDF 1.5 file. A value of 2
+ specifies that it shall be able to recognize all seed value dictionary entries
+ specified.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>minimumRequiredCapability</code> - is the minimum required capability of the
+ signature field seed value dictionary parser</dd></dl>
+</li>
+</ul>
+<a name="getReasons()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getReasons</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;getReasons()</pre>
+<div class="block">If the Reasons array is provided and <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#isReasonRequired()"><code>isReasonRequired()</code></a> indicates that
+ Reasons is a required constraint, one of the reasons in the array shall be used
+ for the signature dictionary; otherwise signing shall not take place. If the
+ <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html#isReasonRequired()"><code>isReasonRequired()</code></a> indicates Reasons is an optional constraint, one of
+ the reasons in the array may be chose or a custom reason can be provided.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the reasons that should be used by the signature handler</dd></dl>
+</li>
+</ul>
+<a name="setReasonsd(java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setReasonsd</h4>
+<pre>public&nbsp;void&nbsp;setReasonsd(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;reasons)</pre>
+<div class="block">(Optional) An array of text strings that specifying possible reasons for signing
+ a document. If specified, the reasons supplied in this entry replace those used
+ by conforming products.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>reasons</code> - is a list of possible text string that specifying possible reasons</dd></dl>
+</li>
+</ul>
+<a name="getMDP()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMDP</h4>
+<pre>public&nbsp;<a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValueMDP.html" title="class in org.apache.pdfbox.pdmodel.interactive.digitalsignature">PDSeedValueMDP</a>&nbsp;getMDP()</pre>
+<div class="block"><p>(Optional; PDF 1.6) A dictionary containing a single entry whose key is P
+ and whose value is an integer between 0 and 3. A value of 0 defines the
+ signatures as an author signature. The value 1 through 3 shall be used for
+ certification signatures and correspond to the value of P in a DocMDP transform
+ parameters dictionary.</p>
+
+ <p>If this MDP key is not present or the MDP dictionary does not contain a P
+ entry, no rules shall be defined regarding the type of signature or its
+ permissions.</p></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the mdp dictionary as PDSeedValueMDP</dd></dl>
+</li>
+</ul>
+<a name="setMPD(org.apache.pdfbox.pdmodel.interactive.digitalsignature.PDSeedValueMDP)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMPD</h4>
+<pre>public&nbsp;void&nbsp;setMPD(<a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValueMDP.html" title="class in org.apache.pdfbox.pdmodel.interactive.digitalsignature">PDSeedValueMDP</a>&nbsp;mdp)</pre>
+<div class="block"><p>(Optional; PDF 1.6) A dictionary containing a single entry whose key is P
+ and whose value is an integer between 0 and 3. A value of 0 defines the
+ signatures as an author signature. The value 1 through 3 shall be used for
+ certification signatures and correspond to the value of P in a DocMDP transform
+ parameters dictionary.</p>
+
+ <p>If this MDP key is not present or the MDP dictionary does not contain a P
+ entry, no rules shall be defined regarding the type of signature or its
+ permissions.</p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>mdp</code> - dictionary</dd></dl>
+</li>
+</ul>
+<a name="getTimeStamp()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTimeStamp</h4>
+<pre>public&nbsp;<a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValueTimeStamp.html" title="class in org.apache.pdfbox.pdmodel.interactive.digitalsignature">PDSeedValueTimeStamp</a>&nbsp;getTimeStamp()</pre>
+<div class="block"><p>(Optional; PDF 1.6) A time stamp dictionary containing two entries. URL which
+ is a ASCII string specifying the URL to a rfc3161 conform timestamp server and Ff
+ to indicate if a timestamp is required or optional.</p></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the timestamp dictionary as PDSeedValueTimeStamp</dd></dl>
+</li>
+</ul>
+<a name="setTimeStamp(org.apache.pdfbox.pdmodel.interactive.digitalsignature.PDSeedValueTimeStamp)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTimeStamp</h4>
+<pre>public&nbsp;void&nbsp;setTimeStamp(<a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValueTimeStamp.html" title="class in org.apache.pdfbox.pdmodel.interactive.digitalsignature">PDSeedValueTimeStamp</a>&nbsp;timestamp)</pre>
+<div class="block"><p>(Optional; PDF 1.6) A time stamp dictionary containing two entries. URL which
+ is a ASCII string specifying the URL to a rfc3161 conform timestamp server and Ff
+ to indicate if a timestamp is required or optional.</p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>timestamp</code> - dictionary</dd></dl>
+</li>
+</ul>
+<a name="getLegalAttestation()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLegalAttestation</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;getLegalAttestation()</pre>
+<div class="block">(Optional, PDF 1.6) An array of text strings that specifying possible legal
+ attestations.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the reasons that should be used by the signature handler</dd></dl>
+</li>
+</ul>
+<a name="setLegalAttestation(java.util.List)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setLegalAttestation</h4>
+<pre>public&nbsp;void&nbsp;setLegalAttestation(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;legalAttestation)</pre>
+<div class="block">(Optional, PDF 1.6) An array of text strings that specifying possible legal
+ attestations.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>legalAttestation</code> - is a list of possible text string that specifying possible
+ legal attestations.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/PDSeedValue.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDPropBuildDataDict.html" title="class in org.apache.pdfbox.pdmodel.interactive.digitalsignature"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValueMDP.html" title="class in org.apache.pdfbox.pdmodel.interactive.digitalsignature"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValue.html" target="_top">Frames</a></li>
+<li><a href="PDSeedValue.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>
