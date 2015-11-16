@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+     
+     Licensed to the Apache Software Foundation (ASF) under one or more
+     contributor license agreements.  See the NOTICE file distributed with
+     this work for additional information regarding copyright ownership.
+     The ASF licenses this file to You under the Apache License, Version 2.0
+     (the "License"); you may not use this file except in compliance with
+     the License.  You may obtain a copy of the License at
+     
+     http://www.apache.org/licenses/LICENSE- 2.0
+     
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+     -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command line utilities. Apache PDFBox is published under the Apache License v2.0.
+">
+
+    <title>Apache PDFBox | PDFBox 2.0.0 Migration Guide</title>
+
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/open-iconic/font/css/open-iconic-bootstrap.min.css" rel="stylesheet">
+    <link href="/css/pygments-github.css" rel="stylesheet">
+    
+    <link href="/css/site.css" rel="stylesheet">
+    
+    
+    
+     
+    
+    
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/index.html">
+            <img class="logo" src="/images/logo-head.gif">
+          </a>
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Menu</button>
+          </p>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container">
+        
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+                
+                <ul class="sidebar">
+                    <li class="sidebar-header">Apache PDFBox</li>
+                    <li><a href="/index.html">Overview</a></li>
+                    <li><a href="/download.cgi">Downloads</a></li>
+                    
+                    <li class="sidebar-header">Community</li>
+                    <li><a href="/support.html">Support</a></li>
+                    <li><a href="/mailinglists.html">Mailing Lists</a></li>
+                    <li><a href="/team.html">Project Team</a></li>
+                    
+                    <li class="sidebar-header">Documentation</li>
+                    <li class="sidebar-node" id="v2-0">
+                        <a href="#">2.0.0 (trunk)</a>
+                        <ul>
+                            <li><a href="/2.0/migration.html">Migration Guide</a></li>
+                            <li><a href="/2.0/getting-started.html">Getting Started</a></li>
+                            <li><a href="/2.0/examples.html">Examples</a></li>
+                            <li><a href="/2.0/dependencies.html">Dependencies</a></li>
+                            <li class="sidebar-node" id="v2-0-cookbook">
+                                <a href="#">Cookbook</a>
+                                <ul>
+                                    <li><a href="/2.0/cookbook/encryption.html">Document Encryption</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/2.0/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/docs/2.0.0-SNAPSHOT/javadocs/">API Docs</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-node" id="v1-8">
+                        <a href="#">1.8.10</a>
+                        <ul>
+                            <li><a href="/1.8/architecture.html">Architecture</a></li>
+                            <li><a href="/1.8/dependencies.html">Dependencies</a></li>
+                            <li class="sidebar-node" id="v1-8-cookbook">
+                                <a href="#">Cookbook</a>
+                                <ul>
+                                    <li><a href="/1.8/cookbook/documentcreation.html">Document Creation</a></li>
+                                    <li><a href="/1.8/cookbook/textextraction.html">Text Extraction</a></li>
+                                    <li><a href="/1.8/cookbook/encryption.html">Document Encryption</a></li>
+                                    <li><a href="/1.8/cookbook/workingwithfonts.html">Working with Fonts</a></li>
+                                    <li><a href="/1.8/cookbook/workingwithmetadata.html">Working with Metadata</a></li>
+                                    <li><a href="/1.8/cookbook/workingwithattachments.html">Working with Attachments</a></li>
+                                    <li><a href="/1.8/cookbook/pdfavalidation.html">PDF/A Validation</a></li>
+                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A document</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/1.8/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/docs/1.8.10/javadocs/">API Docs</a></li>
+                            <li><a href="/1.8/faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="sidebar-header">Development</li>
+                    <li><a href="/building.html">Building from Source</a></li>
+                    <li><a href="/codingconventions.html">Coding Conventions</a></li>
+                    <li><a href="/siteupdate.html">Update the Website</a></li>  
+                    <li><a href="https://builds.apache.org/view/All/job/PDFBox-trunk/">Jenkins</a></li>
+                    <li><a href="https://travis-ci.org/apache/pdfbox">Travis CI</a></li>
+                    <li><a href="https://analysis.apache.org/dashboard/index/org.apache.pdfbox:pdfbox-reactor">SonarQube</a></li>
+                    <li><a href="https://issues.apache.org/jira/browse/PDFBOX">JIRA</a></li>
+                    <li><a href="/ideas.html">Ideas</a></li>
+                    <li><a href="/references.html">External Links</a></li>
+
+                    <li class="sidebar-header">Apache Software Foundation</li>
+                    <li><a href="http://www.apache.org/">Apache Software Foundation</a></li>
+                    <li><a href="http://www.apache.org/foundation/thanks.html">ASF Sponsors</a></li>
+                    <li><a href="http://www.apache.org/security/">Security</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-9">
+                <h1 id="migration-to-pdfbox-2-0-0">Migration to PDFBox 2.0.0</h1>
+
+<h2 id="environment">Environment</h2>
+
+<p>PDFBox 2.0.0 requires at least Java 6</p>
+
+<h2 id="packages">Packages</h2>
+
+<p>There are some significant changes to the package structure of PDFBox:</p>
+
+<ul>
+<li>Jempbox is no longer supported and was removed in favour of Xmpbox</li>
+<li>all examples were moved to the new package &quot;pdfbox-examples&quot;</li>
+<li>all commandline tools were moved to the new package &quot;pdfbox-tools&quot;</li>
+<li>all debugger related stuff was moved to the new package &quot;pdfbox-debugger&quot;</li>
+<li>the new package &quot;debugger-app&quot; provides a standalone pre built binary for the debugger</li>
+</ul>
+
+<h2 id="dependency-updates">Dependency updates</h2>
+
+<p>All libraries on which PDFBox depends are updated to their latest stable versions:</p>
+
+<ul>
+<li>Bouncy Castle 1.53</li>
+<li>Apache Commons Logging 1.2</li>
+</ul>
+
+<p>For test support the libraries are updated to</p>
+
+<ul>
+<li>JUnit 4.12</li>
+<li>JAI Image Core 1.2</li>
+<li>Levigo JBIG ImageIO Plugin 1.6.3</li>
+</ul>
+
+<h2 id="breaking-changes-to-the-library">Breaking Changes to the Library</h2>
+
+<h3 id="deprecated-api-calls">Deprecated API calls</h3>
+
+<p>Most deprecated API calls in PDFBox 1.8.x have been removed for PDFBox 2.0.0 </p>
+
+<h3 id="api-changes">API Changes</h3>
+
+<p>The API changes are reflected in the Javadoc for PDFBox 2.0.0. The most notable changes are:</p>
+
+<ul>
+<li><code>getCOSDictionary()</code> is no longer used. Instead <code>getCOSObject</code> now returns the matching <code>COSBase</code> subtype.</li>
+<li><code>PDXObjectForm</code> was renamed to <code>PDFormXObject</code> to be more in line with the PDF specification.</li>
+<li><code>PDXObjectImage</code> was renamed to <code>PDImageXObject</code> to be more in line with the PDF specification.</li>
+<li><code>PDPage.getContents().createInputStream()</code>was simplified to <code>PDPage.getContents()</code>.</li>
+</ul>
+
+<h3 id="general-behaviour">General Behaviour</h3>
+
+<p>PDFBox 2.0.0 is now parsing PDF files following the Xref information in the PDF. This is similar to the functionality using
+<code>PDDocument.loadNonSeq</code> with PDFBox 1.8.x. Users still using <code>PDDocument.load</code> with PDFBox 1.8.x might experience different
+results when switching to PDFBox 2.0.0.</p>
+
+<h3 id="font-handling">Font Handling</h3>
+
+<p>Font handling now has full Unicode support and supports font subsetting.</p>
+
+<p>TrueType fonts shall now be loaded using</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">PDType0Font</span><span class="o">.</span><span class="na">load</span>
+</code></pre></div>
+<p>to leverage that. </p>
+
+<h3 id="pdf-resources-handling">PDF Resources Handling</h3>
+
+<p>The individual calls to add resources such as <code>PDResource.addFont(PDFont font)</code> and <code>PDResource.addXObject(PDXObject xobject, String prefix)</code>
+have been replaced with <code>PDResource.add(resource type)</code> where <code>resource type</code> represents the different resource classes such as <code>PDFont</code>, <code>PDAbstractPattern</code>
+and so on. The <code>add</code> method now supports all the different type of resources available.</p>
+
+<h3 id="working-with-images">Working with Images</h3>
+
+<p>The individual classes <code>PDJpeg()</code>, <code>PDPixelMap()</code> and <code>PDCCitt()</code> to import images have been replaced with <code>PDImageXObject.createFromFile</code> which works for JPG, TIFF (only G4 compression), PNG, BMP and GIF.</p>
+
+<p>In addition there are some specialized classes:</p>
+
+<ul>
+<li><code>JPEGFactory.createFromStream</code> which preserve the JPEG data and embed it in the PDF file without modification. (This is best if you have a JPEG file).</li>
+<li><code>CCITTFactory.createFromFile</code> (for bitonal TIFF images with G4 compression).</li>
+<li><code>LosslessFactory.createFromImage</code> (this is best if you start with a BufferedImage).</li>
+</ul>
+
+<h3 id="iterating-pages">Iterating Pages</h3>
+
+<p>With PDFBox 2.0.0 the prefered way to iterate through the pages of a document is</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="k">for</span><span class="o">(</span><span class="n">PDPage</span> <span class="n">page</span> <span class="o">:</span> <span class="n">document</span><span class="o">.</span><span class="na">getPages</span><span class="o">())</span>
+<span class="o">{</span>
+    <span class="o">...</span> <span class="o">(</span><span class="k">do</span> <span class="n">something</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div>
+<h3 id="pdf-rendering">PDF Rendering</h3>
+
+<p>With PDFBox 2.0.0 <code>PDPage.convertToImage</code> has been removed. Instead the new <code>PDFRenderer</code> class shall be used.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">PDDocument</span> <span class="n">document</span> <span class="o">=</span> <span class="n">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="n">pdfFilename</span><span class="o">));</span>
+<span class="n">PDFRenderer</span> <span class="n">pdfRenderer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDFRenderer</span><span class="o">(</span><span class="n">document</span><span class="o">);</span>
+<span class="kt">int</span> <span class="n">pageCounter</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">for</span> <span class="o">(</span><span class="n">PDPage</span> <span class="n">page</span> <span class="o">:</span> <span class="n">document</span><span class="o">.</span><span class="na">getPages</span><span class="o">())</span>
+<span class="o">{</span> 
+    <span class="n">pdfRenderer</span><span class="o">.</span><span class="na">renderImageWithDPI</span><span class="o">(</span><span class="n">pageCounter</span><span class="o">,</span> <span class="mi">300</span><span class="o">,</span> <span class="n">ImageType</span><span class="o">.</span><span class="na">RGB</span><span class="o">);</span>
+
+    <span class="c1">// suffix in filename will be used as the file format</span>
+    <span class="n">ImageIOUtil</span><span class="o">.</span><span class="na">writeImage</span><span class="o">(</span><span class="n">bim</span><span class="o">,</span> <span class="n">pdfFilename</span> <span class="o">+</span> <span class="s">"-"</span> <span class="o">+</span> <span class="o">(</span><span class="n">pageCounter</span><span class="o">++)</span> <span class="o">+</span> <span class="s">".png"</span><span class="o">,</span> <span class="mi">300</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="n">document</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+</code></pre></div>
+<p><code>ImageIOUtil</code> has been moved into the <code>org.apache.pdfbox.tools.imageio</code> package.</p>
+
+<p class="alert alert-warning">Important notice when using PDFBox with Java 8
+</p>
+
+<p>Due to the change of the java color management module towards &quot;LittleCMS&quot;, users can experience slow performance in color operations.
+Solution: disable LittleCMS in favour of the old KCMS (Kodak Color Management System):</p>
+
+<ul>
+<li>start with <code>-Dsun.java2d.cmm=sun.java2d.cmm.kcms.KcmsServiceProvider</code>or call</li>
+<li><code>System.setProperty(&quot;sun.java2d.cmm&quot;, &quot;sun.java2d.cmm.kcms.KcmsServiceProvider&quot;);</code></li>
+</ul>
+
+<p>Sources:<br>
+<a href="http://www.subshell.com/en/subshell/blog/Wrong-Colors-in-Images-with-Java8-100.html">http://www.subshell.com/en/subshell/blog/Wrong-Colors-in-Images-with-Java8-100.html</a><br>
+<a href="https://bugs.openjdk.java.net/browse/JDK-8041125">https://bugs.openjdk.java.net/browse/JDK-8041125</a></p>
+
+<h3 id="pdf-printing">PDF Printing</h3>
+
+<p>With PDFBox 2.0.0 <code>PDFPrinter</code> has been removed.</p>
+
+<p>Users of <code>PDFPrinter.silentPrint()</code> should now use this code:</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">PrinterJob</span> <span class="n">job</span> <span class="o">=</span> <span class="n">PrinterJob</span><span class="o">.</span><span class="na">getPrinterJob</span><span class="o">();</span>
+<span class="n">job</span><span class="o">.</span><span class="na">setPageable</span><span class="o">(</span><span class="k">new</span> <span class="n">PDFPageable</span><span class="o">(</span><span class="n">document</span><span class="o">));</span>
+<span class="n">job</span><span class="o">.</span><span class="na">print</span><span class="o">();</span>
+</code></pre></div>
+<p>While users of <code>PDFPrinter.print()</code> should now use this code:</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">PrinterJob</span> <span class="n">job</span> <span class="o">=</span> <span class="n">PrinterJob</span><span class="o">.</span><span class="na">getPrinterJob</span><span class="o">();</span>
+<span class="n">job</span><span class="o">.</span><span class="na">setPageable</span><span class="o">(</span><span class="k">new</span> <span class="n">PDFPageable</span><span class="o">(</span><span class="n">document</span><span class="o">));</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">job</span><span class="o">.</span><span class="na">printDialog</span><span class="o">())</span> <span class="o">{</span>
+    <span class="n">job</span><span class="o">.</span><span class="na">print</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div>
+<p>Advanced use case examples can be found in th examples package under org/apache/pdfbox/examples/printing/Printing.java</p>
+
+<h3 id="text-extraction">Text Extraction</h3>
+
+<p>In 1.8, to get the text colors, one method was to pass an expanded .properties file to the PDFStripper constructor. To achieve the same 
+in PDFBox 2.0 you can extend <code>PDFTextStripper</code>and add the following <code>Operators</code> to the constructor:</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">addOperator</span><span class="o">(</span><span class="k">new</span> <span class="n">SetStrokingColorSpace</span><span class="o">());</span>
+<span class="n">addOperator</span><span class="o">(</span><span class="k">new</span> <span class="n">SetNonStrokingColorSpace</span><span class="o">());</span>
+<span class="n">addOperator</span><span class="o">(</span><span class="k">new</span> <span class="n">SetStrokingDeviceCMYKColor</span><span class="o">());</span>
+<span class="n">addOperator</span><span class="o">(</span><span class="k">new</span> <span class="n">SetNonStrokingDeviceCMYKColor</span><span class="o">());</span>
+<span class="n">addOperator</span><span class="o">(</span><span class="k">new</span> <span class="n">SetNonStrokingDeviceRGBColor</span><span class="o">());</span>
+<span class="n">addOperator</span><span class="o">(</span><span class="k">new</span> <span class="n">SetStrokingDeviceRGBColor</span><span class="o">());</span>
+<span class="n">addOperator</span><span class="o">(</span><span class="k">new</span> <span class="n">SetNonStrokingDeviceGrayColor</span><span class="o">());</span>
+<span class="n">addOperator</span><span class="o">(</span><span class="k">new</span> <span class="n">SetStrokingDeviceGrayColor</span><span class="o">());</span>
+<span class="n">addOperator</span><span class="o">(</span><span class="k">new</span> <span class="n">SetStrokingColor</span><span class="o">());</span>
+<span class="n">addOperator</span><span class="o">(</span><span class="k">new</span> <span class="n">SetStrokingColorN</span><span class="o">());</span>
+<span class="n">addOperator</span><span class="o">(</span><span class="k">new</span> <span class="n">SetNonStrokingColor</span><span class="o">());</span>
+<span class="n">addOperator</span><span class="o">(</span><span class="k">new</span> <span class="n">SetNonStrokingColorN</span><span class="o">());</span>
+</code></pre></div>
+<h3 id="interactive-forms">Interactive Forms</h3>
+
+<p>Large parts of the support for interactive forms (AcroForms) has been rewritten. The most notable change from 1.8.x is that
+there is a clear distinction between fields and the annotations representing them visually. Intermediate nodes in a field 
+tree are now represented by the <code>PDNonTerminalField</code> class.</p>
+
+<p>With PDFBox 2.0.0 the prefered way to iterate through the fields is now</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">PDAcroForm</span> <span class="n">form</span><span class="o">;</span>
+<span class="o">...</span>
+<span class="k">for</span> <span class="o">(</span><span class="n">PDField</span> <span class="n">field</span> <span class="o">:</span> <span class="n">form</span><span class="o">.</span><span class="na">getFieldTree</span><span class="o">())</span>
+<span class="o">{</span>
+    <span class="o">...</span> <span class="o">(</span><span class="k">do</span> <span class="n">something</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div>
+<p>Most <code>PDField</code> subclasses now accept Java generic types such as <code>String</code> as parameters instead of the former <code>COSBase</code> subclasses.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container"
+            <div class="row">
+                <div class="span3">
+                    <!-- nothing in here on purpose -->
+                </div>
+                <div class="span9">
+                    <p>Copyright © 2009&ndash;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>, Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                        <br/>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+        <!-- Twitter Bootstrap and jQuery after this line. -->
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        
+        $(document).ready(function () {
+                $('[data-toggle="offcanvas"]').click(function () {
+                $('.row-offcanvas').toggleClass('active')
+            });
+        });
+        
+        $(function() {
+            // collapse tree nodes dynamically to support noscript
+            $('.sidebar-node').addClass('collapsed');
+            
+
+            // toggle expand/collapse
+            $('.sidebar-node > a').click(function(e) {
+                $(this).parent().toggleClass('collapsed');
+                e.preventDefault();
+            });
+
+            // preserve expand/collapse across page navigation
+            var path = document.location.pathname;
+            if (path.indexOf('/2.0') == 0) {
+                $('#v2-0').removeClass('collapsed');
+                if (path.indexOf('/2.0/cookbook') == 0) {
+                    $('#v2-0-cookbook').removeClass('collapsed');
+                }
+            } else {
+                $('#v1-8').removeClass('collapsed');
+                if (path.indexOf('/1.8/cookbook') == 0) {
+                    $('#v1-8-cookbook').removeClass('collapsed');
+                }
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>

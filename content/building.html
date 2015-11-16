@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+     
+     Licensed to the Apache Software Foundation (ASF) under one or more
+     contributor license agreements.  See the NOTICE file distributed with
+     this work for additional information regarding copyright ownership.
+     The ASF licenses this file to You under the Apache License, Version 2.0
+     (the "License"); you may not use this file except in compliance with
+     the License.  You may obtain a copy of the License at
+     
+     http://www.apache.org/licenses/LICENSE- 2.0
+     
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+     -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command line utilities. Apache PDFBox is published under the Apache License v2.0.
+">
+
+    <title>Apache PDFBox | Building PDFBox</title>
+
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/open-iconic/font/css/open-iconic-bootstrap.min.css" rel="stylesheet">
+    <link href="/css/pygments-github.css" rel="stylesheet">
+    
+    <link href="/css/site.css" rel="stylesheet">
+    
+    
+    
+     
+    
+    
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/index.html">
+            <img class="logo" src="/images/logo-head.gif">
+          </a>
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Menu</button>
+          </p>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container">
+        
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+                
+                <ul class="sidebar">
+                    <li class="sidebar-header">Apache PDFBox</li>
+                    <li><a href="/index.html">Overview</a></li>
+                    <li><a href="/download.cgi">Downloads</a></li>
+                    
+                    <li class="sidebar-header">Community</li>
+                    <li><a href="/support.html">Support</a></li>
+                    <li><a href="/mailinglists.html">Mailing Lists</a></li>
+                    <li><a href="/team.html">Project Team</a></li>
+                    
+                    <li class="sidebar-header">Documentation</li>
+                    <li class="sidebar-node" id="v2-0">
+                        <a href="#">2.0.0 (trunk)</a>
+                        <ul>
+                            <li><a href="/2.0/migration.html">Migration Guide</a></li>
+                            <li><a href="/2.0/getting-started.html">Getting Started</a></li>
+                            <li><a href="/2.0/examples.html">Examples</a></li>
+                            <li><a href="/2.0/dependencies.html">Dependencies</a></li>
+                            <li class="sidebar-node" id="v2-0-cookbook">
+                                <a href="#">Cookbook</a>
+                                <ul>
+                                    <li><a href="/2.0/cookbook/encryption.html">Document Encryption</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/2.0/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/docs/2.0.0-SNAPSHOT/javadocs/">API Docs</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-node" id="v1-8">
+                        <a href="#">1.8.10</a>
+                        <ul>
+                            <li><a href="/1.8/architecture.html">Architecture</a></li>
+                            <li><a href="/1.8/dependencies.html">Dependencies</a></li>
+                            <li class="sidebar-node" id="v1-8-cookbook">
+                                <a href="#">Cookbook</a>
+                                <ul>
+                                    <li><a href="/1.8/cookbook/documentcreation.html">Document Creation</a></li>
+                                    <li><a href="/1.8/cookbook/textextraction.html">Text Extraction</a></li>
+                                    <li><a href="/1.8/cookbook/encryption.html">Document Encryption</a></li>
+                                    <li><a href="/1.8/cookbook/workingwithfonts.html">Working with Fonts</a></li>
+                                    <li><a href="/1.8/cookbook/workingwithmetadata.html">Working with Metadata</a></li>
+                                    <li><a href="/1.8/cookbook/workingwithattachments.html">Working with Attachments</a></li>
+                                    <li><a href="/1.8/cookbook/pdfavalidation.html">PDF/A Validation</a></li>
+                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A document</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/1.8/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/docs/1.8.10/javadocs/">API Docs</a></li>
+                            <li><a href="/1.8/faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="sidebar-header">Development</li>
+                    <li><a href="/building.html">Building from Source</a></li>
+                    <li><a href="/codingconventions.html">Coding Conventions</a></li>
+                    <li><a href="/siteupdate.html">Update the Website</a></li>  
+                    <li><a href="https://builds.apache.org/view/All/job/PDFBox-trunk/">Jenkins</a></li>
+                    <li><a href="https://travis-ci.org/apache/pdfbox">Travis CI</a></li>
+                    <li><a href="https://analysis.apache.org/dashboard/index/org.apache.pdfbox:pdfbox-reactor">SonarQube</a></li>
+                    <li><a href="https://issues.apache.org/jira/browse/PDFBOX">JIRA</a></li>
+                    <li><a href="/ideas.html">Ideas</a></li>
+                    <li><a href="/references.html">External Links</a></li>
+
+                    <li class="sidebar-header">Apache Software Foundation</li>
+                    <li><a href="http://www.apache.org/">Apache Software Foundation</a></li>
+                    <li><a href="http://www.apache.org/foundation/thanks.html">ASF Sponsors</a></li>
+                    <li><a href="http://www.apache.org/security/">Security</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-9">
+                <h1 id="building-from-source">Building from Source</h1>
+
+<p>Building PDFBox from source is only necessary if you&#39;re wanting to contribute code to the PDFBox project. Most users should use the <a href="http://pdfbox.apache.org/download.cgi">binary releases</a> instead.</p>
+
+<h2 id="obtaining-the-source">Obtaining the Source</h2>
+
+<p>You can obtain the latest source of PDFBox from our <a href="http://pdfbox.apache.org/download.cgi">SVN repo</a> The current trunk is v2.0.0-SNAPSHOT. There is a seperate branch for the 1.8.x series. You can fetch the latest 2.0 trunk using Subversion:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">svn checkout http://svn.apache.org/repos/asf/pdfbox/trunk/
+cd trunk
+</code></pre></div>
+<h2 id="build-dependencies">Build dependencies</h2>
+
+<h3 id="pdfbox-1-8">PDFBox 1.8</h3>
+
+<ul>
+<li>JDK 5 or 6</li>
+<li> <a href="http://maven.apache.org/">Maven 2</a></li>
+</ul>
+
+<h3 id="pdfbox-2-0">PDFBox 2.0</h3>
+
+<ul>
+<li>JDK 6+</li>
+<li>Java Cryptography Extension (JCE) [see below]</li>
+<li> <a href="http://maven.apache.org/">Maven 2</a></li>
+</ul>
+
+<h3 id="java-cryptography-extension-jce">Java Cryptography Extension (JCE)</h3>
+
+<p>Building PDFBox 2.0 requires a JDK with &quot;unlimited strength&quot; cryptography, which requires extra files to be installed. For JDK 7, see <a href="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html">Java Cryptography Extension (JCE)</a>. If these files are not installed, building PDFBox will fail the following test:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">TestPublicKeyEncryption.setUp:70 JCE unlimited strength jurisdiction policy files are not installed
+</code></pre></div>
+<h2 id="building-with-maven">Building with Maven</h2>
+
+<p>In the root directory of PDFBox:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">mvn clean install
+</code></pre></div>
+<hr>
+
+<h2 id="building-with-ant-deprecated-removed-in-2-0-0">Building with Ant (Deprecated, removed in 2.0.0)</h2>
+
+<p>The old Ant build is still available, and can be used especially for
+building .NET binaries with IKVM:</p>
+
+<ol>
+<li> Install <a href="http://ant.apache.org/">ANT</a>. PDFBox currently uses 1.6.2
+but other versions probably work as well.</li>
+<li><p>(optional) Setup IKVM, if you want to build the .NET DLL version of
+PDFBox.</p>
+
+<ol>
+<li> <a href="http://www.ikvm.net/">IKVM</a> binaries</li>
+<li> In the build.properties, set the ikvm.dir property:\
+ <code>ikvm.dir=C:\\javalib\\ikvm-12-07-2004\\ikvm</code></li>
+</ol></li>
+<li><p>Run &quot;<code>ant</code>&quot; from the root PDFBox directory. This will create the
+.zip package distribution. See the build file for other ant targets.</p></li>
+</ol>
+
+<p>NOTE: If you want to run PDFBox from an IDE them you will need to add
+the &#39;Resources&#39; directory to the project classpath in your IDE.</p>
+
+<h3 id="dependencies-for-ant-builds">Dependencies for Ant Builds</h3>
+
+<p>The above instructions expect that you&#39;re using <a href="http://maven.apache.org/">Maven</a> or another build tool like <a href="http://ant.apache.org/ivy/">Ivy</a> that supports Maven dependencies.
+If you instead use tools like <a href="http://ant.apache.org/">Ant</a> where you need to explicitly include all the required library jars in your application, you&#39;ll need to do
+something different.</p>
+
+<p>The easiest approach is to run <code>mvn dependency:copy-dependencies</code> inside the pdfbox directory of the latest PDFBox source release. This will copy all the required and optional
+libraries discussed above into the pdfbox/target/dependencies directory. You can then simply copy all the libraries you need from this directory to your application.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container"
+            <div class="row">
+                <div class="span3">
+                    <!-- nothing in here on purpose -->
+                </div>
+                <div class="span9">
+                    <p>Copyright © 2009&ndash;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>, Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                        <br/>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+        <!-- Twitter Bootstrap and jQuery after this line. -->
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        
+        $(document).ready(function () {
+                $('[data-toggle="offcanvas"]').click(function () {
+                $('.row-offcanvas').toggleClass('active')
+            });
+        });
+        
+        $(function() {
+            // collapse tree nodes dynamically to support noscript
+            $('.sidebar-node').addClass('collapsed');
+            
+
+            // toggle expand/collapse
+            $('.sidebar-node > a').click(function(e) {
+                $(this).parent().toggleClass('collapsed');
+                e.preventDefault();
+            });
+
+            // preserve expand/collapse across page navigation
+            var path = document.location.pathname;
+            if (path.indexOf('/2.0') == 0) {
+                $('#v2-0').removeClass('collapsed');
+                if (path.indexOf('/2.0/cookbook') == 0) {
+                    $('#v2-0-cookbook').removeClass('collapsed');
+                }
+            } else {
+                $('#v1-8').removeClass('collapsed');
+                if (path.indexOf('/1.8/cookbook') == 0) {
+                    $('#v1-8-cookbook').removeClass('collapsed');
+                }
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+     
+     Licensed to the Apache Software Foundation (ASF) under one or more
+     contributor license agreements.  See the NOTICE file distributed with
+     this work for additional information regarding copyright ownership.
+     The ASF licenses this file to You under the Apache License, Version 2.0
+     (the "License"); you may not use this file except in compliance with
+     the License.  You may obtain a copy of the License at
+     
+     http://www.apache.org/licenses/LICENSE- 2.0
+     
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+     -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command line utilities. Apache PDFBox is published under the Apache License v2.0.
+">
+
+    <title>Apache PDFBox | Cookbook - Working with Attachments</title>
+
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/open-iconic/font/css/open-iconic-bootstrap.min.css" rel="stylesheet">
+    <link href="/css/pygments-github.css" rel="stylesheet">
+    
+    <link href="/css/site.css" rel="stylesheet">
+    
+    
+    
+     
+    
+    
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/index.html">
+            <img class="logo" src="/images/logo-head.gif">
+          </a>
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Menu</button>
+          </p>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container">
+        
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+                
+                <ul class="sidebar">
+                    <li class="sidebar-header">Apache PDFBox</li>
+                    <li><a href="/index.html">Overview</a></li>
+                    <li><a href="/download.cgi">Downloads</a></li>
+                    
+                    <li class="sidebar-header">Community</li>
+                    <li><a href="/support.html">Support</a></li>
+                    <li><a href="/mailinglists.html">Mailing Lists</a></li>
+                    <li><a href="/team.html">Project Team</a></li>
+                    
+                    <li class="sidebar-header">Documentation</li>
+                    <li class="sidebar-node" id="v2-0">
+                        <a href="#">2.0.0 (trunk)</a>
+                        <ul>
+                            <li><a href="/2.0/migration.html">Migration Guide</a></li>
+                            <li><a href="/2.0/getting-started.html">Getting Started</a></li>
+                            <li><a href="/2.0/examples.html">Examples</a></li>
+                            <li><a href="/2.0/dependencies.html">Dependencies</a></li>
+                            <li class="sidebar-node" id="v2-0-cookbook">
+                                <a href="#">Cookbook</a>
+                                <ul>
+                                    <li><a href="/2.0/cookbook/encryption.html">Document Encryption</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/2.0/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/docs/2.0.0-SNAPSHOT/javadocs/">API Docs</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-node" id="v1-8">
+                        <a href="#">1.8.10</a>
+                        <ul>
+                            <li><a href="/1.8/architecture.html">Architecture</a></li>
+                            <li><a href="/1.8/dependencies.html">Dependencies</a></li>
+                            <li class="sidebar-node" id="v1-8-cookbook">
+                                <a href="#">Cookbook</a>
+                                <ul>
+                                    <li><a href="/1.8/cookbook/documentcreation.html">Document Creation</a></li>
+                                    <li><a href="/1.8/cookbook/textextraction.html">Text Extraction</a></li>
+                                    <li><a href="/1.8/cookbook/encryption.html">Document Encryption</a></li>
+                                    <li><a href="/1.8/cookbook/workingwithfonts.html">Working with Fonts</a></li>
+                                    <li><a href="/1.8/cookbook/workingwithmetadata.html">Working with Metadata</a></li>
+                                    <li><a href="/1.8/cookbook/workingwithattachments.html">Working with Attachments</a></li>
+                                    <li><a href="/1.8/cookbook/pdfavalidation.html">PDF/A Validation</a></li>
+                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A document</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/1.8/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/docs/1.8.10/javadocs/">API Docs</a></li>
+                            <li><a href="/1.8/faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="sidebar-header">Development</li>
+                    <li><a href="/building.html">Building from Source</a></li>
+                    <li><a href="/codingconventions.html">Coding Conventions</a></li>
+                    <li><a href="/siteupdate.html">Update the Website</a></li>  
+                    <li><a href="https://builds.apache.org/view/All/job/PDFBox-trunk/">Jenkins</a></li>
+                    <li><a href="https://travis-ci.org/apache/pdfbox">Travis CI</a></li>
+                    <li><a href="https://analysis.apache.org/dashboard/index/org.apache.pdfbox:pdfbox-reactor">SonarQube</a></li>
+                    <li><a href="https://issues.apache.org/jira/browse/PDFBOX">JIRA</a></li>
+                    <li><a href="/ideas.html">Ideas</a></li>
+                    <li><a href="/references.html">External Links</a></li>
+
+                    <li class="sidebar-header">Apache Software Foundation</li>
+                    <li><a href="http://www.apache.org/">Apache Software Foundation</a></li>
+                    <li><a href="http://www.apache.org/foundation/thanks.html">ASF Sponsors</a></li>
+                    <li><a href="http://www.apache.org/security/">Security</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-9">
+                <h1 id="working-with-attachments">Working with Attachments</h1>
+
+<h2 id="the-pdf-file-specification">The PDF File Specification</h2>
+
+<p>See package:org.apache.pdfbox.pdmodel.common.filespecification<br>
+See example:EmbeddedFiles  </p>
+
+<p>A PDF can contain references to external files via the file system or a URL to a remote 
+location. It is also possible to embed a binary file into a PDF document.</p>
+
+<p>There are two classes that can be used when referencing a file. <code>PDSimpleFileSpecification</code>
+is a simple string reference to a file(e.g. &quot;./movies/BigMovie.avi&quot;). The simple file 
+specification does not allow for any parameters to be set. </p>
+
+<p>The <code>PDComplexFileSpecification</code> is more feature rich and allows for advanced settings on 
+the file reference.</p>
+
+<p>It is also possible to embed a file directly into a PDF. Instead of setting the file 
+attribute of the <code>PDComplexFileSpecification</code>, the <code>EmbeddedFile</code> attribute can be used instead.</p>
+
+<h2 id="adding-a-file-attachment">Adding a File Attachment</h2>
+
+<p>PDF documents can contain file attachments that are accessed from the Document-&gt;File Attachments 
+menu. PDFBox allows attachments to be added to and extracted from PDF documents. 
+Attachments are part of the named tree that is attached to the document catalog.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">PDEmbeddedFilesNameTreeNode</span> <span class="n">efTree</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDEmbeddedFilesNameTreeNode</span><span class="o">();</span>
+
+<span class="c1">//first create the file specification, which holds the embedded file</span>
+<span class="n">PDComplexFileSpecification</span> <span class="n">fs</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDComplexFileSpecification</span><span class="o">();</span>
+<span class="n">fs</span><span class="o">.</span><span class="na">setFile</span><span class="o">(</span> <span class="s">"Test.txt"</span> <span class="o">);</span>
+<span class="n">InputStream</span> <span class="n">is</span> <span class="o">=</span> <span class="o">...;</span>
+<span class="n">PDEmbeddedFile</span> <span class="n">ef</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDEmbeddedFile</span><span class="o">(</span><span class="n">doc</span><span class="o">,</span> <span class="n">is</span> <span class="o">);</span>
+<span class="c1">//set some of the attributes of the embedded file</span>
+<span class="n">ef</span><span class="o">.</span><span class="na">setSubtype</span><span class="o">(</span> <span class="s">"test/plain"</span> <span class="o">);</span>
+<span class="n">ef</span><span class="o">.</span><span class="na">setSize</span><span class="o">(</span> <span class="n">data</span><span class="o">.</span><span class="na">length</span> <span class="o">);</span>
+<span class="n">ef</span><span class="o">.</span><span class="na">setCreationDate</span><span class="o">(</span> <span class="k">new</span> <span class="n">GregorianCalendar</span><span class="o">()</span> <span class="o">);</span>
+<span class="n">fs</span><span class="o">.</span><span class="na">setEmbeddedFile</span><span class="o">(</span> <span class="n">ef</span> <span class="o">);</span>
+
+<span class="c1">//now add the entry to the embedded file tree and set in the document.</span>
+<span class="n">Map</span> <span class="n">efMap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">();</span>
+<span class="n">efMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span> <span class="s">"My first attachment"</span><span class="o">,</span> <span class="n">fs</span> <span class="o">);</span>
+<span class="n">efTree</span><span class="o">.</span><span class="na">setNames</span><span class="o">(</span> <span class="n">efMap</span> <span class="o">);</span>
+<span class="c1">//attachments are stored as part of the "names" dictionary in the document catalog</span>
+<span class="n">PDDocumentNameDictionary</span> <span class="n">names</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDDocumentNameDictionary</span><span class="o">(</span> <span class="n">doc</span><span class="o">.</span><span class="na">getDocumentCatalog</span><span class="o">()</span> <span class="o">);</span>
+<span class="n">names</span><span class="o">.</span><span class="na">setEmbeddedFiles</span><span class="o">(</span> <span class="n">efTree</span> <span class="o">);</span>
+<span class="n">doc</span><span class="o">.</span><span class="na">getDocumentCatalog</span><span class="o">().</span><span class="na">setNames</span><span class="o">(</span> <span class="n">names</span> <span class="o">);</span>
+</code></pre></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container"
+            <div class="row">
+                <div class="span3">
+                    <!-- nothing in here on purpose -->
+                </div>
+                <div class="span9">
+                    <p>Copyright © 2009&ndash;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>, Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                        <br/>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+        <!-- Twitter Bootstrap and jQuery after this line. -->
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        
+        $(document).ready(function () {
+                $('[data-toggle="offcanvas"]').click(function () {
+                $('.row-offcanvas').toggleClass('active')
+            });
+        });
+        
+        $(function() {
+            // collapse tree nodes dynamically to support noscript
+            $('.sidebar-node').addClass('collapsed');
+            
+
+            // toggle expand/collapse
+            $('.sidebar-node > a').click(function(e) {
+                $(this).parent().toggleClass('collapsed');
+                e.preventDefault();
+            });
+
+            // preserve expand/collapse across page navigation
+            var path = document.location.pathname;
+            if (path.indexOf('/2.0') == 0) {
+                $('#v2-0').removeClass('collapsed');
+                if (path.indexOf('/2.0/cookbook') == 0) {
+                    $('#v2-0-cookbook').removeClass('collapsed');
+                }
+            } else {
+                $('#v1-8').removeClass('collapsed');
+                if (path.indexOf('/1.8/cookbook') == 0) {
+                    $('#v1-8-cookbook').removeClass('collapsed');
+                }
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>

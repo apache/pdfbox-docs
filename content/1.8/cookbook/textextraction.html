@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+     
+     Licensed to the Apache Software Foundation (ASF) under one or more
+     contributor license agreements.  See the NOTICE file distributed with
+     this work for additional information regarding copyright ownership.
+     The ASF licenses this file to You under the Apache License, Version 2.0
+     (the "License"); you may not use this file except in compliance with
+     the License.  You may obtain a copy of the License at
+     
+     http://www.apache.org/licenses/LICENSE- 2.0
+     
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+     -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command line utilities. Apache PDFBox is published under the Apache License v2.0.
+">
+
+    <title>Apache PDFBox | Cookbook - Textextraction</title>
+
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/open-iconic/font/css/open-iconic-bootstrap.min.css" rel="stylesheet">
+    <link href="/css/pygments-github.css" rel="stylesheet">
+    
+    <link href="/css/site.css" rel="stylesheet">
+    
+    
+    
+     
+    
+    
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/index.html">
+            <img class="logo" src="/images/logo-head.gif">
+          </a>
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Menu</button>
+          </p>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container">
+        
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+                
+                <ul class="sidebar">
+                    <li class="sidebar-header">Apache PDFBox</li>
+                    <li><a href="/index.html">Overview</a></li>
+                    <li><a href="/download.cgi">Downloads</a></li>
+                    
+                    <li class="sidebar-header">Community</li>
+                    <li><a href="/support.html">Support</a></li>
+                    <li><a href="/mailinglists.html">Mailing Lists</a></li>
+                    <li><a href="/team.html">Project Team</a></li>
+                    
+                    <li class="sidebar-header">Documentation</li>
+                    <li class="sidebar-node" id="v2-0">
+                        <a href="#">2.0.0 (trunk)</a>
+                        <ul>
+                            <li><a href="/2.0/migration.html">Migration Guide</a></li>
+                            <li><a href="/2.0/getting-started.html">Getting Started</a></li>
+                            <li><a href="/2.0/examples.html">Examples</a></li>
+                            <li><a href="/2.0/dependencies.html">Dependencies</a></li>
+                            <li class="sidebar-node" id="v2-0-cookbook">
+                                <a href="#">Cookbook</a>
+                                <ul>
+                                    <li><a href="/2.0/cookbook/encryption.html">Document Encryption</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/2.0/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/docs/2.0.0-SNAPSHOT/javadocs/">API Docs</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-node" id="v1-8">
+                        <a href="#">1.8.10</a>
+                        <ul>
+                            <li><a href="/1.8/architecture.html">Architecture</a></li>
+                            <li><a href="/1.8/dependencies.html">Dependencies</a></li>
+                            <li class="sidebar-node" id="v1-8-cookbook">
+                                <a href="#">Cookbook</a>
+                                <ul>
+                                    <li><a href="/1.8/cookbook/documentcreation.html">Document Creation</a></li>
+                                    <li><a href="/1.8/cookbook/textextraction.html">Text Extraction</a></li>
+                                    <li><a href="/1.8/cookbook/encryption.html">Document Encryption</a></li>
+                                    <li><a href="/1.8/cookbook/workingwithfonts.html">Working with Fonts</a></li>
+                                    <li><a href="/1.8/cookbook/workingwithmetadata.html">Working with Metadata</a></li>
+                                    <li><a href="/1.8/cookbook/workingwithattachments.html">Working with Attachments</a></li>
+                                    <li><a href="/1.8/cookbook/pdfavalidation.html">PDF/A Validation</a></li>
+                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A document</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/1.8/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/docs/1.8.10/javadocs/">API Docs</a></li>
+                            <li><a href="/1.8/faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="sidebar-header">Development</li>
+                    <li><a href="/building.html">Building from Source</a></li>
+                    <li><a href="/codingconventions.html">Coding Conventions</a></li>
+                    <li><a href="/siteupdate.html">Update the Website</a></li>  
+                    <li><a href="https://builds.apache.org/view/All/job/PDFBox-trunk/">Jenkins</a></li>
+                    <li><a href="https://travis-ci.org/apache/pdfbox">Travis CI</a></li>
+                    <li><a href="https://analysis.apache.org/dashboard/index/org.apache.pdfbox:pdfbox-reactor">SonarQube</a></li>
+                    <li><a href="https://issues.apache.org/jira/browse/PDFBOX">JIRA</a></li>
+                    <li><a href="/ideas.html">Ideas</a></li>
+                    <li><a href="/references.html">External Links</a></li>
+
+                    <li class="sidebar-header">Apache Software Foundation</li>
+                    <li><a href="http://www.apache.org/">Apache Software Foundation</a></li>
+                    <li><a href="http://www.apache.org/foundation/thanks.html">ASF Sponsors</a></li>
+                    <li><a href="http://www.apache.org/security/">Security</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-9">
+                <h1 id="textextraction">Textextraction</h1>
+
+<h2 id="extracting-text">Extracting Text</h2>
+
+<p>See class:org.apache.pdfbox.util.PDFTextStripper<br>
+See class:org.apache.pdfbox.searchengine.lucene.LucenePDFDocument<br>
+See command line app:ExtractText  </p>
+
+<p>One of the main features of PDFBox is its ability to quickly and accurately extract text 
+from a variety of PDF documents. This functionality is encapsulated in the 
+org.apache.pdfbox.util.PDFTextStripper and can be easily executed on the command line with 
+org.apache.pdfbox.ExtractText.</p>
+
+<h2 id="lucene-integration">Lucene Integration</h2>
+
+<p>Lucene is an open source text search library from the Apache Jakarta Project. In order for
+Lucene to be able to index a PDF document it must first be converted to text. PDFBox provides 
+a simple approach for adding PDF documents into a Lucene index.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Document</span> <span class="n">luceneDocument</span> <span class="o">=</span> <span class="n">LucenePDFDocument</span><span class="o">.</span><span class="na">getDocument</span><span class="o">(</span> <span class="o">...</span> <span class="o">);</span>
+</code></pre></div>
+<p>Now that you hava a Lucene Document object, you can add it to the Lucene index just like 
+you would if it had been created from a text or HTML file. The LucenePDFDocument automatically 
+extracts a variety of metadata fields from the PDF to be added to the index, the javadoc 
+shows details on those fields. This approach is very simple and should be sufficient for 
+most users, if not then you can use some of the advanced text extraction techniques 
+described in the next section.</p>
+
+<h2 id="advanced-text-extraction">Advanced Text Extraction</h2>
+
+<p>Some applications will have complex text extraction requiments and neither the command 
+line application nor the LucenePDFDocument will be able to fulfill those requirements. 
+It is possible for users to utilize or extend the PDFTextStripper class to meet some of 
+these requirements.</p>
+
+<h3 id="limiting-the-extracted-text">Limiting The Extracted Text</h3>
+
+<p>There are several ways that we can limit the text that is extracted during the extraction 
+process. The simplest is to specify the range of pages that you want to be extracted. 
+For example, to only extract text from the second and third pages of the PDF document 
+you could do this:</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">PDFTextStripper</span> <span class="n">stripper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDFTextStripper</span><span class="o">();</span>
+<span class="n">stripper</span><span class="o">.</span><span class="na">setStartPage</span><span class="o">(</span> <span class="mi">2</span> <span class="o">);</span>
+<span class="n">stripper</span><span class="o">.</span><span class="na">setEndPage</span><span class="o">(</span> <span class="mi">3</span> <span class="o">);</span>
+<span class="n">stripper</span><span class="o">.</span><span class="na">writeText</span><span class="o">(</span> <span class="o">...</span> <span class="o">);</span>
+</code></pre></div>
+<p>NOTE: The startPage and endPage properties of PDFTextStripper are 1 based and inclusive.</p>
+
+<p>If you wanted to start on page 2 and extract to the end of the document then you would just
+set the startPage property. By default all pages in the pdf document are extracted.</p>
+
+<p>It is also possible to limit the extracted text to be between two bookmarks in the page. 
+If you are not familiar with how to use bookmarks in PDFBox then you should review the 
+Bookmarks page. Similar to the startPage/endPage properties, PDFTextStripper also has 
+startBookmark/endBookmark properties. There are some caveats to be aware of when using this
+feature of the PDFTextStripper. Not all bookmarks point to a page in the current PDF document. </p>
+
+<p>The possible states of a bookmark are:</p>
+
+<ul>
+<li>null - The property was not set, this is the default.</li>
+<li>Points to page in the PDF - The property was set and points to a valid page in the PDF</li>
+<li>Bookmark does not point to anything - The property was set but the bookmark does not point to any page</li>
+<li>Bookmark points to external action - The property was set, but it points to a page in a different PDF or performs an action when activated</li>
+</ul>
+
+<p>The table below will describe how PDFBox behaves in the various scenarios:</p>
+
+<table><thead>
+<tr>
+<th>Start Bookmark</th>
+<th>End Bookmark</th>
+<th>Result</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>null</td>
+<td>null</td>
+<td>This is the default, the properties have no effect on the text extraction.</td>
+</tr>
+<tr>
+<td>Points to a page in the PDF</td>
+<td>null</td>
+<td>Text extraction will begin on the page that this bookmark points to and go until the end of the document.</td>
+</tr>
+<tr>
+<td>null</td>
+<td>Points to a page in the PDF</td>
+<td>Text extraction will begin on the first page and stop at the end of the page that this bookmark points to.</td>
+</tr>
+<tr>
+<td>Bookmark does not point to anything</td>
+<td>null</td>
+<td>Because the PDFTextStripper cannot determine a start page based on the bookmark, it will start on the first page and go until the end of the document.</td>
+</tr>
+<tr>
+<td>null</td>
+<td>Bookmark does not point to anything</td>
+<td>Because the PDFTextStripper cannot determine a end page based on the bookmark, it will start on the first page and go until the end of the document.</td>
+</tr>
+<tr>
+<td>Bookmark does not point to anything</td>
+<td>Bookmark does not point to anything</td>
+<td>This is a special case! If the startBookmark and endBookmark are exactly the same then no text will be extracted. If they are different then it is not possible for the PDFTextStripper to determine that pages so it will include the entire document.</td>
+</tr>
+<tr>
+<td>Bookmark points to external action</td>
+<td>Bookmark points to external action</td>
+<td>If either the startBookmark or the endBookmark refer to an external page or execute an action then an OutlineNotLocalException will be thrown to indicate to the user that the bookmark is not valid.</td>
+</tr>
+</tbody></table>
+
+<p>NOTE: PDFTextStripper will check both the startPage/endPage and the startBookmark/endBookmark to determine if text should be extracted from the current page.</p>
+
+<h3 id="external-glyph-list">External Glyph List</h3>
+
+<p>Some PDF files need to map between glyph names and Unicode values during text extraction. 
+PDFBox comes with an Adobe Glyph List, but you may encounter files with glyph names that 
+are not in that map. To use your own glyphlist file, supply the file name to the <code>glyphlist_ext</code> JVM property.</p>
+
+<h3 id="right-to-left-text">Right to Left Text</h3>
+
+<p>Extracting text in languages whose text goes from right to left (such as Arabic and Hebrew)
+in PDF files can result in text that is backwards. PDFBox can normalize and reverse the text
+if the ICU4J jar file has been placed on the classpath (it is an optional dependency). 
+Note that you should also enable sorting with either org.apache.pdfbox.util.PDFTextStripper 
+or org.apache.pdfbox.ExtractText to ensure accurate output.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container"
+            <div class="row">
+                <div class="span3">
+                    <!-- nothing in here on purpose -->
+                </div>
+                <div class="span9">
+                    <p>Copyright © 2009&ndash;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>, Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                        <br/>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+        <!-- Twitter Bootstrap and jQuery after this line. -->
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        
+        $(document).ready(function () {
+                $('[data-toggle="offcanvas"]').click(function () {
+                $('.row-offcanvas').toggleClass('active')
+            });
+        });
+        
+        $(function() {
+            // collapse tree nodes dynamically to support noscript
+            $('.sidebar-node').addClass('collapsed');
+            
+
+            // toggle expand/collapse
+            $('.sidebar-node > a').click(function(e) {
+                $(this).parent().toggleClass('collapsed');
+                e.preventDefault();
+            });
+
+            // preserve expand/collapse across page navigation
+            var path = document.location.pathname;
+            if (path.indexOf('/2.0') == 0) {
+                $('#v2-0').removeClass('collapsed');
+                if (path.indexOf('/2.0/cookbook') == 0) {
+                    $('#v2-0-cookbook').removeClass('collapsed');
+                }
+            } else {
+                $('#v1-8').removeClass('collapsed');
+                if (path.indexOf('/1.8/cookbook') == 0) {
+                    $('#v1-8-cookbook').removeClass('collapsed');
+                }
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>

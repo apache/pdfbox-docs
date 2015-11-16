@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+     
+     Licensed to the Apache Software Foundation (ASF) under one or more
+     contributor license agreements.  See the NOTICE file distributed with
+     this work for additional information regarding copyright ownership.
+     The ASF licenses this file to You under the Apache License, Version 2.0
+     (the "License"); you may not use this file except in compliance with
+     the License.  You may obtain a copy of the License at
+     
+     http://www.apache.org/licenses/LICENSE- 2.0
+     
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+     -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command line utilities. Apache PDFBox is published under the Apache License v2.0.
+">
+
+    <title>Apache PDFBox | Architecture</title>
+
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/open-iconic/font/css/open-iconic-bootstrap.min.css" rel="stylesheet">
+    <link href="/css/pygments-github.css" rel="stylesheet">
+    
+    <link href="/css/site.css" rel="stylesheet">
+    
+    
+    
+     
+    
+    
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/index.html">
+            <img class="logo" src="/images/logo-head.gif">
+          </a>
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Menu</button>
+          </p>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container">
+        
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+                
+                <ul class="sidebar">
+                    <li class="sidebar-header">Apache PDFBox</li>
+                    <li><a href="/index.html">Overview</a></li>
+                    <li><a href="/download.cgi">Downloads</a></li>
+                    
+                    <li class="sidebar-header">Community</li>
+                    <li><a href="/support.html">Support</a></li>
+                    <li><a href="/mailinglists.html">Mailing Lists</a></li>
+                    <li><a href="/team.html">Project Team</a></li>
+                    
+                    <li class="sidebar-header">Documentation</li>
+                    <li class="sidebar-node" id="v2-0">
+                        <a href="#">2.0.0 (trunk)</a>
+                        <ul>
+                            <li><a href="/2.0/migration.html">Migration Guide</a></li>
+                            <li><a href="/2.0/getting-started.html">Getting Started</a></li>
+                            <li><a href="/2.0/examples.html">Examples</a></li>
+                            <li><a href="/2.0/dependencies.html">Dependencies</a></li>
+                            <li class="sidebar-node" id="v2-0-cookbook">
+                                <a href="#">Cookbook</a>
+                                <ul>
+                                    <li><a href="/2.0/cookbook/encryption.html">Document Encryption</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/2.0/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/docs/2.0.0-SNAPSHOT/javadocs/">API Docs</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-node" id="v1-8">
+                        <a href="#">1.8.10</a>
+                        <ul>
+                            <li><a href="/1.8/architecture.html">Architecture</a></li>
+                            <li><a href="/1.8/dependencies.html">Dependencies</a></li>
+                            <li class="sidebar-node" id="v1-8-cookbook">
+                                <a href="#">Cookbook</a>
+                                <ul>
+                                    <li><a href="/1.8/cookbook/documentcreation.html">Document Creation</a></li>
+                                    <li><a href="/1.8/cookbook/textextraction.html">Text Extraction</a></li>
+                                    <li><a href="/1.8/cookbook/encryption.html">Document Encryption</a></li>
+                                    <li><a href="/1.8/cookbook/workingwithfonts.html">Working with Fonts</a></li>
+                                    <li><a href="/1.8/cookbook/workingwithmetadata.html">Working with Metadata</a></li>
+                                    <li><a href="/1.8/cookbook/workingwithattachments.html">Working with Attachments</a></li>
+                                    <li><a href="/1.8/cookbook/pdfavalidation.html">PDF/A Validation</a></li>
+                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A document</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/1.8/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/docs/1.8.10/javadocs/">API Docs</a></li>
+                            <li><a href="/1.8/faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="sidebar-header">Development</li>
+                    <li><a href="/building.html">Building from Source</a></li>
+                    <li><a href="/codingconventions.html">Coding Conventions</a></li>
+                    <li><a href="/siteupdate.html">Update the Website</a></li>  
+                    <li><a href="https://builds.apache.org/view/All/job/PDFBox-trunk/">Jenkins</a></li>
+                    <li><a href="https://travis-ci.org/apache/pdfbox">Travis CI</a></li>
+                    <li><a href="https://analysis.apache.org/dashboard/index/org.apache.pdfbox:pdfbox-reactor">SonarQube</a></li>
+                    <li><a href="https://issues.apache.org/jira/browse/PDFBOX">JIRA</a></li>
+                    <li><a href="/ideas.html">Ideas</a></li>
+                    <li><a href="/references.html">External Links</a></li>
+
+                    <li class="sidebar-header">Apache Software Foundation</li>
+                    <li><a href="http://www.apache.org/">Apache Software Foundation</a></li>
+                    <li><a href="http://www.apache.org/foundation/thanks.html">ASF Sponsors</a></li>
+                    <li><a href="http://www.apache.org/security/">Security</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-9">
+                <h1 id="architecture">Architecture</h1>
+
+<p>In order to get the most out of PDFBox it is neccessary to understand how a PDF document
+is organized as PDFBox was architected around the concepts layed out in the 
+ISO-32000 (PDF) Specification</p>
+
+<ul>
+<li><a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=51502">ISO Site</a></li>
+<li><a href="http://wwwimages.adobe.com/www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf">Adobe Version</a></li>
+</ul>
+
+<h2 id="quick-introduction-to-the-pdf-format">Quick Introduction to the PDF format</h2>
+
+<p>A PDF file is made up of a sequence of bytes. These bytes, grouped into tokens, 
+make up the basic objects upon which higher level objects and structures are built [see ISO-32000 7.3].</p>
+
+<p class="alert alert-info">PDFBox makes these basic objects available in the 
+*org.apache.pdfbox.cos* package (The COS Model).
+</p>
+
+<p>The organization of these objects, how to they are read and how to write them is defined in the file structure of the 
+PDF [see ISO-32000 7.5]. In addition a file can be encrpyted to protect the document&#39;s content [see ISO-32000 7.5].</p>
+
+<p class="alert alert-info">PDFBox handles the reading in the *org.apache.pdfbox.pdfparser* package. 
+Writing of PDF files is handled in the *org.apache.pdfbox.pdfwriter* package.
+</p>
+
+<p>Within the file structure basic objects are used to create a document structure building higher level objects such 
+as pages, bookmarks, annotations [see ISO-32000 7.7].</p>
+
+<p class="alert alert-info">PDFBox makes these higher level objects available through the 
+*org.apache.pdfbox.pdfmodel* package (The PD Model).
+</p> 
+
+<p>In addition there is a COS representation available for the PD model if there is a need to 
+inspect the underlying structure or to handle special cases where the higher level PD model
+doesn&#39;t provide the functionality needed.</p>
+
+<p class="alert alert-info">It's always the COS model which is represented in the PDF file.</p>
+
+<h2 id="the-cos-model">The COS Model</h2>
+
+<p>As outlined above the basic PDF objects are represented in PDFBox in the org.apache.pdfbox.cos package.</p>
+
+<table><thead>
+<tr>
+<th>PDF Type</th>
+<th>Description</th>
+<th>Example</th>
+<th>PDFBox class</th>
+<th>ISO 32000</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Standard True/False values</td>
+<td>true</td>
+<td>org.apache.pdfbox.cos.COSBoolean</td>
+<td>7.3.2</td>
+</tr>
+<tr>
+<td>Number</td>
+<td>Integer and floating point numbers</td>
+<td>1 2.3</td>
+<td>org.apache.pdfbox.cos.COSInteger<br/>org.apache.pdfbox.cos.COSFloat</td>
+<td>7.3.3</td>
+</tr>
+<tr>
+<td>String</td>
+<td>A sequence of characters</td>
+<td>(This is a string)</td>
+<td>org.apache.pdfbox.cos.COSString</td>
+<td>7.3.4</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>A predefined value in a PDF document, typically used as a key in a dictionary</td>
+<td>/Type</td>
+<td>org.apache.pdfbox.cos.COSName</td>
+<td>7.3.5</td>
+</tr>
+<tr>
+<td>Array</td>
+<td>Arrays are one-dimensional lists of objects accessed by a numeric index. Within an array each basic object is permitted as an entry.</td>
+<td>[549 3.14 false (Ralph) /SomeName]</td>
+<td>org.apache.pdfbox.cos.COSArray</td>
+<td>7.3.6</td>
+</tr>
+<tr>
+<td>Dictionary</td>
+<td>A map of name value pairs</td>
+<td>&lt;&lt;<br/>/Type /XObject<br/>/Name (Name)</br>/Size 1</br>&gt;&gt;</td>
+<td>org.apache.pdfbox.cos.COSDictionary</td>
+<td>7.3.7</td>
+</tr>
+<tr>
+<td>Stream</td>
+<td>A stream of data, typically compressed. This is used for page contents, images and embedded font streams.</td>
+<td>12 0 obj &lt;&lt; /Type /XObject &gt;&gt; stream 030004040404040404 endstream</td>
+<td>org.apache.pdfbox.cos.COSStream</td>
+<td>7.3.8</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>A wrapper to any of the other objects, this can be used to reference an object multiple times. An object is referenced by using two numbers, an object number and a generation number. Initially the generation number will be zero unless the object got replaced later in the stream.</td>
+<td>12 0 obj &lt;&lt; /Type /XObject &gt;&gt; endobj</td>
+<td>org.apache.pdfbox.cos.COSObject</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p>A page in a pdf document is represented with a COSDictionary. The entries that are available for a page can be seen in the PDF Reference and an example of a page looks like this:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;&lt;
+    /Type /Page
+    /MediaBox [0 0 612 915]
+    /Contents 56 0 R
+&gt;&gt;
+</code></pre></div>
+<p>The information within the dictionary can be accessed using the COS model</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">COSDictionary</span> <span class="n">page</span> <span class="o">=</span> <span class="o">...;</span>
+<span class="n">COSArray</span> <span class="n">mediaBox</span> <span class="o">=</span> <span class="o">(</span><span class="n">COSArray</span><span class="o">)</span><span class="n">page</span><span class="o">.</span><span class="na">getDictionaryObject</span><span class="o">(</span> <span class="s">"MediaBox"</span> <span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="s">"Width:"</span> <span class="o">+</span> <span class="n">mediaBox</span><span class="o">.</span><span class="na">get</span><span class="o">(</span> <span class="mi">3</span> <span class="o">)</span> <span class="o">);</span>
+</code></pre></div>
+<p>As can be seen from that little example the COS model provides a low level API to access 
+information within the PDF. In order to use the COS model successfully a good knowledge of
+the PDF specification is needed.</p>
+
+<h2 id="the-pd-model">The PD Model</h2>
+
+<p>The COS Model allows access to all aspects of a PDF document. This type of programming is
+tedious and error prone though because the user must know all of the names of the
+parameters and no helper methods are available. The PD Model was created to help
+alleviate this problem. Each type of object(page, font, image) has a set of defined
+attributes that can be available in the dictionary. 
+A PD Model class is available for each of these so that strongly typed methods are
+available to access the attributes. </p>
+
+<p>The same code from above to get the page width can be rewritten to use PD Model classes.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">PDPage</span> <span class="n">page</span> <span class="o">=</span> <span class="o">...;</span>
+<span class="n">PDRectangle</span> <span class="n">mediaBox</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="na">getMediaBox</span><span class="o">();</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="s">"Width:"</span> <span class="o">+</span> <span class="n">mediaBox</span><span class="o">.</span><span class="na">getWidth</span><span class="o">()</span> <span class="o">);</span>
+</code></pre></div>
+<p>PD Model objects sit on top of COS model. Typically, the classes in the PD Model will only
+store a COS object and all setter/getter methods will modify data that is stored in the
+COS object. For example, when you call PDPage.getLastModified() the method will do a
+lookup in the COSDictionary with the key &quot;LastModified&quot;, if it is found the value is then
+converter to a java.util.Calendar. When PDPage.setLastModified( Calendar ) is called then
+the Calendar is converted to a string in the COSDictionary.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container"
+            <div class="row">
+                <div class="span3">
+                    <!-- nothing in here on purpose -->
+                </div>
+                <div class="span9">
+                    <p>Copyright © 2009&ndash;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>, Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                        <br/>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+        <!-- Twitter Bootstrap and jQuery after this line. -->
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        
+        $(document).ready(function () {
+                $('[data-toggle="offcanvas"]').click(function () {
+                $('.row-offcanvas').toggleClass('active')
+            });
+        });
+        
+        $(function() {
+            // collapse tree nodes dynamically to support noscript
+            $('.sidebar-node').addClass('collapsed');
+            
+
+            // toggle expand/collapse
+            $('.sidebar-node > a').click(function(e) {
+                $(this).parent().toggleClass('collapsed');
+                e.preventDefault();
+            });
+
+            // preserve expand/collapse across page navigation
+            var path = document.location.pathname;
+            if (path.indexOf('/2.0') == 0) {
+                $('#v2-0').removeClass('collapsed');
+                if (path.indexOf('/2.0/cookbook') == 0) {
+                    $('#v2-0-cookbook').removeClass('collapsed');
+                }
+            } else {
+                $('#v1-8').removeClass('collapsed');
+                if (path.indexOf('/1.8/cookbook') == 0) {
+                    $('#v1-8-cookbook').removeClass('collapsed');
+                }
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>

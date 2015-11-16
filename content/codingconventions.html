@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+     
+     Licensed to the Apache Software Foundation (ASF) under one or more
+     contributor license agreements.  See the NOTICE file distributed with
+     this work for additional information regarding copyright ownership.
+     The ASF licenses this file to You under the Apache License, Version 2.0
+     (the "License"); you may not use this file except in compliance with
+     the License.  You may obtain a copy of the License at
+     
+     http://www.apache.org/licenses/LICENSE- 2.0
+     
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+     -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command line utilities. Apache PDFBox is published under the Apache License v2.0.
+">
+
+    <title>Apache PDFBox | Coding Conventions</title>
+
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/open-iconic/font/css/open-iconic-bootstrap.min.css" rel="stylesheet">
+    <link href="/css/pygments-github.css" rel="stylesheet">
+    
+    <link href="/css/site.css" rel="stylesheet">
+    
+    
+    
+     
+    
+    
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/index.html">
+            <img class="logo" src="/images/logo-head.gif">
+          </a>
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Menu</button>
+          </p>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container">
+        
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+                
+                <ul class="sidebar">
+                    <li class="sidebar-header">Apache PDFBox</li>
+                    <li><a href="/index.html">Overview</a></li>
+                    <li><a href="/download.cgi">Downloads</a></li>
+                    
+                    <li class="sidebar-header">Community</li>
+                    <li><a href="/support.html">Support</a></li>
+                    <li><a href="/mailinglists.html">Mailing Lists</a></li>
+                    <li><a href="/team.html">Project Team</a></li>
+                    
+                    <li class="sidebar-header">Documentation</li>
+                    <li class="sidebar-node" id="v2-0">
+                        <a href="#">2.0.0 (trunk)</a>
+                        <ul>
+                            <li><a href="/2.0/migration.html">Migration Guide</a></li>
+                            <li><a href="/2.0/getting-started.html">Getting Started</a></li>
+                            <li><a href="/2.0/examples.html">Examples</a></li>
+                            <li><a href="/2.0/dependencies.html">Dependencies</a></li>
+                            <li class="sidebar-node" id="v2-0-cookbook">
+                                <a href="#">Cookbook</a>
+                                <ul>
+                                    <li><a href="/2.0/cookbook/encryption.html">Document Encryption</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/2.0/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/docs/2.0.0-SNAPSHOT/javadocs/">API Docs</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-node" id="v1-8">
+                        <a href="#">1.8.10</a>
+                        <ul>
+                            <li><a href="/1.8/architecture.html">Architecture</a></li>
+                            <li><a href="/1.8/dependencies.html">Dependencies</a></li>
+                            <li class="sidebar-node" id="v1-8-cookbook">
+                                <a href="#">Cookbook</a>
+                                <ul>
+                                    <li><a href="/1.8/cookbook/documentcreation.html">Document Creation</a></li>
+                                    <li><a href="/1.8/cookbook/textextraction.html">Text Extraction</a></li>
+                                    <li><a href="/1.8/cookbook/encryption.html">Document Encryption</a></li>
+                                    <li><a href="/1.8/cookbook/workingwithfonts.html">Working with Fonts</a></li>
+                                    <li><a href="/1.8/cookbook/workingwithmetadata.html">Working with Metadata</a></li>
+                                    <li><a href="/1.8/cookbook/workingwithattachments.html">Working with Attachments</a></li>
+                                    <li><a href="/1.8/cookbook/pdfavalidation.html">PDF/A Validation</a></li>
+                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A document</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/1.8/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/docs/1.8.10/javadocs/">API Docs</a></li>
+                            <li><a href="/1.8/faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="sidebar-header">Development</li>
+                    <li><a href="/building.html">Building from Source</a></li>
+                    <li><a href="/codingconventions.html">Coding Conventions</a></li>
+                    <li><a href="/siteupdate.html">Update the Website</a></li>  
+                    <li><a href="https://builds.apache.org/view/All/job/PDFBox-trunk/">Jenkins</a></li>
+                    <li><a href="https://travis-ci.org/apache/pdfbox">Travis CI</a></li>
+                    <li><a href="https://analysis.apache.org/dashboard/index/org.apache.pdfbox:pdfbox-reactor">SonarQube</a></li>
+                    <li><a href="https://issues.apache.org/jira/browse/PDFBOX">JIRA</a></li>
+                    <li><a href="/ideas.html">Ideas</a></li>
+                    <li><a href="/references.html">External Links</a></li>
+
+                    <li class="sidebar-header">Apache Software Foundation</li>
+                    <li><a href="http://www.apache.org/">Apache Software Foundation</a></li>
+                    <li><a href="http://www.apache.org/foundation/thanks.html">ASF Sponsors</a></li>
+                    <li><a href="http://www.apache.org/security/">Security</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-9">
+                <h1 id="coding-conventions">Coding Conventions</h1>
+
+<p>Over the years the PDFBox project has come to adopt a number of coding conventions. These are not always followed in old code but new code should try to follow these rules where possible.</p>
+
+<h3 id="formatting">Formatting</h3>
+
+<ul>
+<li><p>Braces go on their own line.</p></li>
+<li><p>Always use braces with control flow statements.</p></li>
+<li><p>No lines longer than 100 characters, including JavaDoc.</p></li>
+<li><p>Wrapped lines should use either an indent of 4 or 8 characters or align with the expression at the same level on the previous line.</p></li>
+<li><p>Wrapped lines should be broken after operators, not before.</p></li>
+<li><p>Prefer aligned wrapped lines.</p></li>
+<li><p>Prefer aligned wrapped parameter lists.</p></li>
+</ul>
+
+<h3 id="whitespace">Whitespace</h3>
+
+<ul>
+<li><p>Four spaces for indents, no tabs.</p></li>
+<li><p>Do not use spaces around parenthesis.</p></li>
+<li><p>Use spaces after control flow keywords.</p></li>
+<li><p>Prefer using blank lines to separate logical blocks of code, but do not be excessive.</p></li>
+<li><p>Prefer not following casts with a blank space.</p></li>
+</ul>
+
+<h3 id="structure">Structure</h3>
+
+<ul>
+<li><p>Do not use package imports (e.g. <code>import java.util.*</code>)</p></li>
+<li><p>Static fields and methods must appear at the top of a class, before any other code.</p></li>
+<li><p>Within a class, definitions should be ordered as follows:</p>
+
+<p>Class (static) variables<br>
+Instance variables<br>
+Constructors<br>
+Methods  </p></li>
+</ul>
+
+<h3 id="javadoc">JavaDoc</h3>
+
+<ul>
+<li><p>Public and protected methods and fields must have JavaDoc.</p></li>
+<li><p>Don&#39;t use <code>@version</code> tags.</p></li>
+<li><p>Don&#39;t use <code>@since</code> tags.</p></li>
+<li><p>Don&#39;t include your e-mail address in <code>@author</code> tags.</p></li>
+<li><p>You may omit <code>@return</code> tags for getters as long as you include a summary which begins with the word &quot;Returns&quot;.</p></li>
+<li><p>Private methods do not require JavaDoc but may have partial JavaDoc if it adds valuable information.</p></li>
+</ul>
+
+<h3 id="comments">Comments</h3>
+
+<ul>
+<li><p>Only use line comments within code, never block comments.</p></li>
+<li><p>Prefer comments on their own line, rather than trailing, unless the latter is more readable.</p></li>
+<li><p>Prefix line comments by a space <code>// like this</code>.</p></li>
+</ul>
+
+<h3 id="variables">Variables</h3>
+
+<ul>
+<li><p>Prefer initializing variables when they are declared, rather than C-style declaration before use.</p></li>
+<li><p>Always use final fields when possible.</p></li>
+</ul>
+
+<h3 id="control-flow">Control Flow</h3>
+
+<ul>
+<li><p>Prefer multiple return statements over additional control flow logic.</p></li>
+<li><p>Prefer switch statements over multi-clause if-then statements.</p></li>
+</ul>
+
+<h3 id="api-design">API Design</h3>
+
+<ul>
+<li><p>Give variables and methods meaningful names. Keep these short but don&#39;t use abbreviations. Prefer using the same terminology as the PDF spec.</p></li>
+<li><p>Prefer final classes and final protected methods for non-final public classes, this reduces the surface area of the public API.</p></li>
+<li><p>Avoid non-final protected variables in public classes. Prefer protected getters over protected variables when protected fields are necessery in public classes.</p></li>
+<li><p>Minimize the API. Don&#39;t make everything public just because you can.</p></li>
+<li><p>Don&#39;t expose implementation details unless there is a clear need: allowing subclassing means that the behaviour of protected methods becomes part of the contract of the public AP.</p></li>
+<li><p>Avoid unnecesary abstraction. While you&#39;re encouraged to avoid brittle designs, it&#39;s unlikey that an API designed for &quot;future use&quot; will have the correct API without any code which actually uses it.</p></li>
+</ul>
+
+<h3 id="example">Example</h3>
+
+<p>Here&#39;s an example of PDFBox&#39;s formatting style:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">public class Foo extends Bar
+{
+    public static void main(String args[])
+    {
+        try
+        {
+            for (int i = 0; i &lt; args.length; i++)
+            {
+                System.out.println(Integer.parseInt(args[i]));
+            }
+        }
+        catch (NumberFormatException e)
+        {
+            e.printStackTrace();
+        }
+    }
+}
+</code></pre></div>
+<h2 id="eclipse-formatter">Eclipse Formatter</h2>
+
+<p>Eclipse users may download this preferences file: pdfbox-eclipse-formatter.xml and import this into Eclipse. 
+(Window-&gt;Preferences, go to Java-&gt;Code Style-&gt;Formatter and click &quot;Import...&quot;).
+Once you have done this you can reformat your code by using Source-&gt;Format (Ctrl+Shift+F).</p>
+
+<p>Also note that Eclipse will automatically format your import statements appropriately when 
+you invoke Source -&gt; Organize Imports (Ctrl+Shift+O).</p>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container"
+            <div class="row">
+                <div class="span3">
+                    <!-- nothing in here on purpose -->
+                </div>
+                <div class="span9">
+                    <p>Copyright © 2009&ndash;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>, Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                        <br/>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+        <!-- Twitter Bootstrap and jQuery after this line. -->
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        
+        $(document).ready(function () {
+                $('[data-toggle="offcanvas"]').click(function () {
+                $('.row-offcanvas').toggleClass('active')
+            });
+        });
+        
+        $(function() {
+            // collapse tree nodes dynamically to support noscript
+            $('.sidebar-node').addClass('collapsed');
+            
+
+            // toggle expand/collapse
+            $('.sidebar-node > a').click(function(e) {
+                $(this).parent().toggleClass('collapsed');
+                e.preventDefault();
+            });
+
+            // preserve expand/collapse across page navigation
+            var path = document.location.pathname;
+            if (path.indexOf('/2.0') == 0) {
+                $('#v2-0').removeClass('collapsed');
+                if (path.indexOf('/2.0/cookbook') == 0) {
+                    $('#v2-0-cookbook').removeClass('collapsed');
+                }
+            } else {
+                $('#v1-8').removeClass('collapsed');
+                if (path.indexOf('/1.8/cookbook') == 0) {
+                    $('#v1-8-cookbook').removeClass('collapsed');
+                }
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>
