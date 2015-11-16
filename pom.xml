@@ -33,7 +33,8 @@
         <properties>
             <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
             <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-            <svn.scmContentUrl>https://svn.apache.org/repos/infra/websites/production/pdfbox/content</svn.scmContentUrl>
+            <svn.scmContentUrl>svn:https://svn.apache.org/repos/infra/websites/production/pdfbox/content</svn.scmContentUrl>
+            <git.scmContentUrl>git:https://git-wip-us.apache.org/repos/asf/pdfbox-docs</git.scmContentUrl>
         </properties>
         
         <build>
@@ -49,7 +50,14 @@
                     <version>1.1</version>
                     <configuration>
                         <content>staging</content>
-                        <pubScmUrl>scm:svn:${svn.scmContentUrl}</pubScmUrl>
+                        <!--
+                            set to 'true' if you'd like to test the changes without doing the 
+                            scm update operations
+                        -->
+                        <dryRun>false</dryRun>
+                        <pubScmUrl>scm:${git.scmContentUrl}</pubScmUrl>
+                        <!-- this has to be 'asf-site' as gitwcsub is reading form there -->
+                        <scmBranch>asf-site</scmBranch>
                         <tryUpdate>true</tryUpdate>
                         <checkoutDirectory>${svn.scmCheckoutDirectory}</checkoutDirectory>
                         <ignorePathsToDelete>

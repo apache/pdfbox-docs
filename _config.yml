@@ -11,7 +11,7 @@ url: "http://pdfbox.apache.org/"
 
 # Build settings
 source: ./content
-destination: ./staging
+destination: ./staging/content
 layouts_dir:  _layouts
 
 markdown_ext: "markdown,mkdown,mkdn,mkd,md,mdtext"
