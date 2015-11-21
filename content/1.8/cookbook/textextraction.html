@@ -171,7 +171,7 @@ these requirements.</p>
 process. The simplest is to specify the range of pages that you want to be extracted. 
 For example, to only extract text from the second and third pages of the PDF document 
 you could do this:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">PDFTextStripper</span> <span class="n">stripper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDFTextStripper</span><span class="o">();</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">PDFTextStripper</span> <span class="n">stripper</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">PDFTextStripper</span><span class="o">();</span>
 <span class="n">stripper</span><span class="o">.</span><span class="na">setStartPage</span><span class="o">(</span> <span class="mi">2</span> <span class="o">);</span>
 <span class="n">stripper</span><span class="o">.</span><span class="na">setEndPage</span><span class="o">(</span> <span class="mi">3</span> <span class="o">);</span>
 <span class="n">stripper</span><span class="o">.</span><span class="na">writeText</span><span class="o">(</span> <span class="o">...</span> <span class="o">);</span>

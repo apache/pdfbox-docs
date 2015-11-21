@@ -139,22 +139,22 @@ Check Compliance with PDF/A-1b</p>
 <p>This small sample shows how to check the compliance of a file with the PDF/A-1b specification.</p>
 <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">ValidationResult</span> <span class="n">result</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
 
-<span class="n">FileDataSource</span> <span class="n">fd</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileDataSource</span><span class="o">(</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span>
-<span class="n">PreflightParser</span> <span class="n">parser</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PreflightParser</span><span class="o">(</span><span class="n">fd</span><span class="o">);</span>
+<span class="n">FileDataSource</span> <span class="n">fd</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">FileDataSource</span><span class="o">(</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span>
+<span class="n">PreflightParser</span> <span class="n">parser</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">PreflightParser</span><span class="o">(</span><span class="n">fd</span><span class="o">);</span>
 <span class="k">try</span>
 <span class="o">{</span>
 
-    <span class="cm">/* Parse the PDF file with PreflightParser that inherits from the NonSequentialParser.
-     * Some additional controls are present to check a set of PDF/A requirements. 
-     * (Stream length consistency, EOL after some Keyword...)
-     */</span>
+    <span class="cm">/* Parse the PDF file with PreflightParser that inherits from the NonSequentialParser.</span>
+<span class="cm">     * Some additional controls are present to check a set of PDF/A requirements. </span>
+<span class="cm">     * (Stream length consistency, EOL after some Keyword...)</span>
+<span class="cm">     */</span>
     <span class="n">parser</span><span class="o">.</span><span class="na">parse</span><span class="o">();</span>
 
-    <span class="cm">/* Once the syntax validation is done, 
-     * the parser can provide a PreflightDocument 
-     * (that inherits from PDDocument) 
-     * This document process the end of PDF/A validation.
-     */</span>
+    <span class="cm">/* Once the syntax validation is done, </span>
+<span class="cm">     * the parser can provide a PreflightDocument </span>
+<span class="cm">     * (that inherits from PDDocument) </span>
+<span class="cm">     * This document process the end of PDF/A validation.</span>
+<span class="cm">     */</span>
     <span class="n">PreflightDocument</span> <span class="n">document</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="na">getPreflightDocument</span><span class="o">();</span>
     <span class="n">document</span><span class="o">.</span><span class="na">validate</span><span class="o">();</span>
 
@@ -165,24 +165,24 @@ Check Compliance with PDF/A-1b</p>
 <span class="o">}</span>
 <span class="k">catch</span> <span class="o">(</span><span class="n">SyntaxValidationException</span> <span class="n">e</span><span class="o">)</span>
 <span class="o">{</span>
-    <span class="cm">/* the parse method can throw a SyntaxValidationException 
-     * if the PDF file can't be parsed.
-     * In this case, the exception contains an instance of ValidationResult  
-     */</span>
+    <span class="cm">/* the parse method can throw a SyntaxValidationException </span>
+<span class="cm">     * if the PDF file can&#39;t be parsed.</span>
+<span class="cm">     * In this case, the exception contains an instance of ValidationResult  </span>
+<span class="cm">     */</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="na">getResult</span><span class="o">();</span>
 <span class="o">}</span>
 
 <span class="c1">// display validation result</span>
 <span class="k">if</span> <span class="o">(</span><span class="n">result</span><span class="o">.</span><span class="na">isValid</span><span class="o">())</span>
 <span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The file "</span> <span class="o">+</span> <span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="s">" is a valid PDF/A-1b file"</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;The file &quot;</span> <span class="o">+</span> <span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="s">&quot; is a valid PDF/A-1b file&quot;</span><span class="o">);</span>
 <span class="o">}</span>
 <span class="k">else</span>
 <span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The file"</span> <span class="o">+</span> <span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="s">" is not valid, error(s) :"</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;The file&quot;</span> <span class="o">+</span> <span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="s">&quot; is not valid, error(s) :&quot;</span><span class="o">);</span>
     <span class="k">for</span> <span class="o">(</span><span class="n">ValidationError</span> <span class="n">error</span> <span class="o">:</span> <span class="n">result</span><span class="o">.</span><span class="na">getErrorsList</span><span class="o">())</span>
     <span class="o">{</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">error</span><span class="o">.</span><span class="na">getErrorCode</span><span class="o">()</span> <span class="o">+</span> <span class="s">" : "</span> <span class="o">+</span> <span class="n">error</span><span class="o">.</span><span class="na">getDetails</span><span class="o">());</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">error</span><span class="o">.</span><span class="na">getErrorCode</span><span class="o">()</span> <span class="o">+</span> <span class="s">&quot; : &quot;</span> <span class="o">+</span> <span class="n">error</span><span class="o">.</span><span class="na">getDetails</span><span class="o">());</span>
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div>

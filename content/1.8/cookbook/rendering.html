@@ -136,8 +136,8 @@
 <h2 id="convert-a-document-to-images">Convert a document to images</h2>
 
 <p>This small sample shows how to render (convert to images) a PDF document using PDFBox.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">:::java
-    String filename = "YOURFILENAMEHERE.pdf";
+<div class="highlight"><pre><code class="language-text" data-lang="text">:::java
+    String filename = &quot;YOURFILENAMEHERE.pdf&quot;;
 
     // open the document
     PDDocument doc = PDDocument.loadNonSeq(new File(filename), null);
@@ -150,7 +150,7 @@
         BufferedImage bim = pages.get(p).convertToImage(BufferedImage.TYPE_INT_RGB, 300);
 
         // save as PNG with default metadata
-        b = ImageIO.write(bim, "png", new File("rgbpage" + (p+1) + ".png"));
+        b = ImageIO.write(bim, &quot;png&quot;, new File(&quot;rgbpage&quot; + (p+1) + &quot;.png&quot;));
         if (!b)
         {
             // error handling
@@ -162,7 +162,7 @@
         // save as TIF with dpi in the metadata
         // PDFBox will choose the best compression for you - here: CCITT G4
         // you need to add jai_imageio.jar to your classpath for this to work
-        b = ImageIOUtil.writeImage(bim, "bwpage-" + (p+1) + ".tif", 300);
+        b = ImageIOUtil.writeImage(bim, &quot;bwpage-&quot; + (p+1) + &quot;.tif&quot;, 300);
         if (!b)
         {
             // error handling

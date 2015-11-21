@@ -163,7 +163,7 @@ included in the Java platform.</p>
 
 <p>To add the pdfbox, fontbox, jempbox and commons-logging jars to your application, the easiest thing is to declare the Maven dependency shown below. This gives you the main
 pdfbox library directly and the other required jars as transitive dependencies.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;dependency&gt;
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;dependency&gt;
   &lt;groupId&gt;org.apache.pdfbox&lt;/groupId&gt;
   &lt;artifactId&gt;pdfbox&lt;/artifactId&gt;
   &lt;version&gt;...&lt;/version&gt;
@@ -190,7 +190,7 @@ pdfbox library directly and the other required jars as transitive dependencies.<
 
 <p>The most notable such optional feature is support for PDF encryption. Instead of implementing its own encryption algorithms, PDFBox uses libraries from the 
 <a href="http://www.bouncycastle.org/">Legion of the Bouncy Castle</a>. Both the bcprov and bcmail libraries are needed and can be included using the Maven dependencies shown below.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;dependency&gt;
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;dependency&gt;
   &lt;groupId&gt;org.bouncycastle&lt;/groupId&gt;
   &lt;artifactId&gt;bcprov-jdk15&lt;/artifactId&gt;
   &lt;version&gt;1.44&lt;/version&gt;
@@ -208,7 +208,7 @@ pdfbox library directly and the other required jars as transitive dependencies.<
 <p>Another important optional feature is support for bidirectional languages like Arabic. PDFBox uses the ICU4J library from the 
 <a href="http://site.icu-project.org/">International Components for Unicode</a> (ICU) project to support such languages in PDF documents. To add the ICU4J jar to your project, 
 use the following Maven dependency.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;dependency&gt;
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;dependency&gt;
   &lt;groupId&gt;com.ibm.icu&lt;/groupId&gt;
   &lt;artifactId&gt;icu4j&lt;/artifactId&gt;
   &lt;version&gt;3.8&lt;/version&gt;

@@ -138,7 +138,7 @@
 <h2 id="load-and-save-encrypted">Load and save encrypted</h2>
 
 <p>This small sample shows how to encrypt a file so that it can be viewed, but not printed..</p>
-<div class="highlight"><pre><code class="language-" data-lang="">PDDocument doc = PDDocument.load("filename.pdf");
+<div class="highlight"><pre><code class="language-text" data-lang="text">PDDocument doc = PDDocument.load(&quot;filename.pdf&quot;);
 
 // Define the length of the encryption key.
 // Possible values are 40, 128 or 256.
@@ -149,14 +149,14 @@ AccessPermission ap = new AccessPermission();
 // disable printing, everything else is allowed
 ap.setCanPrint(false);
 
-// owner password (to open the file with all permissions) is "12345"
+// owner password (to open the file with all permissions) is &quot;12345&quot;
 // user password (to open the file but with restricted permissions, is empty here) 
-StandardProtectionPolicy spp = new StandardProtectionPolicy("12345", "", ap);
+StandardProtectionPolicy spp = new StandardProtectionPolicy(&quot;12345&quot;, &quot;&quot;, ap);
 spp.setEncryptionKeyLength(keyLength);
 spp.setPermissions(ap);
 doc.protect(spp);
 
-doc.save("filename-encrypted.pdf");
+doc.save(&quot;filename-encrypted.pdf&quot;);
 doc.close();
 </code></pre></div>
             </div>
