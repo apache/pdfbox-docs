@@ -152,22 +152,22 @@
 <h3 id="check-out-from-the-git-repository">Check out from the git repository</h3>
 
 <p>Before you can edit the site, you need to check it out from the git repository:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://git-wip-us.apache.org/repos/asf/pdfbox-docs
+<div class="highlight"><pre><code class="language-" data-lang="">git clone https://git-wip-us.apache.org/repos/asf/pdfbox-docs
 </code></pre></div>
 <h3 id="local-changes">Local changes</h3>
 
 <p>You can now do the changes and additions to the sources of the PDFBox website. To test these locally use</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">jekyll serve
+<div class="highlight"><pre><code class="language-" data-lang="">jekyll serve
 </code></pre></div>
 <p>which will compile the changes and run a local webserver at </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">http://localhost:4000
+<div class="highlight"><pre><code class="language-" data-lang="">http://localhost:4000
 </code></pre></div>
 <h3 id="publish-the-website-for-comitters-only">Publish the website (for comitters only)</h3>
 
 <p>After you have done the local changes follow these steps to publish the content:</p>
 
 <p>Add the following server configuration in your ~/.m2/settings.xml file</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;server&gt;
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;server&gt;
   &lt;id&gt;pdfbox-site&lt;/id&gt;
   &lt;username&gt;** USERNAME **&lt;/username&gt;
   &lt;password&gt;** PASSWORD **&lt;/password&gt;
@@ -178,12 +178,12 @@
 <p class="alert alert-warning">The password should be encrypted following <a href="https://maven.apache.org/guides/mini/guide-encryption.html">Maven Password Encryption</a></p>
 
 <p>Ensure that the new website content is build locally</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">jekyll build
+<div class="highlight"><pre><code class="language-" data-lang="">jekyll build
 </code></pre></div>
 <p>This will read the sources and generate the new content in the <code>./staging</code> directory.</p>
 
 <p>Upload the new content to the production site</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">mvn scm-publish:publish-scm
+<div class="highlight"><pre><code class="language-" data-lang="">mvn scm-publish:publish-scm
 </code></pre></div>
 <p>This will checkout the current content into the <code>./target</code>directory, apply the changes from <code>./staging</code> and publish
 the changes to the PDFBox production website.</p>
@@ -193,7 +193,7 @@ the changes to the PDFBox production website.</p>
 <p>To publish the javadocs follow these steps:</p>
 
 <p>Run</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ mvn clean javadoc:aggregate scm-publish:publish-scm
+<div class="highlight"><pre><code class="language-" data-lang="">$ mvn clean javadoc:aggregate scm-publish:publish-scm
 </code></pre></div>
 <p>from the <code>&lt;SVN_ROOT&gt;/../pdfbox</code> directory.</p>
 

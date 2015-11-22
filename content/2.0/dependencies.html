@@ -168,7 +168,7 @@ included in the Java platform.</p>
 <h3 id="encryption-and-signing">Encryption and Signing</h3>
 
 <p>Encrypting and sigining PDFs requires the <em>bcprov</em> and <em>bcmail</em> libraries from the <a href="http://www.bouncycastle.org/">Legion of the Bouncy Castle</a>. These can be included in your Maven project using the following dependencies:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;dependency&gt;
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;dependency&gt;
     &lt;groupId&gt;org.bouncycastle&lt;/groupId&gt;
     &lt;artifactId&gt;bcprov-jdk15on&lt;/artifactId&gt;
     &lt;version&gt;1.53&lt;/version&gt;
@@ -183,7 +183,7 @@ included in the Java platform.</p>
 <h3 id="java-cryptography-extension-jce">Java Cryptography Extension (JCE)</h3>
 
 <p>256-bit AES encryption requires a JDK with &quot;unlimited strength&quot; cryptography, which requires extra files to be installed. For JDK 7, see <a href="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html">Java Cryptography Extension (JCE)</a>. If these files are not installed, building PDFBox will throw an exception with the following message:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">JCE unlimited strength jurisdiction policy files are not installed
+<div class="highlight"><pre><code class="language-" data-lang="">JCE unlimited strength jurisdiction policy files are not installed
 </code></pre></div>
             </div>
         </div>

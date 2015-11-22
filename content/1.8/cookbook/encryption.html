@@ -138,25 +138,25 @@
 <h2 id="load-and-save-encrypted">Load and save encrypted</h2>
 
 <p>This small sample shows how to encrypt a file so that it can be viewed, but not printed..</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="n">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="s">&quot;filename.pdf&quot;</span><span class="o">);</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="n">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="s">"filename.pdf"</span><span class="o">);</span>
 
 <span class="c1">// Define the length of the encryption key.</span>
 <span class="c1">// Possible values are 40 or 128 (256 will be available in PDFBox 2.0).</span>
 <span class="kt">int</span> <span class="n">keyLength</span> <span class="o">=</span> <span class="mi">128</span><span class="o">;</span>
 
-<span class="n">AccessPermission</span> <span class="n">ap</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">AccessPermission</span><span class="o">();</span>
+<span class="n">AccessPermission</span> <span class="n">ap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AccessPermission</span><span class="o">();</span>
 
 <span class="c1">// disable printing, everything else is allowed</span>
 <span class="n">ap</span><span class="o">.</span><span class="na">setCanPrint</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
 
-<span class="c1">// owner password (to open the file with all permissions) is &quot;12345&quot;</span>
+<span class="c1">// owner password (to open the file with all permissions) is "12345"</span>
 <span class="c1">// user password (to open the file but with restricted permissions, is empty here) </span>
-<span class="n">StandardProtectionPolicy</span> <span class="n">spp</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">StandardProtectionPolicy</span><span class="o">(</span><span class="s">&quot;12345&quot;</span><span class="o">,</span> <span class="s">&quot;&quot;</span><span class="o">,</span> <span class="n">ap</span><span class="o">);</span>
+<span class="n">StandardProtectionPolicy</span> <span class="n">spp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StandardProtectionPolicy</span><span class="o">(</span><span class="s">"12345"</span><span class="o">,</span> <span class="s">""</span><span class="o">,</span> <span class="n">ap</span><span class="o">);</span>
 <span class="n">spp</span><span class="o">.</span><span class="na">setEncryptionKeyLength</span><span class="o">(</span><span class="n">keyLength</span><span class="o">);</span>
 <span class="n">spp</span><span class="o">.</span><span class="na">setPermissions</span><span class="o">(</span><span class="n">ap</span><span class="o">);</span>
 <span class="n">doc</span><span class="o">.</span><span class="na">protect</span><span class="o">(</span><span class="n">spp</span><span class="o">);</span>
 
-<span class="n">doc</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="s">&quot;filename-encrypted.pdf&quot;</span><span class="o">);</span>
+<span class="n">doc</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="s">"filename-encrypted.pdf"</span><span class="o">);</span>
 <span class="n">doc</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
 </code></pre></div>
             </div>
