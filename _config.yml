@@ -14,6 +14,8 @@ source: ./content
 destination: ./staging/content
 layouts_dir:  _layouts
 
+permalink: /news/:year/:month/:day/:title.html
+
 markdown_ext: "markdown,mkdown,mkdn,mkd,md,mdtext"
 
 encoding: UTF-8

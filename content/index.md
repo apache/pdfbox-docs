@@ -27,9 +27,11 @@ title:   A Java PDF Library
 
     Apache PDFBox also includes several command line utilities.
     Apache PDFBox is published under the Apache License v2.0.</p>
-    
-## News
-With the initial discussions starting 3 years ago PDFBox 2.0.0 is in the works for quite some time now - **and we are in the final stages!** To give you the opportunity to provide feedback a [PDFBox 2.0.0-RC1 Release Candidate](http://pdfbox.apache.org/download.cgi) is now available. The [Migration Guide](http://pdfbox.apache.org/2.0/migration.html) shall give users coming from PDFBox 1.8 or earlier an overview about things to look at when switching over. More details to come.
+
+{% for post in site.categories.news limit:1 %}
+<h2>{{ post.title }}</h2>
+{{ post.content }}
+{% endfor %}
 
 ## Getting Help ##
 
@@ -80,3 +82,8 @@ skills. Subscribe to the [Mailing Lists](/mailinglists.html) and find out how yo
     </div>
 </div>
 
+## News
+{% for post in site.categories.news offset:1 limit:5 %}
+<h3>{{ post.title }}</h3>
+{{ post.content }}
+{% endfor %}
