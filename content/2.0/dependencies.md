@@ -33,9 +33,11 @@ Commons Logging is a generic wrapper around different logging frameworks, so you
 or let commons-logging fall back to the standard [java.util.logging API](http://java.sun.com/j2se/1.4.2/docs/guide/util/logging/overview.html)
 included in the Java platform.
 
+For **PDFBox Preflight only** [commons-io 2.4](https://commons.apache.org/proper/commons-io/) is needed.
+
 ## Optional components
 
-PDFBox does not ship with all features enabled. Third party compoenets are necessary to get full support for certain functionality.
+PDFBox does not ship with all features enabled. Third party components are necessary to get full support for certain functionality.
 
 ### JAI Image I/O
 

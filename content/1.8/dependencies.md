@@ -40,6 +40,8 @@ Commons Logging is a generic wrapper around different logging frameworks, so you
 or let commons-logging fall back to the standard [java.util.logging API](http://java.sun.com/j2se/1.4.2/docs/guide/util/logging/overview.html)
 included in the Java platform.
 
+For **PDFBox Preflight only** [commons-io 1.4](https://commons.apache.org/proper/commons-io/) is needed.
+
 ### Font Handling
 For font handling the fontbox component is needed.
 
