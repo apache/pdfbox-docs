@@ -89,6 +89,28 @@ In addition there are some specialized classes:
 - `CCITTFactory.createFromFile` (for bitonal TIFF images with G4 compression).
 - `LosslessFactory.createFromImage` (this is best if you start with a BufferedImage).
 
+### Parsing the Page Content
+Getting the content for a page has been simplified.
+
+Prior to PDFBox 2.0 parsing the page content was done using
+
+~~~java
+PDStream contents = page.getContents();
+PDFStreamParser parser = new PDFStreamParser(contents.getStream());
+parser.parse();
+List<Object> tokens = parser.getTokens();
+~~~
+
+With PDFBox 2.0 the code is reduced to 
+
+~~~java
+PDFStreamParser parser = new PDFStreamParser(page);
+parser.parse();
+List<Object> tokens = parser.getTokens();
+~~~
+
+In addition this also works if the page content is defined as an **array of content streams**.
+
 ### Iterating Pages
 With PDFBox 2.0.0 the prefered way to iterate through the pages of a document is
 
