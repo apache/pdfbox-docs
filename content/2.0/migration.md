@@ -43,8 +43,13 @@ All libraries on which PDFBox depends are updated to their latest stable version
 For test support the libraries are updated to
 
 - JUnit 4.12
-- JAI Image Core 1.2
+- JAI Image Core 1.3.1
+- JAI JPEG2000 1.3.0
 - Levigo JBIG ImageIO Plugin 1.6.3
+
+For PDFBox Preflight
+
+- Apache Commons IO 2.4
 
 ## Breaking Changes to the Library
 
