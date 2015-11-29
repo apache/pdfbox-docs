@@ -216,6 +216,23 @@ and so on. The <code>add</code> method now supports all the different type of re
 <li><code>LosslessFactory.createFromImage</code> (this is best if you start with a BufferedImage).</li>
 </ul>
 
+<h3 id="parsing-the-page-content">Parsing the Page Content</h3>
+
+<p>Getting the content for a page has been simplified.</p>
+
+<p>Prior to PDFBox 2.0 parsing the page content was done using</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">PDStream</span> <span class="n">contents</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="na">getContents</span><span class="o">();</span>
+<span class="n">PDFStreamParser</span> <span class="n">parser</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDFStreamParser</span><span class="o">(</span><span class="n">contents</span><span class="o">.</span><span class="na">getStream</span><span class="o">());</span>
+<span class="n">parser</span><span class="o">.</span><span class="na">parse</span><span class="o">();</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">tokens</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="na">getTokens</span><span class="o">();</span>
+</code></pre></div>
+<p>With PDFBox 2.0 the code is reduced to </p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">PDFStreamParser</span> <span class="n">parser</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDFStreamParser</span><span class="o">(</span><span class="n">page</span><span class="o">);</span>
+<span class="n">parser</span><span class="o">.</span><span class="na">parse</span><span class="o">();</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">tokens</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="na">getTokens</span><span class="o">();</span>
+</code></pre></div>
+<p>In addition this also works if the page content is defined as an <strong>array of content streams</strong>.</p>
+
 <h3 id="iterating-pages">Iterating Pages</h3>
 
 <p>With PDFBox 2.0.0 the prefered way to iterate through the pages of a document is</p>
