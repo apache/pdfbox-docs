@@ -29,6 +29,7 @@ PDFBox tools as Java applications.
 **Table of Contents**  
 [Decrypt](#decrypt)
 [Encrypt](#encrypt)
+[ExtractImages](#extractimages)
 [ExtractText](#extracttext) 
 [OverlayPDF](#overlaypdf)
 [PDFDebugger](#pdfdebugger)
@@ -77,6 +78,18 @@ usage: ``java -jar pdfbox-app-2.y.z.jar Encrypt [OPTIONS] <password> <inputfile>
 | -keyLength | 40, 128 or 256 | The number of bits for the encryption key. For 128 and above bits [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html) must be installed.|
 | inputfile |  |The PDF file to encrypt. |
 | outputfile |  |The file to save the encrypted document to. If left blank then it will be the same as the input file. |
+
+## ExtractImages
+
+This application will extract all images from the given PDF document.
+
+usage: ``java -jar pdfbox-app-2.y.z.jar ExtractImages [OPTIONS] <inputfile> ``
+
+| Command Line Parameter | Default | Description |
+| --- | --- | --- |
+| -password |  | The password to the PDF document. |
+| -prefix | PDF name | Image prefix to use. |
+| -directJPEG | false | Forces the direct extraction of JPEG images regardless of colorspace. |
 
 ## ExtractText ##
 
