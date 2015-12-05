@@ -141,6 +141,7 @@ PDFBox tools as Java applications.</p>
 <p><strong>Table of Contents</strong><br>
 <a href="#decrypt">Decrypt</a>
 <a href="#encrypt">Encrypt</a>
+<a href="#extractimages">ExtractImages</a>
 <a href="#extracttext">ExtractText</a> 
 <a href="#overlaypdf">OverlayPDF</a>
 <a href="#pdfdebugger">PDFDebugger</a>
@@ -269,6 +270,36 @@ PDFBox tools as Java applications.</p>
 <td>outputfile</td>
 <td></td>
 <td>The file to save the encrypted document to. If left blank then it will be the same as the input file.</td>
+</tr>
+</tbody></table>
+
+<h2 id="extractimages">ExtractImages</h2>
+
+<p>This application will extract all images from the given PDF document.</p>
+
+<p>usage: <code>java -jar pdfbox-app-2.y.z.jar ExtractImages [OPTIONS] &lt;inputfile&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Command Line Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>-password</td>
+<td></td>
+<td>The password to the PDF document.</td>
+</tr>
+<tr>
+<td>-prefix</td>
+<td>PDF name</td>
+<td>Image prefix to use.</td>
+</tr>
+<tr>
+<td>-directJPEG</td>
+<td>false</td>
+<td>Forces the direct extraction of JPEG images regardless of colorspace.</td>
 </tr>
 </tbody></table>
 
