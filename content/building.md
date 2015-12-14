@@ -36,13 +36,13 @@ You can obtain the latest source of PDFBox from our [SVN repo](http://pdfbox.apa
 ### PDFBox 1.8
 
 - JDK 5 or 6
--  [Maven 2](http://maven.apache.org/)
+- [Maven 3](http://maven.apache.org/)
 
 ### PDFBox 2.0
 
 - JDK 6+
-- Java Cryptography Extension (JCE) [see below]
--  [Maven 2](http://maven.apache.org/)
+- [Java Cryptography Extension (JCE)](#java-cryptography-extension-jce)
+- [Maven 3](http://maven.apache.org/)
 
 ### Java Cryptography Extension (JCE)
 
