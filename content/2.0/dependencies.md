@@ -33,7 +33,7 @@ Commons Logging is a generic wrapper around different logging frameworks, so you
 or let commons-logging fall back to the standard [java.util.logging API](http://java.sun.com/j2se/1.4.2/docs/guide/util/logging/overview.html)
 included in the Java platform.
 
-For **PDFBox Preflight only** [commons-io 2.4](https://commons.apache.org/proper/commons-io/) is needed.
+For **PDFBox Preflight tests only** [commons-io 2.4](https://commons.apache.org/proper/commons-io/) is needed.
 
 ## Optional components
 
@@ -54,18 +54,24 @@ Maven dependencies for these components can be found in [parent/pom.xml](https:/
 
 ### Encryption and Signing
 
-Encrypting and sigining PDFs requires the *bcprov* and *bcmail* libraries from the [Legion of the Bouncy Castle](http://www.bouncycastle.org/). These can be included in your Maven project using the following dependencies:
+Encrypting and sigining PDFs requires the *bcprov*, *bcmail* and *bcpkix* libraries from the [Legion of the Bouncy Castle](http://www.bouncycastle.org/). These can be included in your Maven project using the following dependencies:
 
     <dependency>
         <groupId>org.bouncycastle</groupId>
         <artifactId>bcprov-jdk15on</artifactId>
-        <version>1.53</version>
+        <version>1.54</version>
     </dependency>
     
     <dependency>
         <groupId>org.bouncycastle</groupId>
         <artifactId>bcmail-jdk15on</artifactId>
-        <version>1.53</version>
+        <version>1.54</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.bouncycastle</groupId>
+        <artifactId>bcpkix-jdk15on</artifactId>
+        <version>1.54</version>
     </dependency>
 
 ### Java Cryptography Extension (JCE)
