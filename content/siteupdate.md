@@ -78,6 +78,12 @@ jekyll build
 
 This will read the sources and generate the new content in the ``./staging`` directory.
 
+When you are happy with the new content update the source repository
+
+~~~~
+git commit -m "..."
+~~~
+
 Upload the new content to the production site
 
 ~~~
