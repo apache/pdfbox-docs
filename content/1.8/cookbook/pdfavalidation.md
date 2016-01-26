@@ -30,8 +30,7 @@ This small sample shows how to check the compliance of a file with the PDF/A-1b 
 ~~~java
 ValidationResult result = null;
 
-FileDataSource fd = new FileDataSource(args[0]);
-PreflightParser parser = new PreflightParser(fd);
+PreflightParser parser = new PreflightParser(args[0]);
 try
 {
 
