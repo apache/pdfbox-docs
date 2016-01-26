@@ -182,6 +182,9 @@
 </code></pre></div>
 <p>This will read the sources and generate the new content in the <code>./staging</code> directory.</p>
 
+<p>When you are happy with the new content update the source repository</p>
+<div class="highlight"><pre><code class="language-" data-lang="">git commit -m "..."
+</code></pre></div>
 <p>Upload the new content to the production site</p>
 <div class="highlight"><pre><code class="language-" data-lang="">mvn scm-publish:publish-scm
 </code></pre></div>
