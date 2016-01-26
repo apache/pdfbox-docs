@@ -82,6 +82,7 @@ When you are happy with the new content update the source repository
 
 ~~~~
 git commit -m "..."
+git push origin master
 ~~~
 
 Upload the new content to the production site
