@@ -26,7 +26,7 @@
     <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command line utilities. Apache PDFBox is published under the Apache License v2.0.
 ">
 
-    <title>Apache PDFBox | Cookbook - PDF/A Validation</title>
+    <title>Apache PDFBox | Apache PDFBox 1.8.11 released</title>
 
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/open-iconic/font/css/open-iconic-bootstrap.min.css" rel="stylesheet">
@@ -131,110 +131,12 @@
                 </ul>
             </div>
             <div class="col-xs-12 col-sm-9">
-                <h1 id="pdf-a-validation">PDF/A Validation</h1>
+                <p>The Apache PDFBox community is pleased to announce the release of
+Apache PDFBox version 1.8.11. </p>
 
-<p>The Apache Preflight library is a Java tool that implements a parser compliant with the ISO-19005 specification (aka PDF/A-1).
-Check Compliance with PDF/A-1b</p>
+<p>The release is available for download at: <a href="http://pdfbox.apache.org/download.cgi">http://pdfbox.apache.org/download.cgi</a></p>
 
-<p>This small sample shows how to check the compliance of a file with the PDF/A-1b specification.</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">ValidationResult</span> <span class="n">result</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-
-<span class="n">PreflightParser</span> <span class="n">parser</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PreflightParser</span><span class="o">(</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span>
-<span class="k">try</span>
-<span class="o">{</span>
-
-    <span class="cm">/* Parse the PDF file with PreflightParser that inherits from the NonSequentialParser.
-     * Some additional controls are present to check a set of PDF/A requirements. 
-     * (Stream length consistency, EOL after some Keyword...)
-     */</span>
-    <span class="n">parser</span><span class="o">.</span><span class="na">parse</span><span class="o">();</span>
-
-    <span class="cm">/* Once the syntax validation is done, 
-     * the parser can provide a PreflightDocument 
-     * (that inherits from PDDocument) 
-     * This document process the end of PDF/A validation.
-     */</span>
-    <span class="n">PreflightDocument</span> <span class="n">document</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="na">getPreflightDocument</span><span class="o">();</span>
-    <span class="n">document</span><span class="o">.</span><span class="na">validate</span><span class="o">();</span>
-
-    <span class="c1">// Get validation result</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="na">getResult</span><span class="o">();</span>
-    <span class="n">document</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-
-<span class="o">}</span>
-<span class="k">catch</span> <span class="o">(</span><span class="n">SyntaxValidationException</span> <span class="n">e</span><span class="o">)</span>
-<span class="o">{</span>
-    <span class="cm">/* the parse method can throw a SyntaxValidationException 
-     * if the PDF file can't be parsed.
-     * In this case, the exception contains an instance of ValidationResult  
-     */</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="na">getResult</span><span class="o">();</span>
-<span class="o">}</span>
-
-<span class="c1">// display validation result</span>
-<span class="k">if</span> <span class="o">(</span><span class="n">result</span><span class="o">.</span><span class="na">isValid</span><span class="o">())</span>
-<span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The file "</span> <span class="o">+</span> <span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="s">" is a valid PDF/A-1b file"</span><span class="o">);</span>
-<span class="o">}</span>
-<span class="k">else</span>
-<span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The file"</span> <span class="o">+</span> <span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="s">" is not valid, error(s) :"</span><span class="o">);</span>
-    <span class="k">for</span> <span class="o">(</span><span class="n">ValidationError</span> <span class="n">error</span> <span class="o">:</span> <span class="n">result</span><span class="o">.</span><span class="na">getErrorsList</span><span class="o">())</span>
-    <span class="o">{</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">error</span><span class="o">.</span><span class="na">getErrorCode</span><span class="o">()</span> <span class="o">+</span> <span class="s">" : "</span> <span class="o">+</span> <span class="n">error</span><span class="o">.</span><span class="na">getDetails</span><span class="o">());</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div>
-<h2 id="categories-of-validation-error">Categories of Validation Error</h2>
-
-<p>If a validation fails, the ValidationResult object contains all causes of the failure.
-In order to help in the failure understanding, all error codes have the following form X[.Y[.Z]] where :</p>
-
-<ul>
-<li>&#39;X&#39; is the category (ex : Font validation error...)</li>
-<li>&#39;Y&#39; represent a subsection of the category (ex : &quot;Font with Glyph error&quot;)</li>
-<li>&#39;Z&#39; represent the cause of the error (ex : &quot;Font with a missing Glyph&quot;)</li>
-</ul>
-
-<p>Category (&#39;Y&#39;) and cause (&#39;Z&#39;) may be missing according to the difficulty to identify the error detail.</p>
-
-<p>Here after, you can find all Categories (for detailed cause, see constants in the <code>PreflightConstants</code> interface) :</p>
-
-<table><thead>
-<tr>
-<th>Category</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>1[.y[.z]]</td>
-<td>Syntax Error</td>
-</tr>
-<tr>
-<td>2[.y[.z]]</td>
-<td>Graphic Error</td>
-</tr>
-<tr>
-<td>3[.y[.z]]</td>
-<td>Font Error</td>
-</tr>
-<tr>
-<td>4[.y[.z]]</td>
-<td>Transparency Error</td>
-</tr>
-<tr>
-<td>5[.y[.z]]</td>
-<td>Annotation Error</td>
-</tr>
-<tr>
-<td>6[.y[.z]]</td>
-<td>Action Error</td>
-</tr>
-<tr>
-<td>7[.y[.z]]</td>
-<td>Metadata Error</td>
-</tr>
-</tbody></table>
+<p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12333061">full release notes</a> for details about this release.</p>
 
             </div>
         </div>
