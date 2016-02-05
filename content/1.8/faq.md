@@ -61,9 +61,6 @@ If this is not working for you then you may have to specify the log4j config fil
 log4j.configuration=file:///<path to config file>
 ```
 
-Please see [this](https://sourceforge.net/forum/forum.php?thread_id=1254229&amp;forum_id=267205) forum thread 
-for more information.
-
 <a name="threadsafe"></a>
 ### Is PDFBox thread safe? ###
 
