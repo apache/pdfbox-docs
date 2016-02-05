@@ -24,7 +24,7 @@ title:   Command Line Tools
 
 PDFBox comes with a series of command line utilities. They are available as standard Java applications.
 
-See the Dependencies page for instructions on how to set your classpath in order to run 
+See the [Dependencies](/1.8/dependencies.html) page for instructions on how to set your classpath in order to run 
 PDFBox tools as Java applications.
 
 **Table of Contents**  
