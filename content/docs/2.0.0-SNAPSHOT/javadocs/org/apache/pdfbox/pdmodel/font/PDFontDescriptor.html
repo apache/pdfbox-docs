@@ -259,7 +259,7 @@ implements <a href="../../../../../org/apache/pdfbox/pdmodel/common/COSObjectabl
 <tr class="rowColor">
 <td class="colFirst"><code>float</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#getMissingWidth()">getMissingWidth</a></strong>()</code>
-<div class="block">This will get the missing width for the font.</div>
+<div class="block">This will get the missing width for the font from the /MissingWidth dictionary entry.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -288,245 +288,251 @@ implements <a href="../../../../../org/apache/pdfbox/pdmodel/common/COSObjectabl
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#hasMissingWidth()">hasMissingWidth</a></strong>()</code>
+<div class="block">Returns true if the missing widths entry is present in the font descriptor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#hasWidths()">hasWidths</a></strong>()</code>
 <div class="block">Returns true if widths are present in the font descriptor.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#isAllCap()">isAllCap</a></strong>()</code>
 <div class="block">A convenience method that checks the flag bit.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#isFixedPitch()">isFixedPitch</a></strong>()</code>
 <div class="block">A convenience method that checks the flag bit.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#isForceBold()">isForceBold</a></strong>()</code>
 <div class="block">A convenience method that checks the flag bit.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#isItalic()">isItalic</a></strong>()</code>
 <div class="block">A convenience method that checks the flag bit.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#isNonSymbolic()">isNonSymbolic</a></strong>()</code>
 <div class="block">A convenience method that checks the flag bit.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#isScript()">isScript</a></strong>()</code>
 <div class="block">A convenience method that checks the flag bit.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#isSerif()">isSerif</a></strong>()</code>
 <div class="block">A convenience method that checks the flag bit.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#isSmallCap()">isSmallCap</a></strong>()</code>
 <div class="block">A convenience method that checks the flag bit.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#isSymbolic()">isSymbolic</a></strong>()</code>
 <div class="block">A convenience method that checks the flag bit.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setAllCap(boolean)">setAllCap</a></strong>(boolean&nbsp;flag)</code>
 <div class="block">A convenience method that sets the flag bit.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setAscent(float)">setAscent</a></strong>(float&nbsp;ascent)</code>
 <div class="block">This will set the ascent for the font.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setAverageWidth(float)">setAverageWidth</a></strong>(float&nbsp;averageWidth)</code>
 <div class="block">This will set the average width for the font.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setCapHeight(float)">setCapHeight</a></strong>(float&nbsp;capHeight)</code>
 <div class="block">This will set the cap height for the font.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setCharacterSet(java.lang.String)">setCharacterSet</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;charSet)</code>
 <div class="block">This will set the character set for the font.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setCIDSet(org.apache.pdfbox.pdmodel.common.PDStream)">setCIDSet</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;stream)</code>
 <div class="block">Set a stream containing a CIDSet.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setDescent(float)">setDescent</a></strong>(float&nbsp;descent)</code>
 <div class="block">This will set the descent for the font.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setFixedPitch(boolean)">setFixedPitch</a></strong>(boolean&nbsp;flag)</code>
 <div class="block">A convenience method that sets the flag bit.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setFlags(int)">setFlags</a></strong>(int&nbsp;flags)</code>
 <div class="block">This will set the font flags.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setFontBoundingBox(org.apache.pdfbox.pdmodel.common.PDRectangle)">setFontBoundingBox</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/common/PDRectangle.html" title="class in org.apache.pdfbox.pdmodel.common">PDRectangle</a>&nbsp;rect)</code>
 <div class="block">Set the fonts bounding box.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setFontFamily(java.lang.String)">setFontFamily</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fontFamily)</code>
 <div class="block">This will set the font family.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setFontFile(org.apache.pdfbox.pdmodel.common.PDStream)">setFontFile</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;type1Stream)</code>
 <div class="block">Set the type 1 font program.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setFontFile2(org.apache.pdfbox.pdmodel.common.PDStream)">setFontFile2</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;ttfStream)</code>
 <div class="block">Set the true type font program.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setFontFile3(org.apache.pdfbox.pdmodel.common.PDStream)">setFontFile3</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;stream)</code>
 <div class="block">Set a stream containing a font program that is not true type or type 1.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setFontName(java.lang.String)">setFontName</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fontName)</code>
 <div class="block">This will set the font name.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setFontStretch(java.lang.String)">setFontStretch</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fontStretch)</code>
 <div class="block">This will set the font stretch.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setFontWeight(float)">setFontWeight</a></strong>(float&nbsp;fontWeight)</code>
 <div class="block">Set the weight of the font.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setForceBold(boolean)">setForceBold</a></strong>(boolean&nbsp;flag)</code>
 <div class="block">A convenience method that sets the flag bit.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setItalic(boolean)">setItalic</a></strong>(boolean&nbsp;flag)</code>
 <div class="block">A convenience method that sets the flag bit.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setItalicAngle(float)">setItalicAngle</a></strong>(float&nbsp;angle)</code>
 <div class="block">This will set the italic angle for the font.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setLeading(float)">setLeading</a></strong>(float&nbsp;leading)</code>
 <div class="block">This will set the leading for the font.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setMaxWidth(float)">setMaxWidth</a></strong>(float&nbsp;maxWidth)</code>
 <div class="block">This will set the max width for the font.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setMissingWidth(float)">setMissingWidth</a></strong>(float&nbsp;missingWidth)</code>
 <div class="block">This will set the missing width for the font.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setNonSymbolic(boolean)">setNonSymbolic</a></strong>(boolean&nbsp;flag)</code>
 <div class="block">A convenience method that sets the flag bit.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setScript(boolean)">setScript</a></strong>(boolean&nbsp;flag)</code>
 <div class="block">A convenience method that sets the flag bit.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setSerif(boolean)">setSerif</a></strong>(boolean&nbsp;flag)</code>
 <div class="block">A convenience method that sets the flag bit.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setSmallCap(boolean)">setSmallCap</a></strong>(boolean&nbsp;flag)</code>
 <div class="block">A convenience method that sets the flag bit.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setStemH(float)">setStemH</a></strong>(float&nbsp;stemH)</code>
 <div class="block">This will set the stem H for the font.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setStemV(float)">setStemV</a></strong>(float&nbsp;stemV)</code>
 <div class="block">This will set the stem V for the font.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setSymbolic(boolean)">setSymbolic</a></strong>(boolean&nbsp;flag)</code>
 <div class="block">A convenience method that sets the flag bit.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setXHeight(float)">setXHeight</a></strong>(float&nbsp;xHeight)</code>
 <div class="block">This will set the x height for the font.</div>
@@ -1153,6 +1159,16 @@ implements <a href="../../../../../org/apache/pdfbox/pdmodel/common/COSObjectabl
 <div class="block">Returns true if widths are present in the font descriptor.</div>
 </li>
 </ul>
+<a name="hasMissingWidth()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasMissingWidth</h4>
+<pre>public&nbsp;boolean&nbsp;hasMissingWidth()</pre>
+<div class="block">Returns true if the missing widths entry is present in the font descriptor.</div>
+</li>
+</ul>
 <a name="getMissingWidth()">
 <!--   -->
 </a>
@@ -1160,8 +1176,8 @@ implements <a href="../../../../../org/apache/pdfbox/pdmodel/common/COSObjectabl
 <li class="blockList">
 <h4>getMissingWidth</h4>
 <pre>public&nbsp;float&nbsp;getMissingWidth()</pre>
-<div class="block">This will get the missing width for the font.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>The missing width value.</dd></dl>
+<div class="block">This will get the missing width for the font from the /MissingWidth dictionary entry.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The missing width value, or 0 if there is no such dictionary entry.</dd></dl>
 </li>
 </ul>
 <a name="setMissingWidth(float)">
@@ -1363,6 +1379,6 @@ implements <a href="../../../../../org/apache/pdfbox/pdmodel/common/COSObjectabl
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

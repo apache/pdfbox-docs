@@ -48,3 +48,4 @@ org.apache.pdfbox.printing
 org.apache.pdfbox.rendering
 org.apache.pdfbox.text
 org.apache.pdfbox.util
+org.apache.pdfbox.util.filetypedetector

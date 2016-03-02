@@ -100,13 +100,13 @@
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&gt;, <a href="../../../../org/apache/pdfbox/pdmodel/common/COSObjectable.html" title="interface in org.apache.pdfbox.pdmodel.common">COSObjectable</a></dd>
+<dd><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&gt;, <a href="../../../../org/apache/pdfbox/cos/COSUpdateInfo.html" title="interface in org.apache.pdfbox.cos">COSUpdateInfo</a>, <a href="../../../../org/apache/pdfbox/pdmodel/common/COSObjectable.html" title="interface in org.apache.pdfbox.pdmodel.common">COSObjectable</a></dd>
 </dl>
 <hr>
 <br>
 <pre>public class <span class="strong">COSArray</span>
 extends <a href="../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>
-implements <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&gt;</pre>
+implements <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&gt;, <a href="../../../../org/apache/pdfbox/cos/COSUpdateInfo.html" title="interface in org.apache.pdfbox.cos">COSUpdateInfo</a></pre>
 <div class="block">An array of PDFBase objects as part of the PDF document.</div>
 <dl><dt><span class="strong">Author:</span></dt>
   <dd>Ben Litchfield</dd></dl>
@@ -279,80 +279,92 @@ implements <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/I
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/cos/COSArray.html#isNeedToBeUpdated()">isNeedToBeUpdated</a></strong>()</code>
+<div class="block">Get the update state for the COSWriter.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/cos/COSArray.html#iterator()">iterator</a></strong>()</code>
 <div class="block">Get access to the list.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/cos/COSArray.html#remove(org.apache.pdfbox.cos.COSBase)">remove</a></strong>(<a href="../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&nbsp;o)</code>
 <div class="block">This will remove an element from the array.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/cos/COSArray.html#remove(int)">remove</a></strong>(int&nbsp;i)</code>
 <div class="block">This will remove an element from the array.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/cos/COSArray.html#removeAll(java.util.Collection)">removeAll</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&gt;&nbsp;objectsList)</code>
 <div class="block">This will remove all of the objects in the collection.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/cos/COSArray.html#removeObject(org.apache.pdfbox.cos.COSBase)">removeObject</a></strong>(<a href="../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&nbsp;o)</code>
 <div class="block">This will remove an element from the array.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/cos/COSArray.html#retainAll(java.util.Collection)">retainAll</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&gt;&nbsp;objectsList)</code>
 <div class="block">This will retain all of the objects in the collection.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/cos/COSArray.html#set(int,%20org.apache.pdfbox.cos.COSBase)">set</a></strong>(int&nbsp;index,
    <a href="../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&nbsp;object)</code>
 <div class="block">This will set an object at a specific index.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/cos/COSArray.html#set(int,%20org.apache.pdfbox.pdmodel.common.COSObjectable)">set</a></strong>(int&nbsp;index,
    <a href="../../../../org/apache/pdfbox/pdmodel/common/COSObjectable.html" title="interface in org.apache.pdfbox.pdmodel.common">COSObjectable</a>&nbsp;object)</code>
 <div class="block">This will set an object at a specific index.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/cos/COSArray.html#set(int,%20int)">set</a></strong>(int&nbsp;index,
    int&nbsp;intVal)</code>
 <div class="block">This will set an object at a specific index.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/cos/COSArray.html#setFloatArray(float[])">setFloatArray</a></strong>(float[]&nbsp;value)</code>
 <div class="block">Clear the current contents of the COSArray and set it with the float[].</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/cos/COSArray.html#setInt(int,%20int)">setInt</a></strong>(int&nbsp;index,
       int&nbsp;value)</code>
 <div class="block">Set the value in the array as an integer.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/cos/COSArray.html#setName(int,%20java.lang.String)">setName</a></strong>(int&nbsp;index,
        <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Set the value in the array as a name.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/cos/COSArray.html#setNeedToBeUpdated(boolean)">setNeedToBeUpdated</a></strong>(boolean&nbsp;flag)</code>
+<div class="block">Set the update state of the dictionary for the COSWriter.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -854,6 +866,36 @@ implements <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/I
 <dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If an error occurs while visiting this object.</dd></dl>
 </li>
 </ul>
+<a name="isNeedToBeUpdated()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isNeedToBeUpdated</h4>
+<pre>public&nbsp;boolean&nbsp;isNeedToBeUpdated()</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../org/apache/pdfbox/cos/COSUpdateInfo.html#isNeedToBeUpdated()">COSUpdateInfo</a></code></strong></div>
+<div class="block">Get the update state for the COSWriter.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../org/apache/pdfbox/cos/COSUpdateInfo.html#isNeedToBeUpdated()">isNeedToBeUpdated</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/apache/pdfbox/cos/COSUpdateInfo.html" title="interface in org.apache.pdfbox.cos">COSUpdateInfo</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>the update state.</dd></dl>
+</li>
+</ul>
+<a name="setNeedToBeUpdated(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setNeedToBeUpdated</h4>
+<pre>public&nbsp;void&nbsp;setNeedToBeUpdated(boolean&nbsp;flag)</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../org/apache/pdfbox/cos/COSUpdateInfo.html#setNeedToBeUpdated(boolean)">COSUpdateInfo</a></code></strong></div>
+<div class="block">Set the update state of the dictionary for the COSWriter.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../org/apache/pdfbox/cos/COSUpdateInfo.html#setNeedToBeUpdated(boolean)">setNeedToBeUpdated</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/apache/pdfbox/cos/COSUpdateInfo.html" title="interface in org.apache.pdfbox.cos">COSUpdateInfo</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>flag</code> - the update state.</dd></dl>
+</li>
+</ul>
 <a name="toFloatArray()">
 <!--   -->
 </a>
@@ -954,6 +996,6 @@ implements <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/I
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

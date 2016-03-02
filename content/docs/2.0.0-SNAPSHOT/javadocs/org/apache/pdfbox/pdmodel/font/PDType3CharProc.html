@@ -168,18 +168,24 @@ implements <a href="../../../../../org/apache/pdfbox/pdmodel/common/COSObjectabl
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType3CharProc.html#getFont()">getFont</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/pdmodel/common/PDRectangle.html" title="class in org.apache.pdfbox.pdmodel.common">PDRectangle</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType3CharProc.html#getGlyphBBox()">getGlyphBBox</a></strong>()</code>
+<div class="block">Calculate the bounding box of this glyph.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/util/Matrix.html" title="class in org.apache.pdfbox.util">Matrix</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType3CharProc.html#getMatrix()">getMatrix</a></strong>()</code>
 <div class="block">Returns the matrix which transforms from the stream's space to user space.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/pdmodel/PDResources.html" title="class in org.apache.pdfbox.pdmodel">PDResources</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType3CharProc.html#getResources()">getResources</a></strong>()</code>
 <div class="block">Returns this stream's resources, if any.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>float</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType3CharProc.html#getWidth()">getWidth</a></strong>()</code>
 <div class="block">todo.</div>
@@ -306,6 +312,21 @@ implements <a href="../../../../../org/apache/pdfbox/pdmodel/common/COSObjectabl
 </dl>
 </li>
 </ul>
+<a name="getGlyphBBox()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getGlyphBBox</h4>
+<pre>public&nbsp;<a href="../../../../../org/apache/pdfbox/pdmodel/common/PDRectangle.html" title="class in org.apache.pdfbox.pdmodel.common">PDRectangle</a>&nbsp;getGlyphBBox()
+                         throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Calculate the bounding box of this glyph. This will work only if the first operator in the
+ stream is d1.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the bounding box of this glyph, or null if the first operator is not d1.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If an io error occurs while parsing the stream.</dd></dl>
+</li>
+</ul>
 <a name="getMatrix()">
 <!--   -->
 </a>
@@ -402,6 +423,6 @@ implements <a href="../../../../../org/apache/pdfbox/pdmodel/common/COSObjectabl
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

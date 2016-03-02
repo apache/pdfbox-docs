@@ -174,7 +174,7 @@ extends <a href="../../../../../../org/apache/pdfbox/contentstream/operator/Oper
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.apache.pdfbox.contentstream.operator.<a href="../../../../../../org/apache/pdfbox/contentstream/operator/OperatorProcessor.html" title="class in org.apache.pdfbox.contentstream.operator">OperatorProcessor</a></h3>
-<code><a href="../../../../../../org/apache/pdfbox/contentstream/operator/OperatorProcessor.html#getContext()">getContext</a>, <a href="../../../../../../org/apache/pdfbox/contentstream/operator/OperatorProcessor.html#setContext(org.apache.pdfbox.contentstream.PDFStreamEngine)">setContext</a></code></li>
+<code><a href="../../../../../../org/apache/pdfbox/contentstream/operator/OperatorProcessor.html#checkArrayTypesClass(java.util.List,%20java.lang.Class)">checkArrayTypesClass</a>, <a href="../../../../../../org/apache/pdfbox/contentstream/operator/OperatorProcessor.html#getContext()">getContext</a>, <a href="../../../../../../org/apache/pdfbox/contentstream/operator/OperatorProcessor.html#setContext(org.apache.pdfbox.contentstream.PDFStreamEngine)">setContext</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -221,13 +221,16 @@ extends <a href="../../../../../../org/apache/pdfbox/contentstream/operator/Oper
 <li class="blockList">
 <h4>process</h4>
 <pre>public&nbsp;void&nbsp;process(<a href="../../../../../../org/apache/pdfbox/contentstream/operator/Operator.html" title="class in org.apache.pdfbox.contentstream.operator">Operator</a>&nbsp;operator,
-           <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&gt;&nbsp;arguments)</pre>
+           <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&gt;&nbsp;arguments)
+             throws <a href="../../../../../../org/apache/pdfbox/contentstream/operator/MissingOperandException.html" title="class in org.apache.pdfbox.contentstream.operator">MissingOperandException</a></pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../../org/apache/pdfbox/contentstream/operator/OperatorProcessor.html#process(org.apache.pdfbox.contentstream.operator.Operator,%20java.util.List)">OperatorProcessor</a></code></strong></div>
 <div class="block">Process the operator.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../../org/apache/pdfbox/contentstream/operator/OperatorProcessor.html#process(org.apache.pdfbox.contentstream.operator.Operator,%20java.util.List)">process</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../org/apache/pdfbox/contentstream/operator/OperatorProcessor.html" title="class in org.apache.pdfbox.contentstream.operator">OperatorProcessor</a></code></dd>
-<dt><span class="strong">Parameters:</span></dt><dd><code>operator</code> - the operator to process</dd><dd><code>arguments</code> - the operands to use when processing</dd></dl>
+<dt><span class="strong">Parameters:</span></dt><dd><code>operator</code> - the operator to process</dd><dd><code>arguments</code> - the operands to use when processing</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/contentstream/operator/MissingOperandException.html" title="class in org.apache.pdfbox.contentstream.operator">MissingOperandException</a></code></dd></dl>
 </li>
 </ul>
 <a name="getName()">
@@ -312,6 +315,6 @@ extends <a href="../../../../../../org/apache/pdfbox/contentstream/operator/Oper
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

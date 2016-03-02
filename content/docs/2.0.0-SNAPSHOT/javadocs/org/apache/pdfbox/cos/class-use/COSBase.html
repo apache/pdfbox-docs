@@ -308,13 +308,20 @@ structure types and attributes) into a PDF file.</div>
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">OperatorProcessor.</span><code><strong><a href="../../../../../org/apache/pdfbox/contentstream/operator/OperatorProcessor.html#checkArrayTypesClass(java.util.List,%20java.lang.Class)">checkArrayTypesClass</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&gt;&nbsp;operands,
+                    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&nbsp;clazz)</code>
+<div class="block">Check whether all operands list elements are an instance of a specific class.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>abstract void</code></td>
 <td class="colLast"><span class="strong">OperatorProcessor.</span><code><strong><a href="../../../../../org/apache/pdfbox/contentstream/operator/OperatorProcessor.html#process(org.apache.pdfbox.contentstream.operator.Operator,%20java.util.List)">process</a></strong>(<a href="../../../../../org/apache/pdfbox/contentstream/operator/Operator.html" title="class in org.apache.pdfbox.contentstream.operator">Operator</a>&nbsp;operator,
        <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&gt;&nbsp;operands)</code>
 <div class="block">Process the operator.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">DrawObject.</span><code><strong><a href="../../../../../org/apache/pdfbox/contentstream/operator/DrawObject.html#process(org.apache.pdfbox.contentstream.operator.Operator,%20java.util.List)">process</a></strong>(<a href="../../../../../org/apache/pdfbox/contentstream/operator/Operator.html" title="class in org.apache.pdfbox.contentstream.operator">Operator</a>&nbsp;operator,
        <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&gt;&nbsp;arguments)</code>&nbsp;</td>
@@ -533,10 +540,15 @@ structure types and attributes) into a PDF file.</div>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">BeginMarkedContentSequenceWithProperties.</span><code><strong><a href="../../../../../org/apache/pdfbox/contentstream/operator/markedcontent/BeginMarkedContentSequenceWithProperties.html#process(org.apache.pdfbox.contentstream.operator.Operator,%20java.util.List)">process</a></strong>(<a href="../../../../../org/apache/pdfbox/contentstream/operator/Operator.html" title="class in org.apache.pdfbox.contentstream.operator">Operator</a>&nbsp;operator,
+<td class="colLast"><span class="strong">DrawObject.</span><code><strong><a href="../../../../../org/apache/pdfbox/contentstream/operator/markedcontent/DrawObject.html#process(org.apache.pdfbox.contentstream.operator.Operator,%20java.util.List)">process</a></strong>(<a href="../../../../../org/apache/pdfbox/contentstream/operator/Operator.html" title="class in org.apache.pdfbox.contentstream.operator">Operator</a>&nbsp;operator,
        <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&gt;&nbsp;arguments)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">BeginMarkedContentSequenceWithProperties.</span><code><strong><a href="../../../../../org/apache/pdfbox/contentstream/operator/markedcontent/BeginMarkedContentSequenceWithProperties.html#process(org.apache.pdfbox.contentstream.operator.Operator,%20java.util.List)">process</a></strong>(<a href="../../../../../org/apache/pdfbox/contentstream/operator/Operator.html" title="class in org.apache.pdfbox.contentstream.operator">Operator</a>&nbsp;operator,
+       <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&gt;&nbsp;arguments)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">BeginMarkedContentSequence.</span><code><strong><a href="../../../../../org/apache/pdfbox/contentstream/operator/markedcontent/BeginMarkedContentSequence.html#process(org.apache.pdfbox.contentstream.operator.Operator,%20java.util.List)">process</a></strong>(<a href="../../../../../org/apache/pdfbox/contentstream/operator/Operator.html" title="class in org.apache.pdfbox.contentstream.operator">Operator</a>&nbsp;operator,
        <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&gt;&nbsp;arguments)</code>&nbsp;</td>
@@ -1717,15 +1729,9 @@ structure types and attributes) into a PDF file.</div>
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a></code></td>
-<td class="colLast"><span class="strong">PDXObject.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/PDXObject.html#getCOSObject()">getCOSObject</a></strong>()</code>
-<div class="block">Returns the stream.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a></code></td>
 <td class="colLast"><span class="strong">PDLineDashPattern.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/PDLineDashPattern.html#getCOSObject()">getCOSObject</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a></code></td>
 <td class="colLast"><span class="strong">PDFontSetting.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/PDFontSetting.html#getCOSObject()">getCOSObject</a></strong>()</code>
 <div class="block">Convert this standard java object to a COS object.</div>
@@ -1835,6 +1841,14 @@ structure types and attributes) into a PDF file.</div>
 <div class="block">Creates a color space given a name or array.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a></code></td>
+<td class="colLast"><span class="strong">PDColorSpace.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html#create(org.apache.pdfbox.cos.COSBase,%20org.apache.pdfbox.pdmodel.PDResources,%20boolean)">create</a></strong>(<a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&nbsp;colorSpace,
+      <a href="../../../../../org/apache/pdfbox/pdmodel/PDResources.html" title="class in org.apache.pdfbox.pdmodel">PDResources</a>&nbsp;resources,
+      boolean&nbsp;wasDefault)</code>
+<div class="block">Creates a color space given a name or array.</div>
+</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -1900,6 +1914,33 @@ structure types and attributes) into a PDF file.</div>
 </a>
 <h3>Uses of <a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a> in <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/state/package-summary.html">org.apache.pdfbox.pdmodel.graphics.state</a></h3>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/state/package-summary.html">org.apache.pdfbox.pdmodel.graphics.state</a> that return <a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a></code></td>
+<td class="colLast"><span class="strong">PDGraphicsState.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/state/PDGraphicsState.html#getTransfer()">getTransfer</a></strong>()</code>
+<div class="block">This will get the transfer function.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a></code></td>
+<td class="colLast"><span class="strong">PDExtendedGraphicsState.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/state/PDExtendedGraphicsState.html#getTransfer()">getTransfer</a></strong>()</code>
+<div class="block">This will get the transfer function of the /TR dictionary.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a></code></td>
+<td class="colLast"><span class="strong">PDExtendedGraphicsState.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/state/PDExtendedGraphicsState.html#getTransfer2()">getTransfer2</a></strong>()</code>
+<div class="block">This will get the transfer function of the /TR2 dictionary.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/state/package-summary.html">org.apache.pdfbox.pdmodel.graphics.state</a> with parameters of type <a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
@@ -1910,6 +1951,24 @@ structure types and attributes) into a PDF file.</div>
 <td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/state/PDSoftMask.html" title="class in org.apache.pdfbox.pdmodel.graphics.state">PDSoftMask</a></code></td>
 <td class="colLast"><span class="strong">PDSoftMask.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/state/PDSoftMask.html#create(org.apache.pdfbox.cos.COSBase)">create</a></strong>(<a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&nbsp;dictionary)</code>
 <div class="block">Creates a new soft mask.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDGraphicsState.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/state/PDGraphicsState.html#setTransfer(org.apache.pdfbox.cos.COSBase)">setTransfer</a></strong>(<a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&nbsp;transfer)</code>
+<div class="block">This will set the transfer function.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDExtendedGraphicsState.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/state/PDExtendedGraphicsState.html#setTransfer(org.apache.pdfbox.cos.COSBase)">setTransfer</a></strong>(<a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&nbsp;transfer)</code>
+<div class="block">This will set the transfer function of the /TR dictionary.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDExtendedGraphicsState.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/state/PDExtendedGraphicsState.html#setTransfer2(org.apache.pdfbox.cos.COSBase)">setTransfer2</a></strong>(<a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&nbsp;transfer2)</code>
+<div class="block">This will set the transfer function of the /TR2 dictionary.</div>
 </td>
 </tr>
 </tbody>
@@ -2205,6 +2264,6 @@ structure types and attributes) into a PDF file.</div>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

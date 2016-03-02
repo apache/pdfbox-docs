@@ -171,7 +171,7 @@ implements <a href="../../../../../org/apache/pdfbox/pdmodel/common/COSObjectabl
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a></code></td>
+<td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/cos/COSStream.html" title="class in org.apache.pdfbox.cos">COSStream</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/PDXObject.html#getCOSObject()">getCOSObject</a></strong>()</code>
 <div class="block">Returns the stream.</div>
 </td>
@@ -179,7 +179,9 @@ implements <a href="../../../../../org/apache/pdfbox/pdmodel/common/COSObjectabl
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/cos/COSStream.html" title="class in org.apache.pdfbox.cos">COSStream</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/PDXObject.html#getCOSStream()">getCOSStream</a></strong>()</code>
-<div class="block">Returns the stream.</div>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>use <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/PDXObject.html#getCOSObject()"><code>getCOSObject()</code></a></i></div>
+</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -227,7 +229,7 @@ implements <a href="../../../../../org/apache/pdfbox/pdmodel/common/COSObjectabl
 <pre>protected&nbsp;PDXObject(<a href="../../../../../org/apache/pdfbox/cos/COSStream.html" title="class in org.apache.pdfbox.cos">COSStream</a>&nbsp;stream,
          <a href="../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&nbsp;subtype)</pre>
 <div class="block">Creates a new XObject from the given stream and subtype.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>stream</code> - The stream to read.</dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>stream</code> - The stream to read.</dd><dd><code>subtype</code> - </dd></dl>
 </li>
 </ul>
 <a name="PDXObject(org.apache.pdfbox.pdmodel.common.PDStream, org.apache.pdfbox.cos.COSName)">
@@ -239,7 +241,7 @@ implements <a href="../../../../../org/apache/pdfbox/pdmodel/common/COSObjectabl
 <pre>protected&nbsp;PDXObject(<a href="../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;stream,
          <a href="../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&nbsp;subtype)</pre>
 <div class="block">Creates a new XObject from the given stream and subtype.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>stream</code> - The stream to read.</dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>stream</code> - The stream to read.</dd><dd><code>subtype</code> - </dd></dl>
 </li>
 </ul>
 <a name="PDXObject(org.apache.pdfbox.pdmodel.PDDocument, org.apache.pdfbox.cos.COSName)">
@@ -272,7 +274,7 @@ implements <a href="../../../../../org/apache/pdfbox/pdmodel/common/COSObjectabl
                       <a href="../../../../../org/apache/pdfbox/pdmodel/PDResources.html" title="class in org.apache.pdfbox.pdmodel">PDResources</a>&nbsp;resources)
                                throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Creates a new XObject instance of the appropriate type for the COS stream.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>base</code> - The stream which is wrapped by this XObject.</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>base</code> - The stream which is wrapped by this XObject.</dd><dd><code>resources</code> - </dd>
 <dt><span class="strong">Returns:</span></dt><dd>A new XObject instance.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if there is an error creating the XObject.</dd></dl>
@@ -284,7 +286,7 @@ implements <a href="../../../../../org/apache/pdfbox/pdmodel/common/COSObjectabl
 <ul class="blockList">
 <li class="blockList">
 <h4>getCOSObject</h4>
-<pre>public final&nbsp;<a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&nbsp;getCOSObject()</pre>
+<pre>public final&nbsp;<a href="../../../../../org/apache/pdfbox/cos/COSStream.html" title="class in org.apache.pdfbox.cos">COSStream</a>&nbsp;getCOSObject()</pre>
 <div class="block">Returns the stream.
  Convert this standard java object to a COS object.</div>
 <dl>
@@ -299,7 +301,9 @@ implements <a href="../../../../../org/apache/pdfbox/pdmodel/common/COSObjectabl
 <ul class="blockList">
 <li class="blockList">
 <h4>getCOSStream</h4>
-<pre>public final&nbsp;<a href="../../../../../org/apache/pdfbox/cos/COSStream.html" title="class in org.apache.pdfbox.cos">COSStream</a>&nbsp;getCOSStream()</pre>
+<pre><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+public final&nbsp;<a href="../../../../../org/apache/pdfbox/cos/COSStream.html" title="class in org.apache.pdfbox.cos">COSStream</a>&nbsp;getCOSStream()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/PDXObject.html#getCOSObject()"><code>getCOSObject()</code></a></i></div>
 <div class="block">Returns the stream.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>The stream for this object.</dd></dl>
 </li>
@@ -395,6 +399,6 @@ public final&nbsp;<a href="../../../../../org/apache/pdfbox/pdmodel/common/PDStr
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

@@ -335,28 +335,36 @@ implements <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDVectorFont.h
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType0Font.html" title="class in org.apache.pdfbox.pdmodel.font">PDType0Font</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType0Font.html#load(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.fontbox.ttf.TrueTypeFont,%20boolean)">load</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+    org.apache.fontbox.ttf.TrueTypeFont&nbsp;ttf,
+    boolean&nbsp;embedSubset)</code>
+<div class="block">Loads a TTF to be embedded into a document as a Type 0 font.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType0Font.html#readCode(java.io.InputStream)">readCode</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;in)</code>
 <div class="block">Reads a character code from a content stream string.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType0Font.html#subset()">subset</a></strong>()</code>
 <div class="block">Replaces this font with a subset containing only the given Unicode characters.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType0Font.html#toString()">toString</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType0Font.html#toUnicode(int)">toUnicode</a></strong>(int&nbsp;code)</code>
 <div class="block">Returns the Unicode character sequence which corresponds to the given character code.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType0Font.html#willBeSubset()">willBeSubset</a></strong>()</code>
 <div class="block">Returns true if this font will be subset when embedded.</div>
@@ -457,6 +465,23 @@ implements <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDVectorFont.h
                         throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Loads a TTF to be embedded into a document as a Type 0 font.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>doc</code> - The PDF document that will hold the embedded font.</dd><dd><code>input</code> - A TrueType font.</dd><dd><code>embedSubset</code> - True if the font will be subset before embedding</dd>
+<dt><span class="strong">Returns:</span></dt><dd>A Type0 font with a CIDFontType2 descendant.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is an error reading the font stream.</dd></dl>
+</li>
+</ul>
+<a name="load(org.apache.pdfbox.pdmodel.PDDocument, org.apache.fontbox.ttf.TrueTypeFont, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>load</h4>
+<pre>public static&nbsp;<a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType0Font.html" title="class in org.apache.pdfbox.pdmodel.font">PDType0Font</a>&nbsp;load(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+               org.apache.fontbox.ttf.TrueTypeFont&nbsp;ttf,
+               boolean&nbsp;embedSubset)
+                        throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Loads a TTF to be embedded into a document as a Type 0 font.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>doc</code> - The PDF document that will hold the embedded font.</dd><dd><code>ttf</code> - A TrueType font.</dd><dd><code>embedSubset</code> - True if the font will be subset before embedding</dd>
 <dt><span class="strong">Returns:</span></dt><dd>A Type0 font with a CIDFontType2 descendant.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is an error reading the font stream.</dd></dl>
@@ -608,7 +633,14 @@ implements <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDVectorFont.h
                 throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontLike.html#getHeight(int)">PDFontLike</a></code></strong></div>
 <div class="block">Returns the height of the given character, in glyph space. This can be expensive to
- calculate. Results are only approximate.</div>
+ calculate. Results are only approximate.</p>
+ 
+ Warning: This method is deprecated in PDFBox 2.0 because there is no meaningful value
+ which it can return. The <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontLike.html#getWidth(int)"><code>PDFontLike.getWidth(int)</code></a> method returns the advance width of a glyph,
+ but there is no corresponding advance height. The logical height of a character is the same
+ for every character in a font, so if you want that, retrieve the font bbox's height. 
+ Otherwise if you want the visual bounds of the glyph then call getPath(..) on the appropriate
+ PDFont subclass to retrieve the glyph outline as a GeneralPath.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontLike.html#getHeight(int)">getHeight</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontLike.html" title="interface in org.apache.pdfbox.pdmodel.font">PDFontLike</a></code></dd>
@@ -707,7 +739,10 @@ implements <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDVectorFont.h
 <pre>public&nbsp;float&nbsp;getWidth(int&nbsp;code)
                throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontLike.html#getWidth(int)">PDFontLike</a></code></strong></div>
-<div class="block">Returns the advance width of the given character, in glyph space.</div>
+<div class="block">Returns the advance width of the given character, in glyph space.</p>
+ 
+ If you want the visual bounds of the glyph then call getPath(..) on the appropriate
+ PDFont subclass to retrieve the glyph outline as a GeneralPath instead.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontLike.html#getWidth(int)">getWidth</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontLike.html" title="interface in org.apache.pdfbox.pdmodel.font">PDFontLike</a></code></dd>
@@ -1021,6 +1056,6 @@ implements <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDVectorFont.h
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

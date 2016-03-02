@@ -161,54 +161,61 @@ implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObject
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#flatten(java.util.List,%20boolean)">flatten</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">PDField</a>&gt;&nbsp;fields,
+       boolean&nbsp;refreshAppearances)</code>
+<div class="block">This will flatten the specified form fields.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/cos/COSDictionary.html" title="class in org.apache.pdfbox.cos">COSDictionary</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#getCOSObject()">getCOSObject</a></strong>()</code>
 <div class="block">Convert this standard java object to a COS object.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#getDefaultAppearance()">getDefaultAppearance</a></strong>()</code>
 <div class="block">Get the default appearance.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/PDResources.html" title="class in org.apache.pdfbox.pdmodel">PDResources</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#getDefaultResources()">getDefaultResources</a></strong>()</code>
 <div class="block">This will get the default resources for the acro form.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">PDField</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#getField(java.lang.String)">getField</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fullyQualifiedName)</code>
 <div class="block">This will get a field by name, possibly using the cache if setCache is true.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">PDField</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#getFieldIterator()">getFieldIterator</a></strong>()</code>
 <div class="block">Returns an iterator which walks all fields in the field tree, in order.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">PDField</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#getFields()">getFields</a></strong>()</code>
 <div class="block">This will return all of the documents root fields.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDFieldTree.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">PDFieldTree</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#getFieldTree()">getFieldTree</a></strong>()</code>
 <div class="block">Return the field tree representing all form fields</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#getNeedAppearances()">getNeedAppearances</a></strong>()</code>
 <div class="block">True if the viewing application should construct the appearances of all field widgets.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#getQ()">getQ</a></strong>()</code>
 <div class="block">This will get the 'quadding' or justification of the text to be displayed.
@@ -218,99 +225,113 @@ implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObject
  Please see the QUADDING_CONSTANTS.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDXFAResource.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">PDXFAResource</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#getXFA()">getXFA</a></strong>()</code>
 <div class="block">Get the XFA resource, the XFA resource is only used for PDF 1.5+ forms.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#hasXFA()">hasXFA</a></strong>()</code>
 <div class="block">This will tell if the AcroForm has XFA content.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#importFDF(org.apache.pdfbox.pdmodel.fdf.FDFDocument)">importFDF</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/fdf/FDFDocument.html" title="class in org.apache.pdfbox.pdmodel.fdf">FDFDocument</a>&nbsp;fdf)</code>
 <div class="block">This method will import an entire FDF document into the PDF document
  that this acroform is part of.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#isAppendOnly()">isAppendOnly</a></strong>()</code>
 <div class="block">Determines if AppendOnly is set.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#isCachingFields()">isCachingFields</a></strong>()</code>
 <div class="block">This will tell if this acro form is caching the fields.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#isSignaturesExist()">isSignaturesExist</a></strong>()</code>
 <div class="block">Determines if SignaturesExist is set.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#refreshAppearances()">refreshAppearances</a></strong>()</code>
+<div class="block">Refreshes the appearance streams and appearance dictionaries for 
+ the widget annotations of all fields.</div>
+</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#refreshAppearances(java.util.List)">refreshAppearances</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">PDField</a>&gt;&nbsp;fields)</code>
+<div class="block">Refreshes the appearance streams and appearance dictionaries for 
+ the widget annotations of the specified fields.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#setAppendOnly(boolean)">setAppendOnly</a></strong>(boolean&nbsp;appendOnly)</code>
 <div class="block">Set the AppendOnly bit.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#setCacheFields(boolean)">setCacheFields</a></strong>(boolean&nbsp;cache)</code>
 <div class="block">This will tell this form to cache the fields into a Map structure
  for fast access via the getField method.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#setDefaultAppearance(java.lang.String)">setDefaultAppearance</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;daValue)</code>
 <div class="block">Set the default appearance.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#setDefaultResources(org.apache.pdfbox.pdmodel.PDResources)">setDefaultResources</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/PDResources.html" title="class in org.apache.pdfbox.pdmodel">PDResources</a>&nbsp;dr)</code>
 <div class="block">This will set the default resources for the acroform.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#setFields(java.util.List)">setFields</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">PDField</a>&gt;&nbsp;fields)</code>
 <div class="block">Set the documents root fields.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#setNeedAppearances(java.lang.Boolean)">setNeedAppearances</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;value)</code>
 <div class="block">Set the NeedAppearances value.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#setQ(int)">setQ</a></strong>(int&nbsp;q)</code>
 <div class="block">This will set the quadding/justification of the text.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#setSignaturesExist(boolean)">setSignaturesExist</a></strong>(boolean&nbsp;signaturesExist)</code>
 <div class="block">Set the SignaturesExist bit.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#setXFA(org.apache.pdfbox.pdmodel.interactive.form.PDXFAResource)">setXFA</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDXFAResource.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">PDXFAResource</a>&nbsp;xfa)</code>
 <div class="block">Set the XFA resource, this is only used for PDF 1.5+ forms.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#xfaIsDynamic()">xfaIsDynamic</a></strong>()</code>
 <div class="block">This will tell if the AcroForm is a dynamic XFA form.</div>
@@ -424,8 +445,57 @@ implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObject
 <div class="block">This will flatten all form fields.
  
  <p>Flattening a form field will take the current appearance and make that part
- of the pages content stream. All form fields and annotations associated are removed.</p></div>
+ of the pages content stream. All form fields and annotations associated are removed.</p>
+ 
+ <p>The appearances for the form fields widgets will <strong>not</strong> be generated<p></div>
 <dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="flatten(java.util.List, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>flatten</h4>
+<pre>public&nbsp;void&nbsp;flatten(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">PDField</a>&gt;&nbsp;fields,
+           boolean&nbsp;refreshAppearances)
+             throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">This will flatten the specified form fields.
+ 
+ <p>Flattening a form field will take the current appearance and make that part
+ of the pages content stream. All form fields and annotations associated are removed.</p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>fields</code> - </dd><dd><code>refreshAppearances</code> - if set to true the appearances for the form field widgets will be updated</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="refreshAppearances()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>refreshAppearances</h4>
+<pre>public&nbsp;void&nbsp;refreshAppearances()
+                        throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Refreshes the appearance streams and appearance dictionaries for 
+ the widget annotations of all fields.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="refreshAppearances(java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>refreshAppearances</h4>
+<pre>public&nbsp;void&nbsp;refreshAppearances(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">PDField</a>&gt;&nbsp;fields)
+                        throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Refreshes the appearance streams and appearance dictionaries for 
+ the widget annotations of the specified fields.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>fields</code> - </dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -764,6 +834,6 @@ implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObject
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

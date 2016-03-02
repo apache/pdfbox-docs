@@ -259,6 +259,14 @@ implements <a href="../../../../org/apache/pdfbox/cos/ICOSVisitor.html" title="i
 <tr class="rowColor">
 <td class="colOne"><code><strong><a href="../../../../org/apache/pdfbox/pdfwriter/COSWriter.html#COSWriter(java.io.OutputStream,%20java.io.InputStream)">COSWriter</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;outputStream,
          <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;inputStream)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>Use <a href="../../../../org/apache/pdfbox/pdfwriter/COSWriter.html#COSWriter(java.io.OutputStream,%20org.apache.pdfbox.io.RandomAccessRead)"><code>COSWriter(OutputStream, RandomAccessRead)</code></a> instead</i></div>
+</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../org/apache/pdfbox/pdfwriter/COSWriter.html#COSWriter(java.io.OutputStream,%20org.apache.pdfbox.io.RandomAccessRead)">COSWriter</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;outputStream,
+         <a href="../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a>&nbsp;inputData)</code>
 <div class="block">COSWriter constructor for incremental updates.</div>
 </td>
 </tr>
@@ -706,14 +714,30 @@ implements <a href="../../../../org/apache/pdfbox/cos/ICOSVisitor.html" title="i
 <a name="COSWriter(java.io.OutputStream, java.io.InputStream)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>COSWriter</h4>
 <pre>public&nbsp;COSWriter(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;outputStream,
          <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;inputStream)
           throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>Use <a href="../../../../org/apache/pdfbox/pdfwriter/COSWriter.html#COSWriter(java.io.OutputStream,%20org.apache.pdfbox.io.RandomAccessRead)"><code>COSWriter(OutputStream, RandomAccessRead)</code></a> instead</i></div>
 <div class="block">COSWriter constructor for incremental updates.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>outputStream</code> - output stream where the new PDF data will be written</dd><dd><code>inputStream</code> - input stream containing source PDF data</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if something went wrong</dd></dl>
+</li>
+</ul>
+<a name="COSWriter(java.io.OutputStream, org.apache.pdfbox.io.RandomAccessRead)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>COSWriter</h4>
+<pre>public&nbsp;COSWriter(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;outputStream,
+         <a href="../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a>&nbsp;inputData)
+          throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">COSWriter constructor for incremental updates.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>outputStream</code> - output stream where the new PDF data will be written</dd><dd><code>inputData</code> - random access read containing source PDF data</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if something went wrong</dd></dl>
 </li>
@@ -1283,6 +1307,6 @@ implements <a href="../../../../org/apache/pdfbox/cos/ICOSVisitor.html" title="i
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

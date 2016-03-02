@@ -195,11 +195,17 @@ extends <a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html" title=
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripperByArea.html#removeRegion(java.lang.String)">removeRegion</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;regionName)</code>
+<div class="block">Delete a region to group text by.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripperByArea.html#setShouldSeparateByBeads(boolean)">setShouldSeparateByBeads</a></strong>(boolean&nbsp;aShouldSeparateByBeads)</code>
 <div class="block">This method does nothing in this derived class, because beads and regions are incompatible.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripperByArea.html#showGlyph(org.apache.pdfbox.util.Matrix,%20org.apache.pdfbox.pdmodel.font.PDFont,%20int,%20java.lang.String,%20org.apache.pdfbox.util.Vector)">showGlyph</a></strong>(<a href="../../../../org/apache/pdfbox/util/Matrix.html" title="class in org.apache.pdfbox.util">Matrix</a>&nbsp;textRenderingMatrix,
          <a href="../../../../org/apache/pdfbox/pdmodel/font/PDFont.html" title="class in org.apache.pdfbox.pdmodel.font">PDFont</a>&nbsp;font,
@@ -209,7 +215,7 @@ extends <a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html" title=
 <div class="block">This method was originally written by Ben Litchfield for PDFStreamEngine.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripperByArea.html#writePage()">writePage</a></strong>()</code>
 <div class="block">This will print the processed page text to the output stream.</div>
@@ -278,7 +284,7 @@ extends <a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html" title=
 <ul class="blockList">
 <li class="blockList">
 <h4>setShouldSeparateByBeads</h4>
-<pre>public&nbsp;void&nbsp;setShouldSeparateByBeads(boolean&nbsp;aShouldSeparateByBeads)</pre>
+<pre>public final&nbsp;void&nbsp;setShouldSeparateByBeads(boolean&nbsp;aShouldSeparateByBeads)</pre>
 <div class="block">This method does nothing in this derived class, because beads and regions are incompatible. Beads are
  ignored when stripping by area.</div>
 <dl>
@@ -297,6 +303,17 @@ extends <a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html" title=
              <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/geom/Rectangle2D.html?is-external=true" title="class or interface in java.awt.geom">Rectangle2D</a>&nbsp;rect)</pre>
 <div class="block">Add a new region to group text by.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>regionName</code> - The name of the region.</dd><dd><code>rect</code> - The rectangle area to retrieve the text from.</dd></dl>
+</li>
+</ul>
+<a name="removeRegion(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeRegion</h4>
+<pre>public&nbsp;void&nbsp;removeRegion(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;regionName)</pre>
+<div class="block">Delete a region to group text by. If the region does not exist, this method does nothing.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>regionName</code> - The name of the region to delete.</dd></dl>
 </li>
 </ul>
 <a name="getRegions()">
@@ -455,6 +472,6 @@ extends <a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html" title=
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

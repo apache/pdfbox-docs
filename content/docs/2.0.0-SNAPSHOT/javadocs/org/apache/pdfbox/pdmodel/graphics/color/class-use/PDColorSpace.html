@@ -207,11 +207,18 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a></code></td>
+<td class="colLast"><span class="strong">PDResources.</span><code><strong><a href="../../../../../../../org/apache/pdfbox/pdmodel/PDResources.html#getColorSpace(org.apache.pdfbox.cos.COSName,%20boolean)">getColorSpace</a></strong>(<a href="../../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&nbsp;name,
+             boolean&nbsp;wasDefault)</code>
+<div class="block">Returns the color space resource with the given name, or null if none exists.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a></code></td>
 <td class="colLast"><span class="strong">ResourceCache.</span><code><strong><a href="../../../../../../../org/apache/pdfbox/pdmodel/ResourceCache.html#getColorSpace(org.apache.pdfbox.cos.COSObject)">getColorSpace</a></strong>(<a href="../../../../../../../org/apache/pdfbox/cos/COSObject.html" title="class in org.apache.pdfbox.cos">COSObject</a>&nbsp;indirect)</code>
 <div class="block">Returns the color space resource for the given indirect object, if it is in the cache.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a></code></td>
 <td class="colLast"><span class="strong">DefaultResourceCache.</span><code><strong><a href="../../../../../../../org/apache/pdfbox/pdmodel/DefaultResourceCache.html#getColorSpace(org.apache.pdfbox.cos.COSObject)">getColorSpace</a></strong>(<a href="../../../../../../../org/apache/pdfbox/cos/COSObject.html" title="class in org.apache.pdfbox.cos">COSObject</a>&nbsp;indirect)</code>&nbsp;</td>
 </tr>
@@ -406,42 +413,50 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a></code></td>
+<td class="colLast"><span class="strong">PDColorSpace.</span><code><strong><a href="../../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html#create(org.apache.pdfbox.cos.COSBase,%20org.apache.pdfbox.pdmodel.PDResources,%20boolean)">create</a></strong>(<a href="../../../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&nbsp;colorSpace,
+      <a href="../../../../../../../org/apache/pdfbox/pdmodel/PDResources.html" title="class in org.apache.pdfbox.pdmodel">PDResources</a>&nbsp;resources,
+      boolean&nbsp;wasDefault)</code>
+<div class="block">Creates a color space given a name or array.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a></code></td>
 <td class="colLast"><span class="strong">PDSeparation.</span><code><strong><a href="../../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDSeparation.html#getAlternateColorSpace()">getAlternateColorSpace</a></strong>()</code>
 <div class="block">Returns the colorant name.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a></code></td>
 <td class="colLast"><span class="strong">PDICCBased.</span><code><strong><a href="../../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDICCBased.html#getAlternateColorSpace()">getAlternateColorSpace</a></strong>()</code>
 <div class="block">Returns a list of alternate color spaces for non-conforming readers.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a></code></td>
 <td class="colLast"><span class="strong">PDDeviceN.</span><code><strong><a href="../../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDDeviceN.html#getAlternateColorSpace()">getAlternateColorSpace</a></strong>()</code>
 <div class="block">This will get the alternate color space for this separation.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a></code></td>
 <td class="colLast"><span class="strong">PDIndexed.</span><code><strong><a href="../../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDIndexed.html#getBaseColorSpace()">getBaseColorSpace</a></strong>()</code>
 <div class="block">Returns the base color space.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a></code></td>
 <td class="colLast"><span class="strong">PDDeviceNProcess.</span><code><strong><a href="../../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDDeviceNProcess.html#getColorSpace()">getColorSpace</a></strong>()</code>
 <div class="block">Returns the process color space</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a></code></td>
 <td class="colLast"><span class="strong">PDColor.</span><code><strong><a href="../../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColor.html#getColorSpace()">getColorSpace</a></strong>()</code>
 <div class="block">Returns the color space in which this color value is defined.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a></code></td>
 <td class="colLast"><span class="strong">PDPattern.</span><code><strong><a href="../../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDPattern.html#getUnderlyingColorSpace()">getUnderlyingColorSpace</a></strong>()</code>
 <div class="block">Returns the underlying color space, if this is an uncolored tiling pattern, otherwise null.</div>
@@ -752,6 +767,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

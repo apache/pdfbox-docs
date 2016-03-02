@@ -367,13 +367,34 @@ structural information about a document's content into a PDF file.</div>
                    <a href="../../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;sourcePage,
                    boolean&nbsp;appendContent,
                    boolean&nbsp;compress)</code>
-<div class="block">Create a new PDPage content stream.</div>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>use <a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode,%20boolean)"><code>PDPageContentStream.PDPageContentStream(PDDocument, PDPage, PDPageContentStream.AppendMode, boolean)</code></a></i></div>
+</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20boolean,%20boolean,%20boolean)">PDPageContentStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
                    <a href="../../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;sourcePage,
                    boolean&nbsp;appendContent,
+                   boolean&nbsp;compress,
+                   boolean&nbsp;resetContext)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>use <a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode,%20boolean,%20boolean)"><code>PDPageContentStream.PDPageContentStream(PDDocument, PDPage, PDPageContentStream.AppendMode, boolean, boolean)</code></a></i></div>
+</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode,%20boolean)">PDPageContentStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                   <a href="../../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;sourcePage,
+                   <a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.AppendMode.html" title="enum in org.apache.pdfbox.pdmodel">PDPageContentStream.AppendMode</a>&nbsp;appendContent,
+                   boolean&nbsp;compress)</code>
+<div class="block">Create a new PDPage content stream.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode,%20boolean,%20boolean)">PDPageContentStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                   <a href="../../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;sourcePage,
+                   <a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.AppendMode.html" title="enum in org.apache.pdfbox.pdmodel">PDPageContentStream.AppendMode</a>&nbsp;appendContent,
                    boolean&nbsp;compress,
                    boolean&nbsp;resetContext)</code>
 <div class="block">Create a new PDPage content stream.</div>
@@ -757,6 +778,6 @@ structural information about a document's content into a PDF file.</div>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

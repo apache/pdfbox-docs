@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/pdfbox/pdmodel/PDPageTree.html" title="class in org.apache.pdfbox.pdmodel"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.AppendMode.html" title="enum in org.apache.pdfbox.pdmodel"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/pdfbox/pdmodel/PDPageContentStream.html" target="_top">Frames</a></li>
@@ -60,7 +60,7 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
@@ -111,6 +111,27 @@ implements <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/Clo
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.AppendMode.html" title="enum in org.apache.pdfbox.pdmodel">PDPageContentStream.AppendMode</a></strong></code>
+<div class="block">This is to choose what to do with the stream: overwrite, append or prepend.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -146,13 +167,34 @@ implements <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/Clo
                    <a href="../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;sourcePage,
                    boolean&nbsp;appendContent,
                    boolean&nbsp;compress)</code>
-<div class="block">Create a new PDPage content stream.</div>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>use <a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode,%20boolean)"><code>PDPageContentStream(PDDocument, PDPage, PDPageContentStream.AppendMode, boolean)</code></a></i></div>
+</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><strong><a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20boolean,%20boolean,%20boolean)">PDPageContentStream</a></strong>(<a href="../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
                    <a href="../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;sourcePage,
                    boolean&nbsp;appendContent,
+                   boolean&nbsp;compress,
+                   boolean&nbsp;resetContext)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>use <a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode,%20boolean,%20boolean)"><code>PDPageContentStream(PDDocument, PDPage, PDPageContentStream.AppendMode, boolean, boolean)</code></a></i></div>
+</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode,%20boolean)">PDPageContentStream</a></strong>(<a href="../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                   <a href="../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;sourcePage,
+                   <a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.AppendMode.html" title="enum in org.apache.pdfbox.pdmodel">PDPageContentStream.AppendMode</a>&nbsp;appendContent,
+                   boolean&nbsp;compress)</code>
+<div class="block">Create a new PDPage content stream.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode,%20boolean,%20boolean)">PDPageContentStream</a></strong>(<a href="../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                   <a href="../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;sourcePage,
+                   <a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.AppendMode.html" title="enum in org.apache.pdfbox.pdmodel">PDPageContentStream.AppendMode</a>&nbsp;appendContent,
                    boolean&nbsp;compress,
                    boolean&nbsp;resetContext)</code>
 <div class="block">Create a new PDPage content stream.</div>
@@ -346,6 +388,20 @@ implements <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/Clo
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#close()">close</a></strong>()</code>
 <div class="block">Close the content stream.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#closeAndFillAndStroke()">closeAndFillAndStroke</a></strong>()</code>
+<div class="block">Close, fill, and then stroke the path, using the nonzero winding number rule to determine the
+ region to fill.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#closeAndFillAndStrokeEvenOdd()">closeAndFillAndStrokeEvenOdd</a></strong>()</code>
+<div class="block">Close, fill, and then stroke the path, using the even-odd rule to determine the region to
+ fill.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -554,7 +610,7 @@ implements <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/Clo
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#fill()">fill</a></strong>()</code>
-<div class="block">Fills the path using the nonzero winding rule.</div>
+<div class="block">Fills the path using the nonzero winding number rule.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -563,6 +619,20 @@ implements <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/Clo
 <div class="block"><strong>Deprecated.</strong>&nbsp;
 <div class="block"><i>Use <a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#fill()"><code>fill()</code></a> or <a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#fillEvenOdd()"><code>fillEvenOdd()</code></a> instead.</i></div>
 </div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#fillAndStroke()">fillAndStroke</a></strong>()</code>
+<div class="block">Fill and then stroke the path, using the nonzero winding number rule to determine the region
+ to fill.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#fillAndStrokeEvenOdd()">fillAndStrokeEvenOdd</a></strong>()</code>
+<div class="block">Fill and then stroke the path, using the even-odd rule to determine the region to
+ fill.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -943,14 +1013,33 @@ implements <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/Clo
 <ul class="blockList">
 <li class="blockList">
 <h4>PDPageContentStream</h4>
-<pre>public&nbsp;PDPageContentStream(<a href="../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
-                   <a href="../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;sourcePage,
-                   boolean&nbsp;appendContent,
-                   boolean&nbsp;compress)
+<pre><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+public&nbsp;PDPageContentStream(<a href="../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                              <a href="../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;sourcePage,
+                              boolean&nbsp;appendContent,
+                              boolean&nbsp;compress)
                     throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use <a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode,%20boolean)"><code>PDPageContentStream(PDDocument, PDPage, PDPageContentStream.AppendMode, boolean)</code></a></i></div>
 <div class="block">Create a new PDPage content stream.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>document</code> - The document the page is part of.</dd><dd><code>sourcePage</code> - The page to write the contents to.</dd><dd><code>appendContent</code> - Indicates whether content will be overwritten. If false all previous
                       content is deleted.</dd><dd><code>compress</code> - Tell if the content stream should compress the page contents.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is an error writing to the page contents.</dd></dl>
+</li>
+</ul>
+<a name="PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument, org.apache.pdfbox.pdmodel.PDPage, org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PDPageContentStream</h4>
+<pre>public&nbsp;PDPageContentStream(<a href="../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                   <a href="../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;sourcePage,
+                   <a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.AppendMode.html" title="enum in org.apache.pdfbox.pdmodel">PDPageContentStream.AppendMode</a>&nbsp;appendContent,
+                   boolean&nbsp;compress)
+                    throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Create a new PDPage content stream.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>document</code> - The document the page is part of.</dd><dd><code>sourcePage</code> - The page to write the contents to.</dd><dd><code>appendContent</code> - Indicates whether content will be overwritten, appended or prepended.</dd><dd><code>compress</code> - Tell if the content stream should compress the page contents.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is an error writing to the page contents.</dd></dl>
 </li>
@@ -961,15 +1050,40 @@ implements <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/Clo
 <ul class="blockList">
 <li class="blockList">
 <h4>PDPageContentStream</h4>
+<pre><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+public&nbsp;PDPageContentStream(<a href="../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                              <a href="../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;sourcePage,
+                              boolean&nbsp;appendContent,
+                              boolean&nbsp;compress,
+                              boolean&nbsp;resetContext)
+                    throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use <a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode,%20boolean,%20boolean)"><code>PDPageContentStream(PDDocument, PDPage, PDPageContentStream.AppendMode, boolean, boolean)</code></a></i></div>
+<div class="block">Create a new PDPage content stream.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>document</code> - The document the page is part of.</dd><dd><code>sourcePage</code> - The page to write the contents to.</dd><dd><code>appendContent</code> - Indicates whether content will be overwritten. If false all previous
+                      content is deleted.</dd><dd><code>compress</code> - Tell if the content stream should compress the page contents.</dd><dd><code>resetContext</code> - Tell if the graphic context should be reseted. You should use this when
+ appending to an existing stream, because the existing stream may have changed graphic
+ properties (e.g. scaling, rotation).</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is an error writing to the page contents.</dd></dl>
+</li>
+</ul>
+<a name="PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument, org.apache.pdfbox.pdmodel.PDPage, org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode, boolean, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PDPageContentStream</h4>
 <pre>public&nbsp;PDPageContentStream(<a href="../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
                    <a href="../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;sourcePage,
-                   boolean&nbsp;appendContent,
+                   <a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.AppendMode.html" title="enum in org.apache.pdfbox.pdmodel">PDPageContentStream.AppendMode</a>&nbsp;appendContent,
                    boolean&nbsp;compress,
                    boolean&nbsp;resetContext)
                     throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Create a new PDPage content stream.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>document</code> - The document the page is part of.</dd><dd><code>sourcePage</code> - The page to write the contents to.</dd><dd><code>appendContent</code> - Indicates whether content will be overwritten. If false all previous
-                      content is deleted.</dd><dd><code>compress</code> - Tell if the content stream should compress the page contents.</dd><dd><code>resetContext</code> - Tell if the graphic context should be reseted.</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>document</code> - The document the page is part of.</dd><dd><code>sourcePage</code> - The page to write the contents to.</dd><dd><code>appendContent</code> - Indicates whether content will be overwritten, appended or prepended.</dd><dd><code>compress</code> - Tell if the content stream should compress the page contents.</dd><dd><code>resetContext</code> - Tell if the graphic context should be reset. This is only relevant when
+ the appendContent parameter is set to <a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.AppendMode.html#APPEND"><code>PDPageContentStream.AppendMode.APPEND</code></a>. You should use this when
+ appending to an existing stream, because the existing stream may have changed graphic
+ properties (e.g. scaling, rotation).</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is an error writing to the page contents.</dd></dl>
 </li>
@@ -2133,7 +2247,7 @@ public&nbsp;void&nbsp;fill(int&nbsp;windingRule)
 <h4>fill</h4>
 <pre>public&nbsp;void&nbsp;fill()
           throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Fills the path using the nonzero winding rule.</div>
+<div class="block">Fills the path using the nonzero winding number rule.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If the content stream could not be written</dd>
 <dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - If the method was called within a text block.</dd></dl>
@@ -2148,6 +2262,70 @@ public&nbsp;void&nbsp;fill(int&nbsp;windingRule)
 <pre>public&nbsp;void&nbsp;fillEvenOdd()
                  throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Fills the path using the even-odd winding rule.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If the content stream could not be written</dd>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - If the method was called within a text block.</dd></dl>
+</li>
+</ul>
+<a name="fillAndStroke()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fillAndStroke</h4>
+<pre>public&nbsp;void&nbsp;fillAndStroke()
+                   throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Fill and then stroke the path, using the nonzero winding number rule to determine the region
+ to fill. This shall produce the same result as constructing two identical path objects,
+ painting the first with <a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#fill()"><code>fill()</code></a> and the second with <a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#stroke()"><code>stroke()</code></a>.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If the content stream could not be written</dd>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - If the method was called within a text block.</dd></dl>
+</li>
+</ul>
+<a name="fillAndStrokeEvenOdd()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fillAndStrokeEvenOdd</h4>
+<pre>public&nbsp;void&nbsp;fillAndStrokeEvenOdd()
+                          throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Fill and then stroke the path, using the even-odd rule to determine the region to
+ fill. This shall produce the same result as constructing two identical path objects, painting
+ the first with <a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#fillEvenOdd()"><code>fillEvenOdd()</code></a> and the second with <a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#stroke()"><code>stroke()</code></a>.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If the content stream could not be written</dd>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - If the method was called within a text block.</dd></dl>
+</li>
+</ul>
+<a name="closeAndFillAndStroke()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>closeAndFillAndStroke</h4>
+<pre>public&nbsp;void&nbsp;closeAndFillAndStroke()
+                           throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Close, fill, and then stroke the path, using the nonzero winding number rule to determine the
+ region to fill. This shall have the same effect as the sequence <a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#closePath()"><code>closePath()</code></a>
+ and then <a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#fillAndStroke()"><code>fillAndStroke()</code></a>.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If the content stream could not be written</dd>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - If the method was called within a text block.</dd></dl>
+</li>
+</ul>
+<a name="closeAndFillAndStrokeEvenOdd()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>closeAndFillAndStrokeEvenOdd</h4>
+<pre>public&nbsp;void&nbsp;closeAndFillAndStrokeEvenOdd()
+                                  throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Close, fill, and then stroke the path, using the even-odd rule to determine the region to
+ fill. This shall have the same effect as the sequence <a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#closePath()"><code>closePath()</code></a>
+ and then <a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#fillAndStrokeEvenOdd()"><code>fillAndStrokeEvenOdd()</code></a>.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If the content stream could not be written</dd>
 <dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - If the method was called within a text block.</dd></dl>
@@ -2552,7 +2730,7 @@ public&nbsp;void&nbsp;appendCOSName(<a href="../../../../org/apache/pdfbox/cos/C
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/pdfbox/pdmodel/PDPageTree.html" title="class in org.apache.pdfbox.pdmodel"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.AppendMode.html" title="enum in org.apache.pdfbox.pdmodel"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/pdfbox/pdmodel/PDPageContentStream.html" target="_top">Frames</a></li>
@@ -2576,7 +2754,7 @@ public&nbsp;void&nbsp;appendCOSName(<a href="../../../../org/apache/pdfbox/cos/C
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
@@ -2592,6 +2770,6 @@ public&nbsp;void&nbsp;appendCOSName(<a href="../../../../org/apache/pdfbox/cos/C
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

@@ -177,48 +177,56 @@ implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObject
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html#create(org.apache.pdfbox.cos.COSBase,%20org.apache.pdfbox.pdmodel.PDResources,%20boolean)">create</a></strong>(<a href="../../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&nbsp;colorSpace,
+      <a href="../../../../../../org/apache/pdfbox/pdmodel/PDResources.html" title="class in org.apache.pdfbox.pdmodel">PDResources</a>&nbsp;resources,
+      boolean&nbsp;wasDefault)</code>
+<div class="block">Creates a color space given a name or array.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html#getCOSObject()">getCOSObject</a></strong>()</code>
 <div class="block">Convert this standard java object to a COS object.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>abstract float[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html#getDefaultDecode(int)">getDefaultDecode</a></strong>(int&nbsp;bitsPerComponent)</code>
 <div class="block">Returns the default decode array for this color space.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>abstract <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColor.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColor</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html#getInitialColor()">getInitialColor</a></strong>()</code>
 <div class="block">Returns the initial color value for this color space.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>abstract <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html#getName()">getName</a></strong>()</code>
 <div class="block">Returns the name of the color space.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>abstract int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html#getNumberOfComponents()">getNumberOfComponents</a></strong>()</code>
 <div class="block">Returns the number of components in this color space</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>abstract float[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html#toRGB(float[])">toRGB</a></strong>(float[]&nbsp;value)</code>
 <div class="block">Returns the RGB equivalent of the given color value.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>abstract <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html#toRGBImage(java.awt.image.WritableRaster)">toRGBImage</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/WritableRaster.html?is-external=true" title="class or interface in java.awt.image">WritableRaster</a>&nbsp;raster)</code>
 <div class="block">Returns the (A)RGB equivalent of the given raster.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html#toRGBImageAWT(java.awt.image.WritableRaster,%20java.awt.color.ColorSpace)">toRGBImageAWT</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/WritableRaster.html?is-external=true" title="class or interface in java.awt.image">WritableRaster</a>&nbsp;raster,
              <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/color/ColorSpace.html?is-external=true" title="class or interface in java.awt.color">ColorSpace</a>&nbsp;colorSpace)</code>
@@ -313,6 +321,26 @@ implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObject
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/MissingResourceException.html" title="class in org.apache.pdfbox.pdmodel">MissingResourceException</a></code> - if the color space is missing in the resources dictionary</dd>
 <dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the color space is unknown or cannot be created</dd></dl>
+</li>
+</ul>
+<a name="create(org.apache.pdfbox.cos.COSBase, org.apache.pdfbox.pdmodel.PDResources, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>create</h4>
+<pre>public static&nbsp;<a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a>&nbsp;create(<a href="../../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&nbsp;colorSpace,
+                  <a href="../../../../../../org/apache/pdfbox/pdmodel/PDResources.html" title="class in org.apache.pdfbox.pdmodel">PDResources</a>&nbsp;resources,
+                  boolean&nbsp;wasDefault)
+                           throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Creates a color space given a name or array. Abbreviated device color names are not supported
+ here, please replace them first. This method is for PDFBox internal use only, others should
+ use <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html#create(org.apache.pdfbox.cos.COSBase,%20org.apache.pdfbox.pdmodel.PDResources)"><code>create(COSBase, PDResources)</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>colorSpace</code> - the color space COS object</dd><dd><code>resources</code> - the current resources.</dd><dd><code>wasDefault</code> - if current color space was used by a default color space.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>a new color space.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/MissingResourceException.html" title="class in org.apache.pdfbox.pdmodel">MissingResourceException</a></code> - if the color space is missing in the resources dictionary</dd>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the color space is unknown or cannot be created.</dd></dl>
 </li>
 </ul>
 <a name="getName()">
@@ -486,6 +514,6 @@ implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObject
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

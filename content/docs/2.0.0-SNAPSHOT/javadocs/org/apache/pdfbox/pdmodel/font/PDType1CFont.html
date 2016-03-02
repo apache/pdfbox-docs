@@ -285,7 +285,7 @@ extends <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.apache.pdfbox.pdmodel.font.<a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html" title="class in org.apache.pdfbox.pdmodel.font">PDSimpleFont</a></h3>
-<code><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#addToSubset(int)">addToSubset</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#getEncoding()">getEncoding</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#getGlyphList()">getGlyphList</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#getInvertedEncoding()">getInvertedEncoding</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#getStandard14Width(int)">getStandard14Width</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#getSymbolicFlag()">getSymbolicFlag</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#isFontSymbolic()">isFontSymbolic</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#isStandard14()">isStandard14</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#isSymbolic()">isSymbolic</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#isVertical()">isVertical</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#readEncoding()">readEncoding</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#subset()">subset</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#toUnicode(int)">toUnicode</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#toUnicode(int,%20org.apache.pdfbox.pdmodel.font.encoding.GlyphList)">toUnicode</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#willBeSubset()">willBeSubset</a></code></li>
+<code><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#addToSubset(int)">addToSubset</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#getEncoding()">getEncoding</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#getGlyphList()">getGlyphList</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#getStandard14Width(int)">getStandard14Width</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#getSymbolicFlag()">getSymbolicFlag</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#isFontSymbolic()">isFontSymbolic</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#isStandard14()">isStandard14</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#isSymbolic()">isSymbolic</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#isVertical()">isVertical</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#readEncoding()">readEncoding</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#subset()">subset</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#toUnicode(int)">toUnicode</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#toUnicode(int,%20org.apache.pdfbox.pdmodel.font.encoding.GlyphList)">toUnicode</a>, <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#willBeSubset()">willBeSubset</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.pdfbox.pdmodel.font.PDFont">
@@ -561,7 +561,14 @@ extends <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html
                 throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontLike.html#getHeight(int)">PDFontLike</a></code></strong></div>
 <div class="block">Returns the height of the given character, in glyph space. This can be expensive to
- calculate. Results are only approximate.</div>
+ calculate. Results are only approximate.</p>
+ 
+ Warning: This method is deprecated in PDFBox 2.0 because there is no meaningful value
+ which it can return. The <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontLike.html#getWidth(int)"><code>PDFontLike.getWidth(int)</code></a> method returns the advance width of a glyph,
+ but there is no corresponding advance height. The logical height of a character is the same
+ for every character in a font, so if you want that, retrieve the font bbox's height. 
+ Otherwise if you want the visual bounds of the glyph then call getPath(..) on the appropriate
+ PDFont subclass to retrieve the glyph outline as a GeneralPath.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontLike.html#getHeight(int)">getHeight</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFontLike.html" title="interface in org.apache.pdfbox.pdmodel.font">PDFontLike</a></code></dd>
@@ -708,6 +715,6 @@ extends <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

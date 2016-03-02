@@ -216,7 +216,7 @@ implements <a href="../../../../../org/apache/pdfbox/pdmodel/common/COSObjectabl
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/cos/COSStream.html" title="class in org.apache.pdfbox.cos">COSStream</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html#getCOSObject()">getCOSObject</a></strong>()</code>
-<div class="block">Convert this standard java object to a COS object.</div>
+<div class="block">Get the cos stream associated with this object.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -270,7 +270,9 @@ implements <a href="../../../../../org/apache/pdfbox/pdmodel/common/COSObjectabl
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/cos/COSStream.html" title="class in org.apache.pdfbox.cos">COSStream</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html#getStream()">getStream</a></strong>()</code>
-<div class="block">Get the cos stream associated with this object.</div>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>use <a href="../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html#getCOSObject()"><code>getCOSObject()</code></a></i></div>
+</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -459,7 +461,7 @@ public&nbsp;void&nbsp;addCompression()</pre>
 <li class="blockList">
 <h4>getCOSObject</h4>
 <pre>public&nbsp;<a href="../../../../../org/apache/pdfbox/cos/COSStream.html" title="class in org.apache.pdfbox.cos">COSStream</a>&nbsp;getCOSObject()</pre>
-<div class="block">Convert this standard java object to a COS object.</div>
+<div class="block">Get the cos stream associated with this object.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../org/apache/pdfbox/pdmodel/common/COSObjectable.html#getCOSObject()">getCOSObject</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/pdfbox/pdmodel/common/COSObjectable.html" title="interface in org.apache.pdfbox.pdmodel.common">COSObjectable</a></code></dd>
@@ -532,7 +534,9 @@ public&nbsp;void&nbsp;addCompression()</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getStream</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/pdfbox/cos/COSStream.html" title="class in org.apache.pdfbox.cos">COSStream</a>&nbsp;getStream()</pre>
+<pre><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+public&nbsp;<a href="../../../../../org/apache/pdfbox/cos/COSStream.html" title="class in org.apache.pdfbox.cos">COSStream</a>&nbsp;getStream()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use <a href="../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html#getCOSObject()"><code>getCOSObject()</code></a></i></div>
 <div class="block">Get the cos stream associated with this object.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>The cos object that matches this Java object.</dd></dl>
 </li>
@@ -802,6 +806,6 @@ public&nbsp;void&nbsp;addCompression()</pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

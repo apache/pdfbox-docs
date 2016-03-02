@@ -123,7 +123,8 @@ extends <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Obje
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/font/encoding/GlyphList.html#GlyphList(java.io.InputStream)">GlyphList</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;input)</code>
+<td class="colOne"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/font/encoding/GlyphList.html#GlyphList(java.io.InputStream,%20int)">GlyphList</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;input,
+         int&nbsp;numberOfEntries)</code>
 <div class="block">Creates a new GlyphList from a glyph list file.</div>
 </td>
 </tr>
@@ -194,16 +195,17 @@ extends <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Obje
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="GlyphList(java.io.InputStream)">
+<a name="GlyphList(java.io.InputStream, int)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>GlyphList</h4>
-<pre>public&nbsp;GlyphList(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;input)
+<pre>public&nbsp;GlyphList(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;input,
+         int&nbsp;numberOfEntries)
           throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Creates a new GlyphList from a glyph list file.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>input</code> - glyph list in Adobe format</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>numberOfEntries</code> - number of expected values used to preallocate the correct amount of memory</dd><dd><code>input</code> - glyph list in Adobe format</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the glyph list could not be read</dd></dl>
 </li>
@@ -354,6 +356,6 @@ extends <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Obje
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

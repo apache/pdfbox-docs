@@ -163,6 +163,15 @@ implements <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/pr
 <div class="block">Creates a new PDFPrintable with the given page scaling and with optional page borders shown.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../org/apache/pdfbox/printing/PDFPrintable.html#PDFPrintable(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.printing.Scaling,%20boolean,%20float,%20boolean)">PDFPrintable</a></strong>(<a href="../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+            <a href="../../../../org/apache/pdfbox/printing/Scaling.html" title="enum in org.apache.pdfbox.printing">Scaling</a>&nbsp;scaling,
+            boolean&nbsp;showPageBorder,
+            float&nbsp;dpi,
+            boolean&nbsp;center)</code>
+<div class="block">Creates a new PDFPrintable with the given page scaling and with optional page borders shown.</div>
+</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -245,7 +254,7 @@ implements <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/pr
 <a name="PDFPrintable(org.apache.pdfbox.pdmodel.PDDocument, org.apache.pdfbox.printing.Scaling, boolean, float)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>PDFPrintable</h4>
 <pre>public&nbsp;PDFPrintable(<a href="../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
@@ -255,6 +264,22 @@ implements <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/pr
 <div class="block">Creates a new PDFPrintable with the given page scaling and with optional page borders shown.
  The image will be rasterized at the given DPI before being sent to the printer.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>document</code> - the document to print</dd><dd><code>scaling</code> - page scaling policy</dd><dd><code>showPageBorder</code> - true if page borders are to be printed</dd><dd><code>dpi</code> - if non-zero then the image will be rasterized at the given DPI</dd></dl>
+</li>
+</ul>
+<a name="PDFPrintable(org.apache.pdfbox.pdmodel.PDDocument, org.apache.pdfbox.printing.Scaling, boolean, float, boolean)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>PDFPrintable</h4>
+<pre>public&nbsp;PDFPrintable(<a href="../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+            <a href="../../../../org/apache/pdfbox/printing/Scaling.html" title="enum in org.apache.pdfbox.printing">Scaling</a>&nbsp;scaling,
+            boolean&nbsp;showPageBorder,
+            float&nbsp;dpi,
+            boolean&nbsp;center)</pre>
+<div class="block">Creates a new PDFPrintable with the given page scaling and with optional page borders shown.
+ The image will be rasterized at the given DPI before being sent to the printer.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>document</code> - the document to print</dd><dd><code>scaling</code> - page scaling policy</dd><dd><code>showPageBorder</code> - true if page borders are to be printed</dd><dd><code>dpi</code> - if non-zero then the image will be rasterized at the given DPI</dd><dd><code>center</code> - true if the content is to be centered on the page (otherwise top-left).</dd></dl>
 </li>
 </ul>
 </li>
@@ -349,6 +374,6 @@ implements <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/pr
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

@@ -275,6 +275,18 @@ implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObject
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/state/PDExtendedGraphicsState.html#getTransfer()">getTransfer</a></strong>()</code>
+<div class="block">This will get the transfer function of the /TR dictionary.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/state/PDExtendedGraphicsState.html#getTransfer2()">getTransfer2</a></strong>()</code>
+<div class="block">This will get the transfer function of the /TR2 dictionary.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/state/PDExtendedGraphicsState.html#setAlphaSourceFlag(boolean)">setAlphaSourceFlag</a></strong>(boolean&nbsp;alpha)</code>
 <div class="block">This will get the alpha source flag.</div>
@@ -374,6 +386,18 @@ implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObject
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/state/PDExtendedGraphicsState.html#setTextKnockoutFlag(boolean)">setTextKnockoutFlag</a></strong>(boolean&nbsp;tk)</code>
 <div class="block">This will get the text knockout flag.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/state/PDExtendedGraphicsState.html#setTransfer(org.apache.pdfbox.cos.COSBase)">setTransfer</a></strong>(<a href="../../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&nbsp;transfer)</code>
+<div class="block">This will set the transfer function of the /TR dictionary.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/state/PDExtendedGraphicsState.html#setTransfer2(org.apache.pdfbox.cos.COSBase)">setTransfer2</a></strong>(<a href="../../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&nbsp;transfer2)</code>
+<div class="block">This will set the transfer function of the /TR2 dictionary.</div>
 </td>
 </tr>
 </table>
@@ -845,12 +869,70 @@ implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObject
 <a name="setTextKnockoutFlag(boolean)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setTextKnockoutFlag</h4>
 <pre>public&nbsp;void&nbsp;setTextKnockoutFlag(boolean&nbsp;tk)</pre>
 <div class="block">This will get the text knockout flag.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>tk</code> - The text knockout flag.</dd></dl>
+</li>
+</ul>
+<a name="getTransfer()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTransfer</h4>
+<pre>public&nbsp;<a href="../../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&nbsp;getTransfer()</pre>
+<div class="block">This will get the transfer function of the /TR dictionary.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The transfer function. According to the PDF specification, this is either a single
+ function (which applies to all process colorants) or an array of four functions (which apply
+ to the process colorants individually). The name Identity may be used to represent the
+ identity function.</dd></dl>
+</li>
+</ul>
+<a name="setTransfer(org.apache.pdfbox.cos.COSBase)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTransfer</h4>
+<pre>public&nbsp;void&nbsp;setTransfer(<a href="../../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&nbsp;transfer)</pre>
+<div class="block">This will set the transfer function of the /TR dictionary.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>transfer</code> - The transfer function. According to the PDF specification, this is either a
+ single function (which applies to all process colorants) or an array of four functions (which
+ apply to the process colorants individually). The name Identity may be used to represent the
+ identity function.</dd></dl>
+</li>
+</ul>
+<a name="getTransfer2()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTransfer2</h4>
+<pre>public&nbsp;<a href="../../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&nbsp;getTransfer2()</pre>
+<div class="block">This will get the transfer function of the /TR2 dictionary.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The transfer function. According to the PDF specification, this is either a single
+ function (which applies to all process colorants) or an array of four functions (which apply
+ to the process colorants individually). The name Identity may be used to represent the
+ identity function, and the name Default denotes the transfer function that was in effect at
+ the start of the page.</dd></dl>
+</li>
+</ul>
+<a name="setTransfer2(org.apache.pdfbox.cos.COSBase)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setTransfer2</h4>
+<pre>public&nbsp;void&nbsp;setTransfer2(<a href="../../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&nbsp;transfer2)</pre>
+<div class="block">This will set the transfer function of the /TR2 dictionary.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>transfer2</code> - The transfer function. According to the PDF specification, this is either a
+ single function (which applies to all process colorants) or an array of four functions (which
+ apply to the process colorants individually). The name Identity may be used to represent the
+ identity function, and the name Default denotes the transfer function that was in effect at
+ the start of the page.</dd></dl>
 </li>
 </ul>
 </li>
@@ -920,6 +1002,6 @@ implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObject
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

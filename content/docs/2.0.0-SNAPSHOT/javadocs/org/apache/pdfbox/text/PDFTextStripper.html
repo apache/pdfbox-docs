@@ -133,7 +133,7 @@ extends <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.htm
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../org/apache/pdfbox/text/TextPosition.html" title="class in org.apache.pdfbox.text">TextPosition</a>&gt;&gt;</code></td>
+<td class="colFirst"><code>protected <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../org/apache/pdfbox/text/TextPosition.html" title="class in org.apache.pdfbox.text">TextPosition</a>&gt;&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#charactersByArticle">charactersByArticle</a></strong></code>
 <div class="block">The charactersByArticle is used to extract text by article divisions.</div>
 </td>
@@ -662,13 +662,16 @@ extends <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.htm
 <ul class="blockList">
 <li class="blockList">
 <h4>charactersByArticle</h4>
-<pre>protected&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../org/apache/pdfbox/text/TextPosition.html" title="class in org.apache.pdfbox.text">TextPosition</a>&gt;&gt; charactersByArticle</pre>
+<pre>protected&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../org/apache/pdfbox/text/TextPosition.html" title="class in org.apache.pdfbox.text">TextPosition</a>&gt;&gt; charactersByArticle</pre>
 <div class="block">The charactersByArticle is used to extract text by article divisions. For example a PDF that has two columns like
  a newspaper, we want to extract the first column and then the second column. In this example the PDF would have 2
  beads(or articles), one for each column. The size of the charactersByArticle would be 5, because not all text on
  the screen will fall into one of the articles. The five divisions are shown below
 
- Text before first article first article text text between first article and second article second article text
+ Text before first article
+ first article text
+ text between first article and second article
+ second article text
  text after second article
 
  Most PDFs won't have any beads, so charactersByArticle will contain a single entry.</div>
@@ -1685,6 +1688,6 @@ extends <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.htm
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

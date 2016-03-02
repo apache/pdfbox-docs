@@ -163,8 +163,8 @@ implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObject
 <tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDPropBuildDataDict.html#getMinimumRevision()">getMinimumRevision</a></strong>()</code>
-<div class="block">The software module revision number, used to determinate the minimum version
- of software that is required in order to process this signature.</div>
+<div class="block">The software module revision number, used to determinate the minimum version of software that
+ is required in order to process this signature.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -186,7 +186,7 @@ implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObject
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDPropBuildDataDict.html#getOS()">getOS</a></strong>()</code>
-<div class="block">Indicates the operation system.</div>
+<div class="block">Indicates the operating system.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -209,47 +209,61 @@ implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObject
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDPropBuildDataDict.html#getVersion()">getVersion</a></strong>()</code>
+<div class="block">A text string indicating the version of the application implementation, as described by the
+ <code>/Name</code> attribute in this dictionary.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDPropBuildDataDict.html#setDate(java.lang.String)">setDate</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;date)</code>
 <div class="block">The build date of the software module.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDPropBuildDataDict.html#setMinimumRevision(long)">setMinimumRevision</a></strong>(long&nbsp;revision)</code>
-<div class="block">The software module revision number, used to determinate the minimum version
- of software that is required in order to process this signature.</div>
+<div class="block">The software module revision number, used to determinate the minimum version of software that
+ is required in order to process this signature.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDPropBuildDataDict.html#setName(java.lang.String)">setName</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">The name of the software module that was used to create the signature.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDPropBuildDataDict.html#setOS(java.lang.String)">setOS</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;os)</code>
-<div class="block">Indicates the operation system.</div>
+<div class="block">Indicates the operating system.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDPropBuildDataDict.html#setPreRelease(boolean)">setPreRelease</a></strong>(boolean&nbsp;preRelease)</code>
 <div class="block">A flag that can be used by the signature handler or software module to
  indicate that this signature was created with unrelease software.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDPropBuildDataDict.html#setRevision(long)">setRevision</a></strong>(long&nbsp;revision)</code>
 <div class="block">The software module revision number, corresponding to the Date attribute.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDPropBuildDataDict.html#setTrustedMode(boolean)">setTrustedMode</a></strong>(boolean&nbsp;trustedMode)</code>
 <div class="block">If true, the application was in trusted mode when signing took place.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDPropBuildDataDict.html#setVersion(java.lang.String)">setVersion</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;applicationVersion)</code>
+<div class="block">A text string indicating the version of the application implementation, as described by the
+ <code>Name</code> attribute in this dictionary.</div>
 </td>
 </tr>
 </table>
@@ -346,7 +360,9 @@ implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObject
 <li class="blockList">
 <h4>getDate</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getDate()</pre>
-<div class="block">The build date of the software module.</div>
+<div class="block">The build date of the software module. This string is normally produced by the compiler that
+ is used to compile the software, for example using the Date and Time preprocessor flags. As
+ such, this not likely to be in PDF Date format.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>the build date of the software module</dd></dl>
 </li>
 </ul>
@@ -357,9 +373,38 @@ implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObject
 <li class="blockList">
 <h4>setDate</h4>
 <pre>public&nbsp;void&nbsp;setDate(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;date)</pre>
-<div class="block">The build date of the software module. This string is normally produced by the
- compiler under C++.</div>
+<div class="block">The build date of the software module. This string is normally produced by the compiler.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>date</code> - is the build date of the software module</dd></dl>
+</li>
+</ul>
+<a name="setVersion(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setVersion</h4>
+<pre>public&nbsp;void&nbsp;setVersion(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;applicationVersion)</pre>
+<div class="block">A text string indicating the version of the application implementation, as described by the
+ <code>Name</code> attribute in this dictionary. When set by Adobe Acrobat, this entry is in
+ the format: major.minor.micro (for example 7.0.7).
+ <p>
+ NOTE: Version value is specific for build data dictionary when used as the <code>App</code>
+ dictionary in a build properties dictionary.
+ </p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>applicationVersion</code> - the application implementation version</dd></dl>
+</li>
+</ul>
+<a name="getVersion()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getVersion</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getVersion()</pre>
+<div class="block">A text string indicating the version of the application implementation, as described by the
+ <code>/Name</code> attribute in this dictionary. When set by Adobe Acrobat, this entry is in
+ the format: major.minor.micro (for example 7.0.7).</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the application implementation version</dd></dl>
 </li>
 </ul>
 <a name="getRevision()">
@@ -391,8 +436,11 @@ implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObject
 <li class="blockList">
 <h4>getMinimumRevision</h4>
 <pre>public&nbsp;long&nbsp;getMinimumRevision()</pre>
-<div class="block">The software module revision number, used to determinate the minimum version
- of software that is required in order to process this signature.</div>
+<div class="block">The software module revision number, used to determinate the minimum version of software that
+ is required in order to process this signature.
+ <p>
+ NOTE: this entry is deprecated for PDF v1.7
+ </p></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>the revision of the software module</dd></dl>
 </li>
 </ul>
@@ -403,8 +451,11 @@ implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObject
 <li class="blockList">
 <h4>setMinimumRevision</h4>
 <pre>public&nbsp;void&nbsp;setMinimumRevision(long&nbsp;revision)</pre>
-<div class="block">The software module revision number, used to determinate the minimum version
- of software that is required in order to process this signature.</div>
+<div class="block">The software module revision number, used to determinate the minimum version of software that
+ is required in order to process this signature.
+ <p>
+ NOTE: this entry is deprecated for PDF v1.7
+ </p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>revision</code> - is the software module revision number</dd></dl>
 </li>
 </ul>
@@ -440,8 +491,15 @@ implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObject
 <li class="blockList">
 <h4>getOS</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getOS()</pre>
-<div class="block">Indicates the operation system. The format isn't specified yet.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>a the operation system id or name.</dd></dl>
+<div class="block">Indicates the operating system. The string format isn't specified yet. In its PDF Signature
+ Build Dictionary Specifications Adobe differently specifies the value type to store operating
+ system string:<ul>
+ <li>Specification for PDF v1.5 specifies type as string;</li>
+ <li>Specification for PDF v1.7 specifies type as array and provided example for
+ <code>/PropBuild</code> dictionary indicate it as array of names.</li>
+ </ul>
+ This method supports both types to retrieve the value.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the operating system id or name.</dd></dl>
 </li>
 </ul>
 <a name="setOS(java.lang.String)">
@@ -451,7 +509,9 @@ implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObject
 <li class="blockList">
 <h4>setOS</h4>
 <pre>public&nbsp;void&nbsp;setOS(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;os)</pre>
-<div class="block">Indicates the operation system. The format isn't specified yet.</div>
+<div class="block">Indicates the operating system. The string format isn't specified yet. Value will be stored
+ as first item of the array, as specified in PDF Signature Build Dictionary Specification for
+ PDF v1.7.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>os</code> - is a string with the system id or name.</dd></dl>
 </li>
 </ul>
@@ -560,6 +620,6 @@ implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObject
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

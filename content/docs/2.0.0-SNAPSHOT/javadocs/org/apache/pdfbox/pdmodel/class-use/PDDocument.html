@@ -227,6 +227,12 @@
 <div class="block">The source PDF document.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">Overlay.</span><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/Overlay.html#overlay(java.util.Map)">overlay</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>,<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;specificPageOverlayFile)</code>
+<div class="block">This will add overlays to a documents.</div>
+</td>
+</tr>
 </tbody>
 </table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -577,13 +583,34 @@
                    <a href="../../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;sourcePage,
                    boolean&nbsp;appendContent,
                    boolean&nbsp;compress)</code>
-<div class="block">Create a new PDPage content stream.</div>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>use <a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode,%20boolean)"><code>PDPageContentStream.PDPageContentStream(PDDocument, PDPage, PDPageContentStream.AppendMode, boolean)</code></a></i></div>
+</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20boolean,%20boolean,%20boolean)">PDPageContentStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
                    <a href="../../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;sourcePage,
                    boolean&nbsp;appendContent,
+                   boolean&nbsp;compress,
+                   boolean&nbsp;resetContext)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>use <a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode,%20boolean,%20boolean)"><code>PDPageContentStream.PDPageContentStream(PDDocument, PDPage, PDPageContentStream.AppendMode, boolean, boolean)</code></a></i></div>
+</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode,%20boolean)">PDPageContentStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                   <a href="../../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;sourcePage,
+                   <a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.AppendMode.html" title="enum in org.apache.pdfbox.pdmodel">PDPageContentStream.AppendMode</a>&nbsp;appendContent,
+                   boolean&nbsp;compress)</code>
+<div class="block">Create a new PDPage content stream.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode,%20boolean,%20boolean)">PDPageContentStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                   <a href="../../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;sourcePage,
+                   <a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.AppendMode.html" title="enum in org.apache.pdfbox.pdmodel">PDPageContentStream.AppendMode</a>&nbsp;appendContent,
                    boolean&nbsp;compress,
                    boolean&nbsp;resetContext)</code>
 <div class="block">Create a new PDPage content stream.</div>
@@ -689,6 +716,13 @@
 <div class="block">Constructor.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile.html#PDEmbeddedFile(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream,%20org.apache.pdfbox.cos.COSName)">PDEmbeddedFile</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+              <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;input,
+              <a href="../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&nbsp;filter)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -774,6 +808,14 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType0Font.html" title="class in org.apache.pdfbox.pdmodel.font">PDType0Font</a></code></td>
+<td class="colLast"><span class="strong">PDType0Font.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType0Font.html#load(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.fontbox.ttf.TrueTypeFont,%20boolean)">load</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+    org.apache.fontbox.ttf.TrueTypeFont&nbsp;ttf,
+    boolean&nbsp;embedSubset)</code>
+<div class="block">Loads a TTF to be embedded into a document as a Type 0 font.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDTrueTypeFont.html" title="class in org.apache.pdfbox.pdmodel.font">PDTrueTypeFont</a></code></td>
 <td class="colLast"><span class="strong">PDTrueTypeFont.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDTrueTypeFont.html#loadTTF(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.File)">loadTTF</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
        <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</code>
@@ -782,7 +824,7 @@
 </div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDTrueTypeFont.html" title="class in org.apache.pdfbox.pdmodel.font">PDTrueTypeFont</a></code></td>
 <td class="colLast"><span class="strong">PDTrueTypeFont.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDTrueTypeFont.html#loadTTF(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream)">loadTTF</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
        <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;input)</code>
@@ -892,51 +934,56 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
-<td class="colLast"><span class="strong">PDImageXObject.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createFromFile(java.io.File,%20org.apache.pdfbox.pdmodel.PDDocument)">createFromFile</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
-              <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
-<div class="block">Create a PDImageXObject from an image file.</div>
+<td class="colLast"><span class="strong">CCITTFactory.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/CCITTFactory.html#createFromFile(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.File)">createFromFile</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+              <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</code>
+<div class="block">Creates a new CCITT Fax compressed image XObject from the first image of a TIFF file.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
-<td class="colLast"><span class="strong">CCITTFactory.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/CCITTFactory.html#createFromFile(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.File)">createFromFile</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
-              <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</code>
-<div class="block">Creates a new CCITT Fax compressed Image XObject from the first page of 
- a TIFF file.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
 <td class="colLast"><span class="strong">CCITTFactory.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/CCITTFactory.html#createFromFile(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.File,%20int)">createFromFile</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
               <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
               int&nbsp;number)</code>
-<div class="block">Creates a new CCITT Fax compressed Image XObject from the first page of 
- a TIFF file.</div>
+<div class="block">Creates a new CCITT Fax compressed image XObject from a specific image of a TIFF file.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
+<td class="colLast"><span class="strong">PDImageXObject.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createFromFile(java.lang.String,%20org.apache.pdfbox.pdmodel.PDDocument)">createFromFile</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;imagePath,
+              <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">Create a PDImageXObject from an image file, see <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createFromFileByExtension(java.io.File,%20org.apache.pdfbox.pdmodel.PDDocument)"><code>PDImageXObject.createFromFileByExtension(File, PDDocument)</code></a> for
+ more details.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
-<td class="colLast"><span class="strong">PDImageXObject.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createFromFile(java.lang.String,%20org.apache.pdfbox.pdmodel.PDDocument)">createFromFile</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;imagePath,
-              <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
-<div class="block">Create a PDImageXObject from an image file, see <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createFromFile(java.io.File,%20org.apache.pdfbox.pdmodel.PDDocument)"><code>PDImageXObject.createFromFile(File, PDDocument)</code></a> for
- more details.</div>
+<td class="colLast"><span class="strong">PDImageXObject.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createFromFileByContent(java.io.File,%20org.apache.pdfbox.pdmodel.PDDocument)">createFromFileByContent</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+                       <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">Create a PDImageXObject from an image file.</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
+<td class="colLast"><span class="strong">PDImageXObject.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createFromFileByExtension(java.io.File,%20org.apache.pdfbox.pdmodel.PDDocument)">createFromFileByExtension</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+                         <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">Create a PDImageXObject from an image file.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
 <td class="colLast"><span class="strong">LosslessFactory.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/LosslessFactory.html#createFromImage(org.apache.pdfbox.pdmodel.PDDocument,%20java.awt.image.BufferedImage)">createFromImage</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
                <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image)</code>
 <div class="block">Creates a new lossless encoded Image XObject from a Buffered Image.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
 <td class="colLast"><span class="strong">JPEGFactory.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/JPEGFactory.html#createFromImage(org.apache.pdfbox.pdmodel.PDDocument,%20java.awt.image.BufferedImage)">createFromImage</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
                <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image)</code>
 <div class="block">Creates a new JPEG Image XObject from a Buffered Image.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
 <td class="colLast"><span class="strong">JPEGFactory.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/JPEGFactory.html#createFromImage(org.apache.pdfbox.pdmodel.PDDocument,%20java.awt.image.BufferedImage,%20float)">createFromImage</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
                <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image,
@@ -944,7 +991,7 @@
 <div class="block">Creates a new JPEG Image XObject from a Buffered Image and a given quality.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
 <td class="colLast"><span class="strong">JPEGFactory.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/JPEGFactory.html#createFromImage(org.apache.pdfbox.pdmodel.PDDocument,%20java.awt.image.BufferedImage,%20float,%20int)">createFromImage</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
                <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image,
@@ -953,7 +1000,7 @@
 <div class="block">Creates a new JPEG Image XObject from a Buffered Image, a given quality and DPI.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
 <td class="colLast"><span class="strong">CCITTFactory.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/CCITTFactory.html#createFromRandomAccess(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.io.RandomAccess)">createFromRandomAccess</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
                       <a href="../../../../../org/apache/pdfbox/io/RandomAccess.html" title="interface in org.apache.pdfbox.io">RandomAccess</a>&nbsp;reader)</code>
@@ -962,7 +1009,7 @@
 </div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
 <td class="colLast"><span class="strong">CCITTFactory.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/CCITTFactory.html#createFromRandomAccess(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.io.RandomAccess,%20int)">createFromRandomAccess</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
                       <a href="../../../../../org/apache/pdfbox/io/RandomAccess.html" title="interface in org.apache.pdfbox.io">RandomAccess</a>&nbsp;reader,
@@ -972,7 +1019,7 @@
 </div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
 <td class="colLast"><span class="strong">JPEGFactory.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/JPEGFactory.html#createFromStream(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream)">createFromStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
                 <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;stream)</code>
@@ -1131,8 +1178,15 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDVisibleSignDesigner.html#PDVisibleSignDesigner(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream,%20int)">PDVisibleSignDesigner</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
-                     <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;jpegStream,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDVisibleSignDesigner.html#PDVisibleSignDesigner(org.apache.pdfbox.pdmodel.PDDocument,%20java.awt.image.BufferedImage,%20int)">PDVisibleSignDesigner</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                     <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image,
+                     int&nbsp;page)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDVisibleSignDesigner.html#PDVisibleSignDesigner(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream,%20int)">PDVisibleSignDesigner</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                     <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;imageStream,
                      int&nbsp;page)</code>
 <div class="block">Constructor.</div>
 </td>
@@ -1245,6 +1299,15 @@
             <a href="../../../../../org/apache/pdfbox/printing/Scaling.html" title="enum in org.apache.pdfbox.printing">Scaling</a>&nbsp;scaling,
             boolean&nbsp;showPageBorder,
             float&nbsp;dpi)</code>
+<div class="block">Creates a new PDFPrintable with the given page scaling and with optional page borders shown.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/printing/PDFPrintable.html#PDFPrintable(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.printing.Scaling,%20boolean,%20float,%20boolean)">PDFPrintable</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+            <a href="../../../../../org/apache/pdfbox/printing/Scaling.html" title="enum in org.apache.pdfbox.printing">Scaling</a>&nbsp;scaling,
+            boolean&nbsp;showPageBorder,
+            float&nbsp;dpi,
+            boolean&nbsp;center)</code>
 <div class="block">Creates a new PDFPrintable with the given page scaling and with optional page borders shown.</div>
 </td>
 </tr>
@@ -1383,6 +1446,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

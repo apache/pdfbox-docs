@@ -186,94 +186,88 @@ extends <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFont.html" titl
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#getInvertedEncoding()">getInvertedEncoding</a></strong>()</code>
-<div class="block">Inverts the font's Encoding.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>abstract <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/geom/GeneralPath.html?is-external=true" title="class or interface in java.awt.geom">GeneralPath</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#getPath(java.lang.String)">getPath</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Returns the path for the character with the given name.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected float</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#getStandard14Width(int)">getStandard14Width</a></strong>(int&nbsp;code)</code>
 <div class="block">Returns the glyph width from the AFM if this is a Standard 14 font.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#getSymbolicFlag()">getSymbolicFlag</a></strong>()</code>
 <div class="block">Returns the value of the symbolic flag,  allowing for the fact that the result may be
  indeterminate.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>abstract boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#hasGlyph(java.lang.String)">hasGlyph</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Returns true if the font contains the character with the given name.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#isFontSymbolic()">isFontSymbolic</a></strong>()</code>
 <div class="block">Internal implementation of isSymbolic, allowing for the fact that the result may be
  indeterminate.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#isStandard14()">isStandard14</a></strong>()</code>
 <div class="block">Returns true if this font is one of the "Standard 14" fonts and receives special handling.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#isSymbolic()">isSymbolic</a></strong>()</code>
 <div class="block">Returns true the font is a symbolic (that is, it does not use the Adobe Standard Roman
  character set).</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#isVertical()">isVertical</a></strong>()</code>
 <div class="block">Returns true if the font uses vertical writing mode.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#readEncoding()">readEncoding</a></strong>()</code>
 <div class="block">Reads the Encoding from the Font dictionary or the embedded or substituted font file.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected abstract <a href="../../../../../org/apache/pdfbox/pdmodel/font/encoding/Encoding.html" title="class in org.apache.pdfbox.pdmodel.font.encoding">Encoding</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#readEncodingFromFont()">readEncodingFromFont</a></strong>()</code>
 <div class="block">Called by readEncoding() if the encoding needs to be extracted from the font file.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#subset()">subset</a></strong>()</code>
 <div class="block">Replaces this font with a subset containing only the given Unicode characters.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#toUnicode(int)">toUnicode</a></strong>(int&nbsp;code)</code>
 <div class="block">Returns the Unicode character sequence which corresponds to the given character code.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#toUnicode(int,%20org.apache.pdfbox.pdmodel.font.encoding.GlyphList)">toUnicode</a></strong>(int&nbsp;code,
          <a href="../../../../../org/apache/pdfbox/pdmodel/font/encoding/GlyphList.html" title="class in org.apache.pdfbox.pdmodel.font.encoding">GlyphList</a>&nbsp;customGlyphList)</code>
 <div class="block">Returns the Unicode character sequence which corresponds to the given character code.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDSimpleFont.html#willBeSubset()">willBeSubset</a></strong>()</code>
 <div class="block">Returns true if this font will be subset when embedded.</div>
@@ -379,16 +373,6 @@ extends <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFont.html" titl
 <h4>getGlyphList</h4>
 <pre>public&nbsp;<a href="../../../../../org/apache/pdfbox/pdmodel/font/encoding/GlyphList.html" title="class in org.apache.pdfbox.pdmodel.font.encoding">GlyphList</a>&nbsp;getGlyphList()</pre>
 <div class="block">Returns the Encoding vector.</div>
-</li>
-</ul>
-<a name="getInvertedEncoding()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getInvertedEncoding</h4>
-<pre>protected&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;getInvertedEncoding()</pre>
-<div class="block">Inverts the font's Encoding. Any duplicate (Name -> Code) mappings will be lost.</div>
 </li>
 </ul>
 <a name="isSymbolic()">
@@ -661,6 +645,6 @@ extends <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDFont.html" titl
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2015 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>
