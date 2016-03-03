@@ -216,3 +216,19 @@ for (PDField field : form.getFieldTree())
 ~~~
 
 Most `PDField` subclasses now accept Java generic types such as `String` as parameters instead of the former `COSBase` subclasses.
+
+### Why was the ReplaceText example removed?  ###
+The ReplaceText example has been reomved as it gave the incorrect illusion that text can be replaced easily.
+Words are often split, as seen by this excerpt of a content stream:
+
+~~~
+[ (Do) -29 (c) -1 (umen) 30 (tation) ] TJ
+~~~
+
+Other problems will appear with font subsets: for example, if only the glyphs for a, b and c are used,
+these would be encoded as hex 0, 1 and 2, so you won't find "abc". Additionally, you can't replace "c" with "d" because it isn't part of the subset.
+
+You could also have problems with ligatures, e.g. "ff", "fl", "fi", "ffi", "ffl", which can be represented by a single code in many fonts.
+To understand this yourself, view any file with PDFDebugger and have a look at the "Contents" entry of a page.
+
+See also https://stackoverflow.com/questions/35420609/pdfbox-2-0-rc3-find-and-replace-text
