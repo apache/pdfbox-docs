@@ -331,6 +331,20 @@ tree are now represented by the <code>PDNonTerminalField</code> class.</p>
 </code></pre></div>
 <p>Most <code>PDField</code> subclasses now accept Java generic types such as <code>String</code> as parameters instead of the former <code>COSBase</code> subclasses.</p>
 
+<h3 id="why-was-the-replacetext-example-removed">Why was the ReplaceText example removed?</h3>
+
+<p>The ReplaceText example has been reomved as it gave the incorrect illusion that text can be replaced easily.
+Words are often split, as seen by this excerpt of a content stream:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">[ (Do) -29 (c) -1 (umen) 30 (tation) ] TJ
+</code></pre></div>
+<p>Other problems will appear with font subsets: for example, if only the glyphs for a, b and c are used,
+these would be encoded as hex 0, 1 and 2, so you won&#39;t find &quot;abc&quot;. Additionally, you can&#39;t replace &quot;c&quot; with &quot;d&quot; because it isn&#39;t part of the subset.</p>
+
+<p>You could also have problems with ligatures, e.g. &quot;ff&quot;, &quot;fl&quot;, &quot;fi&quot;, &quot;ffi&quot;, &quot;ffl&quot;, which can be represented by a single code in many fonts.
+To understand this yourself, view any file with PDFDebugger and have a look at the &quot;Contents&quot; entry of a page.</p>
+
+<p>See also <a href="https://stackoverflow.com/questions/35420609/pdfbox-2-0-rc3-find-and-replace-text">https://stackoverflow.com/questions/35420609/pdfbox-2-0-rc3-find-and-replace-text</a></p>
+
             </div>
         </div>
     </div>
