@@ -217,6 +217,9 @@ for (PDField field : form.getFieldTree())
 
 Most `PDField` subclasses now accept Java generic types such as `String` as parameters instead of the former `COSBase` subclasses.
 
+### Document Outline
+The method `PDOutlineNode.appendChild()` has been renamed to `PDOutlineNode.addLast()`. There is now also a complementary method `PDOutlineNode.addFirst()`.
+
 ### Why was the ReplaceText example removed?  ###
 The ReplaceText example has been removed as it gave the incorrect illusion that text can be replaced easily.
 Words are often split, as seen by this excerpt of a content stream:
