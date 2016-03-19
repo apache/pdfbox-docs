@@ -48,7 +48,7 @@ PDF supports embedded image files, however support for some formats require thir
 - Reading **JPEG 2000 (JPX)** images: [JAI Image I/O Tools Core](https://java.net/projects/jai-imageio-core)
 - Writing **TIFF** images requires *JAI Image I/O Tools Core* also.
 
-These libraries are optional and will be loaded if present on the classpath, otherwise support for these image formats will be disable and a warning will be logged when an unsupported image is encountered.
+These libraries are optional and will be loaded if present on the classpath, otherwise support for these image formats will be disabled and a warning will be logged when an unsupported image is encountered.
 
 Maven dependencies for these components can be found in [parent/pom.xml](https://svn.apache.org/viewvc/pdfbox/trunk/parent/pom.xml?view=markup). Please make sure that any third party licenses are suitable for your project.
 
