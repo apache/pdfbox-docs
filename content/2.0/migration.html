@@ -331,6 +331,10 @@ tree are now represented by the <code>PDNonTerminalField</code> class.</p>
 </code></pre></div>
 <p>Most <code>PDField</code> subclasses now accept Java generic types such as <code>String</code> as parameters instead of the former <code>COSBase</code> subclasses.</p>
 
+<h3 id="document-outline">Document Outline</h3>
+
+<p>The method <code>PDOutlineNode.appendChild()</code> has been renamed to <code>PDOutlineNode.addLast()</code>. There is now also a complementary method <code>PDOutlineNode.addFirst()</code>.</p>
+
 <h3 id="why-was-the-replacetext-example-removed">Why was the ReplaceText example removed?</h3>
 
 <p>The ReplaceText example has been removed as it gave the incorrect illusion that text can be replaced easily.
