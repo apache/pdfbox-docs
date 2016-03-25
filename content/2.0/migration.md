@@ -143,7 +143,7 @@ for (PDPage page : document.getPages())
 document.close();
 ~~~
 
-`ImageIOUtil` has been moved into the `org.apache.pdfbox.tools.imageio` package.
+`ImageIOUtil` has been moved into the `org.apache.pdfbox.tools.imageio` package. This is in the `pdfbox-tools` download. If you are using maven, the `artifactId` has the same name.
 
 <p class="alert alert-warning">Important notice when using PDFBox with Java 8
 </p>
