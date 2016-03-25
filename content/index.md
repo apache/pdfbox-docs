@@ -46,38 +46,38 @@ skills. Subscribe to the [Mailing Lists](/mailinglists.html) and find out how yo
 
 <div class="row">
     <div class="col-md-3">
-        <header><h4><span class="oi oi-box"></span>Extract Text</h4></header>
+        <header><h4><svg aria-hidden="true" class="open-iconic open-iconic-box" width="8" height="8" viewBox="0 0 8 8" role="img" version="1.1" alt="box image" ><path d="M0 0v1h8v-1h-8zm0 2v5.91c0 .05.04.09.09.09h7.81c.05 0 .09-.04.09-.09v-5.91h-2.97v1.03h-2.03v-1.03h-3z" /></svg>Extract Text</h4></header>
         <p>Extract Unicode text from PDF files.</p>
     </div>
     <div class="col-md-3">
-        <header><h4><span class="oi oi-box"></span>Split &amp; Merge</h4></header>
+        <header><h4><svg aria-hidden="true" class="open-iconic open-iconic-box" width="8" height="8" viewBox="0 0 8 8" role="img" version="1.1" alt="box image" ><path d="M0 0v1h8v-1h-8zm0 2v5.91c0 .05.04.09.09.09h7.81c.05 0 .09-.04.09-.09v-5.91h-2.97v1.03h-2.03v-1.03h-3z" /></svg>Split &amp; Merge</h4></header>
         <p>Split a single PDF into many files or merge multiple PDF files.</p>
     </div>
     <div class="col-md-3">
-        <header><h4><span class="oi oi-box"></span>Fill Forms</h4></header>
+        <header><h4><svg aria-hidden="true" class="open-iconic open-iconic-box" width="8" height="8" viewBox="0 0 8 8" role="img" version="1.1" alt="box image" ><path d="M0 0v1h8v-1h-8zm0 2v5.91c0 .05.04.09.09.09h7.81c.05 0 .09-.04.09-.09v-5.91h-2.97v1.03h-2.03v-1.03h-3z" /></svg>Fill Forms</h4></header>
         <p>Extract data from PDF forms or fill a PDF form.</p>
     </div>
     <div class="col-md-3">
-        <header><h4><span class="oi oi-box"></span>Preflight</h4></header>
+        <header><h4><svg aria-hidden="true" class="open-iconic open-iconic-box" width="8" height="8" viewBox="0 0 8 8" role="img" version="1.1" alt="box image" ><path d="M0 0v1h8v-1h-8zm0 2v5.91c0 .05.04.09.09.09h7.81c.05 0 .09-.04.09-.09v-5.91h-2.97v1.03h-2.03v-1.03h-3z" /></svg>Preflight</h4></header>
         <p>Validate PDF files against the PDF/A-1b standard.</p>
     </div>
 </div>
 
 <div class="row">
     <div class="col-md-3">
-        <header><h4><span class="oi oi-box"></span>Print</h4></header>
+        <header><h4><svg aria-hidden="true" class="open-iconic open-iconic-box" width="8" height="8" viewBox="0 0 8 8" role="img" version="1.1" alt="box image" ><path d="M0 0v1h8v-1h-8zm0 2v5.91c0 .05.04.09.09.09h7.81c.05 0 .09-.04.09-.09v-5.91h-2.97v1.03h-2.03v-1.03h-3z" /></svg>Print</h4></header>
         <p>Print a PDF file using the standard Java printing API.</p>
     </div>
     <div class="col-md-3">
-        <header><h4><span class="oi oi-box"></span>Save as Image</h4></header>
+        <header><h4><svg aria-hidden="true" class="open-iconic open-iconic-box" width="8" height="8" viewBox="0 0 8 8" role="img" version="1.1" alt="box image" ><path d="M0 0v1h8v-1h-8zm0 2v5.91c0 .05.04.09.09.09h7.81c.05 0 .09-.04.09-.09v-5.91h-2.97v1.03h-2.03v-1.03h-3z" /></svg>Save as Image</h4></header>
         <p>Save PDFs as image files, such as PNG or JPEG.</p>
     </div>
     <div class="col-md-3">
-        <header><h4><span class="oi oi-box"></span>Create PDFs</h4></header>
+        <header><h4><svg aria-hidden="true" class="open-iconic open-iconic-box" width="8" height="8" viewBox="0 0 8 8" role="img" version="1.1" alt="box image" ><path d="M0 0v1h8v-1h-8zm0 2v5.91c0 .05.04.09.09.09h7.81c.05 0 .09-.04.09-.09v-5.91h-2.97v1.03h-2.03v-1.03h-3z" /></svg>Create PDFs</h4></header>
         <p>Create a PDF from scratch, with embedded fonts and images.</p>
     </div>
     <div class="col-md-3">
-        <header><h4><span class="oi oi-box"></span>Signing</h4></header>
+        <header><h4><svg aria-hidden="true" class="open-iconic open-iconic-box" width="8" height="8" viewBox="0 0 8 8" role="img" version="1.1" alt="box image" ><path d="M0 0v1h8v-1h-8zm0 2v5.91c0 .05.04.09.09.09h7.81c.05 0 .09-.04.09-.09v-5.91h-2.97v1.03h-2.03v-1.03h-3z" /></svg>Signing</h4></header>
         <p>Digitally sign PDF files.</p>
     </div>
 </div>
