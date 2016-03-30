@@ -260,7 +260,7 @@ Get involved today. All contributions to the project are greatly appreciated.</p
     </div>
 
     <footer class="footer">
-        <div class="container"
+        <div class="container">
             <div class="row">
                 <div class="span3">
                     <!-- nothing in here on purpose -->
@@ -297,15 +297,15 @@ Get involved today. All contributions to the project are greatly appreciated.</p
 
             // preserve expand/collapse across page navigation
             var path = document.location.pathname;
-            if (path.indexOf('/2.0') == 0) {
-                $('#v2-0').removeClass('collapsed');
-                if (path.indexOf('/2.0/cookbook') == 0) {
-                    $('#v2-0-cookbook').removeClass('collapsed');
-                }
-            } else {
+            if (path.indexOf('/1.8') == 0) {
                 $('#v1-8').removeClass('collapsed');
                 if (path.indexOf('/1.8/cookbook') == 0) {
                     $('#v1-8-cookbook').removeClass('collapsed');
+                }
+            } else {
+                $('#v2-0').removeClass('collapsed');
+                if (path.indexOf('/2.0/cookbook') == 0) {
+                    $('#v2-0-cookbook').removeClass('collapsed');
                 }
             }
 
