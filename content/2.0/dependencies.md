@@ -20,8 +20,6 @@ layout:  default
 title:   Dependencies
 ---
 
-<p class="alert alert-warning">This is an unreleased development preview and may change without notice.</p>
-
 # Dependencies
 
 PDFBox has the following basic dependencies:

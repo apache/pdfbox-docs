@@ -19,7 +19,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 layout:  default
 title:   Examples
 ---
-<p class="alert alert-warning">This is an unreleased development preview and may change without notice.</p>
 
 # Examples
 
