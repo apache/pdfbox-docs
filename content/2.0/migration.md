@@ -127,7 +127,7 @@ for(PDPage page : document.getPages())
 ~~~
 
 ### PDF Rendering
-With PDFBox 2.0.0 `PDPage.convertToImage` has been removed. Instead the new `PDFRenderer` class shall be used.
+With PDFBox 2.0.0 `PDPage.convertToImage` and `PDFImageWriter` have been removed. Instead the new `PDFRenderer` class shall be used.
 
 ~~~java
 PDDocument document = PDDocument.load(new File(pdfFilename));
