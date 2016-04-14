@@ -249,7 +249,7 @@ and so on. The <code>add</code> method now supports all the different type of re
 </code></pre></div>
 <h3 id="pdf-rendering">PDF Rendering</h3>
 
-<p>With PDFBox 2.0.0 <code>PDPage.convertToImage</code> has been removed. Instead the new <code>PDFRenderer</code> class shall be used.</p>
+<p>With PDFBox 2.0.0 <code>PDPage.convertToImage</code> and <code>PDFImageWriter</code> have been removed. Instead the new <code>PDFRenderer</code> class shall be used.</p>
 <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">PDDocument</span> <span class="n">document</span> <span class="o">=</span> <span class="n">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="n">pdfFilename</span><span class="o">));</span>
 <span class="n">PDFRenderer</span> <span class="n">pdfRenderer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDFRenderer</span><span class="o">(</span><span class="n">document</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">pageCounter</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
