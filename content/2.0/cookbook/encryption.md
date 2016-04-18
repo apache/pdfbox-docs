@@ -31,23 +31,25 @@ Load and save encrypted
 
 This small sample shows how to encrypt a file so that it can be viewed, but not printed..
 
-    PDDocument doc = PDDocument.load("filename.pdf");
+``` java
+PDDocument doc = PDDocument.load("filename.pdf");
 
-    // Define the length of the encryption key.
-    // Possible values are 40, 128 or 256.
-    int keyLength = 256;
+// Define the length of the encryption key.
+// Possible values are 40, 128 or 256.
+int keyLength = 256;
     
-    AccessPermission ap = new AccessPermission();
+AccessPermission ap = new AccessPermission();
         
-    // disable printing, everything else is allowed
-    ap.setCanPrint(false);
+// disable printing, everything else is allowed
+ap.setCanPrint(false);
         
-    // owner password (to open the file with all permissions) is "12345"
-    // user password (to open the file but with restricted permissions, is empty here) 
-    StandardProtectionPolicy spp = new StandardProtectionPolicy("12345", "", ap);
-    spp.setEncryptionKeyLength(keyLength);
-    spp.setPermissions(ap);
-    doc.protect(spp);
+// owner password (to open the file with all permissions) is "12345"
+// user password (to open the file but with restricted permissions, is empty here) 
+StandardProtectionPolicy spp = new StandardProtectionPolicy("12345", "", ap);
+spp.setEncryptionKeyLength(keyLength);
+spp.setPermissions(ap);
+doc.protect(spp);
         
-    doc.save("filename-encrypted.pdf");
-    doc.close();
+doc.save("filename-encrypted.pdf");
+doc.close();
+```
