@@ -77,8 +77,12 @@ h4 .open-iconic {
     fill: #0088cc;
 }
 
-code, pre {
+.highlight > pre {
     color: darkslategrey;
+    border: 0pt;
+    border-radius: 0pt;
+    border-left: 5px solid #0088cc;
+    padding-left: 2rem;
 }
 
 /* 
