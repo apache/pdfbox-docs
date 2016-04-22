@@ -316,7 +316,7 @@ in PDFBox 2.0 you can extend <code>PDFTextStripper</code>and add the following <
 </code></pre></div>
 <h3 id="interactive-forms">Interactive Forms</h3>
 
-<p>Large parts of the support for interactive forms (AcroForms) has been rewritten. The most notable change from 1.8.x is that
+<p>Large parts of the support for interactive forms (AcroForms) have been rewritten. The most notable change from 1.8.x is that
 there is a clear distinction between fields and the annotations representing them visually. Intermediate nodes in a field 
 tree are now represented by the <code>PDNonTerminalField</code> class.</p>
 
@@ -329,6 +329,11 @@ tree are now represented by the <code>PDNonTerminalField</code> class.</p>
 <span class="o">}</span>
 </code></pre></div>
 <p>Most <code>PDField</code> subclasses now accept Java generic types such as <code>String</code> as parameters instead of the former <code>COSBase</code> subclasses.</p>
+
+<h4 id="pdfield-getwidget-removed">PDField.getWidget() removed</h4>
+
+<p>As form fields do support multiple annotations <code>PDField.getWidget()</code> has been removed in favour of <code>PDField.getWidgets()</code>which returns all
+annotations associated with a field.</p>
 
 <h3 id="document-outline">Document Outline</h3>
 
