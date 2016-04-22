@@ -200,7 +200,7 @@ addOperator(new SetNonStrokingColorN());
 ~~~
 
 ### Interactive Forms
-Large parts of the support for interactive forms (AcroForms) has been rewritten. The most notable change from 1.8.x is that
+Large parts of the support for interactive forms (AcroForms) have been rewritten. The most notable change from 1.8.x is that
 there is a clear distinction between fields and the annotations representing them visually. Intermediate nodes in a field 
 tree are now represented by the `PDNonTerminalField` class.
 
@@ -216,6 +216,10 @@ for (PDField field : form.getFieldTree())
 ~~~
 
 Most `PDField` subclasses now accept Java generic types such as `String` as parameters instead of the former `COSBase` subclasses.
+
+#### PDField.getWidget() removed ####
+As form fields do support multiple annotations `PDField.getWidget()` has been removed in favour of `PDField.getWidgets()`which returns all
+annotations associated with a field.
 
 ### Document Outline
 The method `PDOutlineNode.appendChild()` has been renamed to `PDOutlineNode.addLast()`. There is now also a complementary method `PDOutlineNode.addFirst()`.
