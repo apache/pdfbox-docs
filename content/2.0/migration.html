@@ -335,6 +335,10 @@ tree are now represented by the <code>PDNonTerminalField</code> class.</p>
 <p>As form fields do support multiple annotations <code>PDField.getWidget()</code> has been removed in favour of <code>PDField.getWidgets()</code>which returns all
 annotations associated with a field.</p>
 
+<h4 id="pdunknownfield-removed">PDUnknownField removed</h4>
+
+<p>The <code>PDUnknownField</code> class has been removed, such fields are treated as <code>null</code> <a href="https://issues.apache.org/jira/browse/PDFBOX-2885">see PDFBOX-2885</a>.</p>
+
 <h3 id="document-outline">Document Outline</h3>
 
 <p>The method <code>PDOutlineNode.appendChild()</code> has been renamed to <code>PDOutlineNode.addLast()</code>. There is now also a complementary method <code>PDOutlineNode.addFirst()</code>.</p>
