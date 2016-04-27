@@ -221,6 +221,9 @@ Most `PDField` subclasses now accept Java generic types such as `String` as para
 As form fields do support multiple annotations `PDField.getWidget()` has been removed in favour of `PDField.getWidgets()`which returns all
 annotations associated with a field.
 
+#### PDUnknownField removed ####
+The `PDUnknownField` class has been removed, such fields are treated as `null` [see PDFBOX-2885](https://issues.apache.org/jira/browse/PDFBOX-2885).
+
 ### Document Outline
 The method `PDOutlineNode.appendChild()` has been renamed to `PDOutlineNode.addLast()`. There is now also a complementary method `PDOutlineNode.addFirst()`.
 
