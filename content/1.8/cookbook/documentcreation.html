@@ -135,7 +135,8 @@
 <h2 id="create-a-blank-pdf">Create a blank PDF</h2>
 
 <p>This small sample shows how to create a new PDF document using PDFBox.</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// Create a new empty document</span>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">// Create a new empty document</span>
 <span class="n">PDDocument</span> <span class="n">document</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDDocument</span><span class="o">();</span>
 
 <span class="c1">// Create a new blank page and add it to the document</span>
@@ -148,11 +149,14 @@
 <span class="c1">// finally make sure that the document is properly</span>
 <span class="c1">// closed.</span>
 <span class="n">document</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <h2 id="hello-world-using-a-pdf-base-font">Hello World using a PDF base font</h2>
 
-<p>This small sample shows how to create a new document and print the text &quot;Hello World&quot; using one of the PDF base fonts.</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// Create a document and add a page to it</span>
+<p>This small sample shows how to create a new document and print the text “Hello World” using one of the PDF base fonts.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">// Create a document and add a page to it</span>
 <span class="n">PDDocument</span> <span class="n">document</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDDocument</span><span class="o">();</span>
 <span class="n">PDPage</span> <span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDPage</span><span class="o">();</span>
 <span class="n">document</span><span class="o">.</span><span class="na">addPage</span><span class="o">(</span> <span class="n">page</span> <span class="o">);</span>
@@ -176,7 +180,9 @@
 <span class="c1">// Save the results and ensure that the document is properly closed:</span>
 <span class="n">document</span><span class="o">.</span><span class="na">save</span><span class="o">(</span> <span class="s">"Hello World.pdf"</span><span class="o">);</span>
 <span class="n">document</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-</code></pre></div>
+</code></pre>
+</div>
+
             </div>
         </div>
     </div>

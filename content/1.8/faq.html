@@ -135,54 +135,61 @@
 <h3 id="general-questions">General Questions</h3>
 
 <ul>
-<li><a href="#log4j">I am getting the below Log4J warning message, how do I remove it?</a></li>
-<li><a href="#threadsafe">Is PDFBox thread safe?</a></li>
-<li><a href="#notclosed">Why do I get a &quot;Warning: You did not close the PDF Document&quot;?</a></li>
+  <li><a href="#log4j">I am getting the below Log4J warning message, how do I remove it?</a></li>
+  <li><a href="#threadsafe">Is PDFBox thread safe?</a></li>
+  <li><a href="#notclosed">Why do I get a “Warning: You did not close the PDF Document”?</a></li>
 </ul>
 
 <h3 id="text-extraction">Text Extraction</h3>
 
 <ul>
-<li><a href="#notext">How come I am not getting any text from the PDF document?</a></li>
-<li><a href="#gibberish">How come I am getting gibberish(G38G43G36G51G5) when extracting text?</a></li>
-<li><a href="#fontwidth">What does &quot;java.io.IOException: Can&#39;t handle font width&quot; mean?</a></li>
-<li><a href="#permission">Why do I get &quot;You do not have permission to extract text&quot; on some documents?</a></li>
-<li><a href="#partially">Can&#39;t we just extract the text without parsing the whole document or extract text as it is parsed?</a></li>
+  <li><a href="#notext">How come I am not getting any text from the PDF document?</a></li>
+  <li><a href="#gibberish">How come I am getting gibberish(G38G43G36G51G5) when extracting text?</a></li>
+  <li><a href="#fontwidth">What does “java.io.IOException: Can’t handle font width” mean?</a></li>
+  <li><a href="#permission">Why do I get “You do not have permission to extract text” on some documents?</a></li>
+  <li><a href="#partially">Can’t we just extract the text without parsing the whole document or extract text as it is parsed?</a></li>
 </ul>
 
-<h2 id="general-questions">General Questions</h2>
+<h2 id="general-questions-1">General Questions</h2>
 
-<p><a name="log4j"></a></p>
+<p><a name="log4j"></a>
+### I am getting the below Log4J warning message, how do I remove it? ###</p>
 
-<h3 id="i-am-getting-the-below-log4j-warning-message-how-do-i-remove-it">I am getting the below Log4J warning message, how do I remove it?</h3>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="nl">log4j:</span><span class="n">WARN</span> <span class="n">No</span> <span class="n">appenders</span> <span class="n">could</span> <span class="n">be</span> <span class="n">found</span> <span class="k">for</span> <span class="n">logger</span> <span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">pdfbox</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">ResourceLoader</span><span class="o">).</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nl">log4j:</span><span class="n">WARN</span> <span class="n">No</span> <span class="n">appenders</span> <span class="n">could</span> <span class="n">be</span> <span class="n">found</span> <span class="k">for</span> <span class="n">logger</span> <span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">pdfbox</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">ResourceLoader</span><span class="o">).</span>
 <span class="nl">log4j:</span><span class="n">WARN</span> <span class="n">Please</span> <span class="n">initialize</span> <span class="n">the</span> <span class="n">log4j</span> <span class="n">system</span> <span class="n">properly</span><span class="o">.</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>This message means that you need to configure the log4j logging system.
 See the <a href="http://logging.apache.org/log4j/1.2/manual.html">log4j documentation</a> for more information.</p>
 
 <p>PDFBox comes with a sample log4j configuration file.  To use it you set a system property like this</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">java</span> <span class="o">-</span><span class="n">Dlog4j</span><span class="o">.</span><span class="na">configuration</span><span class="o">=</span><span class="n">log4j</span><span class="o">.</span><span class="na">xml</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">pdfbox</span><span class="o">.</span><span class="na">ExtractText</span> <span class="o">&lt;</span><span class="n">PDF</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">-</span><span class="n">text</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span>
-</code></pre></div>
-<p>If this is not working for you then you may have to specify the log4j config file using a URL path, like this:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">log4j</span><span class="o">.</span><span class="na">configuration</span><span class="o">=</span><span class="nl">file:</span><span class="c1">///&lt;path to config file&gt;</span>
-</code></pre></div>
-<p><a name="threadsafe"></a></p>
 
-<h3 id="is-pdfbox-thread-safe">Is PDFBox thread safe?</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">java</span> <span class="o">-</span><span class="n">Dlog4j</span><span class="o">.</span><span class="na">configuration</span><span class="o">=</span><span class="n">log4j</span><span class="o">.</span><span class="na">xml</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">pdfbox</span><span class="o">.</span><span class="na">ExtractText</span> <span class="o">&lt;</span><span class="n">PDF</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">-</span><span class="n">text</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span>
+</code></pre>
+</div>
+
+<p>If this is not working for you then you may have to specify the log4j config file using a URL path, like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">log4j</span><span class="o">.</span><span class="na">configuration</span><span class="o">=</span><span class="nl">file:</span><span class="c1">///&lt;path to config file&gt;</span>
+</code></pre>
+</div>
+
+<p><a name="threadsafe"></a>
+### Is PDFBox thread safe? ###</p>
 
 <p>No! Only one thread may access a single document at a time. You can have multiple threads
 each accessing their own PDDocument object.</p>
 
-<p><a name="notclosed"></a></p>
-
-<h3 id="why-do-i-get-a-quot-warning-you-did-not-close-the-pdf-document-quot">Why do I get a &quot;Warning: You did not close the PDF Document&quot;?</h3>
+<p><a name="notclosed"></a>
+### Why do I get a “Warning: You did not close the PDF Document”? ###</p>
 
 <p>You need to call close() on the PDDocument inside the finally block, if you
-don&#39;t then the document will not be closed properly.  Also, you must close all
+don’t then the document will not be closed properly.  Also, you must close all
 PDDocument objects that get created.  The following code creates <strong>two</strong>
-PDDocument objects; one from the &quot;new PDDocument()&quot; and the second by the load method.</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDDocument</span><span class="o">();</span>
+PDDocument objects; one from the “new PDDocument()” and the second by the load method.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDDocument</span><span class="o">();</span>
 <span class="k">try</span>
 <span class="o">{</span>
    <span class="n">doc</span> <span class="o">=</span> <span class="n">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span> <span class="s">"my.pdf"</span> <span class="o">);</span>
@@ -194,27 +201,27 @@ PDDocument objects; one from the &quot;new PDDocument()&quot; and the second by 
       <span class="n">doc</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
    <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div>
-<h2 id="text-extraction">Text Extraction</h2>
+</code></pre>
+</div>
 
-<p><a name="notext"></a></p>
+<h2 id="text-extraction-1">Text Extraction</h2>
 
-<h3 id="how-come-i-am-not-getting-any-text-from-the-pdf-document">How come I am not getting any text from the PDF document?</h3>
+<p><a name="notext"></a>
+### How come I am not getting any text from the PDF document? ###</p>
 
 <p>Text extraction from a pdf document is a complicated task and there are many factors
 involved that effect the possibility and accuracy of text extraction.  It would be helpful
 to the PDFBox team if you could try a couple things.</p>
 
 <ul>
-<li>Open the PDF in Acrobat and try to extract text from there.  If Acrobat can extract text then PDFBox 
-should be able to as well and it is a bug if it cannot.  If Acrobat cannot extract text then PDFBox &#39;probably&#39; cannot either.</li>
-<li>It might really be an image instead of text.  Some PDF documents are just images that have been scanned in.
-You can tell by using the selection tool in Acrobat, if you can&#39;t select any text then it is probably an image.</li>
+  <li>Open the PDF in Acrobat and try to extract text from there.  If Acrobat can extract text then PDFBox 
+should be able to as well and it is a bug if it cannot.  If Acrobat cannot extract text then PDFBox ‘probably’ cannot either.</li>
+  <li>It might really be an image instead of text.  Some PDF documents are just images that have been scanned in.
+You can tell by using the selection tool in Acrobat, if you can’t select any text then it is probably an image.</li>
 </ul>
 
-<p><a name="gibberish"></a></p>
-
-<h3 id="how-come-i-am-getting-gibberish-g38g43g36g51g5-when-extracting-text">How come I am getting gibberish(G38G43G36G51G5) when extracting text?</h3>
+<p><a name="gibberish"></a>
+### How come I am getting gibberish(G38G43G36G51G5) when extracting text? ###</p>
 
 <p>This is because the characters in a PDF document can use a custom encoding
 instead of unicode or ASCII.  When you see gibberish text then it
@@ -222,36 +229,33 @@ probably means that a meaningless internal encoding is being used.  The
 only way to access the text is to use OCR.  This may be a future
 enhancement.</p>
 
-<p><a name="fontwidth"></a></p>
+<p><a name="fontwidth"></a>
+### What does “java.io.IOException: Can’t handle font width” mean? ###</p>
 
-<h3 id="what-does-quot-java-io-ioexception-can-39-t-handle-font-width-quot-mean">What does &quot;java.io.IOException: Can&#39;t handle font width&quot; mean?</h3>
-
-<p>This probably means that the &quot;Resources&quot; directory is not in your classpath. The
+<p>This probably means that the “Resources” directory is not in your classpath. The
 Resources directory is included in the PDFBox jar so this is only a problem if you
 are building PDFBox yourself and not using the binary.</p>
 
-<p><a name="permission"></a></p>
-
-<h3 id="why-do-i-get-quot-you-do-not-have-permission-to-extract-text-quot-on-some-documents">Why do I get &quot;You do not have permission to extract text&quot; on some documents?</h3>
+<p><a name="permission"></a>
+### Why do I get “You do not have permission to extract text” on some documents? ###</p>
 
 <p>PDF documents have certain security permissions that can be applied to them and two 
-passwords associated with them, a user password and a master password. If the &quot;cannot extract text&quot;
+passwords associated with them, a user password and a master password. If the “cannot extract text”
 permission bit is set then you need to decrypt the document with the master password in order
 to extract the text.</p>
 
-<p><a name="partially"></a></p>
-
-<h3 id="can-39-t-we-just-extract-the-text-without-parsing-the-whole-document-or-extract-text-as-it-is-parsed">Can&#39;t we just extract the text without parsing the whole document or extract text as it is parsed?</h3>
+<p><a name="partially"></a>
+### Can’t we just extract the text without parsing the whole document or extract text as it is parsed? ###</p>
 
 <p>Not really, for a couple reasons.</p>
 
 <ul>
-<li>If the document is encrypted then you need to parse at least until the encryption dictionary before 
+  <li>If the document is encrypted then you need to parse at least until the encryption dictionary before 
 you can decrypt.</li>
-<li>Sometimes the PDFont contains vital information needed for text extraction.</li>
-<li>Text on a page does not have to be drawn in reading order. For example: if the page said &quot;Hello World&quot;,
-the pdf could have been written such that &quot;World&quot; gets drawn and then the cursor moves to the left and 
-the word &quot;Hello&quot; is drawn.</li>
+  <li>Sometimes the PDFont contains vital information needed for text extraction.</li>
+  <li>Text on a page does not have to be drawn in reading order. For example: if the page said “Hello World”,
+the pdf could have been written such that “World” gets drawn and then the cursor moves to the left and 
+the word “Hello” is drawn.</li>
 </ul>
 
             </div>

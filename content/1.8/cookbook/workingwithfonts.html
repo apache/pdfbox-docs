@@ -136,74 +136,78 @@
 
 <p>The PDF specification states that a standard set of 14 fonts will always be available when consuming PDF documents. In PDFBox these are defined as constants in the PDType1Font class.</p>
 
-<table><thead>
-<tr>
-<th>Standard Font</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>PDType1Font.TIMES_ROMAN</td>
-<td>Times regular</td>
-</tr>
-<tr>
-<td>PDType1Font.TIMES_BOLD</td>
-<td>Times bold</td>
-</tr>
-<tr>
-<td>PDType1Font.TIMES_ITALIC</td>
-<td>Times italic</td>
-</tr>
-<tr>
-<td>PDType1Font.TIMES_BOLD_ITALIC</td>
-<td>Times bold italic</td>
-</tr>
-<tr>
-<td>PDType1Font.HELVETICA</td>
-<td>Helvetica regular</td>
-</tr>
-<tr>
-<td>PDType1Font.HELVETICA_BOLD</td>
-<td>Helvetica bold</td>
-</tr>
-<tr>
-<td>PDType1Font.HELVETICA_OBLIQUE</td>
-<td>Helvetica italic</td>
-</tr>
-<tr>
-<td>PDType1Font.HELVETICA_BOLD_OBLIQUE</td>
-<td>Helvetica bold italic</td>
-</tr>
-<tr>
-<td>PDType1Font.COURIER</td>
-<td>Courier</td>
-</tr>
-<tr>
-<td>PDType1Font.COURIER_BOLD</td>
-<td>Courier bold</td>
-</tr>
-<tr>
-<td>PDType1Font.COURIER_OBLIQUE</td>
-<td>Courier italic</td>
-</tr>
-<tr>
-<td>PDType1Font.COURIER_BOLD_OBLIQUE</td>
-<td>Courier bold italic</td>
-</tr>
-<tr>
-<td>PDType1Font.SYMBOL</td>
-<td>Symbol Set</td>
-</tr>
-<tr>
-<td>PDType1Font.ZAPF_DINGBATS</td>
-<td>Dingbat Typeface</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Standard Font</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PDType1Font.TIMES_ROMAN</td>
+      <td>Times regular</td>
+    </tr>
+    <tr>
+      <td>PDType1Font.TIMES_BOLD</td>
+      <td>Times bold</td>
+    </tr>
+    <tr>
+      <td>PDType1Font.TIMES_ITALIC</td>
+      <td>Times italic</td>
+    </tr>
+    <tr>
+      <td>PDType1Font.TIMES_BOLD_ITALIC</td>
+      <td>Times bold italic</td>
+    </tr>
+    <tr>
+      <td>PDType1Font.HELVETICA</td>
+      <td>Helvetica regular</td>
+    </tr>
+    <tr>
+      <td>PDType1Font.HELVETICA_BOLD</td>
+      <td>Helvetica bold</td>
+    </tr>
+    <tr>
+      <td>PDType1Font.HELVETICA_OBLIQUE</td>
+      <td>Helvetica italic</td>
+    </tr>
+    <tr>
+      <td>PDType1Font.HELVETICA_BOLD_OBLIQUE</td>
+      <td>Helvetica bold italic</td>
+    </tr>
+    <tr>
+      <td>PDType1Font.COURIER</td>
+      <td>Courier</td>
+    </tr>
+    <tr>
+      <td>PDType1Font.COURIER_BOLD</td>
+      <td>Courier bold</td>
+    </tr>
+    <tr>
+      <td>PDType1Font.COURIER_OBLIQUE</td>
+      <td>Courier italic</td>
+    </tr>
+    <tr>
+      <td>PDType1Font.COURIER_BOLD_OBLIQUE</td>
+      <td>Courier bold italic</td>
+    </tr>
+    <tr>
+      <td>PDType1Font.SYMBOL</td>
+      <td>Symbol Set</td>
+    </tr>
+    <tr>
+      <td>PDType1Font.ZAPF_DINGBATS</td>
+      <td>Dingbat Typeface</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="hello-world-using-a-pdf-base-font">Hello World using a PDF base font</h2>
 
-<p>This small sample shows how to create a new document and print the text &quot;Hello World&quot; using one of the PDF base fonts.</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// Create a document and add a page to it</span>
+<p>This small sample shows how to create a new document and print the text “Hello World” using one of the PDF base fonts.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">// Create a document and add a page to it</span>
 <span class="n">PDDocument</span> <span class="n">document</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDDocument</span><span class="o">();</span>
 <span class="n">PDPage</span> <span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDPage</span><span class="o">();</span>
 <span class="n">document</span><span class="o">.</span><span class="na">addPage</span><span class="o">(</span> <span class="n">page</span> <span class="o">);</span>
@@ -227,11 +231,14 @@
 <span class="c1">// Save the results and ensure that the document is properly closed:</span>
 <span class="n">document</span><span class="o">.</span><span class="na">save</span><span class="o">(</span> <span class="s">"Hello World.pdf"</span><span class="o">);</span>
 <span class="n">document</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <h2 id="hello-world-using-a-truetype-font">Hello World using a TrueType font</h2>
 
-<p>This small sample shows how to create a new document and print the text &quot;Hello World&quot; using a TrueType font.</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// Create a document and add a page to it</span>
+<p>This small sample shows how to create a new document and print the text “Hello World” using a TrueType font.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">// Create a document and add a page to it</span>
 <span class="n">PDDocument</span> <span class="n">document</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDDocument</span><span class="o">();</span>
 <span class="n">PDPage</span> <span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDPage</span><span class="o">();</span>
 <span class="n">document</span><span class="o">.</span><span class="na">addPage</span><span class="o">(</span> <span class="n">page</span> <span class="o">);</span>
@@ -255,19 +262,22 @@
 <span class="c1">// Save the results and ensure that the document is properly closed:</span>
 <span class="n">document</span><span class="o">.</span><span class="na">save</span><span class="o">(</span> <span class="s">"Hello World.pdf"</span><span class="o">);</span>
 <span class="n">document</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>While it is recommended to embed all fonts for greatest portability not all PDF producer 
 applications will do this. When displaying a PDF it is necessary to find an external font to use. 
 PDFBox will look for a mapping file to use when substituting fonts.</p>
 
 <p>PDFBox will load Resources/PDFBox_External_Fonts.properties off of the classpath to map font
 names to TTF font files. The UNKNOWN_FONT property in that file will tell PDFBox which font to 
-use when no mapping exists. </p>
+use when no mapping exists.</p>
 
 <h2 id="hello-world-using-a-postscript-type1-font">Hello World using a Postscript Type1 font</h2>
 
-<p>This small sample shows how to create a new document and print the text &quot;Hello World&quot; using a Postscript Type1 font.</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// Create a document and add a page to it</span>
+<p>This small sample shows how to create a new document and print the text “Hello World” using a Postscript Type1 font.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">// Create a document and add a page to it</span>
 <span class="n">PDDocument</span> <span class="n">document</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDDocument</span><span class="o">();</span>
 <span class="n">PDPage</span> <span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDPage</span><span class="o">();</span>
 <span class="n">document</span><span class="o">.</span><span class="na">addPage</span><span class="o">(</span> <span class="n">page</span> <span class="o">);</span>
@@ -291,7 +301,9 @@ use when no mapping exists. </p>
 <span class="c1">// Save the results and ensure that the document is properly closed:</span>
 <span class="n">document</span><span class="o">.</span><span class="na">save</span><span class="o">(</span> <span class="s">"Hello World.pdf"</span><span class="o">);</span>
 <span class="n">document</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-</code></pre></div>
+</code></pre>
+</div>
+
             </div>
         </div>
     </div>

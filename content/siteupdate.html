@@ -135,72 +135,89 @@
 <p>The content for the PDFBox website is kept in a <a href="https://git-wip-us.apache.org/repos/asf/pdfbox-docs">git repository</a> which is also mirrored to <a href="https://github.com/apache/pdfbox-docs">GitHub</a>. The site is split into two parts: the static content and the Javadoc for the PDFBox API. Both parts are build independently as further described below.</p>
 
 <h2 id="project-info">Project info</h2>
-
 <p>The site is based on <a href="http://jekyllrb.com">Jekyll</a>. So you have to be familiar with the <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> template language and have Jekyll (ver. 2+) installed to contribute to the project.</p>
 
 <h2 id="contribute">Contribute</h2>
-
-<p>If you would like to enhance the website content you can submit a patch. To do so please open a ticket at our <a href="https://issues.apache.org/jira/browse/PDFBOX">Issue Tracker</a>, use <code>Documentation</code> for the <code>Component</code> and add your patch to the ticket.</p>
+<p>If you would like to enhance the website content you can submit a patch. To do so please open a ticket at our <a href="https://issues.apache.org/jira/browse/PDFBOX">Issue Tracker</a>, use <code class="highlighter-rouge">Documentation</code> for the <code class="highlighter-rouge">Component</code> and add your patch to the ticket.</p>
 
 <h2 id="development">Development</h2>
 
 <h3 id="install-jekyll">Install Jekyll</h3>
-
 <p>Follow the instructions available on the <a href="http://jekyllrb.com">Jekyll</a> website.</p>
 
 <h3 id="check-out-from-the-git-repository">Check out from the git repository</h3>
-
 <p>Before you can edit the site, you need to check it out from the git repository:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">git clone https://git-wip-us.apache.org/repos/asf/pdfbox-docs
-</code></pre></div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git clone https://git-wip-us.apache.org/repos/asf/pdfbox-docs
+</code></pre>
+</div>
+
 <h3 id="local-changes">Local changes</h3>
-
 <p>You can now do the changes and additions to the sources of the PDFBox website. To test these locally use</p>
-<div class="highlight"><pre><code class="language-" data-lang="">jekyll serve
-</code></pre></div>
-<p>which will compile the changes and run a local webserver at </p>
-<div class="highlight"><pre><code class="language-" data-lang="">http://localhost:4000
-</code></pre></div>
-<h3 id="publish-the-website-for-comitters-only">Publish the website (for comitters only)</h3>
 
+<div class="highlighter-rouge"><pre class="highlight"><code>jekyll serve
+</code></pre>
+</div>
+
+<p>which will compile the changes and run a local webserver at</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>http://localhost:4000
+</code></pre>
+</div>
+
+<h3 id="publish-the-website-for-comitters-only">Publish the website (for comitters only)</h3>
 <p>After you have done the local changes follow these steps to publish the content:</p>
 
 <p>Add the following server configuration in your ~/.m2/settings.xml file</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;server&gt;
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;server&gt;
   &lt;id&gt;pdfbox-site&lt;/id&gt;
   &lt;username&gt;** USERNAME **&lt;/username&gt;
   &lt;password&gt;** PASSWORD **&lt;/password&gt;
 &lt;/server&gt;
-</code></pre></div>
-<p><code>pdfbox-site</code> is referenced from the PDFBox pom.xml file.</p>
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">pdfbox-site</code> is referenced from the PDFBox pom.xml file.</p>
 
 <p class="alert alert-warning">The password should be encrypted following <a href="https://maven.apache.org/guides/mini/guide-encryption.html">Maven Password Encryption</a></p>
 
 <p>Ensure that the new website content is build locally</p>
-<div class="highlight"><pre><code class="language-" data-lang="">jekyll build
-</code></pre></div>
-<p>This will read the sources and generate the new content in the <code>./staging</code> directory.</p>
 
-<p>When you are happy with the new content update the source repository</p>
-<div class="highlight"><pre><code class="language-" data-lang="">git commit -m "..."
+<div class="highlighter-rouge"><pre class="highlight"><code>jekyll build
+~~~
+
+This will read the sources and generate the new content in the ``./staging`` directory.
+
+When you are happy with the new content update the source repository
+
+</code></pre>
+</div>
+<p>git commit -m “…”
 git push origin master
-</code></pre></div>
+~~~</p>
+
 <p>Upload the new content to the production site</p>
-<div class="highlight"><pre><code class="language-" data-lang="">mvn scm-publish:publish-scm
-</code></pre></div>
-<p>This will checkout the current content into the <code>./target</code>directory, apply the changes from <code>./staging</code> and publish
+
+<div class="highlighter-rouge"><pre class="highlight"><code>mvn scm-publish:publish-scm
+</code></pre>
+</div>
+
+<p>This will checkout the current content into the <code class="highlighter-rouge">./target</code>directory, apply the changes from <code class="highlighter-rouge">./staging</code> and publish
 the changes to the PDFBox production website.</p>
 
-<h3 id="update-the-javadocs-for-pdfbox-2-x">Update the JavaDocs for PDFBOX 2.x</h3>
-
+<h3 id="update-the-javadocs-for-pdfbox-2x">Update the JavaDocs for PDFBOX 2.x</h3>
 <p>To publish the javadocs follow these steps:</p>
 
 <p>Run</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ mvn clean javadoc:aggregate scm-publish:publish-scm
-</code></pre></div>
-<p>from the <code>&lt;SVN_ROOT&gt;/../pdfbox</code> directory.</p>
 
-<p>It uses the same <code>pdfbox-site</code> settings from above to connect to the repository.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ mvn clean javadoc:aggregate scm-publish:publish-scm
+</code></pre>
+</div>
+
+<p>from the <code class="highlighter-rouge">&lt;SVN_ROOT&gt;/../pdfbox</code> directory.</p>
+
+<p>It uses the same <code class="highlighter-rouge">pdfbox-site</code> settings from above to connect to the repository.</p>
 
 <p class="alert alert-info">As <code>mvn clean</code> will delete the javadoc files download from the Apache CMS it's advised to configure <code>${svn.scmJavadocCheckoutDirectory}</code> to a local directory not below <code>./target</code>.</p>
 

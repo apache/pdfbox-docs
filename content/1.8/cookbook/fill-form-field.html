@@ -132,45 +132,61 @@
             <div class="col-xs-12 col-sm-9">
                 <h1 id="fill-a-form-field">Fill a Form Field</h1>
 
-<p>Form fields within a PDF are defined as part of the AcroForm entry within the PDF&#39;s document catalog.
+<p>Form fields within a PDF are defined as part of the AcroForm entry within the PDF’s document catalog.
 Form there individual fields can be accessed. Fields might be organized in a tree structure so it might
 be neccessary to walk through the tree to get an individual field.</p>
 
 <p>Load the PDF document.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">:::java
+
+<div class="highlighter-rouge"><pre class="highlight"><code>:::java
 // load the document
 PDDocument pdfDocument = PDDocument.loadNonSeq(new File(... ), null);
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>Get the docoument catalog and the AcroForm which might be contained within.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">:::java
+
+<div class="highlighter-rouge"><pre class="highlight"><code>:::java
 // get the document catalog
 PDDocumentCatalog docCatalog = pdfDocument.getDocumentCatalog();
 PDAcroForm acroForm = docCatalog.getAcroForm();
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>Retrieve an individual field and set its value.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">:::java
+
+<div class="highlighter-rouge"><pre class="highlight"><code>:::java
 // as there might not be an AcroForm entry a null check is necessary
 if (acroForm != null)
 {
     PDField field = (PDField) acroForm.getField( "fieldName" );
     field.setValue("new field value");
 }
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>If a field is nested within the form tree a fully qualified name might be provided
 to access the field.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">:::java
+
+<div class="highlighter-rouge"><pre class="highlight"><code>:::java
 // as there might not be an AcroForm entry a null check is neccessary
 if (acroForm != null)
 {
     PDField field = (PDField) acroForm.getField( "fieldsParentName.fieldName" );
     field.setValue("new field value");
 }
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>Save and close the filled out form.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">:::java
+
+<div class="highlighter-rouge"><pre class="highlight"><code>:::java
 doc.save(filledForm);
 doc.close();
-</code></pre></div>
+</code></pre>
+</div>
+
+
             </div>
         </div>
     </div>

@@ -137,7 +137,7 @@
 <p>See the <a href="/2.0/dependencies.html">Dependencies</a> page for instructions on how to set your classpath in order to run 
 PDFBox tools as Java applications.</p>
 
-<p><strong>Table of Contents</strong><br>
+<p><strong>Table of Contents</strong><br />
 <a href="#decrypt">Decrypt</a>
 <a href="#encrypt">Encrypt</a>
 <a href="#extractimages">ExtractImages</a>
@@ -157,282 +157,297 @@ PDFBox tools as Java applications.</p>
 
 <p>NOTE: You must have the owner password to decrypt the document!</p>
 
-<p>usage: <code>java -jar pdfbox-app-2.y.z.jar Decrypt [OPTIONS] &lt;inputfile&gt; [outputfile]</code></p>
+<p>usage: <code class="highlighter-rouge">java -jar pdfbox-app-2.y.z.jar Decrypt [OPTIONS] &lt;inputfile&gt; [outputfile]</code></p>
 
-<table><thead>
-<tr>
-<th>Command Line Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>-password</td>
-<td>Password to the PDF or certificate in keystore.</td>
-</tr>
-<tr>
-<td>-keyStore</td>
-<td>Path to keystore that holds certificate to decrypt the document. This is only required if the document is encrypted with a certificate, otherwise only the password is required.</td>
-</tr>
-<tr>
-<td>-alias</td>
-<td>The alias to the certificate in the keystore.</td>
-</tr>
-<tr>
-<td>inputfile</td>
-<td>The PDF file to decrypt.</td>
-</tr>
-<tr>
-<td>outputfile</td>
-<td>The file to save the decrypted document to. If left blank then it will be the same as the input file.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Command Line Parameter</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-password</td>
+      <td>Password to the PDF or certificate in keystore.</td>
+    </tr>
+    <tr>
+      <td>-keyStore</td>
+      <td>Path to keystore that holds certificate to decrypt the document. This is only required if the document is encrypted with a certificate, otherwise only the password is required.</td>
+    </tr>
+    <tr>
+      <td>-alias</td>
+      <td>The alias to the certificate in the keystore.</td>
+    </tr>
+    <tr>
+      <td>inputfile</td>
+      <td>The PDF file to decrypt.</td>
+    </tr>
+    <tr>
+      <td>outputfile</td>
+      <td>The file to save the decrypted document to. If left blank then it will be the same as the input file.</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="encrypt">Encrypt</h2>
 
 <p>This application will encrypt a PDF document.</p>
 
-<p>usage: <code>java -jar pdfbox-app-2.y.z.jar Encrypt [OPTIONS] &lt;password&gt; &lt;inputfile&gt;</code></p>
+<p>usage: <code class="highlighter-rouge">java -jar pdfbox-app-2.y.z.jar Encrypt [OPTIONS] &lt;password&gt; &lt;inputfile&gt;</code></p>
 
-<table><thead>
-<tr>
-<th>Command Line Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>-O</td>
-<td></td>
-<td>The owner password to the PDF, ignored if -certFile is specified.</td>
-</tr>
-<tr>
-<td>-U</td>
-<td></td>
-<td>The user password to the PDF, ignored if -certFile is specified.</td>
-</tr>
-<tr>
-<td>-certFile</td>
-<td></td>
-<td>Path to X.509 cert file.</td>
-</tr>
-<tr>
-<td>-canAssemble</td>
-<td>true</td>
-<td>Set the assemble permission.</td>
-</tr>
-<tr>
-<td>-canExtractContent</td>
-<td>true</td>
-<td>Set the extraction permission.</td>
-</tr>
-<tr>
-<td>-canExtractForAccessibility</td>
-<td>true</td>
-<td>Set the extraction permission.</td>
-</tr>
-<tr>
-<td>-canFillInForm</td>
-<td>true</td>
-<td>Set the fill in form permission.</td>
-</tr>
-<tr>
-<td>-canModify</td>
-<td>true</td>
-<td>Set the modify permission.</td>
-</tr>
-<tr>
-<td>-canModifyAnnotations</td>
-<td>true</td>
-<td>Set the modify annots permission.</td>
-</tr>
-<tr>
-<td>-canPrint</td>
-<td>true</td>
-<td>Set the print permission.</td>
-</tr>
-<tr>
-<td>-canPrintDegraded</td>
-<td>true</td>
-<td>Set the print degraded permission.</td>
-</tr>
-<tr>
-<td>-keyLength</td>
-<td>40, 128 or 256</td>
-<td>The number of bits for the encryption key. For 128 and above bits <a href="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html">Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files</a> must be installed.</td>
-</tr>
-<tr>
-<td>inputfile</td>
-<td></td>
-<td>The PDF file to encrypt.</td>
-</tr>
-<tr>
-<td>outputfile</td>
-<td></td>
-<td>The file to save the encrypted document to. If left blank then it will be the same as the input file.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Command Line Parameter</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-O</td>
+      <td> </td>
+      <td>The owner password to the PDF, ignored if -certFile is specified.</td>
+    </tr>
+    <tr>
+      <td>-U</td>
+      <td> </td>
+      <td>The user password to the PDF, ignored if -certFile is specified.</td>
+    </tr>
+    <tr>
+      <td>-certFile</td>
+      <td> </td>
+      <td>Path to X.509 cert file.</td>
+    </tr>
+    <tr>
+      <td>-canAssemble</td>
+      <td>true</td>
+      <td>Set the assemble permission.</td>
+    </tr>
+    <tr>
+      <td>-canExtractContent</td>
+      <td>true</td>
+      <td>Set the extraction permission.</td>
+    </tr>
+    <tr>
+      <td>-canExtractForAccessibility</td>
+      <td>true</td>
+      <td>Set the extraction permission.</td>
+    </tr>
+    <tr>
+      <td>-canFillInForm</td>
+      <td>true</td>
+      <td>Set the fill in form permission.</td>
+    </tr>
+    <tr>
+      <td>-canModify</td>
+      <td>true</td>
+      <td>Set the modify permission.</td>
+    </tr>
+    <tr>
+      <td>-canModifyAnnotations</td>
+      <td>true</td>
+      <td>Set the modify annots permission.</td>
+    </tr>
+    <tr>
+      <td>-canPrint</td>
+      <td>true</td>
+      <td>Set the print permission.</td>
+    </tr>
+    <tr>
+      <td>-canPrintDegraded</td>
+      <td>true</td>
+      <td>Set the print degraded permission.</td>
+    </tr>
+    <tr>
+      <td>-keyLength</td>
+      <td>40, 128 or 256</td>
+      <td>The number of bits for the encryption key. For 128 and above bits <a href="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html">Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files</a> must be installed.</td>
+    </tr>
+    <tr>
+      <td>inputfile</td>
+      <td> </td>
+      <td>The PDF file to encrypt.</td>
+    </tr>
+    <tr>
+      <td>outputfile</td>
+      <td> </td>
+      <td>The file to save the encrypted document to. If left blank then it will be the same as the input file.</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="extractimages">ExtractImages</h2>
 
 <p>This application will extract all images from the given PDF document.</p>
 
-<p>usage: <code>java -jar pdfbox-app-2.y.z.jar ExtractImages [OPTIONS] &lt;inputfile&gt;</code></p>
+<p>usage: <code class="highlighter-rouge">java -jar pdfbox-app-2.y.z.jar ExtractImages [OPTIONS] &lt;inputfile&gt;</code></p>
 
-<table><thead>
-<tr>
-<th>Command Line Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>-password</td>
-<td></td>
-<td>The password to the PDF document.</td>
-</tr>
-<tr>
-<td>-prefix</td>
-<td>PDF name</td>
-<td>Image prefix to use.</td>
-</tr>
-<tr>
-<td>-directJPEG</td>
-<td>false</td>
-<td>Forces the direct extraction of JPEG images regardless of colorspace.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Command Line Parameter</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-password</td>
+      <td> </td>
+      <td>The password to the PDF document.</td>
+    </tr>
+    <tr>
+      <td>-prefix</td>
+      <td>PDF name</td>
+      <td>Image prefix to use.</td>
+    </tr>
+    <tr>
+      <td>-directJPEG</td>
+      <td>false</td>
+      <td>Forces the direct extraction of JPEG images regardless of colorspace.</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="extracttext">ExtractText</h2>
 
 <p>This application will extract all text from the given PDF document.</p>
 
-<p>usage: <code>java -jar pdfbox-app-2.y.z.jar ExtractText [OPTIONS] &lt;inputfile&gt; [Text file]</code></p>
+<p>usage: <code class="highlighter-rouge">java -jar pdfbox-app-2.y.z.jar ExtractText [OPTIONS] &lt;inputfile&gt; [Text file]</code></p>
 
-<table><thead>
-<tr>
-<th>Command Line Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>-password</td>
-<td></td>
-<td>The password to the PDF document.</td>
-</tr>
-<tr>
-<td>-encoding</td>
-<td>default encoding</td>
-<td>The encoding type of the text file, e.g. ISO-8859-1, UTF-8, UTF-16BE.</td>
-</tr>
-<tr>
-<td>-console</td>
-<td>false</td>
-<td>Send text to console instead of file.</td>
-</tr>
-<tr>
-<td>-html</td>
-<td>false</td>
-<td>Output in HTML format instead of raw text.</td>
-</tr>
-<tr>
-<td>-sort</td>
-<td>false</td>
-<td>Sort the text before writing.</td>
-</tr>
-<tr>
-<td>-ignoreBeads</td>
-<td>false</td>
-<td>Disables the separation by beads.</td>
-</tr>
-<tr>
-<td>-force</td>
-<td>false</td>
-<td>Enables pdfbox to ignore corrupt objects.</td>
-</tr>
-<tr>
-<td>-debug</td>
-<td>false</td>
-<td>Enables debug output about the time consumption of every stage.</td>
-</tr>
-<tr>
-<td>-startPage</td>
-<td>1</td>
-<td>The first page to extract, one based.</td>
-</tr>
-<tr>
-<td>-endPage</td>
-<td>Integer.MAX_INT</td>
-<td>The last page to extract, one based.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Command Line Parameter</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-password</td>
+      <td> </td>
+      <td>The password to the PDF document.</td>
+    </tr>
+    <tr>
+      <td>-encoding</td>
+      <td>default encoding</td>
+      <td>The encoding type of the text file, e.g. ISO-8859-1, UTF-8, UTF-16BE.</td>
+    </tr>
+    <tr>
+      <td>-console</td>
+      <td>false</td>
+      <td>Send text to console instead of file.</td>
+    </tr>
+    <tr>
+      <td>-html</td>
+      <td>false</td>
+      <td>Output in HTML format instead of raw text.</td>
+    </tr>
+    <tr>
+      <td>-sort</td>
+      <td>false</td>
+      <td>Sort the text before writing.</td>
+    </tr>
+    <tr>
+      <td>-ignoreBeads</td>
+      <td>false</td>
+      <td>Disables the separation by beads.</td>
+    </tr>
+    <tr>
+      <td>-force</td>
+      <td>false</td>
+      <td>Enables pdfbox to ignore corrupt objects.</td>
+    </tr>
+    <tr>
+      <td>-debug</td>
+      <td>false</td>
+      <td>Enables debug output about the time consumption of every stage.</td>
+    </tr>
+    <tr>
+      <td>-startPage</td>
+      <td>1</td>
+      <td>The first page to extract, one based.</td>
+    </tr>
+    <tr>
+      <td>-endPage</td>
+      <td>Integer.MAX_INT</td>
+      <td>The last page to extract, one based.</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="overlaypdf">OverlayPDF</h2>
 
 <p>This application will overlay one document with the content of another document</p>
 
-<p>usage: <code>java -jar pdfbox-app-2.y.z.jar OverlayPDF &lt;input.pdf&gt; [OPTIONS] &lt;output.pdf&gt;</code></p>
+<p>usage: <code class="highlighter-rouge">java -jar pdfbox-app-2.y.z.jar OverlayPDF &lt;input.pdf&gt; [OPTIONS] &lt;output.pdf&gt;</code></p>
 
-<table><thead>
-<tr>
-<th>Command Line Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>inputfile</td>
-<td></td>
-<td>The PDF file to be overlayed.</td>
-</tr>
-<tr>
-<td>defaultOverlay.pdf</td>
-<td></td>
-<td>Default overlay file.</td>
-</tr>
-<tr>
-<td>-odd oddPageOverlay.pdf</td>
-<td></td>
-<td>Overlay file used for odd pages.</td>
-</tr>
-<tr>
-<td>-even evenPageOverlay.pdf</td>
-<td></td>
-<td>Overlay file used for even pages.</td>
-</tr>
-<tr>
-<td>-first firstPageOverlay.pdf</td>
-<td></td>
-<td>Overlay file used for the first page.</td>
-</tr>
-<tr>
-<td>-last lastPageOverlay.pdf</td>
-<td></td>
-<td>Overlay file used for the last pages.</td>
-</tr>
-<tr>
-<td>-page pageNumber specificPageOverlay.pdf</td>
-<td></td>
-<td>overlay file used for the given page number, may occur more than once.</td>
-</tr>
-<tr>
-<td>-position</td>
-<td>background</td>
-<td>Where to put the overlay, foreground or background.</td>
-</tr>
-<tr>
-<td>outputfile</td>
-<td></td>
-<td>The resulting pdf file.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Command Line Parameter</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>inputfile</td>
+      <td> </td>
+      <td>The PDF file to be overlayed.</td>
+    </tr>
+    <tr>
+      <td>defaultOverlay.pdf</td>
+      <td> </td>
+      <td>Default overlay file.</td>
+    </tr>
+    <tr>
+      <td>-odd oddPageOverlay.pdf</td>
+      <td> </td>
+      <td>Overlay file used for odd pages.</td>
+    </tr>
+    <tr>
+      <td>-even evenPageOverlay.pdf</td>
+      <td> </td>
+      <td>Overlay file used for even pages.</td>
+    </tr>
+    <tr>
+      <td>-first firstPageOverlay.pdf</td>
+      <td> </td>
+      <td>Overlay file used for the first page.</td>
+    </tr>
+    <tr>
+      <td>-last lastPageOverlay.pdf</td>
+      <td> </td>
+      <td>Overlay file used for the last pages.</td>
+    </tr>
+    <tr>
+      <td>-page pageNumber specificPageOverlay.pdf</td>
+      <td> </td>
+      <td>overlay file used for the given page number, may occur more than once.</td>
+    </tr>
+    <tr>
+      <td>-position</td>
+      <td>background</td>
+      <td>Where to put the overlay, foreground or background.</td>
+    </tr>
+    <tr>
+      <td>outputfile</td>
+      <td> </td>
+      <td>The resulting pdf file.</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Examples:</p>
 
 <ul>
-<li>OverlayPDF input.pdf overlay.pdf output.pdf</li>
-<li>OverlayPDF input.pdf defaultOverlay.pdf -page 10 overlayForPage10.pdf -position foreground output.pdf</li>
-<li>OverlayPDF input.pdf -odd oddOverlay.pdf -even evenOverlay.pdf output.pdf</li>
+  <li>OverlayPDF input.pdf overlay.pdf output.pdf</li>
+  <li>OverlayPDF input.pdf defaultOverlay.pdf -page 10 overlayForPage10.pdf -position foreground output.pdf</li>
+  <li>OverlayPDF input.pdf -odd oddOverlay.pdf -even evenOverlay.pdf output.pdf</li>
 </ul>
 
 <h2 id="pdfdebugger">PDFDebugger</h2>
@@ -440,121 +455,130 @@ PDFBox tools as Java applications.</p>
 <p>This application will take an existing PDF document and allows to analyze and inspect the internal structure.
 It is used as replacement for the PDFReader which was removed in 2.0.0.</p>
 
-<p>usage: <code>java -jar pdfbox-app-2.y.z.jar PDFDebugger [inputfile]</code></p>
+<p>usage: <code class="highlighter-rouge">java -jar pdfbox-app-2.y.z.jar PDFDebugger [inputfile]</code></p>
 
-<table><thead>
-<tr>
-<th>Command Line Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>-password</td>
-<td></td>
-<td>The password to the PDF document.</td>
-</tr>
-<tr>
-<td>-viewstructure</td>
-<td></td>
-<td>Activates the &quot;view structure&quot; view on startup.</td>
-</tr>
-<tr>
-<td>inputfile</td>
-<td></td>
-<td>the name of an optional PDF file to open.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Command Line Parameter</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-password</td>
+      <td> </td>
+      <td>The password to the PDF document.</td>
+    </tr>
+    <tr>
+      <td>-viewstructure</td>
+      <td> </td>
+      <td>Activates the “view structure” view on startup.</td>
+    </tr>
+    <tr>
+      <td>inputfile</td>
+      <td> </td>
+      <td>the name of an optional PDF file to open.</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="pdfmerger">PDFMerger</h2>
 
 <p>This application will take a list of pdf documents and merge them, saving the result in a new document.</p>
 
-<p>usage: <code>java -jar pdfbox-app-2.y.z.jar PDFMerger &lt;Source PDF files (2 ..n)&gt; &lt;Target PDF file&gt;</code></p>
+<p>usage: <code class="highlighter-rouge">java -jar pdfbox-app-2.y.z.jar PDFMerger &lt;Source PDF files (2 ..n)&gt; &lt;Target PDF file&gt;</code></p>
 
 <h2 id="pdfsplit">PDFSplit</h2>
 
 <p>This application will take an existing PDF document and split it into a number of other documents</p>
 
-<p>usage: <code>java -jar pdfbox-app-2.y.z.jar PDFSplit [OPTIONS] &lt;PDF file&gt;</code></p>
+<p>usage: <code class="highlighter-rouge">java -jar pdfbox-app-2.y.z.jar PDFSplit [OPTIONS] &lt;PDF file&gt;</code></p>
 
-<table><thead>
-<tr>
-<th>Command Line Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>-password</td>
-<td></td>
-<td>The password to the PDF document.</td>
-</tr>
-<tr>
-<td>-split</td>
-<td></td>
-<td>Number of pages of every splitted part of the pdf.</td>
-</tr>
-<tr>
-<td>-startPage</td>
-<td></td>
-<td>The page to start at.</td>
-</tr>
-<tr>
-<td>-endPage</td>
-<td></td>
-<td>The page to stop at.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Command Line Parameter</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-password</td>
+      <td> </td>
+      <td>The password to the PDF document.</td>
+    </tr>
+    <tr>
+      <td>-split</td>
+      <td> </td>
+      <td>Number of pages of every splitted part of the pdf.</td>
+    </tr>
+    <tr>
+      <td>-startPage</td>
+      <td> </td>
+      <td>The page to start at.</td>
+    </tr>
+    <tr>
+      <td>-endPage</td>
+      <td> </td>
+      <td>The page to stop at.</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Examples:</p>
 
 <ul>
-<li>PDFSplit -split 2 sample_with_13_pages.pdf will split the pdf in pieces of 2 pages each except the last which will contain 1 page only.</li>
-<li>PDFSplit -startPage 5 sample_with_13_pages.pdf will provide a pdf containing all pages of the source pdf starting at page 5</li>
-<li>PDFSplit -startPage 5 -endPage 10 sample_with_13_pages.pdf will provide a pdf containing all pages from 5 to 10 of the source pdf</li>
-<li>PDFSplit -split 2 -startPage 5 -endPage 10 sample_with_13_pages.pdf will provide 3 pdfs containing all pages from 5 to 10 of the source pdf 2 pages each</li>
+  <li>PDFSplit -split 2 sample_with_13_pages.pdf will split the pdf in pieces of 2 pages each except the last which will contain 1 page only.</li>
+  <li>PDFSplit -startPage 5 sample_with_13_pages.pdf will provide a pdf containing all pages of the source pdf starting at page 5</li>
+  <li>PDFSplit -startPage 5 -endPage 10 sample_with_13_pages.pdf will provide a pdf containing all pages from 5 to 10 of the source pdf</li>
+  <li>PDFSplit -split 2 -startPage 5 -endPage 10 sample_with_13_pages.pdf will provide 3 pdfs containing all pages from 5 to 10 of the source pdf 2 pages each</li>
 </ul>
 
 <h2 id="pdftoimage">PDFToImage</h2>
 
 <p>This application will create an image for every page in the PDF document.</p>
 
-<p>usage: <code>java -jar pdfbox-app-2.y.z.jar PDFToImage [OPTIONS] &lt;PDF file&gt;</code></p>
+<p>usage: <code class="highlighter-rouge">java -jar pdfbox-app-2.y.z.jar PDFToImage [OPTIONS] &lt;PDF file&gt;</code></p>
 
-<table><thead>
-<tr>
-<th>Command Line Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>-password</td>
-<td></td>
-<td>The password to the PDF document.</td>
-</tr>
-<tr>
-<td>-imageType</td>
-<td>jpg</td>
-<td>The image type to write to. Currently only jpg or png.</td>
-</tr>
-<tr>
-<td>-outputPrefix</td>
-<td>Name of PDF document</td>
-<td>The prefix to the image file.</td>
-</tr>
-<tr>
-<td>-startPage</td>
-<td>1</td>
-<td>The first page to convert, one based.</td>
-</tr>
-<tr>
-<td>-endPage</td>
-<td>Integer.MAX_INT</td>
-<td>The last page to convert, one based.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Command Line Parameter</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-password</td>
+      <td> </td>
+      <td>The password to the PDF document.</td>
+    </tr>
+    <tr>
+      <td>-imageType</td>
+      <td>jpg</td>
+      <td>The image type to write to. Currently only jpg or png.</td>
+    </tr>
+    <tr>
+      <td>-outputPrefix</td>
+      <td>Name of PDF document</td>
+      <td>The prefix to the image file.</td>
+    </tr>
+    <tr>
+      <td>-startPage</td>
+      <td>1</td>
+      <td>The first page to convert, one based.</td>
+    </tr>
+    <tr>
+      <td>-endPage</td>
+      <td>Integer.MAX_INT</td>
+      <td>The last page to convert, one based.</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="printpdf">PrintPDF</h2>
 
@@ -562,106 +586,116 @@ It is used as replacement for the PDFReader which was removed in 2.0.0.</p>
 
 <p class="alert alert-info">You must have the correct permissions to print the document!</p>
 
-<p>usage: <code>java -jar pdfbox-app-2.y.z.jar PrintPDF [OPTIONS] &lt;inputfile&gt;</code></p>
+<p>usage: <code class="highlighter-rouge">java -jar pdfbox-app-2.y.z.jar PrintPDF [OPTIONS] &lt;inputfile&gt;</code></p>
 
-<table><thead>
-<tr>
-<th>Command Line Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>-password</td>
-<td>The password to decrypt the PDF.</td>
-</tr>
-<tr>
-<td>-silentPrint</td>
-<td>Print the PDF without prompting for a printer.</td>
-</tr>
-<tr>
-<td>inputfile</td>
-<td>The PDF file to print.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Command Line Parameter</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-password</td>
+      <td>The password to decrypt the PDF.</td>
+    </tr>
+    <tr>
+      <td>-silentPrint</td>
+      <td>Print the PDF without prompting for a printer.</td>
+    </tr>
+    <tr>
+      <td>inputfile</td>
+      <td>The PDF file to print.</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="texttopdf">TextToPDF</h2>
 
 <p>This application will create a PDF document from a text file.</p>
 
-<p>usage: <code>java -jar pdfbox-app-2.y.z.jar TextToPDF [OPTIONS] &lt;outputfile&gt; &lt;textfile&gt;</code></p>
+<p>usage: <code class="highlighter-rouge">java -jar pdfbox-app-2.y.z.jar TextToPDF [OPTIONS] &lt;outputfile&gt; &lt;textfile&gt;</code></p>
 
-<table><thead>
-<tr>
-<th>Command Line Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>-standardFont</td>
-<td>Helvetica</td>
-<td>The font to use for the text. Either this or -ttf should be specified but not both.</td>
-</tr>
-<tr>
-<td>-ttf</td>
-<td></td>
-<td>The TTF font to use for the text. Either this or -standardFont should be specified but not both.</td>
-</tr>
-<tr>
-<td>-fontSize</td>
-<td>10</td>
-<td>The size of the font to use.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Command Line Parameter</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-standardFont</td>
+      <td>Helvetica</td>
+      <td>The font to use for the text. Either this or -ttf should be specified but not both.</td>
+    </tr>
+    <tr>
+      <td>-ttf</td>
+      <td> </td>
+      <td>The TTF font to use for the text. Either this or -standardFont should be specified but not both.</td>
+    </tr>
+    <tr>
+      <td>-fontSize</td>
+      <td>10</td>
+      <td>The size of the font to use.</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>The following font names can be used for the parameter <code>standardFont</code>:</p>
+<p>The following font names can be used for the parameter <code class="highlighter-rouge">standardFont</code>:</p>
 
 <ul>
-<li>Courier</li>
-<li>Courier-Bold</li>
-<li>Courier-Oblique</li>
-<li>Courier-BoldOblique</li>
-<li>Helvetica</li>
-<li>Helvetica-Bold</li>
-<li>Helvetica-Oblique</li>
-<li>Helvetica-BoldOblique</li>
-<li>Symbol</li>
-<li>Times-Bold</li>
-<li>Times-Roman</li>
-<li>Times-Italic</li>
-<li>Times-BoldItalic</li>
-<li>ZapfDingbats</li>
+  <li>Courier</li>
+  <li>Courier-Bold</li>
+  <li>Courier-Oblique</li>
+  <li>Courier-BoldOblique</li>
+  <li>Helvetica</li>
+  <li>Helvetica-Bold</li>
+  <li>Helvetica-Oblique</li>
+  <li>Helvetica-BoldOblique</li>
+  <li>Symbol</li>
+  <li>Times-Bold</li>
+  <li>Times-Roman</li>
+  <li>Times-Italic</li>
+  <li>Times-BoldItalic</li>
+  <li>ZapfDingbats</li>
 </ul>
 
 <h2 id="writedecodeddoc">WriteDecodedDoc</h2>
 
 <p>An application to decompress PDF documents.</p>
 
-<p>usage: <code>java -jar pdfbox-app-2.y.z.jar WriteDecodedDoc &lt;input-file&gt; &lt;output-file&gt;</code></p>
+<p>usage: <code class="highlighter-rouge">java -jar pdfbox-app-2.y.z.jar WriteDecodedDoc &lt;input-file&gt; &lt;output-file&gt;</code></p>
 
-<table><thead>
-<tr>
-<th>Command Line Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>-password</td>
-<td></td>
-<td>The password to the PDF document.</td>
-</tr>
-<tr>
-<td><input-file></td>
-<td></td>
-<td>The PDF file to decompress</td>
-</tr>
-<tr>
-<td><output-file></td>
-<td></td>
-<td>The destination PDF file</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Command Line Parameter</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-password</td>
+      <td> </td>
+      <td>The password to the PDF document.</td>
+    </tr>
+    <tr>
+      <td><input-file></input-file></td>
+      <td> </td>
+      <td>The PDF file to decompress</td>
+    </tr>
+    <tr>
+      <td><output-file></output-file></td>
+      <td> </td>
+      <td>The destination PDF file</td>
+    </tr>
+  </tbody>
+</table>
+
 
             </div>
         </div>

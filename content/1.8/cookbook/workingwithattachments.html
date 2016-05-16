@@ -134,28 +134,29 @@
 
 <h2 id="the-pdf-file-specification">The PDF File Specification</h2>
 
-<p>See package:org.apache.pdfbox.pdmodel.common.filespecification<br>
-See example:EmbeddedFiles  </p>
+<p>See package:org.apache.pdfbox.pdmodel.common.filespecification<br />
+See example:EmbeddedFiles</p>
 
 <p>A PDF can contain references to external files via the file system or a URL to a remote 
 location. It is also possible to embed a binary file into a PDF document.</p>
 
-<p>There are two classes that can be used when referencing a file. <code>PDSimpleFileSpecification</code>
-is a simple string reference to a file(e.g. &quot;./movies/BigMovie.avi&quot;). The simple file 
-specification does not allow for any parameters to be set. </p>
+<p>There are two classes that can be used when referencing a file. <code class="highlighter-rouge">PDSimpleFileSpecification</code>
+is a simple string reference to a file(e.g. “./movies/BigMovie.avi”). The simple file 
+specification does not allow for any parameters to be set.</p>
 
-<p>The <code>PDComplexFileSpecification</code> is more feature rich and allows for advanced settings on 
+<p>The <code class="highlighter-rouge">PDComplexFileSpecification</code> is more feature rich and allows for advanced settings on 
 the file reference.</p>
 
 <p>It is also possible to embed a file directly into a PDF. Instead of setting the file 
-attribute of the <code>PDComplexFileSpecification</code>, the <code>EmbeddedFile</code> attribute can be used instead.</p>
+attribute of the <code class="highlighter-rouge">PDComplexFileSpecification</code>, the <code class="highlighter-rouge">EmbeddedFile</code> attribute can be used instead.</p>
 
 <h2 id="adding-a-file-attachment">Adding a File Attachment</h2>
 
 <p>PDF documents can contain file attachments that are accessed from the Document-&gt;File Attachments 
 menu. PDFBox allows attachments to be added to and extracted from PDF documents. 
 Attachments are part of the named tree that is attached to the document catalog.</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">PDEmbeddedFilesNameTreeNode</span> <span class="n">efTree</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDEmbeddedFilesNameTreeNode</span><span class="o">();</span>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">PDEmbeddedFilesNameTreeNode</span> <span class="n">efTree</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDEmbeddedFilesNameTreeNode</span><span class="o">();</span>
 
 <span class="c1">//first create the file specification, which holds the embedded file</span>
 <span class="n">PDComplexFileSpecification</span> <span class="n">fs</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDComplexFileSpecification</span><span class="o">();</span>
@@ -176,7 +177,9 @@ Attachments are part of the named tree that is attached to the document catalog.
 <span class="n">PDDocumentNameDictionary</span> <span class="n">names</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDDocumentNameDictionary</span><span class="o">(</span> <span class="n">doc</span><span class="o">.</span><span class="na">getDocumentCatalog</span><span class="o">()</span> <span class="o">);</span>
 <span class="n">names</span><span class="o">.</span><span class="na">setEmbeddedFiles</span><span class="o">(</span> <span class="n">efTree</span> <span class="o">);</span>
 <span class="n">doc</span><span class="o">.</span><span class="na">getDocumentCatalog</span><span class="o">().</span><span class="na">setNames</span><span class="o">(</span> <span class="n">names</span> <span class="o">);</span>
-</code></pre></div>
+</code></pre>
+</div>
+
             </div>
         </div>
     </div>

@@ -132,12 +132,13 @@
             <div class="col-xs-12 col-sm-9">
                 <h1 id="encrypting-a-file">Encrypting a file</h1>
 
-<p>PDF encryption requires two passwords: the &quot;user password&quot; to open and view the file with restricted permissions, the &quot;owner password&quot; to access the file with all permission.</p>
+<p>PDF encryption requires two passwords: the “user password” to open and view the file with restricted permissions, the “owner password” to access the file with all permission.</p>
 
 <h2 id="load-and-save-encrypted">Load and save encrypted</h2>
 
 <p>This small sample shows how to encrypt a file so that it can be viewed, but not printed..</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="n">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="s">"filename.pdf"</span><span class="o">);</span>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="n">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="s">"filename.pdf"</span><span class="o">);</span>
 
 <span class="c1">// Define the length of the encryption key.</span>
 <span class="c1">// Possible values are 40 or 128 (256 will be available in PDFBox 2.0).</span>
@@ -157,7 +158,9 @@
 
 <span class="n">doc</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="s">"filename-encrypted.pdf"</span><span class="o">);</span>
 <span class="n">doc</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-</code></pre></div>
+</code></pre>
+</div>
+
             </div>
         </div>
     </div>

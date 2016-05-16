@@ -136,29 +136,31 @@
 
 <h2 id="maven">Maven</h2>
 
-<p>To use the latest 2.0 snapshot release from the SVN trunk, you&#39;ll need to add the following dependency:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;dependency&gt;
+<p>To use the latest 2.0 snapshot release from the SVN trunk, you’ll need to add the following dependency:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;dependency&gt;
   &lt;groupId&gt;org.apache.pdfbox&lt;/groupId&gt;
   &lt;artifactId&gt;pdfbox&lt;/artifactId&gt;
   &lt;version&gt;2.0.0&lt;/version&gt;
 &lt;/dependency&gt;
-</code></pre></div>
+</code></pre>
+</div>
+
 <h2 id="pdfbox-and-java-8">PDFBox and Java 8</h2>
 
 <p class="alert alert-warning">Important notice when using PDFBox with Java 8
 </p>
-
-<p>Due to the change of the java color management module towards &quot;LittleCMS&quot;, users can experience slow performance in color operations.
+<p>Due to the change of the java color management module towards “LittleCMS”, users can experience slow performance in color operations.
 Solution: disable LittleCMS in favour of the old KCMS (Kodak Color Management System):</p>
 
 <ul>
-<li>start with <code>-Dsun.java2d.cmm=sun.java2d.cmm.kcms.KcmsServiceProvider</code>or call</li>
-<li><code>System.setProperty(&quot;sun.java2d.cmm&quot;, &quot;sun.java2d.cmm.kcms.KcmsServiceProvider&quot;);</code></li>
+  <li>start with <code class="highlighter-rouge">-Dsun.java2d.cmm=sun.java2d.cmm.kcms.KcmsServiceProvider</code>or call</li>
+  <li><code class="highlighter-rouge">System.setProperty("sun.java2d.cmm", "sun.java2d.cmm.kcms.KcmsServiceProvider");</code></li>
 </ul>
 
-<p>Sources:<br>
-<a href="http://www.subshell.com/en/subshell/blog/Wrong-Colors-in-Images-with-Java8-100.html">http://www.subshell.com/en/subshell/blog/Wrong-Colors-in-Images-with-Java8-100.html</a><br>
-<a href="https://bugs.openjdk.java.net/browse/JDK-8041125">https://bugs.openjdk.java.net/browse/JDK-8041125</a></p>
+<p>Sources:<br />
+http://www.subshell.com/en/subshell/blog/Wrong-Colors-in-Images-with-Java8-100.html<br />
+https://bugs.openjdk.java.net/browse/JDK-8041125</p>
 
             </div>
         </div>

@@ -132,73 +132,82 @@
             <div class="col-xs-12 col-sm-9">
                 <h1 id="building-from-source">Building from Source</h1>
 
-<p>Building PDFBox from source is only necessary if you&#39;re wanting to contribute code to the PDFBox project. Most users should use the <a href="http://pdfbox.apache.org/download.cgi">binary releases</a> instead.</p>
+<p>Building PDFBox from source is only necessary if you’re wanting to contribute code to the PDFBox project. Most users should use the <a href="http://pdfbox.apache.org/download.cgi">binary releases</a> instead.</p>
 
 <h2 id="obtaining-the-source">Obtaining the Source</h2>
 
 <p>You can obtain the latest source of PDFBox from our <a href="http://pdfbox.apache.org/download.cgi">SVN repo</a> The current trunk is v2.0.0-SNAPSHOT. There is a seperate branch for the 1.8.x series. You can fetch the latest 2.0 trunk using Subversion:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">svn checkout http://svn.apache.org/repos/asf/pdfbox/trunk/
+
+<div class="highlighter-rouge"><pre class="highlight"><code>svn checkout http://svn.apache.org/repos/asf/pdfbox/trunk/
 cd trunk
-</code></pre></div>
+</code></pre>
+</div>
+
 <h2 id="build-dependencies">Build dependencies</h2>
 
-<h3 id="pdfbox-1-8">PDFBox 1.8</h3>
+<h3 id="pdfbox-18">PDFBox 1.8</h3>
 
 <ul>
-<li>JDK 5 or 6</li>
-<li><a href="http://maven.apache.org/">Maven 3</a></li>
+  <li>JDK 5 or 6</li>
+  <li><a href="http://maven.apache.org/">Maven 3</a></li>
 </ul>
 
-<h3 id="pdfbox-2-0">PDFBox 2.0</h3>
+<h3 id="pdfbox-20">PDFBox 2.0</h3>
 
 <ul>
-<li>JDK 6+</li>
-<li><a href="#java-cryptography-extension-jce">Java Cryptography Extension (JCE)</a></li>
-<li><a href="http://maven.apache.org/">Maven 3</a></li>
+  <li>JDK 6+</li>
+  <li><a href="#java-cryptography-extension-jce">Java Cryptography Extension (JCE)</a></li>
+  <li><a href="http://maven.apache.org/">Maven 3</a></li>
 </ul>
 
 <h3 id="java-cryptography-extension-jce">Java Cryptography Extension (JCE)</h3>
 
-<p>Building PDFBox 2.0 requires a JDK with &quot;unlimited strength&quot; cryptography, which requires extra files to be installed. For JDK 7, see <a href="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html">Java Cryptography Extension (JCE)</a>. If these files are not installed, building PDFBox will fail the following test:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">TestPublicKeyEncryption.setUp:70 JCE unlimited strength jurisdiction policy files are not installed
-</code></pre></div>
+<p>Building PDFBox 2.0 requires a JDK with “unlimited strength” cryptography, which requires extra files to be installed. For JDK 7, see <a href="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html">Java Cryptography Extension (JCE)</a>. If these files are not installed, building PDFBox will fail the following test:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>TestPublicKeyEncryption.setUp:70 JCE unlimited strength jurisdiction policy files are not installed
+</code></pre>
+</div>
+
 <h2 id="building-with-maven">Building with Maven</h2>
 
 <p>In the root directory of PDFBox:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">mvn clean install
-</code></pre></div>
-<hr>
 
-<h2 id="building-with-ant-deprecated-removed-in-2-0-0">Building with Ant (Deprecated, removed in 2.0.0)</h2>
+<div class="highlighter-rouge"><pre class="highlight"><code>mvn clean install
+</code></pre>
+</div>
+
+<hr />
+
+<h2 id="building-with-ant-deprecated-removed-in-200">Building with Ant (Deprecated, removed in 2.0.0)</h2>
 
 <p>The old Ant build is still available, and can be used especially for
 building .NET binaries with IKVM:</p>
 
 <ol>
-<li> Install <a href="http://ant.apache.org/">ANT</a>. PDFBox currently uses 1.6.2
+  <li>Install <a href="http://ant.apache.org/">ANT</a>. PDFBox currently uses 1.6.2
 but other versions probably work as well.</li>
-<li><p>(optional) Setup IKVM, if you want to build the .NET DLL version of
-PDFBox.</p>
-
-<ol>
-<li> <a href="http://www.ikvm.net/">IKVM</a> binaries</li>
-<li> In the build.properties, set the ikvm.dir property:\
- <code>ikvm.dir=C:\\javalib\\ikvm-12-07-2004\\ikvm</code></li>
-</ol></li>
-<li><p>Run &quot;<code>ant</code>&quot; from the root PDFBox directory. This will create the
-.zip package distribution. See the build file for other ant targets.</p></li>
+  <li>(optional) Setup IKVM, if you want to build the .NET DLL version of
+PDFBox.
+    <ol>
+      <li><a href="http://www.ikvm.net/">IKVM</a> binaries</li>
+      <li>In the build.properties, set the ikvm.dir property:\
+ <code class="highlighter-rouge">ikvm.dir=C:\\javalib\\ikvm-12-07-2004\\ikvm</code></li>
+    </ol>
+  </li>
+  <li>Run “<code class="highlighter-rouge">ant</code>” from the root PDFBox directory. This will create the
+.zip package distribution. See the build file for other ant targets.</li>
 </ol>
 
 <p>NOTE: If you want to run PDFBox from an IDE them you will need to add
-the &#39;Resources&#39; directory to the project classpath in your IDE.</p>
+the ‘Resources’ directory to the project classpath in your IDE.</p>
 
 <h3 id="dependencies-for-ant-builds">Dependencies for Ant Builds</h3>
 
-<p>The above instructions expect that you&#39;re using <a href="http://maven.apache.org/">Maven</a> or another build tool like <a href="http://ant.apache.org/ivy/">Ivy</a> that supports Maven dependencies.
-If you instead use tools like <a href="http://ant.apache.org/">Ant</a> where you need to explicitly include all the required library jars in your application, you&#39;ll need to do
+<p>The above instructions expect that you’re using <a href="http://maven.apache.org/">Maven</a> or another build tool like <a href="http://ant.apache.org/ivy/">Ivy</a> that supports Maven dependencies.
+If you instead use tools like <a href="http://ant.apache.org/">Ant</a> where you need to explicitly include all the required library jars in your application, you’ll need to do
 something different.</p>
 
-<p>The easiest approach is to run <code>mvn dependency:copy-dependencies</code> inside the pdfbox directory of the latest PDFBox source release. This will copy all the required and optional
+<p>The easiest approach is to run <code class="highlighter-rouge">mvn dependency:copy-dependencies</code> inside the pdfbox directory of the latest PDFBox source release. This will copy all the required and optional
 libraries discussed above into the pdfbox/target/dependencies directory. You can then simply copy all the libraries you need from this directory to your application.</p>
 
             </div>

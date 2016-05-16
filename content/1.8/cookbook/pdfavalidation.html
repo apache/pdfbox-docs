@@ -130,13 +130,14 @@
                 </ul>
             </div>
             <div class="col-xs-12 col-sm-9">
-                <h1 id="pdf-a-validation">PDF/A Validation</h1>
+                <h1 id="pdfa-validation">PDF/A Validation</h1>
 
 <p>The Apache Preflight library is a Java tool that implements a parser compliant with the ISO-19005 specification (aka PDF/A-1).
 Check Compliance with PDF/A-1b</p>
 
 <p>This small sample shows how to check the compliance of a file with the PDF/A-1b specification.</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">ValidationResult</span> <span class="n">result</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">ValidationResult</span> <span class="n">result</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
 
 <span class="n">PreflightParser</span> <span class="n">parser</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PreflightParser</span><span class="o">(</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span>
 <span class="k">try</span>
@@ -183,57 +184,62 @@ Check Compliance with PDF/A-1b</p>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">error</span><span class="o">.</span><span class="na">getErrorCode</span><span class="o">()</span> <span class="o">+</span> <span class="s">" : "</span> <span class="o">+</span> <span class="n">error</span><span class="o">.</span><span class="na">getDetails</span><span class="o">());</span>
     <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <h2 id="categories-of-validation-error">Categories of Validation Error</h2>
 
 <p>If a validation fails, the ValidationResult object contains all causes of the failure.
 In order to help in the failure understanding, all error codes have the following form X[.Y[.Z]] where :</p>
 
 <ul>
-<li>&#39;X&#39; is the category (ex : Font validation error...)</li>
-<li>&#39;Y&#39; represent a subsection of the category (ex : &quot;Font with Glyph error&quot;)</li>
-<li>&#39;Z&#39; represent the cause of the error (ex : &quot;Font with a missing Glyph&quot;)</li>
+  <li>‘X’ is the category (ex : Font validation error…)</li>
+  <li>‘Y’ represent a subsection of the category (ex : “Font with Glyph error”)</li>
+  <li>‘Z’ represent the cause of the error (ex : “Font with a missing Glyph”)</li>
 </ul>
 
-<p>Category (&#39;Y&#39;) and cause (&#39;Z&#39;) may be missing according to the difficulty to identify the error detail.</p>
+<p>Category (‘Y’) and cause (‘Z’) may be missing according to the difficulty to identify the error detail.</p>
 
-<p>Here after, you can find all Categories (for detailed cause, see constants in the <code>PreflightConstants</code> interface) :</p>
+<p>Here after, you can find all Categories (for detailed cause, see constants in the <code class="highlighter-rouge">PreflightConstants</code> interface) :</p>
 
-<table><thead>
-<tr>
-<th>Category</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>1[.y[.z]]</td>
-<td>Syntax Error</td>
-</tr>
-<tr>
-<td>2[.y[.z]]</td>
-<td>Graphic Error</td>
-</tr>
-<tr>
-<td>3[.y[.z]]</td>
-<td>Font Error</td>
-</tr>
-<tr>
-<td>4[.y[.z]]</td>
-<td>Transparency Error</td>
-</tr>
-<tr>
-<td>5[.y[.z]]</td>
-<td>Annotation Error</td>
-</tr>
-<tr>
-<td>6[.y[.z]]</td>
-<td>Action Error</td>
-</tr>
-<tr>
-<td>7[.y[.z]]</td>
-<td>Metadata Error</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1[.y[.z]]</td>
+      <td>Syntax Error</td>
+    </tr>
+    <tr>
+      <td>2[.y[.z]]</td>
+      <td>Graphic Error</td>
+    </tr>
+    <tr>
+      <td>3[.y[.z]]</td>
+      <td>Font Error</td>
+    </tr>
+    <tr>
+      <td>4[.y[.z]]</td>
+      <td>Transparency Error</td>
+    </tr>
+    <tr>
+      <td>5[.y[.z]]</td>
+      <td>Annotation Error</td>
+    </tr>
+    <tr>
+      <td>6[.y[.z]]</td>
+      <td>Action Error</td>
+    </tr>
+    <tr>
+      <td>7[.y[.z]]</td>
+      <td>Metadata Error</td>
+    </tr>
+  </tbody>
+</table>
 
             </div>
         </div>

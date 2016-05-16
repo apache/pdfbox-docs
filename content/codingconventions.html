@@ -137,86 +137,155 @@
 <h3 id="formatting">Formatting</h3>
 
 <ul>
-<li><p>Braces go on their own line.</p></li>
-<li><p>Always use braces with control flow statements.</p></li>
-<li><p>No lines longer than 100 characters, including JavaDoc.</p></li>
-<li><p>Wrapped lines should use either an indent of 4 or 8 characters or align with the expression at the same level on the previous line.</p></li>
-<li><p>Wrapped lines should be broken after operators, not before.</p></li>
-<li><p>Prefer aligned wrapped lines.</p></li>
-<li><p>Prefer aligned wrapped parameter lists.</p></li>
+  <li>
+    <p>Braces go on their own line.</p>
+  </li>
+  <li>
+    <p>Always use braces with control flow statements.</p>
+  </li>
+  <li>
+    <p>No lines longer than 100 characters, including JavaDoc.</p>
+  </li>
+  <li>
+    <p>Wrapped lines should use either an indent of 4 or 8 characters or align with the expression at the same level on the previous line.</p>
+  </li>
+  <li>
+    <p>Wrapped lines should be broken after operators, not before.</p>
+  </li>
+  <li>
+    <p>Prefer aligned wrapped lines.</p>
+  </li>
+  <li>
+    <p>Prefer aligned wrapped parameter lists.</p>
+  </li>
 </ul>
 
 <h3 id="whitespace">Whitespace</h3>
 
 <ul>
-<li><p>Four spaces for indents, no tabs.</p></li>
-<li><p>Do not use spaces around parenthesis.</p></li>
-<li><p>Use spaces after control flow keywords.</p></li>
-<li><p>Prefer using blank lines to separate logical blocks of code, but do not be excessive.</p></li>
-<li><p>Prefer not following casts with a blank space.</p></li>
+  <li>
+    <p>Four spaces for indents, no tabs.</p>
+  </li>
+  <li>
+    <p>Do not use spaces around parenthesis.</p>
+  </li>
+  <li>
+    <p>Use spaces after control flow keywords.</p>
+  </li>
+  <li>
+    <p>Prefer using blank lines to separate logical blocks of code, but do not be excessive.</p>
+  </li>
+  <li>
+    <p>Prefer not following casts with a blank space.</p>
+  </li>
 </ul>
 
 <h3 id="structure">Structure</h3>
 
 <ul>
-<li><p>Do not use package imports (e.g. <code>import java.util.*</code>)</p></li>
-<li><p>Static fields and methods must appear at the top of a class, before any other code.</p></li>
-<li><p>Within a class, definitions should be ordered as follows:</p>
+  <li>
+    <p>Do not use package imports (e.g. <code class="highlighter-rouge">import java.util.*</code>)</p>
+  </li>
+  <li>
+    <p>Static fields and methods must appear at the top of a class, before any other code.</p>
+  </li>
+  <li>
+    <p>Within a class, definitions should be ordered as follows:</p>
 
-<p>Class (static) variables<br>
-Instance variables<br>
-Constructors<br>
-Methods  </p></li>
+    <p>Class (static) variables<br />
+  Instance variables<br />
+  Constructors<br />
+  Methods</p>
+  </li>
 </ul>
 
 <h3 id="javadoc">JavaDoc</h3>
 
 <ul>
-<li><p>Public and protected methods and fields must have JavaDoc.</p></li>
-<li><p>Don&#39;t use <code>@version</code> tags.</p></li>
-<li><p>Don&#39;t use <code>@since</code> tags.</p></li>
-<li><p>Don&#39;t include your e-mail address in <code>@author</code> tags.</p></li>
-<li><p>You may omit <code>@return</code> tags for getters as long as you include a summary which begins with the word &quot;Returns&quot;.</p></li>
-<li><p>Private methods do not require JavaDoc but may have partial JavaDoc if it adds valuable information.</p></li>
+  <li>
+    <p>Public and protected methods and fields must have JavaDoc.</p>
+  </li>
+  <li>
+    <p>Don’t use <code class="highlighter-rouge">@version</code> tags.</p>
+  </li>
+  <li>
+    <p>Don’t use <code class="highlighter-rouge">@since</code> tags.</p>
+  </li>
+  <li>
+    <p>Don’t include your e-mail address in <code class="highlighter-rouge">@author</code> tags.</p>
+  </li>
+  <li>
+    <p>You may omit <code class="highlighter-rouge">@return</code> tags for getters as long as you include a summary which begins with the word “Returns”.</p>
+  </li>
+  <li>
+    <p>Private methods do not require JavaDoc but may have partial JavaDoc if it adds valuable information.</p>
+  </li>
 </ul>
 
 <h3 id="comments">Comments</h3>
 
 <ul>
-<li><p>Only use line comments within code, never block comments.</p></li>
-<li><p>Prefer comments on their own line, rather than trailing, unless the latter is more readable.</p></li>
-<li><p>Prefix line comments by a space <code>// like this</code>.</p></li>
+  <li>
+    <p>Only use line comments within code, never block comments.</p>
+  </li>
+  <li>
+    <p>Prefer comments on their own line, rather than trailing, unless the latter is more readable.</p>
+  </li>
+  <li>
+    <p>Prefix line comments by a space <code class="highlighter-rouge">// like this</code>.</p>
+  </li>
 </ul>
 
 <h3 id="variables">Variables</h3>
 
 <ul>
-<li><p>Prefer initializing variables when they are declared, rather than C-style declaration before use.</p></li>
-<li><p>Always use final fields when possible.</p></li>
+  <li>
+    <p>Prefer initializing variables when they are declared, rather than C-style declaration before use.</p>
+  </li>
+  <li>
+    <p>Always use final fields when possible.</p>
+  </li>
 </ul>
 
 <h3 id="control-flow">Control Flow</h3>
 
 <ul>
-<li><p>Prefer multiple return statements over additional control flow logic.</p></li>
-<li><p>Prefer switch statements over multi-clause if-then statements.</p></li>
+  <li>
+    <p>Prefer multiple return statements over additional control flow logic.</p>
+  </li>
+  <li>
+    <p>Prefer switch statements over multi-clause if-then statements.</p>
+  </li>
 </ul>
 
 <h3 id="api-design">API Design</h3>
 
 <ul>
-<li><p>Give variables and methods meaningful names. Keep these short but don&#39;t use abbreviations. Prefer using the same terminology as the PDF spec.</p></li>
-<li><p>Prefer final classes and final protected methods for non-final public classes, this reduces the surface area of the public API.</p></li>
-<li><p>Avoid non-final protected variables in public classes. Prefer protected getters over protected variables when protected fields are necessery in public classes.</p></li>
-<li><p>Minimize the API. Don&#39;t make everything public just because you can.</p></li>
-<li><p>Don&#39;t expose implementation details unless there is a clear need: allowing subclassing means that the behaviour of protected methods becomes part of the contract of the public AP.</p></li>
-<li><p>Avoid unnecesary abstraction. While you&#39;re encouraged to avoid brittle designs, it&#39;s unlikey that an API designed for &quot;future use&quot; will have the correct API without any code which actually uses it.</p></li>
+  <li>
+    <p>Give variables and methods meaningful names. Keep these short but don’t use abbreviations. Prefer using the same terminology as the PDF spec.</p>
+  </li>
+  <li>
+    <p>Prefer final classes and final protected methods for non-final public classes, this reduces the surface area of the public API.</p>
+  </li>
+  <li>
+    <p>Avoid non-final protected variables in public classes. Prefer protected getters over protected variables when protected fields are necessery in public classes.</p>
+  </li>
+  <li>
+    <p>Minimize the API. Don’t make everything public just because you can.</p>
+  </li>
+  <li>
+    <p>Don’t expose implementation details unless there is a clear need: allowing subclassing means that the behaviour of protected methods becomes part of the contract of the public AP.</p>
+  </li>
+  <li>
+    <p>Avoid unnecesary abstraction. While you’re encouraged to avoid brittle designs, it’s unlikey that an API designed for “future use” will have the correct API without any code which actually uses it.</p>
+  </li>
 </ul>
 
 <h3 id="example">Example</h3>
 
-<p>Here&#39;s an example of PDFBox&#39;s formatting style:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">public class Foo extends Bar
+<p>Here’s an example of PDFBox’s formatting style:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>public class Foo extends Bar
 {
     public static void main(String args[])
     {
@@ -233,11 +302,13 @@ Methods  </p></li>
         }
     }
 }
-</code></pre></div>
+</code></pre>
+</div>
+
 <h2 id="eclipse-formatter">Eclipse Formatter</h2>
 
 <p>Eclipse users may download this preferences file: pdfbox-eclipse-formatter.xml and import this into Eclipse. 
-(Window-&gt;Preferences, go to Java-&gt;Code Style-&gt;Formatter and click &quot;Import...&quot;).
+(Window-&gt;Preferences, go to Java-&gt;Code Style-&gt;Formatter and click “Import…”).
 Once you have done this you can reformat your code by using Source-&gt;Format (Ctrl+Shift+F).</p>
 
 <p>Also note that Eclipse will automatically format your import statements appropriately when 

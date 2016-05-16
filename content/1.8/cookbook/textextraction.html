@@ -134,9 +134,9 @@
 
 <h2 id="extracting-text">Extracting Text</h2>
 
-<p>See class:org.apache.pdfbox.util.PDFTextStripper<br>
-See class:org.apache.pdfbox.searchengine.lucene.LucenePDFDocument<br>
-See command line app:ExtractText  </p>
+<p>See class:org.apache.pdfbox.util.PDFTextStripper<br />
+See class:org.apache.pdfbox.searchengine.lucene.LucenePDFDocument<br />
+See command line app:ExtractText</p>
 
 <p>One of the main features of PDFBox is its ability to quickly and accurately extract text 
 from a variety of PDF documents. This functionality is encapsulated in the 
@@ -148,8 +148,11 @@ org.apache.pdfbox.ExtractText.</p>
 <p>Lucene is an open source text search library from the Apache Jakarta Project. In order for
 Lucene to be able to index a PDF document it must first be converted to text. PDFBox provides 
 a simple approach for adding PDF documents into a Lucene index.</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Document</span> <span class="n">luceneDocument</span> <span class="o">=</span> <span class="n">LucenePDFDocument</span><span class="o">.</span><span class="na">getDocument</span><span class="o">(</span> <span class="o">...</span> <span class="o">);</span>
-</code></pre></div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">Document</span> <span class="n">luceneDocument</span> <span class="o">=</span> <span class="n">LucenePDFDocument</span><span class="o">.</span><span class="na">getDocument</span><span class="o">(</span> <span class="o">...</span> <span class="o">);</span>
+</code></pre>
+</div>
+
 <p>Now that you hava a Lucene Document object, you can add it to the Lucene index just like 
 you would if it had been created from a text or HTML file. The LucenePDFDocument automatically 
 extracts a variety of metadata fields from the PDF to be added to the index, the javadoc 
@@ -170,11 +173,14 @@ these requirements.</p>
 process. The simplest is to specify the range of pages that you want to be extracted. 
 For example, to only extract text from the second and third pages of the PDF document 
 you could do this:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">PDFTextStripper</span> <span class="n">stripper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDFTextStripper</span><span class="o">();</span>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">PDFTextStripper</span> <span class="n">stripper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDFTextStripper</span><span class="o">();</span>
 <span class="n">stripper</span><span class="o">.</span><span class="na">setStartPage</span><span class="o">(</span> <span class="mi">2</span> <span class="o">);</span>
 <span class="n">stripper</span><span class="o">.</span><span class="na">setEndPage</span><span class="o">(</span> <span class="mi">3</span> <span class="o">);</span>
 <span class="n">stripper</span><span class="o">.</span><span class="na">writeText</span><span class="o">(</span> <span class="o">...</span> <span class="o">);</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>NOTE: The startPage and endPage properties of PDFTextStripper are 1 based and inclusive.</p>
 
 <p>If you wanted to start on page 2 and extract to the end of the document then you would just
@@ -184,62 +190,65 @@ set the startPage property. By default all pages in the pdf document are extract
 If you are not familiar with how to use bookmarks in PDFBox then you should review the 
 Bookmarks page. Similar to the startPage/endPage properties, PDFTextStripper also has 
 startBookmark/endBookmark properties. There are some caveats to be aware of when using this
-feature of the PDFTextStripper. Not all bookmarks point to a page in the current PDF document. </p>
+feature of the PDFTextStripper. Not all bookmarks point to a page in the current PDF document.</p>
 
 <p>The possible states of a bookmark are:</p>
 
 <ul>
-<li>null - The property was not set, this is the default.</li>
-<li>Points to page in the PDF - The property was set and points to a valid page in the PDF</li>
-<li>Bookmark does not point to anything - The property was set but the bookmark does not point to any page</li>
-<li>Bookmark points to external action - The property was set, but it points to a page in a different PDF or performs an action when activated</li>
+  <li>null - The property was not set, this is the default.</li>
+  <li>Points to page in the PDF - The property was set and points to a valid page in the PDF</li>
+  <li>Bookmark does not point to anything - The property was set but the bookmark does not point to any page</li>
+  <li>Bookmark points to external action - The property was set, but it points to a page in a different PDF or performs an action when activated</li>
 </ul>
 
 <p>The table below will describe how PDFBox behaves in the various scenarios:</p>
 
-<table><thead>
-<tr>
-<th>Start Bookmark</th>
-<th>End Bookmark</th>
-<th>Result</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>null</td>
-<td>null</td>
-<td>This is the default, the properties have no effect on the text extraction.</td>
-</tr>
-<tr>
-<td>Points to a page in the PDF</td>
-<td>null</td>
-<td>Text extraction will begin on the page that this bookmark points to and go until the end of the document.</td>
-</tr>
-<tr>
-<td>null</td>
-<td>Points to a page in the PDF</td>
-<td>Text extraction will begin on the first page and stop at the end of the page that this bookmark points to.</td>
-</tr>
-<tr>
-<td>Bookmark does not point to anything</td>
-<td>null</td>
-<td>Because the PDFTextStripper cannot determine a start page based on the bookmark, it will start on the first page and go until the end of the document.</td>
-</tr>
-<tr>
-<td>null</td>
-<td>Bookmark does not point to anything</td>
-<td>Because the PDFTextStripper cannot determine a end page based on the bookmark, it will start on the first page and go until the end of the document.</td>
-</tr>
-<tr>
-<td>Bookmark does not point to anything</td>
-<td>Bookmark does not point to anything</td>
-<td>This is a special case! If the startBookmark and endBookmark are exactly the same then no text will be extracted. If they are different then it is not possible for the PDFTextStripper to determine that pages so it will include the entire document.</td>
-</tr>
-<tr>
-<td>Bookmark points to external action</td>
-<td>Bookmark points to external action</td>
-<td>If either the startBookmark or the endBookmark refer to an external page or execute an action then an OutlineNotLocalException will be thrown to indicate to the user that the bookmark is not valid.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Start Bookmark</th>
+      <th>End Bookmark</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>null</td>
+      <td>null</td>
+      <td>This is the default, the properties have no effect on the text extraction.</td>
+    </tr>
+    <tr>
+      <td>Points to a page in the PDF</td>
+      <td>null</td>
+      <td>Text extraction will begin on the page that this bookmark points to and go until the end of the document.</td>
+    </tr>
+    <tr>
+      <td>null</td>
+      <td>Points to a page in the PDF</td>
+      <td>Text extraction will begin on the first page and stop at the end of the page that this bookmark points to.</td>
+    </tr>
+    <tr>
+      <td>Bookmark does not point to anything</td>
+      <td>null</td>
+      <td>Because the PDFTextStripper cannot determine a start page based on the bookmark, it will start on the first page and go until the end of the document.</td>
+    </tr>
+    <tr>
+      <td>null</td>
+      <td>Bookmark does not point to anything</td>
+      <td>Because the PDFTextStripper cannot determine a end page based on the bookmark, it will start on the first page and go until the end of the document.</td>
+    </tr>
+    <tr>
+      <td>Bookmark does not point to anything</td>
+      <td>Bookmark does not point to anything</td>
+      <td>This is a special case! If the startBookmark and endBookmark are exactly the same then no text will be extracted. If they are different then it is not possible for the PDFTextStripper to determine that pages so it will include the entire document.</td>
+    </tr>
+    <tr>
+      <td>Bookmark points to external action</td>
+      <td>Bookmark points to external action</td>
+      <td>If either the startBookmark or the endBookmark refer to an external page or execute an action then an OutlineNotLocalException will be thrown to indicate to the user that the bookmark is not valid.</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>NOTE: PDFTextStripper will check both the startPage/endPage and the startBookmark/endBookmark to determine if text should be extracted from the current page.</p>
 
@@ -247,7 +256,7 @@ feature of the PDFTextStripper. Not all bookmarks point to a page in the current
 
 <p>Some PDF files need to map between glyph names and Unicode values during text extraction. 
 PDFBox comes with an Adobe Glyph List, but you may encounter files with glyph names that 
-are not in that map. To use your own glyphlist file, supply the file name to the <code>glyphlist_ext</code> JVM property.</p>
+are not in that map. To use your own glyphlist file, supply the file name to the <code class="highlighter-rouge">glyphlist_ext</code> JVM property.</p>
 
 <h3 id="right-to-left-text">Right to Left Text</h3>
 

@@ -77,7 +77,7 @@ h4 .open-iconic {
     fill: #0088cc;
 }
 
-.highlight > pre {
+pre.highlight, .highlight > pre {
     color: darkslategrey;
     border: 0pt;
     border-radius: 0pt;

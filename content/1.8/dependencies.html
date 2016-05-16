@@ -138,38 +138,39 @@
 
 <p class="alert alert-info">These components are needed during runtime, development and testing dependent on the details below.</p>
 
-<p>The three PDFBox components are named <code>pdfbox</code>, <code>fontbox</code> and <code>jempbox</code>. The Maven groupId of all PDFBox components is org.apache.pdfbox.</p>
+<p>The three PDFBox components are named <code class="highlighter-rouge">pdfbox</code>, <code class="highlighter-rouge">fontbox</code> and <code class="highlighter-rouge">jempbox</code>. The Maven groupId of all PDFBox components is org.apache.pdfbox.</p>
 
 <h3 id="minimum-requirement">Minimum Requirement</h3>
 
 <ul>
-<li>Java 1.5</li>
-<li><a href="http://commons.apache.org/logging/">commons-logging</a></li>
+  <li>Java 1.5</li>
+  <li><a href="http://commons.apache.org/logging/">commons-logging</a></li>
 </ul>
 
 <p>The main PDFBox component, pdfbox, has a hard dependency on the <a href="http://commons.apache.org/logging/">commons-logging</a> library.
-Commons Logging is a generic wrapper around different logging frameworks, so you&#39;ll either need to also use a logging library like <a href="http://logging.apache.org/log4j/">log4j</a>
+Commons Logging is a generic wrapper around different logging frameworks, so you’ll either need to also use a logging library like <a href="http://logging.apache.org/log4j/">log4j</a>
 or let commons-logging fall back to the standard <a href="http://java.sun.com/j2se/1.4.2/docs/guide/util/logging/overview.html">java.util.logging API</a>
 included in the Java platform.</p>
 
 <p>For <strong>PDFBox Preflight only</strong> <a href="https://commons.apache.org/proper/commons-io/">commons-io 1.4</a> is needed.</p>
 
 <h3 id="font-handling">Font Handling</h3>
-
 <p>For font handling the fontbox component is needed.</p>
 
 <h3 id="xmp-metadata">XMP Metadata</h3>
-
 <p>To support XMP metadata the jembox component is needed.</p>
 
 <p>To add the pdfbox, fontbox, jempbox and commons-logging jars to your application, the easiest thing is to declare the Maven dependency shown below. This gives you the main
 pdfbox library directly and the other required jars as transitive dependencies.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;dependency&gt;
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;dependency&gt;
   &lt;groupId&gt;org.apache.pdfbox&lt;/groupId&gt;
   &lt;artifactId&gt;pdfbox&lt;/artifactId&gt;
   &lt;version&gt;...&lt;/version&gt;
 &lt;/dependency&gt;
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>Set the version field to the latest stable PDFBox version.</p>
 
 <h2 id="optional-dependencies">Optional dependencies</h2>
@@ -178,20 +179,20 @@ pdfbox library directly and the other required jars as transitive dependencies.<
 
 <h3 id="extented-image-format-support">Extented Image Format Support</h3>
 
-<p>To support JBIG2 and writing TIFF images additional libraries are needed. </p>
+<p>To support JBIG2 and writing TIFF images additional libraries are needed.</p>
 
 <p class="alert alert-warning">The image plugins described below are not part of the PDFBox distribution because of incompatible licensing terms. Please make sure to check if the licensing terms are compatible to your usage.</p>
 
 <p>For <strong>JBIG2</strong> support a Java ImageIO Plugin such as the <a href="https://github.com/levigo/jbig2-imageio">Levigo Plugin</a> or <a href="https://github.com/Borisvl/JBIG2-Image-Decoder">JBIG2-Image-Decoder
-</a> will be needed. </p>
+</a> will be needed.</p>
 
-<p>To write <strong>TIFF</strong> images a JAI ImageIO Core library will be needed. </p>
+<p>To write <strong>TIFF</strong> images a JAI ImageIO Core library will be needed.</p>
 
 <h4 id="pdf-encryption-and-signing">PDF Encryption and Signing</h4>
-
 <p>The most notable such optional feature is support for PDF encryption. Instead of implementing its own encryption algorithms, PDFBox uses libraries from the 
 <a href="http://www.bouncycastle.org/">Legion of the Bouncy Castle</a>. Both the bcprov and bcmail libraries are needed and can be included using the Maven dependencies shown below.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;dependency&gt;
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;dependency&gt;
   &lt;groupId&gt;org.bouncycastle&lt;/groupId&gt;
   &lt;artifactId&gt;bcprov-jdk15&lt;/artifactId&gt;
   &lt;version&gt;1.44&lt;/version&gt;
@@ -201,30 +202,34 @@ pdfbox library directly and the other required jars as transitive dependencies.<
   &lt;artifactId&gt;bcmail-jdk15&lt;/artifactId&gt;
   &lt;version&gt;1.44&lt;/version&gt;
 &lt;/dependency&gt;
-</code></pre></div>
-<p><br/></p>
+</code></pre>
+</div>
+
+<p><br /></p>
 
 <h4 id="support-for-bidirectional-languages">Support for bidirectional languages</h4>
-
 <p>Another important optional feature is support for bidirectional languages like Arabic. PDFBox uses the ICU4J library from the 
 <a href="http://site.icu-project.org/">International Components for Unicode</a> (ICU) project to support such languages in PDF documents. To add the ICU4J jar to your project, 
 use the following Maven dependency.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;dependency&gt;
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;dependency&gt;
   &lt;groupId&gt;com.ibm.icu&lt;/groupId&gt;
   &lt;artifactId&gt;icu4j&lt;/artifactId&gt;
   &lt;version&gt;3.8&lt;/version&gt;
 &lt;/dependency&gt;
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>PDFBox also contains extra support for use with the <a href="http://lucene.apache.org/">Lucene</a> and <a href="http://ant.apache.org/">Ant</a> projects. Since in these cases PDFBox is just an
 add-on feature to these projects, you should first set up your application to use Lucene or Ant and then add PDFBox support as described on this page.</p>
 
 <h2 id="dependencies-for-ant-builds">Dependencies for Ant builds</h2>
 
-<p>The above instructions expect that you&#39;re using <a href="http://maven.apache.org/">Maven</a> or another build tool like <a href="http://ant.apache.org/ivy/">Ivy</a> that supports Maven dependencies.
-If you instead use tools like <a href="http://ant.apache.org/">Ant</a> where you need to explicitly include all the required library jars in your application, you&#39;ll need to do
+<p>The above instructions expect that you’re using <a href="http://maven.apache.org/">Maven</a> or another build tool like <a href="http://ant.apache.org/ivy/">Ivy</a> that supports Maven dependencies.
+If you instead use tools like <a href="http://ant.apache.org/">Ant</a> where you need to explicitly include all the required library jars in your application, you’ll need to do
 something different.</p>
 
-<p>The easiest approach is to run <code>mvn dependency:copy-dependencies</code> inside the pdfbox directory of the latest PDFBox source release. This will copy all the required and optional
+<p>The easiest approach is to run <code class="highlighter-rouge">mvn dependency:copy-dependencies</code> inside the pdfbox directory of the latest PDFBox source release. This will copy all the required and optional
 libraries discussed above into the pdfbox/target/dependencies directory. You can then simply copy all the libraries you need from this directory to your application.</p>
 
             </div>

@@ -137,8 +137,8 @@ is organized as PDFBox was architected around the concepts layed out in the
 ISO-32000 (PDF) Specification</p>
 
 <ul>
-<li><a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=51502">ISO Site</a></li>
-<li><a href="http://wwwimages.adobe.com/www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf">Adobe Version</a></li>
+  <li><a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=51502">ISO Site</a></li>
+  <li><a href="http://wwwimages.adobe.com/www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf">Adobe Version</a></li>
 </ul>
 
 <h2 id="quick-introduction-to-the-pdf-format">Quick Introduction to the PDF format</h2>
@@ -151,7 +151,7 @@ make up the basic objects upon which higher level objects and structures are bui
 </p>
 
 <p>The organization of these objects, how to they are read and how to write them is defined in the file structure of the 
-PDF [see ISO-32000 7.5]. In addition a file can be encrpyted to protect the document&#39;s content [see ISO-32000 7.5].</p>
+PDF [see ISO-32000 7.5]. In addition a file can be encrpyted to protect the document’s content [see ISO-32000 7.5].</p>
 
 <p class="alert alert-info">PDFBox handles the reading in the *org.apache.pdfbox.pdfparser* package. 
 Writing of PDF files is handled in the *org.apache.pdfbox.pdfwriter* package.
@@ -162,11 +162,11 @@ as pages, bookmarks, annotations [see ISO-32000 7.7].</p>
 
 <p class="alert alert-info">PDFBox makes these higher level objects available through the 
 *org.apache.pdfbox.pdfmodel* package (The PD Model).
-</p> 
+</p>
 
 <p>In addition there is a COS representation available for the PD model if there is a need to 
 inspect the underlying structure or to handle special cases where the higher level PD model
-doesn&#39;t provide the functionality needed.</p>
+doesn’t provide the functionality needed.</p>
 
 <p class="alert alert-info">It's always the COS model which is represented in the PDF file.</p>
 
@@ -174,85 +174,94 @@ doesn&#39;t provide the functionality needed.</p>
 
 <p>As outlined above the basic PDF objects are represented in PDFBox in the org.apache.pdfbox.cos package.</p>
 
-<table><thead>
-<tr>
-<th>PDF Type</th>
-<th>Description</th>
-<th>Example</th>
-<th>PDFBox class</th>
-<th>ISO 32000</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Boolean</td>
-<td>Standard True/False values</td>
-<td>true</td>
-<td>org.apache.pdfbox.cos.COSBoolean</td>
-<td>7.3.2</td>
-</tr>
-<tr>
-<td>Number</td>
-<td>Integer and floating point numbers</td>
-<td>1 2.3</td>
-<td>org.apache.pdfbox.cos.COSInteger<br/>org.apache.pdfbox.cos.COSFloat</td>
-<td>7.3.3</td>
-</tr>
-<tr>
-<td>String</td>
-<td>A sequence of characters</td>
-<td>(This is a string)</td>
-<td>org.apache.pdfbox.cos.COSString</td>
-<td>7.3.4</td>
-</tr>
-<tr>
-<td>Name</td>
-<td>A predefined value in a PDF document, typically used as a key in a dictionary</td>
-<td>/Type</td>
-<td>org.apache.pdfbox.cos.COSName</td>
-<td>7.3.5</td>
-</tr>
-<tr>
-<td>Array</td>
-<td>Arrays are one-dimensional lists of objects accessed by a numeric index. Within an array each basic object is permitted as an entry.</td>
-<td>[549 3.14 false (Ralph) /SomeName]</td>
-<td>org.apache.pdfbox.cos.COSArray</td>
-<td>7.3.6</td>
-</tr>
-<tr>
-<td>Dictionary</td>
-<td>A map of name value pairs</td>
-<td>&lt;&lt;<br/>/Type /XObject<br/>/Name (Name)</br>/Size 1</br>&gt;&gt;</td>
-<td>org.apache.pdfbox.cos.COSDictionary</td>
-<td>7.3.7</td>
-</tr>
-<tr>
-<td>Stream</td>
-<td>A stream of data, typically compressed. This is used for page contents, images and embedded font streams.</td>
-<td>12 0 obj &lt;&lt; /Type /XObject &gt;&gt; stream 030004040404040404 endstream</td>
-<td>org.apache.pdfbox.cos.COSStream</td>
-<td>7.3.8</td>
-</tr>
-<tr>
-<td>Object</td>
-<td>A wrapper to any of the other objects, this can be used to reference an object multiple times. An object is referenced by using two numbers, an object number and a generation number. Initially the generation number will be zero unless the object got replaced later in the stream.</td>
-<td>12 0 obj &lt;&lt; /Type /XObject &gt;&gt; endobj</td>
-<td>org.apache.pdfbox.cos.COSObject</td>
-<td></td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>PDF Type</th>
+      <th>Description</th>
+      <th>Example</th>
+      <th>PDFBox class</th>
+      <th>ISO 32000</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Boolean</td>
+      <td>Standard True/False values</td>
+      <td>true</td>
+      <td>org.apache.pdfbox.cos.COSBoolean</td>
+      <td>7.3.2</td>
+    </tr>
+    <tr>
+      <td>Number</td>
+      <td>Integer and floating point numbers</td>
+      <td>1 2.3</td>
+      <td>org.apache.pdfbox.cos.COSInteger<br />org.apache.pdfbox.cos.COSFloat</td>
+      <td>7.3.3</td>
+    </tr>
+    <tr>
+      <td>String</td>
+      <td>A sequence of characters</td>
+      <td>(This is a string)</td>
+      <td>org.apache.pdfbox.cos.COSString</td>
+      <td>7.3.4</td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>A predefined value in a PDF document, typically used as a key in a dictionary</td>
+      <td>/Type</td>
+      <td>org.apache.pdfbox.cos.COSName</td>
+      <td>7.3.5</td>
+    </tr>
+    <tr>
+      <td>Array</td>
+      <td>Arrays are one-dimensional lists of objects accessed by a numeric index. Within an array each basic object is permitted as an entry.</td>
+      <td>[549 3.14 false (Ralph) /SomeName]</td>
+      <td>org.apache.pdfbox.cos.COSArray</td>
+      <td>7.3.6</td>
+    </tr>
+    <tr>
+      <td>Dictionary</td>
+      <td>A map of name value pairs</td>
+      <td>«<br />/Type /XObject<br />/Name (Name)&lt;/br&gt;/Size 1&lt;/br&gt;»</td>
+      <td>org.apache.pdfbox.cos.COSDictionary</td>
+      <td>7.3.7</td>
+    </tr>
+    <tr>
+      <td>Stream</td>
+      <td>A stream of data, typically compressed. This is used for page contents, images and embedded font streams.</td>
+      <td>12 0 obj « /Type /XObject » stream 030004040404040404 endstream</td>
+      <td>org.apache.pdfbox.cos.COSStream</td>
+      <td>7.3.8</td>
+    </tr>
+    <tr>
+      <td>Object</td>
+      <td>A wrapper to any of the other objects, this can be used to reference an object multiple times. An object is referenced by using two numbers, an object number and a generation number. Initially the generation number will be zero unless the object got replaced later in the stream.</td>
+      <td>12 0 obj « /Type /XObject » endobj</td>
+      <td>org.apache.pdfbox.cos.COSObject</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
 <p>A page in a pdf document is represented with a COSDictionary. The entries that are available for a page can be seen in the PDF Reference and an example of a page looks like this:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;&lt;
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;&lt;
     /Type /Page
     /MediaBox [0 0 612 915]
     /Contents 56 0 R
 &gt;&gt;
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>The information within the dictionary can be accessed using the COS model</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">COSDictionary</span> <span class="n">page</span> <span class="o">=</span> <span class="o">...;</span>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">COSDictionary</span> <span class="n">page</span> <span class="o">=</span> <span class="o">...;</span>
 <span class="n">COSArray</span> <span class="n">mediaBox</span> <span class="o">=</span> <span class="o">(</span><span class="n">COSArray</span><span class="o">)</span><span class="n">page</span><span class="o">.</span><span class="na">getDictionaryObject</span><span class="o">(</span> <span class="s">"MediaBox"</span> <span class="o">);</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="s">"Width:"</span> <span class="o">+</span> <span class="n">mediaBox</span><span class="o">.</span><span class="na">get</span><span class="o">(</span> <span class="mi">3</span> <span class="o">)</span> <span class="o">);</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>As can be seen from that little example the COS model provides a low level API to access 
 information within the PDF. In order to use the COS model successfully a good knowledge of
 the PDF specification is needed.</p>
@@ -265,17 +274,20 @@ parameters and no helper methods are available. The PD Model was created to help
 alleviate this problem. Each type of object(page, font, image) has a set of defined
 attributes that can be available in the dictionary. 
 A PD Model class is available for each of these so that strongly typed methods are
-available to access the attributes. </p>
+available to access the attributes.</p>
 
 <p>The same code from above to get the page width can be rewritten to use PD Model classes.</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">PDPage</span> <span class="n">page</span> <span class="o">=</span> <span class="o">...;</span>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">PDPage</span> <span class="n">page</span> <span class="o">=</span> <span class="o">...;</span>
 <span class="n">PDRectangle</span> <span class="n">mediaBox</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="na">getMediaBox</span><span class="o">();</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="s">"Width:"</span> <span class="o">+</span> <span class="n">mediaBox</span><span class="o">.</span><span class="na">getWidth</span><span class="o">()</span> <span class="o">);</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>PD Model objects sit on top of COS model. Typically, the classes in the PD Model will only
 store a COS object and all setter/getter methods will modify data that is stored in the
 COS object. For example, when you call PDPage.getLastModified() the method will do a
-lookup in the COSDictionary with the key &quot;LastModified&quot;, if it is found the value is then
+lookup in the COSDictionary with the key “LastModified”, if it is found the value is then
 converter to a java.util.Calendar. When PDPage.setLastModified( Calendar ) is called then
 the Calendar is converted to a string in the COSDictionary.</p>
 
