@@ -135,6 +135,7 @@ PDFRenderer pdfRenderer = new PDFRenderer(document);
 int pageCounter = 0;
 for (PDPage page : document.getPages())
 { 
+    // note that the page number parameter is zero based
     BufferedImage bim = pdfRenderer.renderImageWithDPI(pageCounter, 300, ImageType.RGB);
 
     // suffix in filename will be used as the file format
