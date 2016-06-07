@@ -25,6 +25,6 @@ categories: [release, news]
 The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 1.8.12 and 2.0.1. They are available for download at:
 
-http://pdfbox.apache.org/download.cgi
+[http://pdfbox.apache.org/download.cgi](http://pdfbox.apache.org/download.cgi)
 
 See the full release notes [1.8.12](https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&version=12334652) and [2.0.1](https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&version=12335342) for details about this release.
