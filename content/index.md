@@ -19,9 +19,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 layout:  default
 title:   A Java PDF Library
 ---
-# Apache PDFBox - A Java PDF Library
+# Apache PDFBox<sup>&reg;</sup> - A Java PDF Library
 
-<p class="lead">The Apache PDFBox™ library is an open source Java tool for working with
+<p class="lead">The Apache PDFBox<sup>&reg;</sup> library is an open source Java tool for working with
     PDF documents. This project allows creation of new PDF documents, manipulation of existing
     documents and the ability to extract content from documents.
 
