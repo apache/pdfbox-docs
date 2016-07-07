@@ -21,6 +21,11 @@
  *  format used to add content, doesn't allow to classes to the elements
  */
 
+body {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
 body > .container {
   min-width: 750px;
   max-width: none !important;

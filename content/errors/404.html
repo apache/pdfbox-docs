@@ -2,16 +2,16 @@
 <html lang="en">
 
 <!--
-     
+
      Licensed to the Apache Software Foundation (ASF) under one or more
      contributor license agreements.  See the NOTICE file distributed with
      this work for additional information regarding copyright ownership.
      The ASF licenses this file to You under the Apache License, Version 2.0
      (the "License"); you may not use this file except in compliance with
      the License.  You may obtain a copy of the License at
-     
+
      http://www.apache.org/licenses/LICENSE- 2.0
-     
+
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -30,13 +30,13 @@
 
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/pygments-github.css" rel="stylesheet">
-    
+
     <link href="/css/site.css" rel="stylesheet">
+
     
+
     
-    
-     
-    
+
     
 
 </head>
@@ -54,22 +54,22 @@
         </div>
       </div>
     </nav>
-    
+
     <div class="container">
-        
+
         <div class="row row-offcanvas row-offcanvas-left">
             <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-                
+
                 <ul class="sidebar">
                     <li class="sidebar-header">Apache PDFBox</li>
                     <li><a href="/index.html">Overview</a></li>
                     <li><a href="/download.cgi">Downloads</a></li>
-                    
+
                     <li class="sidebar-header">Community</li>
                     <li><a href="/support.html">Support</a></li>
                     <li><a href="/mailinglists.html">Mailing Lists</a></li>
                     <li><a href="/team.html">Project Team</a></li>
-                    
+
                     <li class="sidebar-header">Documentation</li>
                     <li class="sidebar-node" id="v2-0">
                         <a href="#">2.0</a>
@@ -111,11 +111,11 @@
                             <li><a href="/1.8/faq.html">FAQ</a></li>
                         </ul>
                     </li>
-                    
+
                     <li class="sidebar-header">Development</li>
                     <li><a href="/building.html">Building from Source</a></li>
                     <li><a href="/codingconventions.html">Coding Conventions</a></li>
-                    <li><a href="/siteupdate.html">Update the Website</a></li>  
+                    <li><a href="/siteupdate.html">Update the Website</a></li>
                     <li><a href="https://builds.apache.org/view/All/job/PDFBox-trunk/">Jenkins</a></li>
                     <li><a href="https://travis-ci.org/apache/pdfbox">Travis CI</a></li>
                     <li><a href="https://analysis.apache.org/dashboard/index/org.apache.pdfbox:pdfbox-reactor">SonarQube</a></li>
@@ -154,7 +154,7 @@
                     <!-- nothing in here on purpose -->
                 </div>
                 <div class="span9">
-                    <p>Copyright © 2009&ndash;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>, Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                    <p>Copyright © 2009&ndash;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>, Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
                         <br/>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
                 </div>
             </div>
@@ -165,17 +165,17 @@
     <script src="//code.jquery.com/jquery-latest.js"></script>
     <script src="/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        
+
         $(document).ready(function () {
                 $('[data-toggle="offcanvas"]').click(function () {
                 $('.row-offcanvas').toggleClass('active')
             });
         });
-        
+
         $(function() {
             // collapse tree nodes dynamically to support noscript
             $('.sidebar-node').addClass('collapsed');
-            
+
 
             // toggle expand/collapse
             $('.sidebar-node > a').click(function(e) {
