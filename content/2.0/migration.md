@@ -80,6 +80,8 @@ PDType0Font.load
 
 to leverage that.
 
+`PDAfmPfbFont` has been removed. To load such a font pass the pfb file to `PDType1Font`. Loading the afm file is no longer required.
+
 ### PDF Resources Handling
 The individual calls to add resources such as `PDResources.addFont(PDFont font)` and `PDResources.addXObject(PDXObject xobject, String prefix)`
 have been replaced with `PDResources.add(resource type)` where `resource type` represents the different resource classes such as `PDFont`, `PDAbstractPattern`
