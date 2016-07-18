@@ -17,14 +17,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 
 layout:  default
-title:   PDFBox 2.0.0 Migration Guide 
+title:   PDFBox 2.0.0 Migration Guide
 ---
 
 # Migration to PDFBox 2.0.0
 
 ## Environment
 PDFBox 2.0.0 requires at least Java 6
- 
+
 ## Packages
 There are some significant changes to the package structure of PDFBox:
 
@@ -54,7 +54,7 @@ For PDFBox Preflight
 ## Breaking Changes to the Library
 
 ### Deprecated API calls
-Most deprecated API calls in PDFBox 1.8.x have been removed for PDFBox 2.0.0 
+Most deprecated API calls in PDFBox 1.8.x have been removed for PDFBox 2.0.0
 
 ### API Changes
 The API changes are reflected in the Javadoc for PDFBox 2.0.0. The most notable changes are:
@@ -78,12 +78,15 @@ TrueType fonts shall now be loaded using
 PDType0Font.load
 ~~~
 
-to leverage that. 
+to leverage that.
 
 ### PDF Resources Handling
-The individual calls to add resources such as `PDResource.addFont(PDFont font)` and `PDResource.addXObject(PDXObject xobject, String prefix)`
-have been replaced with `PDResource.add(resource type)` where `resource type` represents the different resource classes such as `PDFont`, `PDAbstractPattern`
+The individual calls to add resources such as `PDResources.addFont(PDFont font)` and `PDResources.addXObject(PDXObject xobject, String prefix)`
+have been replaced with `PDResources.add(resource type)` where `resource type` represents the different resource classes such as `PDFont`, `PDAbstractPattern`
 and so on. The `add` method now supports all the different type of resources available.
+
+Instead of returning a `Map` like with `PDResources.getFonts()` or `PDResources.getXObjects()` in 2.0 an `Iterable<COSName>` of references shall be retrieved with `PDResources.getFontNames()` or
+`PDResources.getXObjectNames()`. The individual item can be retrieved with `PDResources.getFont(COSName fontName)` or `PDResources.getXObject(COSName xObjectName)`.
 
 ### Working with Images
 The individual classes `PDJpeg()`, `PDPixelMap()` and `PDCCitt()` to import images have been replaced with `PDImageXObject.createFromFile` which works for JPG, TIFF (only G4 compression), PNG, BMP and GIF.
@@ -106,7 +109,7 @@ parser.parse();
 List<Object> tokens = parser.getTokens();
 ~~~
 
-With PDFBox 2.0 the code is reduced to 
+With PDFBox 2.0 the code is reduced to
 
 ~~~java
 PDFStreamParser parser = new PDFStreamParser(page);
@@ -134,7 +137,7 @@ PDDocument document = PDDocument.load(new File(pdfFilename));
 PDFRenderer pdfRenderer = new PDFRenderer(document);
 int pageCounter = 0;
 for (PDPage page : document.getPages())
-{ 
+{
     // note that the page number parameter is zero based
     BufferedImage bim = pdfRenderer.renderImageWithDPI(pageCounter, 300, ImageType.RGB);
 
@@ -182,7 +185,7 @@ if (job.printDialog()) {
 Advanced use case examples can be found in th examples package under org/apache/pdfbox/examples/printing/Printing.java
 
 ### Text Extraction
-In 1.8, to get the text colors, one method was to pass an expanded .properties file to the PDFStripper constructor. To achieve the same 
+In 1.8, to get the text colors, one method was to pass an expanded .properties file to the PDFStripper constructor. To achieve the same
 in PDFBox 2.0 you can extend ``PDFTextStripper``and add the following ``Operators`` to the constructor:
 
 ~~~java
@@ -202,7 +205,7 @@ addOperator(new SetNonStrokingColorN());
 
 ### Interactive Forms
 Large parts of the support for interactive forms (AcroForms) have been rewritten. The most notable change from 1.8.x is that
-there is a clear distinction between fields and the annotations representing them visually. Intermediate nodes in a field 
+there is a clear distinction between fields and the annotations representing them visually. Intermediate nodes in a field
 tree are now represented by the `PDNonTerminalField` class.
 
 With PDFBox 2.0.0 the prefered way to iterate through the fields is now
