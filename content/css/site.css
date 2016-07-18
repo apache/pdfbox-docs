@@ -49,7 +49,7 @@ body > .container {
 }
 
 /*
- * Typography overwrites to bootstrap 
+ * Typography overwrites to bootstrap
  */
 
 /* headings */
@@ -90,9 +90,14 @@ pre.highlight, .highlight > pre {
     padding-left: 2rem;
 }
 
-/* 
- * Default styling for the tables copied over from bootstrap 
- * to get basic styling for tables created through markdown 
+code {
+  color: #000000;
+  background-color: #d5eaec;
+}
+
+/*
+ * Default styling for the tables copied over from bootstrap
+ * to get basic styling for tables created through markdown
  */
 table {
     width: 100%;
@@ -104,8 +109,8 @@ table th, table td {
     border-top: 1px solid #ddd;
 }
 
-table tr:nth-child(even) td, table tr.even td { 
-    background: #f9f9f9; 
+table tr:nth-child(even) td, table tr.even td {
+    background: #f9f9f9;
 }
 
 /*
