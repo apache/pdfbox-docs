@@ -200,6 +200,8 @@ results when switching to PDFBox 2.0.0.</p>
 
 <p>to leverage that.</p>
 
+<p><code class="highlighter-rouge">PDAfmPfbFont</code> has been removed. To load such a font pass the pfb file to <code class="highlighter-rouge">PDType1Font</code>. Loading the afm file is no longer required.</p>
+
 <h3 id="pdf-resources-handling">PDF Resources Handling</h3>
 <p>The individual calls to add resources such as <code class="highlighter-rouge">PDResources.addFont(PDFont font)</code> and <code class="highlighter-rouge">PDResources.addXObject(PDXObject xobject, String prefix)</code>
 have been replaced with <code class="highlighter-rouge">PDResources.add(resource type)</code> where <code class="highlighter-rouge">resource type</code> represents the different resource classes such as <code class="highlighter-rouge">PDFont</code>, <code class="highlighter-rouge">PDAbstractPattern</code>
