@@ -134,14 +134,14 @@
 
 <p>PDFBox comes with a series of command line utilities. They are available as standard Java applications.</p>
 
-<p>See the <a href="/2.0/dependencies.html">Dependencies</a> page for instructions on how to set your classpath in order to run 
+<p>See the <a href="/2.0/dependencies.html">Dependencies</a> page for instructions on how to set your classpath in order to run
 PDFBox tools as Java applications.</p>
 
 <p><strong>Table of Contents</strong><br />
 <a href="#decrypt">Decrypt</a>
 <a href="#encrypt">Encrypt</a>
 <a href="#extractimages">ExtractImages</a>
-<a href="#extracttext">ExtractText</a> 
+<a href="#extracttext">ExtractText</a>
 <a href="#overlaypdf">OverlayPDF</a>
 <a href="#pdfdebugger">PDFDebugger</a>
 <a href="#pdfmerger">PDFMerger</a>
@@ -492,7 +492,10 @@ It is used as replacement for the PDFReader which was removed in 2.0.0.</p>
 
 <h2 id="pdfsplit">PDFSplit</h2>
 
-<p>This application will take an existing PDF document and split it into a number of other documents</p>
+<p>This application will take an existing PDF document and split it into a number of new documents.</p>
+
+<p>Per default the resulting files will be named after the original filenmame with <code class="highlighter-rouge">-&lt;nr&gt;</code> appended before the suffix.
+To override the filename use the <code class="highlighter-rouge">outputPrefix</code> option.</p>
 
 <p>usage: <code class="highlighter-rouge">java -jar pdfbox-app-2.y.z.jar PDFSplit [OPTIONS] &lt;PDF file&gt;</code></p>
 
@@ -524,6 +527,11 @@ It is used as replacement for the PDFReader which was removed in 2.0.0.</p>
       <td>-endPage</td>
       <td> </td>
       <td>The page to stop at.</td>
+    </tr>
+    <tr>
+      <td>–outputPrefix</td>
+      <td> </td>
+      <td>The prefix for the generated file name. The resulting name will be in the format <code class="highlighter-rouge">&lt;prefix&gt;-&lt;nr&gt;.pdf</code></td>
     </tr>
   </tbody>
 </table>
@@ -695,7 +703,6 @@ It is used as replacement for the PDFReader which was removed in 2.0.0.</p>
     </tr>
   </tbody>
 </table>
-
 
             </div>
         </div>
