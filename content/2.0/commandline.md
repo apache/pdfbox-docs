@@ -23,14 +23,14 @@ title:   Command Line Tools
 
 PDFBox comes with a series of command line utilities. They are available as standard Java applications.
 
-See the [Dependencies](/2.0/dependencies.html) page for instructions on how to set your classpath in order to run 
+See the [Dependencies](/2.0/dependencies.html) page for instructions on how to set your classpath in order to run
 PDFBox tools as Java applications.
 
 **Table of Contents**  
 [Decrypt](#decrypt)
 [Encrypt](#encrypt)
 [ExtractImages](#extractimages)
-[ExtractText](#extracttext) 
+[ExtractText](#extracttext)
 [OverlayPDF](#overlaypdf)
 [PDFDebugger](#pdfdebugger)
 [PDFMerger](#pdfmerger)
@@ -155,7 +155,10 @@ usage: ``java -jar pdfbox-app-2.y.z.jar PDFMerger <Source PDF files (2 ..n)> <Ta
 
 ## PDFSplit ##
 
-This application will take an existing PDF document and split it into a number of other documents
+This application will take an existing PDF document and split it into a number of new documents.
+
+Per default the resulting files will be named after the original filenmame with `-<nr>` appended before the suffix.
+To override the filename use the `outputPrefix` option.
 
 usage: ``java -jar pdfbox-app-2.y.z.jar PDFSplit [OPTIONS] <PDF file>``
 
@@ -165,6 +168,8 @@ usage: ``java -jar pdfbox-app-2.y.z.jar PDFSplit [OPTIONS] <PDF file>``
 | -split | | Number of pages of every splitted part of the pdf.|
 | -startPage | | The page to start at. |
 | -endPage | | The page to stop at. |
+| --outputPrefix | | The prefix for the generated file name. The resulting name will be in the format `<prefix>-<nr>.pdf` |
+
 
 Examples:
 
@@ -229,7 +234,7 @@ The following font names can be used for the parameter ``standardFont``:
  - Times-Italic
  - Times-BoldItalic
  - ZapfDingbats
- 
+
 ## WriteDecodedDoc ##
 
 An application to decompress PDF documents.
@@ -241,4 +246,3 @@ usage: ``java -jar pdfbox-app-2.y.z.jar WriteDecodedDoc <input-file> <output-fil
 | -password |  | The password to the PDF document. |
 | <input-file> |  | The PDF file to decompress |
 | <output-file> |  | The destination PDF file |
-

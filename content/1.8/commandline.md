@@ -15,7 +15,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
-         
+
 layout:  default
 title:   Command Line Tools
 ---
@@ -24,7 +24,7 @@ title:   Command Line Tools
 
 PDFBox comes with a series of command line utilities. They are available as standard Java applications.
 
-See the [Dependencies](/1.8/dependencies.html) page for instructions on how to set your classpath in order to run 
+See the [Dependencies](/1.8/dependencies.html) page for instructions on how to set your classpath in order to run
 PDFBox tools as Java applications.
 
 **Table of Contents**  
@@ -184,7 +184,10 @@ usage: ``java -jar pdfbox-app-x.y.z.jar PDFMerger <Source PDF files (2 ..n)> <Ta
 
 ## PDFSplit ##
 
-This application will take an existing PDF document and split it into a number of other documents
+This application will take an existing PDF document and split it into a number of new documents.
+
+Per default the resulting files will be named after the original filenmame with `-<nr>` appended before the suffix.
+To override the filename use the `outputPrefix` option.
 
 usage: ``java -jar pdfbox-app-x.y.z.jar PDFSplit [OPTIONS] <PDF file>``
 
@@ -194,7 +197,9 @@ usage: ``java -jar pdfbox-app-x.y.z.jar PDFSplit [OPTIONS] <PDF file>``
 | -split | | Number of pages of every splitted part of the pdf.|
 | -startPage | | The page to start at. |
 | -endPage | | The page to stop at. |
+| -outputPrefix | | The prefix for the generated file name. The resulting name will be in the format `<prefix>-<nr>.pdf` |
 | -nonSeq | false | Use the new non sequential parser.|
+
 
 Examples:
 
@@ -216,7 +221,7 @@ usage: ``java -jar pdfbox-app-x.y.z.jar PDFToImage [OPTIONS] <PDF file>``
 | -outputPrefix | Name of PDF document | The prefix to the image file. |
 | -startPage | 1 | The first page to convert, one based. |
 | -endPage | Integer.MAX_INT | The last page to convert, one based. |
-| -nonSeq | false | Use the new non sequential parser. | 
+| -nonSeq | false | Use the new non sequential parser. |
 
 ## TextToPDF ##
 
@@ -246,7 +251,7 @@ The following font names can be used for the parameter ``standardFont``:
  - Times-Italic
  - Times-BoldItalic
  - ZapfDingbats
- 
+
 ## WriteDecodedDoc ##
 
 An application to decompress PDF documents.
@@ -259,4 +264,3 @@ usage: ``java -jar pdfbox-app-x.y.z.jar WriteDecodedDoc <input-file> <output-fil
 | -nonSeq 	| false | Use the new non sequential parser. |
 | <input-file> |  | The PDF file to decompress |
 | <output-file> |  | The destination PDF file |
-
