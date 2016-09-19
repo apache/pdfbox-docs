@@ -48,6 +48,7 @@ The following is a list of developers with commit privileges that have directly 
 | msahyoun      | Maruan Sahyoun        | PMC Member |
 | pkoch         | Phillipp Koch         | PMC Member |
 | tchojecki     | Thomas Chojecki       | PMC Member |
+| tallison      | Tim Allison           | PMC Member |
 | tboehme       | Timo Boehme           | PMC Member |
 | tilman        | Tilman Hausherr       | PMC Member |
 | vfed          | Villu Ruusmann        | PMC Member |
