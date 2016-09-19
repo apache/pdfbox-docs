@@ -1,0 +1,1371 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AFMParser (PDFBox reactor 2.0.3 API)</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="AFMParser (PDFBox reactor 2.0.3 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/AFMParser.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev Class</li>
+<li><a href="../../../../org/apache/fontbox/afm/CharMetric.html" title="class in org.apache.fontbox.afm"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/apache/fontbox/afm/AFMParser.html" target="_top">Frames</a></li>
+<li><a href="AFMParser.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.apache.fontbox.afm</div>
+<h2 title="Class AFMParser" class="title">Class AFMParser</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>org.apache.fontbox.afm.AFMParser</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public class <span class="strong">AFMParser</span>
+extends <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block">This class is used to parse AFM(Adobe Font Metrics) documents.</div>
+<dl><dt><span class="strong">Author:</span></dt>
+  <dd>Ben Litchfield</dd>
+<dt><span class="strong">See Also:</span></dt><dd><A href="http://partners.adobe.com/asn/developer/type/">AFM Documentation</A></dd></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#ASCENDER">ASCENDER</a></strong></code>
+<div class="block">This is ascender attribute.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#CAP_HEIGHT">CAP_HEIGHT</a></strong></code>
+<div class="block">This is the cap height attribute.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#CC">CC</a></strong></code>
+<div class="block">This is a composite character.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#CHAR_WIDTH">CHAR_WIDTH</a></strong></code>
+<div class="block">This is the char width.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#CHARACTER_SET">CHARACTER_SET</a></strong></code>
+<div class="block">This is the character set.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#CHARACTERS">CHARACTERS</a></strong></code>
+<div class="block">This is the characters attribute.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#CHARMETRICS_B">CHARMETRICS_B</a></strong></code>
+<div class="block">The character metrics value.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#CHARMETRICS_C">CHARMETRICS_C</a></strong></code>
+<div class="block">The character metrics c value.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#CHARMETRICS_CH">CHARMETRICS_CH</a></strong></code>
+<div class="block">The character metrics c value.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#CHARMETRICS_L">CHARMETRICS_L</a></strong></code>
+<div class="block">The character metrics value.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#CHARMETRICS_N">CHARMETRICS_N</a></strong></code>
+<div class="block">The character metrics value.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#CHARMETRICS_VV">CHARMETRICS_VV</a></strong></code>
+<div class="block">The character metrics value.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#CHARMETRICS_W">CHARMETRICS_W</a></strong></code>
+<div class="block">The character metrics value.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#CHARMETRICS_W0">CHARMETRICS_W0</a></strong></code>
+<div class="block">The character metrics value.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#CHARMETRICS_W0X">CHARMETRICS_W0X</a></strong></code>
+<div class="block">The character metrics value.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#CHARMETRICS_W0Y">CHARMETRICS_W0Y</a></strong></code>
+<div class="block">The character metrics value.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#CHARMETRICS_W1">CHARMETRICS_W1</a></strong></code>
+<div class="block">The character metrics value.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#CHARMETRICS_W1X">CHARMETRICS_W1X</a></strong></code>
+<div class="block">The character metrics value.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#CHARMETRICS_W1Y">CHARMETRICS_W1Y</a></strong></code>
+<div class="block">The character metrics value.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#CHARMETRICS_WX">CHARMETRICS_WX</a></strong></code>
+<div class="block">The character metrics value.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#CHARMETRICS_WY">CHARMETRICS_WY</a></strong></code>
+<div class="block">The character metrics value.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#COMMENT">COMMENT</a></strong></code>
+<div class="block">This is a comment in a AFM file.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#DESCENDER">DESCENDER</a></strong></code>
+<div class="block">This is the descender attribute.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#ENCODING_SCHEME">ENCODING_SCHEME</a></strong></code>
+<div class="block">This is the encoding scheme.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#END_CHAR_METRICS">END_CHAR_METRICS</a></strong></code>
+<div class="block">This is the end of character metrics.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#END_COMPOSITES">END_COMPOSITES</a></strong></code>
+<div class="block">This is the end compisites data section.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#END_FONT_METRICS">END_FONT_METRICS</a></strong></code>
+<div class="block">This is the constant used in the AFM file to end a font metrics item.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#END_KERN_DATA">END_KERN_DATA</a></strong></code>
+<div class="block">This is the end of kern data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#END_KERN_PAIRS">END_KERN_PAIRS</a></strong></code>
+<div class="block">This is the end of kern pairs data.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#END_TRACK_KERN">END_TRACK_KERN</a></strong></code>
+<div class="block">This is the end of track kern data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#ESC_CHAR">ESC_CHAR</a></strong></code>
+<div class="block">This is the escape character.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#FAMILY_NAME">FAMILY_NAME</a></strong></code>
+<div class="block">This is the Family name.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#FONT_BBOX">FONT_BBOX</a></strong></code>
+<div class="block">This is the font bounding box.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#FONT_NAME">FONT_NAME</a></strong></code>
+<div class="block">This is the font name.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#FULL_NAME">FULL_NAME</a></strong></code>
+<div class="block">This is the full name.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#IS_BASE_FONT">IS_BASE_FONT</a></strong></code>
+<div class="block">This will determine if this is a base font.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#IS_FIXED_PITCH">IS_FIXED_PITCH</a></strong></code>
+<div class="block">This will determine if this is fixed pitch.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#IS_FIXED_V">IS_FIXED_V</a></strong></code>
+<div class="block">This will tell if the V is fixed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#ITALIC_ANGLE">ITALIC_ANGLE</a></strong></code>
+<div class="block">This is the italic angle.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#KERN_PAIR_KP">KERN_PAIR_KP</a></strong></code>
+<div class="block">This is a kern pair.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#KERN_PAIR_KPH">KERN_PAIR_KPH</a></strong></code>
+<div class="block">This is a kern pair.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#KERN_PAIR_KPX">KERN_PAIR_KPX</a></strong></code>
+<div class="block">This is a kern pair.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#KERN_PAIR_KPY">KERN_PAIR_KPY</a></strong></code>
+<div class="block">This is a kern pair.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#MAPPING_SCHEME">MAPPING_SCHEME</a></strong></code>
+<div class="block">This is the mapping scheme.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#NOTICE">NOTICE</a></strong></code>
+<div class="block">This is the notice.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#PCC">PCC</a></strong></code>
+<div class="block">This is a composite charater part.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#START_CHAR_METRICS">START_CHAR_METRICS</a></strong></code>
+<div class="block">This is the start of character metrics.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#START_COMPOSITES">START_COMPOSITES</a></strong></code>
+<div class="block">This is the start compisites data section.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#START_FONT_METRICS">START_FONT_METRICS</a></strong></code>
+<div class="block">This is the constant used in the AFM file to start a font metrics item.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#START_KERN_DATA">START_KERN_DATA</a></strong></code>
+<div class="block">This is the start of kern data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#START_KERN_PAIRS">START_KERN_PAIRS</a></strong></code>
+<div class="block">This is the start of kern pairs data.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#START_KERN_PAIRS0">START_KERN_PAIRS0</a></strong></code>
+<div class="block">This is the start of kern pairs data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#START_KERN_PAIRS1">START_KERN_PAIRS1</a></strong></code>
+<div class="block">This is the start of kern pairs data.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#START_TRACK_KERN">START_TRACK_KERN</a></strong></code>
+<div class="block">This is the start of track kern data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#STD_HW">STD_HW</a></strong></code>
+<div class="block">The character metrics value.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#STD_VW">STD_VW</a></strong></code>
+<div class="block">The character metrics value.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#UNDERLINE_POSITION">UNDERLINE_POSITION</a></strong></code>
+<div class="block">The underline position.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#UNDERLINE_THICKNESS">UNDERLINE_THICKNESS</a></strong></code>
+<div class="block">This is the Underline thickness.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#V_VECTOR">V_VECTOR</a></strong></code>
+<div class="block">This is the V Vector attribute.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#VERSION">VERSION</a></strong></code>
+<div class="block">This is the version of the font.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#WEIGHT">WEIGHT</a></strong></code>
+<div class="block">This is the weight.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#X_HEIGHT">X_HEIGHT</a></strong></code>
+<div class="block">This is the X height.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#AFMParser(java.io.InputStream)">AFMParser</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;in)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/fontbox/afm/FontMetrics.html" title="class in org.apache.fontbox.afm">FontMetrics</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#parse()">parse</a></strong>()</code>
+<div class="block">This will parse the AFM document.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/fontbox/afm/FontMetrics.html" title="class in org.apache.fontbox.afm">FontMetrics</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/fontbox/afm/AFMParser.html#parse(boolean)">parse</a></strong>(boolean&nbsp;reducedDataset)</code>
+<div class="block">This will parse the AFM document.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="COMMENT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>COMMENT</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> COMMENT</pre>
+<div class="block">This is a comment in a AFM file.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.COMMENT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="START_FONT_METRICS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>START_FONT_METRICS</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> START_FONT_METRICS</pre>
+<div class="block">This is the constant used in the AFM file to start a font metrics item.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.START_FONT_METRICS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="END_FONT_METRICS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>END_FONT_METRICS</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> END_FONT_METRICS</pre>
+<div class="block">This is the constant used in the AFM file to end a font metrics item.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.END_FONT_METRICS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FONT_NAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FONT_NAME</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FONT_NAME</pre>
+<div class="block">This is the font name.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.FONT_NAME">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FULL_NAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FULL_NAME</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FULL_NAME</pre>
+<div class="block">This is the full name.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.FULL_NAME">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FAMILY_NAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FAMILY_NAME</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FAMILY_NAME</pre>
+<div class="block">This is the Family name.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.FAMILY_NAME">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="WEIGHT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>WEIGHT</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> WEIGHT</pre>
+<div class="block">This is the weight.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.WEIGHT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FONT_BBOX">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FONT_BBOX</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FONT_BBOX</pre>
+<div class="block">This is the font bounding box.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.FONT_BBOX">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="VERSION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>VERSION</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> VERSION</pre>
+<div class="block">This is the version of the font.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.VERSION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="NOTICE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>NOTICE</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> NOTICE</pre>
+<div class="block">This is the notice.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.NOTICE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ENCODING_SCHEME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ENCODING_SCHEME</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> ENCODING_SCHEME</pre>
+<div class="block">This is the encoding scheme.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.ENCODING_SCHEME">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="MAPPING_SCHEME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MAPPING_SCHEME</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> MAPPING_SCHEME</pre>
+<div class="block">This is the mapping scheme.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.MAPPING_SCHEME">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ESC_CHAR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ESC_CHAR</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> ESC_CHAR</pre>
+<div class="block">This is the escape character.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.ESC_CHAR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CHARACTER_SET">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CHARACTER_SET</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CHARACTER_SET</pre>
+<div class="block">This is the character set.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.CHARACTER_SET">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CHARACTERS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CHARACTERS</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CHARACTERS</pre>
+<div class="block">This is the characters attribute.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.CHARACTERS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="IS_BASE_FONT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>IS_BASE_FONT</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> IS_BASE_FONT</pre>
+<div class="block">This will determine if this is a base font.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.IS_BASE_FONT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="V_VECTOR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>V_VECTOR</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> V_VECTOR</pre>
+<div class="block">This is the V Vector attribute.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.V_VECTOR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="IS_FIXED_V">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>IS_FIXED_V</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> IS_FIXED_V</pre>
+<div class="block">This will tell if the V is fixed.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.IS_FIXED_V">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CAP_HEIGHT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CAP_HEIGHT</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CAP_HEIGHT</pre>
+<div class="block">This is the cap height attribute.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.CAP_HEIGHT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="X_HEIGHT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>X_HEIGHT</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> X_HEIGHT</pre>
+<div class="block">This is the X height.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.X_HEIGHT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ASCENDER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ASCENDER</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> ASCENDER</pre>
+<div class="block">This is ascender attribute.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.ASCENDER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DESCENDER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DESCENDER</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> DESCENDER</pre>
+<div class="block">This is the descender attribute.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.DESCENDER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="UNDERLINE_POSITION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>UNDERLINE_POSITION</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> UNDERLINE_POSITION</pre>
+<div class="block">The underline position.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.UNDERLINE_POSITION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="UNDERLINE_THICKNESS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>UNDERLINE_THICKNESS</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> UNDERLINE_THICKNESS</pre>
+<div class="block">This is the Underline thickness.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.UNDERLINE_THICKNESS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ITALIC_ANGLE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ITALIC_ANGLE</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> ITALIC_ANGLE</pre>
+<div class="block">This is the italic angle.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.ITALIC_ANGLE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CHAR_WIDTH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CHAR_WIDTH</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CHAR_WIDTH</pre>
+<div class="block">This is the char width.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.CHAR_WIDTH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="IS_FIXED_PITCH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>IS_FIXED_PITCH</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> IS_FIXED_PITCH</pre>
+<div class="block">This will determine if this is fixed pitch.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.IS_FIXED_PITCH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="START_CHAR_METRICS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>START_CHAR_METRICS</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> START_CHAR_METRICS</pre>
+<div class="block">This is the start of character metrics.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.START_CHAR_METRICS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="END_CHAR_METRICS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>END_CHAR_METRICS</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> END_CHAR_METRICS</pre>
+<div class="block">This is the end of character metrics.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.END_CHAR_METRICS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CHARMETRICS_C">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CHARMETRICS_C</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CHARMETRICS_C</pre>
+<div class="block">The character metrics c value.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.CHARMETRICS_C">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CHARMETRICS_CH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CHARMETRICS_CH</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CHARMETRICS_CH</pre>
+<div class="block">The character metrics c value.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.CHARMETRICS_CH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CHARMETRICS_WX">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CHARMETRICS_WX</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CHARMETRICS_WX</pre>
+<div class="block">The character metrics value.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.CHARMETRICS_WX">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CHARMETRICS_W0X">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CHARMETRICS_W0X</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CHARMETRICS_W0X</pre>
+<div class="block">The character metrics value.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.CHARMETRICS_W0X">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CHARMETRICS_W1X">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CHARMETRICS_W1X</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CHARMETRICS_W1X</pre>
+<div class="block">The character metrics value.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.CHARMETRICS_W1X">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CHARMETRICS_WY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CHARMETRICS_WY</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CHARMETRICS_WY</pre>
+<div class="block">The character metrics value.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.CHARMETRICS_WY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CHARMETRICS_W0Y">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CHARMETRICS_W0Y</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CHARMETRICS_W0Y</pre>
+<div class="block">The character metrics value.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.CHARMETRICS_W0Y">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CHARMETRICS_W1Y">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CHARMETRICS_W1Y</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CHARMETRICS_W1Y</pre>
+<div class="block">The character metrics value.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.CHARMETRICS_W1Y">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CHARMETRICS_W">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CHARMETRICS_W</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CHARMETRICS_W</pre>
+<div class="block">The character metrics value.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.CHARMETRICS_W">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CHARMETRICS_W0">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CHARMETRICS_W0</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CHARMETRICS_W0</pre>
+<div class="block">The character metrics value.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.CHARMETRICS_W0">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CHARMETRICS_W1">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CHARMETRICS_W1</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CHARMETRICS_W1</pre>
+<div class="block">The character metrics value.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.CHARMETRICS_W1">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CHARMETRICS_VV">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CHARMETRICS_VV</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CHARMETRICS_VV</pre>
+<div class="block">The character metrics value.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.CHARMETRICS_VV">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CHARMETRICS_N">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CHARMETRICS_N</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CHARMETRICS_N</pre>
+<div class="block">The character metrics value.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.CHARMETRICS_N">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CHARMETRICS_B">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CHARMETRICS_B</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CHARMETRICS_B</pre>
+<div class="block">The character metrics value.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.CHARMETRICS_B">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CHARMETRICS_L">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CHARMETRICS_L</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CHARMETRICS_L</pre>
+<div class="block">The character metrics value.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.CHARMETRICS_L">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="STD_HW">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STD_HW</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> STD_HW</pre>
+<div class="block">The character metrics value.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.STD_HW">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="STD_VW">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STD_VW</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> STD_VW</pre>
+<div class="block">The character metrics value.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.STD_VW">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="START_TRACK_KERN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>START_TRACK_KERN</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> START_TRACK_KERN</pre>
+<div class="block">This is the start of track kern data.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.START_TRACK_KERN">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="END_TRACK_KERN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>END_TRACK_KERN</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> END_TRACK_KERN</pre>
+<div class="block">This is the end of track kern data.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.END_TRACK_KERN">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="START_KERN_DATA">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>START_KERN_DATA</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> START_KERN_DATA</pre>
+<div class="block">This is the start of kern data.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.START_KERN_DATA">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="END_KERN_DATA">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>END_KERN_DATA</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> END_KERN_DATA</pre>
+<div class="block">This is the end of kern data.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.END_KERN_DATA">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="START_KERN_PAIRS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>START_KERN_PAIRS</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> START_KERN_PAIRS</pre>
+<div class="block">This is the start of kern pairs data.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.START_KERN_PAIRS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="END_KERN_PAIRS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>END_KERN_PAIRS</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> END_KERN_PAIRS</pre>
+<div class="block">This is the end of kern pairs data.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.END_KERN_PAIRS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="START_KERN_PAIRS0">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>START_KERN_PAIRS0</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> START_KERN_PAIRS0</pre>
+<div class="block">This is the start of kern pairs data.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.START_KERN_PAIRS0">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="START_KERN_PAIRS1">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>START_KERN_PAIRS1</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> START_KERN_PAIRS1</pre>
+<div class="block">This is the start of kern pairs data.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.START_KERN_PAIRS1">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="START_COMPOSITES">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>START_COMPOSITES</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> START_COMPOSITES</pre>
+<div class="block">This is the start compisites data section.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.START_COMPOSITES">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="END_COMPOSITES">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>END_COMPOSITES</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> END_COMPOSITES</pre>
+<div class="block">This is the end compisites data section.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.END_COMPOSITES">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CC">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CC</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CC</pre>
+<div class="block">This is a composite character.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.CC">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PCC">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PCC</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> PCC</pre>
+<div class="block">This is a composite charater part.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.PCC">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="KERN_PAIR_KP">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>KERN_PAIR_KP</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> KERN_PAIR_KP</pre>
+<div class="block">This is a kern pair.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.KERN_PAIR_KP">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="KERN_PAIR_KPH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>KERN_PAIR_KPH</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> KERN_PAIR_KPH</pre>
+<div class="block">This is a kern pair.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.KERN_PAIR_KPH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="KERN_PAIR_KPX">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>KERN_PAIR_KPX</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> KERN_PAIR_KPX</pre>
+<div class="block">This is a kern pair.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.KERN_PAIR_KPX">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="KERN_PAIR_KPY">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>KERN_PAIR_KPY</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> KERN_PAIR_KPY</pre>
+<div class="block">This is a kern pair.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.fontbox.afm.AFMParser.KERN_PAIR_KPY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="AFMParser(java.io.InputStream)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>AFMParser</h4>
+<pre>public&nbsp;AFMParser(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;in)</pre>
+<div class="block">Constructor.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>in</code> - The input stream to read the AFM document from.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="parse()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>parse</h4>
+<pre>public&nbsp;<a href="../../../../org/apache/fontbox/afm/FontMetrics.html" title="class in org.apache.fontbox.afm">FontMetrics</a>&nbsp;parse()
+                  throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">This will parse the AFM document. The input stream is closed
+ when the parsing is finished.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the parsed FontMetric</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is an IO error reading the document.</dd></dl>
+</li>
+</ul>
+<a name="parse(boolean)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>parse</h4>
+<pre>public&nbsp;<a href="../../../../org/apache/fontbox/afm/FontMetrics.html" title="class in org.apache.fontbox.afm">FontMetrics</a>&nbsp;parse(boolean&nbsp;reducedDataset)
+                  throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">This will parse the AFM document. The input stream is closed
+ when the parsing is finished.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>reducedDataset</code> - parse a reduced subset of data if set to true</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the parsed FontMetric</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is an IO error reading the document.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/AFMParser.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev Class</li>
+<li><a href="../../../../org/apache/fontbox/afm/CharMetric.html" title="class in org.apache.fontbox.afm"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/apache/fontbox/afm/AFMParser.html" target="_top">Frames</a></li>
+<li><a href="AFMParser.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2016 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>
