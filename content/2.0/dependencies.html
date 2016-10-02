@@ -85,6 +85,7 @@
                                 </ul>
                             </li>
                             <li><a href="/2.0/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/2.0/faq.html">FAQ</a></li>
                             <li><a href="/docs/2.0.3/javadocs/">API Docs</a></li>
                         </ul>
                     </li>
@@ -132,6 +133,14 @@
             <div class="col-xs-12 col-sm-9">
                 <h1 id="dependencies">Dependencies</h1>
 
+<h2 id="core-components">Core components</h2>
+
+<p class="alert alert-info">These components are needed during runtime, development and testing dependent on the details below.</p>
+
+<p>The three PDFBox components are named <code class="highlighter-rouge">pdfbox</code>, <code class="highlighter-rouge">fontbox</code> and <code class="highlighter-rouge">xmpbox</code>. The Maven groupId of all PDFBox components is org.apache.pdfbox.</p>
+
+<h3 id="minimum-requirement">Minimum Requirement</h3>
+
 <p>PDFBox has the following basic dependencies:</p>
 
 <ul>
@@ -144,6 +153,25 @@ or let commons-logging fall back to the standard <a href="http://java.sun.com/j2
 included in the Java platform.</p>
 
 <p>For <strong>PDFBox Preflight tests only</strong> <a href="https://commons.apache.org/proper/commons-io/">commons-io 2.4</a> is needed.</p>
+
+<h3 id="font-handling">Font Handling</h3>
+<p>For font handling the fontbox component is needed.</p>
+
+<h3 id="xmp-metadata">XMP Metadata</h3>
+<p>To support XMP metadata the xmpbox component is needed.</p>
+
+<h3 id="include-dependencies-using-maven">Include Dependencies using Maven</h3>
+<p>To add the pdfbox, fontbox, xmpbox and commons-logging jars to your application, the easiest thing is to declare the Maven dependency shown below. This gives you the main pdfbox library directly and the other required jars as transitive dependencies.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;dependency&gt;
+  &lt;groupId&gt;org.apache.pdfbox&lt;/groupId&gt;
+  &lt;artifactId&gt;pdfbox&lt;/artifactId&gt;
+  &lt;version&gt;...&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+</div>
+
+<p>Set the version field to the latest stable PDFBox version.</p>
 
 <h2 id="optional-components">Optional components</h2>
 
@@ -195,6 +223,17 @@ included in the Java platform.</p>
 <div class="highlighter-rouge"><pre class="highlight"><code>JCE unlimited strength jurisdiction policy files are not installed
 </code></pre>
 </div>
+
+<h2 id="dependencies-for-ant-builds">Dependencies for Ant builds</h2>
+
+<p>The above instructions expect that you’re using <a href="http://maven.apache.org/">Maven</a> or another build tool like
+<a href="http://ant.apache.org/ivy/">Ivy</a> that supports Maven dependencies.
+If you instead use tools like <a href="http://ant.apache.org/">Ant</a> where you need to explicitly include all the required
+library jars in your application, you’ll need to do something different.</p>
+
+<p>The easiest approach is to run <code class="highlighter-rouge">mvn dependency:copy-dependencies</code> inside the pdfbox directory of the latest PDFBox
+source release. This will copy all the required and optional libraries discussed above into the pdfbox/target/dependencies
+directory. You can then simply copy all the libraries you need from this directory to your application.</p>
 
             </div>
         </div>
