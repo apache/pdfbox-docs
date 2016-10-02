@@ -22,6 +22,14 @@ title:   Dependencies
 
 # Dependencies
 
+## Core components
+
+<p class="alert alert-info">These components are needed during runtime, development and testing dependent on the details below.</p>
+
+The three PDFBox components are named ```pdfbox```, ```fontbox``` and ```xmpbox```. The Maven groupId of all PDFBox components is org.apache.pdfbox.
+
+### Minimum Requirement
+
 PDFBox has the following basic dependencies:
 
 - Java 6
@@ -32,6 +40,23 @@ or let commons-logging fall back to the standard [java.util.logging API](http://
 included in the Java platform.
 
 For **PDFBox Preflight tests only** [commons-io 2.4](https://commons.apache.org/proper/commons-io/) is needed.
+
+### Font Handling
+For font handling the fontbox component is needed.
+
+### XMP Metadata
+To support XMP metadata the xmpbox component is needed.
+
+### Include Dependencies using Maven
+To add the pdfbox, fontbox, xmpbox and commons-logging jars to your application, the easiest thing is to declare the Maven dependency shown below. This gives you the main pdfbox library directly and the other required jars as transitive dependencies.
+
+    <dependency>
+      <groupId>org.apache.pdfbox</groupId>
+      <artifactId>pdfbox</artifactId>
+      <version>...</version>
+    </dependency>
+
+Set the version field to the latest stable PDFBox version.
 
 ## Optional components
 
@@ -59,7 +84,7 @@ Encrypting and sigining PDFs requires the *bcprov*, *bcmail* and *bcpkix* librar
         <artifactId>bcprov-jdk15on</artifactId>
         <version>1.54</version>
     </dependency>
-    
+
     <dependency>
         <groupId>org.bouncycastle</groupId>
         <artifactId>bcmail-jdk15on</artifactId>
@@ -77,3 +102,14 @@ Encrypting and sigining PDFs requires the *bcprov*, *bcmail* and *bcpkix* librar
 256-bit AES encryption requires a JDK with "unlimited strength" cryptography, which requires extra files to be installed. For JDK 7, see [Java Cryptography Extension (JCE)](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html). If these files are not installed, building PDFBox will throw an exception with the following message:
 
     JCE unlimited strength jurisdiction policy files are not installed
+
+## Dependencies for Ant builds
+
+The above instructions expect that you're using [Maven](http://maven.apache.org/) or another build tool like
+[Ivy](http://ant.apache.org/ivy/) that supports Maven dependencies.
+If you instead use tools like [Ant](http://ant.apache.org/) where you need to explicitly include all the required
+library jars in your application, you'll need to do something different.
+
+The easiest approach is to run ``mvn dependency:copy-dependencies`` inside the pdfbox directory of the latest PDFBox
+source release. This will copy all the required and optional libraries discussed above into the pdfbox/target/dependencies
+directory. You can then simply copy all the libraries you need from this directory to your application.
