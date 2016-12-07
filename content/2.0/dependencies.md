@@ -22,13 +22,13 @@ title:   Dependencies
 
 # Dependencies
 
-## Core components
+## Core Components
 
 <p class="alert alert-info">These components are needed during runtime, development and testing dependent on the details below.</p>
 
 The three PDFBox components are named ```pdfbox```, ```fontbox``` and ```xmpbox```. The Maven groupId of all PDFBox components is org.apache.pdfbox.
 
-### Minimum Requirement
+### Minimum Requirements
 
 PDFBox has the following basic dependencies:
 
@@ -47,18 +47,20 @@ For font handling the fontbox component is needed.
 ### XMP Metadata
 To support XMP metadata the xmpbox component is needed.
 
-### Include Dependencies using Maven
+### Include Dependencies Using Maven
 To add the pdfbox, fontbox, xmpbox and commons-logging jars to your application, the easiest thing is to declare the Maven dependency shown below. This gives you the main pdfbox library directly and the other required jars as transitive dependencies.
 
-    <dependency>
-      <groupId>org.apache.pdfbox</groupId>
-      <artifactId>pdfbox</artifactId>
-      <version>...</version>
-    </dependency>
+```xml
+<dependency>
+    <groupId>org.apache.pdfbox</groupId>
+    <artifactId>pdfbox</artifactId>
+    <version>...</version>
+</dependency>
+```
 
 Set the version field to the latest stable PDFBox version.
 
-## Optional components
+## Optional Components
 
 PDFBox does not ship with all features enabled. Third party components are necessary to get full support for certain functionality.
 
@@ -79,23 +81,25 @@ Maven dependencies for these components can be found in [parent/pom.xml](https:/
 
 Encrypting and sigining PDFs requires the *bcprov*, *bcmail* and *bcpkix* libraries from the [Legion of the Bouncy Castle](http://www.bouncycastle.org/). These can be included in your Maven project using the following dependencies:
 
-    <dependency>
-        <groupId>org.bouncycastle</groupId>
-        <artifactId>bcprov-jdk15on</artifactId>
-        <version>1.54</version>
-    </dependency>
+```xml
+<dependency>
+    <groupId>org.bouncycastle</groupId>
+    <artifactId>bcprov-jdk15on</artifactId>
+    <version>1.54</version>
+</dependency>
 
-    <dependency>
-        <groupId>org.bouncycastle</groupId>
-        <artifactId>bcmail-jdk15on</artifactId>
-        <version>1.54</version>
-    </dependency>
+<dependency>
+    <groupId>org.bouncycastle</groupId>
+    <artifactId>bcmail-jdk15on</artifactId>
+    <version>1.54</version>
+</dependency>
 
-    <dependency>
-        <groupId>org.bouncycastle</groupId>
-        <artifactId>bcpkix-jdk15on</artifactId>
-        <version>1.54</version>
-    </dependency>
+<dependency>
+    <groupId>org.bouncycastle</groupId>
+    <artifactId>bcpkix-jdk15on</artifactId>
+    <version>1.54</version>
+</dependency>
+```
 
 ### Java Cryptography Extension (JCE)
 
@@ -103,7 +107,7 @@ Encrypting and sigining PDFs requires the *bcprov*, *bcmail* and *bcpkix* librar
 
     JCE unlimited strength jurisdiction policy files are not installed
 
-## Dependencies for Ant builds
+## Dependencies for Ant Builds
 
 The above instructions expect that you're using [Maven](http://maven.apache.org/) or another build tool like
 [Ivy](http://ant.apache.org/ivy/) that supports Maven dependencies.

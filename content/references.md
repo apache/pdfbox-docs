@@ -25,7 +25,7 @@ title:   External Links
 This page lists projects that utilize PDFBox and articles that have been written about PDFBox. 
 Please file an [improvement issue](https://issues.apache.org/jira/browse/PDFBOX) to get new projects or articles added to this page, or to update the information on existing links.
 
-## Projects using PDFBox
+## Projects Using PDFBox
 
 | Project Name | License | Project Description |
 | --- | --- | --- |

@@ -20,7 +20,7 @@ layout:  default
 title:   Frequently Asked Questions (FAQ)
 ---
 
-# Frequently asked questions
+# Frequently Asked Questions
 
 ### General Questions
 
@@ -44,7 +44,7 @@ title:   Frequently Asked Questions (FAQ)
  - [Why do I get "You do not have permission to extract text" on some documents?](#permission)
  - [Can't we just extract the text without parsing the whole document or extract text as it is parsed?](#partially)
 
-### PDF rendering
+### PDF Rendering
 
  - [A drop shadow is missing or at the wrong position when rendering a page](#dropshadow)  
 
@@ -54,7 +54,7 @@ title:   Frequently Asked Questions (FAQ)
 
 ### I am getting the below Log4J warning message, how do I remove it? ###
 
-```java
+```
 log4j:WARN No appenders could be found for logger (org.apache.pdfbox.util.ResourceLoader).
 log4j:WARN Please initialize the log4j system properly.
 ```
@@ -64,13 +64,13 @@ See the [log4j documentation](http://logging.apache.org/log4j/1.2/manual.html) f
 
 PDFBox comes with a sample log4j configuration file.  To use it you set a system property like this
 
-```java
+```
 java -Dlog4j.configuration=log4j.xml org.apache.pdfbox.ExtractText <PDF-file> <output-text-file>
 ```
 
 If this is not working for you then you may have to specify the log4j config file using a URL path, like this:
 
-```java
+```
 log4j.configuration=file:///<path to config file>
 ```
 
