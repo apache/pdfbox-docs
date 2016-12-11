@@ -47,7 +47,8 @@ title:   Frequently Asked Questions (FAQ)
 
 ### PDF rendering
 
- - [A drop shadow is missing or at the wrong position when rendering a page](#dropshadow)  
+ - [A drop shadow is missing or at the wrong position when rendering a page](#dropshadow)
+ - [Why are some texts in poor quality and not antialiased?](#textantialias)
 
 ## General Questions
 
@@ -131,7 +132,7 @@ Make sure that you closed your content stream before saving.
 <a name="textorder"></a>
 
 
-## Why does the extracted text appear in the wrong sequence?
+### Why does the extracted text appear in the wrong sequence?
 
 By default, text extraction is done in the same sequence as the text in the PDF page content stream.
 PDF is a graphic format, not a text format, and unlike HTML, it has no requirements that text one on page
@@ -197,4 +198,14 @@ the word "Hello" is drawn.
 
 ### A drop shadow is missing or at the wrong position when rendering a page
 
-Please attach your file in the [PDFBOX-3000](https://issues.apache.org/jira/browse/PDFBOX-3000) issue
+Please attach your file in the [PDFBOX-3000](https://issues.apache.org/jira/browse/PDFBOX-3000) issue.
+
+<a name="textantialias"></a>
+
+### Why are some texts in poor quality and not antialiased?
+
+This is because in some PDFs (e.g. the one in PDFBOX-2814 <https://issues.apache.org/jira/browse/PDFBOX-2814>), text is not
+rendered directly, but as a shaped clipping from a background. Java graphics does not support "soft clipping"
+<https://bugs.openjdk.java.net/browse/JDK-4212743>, and because of that, the edges are not looking smooth.
+Soft clipping could be achieved with some extra steps <https://community.oracle.com/blogs/campbell/2006/07/19/java-2d-trickery-soft-clipping>,
+but these would cost additional time and memory space. You can have a higher quality by rendering at a higher dpi and then downscale the image.
