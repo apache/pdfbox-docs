@@ -38,6 +38,7 @@ title:   Frequently Asked Questions (FAQ)
 
 ### Text Extraction
 
+ - [Why does the extracted text appear in the wrong sequence?](#textorder)
  - [How come I am not getting any text from the PDF document?](#notext)
  - [How come I am getting gibberish(G38G43G36G51G5) when extracting text?](#gibberish)
  - [What does "java.io.IOException: Can't handle font width" mean?](#fontwidth)
@@ -126,6 +127,16 @@ PDType0Font.load(), see also in the EmbeddedFonts.java example in the source cod
 Make sure that you closed your content stream before saving.
 
 ## Text Extraction
+
+<a name="textorder"></a>
+
+
+## Why does the extracted text appear in the wrong sequence?
+
+By default, text extraction is done in the same sequence as the text in the PDF page content stream.
+PDF is a graphic format, not a text format, and unlike HTML, it has no requirements that text one on page
+be rendered in a certain order. The order is the one that was determined by the software that created the PDF.
+To get text sorted from left to right and top to botton, use `setSortByPosition(true)`.
 
 <a name="notext"></a>
 
