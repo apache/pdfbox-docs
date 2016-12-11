@@ -180,36 +180,36 @@ Alternatively, <a href="http://www.apache.org/mirrors/">view the complete list o
         <a href="http://www.apache.org/dist/pdfbox/1.8.13/xmpbox-1.8.13.jar.md5">MD5</a>
         <a href="http://www.apache.org/dist/pdfbox/1.8.13/xmpbox-1.8.13.jar.sha">SHA1</a>
     </li>
-            
+
 </ul>
 
 <h3>Verify</h3>
 
 <p>
-    It is essential that you verify the integrity of the downloaded files using the PGP signatures or 
+    It is essential that you verify the integrity of the downloaded files using the PGP signatures or
     MD5 and SHA1 checksums. Please read <a href="http://httpd.apache.org/dev/verification.html">Verifying Apache HTTP Server Releases</a>
     for more information on why you should verify our releases.
 </p>
 
 <p>
-    The PGP signatures can be verified using PGP or GPG. First download the 
-    <a href="http://www.apache.org/dist/pdfbox/KEYS">KEYS</a> file as well as the .asc signature files for the 
+    The PGP signatures can be verified using PGP or GPG. First download the
+    <a href="http://www.apache.org/dist/pdfbox/KEYS">KEYS</a> file as well as the .asc signature files for the
     relevant release packages. Make sure you get these
-    files from the <a href="http://www.apache.org/dist/pdfbox">main distribution directory</a>, rather than 
+    files from the <a href="http://www.apache.org/dist/pdfbox">main distribution directory</a>, rather than
     from a mirror. Then verify the signatures using
 </p>
 
 <pre>
 % pgpk -a KEYS
 % pgpv pdfbox-X.Y.Z-src.zip.asc
-</pre> 
+</pre>
 
 or
 
 <pre>
 % pgp -ka KEYS
 % pgp pdfbox-X.Y.Z-src.zip.asc
-</pre> 
+</pre>
 
 or
 
@@ -222,8 +222,8 @@ or
 <h2>Previous releases</h2>
 
 <p>
-    Previous Apache releases (starting with version `0.8.0-incubating`) are available in the <a href="http://archive.apache.org/dist/pdfbox/">release archive</a>. 
-    Older releases (up to version `0.7.3`) published from SourceForge are still available on 
+    Previous Apache releases (starting with version `0.8.0-incubating`) are available in the <a href="http://archive.apache.org/dist/pdfbox/">release archive</a>.
+    Older releases (up to version `0.7.3`) published from SourceForge are still available on
     <a href="http://sourceforge.net/projects/pdfbox/files/PDFBox/">SourceForge Files</a>.
 </p>
 
@@ -244,7 +244,7 @@ svn checkout http://svn.apache.org/repos/asf/pdfbox/trunk/
     We also have a read-only <a href="http://git.apache.org/">Git mirror</a> which is further mirrored to GitHub as <a href="https://github.com/apache/pdfbox">apache/pdfbox</a>.
 </p>
 
-<a name="#snapshot"></a>
+<a name="snapshot"></a>
 <h2>Latest development snapshot</h2>
 
 <p>
@@ -272,6 +272,6 @@ Section 740.13) for both object code and source code.
 </p>
 
 <ul>
-    <li>Apache PDFBox uses the Java Cryptography Architecture (JCA) and the Bouncy Castle libraries for handling encryption in PDF documents. 
+    <li>Apache PDFBox uses the Java Cryptography Architecture (JCA) and the Bouncy Castle libraries for handling encryption in PDF documents.
         </li>
 </ul>
