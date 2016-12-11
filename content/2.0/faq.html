@@ -156,6 +156,7 @@
 <h3 id="text-extraction">Text Extraction</h3>
 
 <ul>
+  <li><a href="#textorder">Why does the extracted text appear in the wrong sequence?</a></li>
   <li><a href="#notext">How come I am not getting any text from the PDF document?</a></li>
   <li><a href="#gibberish">How come I am getting gibberish(G38G43G36G51G5) when extracting text?</a></li>
   <li><a href="#fontwidth">What does “java.io.IOException: Can’t handle font width” mean?</a></li>
@@ -167,6 +168,7 @@
 
 <ul>
   <li><a href="#dropshadow">A drop shadow is missing or at the wrong position when rendering a page</a></li>
+  <li><a href="#textantialias">Why are some texts in poor quality and not antialiased?</a></li>
 </ul>
 
 <h2 id="general-questions-1">General Questions</h2>
@@ -248,6 +250,15 @@ PDType0Font.load(), see also in the EmbeddedFonts.java example in the source cod
 
 <h2 id="text-extraction-1">Text Extraction</h2>
 
+<p><a name="textorder"></a></p>
+
+<h3 id="why-does-the-extracted-text-appear-in-the-wrong-sequence">Why does the extracted text appear in the wrong sequence?</h3>
+
+<p>By default, text extraction is done in the same sequence as the text in the PDF page content stream.
+PDF is a graphic format, not a text format, and unlike HTML, it has no requirements that text one on page
+be rendered in a certain order. The order is the one that was determined by the software that created the PDF.
+To get text sorted from left to right and top to botton, use <code class="highlighter-rouge">setSortByPosition(true)</code>.</p>
+
 <p><a name="notext"></a></p>
 
 <h3 id="how-come-i-am-not-getting-any-text-from-the-pdf-document">How come I am not getting any text from the PDF document?</h3>
@@ -311,7 +322,17 @@ the word “Hello” is drawn.</li>
 
 <h3 id="a-drop-shadow-is-missing-or-at-the-wrong-position-when-rendering-a-page">A drop shadow is missing or at the wrong position when rendering a page</h3>
 
-<p>Please attach your file in the <a href="https://issues.apache.org/jira/browse/PDFBOX-3000">PDFBOX-3000</a> issue</p>
+<p>Please attach your file in the <a href="https://issues.apache.org/jira/browse/PDFBOX-3000">PDFBOX-3000</a> issue.</p>
+
+<p><a name="textantialias"></a></p>
+
+<h3 id="why-are-some-texts-in-poor-quality-and-not-antialiased">Why are some texts in poor quality and not antialiased?</h3>
+
+<p>This is because in some PDFs (e.g. the one in PDFBOX-2814 <a href="https://issues.apache.org/jira/browse/PDFBOX-2814">https://issues.apache.org/jira/browse/PDFBOX-2814</a>), text is not
+rendered directly, but as a shaped clipping from a background. Java graphics does not support “soft clipping”
+<a href="https://bugs.openjdk.java.net/browse/JDK-4212743">https://bugs.openjdk.java.net/browse/JDK-4212743</a>, and because of that, the edges are not looking smooth.
+Soft clipping could be achieved with some extra steps <a href="https://community.oracle.com/blogs/campbell/2006/07/19/java-2d-trickery-soft-clipping">https://community.oracle.com/blogs/campbell/2006/07/19/java-2d-trickery-soft-clipping</a>,
+but these would cost additional time and memory space. You can have a higher quality by rendering at a higher dpi and then downscale the image.</p>
 
             </div>
         </div>
