@@ -139,28 +139,28 @@
 
 <p>This small sample shows how to encrypt a file so that it can be viewed, but not printed..</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="n">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="s">"filename.pdf"</span><span class="o">);</span>
+<p>``` java
+PDDocument doc = PDDocument.load(“filename.pdf”);</p>
 
-<span class="c1">// Define the length of the encryption key.</span>
-<span class="c1">// Possible values are 40, 128 or 256.</span>
-<span class="kt">int</span> <span class="n">keyLength</span> <span class="o">=</span> <span class="mi">256</span><span class="o">;</span>
-    
-<span class="n">AccessPermission</span> <span class="n">ap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AccessPermission</span><span class="o">();</span>
-        
-<span class="c1">// disable printing, everything else is allowed</span>
-<span class="n">ap</span><span class="o">.</span><span class="na">setCanPrint</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
-        
-<span class="c1">// owner password (to open the file with all permissions) is "12345"</span>
-<span class="c1">// user password (to open the file but with restricted permissions, is empty here) </span>
-<span class="n">StandardProtectionPolicy</span> <span class="n">spp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StandardProtectionPolicy</span><span class="o">(</span><span class="s">"12345"</span><span class="o">,</span> <span class="s">""</span><span class="o">,</span> <span class="n">ap</span><span class="o">);</span>
-<span class="n">spp</span><span class="o">.</span><span class="na">setEncryptionKeyLength</span><span class="o">(</span><span class="n">keyLength</span><span class="o">);</span>
-<span class="n">spp</span><span class="o">.</span><span class="na">setPermissions</span><span class="o">(</span><span class="n">ap</span><span class="o">);</span>
-<span class="n">doc</span><span class="o">.</span><span class="na">protect</span><span class="o">(</span><span class="n">spp</span><span class="o">);</span>
-        
-<span class="n">doc</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="s">"filename-encrypted.pdf"</span><span class="o">);</span>
-<span class="n">doc</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-</code></pre>
-</div>
+<p>// Define the length of the encryption key.
+// Possible values are 40, 128 or 256.
+int keyLength = 256;</p>
+
+<p>AccessPermission ap = new AccessPermission();</p>
+
+<p>// disable printing, everything else is allowed
+ap.setCanPrint(false);</p>
+
+<p>// owner password (to open the file with all permissions) is “12345”
+// user password (to open the file but with restricted permissions, is empty here) 
+StandardProtectionPolicy spp = new StandardProtectionPolicy(“12345”, “”, ap);
+spp.setEncryptionKeyLength(keyLength);
+spp.setPermissions(ap);
+doc.protect(spp);</p>
+
+<p>doc.save(“filename-encrypted.pdf”);
+doc.close();
+```</p>
 
             </div>
         </div>
