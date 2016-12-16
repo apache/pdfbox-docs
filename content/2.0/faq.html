@@ -177,25 +177,25 @@
 
 <h3 id="i-am-getting-the-below-log4j-warning-message-how-do-i-remove-it">I am getting the below Log4J warning message, how do I remove it?</h3>
 
-<p><code class="highlighter-rouge">java
-log4j:WARN No appenders could be found for logger (org.apache.pdfbox.util.ResourceLoader).
-log4j:WARN Please initialize the log4j system properly.
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nl">log4j:</span><span class="n">WARN</span> <span class="n">No</span> <span class="n">appenders</span> <span class="n">could</span> <span class="n">be</span> <span class="n">found</span> <span class="k">for</span> <span class="n">logger</span> <span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">pdfbox</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">ResourceLoader</span><span class="o">).</span>
+<span class="nl">log4j:</span><span class="n">WARN</span> <span class="n">Please</span> <span class="n">initialize</span> <span class="n">the</span> <span class="n">log4j</span> <span class="n">system</span> <span class="n">properly</span><span class="o">.</span>
+</code></pre>
+</div>
 
 <p>This message means that you need to configure the log4j logging system.
 See the <a href="http://logging.apache.org/log4j/1.2/manual.html">log4j documentation</a> for more information.</p>
 
 <p>PDFBox comes with a sample log4j configuration file.  To use it you set a system property like this</p>
 
-<p><code class="highlighter-rouge">java
-java -Dlog4j.configuration=log4j.xml org.apache.pdfbox.ExtractText &lt;PDF-file&gt; &lt;output-text-file&gt;
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">java</span> <span class="o">-</span><span class="n">Dlog4j</span><span class="o">.</span><span class="na">configuration</span><span class="o">=</span><span class="n">log4j</span><span class="o">.</span><span class="na">xml</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">pdfbox</span><span class="o">.</span><span class="na">ExtractText</span> <span class="o">&lt;</span><span class="n">PDF</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">-</span><span class="n">text</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span>
+</code></pre>
+</div>
 
 <p>If this is not working for you then you may have to specify the log4j config file using a URL path, like this:</p>
 
-<p><code class="highlighter-rouge">java
-log4j.configuration=file:///&lt;path to config file&gt;
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">log4j</span><span class="o">.</span><span class="na">configuration</span><span class="o">=</span><span class="nl">file:</span><span class="c1">///&lt;path to config file&gt;</span>
+</code></pre>
+</div>
 
 <p><a name="threadsafe"></a></p>
 
@@ -215,20 +215,20 @@ don’t then the document will not be closed properly.  Also, you must close all
 PDDocument objects that get created.  The following code creates <strong>two</strong>
 PDDocument objects; one from the “new PDDocument()” and the second by the load method.</p>
 
-<p><code class="highlighter-rouge">java
-PDDocument doc = new PDDocument();
-try
-{
-   doc = PDDocument.load( "my.pdf" );
-}
-finally
-{
-   if( doc != null )
-   {
-      doc.close();
-   }
-}
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDDocument</span><span class="o">();</span>
+<span class="k">try</span>
+<span class="o">{</span>
+   <span class="n">doc</span> <span class="o">=</span> <span class="n">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span> <span class="s">"my.pdf"</span> <span class="o">);</span>
+<span class="o">}</span>
+<span class="k">finally</span>
+<span class="o">{</span>
+   <span class="k">if</span><span class="o">(</span> <span class="n">doc</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">)</span>
+   <span class="o">{</span>
+      <span class="n">doc</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
 
 <h2 id="font-handling-1">Font Handling</h2>
 
