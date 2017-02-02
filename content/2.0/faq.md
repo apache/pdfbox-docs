@@ -38,6 +38,7 @@ title:   Frequently Asked Questions (FAQ)
 
 ### Text Extraction
 
+ - [Why does the extracted text appear in the wrong sequence?](#textorder)
  - [How come I am not getting any text from the PDF document?](#notext)
  - [How come I am getting gibberish(G38G43G36G51G5) when extracting text?](#gibberish)
  - [What does "java.io.IOException: Can't handle font width" mean?](#fontwidth)
@@ -46,7 +47,8 @@ title:   Frequently Asked Questions (FAQ)
 
 ### PDF Rendering
 
- - [A drop shadow is missing or at the wrong position when rendering a page](#dropshadow)  
+ - [A drop shadow is missing or at the wrong position when rendering a page](#dropshadow)
+ - [Why are some texts in poor quality and not antialiased?](#textantialias)
 
 ## General Questions
 
@@ -127,6 +129,16 @@ Make sure that you closed your content stream before saving.
 
 ## Text Extraction
 
+<a name="textorder"></a>
+
+
+### Why does the extracted text appear in the wrong sequence?
+
+By default, text extraction is done in the same sequence as the text in the PDF page content stream.
+PDF is a graphic format, not a text format, and unlike HTML, it has no requirements that text one on page
+be rendered in a certain order. The order is the one that was determined by the software that created the PDF.
+To get text sorted from left to right and top to botton, use `setSortByPosition(true)`.
+
 <a name="notext"></a>
 
 ### How come I am not getting any text from the PDF document? ###
@@ -186,4 +198,14 @@ the word "Hello" is drawn.
 
 ### A drop shadow is missing or at the wrong position when rendering a page
 
-Please attach your file in the [PDFBOX-3000](https://issues.apache.org/jira/browse/PDFBOX-3000) issue
+Please attach your file in the [PDFBOX-3000](https://issues.apache.org/jira/browse/PDFBOX-3000) issue.
+
+<a name="textantialias"></a>
+
+### Why are some texts in poor quality and not antialiased?
+
+This is because in some PDFs (e.g. the one in PDFBOX-2814 <https://issues.apache.org/jira/browse/PDFBOX-2814>), text is not
+rendered directly, but as a shaped clipping from a background. Java graphics does not support "soft clipping"
+<https://bugs.openjdk.java.net/browse/JDK-4212743>, and because of that, the edges are not looking smooth.
+Soft clipping could be achieved with some extra steps <https://community.oracle.com/blogs/campbell/2006/07/19/java-2d-trickery-soft-clipping>,
+but these would cost additional time and memory space. You can have a higher quality by rendering at a higher dpi and then downscale the image.

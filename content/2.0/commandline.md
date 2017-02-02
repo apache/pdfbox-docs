@@ -201,11 +201,13 @@ This application will send a pdf document to the printer.
 
 Usage: ``java -jar pdfbox-app-2.y.z.jar PrintPDF [OPTIONS] <inputfile>``
 
-| Command-Line Parameter | Description |
-| --- | --- |
-| -password | The password to decrypt the PDF. |
-| -silentPrint | Print the PDF without prompting for a printer. |
-| inputfile | The PDF file to print. |
+| Command-Line Parameter | Default | Description |
+| --- | --- | --- |
+| -password | | The password to decrypt the PDF. |
+| -silentPrint | | Print the PDF without prompting for a printer. |
+| -printerName ``<name>`` | | Print to specified printer. |
+| -orientation [auto &#124; portrait &#124; landscape] | auto | Print using orientation. |
+| inputfile | | The PDF file to print. |
 
 ## TextToPDF ##
 
