@@ -195,7 +195,8 @@ Usage: ``java -jar pdfbox-app-2.y.z.jar PDFToImage [OPTIONS] <PDF file>``
 | -page | | The only page to extract (1-based). |
 | -dpi | detected from screen (or 96 if headless) | DPI resolution of exported images. |
 | -color | rgb | The color depth (valid: bilevel, gray, rgb, rgba). |
-|  -time | | Prints timing information to stdout. |
+| -cropbox \<int\> \<int\> \<int\> \<int\> | | The page area to export. |
+| -time | | Prints timing information to stdout. |
 
 ## PrintPDF ##
 
