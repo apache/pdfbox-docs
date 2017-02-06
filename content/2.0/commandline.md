@@ -192,8 +192,10 @@ Usage: ``java -jar pdfbox-app-2.y.z.jar PDFToImage [OPTIONS] <PDF file>``
 | -outputPrefix | Name of PDF document | The prefix to the image file. |
 | -startPage | 1 | The first page to convert, one based. |
 | -endPage | Integer.MAX_INT | The last page to convert, one based. |
+| -page | | The only page to extract (1-based). |
 | -dpi | detected from screen (or 96 if headless) | DPI resolution of exported images. |
 | -color | rgb | The color depth (valid: bilevel, gray, rgb, rgba). |
+|  -time | | Prints timing information to stdout. |
 
 ## PrintPDF ##
 
