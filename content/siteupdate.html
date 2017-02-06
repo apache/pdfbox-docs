@@ -23,7 +23,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command line utilities. Apache PDFBox is published under the Apache License v2.0.
+    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command-line utilities. Apache PDFBox is published under the Apache License v2.0.
 ">
 
     <title>Apache PDFBox | Updating the Website</title>
@@ -84,7 +84,7 @@
                                     <li><a href="/2.0/cookbook/encryption.html">Document Encryption</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/2.0/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/2.0/faq.html">FAQ</a></li>
                             <li><a href="/docs/2.0.3/javadocs/">API Docs</a></li>
                         </ul>
@@ -104,10 +104,10 @@
                                     <li><a href="/1.8/cookbook/workingwithmetadata.html">Working with Metadata</a></li>
                                     <li><a href="/1.8/cookbook/workingwithattachments.html">Working with Attachments</a></li>
                                     <li><a href="/1.8/cookbook/pdfavalidation.html">PDF/A Validation</a></li>
-                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A document</a></li>
+                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A Document</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/1.8/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/1.8/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/docs/1.8.12/javadocs/">API Docs</a></li>
                             <li><a href="/1.8/faq.html">FAQ</a></li>
                         </ul>
@@ -133,9 +133,9 @@
             <div class="col-xs-12 col-sm-9">
                 <h1 id="updating-the-pdfbox-website">Updating the PDFBox Website</h1>
 
-<p>The content for the PDFBox website is kept in a <a href="https://git-wip-us.apache.org/repos/asf/pdfbox-docs">git repository</a> which is also mirrored to <a href="https://github.com/apache/pdfbox-docs">GitHub</a>. The site is split into two parts: the static content and the Javadoc for the PDFBox API. Both parts are build independently as further described below.</p>
+<p>The content for the PDFBox website is kept in a <a href="https://git-wip-us.apache.org/repos/asf/pdfbox-docs">Git repository</a> which is also mirrored to <a href="https://github.com/apache/pdfbox-docs">GitHub</a>. The site is split into two parts: the static content and the Javadoc for the PDFBox API. Both parts are build independently as further described below.</p>
 
-<h2 id="project-info">Project info</h2>
+<h2 id="project-info">Project Info</h2>
 <p>The site is based on <a href="http://jekyllrb.com">Jekyll</a>. So you have to be familiar with the <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> template language and have Jekyll (ver. 2+) installed to contribute to the project.</p>
 
 <h2 id="contribute">Contribute</h2>
@@ -146,14 +146,14 @@
 <h3 id="install-jekyll">Install Jekyll</h3>
 <p>Follow the instructions available on the <a href="http://jekyllrb.com">Jekyll</a> website.</p>
 
-<h3 id="check-out-from-the-git-repository">Check out from the git repository</h3>
-<p>Before you can edit the site, you need to check it out from the git repository:</p>
+<h3 id="checkout-from-the-git-repository">Checkout from the Git Repository</h3>
+<p>Before you can edit the site, you need to check it out from the Git repository:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>git clone https://git-wip-us.apache.org/repos/asf/pdfbox-docs
 </code></pre>
 </div>
 
-<h3 id="local-changes">Local changes</h3>
+<h3 id="local-changes">Local Changes</h3>
 <p>You can now do the changes and additions to the sources of the PDFBox website. To test these locally use</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>jekyll serve
@@ -166,16 +166,16 @@
 </code></pre>
 </div>
 
-<h3 id="publish-the-website-for-comitters-only">Publish the website (for comitters only)</h3>
+<h3 id="publish-the-website-for-comitters-only">Publish the Website (For Comitters Only)</h3>
 <p>After you have done the local changes follow these steps to publish the content:</p>
 
 <p>Add the following server configuration in your ~/.m2/settings.xml file</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;server&gt;
-  &lt;id&gt;pdfbox-site&lt;/id&gt;
-  &lt;username&gt;** USERNAME **&lt;/username&gt;
-  &lt;password&gt;** PASSWORD **&lt;/password&gt;
-&lt;/server&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;server&gt;</span>
+  <span class="nt">&lt;id&gt;</span>pdfbox-site<span class="nt">&lt;/id&gt;</span>
+  <span class="nt">&lt;username&gt;</span>** USERNAME **<span class="nt">&lt;/username&gt;</span>
+  <span class="nt">&lt;password&gt;</span>** PASSWORD **<span class="nt">&lt;/password&gt;</span>
+<span class="nt">&lt;/server&gt;</span>
 </code></pre>
 </div>
 
@@ -183,20 +183,20 @@
 
 <p class="alert alert-warning">The password should be encrypted following <a href="https://maven.apache.org/guides/mini/guide-encryption.html">Maven Password Encryption</a></p>
 
-<p>Ensure that the new website content is build locally</p>
+<p>Ensure that the new website content can build locally</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>jekyll build
-~~~
-
-This will read the sources and generate the new content in the ``./staging`` directory.
-
-When you are happy with the new content update the source repository
-
 </code></pre>
 </div>
-<p>git commit -m “…”
+
+<p>This will read the sources and generate the new content in the <code class="highlighter-rouge">./staging</code> directory.</p>
+
+<p>When you are happy with the new content update the source repository</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git commit -m "..."
 git push origin master
-~~~</p>
+</code></pre>
+</div>
 
 <p>Upload the new content to the production site</p>
 
@@ -207,7 +207,7 @@ git push origin master
 <p>This will checkout the current content into the <code class="highlighter-rouge">./target</code>directory, apply the changes from <code class="highlighter-rouge">./staging</code> and publish
 the changes to the PDFBox production website.</p>
 
-<h3 id="update-the-javadocs-for-pdfbox-2x">Update the JavaDocs for PDFBOX 2.x</h3>
+<h3 id="update-the-javadocs-for-pdfbox-2x">Update the JavaDocs for PDFBox 2.x</h3>
 <p>To publish the javadocs follow these steps:</p>
 
 <p>Run</p>

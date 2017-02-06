@@ -23,7 +23,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command line utilities. Apache PDFBox is published under the Apache License v2.0.
+    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command-line utilities. Apache PDFBox is published under the Apache License v2.0.
 ">
 
     <title>Apache PDFBox | Cookbook - Working with Metadata</title>
@@ -84,7 +84,7 @@
                                     <li><a href="/2.0/cookbook/encryption.html">Document Encryption</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/2.0/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/2.0/faq.html">FAQ</a></li>
                             <li><a href="/docs/2.0.3/javadocs/">API Docs</a></li>
                         </ul>
@@ -104,10 +104,10 @@
                                     <li><a href="/1.8/cookbook/workingwithmetadata.html">Working with Metadata</a></li>
                                     <li><a href="/1.8/cookbook/workingwithattachments.html">Working with Attachments</a></li>
                                     <li><a href="/1.8/cookbook/pdfavalidation.html">PDF/A Validation</a></li>
-                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A document</a></li>
+                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A Document</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/1.8/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/1.8/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/docs/1.8.12/javadocs/">API Docs</a></li>
                             <li><a href="/1.8/faq.html">FAQ</a></li>
                         </ul>
@@ -161,9 +161,9 @@ provides a high level API to that information:</p>
 
 <h2 id="accessing-pdf-metadata">Accessing PDF Metadata</h2>
 
-<p>See class:org.apache.pdfbox.pdmodel.common.PDMetadata<br />
-See example:AddMetadataFromDocInfo<br />
-See Adobe Documentation:XMP Specification</p>
+<p>See class: org.apache.pdfbox.pdmodel.common.PDMetadata<br />
+See example: AddMetadataFromDocInfo<br />
+See Adobe Documentation: XMP Specification</p>
 
 <p>PDF documents can have XML metadata associated with certain objects within a PDF document.
 For example, the following PD Model objects have the ability to contain metadata:</p>
@@ -185,10 +185,10 @@ or set the XML metadata.</p>
 <span class="n">PDDocumentCatalog</span> <span class="n">catalog</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="na">getDocumentCatalog</span><span class="o">();</span>
 <span class="n">PDMetadata</span> <span class="n">metadata</span> <span class="o">=</span> <span class="n">catalog</span><span class="o">.</span><span class="na">getMetadata</span><span class="o">();</span>
 
-<span class="c1">//to read the XML metadata</span>
+<span class="c1">// To read the XML metadata</span>
 <span class="n">InputStream</span> <span class="n">xmlInputStream</span> <span class="o">=</span> <span class="n">metadata</span><span class="o">.</span><span class="na">createInputStream</span><span class="o">();</span>
 
-<span class="c1">//or to write new XML metadata</span>
+<span class="c1">// Or to write new XML metadata</span>
 <span class="n">InputStream</span> <span class="n">newXMPData</span> <span class="o">=</span> <span class="o">...;</span>
 <span class="n">PDMetadata</span> <span class="n">newMetadata</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDMetadata</span><span class="o">(</span><span class="n">doc</span><span class="o">,</span> <span class="n">newXMLData</span><span class="o">,</span> <span class="kc">false</span> <span class="o">);</span>
 <span class="n">catalog</span><span class="o">.</span><span class="na">setMetadata</span><span class="o">(</span> <span class="n">newMetadata</span> <span class="o">);</span>

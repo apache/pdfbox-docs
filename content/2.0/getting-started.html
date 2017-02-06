@@ -23,7 +23,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command line utilities. Apache PDFBox is published under the Apache License v2.0.
+    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command-line utilities. Apache PDFBox is published under the Apache License v2.0.
 ">
 
     <title>Apache PDFBox | Getting Started</title>
@@ -84,7 +84,7 @@
                                     <li><a href="/2.0/cookbook/encryption.html">Document Encryption</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/2.0/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/2.0/faq.html">FAQ</a></li>
                             <li><a href="/docs/2.0.3/javadocs/">API Docs</a></li>
                         </ul>
@@ -104,10 +104,10 @@
                                     <li><a href="/1.8/cookbook/workingwithmetadata.html">Working with Metadata</a></li>
                                     <li><a href="/1.8/cookbook/workingwithattachments.html">Working with Attachments</a></li>
                                     <li><a href="/1.8/cookbook/pdfavalidation.html">PDF/A Validation</a></li>
-                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A document</a></li>
+                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A Document</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/1.8/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/1.8/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/docs/1.8.12/javadocs/">API Docs</a></li>
                             <li><a href="/1.8/faq.html">FAQ</a></li>
                         </ul>
@@ -139,24 +139,24 @@
 
 <p>To use the latest release you’ll need to add the following dependency:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;dependency&gt;
-  &lt;groupId&gt;org.apache.pdfbox&lt;/groupId&gt;
-  &lt;artifactId&gt;pdfbox&lt;/artifactId&gt;
-  &lt;version&gt;2.0.4&lt;/version&gt;
-&lt;/dependency&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>org.apache.pdfbox<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>pdfbox<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>2.0.4<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
 </code></pre>
 </div>
 
 <h2 id="pdfbox-and-java-8">PDFBox and Java 8</h2>
 
-<p class="alert alert-warning">Important notice when using PDFBox with Java 8
-</p>
+<p class="alert alert-warning">Important notice when using PDFBox with Java 8</p>
+
 <p>Due to the change of the java color management module towards “LittleCMS”, users can experience slow performance in color operations.
-Solution: disable LittleCMS in favour of the old KCMS (Kodak Color Management System):</p>
+A solution is to disable LittleCMS in favor of the old KCMS (Kodak Color Management System) by:</p>
 
 <ul>
-  <li>start with <code class="highlighter-rouge">-Dsun.java2d.cmm=sun.java2d.cmm.kcms.KcmsServiceProvider</code>or call</li>
-  <li><code class="highlighter-rouge">System.setProperty("sun.java2d.cmm", "sun.java2d.cmm.kcms.KcmsServiceProvider");</code></li>
+  <li>Starting with <code class="highlighter-rouge">-Dsun.java2d.cmm=sun.java2d.cmm.kcms.KcmsServiceProvider</code> or</li>
+  <li>Calling <code class="highlighter-rouge">System.setProperty("sun.java2d.cmm", "sun.java2d.cmm.kcms.KcmsServiceProvider")</code></li>
 </ul>
 
 <p>Sources:<br />

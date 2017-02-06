@@ -23,7 +23,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command line utilities. Apache PDFBox is published under the Apache License v2.0.
+    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command-line utilities. Apache PDFBox is published under the Apache License v2.0.
 ">
 
     <title>Apache PDFBox | Dependencies</title>
@@ -84,7 +84,7 @@
                                     <li><a href="/2.0/cookbook/encryption.html">Document Encryption</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/2.0/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/2.0/faq.html">FAQ</a></li>
                             <li><a href="/docs/2.0.3/javadocs/">API Docs</a></li>
                         </ul>
@@ -104,10 +104,10 @@
                                     <li><a href="/1.8/cookbook/workingwithmetadata.html">Working with Metadata</a></li>
                                     <li><a href="/1.8/cookbook/workingwithattachments.html">Working with Attachments</a></li>
                                     <li><a href="/1.8/cookbook/pdfavalidation.html">PDF/A Validation</a></li>
-                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A document</a></li>
+                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A Document</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/1.8/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/1.8/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/docs/1.8.12/javadocs/">API Docs</a></li>
                             <li><a href="/1.8/faq.html">FAQ</a></li>
                         </ul>
@@ -133,13 +133,13 @@
             <div class="col-xs-12 col-sm-9">
                 <h1 id="dependencies">Dependencies</h1>
 
-<h2 id="core-components">Core components</h2>
+<h2 id="core-components">Core Components</h2>
 
 <p class="alert alert-info">These components are needed during runtime, development and testing dependent on the details below.</p>
 
 <p>The three PDFBox components are named <code class="highlighter-rouge">pdfbox</code>, <code class="highlighter-rouge">fontbox</code> and <code class="highlighter-rouge">xmpbox</code>. The Maven groupId of all PDFBox components is org.apache.pdfbox.</p>
 
-<h3 id="minimum-requirement">Minimum Requirement</h3>
+<h3 id="minimum-requirements">Minimum Requirements</h3>
 
 <p>PDFBox has the following basic dependencies:</p>
 
@@ -160,20 +160,20 @@ included in the Java platform.</p>
 <h3 id="xmp-metadata">XMP Metadata</h3>
 <p>To support XMP metadata the xmpbox component is needed.</p>
 
-<h3 id="include-dependencies-using-maven">Include Dependencies using Maven</h3>
+<h3 id="include-dependencies-using-maven">Include Dependencies Using Maven</h3>
 <p>To add the pdfbox, fontbox, xmpbox and commons-logging jars to your application, the easiest thing is to declare the Maven dependency shown below. This gives you the main pdfbox library directly and the other required jars as transitive dependencies.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;dependency&gt;
-  &lt;groupId&gt;org.apache.pdfbox&lt;/groupId&gt;
-  &lt;artifactId&gt;pdfbox&lt;/artifactId&gt;
-  &lt;version&gt;...&lt;/version&gt;
-&lt;/dependency&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.apache.pdfbox<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>pdfbox<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>...<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
 </code></pre>
 </div>
 
 <p>Set the version field to the latest stable PDFBox version.</p>
 
-<h2 id="optional-components">Optional components</h2>
+<h2 id="optional-components">Optional Components</h2>
 
 <p>PDFBox does not ship with all features enabled. Third party components are necessary to get full support for certain functionality.</p>
 
@@ -196,23 +196,23 @@ included in the Java platform.</p>
 
 <p>Encrypting and sigining PDFs requires the <em>bcprov</em>, <em>bcmail</em> and <em>bcpkix</em> libraries from the <a href="http://www.bouncycastle.org/">Legion of the Bouncy Castle</a>. These can be included in your Maven project using the following dependencies:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;dependency&gt;
-    &lt;groupId&gt;org.bouncycastle&lt;/groupId&gt;
-    &lt;artifactId&gt;bcprov-jdk15on&lt;/artifactId&gt;
-    &lt;version&gt;1.54&lt;/version&gt;
-&lt;/dependency&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.bouncycastle<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>bcprov-jdk15on<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>1.54<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
 
-&lt;dependency&gt;
-    &lt;groupId&gt;org.bouncycastle&lt;/groupId&gt;
-    &lt;artifactId&gt;bcmail-jdk15on&lt;/artifactId&gt;
-    &lt;version&gt;1.54&lt;/version&gt;
-&lt;/dependency&gt;
+<span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.bouncycastle<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>bcmail-jdk15on<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>1.54<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
 
-&lt;dependency&gt;
-    &lt;groupId&gt;org.bouncycastle&lt;/groupId&gt;
-    &lt;artifactId&gt;bcpkix-jdk15on&lt;/artifactId&gt;
-    &lt;version&gt;1.54&lt;/version&gt;
-&lt;/dependency&gt;
+<span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.bouncycastle<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>bcpkix-jdk15on<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>1.54<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
 </code></pre>
 </div>
 
@@ -224,7 +224,7 @@ included in the Java platform.</p>
 </code></pre>
 </div>
 
-<h2 id="dependencies-for-ant-builds">Dependencies for Ant builds</h2>
+<h2 id="dependencies-for-ant-builds">Dependencies for Ant Builds</h2>
 
 <p>The above instructions expect that you’re using <a href="http://maven.apache.org/">Maven</a> or another build tool like
 <a href="http://ant.apache.org/ivy/">Ivy</a> that supports Maven dependencies.

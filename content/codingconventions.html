@@ -23,7 +23,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command line utilities. Apache PDFBox is published under the Apache License v2.0.
+    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command-line utilities. Apache PDFBox is published under the Apache License v2.0.
 ">
 
     <title>Apache PDFBox | Coding Conventions</title>
@@ -84,7 +84,7 @@
                                     <li><a href="/2.0/cookbook/encryption.html">Document Encryption</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/2.0/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/2.0/faq.html">FAQ</a></li>
                             <li><a href="/docs/2.0.3/javadocs/">API Docs</a></li>
                         </ul>
@@ -104,10 +104,10 @@
                                     <li><a href="/1.8/cookbook/workingwithmetadata.html">Working with Metadata</a></li>
                                     <li><a href="/1.8/cookbook/workingwithattachments.html">Working with Attachments</a></li>
                                     <li><a href="/1.8/cookbook/pdfavalidation.html">PDF/A Validation</a></li>
-                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A document</a></li>
+                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A Document</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/1.8/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/1.8/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/docs/1.8.12/javadocs/">API Docs</a></li>
                             <li><a href="/1.8/faq.html">FAQ</a></li>
                         </ul>
@@ -286,23 +286,23 @@
 
 <p>Here’s an example of PDFBox’s formatting style:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>public class Foo extends Bar
-{
-    public static void main(String args[])
-    {
-        try
-        {
-            for (int i = 0; i &lt; args.length; i++)
-            {
-                System.out.println(Integer.parseInt(args[i]));
-            }
-        }
-        catch (NumberFormatException e)
-        {
-            e.printStackTrace();
-        }
-    }
-}
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Foo</span> <span class="kd">extends</span> <span class="n">Bar</span>
+<span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[])</span>
+    <span class="o">{</span>
+        <span class="k">try</span>
+        <span class="o">{</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">args</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+            <span class="o">{</span>
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">args</span><span class="o">[</span><span class="n">i</span><span class="o">]));</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="k">catch</span> <span class="o">(</span><span class="n">NumberFormatException</span> <span class="n">e</span><span class="o">)</span>
+        <span class="o">{</span>
+            <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
 </code></pre>
 </div>
 

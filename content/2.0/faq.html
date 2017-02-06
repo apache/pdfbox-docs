@@ -23,7 +23,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command line utilities. Apache PDFBox is published under the Apache License v2.0.
+    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command-line utilities. Apache PDFBox is published under the Apache License v2.0.
 ">
 
     <title>Apache PDFBox | Frequently Asked Questions (FAQ)</title>
@@ -84,7 +84,7 @@
                                     <li><a href="/2.0/cookbook/encryption.html">Document Encryption</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/2.0/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/2.0/faq.html">FAQ</a></li>
                             <li><a href="/docs/2.0.3/javadocs/">API Docs</a></li>
                         </ul>
@@ -104,10 +104,10 @@
                                     <li><a href="/1.8/cookbook/workingwithmetadata.html">Working with Metadata</a></li>
                                     <li><a href="/1.8/cookbook/workingwithattachments.html">Working with Attachments</a></li>
                                     <li><a href="/1.8/cookbook/pdfavalidation.html">PDF/A Validation</a></li>
-                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A document</a></li>
+                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A Document</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/1.8/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/1.8/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/docs/1.8.12/javadocs/">API Docs</a></li>
                             <li><a href="/1.8/faq.html">FAQ</a></li>
                         </ul>
@@ -131,7 +131,7 @@
                 </ul>
             </div>
             <div class="col-xs-12 col-sm-9">
-                <h1 id="frequently-asked-questions">Frequently asked questions</h1>
+                <h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
 
 <h3 id="general-questions">General Questions</h3>
 
@@ -164,7 +164,7 @@
   <li><a href="#partially">Can’t we just extract the text without parsing the whole document or extract text as it is parsed?</a></li>
 </ul>
 
-<h3 id="pdf-rendering">PDF rendering</h3>
+<h3 id="pdf-rendering">PDF Rendering</h3>
 
 <ul>
   <li><a href="#dropshadow">A drop shadow is missing or at the wrong position when rendering a page</a></li>
@@ -177,8 +177,8 @@
 
 <h3 id="i-am-getting-the-below-log4j-warning-message-how-do-i-remove-it">I am getting the below Log4J warning message, how do I remove it?</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nl">log4j:</span><span class="n">WARN</span> <span class="n">No</span> <span class="n">appenders</span> <span class="n">could</span> <span class="n">be</span> <span class="n">found</span> <span class="k">for</span> <span class="n">logger</span> <span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">pdfbox</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">ResourceLoader</span><span class="o">).</span>
-<span class="nl">log4j:</span><span class="n">WARN</span> <span class="n">Please</span> <span class="n">initialize</span> <span class="n">the</span> <span class="n">log4j</span> <span class="n">system</span> <span class="n">properly</span><span class="o">.</span>
+<div class="highlighter-rouge"><pre class="highlight"><code>log4j:WARN No appenders could be found for logger (org.apache.pdfbox.util.ResourceLoader).
+log4j:WARN Please initialize the log4j system properly.
 </code></pre>
 </div>
 
@@ -187,13 +187,13 @@ See the <a href="http://logging.apache.org/log4j/1.2/manual.html">log4j document
 
 <p>PDFBox comes with a sample log4j configuration file.  To use it you set a system property like this</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">java</span> <span class="o">-</span><span class="n">Dlog4j</span><span class="o">.</span><span class="na">configuration</span><span class="o">=</span><span class="n">log4j</span><span class="o">.</span><span class="na">xml</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">pdfbox</span><span class="o">.</span><span class="na">ExtractText</span> <span class="o">&lt;</span><span class="n">PDF</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">-</span><span class="n">text</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span>
+<div class="highlighter-rouge"><pre class="highlight"><code>java -Dlog4j.configuration=log4j.xml org.apache.pdfbox.ExtractText &lt;PDF-file&gt; &lt;output-text-file&gt;
 </code></pre>
 </div>
 
 <p>If this is not working for you then you may have to specify the log4j config file using a URL path, like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">log4j</span><span class="o">.</span><span class="na">configuration</span><span class="o">=</span><span class="nl">file:</span><span class="c1">///&lt;path to config file&gt;</span>
+<div class="highlighter-rouge"><pre class="highlight"><code>log4j.configuration=file:///&lt;path to config file&gt;
 </code></pre>
 </div>
 

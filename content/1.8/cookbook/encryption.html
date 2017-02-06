@@ -23,10 +23,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command line utilities. Apache PDFBox is published under the Apache License v2.0.
+    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command-line utilities. Apache PDFBox is published under the Apache License v2.0.
 ">
 
-    <title>Apache PDFBox | Cookbook - Encrypting a file</title>
+    <title>Apache PDFBox | Cookbook - Encrypting a File</title>
 
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/pygments-github.css" rel="stylesheet">
@@ -84,7 +84,7 @@
                                     <li><a href="/2.0/cookbook/encryption.html">Document Encryption</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/2.0/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/2.0/faq.html">FAQ</a></li>
                             <li><a href="/docs/2.0.3/javadocs/">API Docs</a></li>
                         </ul>
@@ -104,10 +104,10 @@
                                     <li><a href="/1.8/cookbook/workingwithmetadata.html">Working with Metadata</a></li>
                                     <li><a href="/1.8/cookbook/workingwithattachments.html">Working with Attachments</a></li>
                                     <li><a href="/1.8/cookbook/pdfavalidation.html">PDF/A Validation</a></li>
-                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A document</a></li>
+                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A Document</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/1.8/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/1.8/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/docs/1.8.12/javadocs/">API Docs</a></li>
                             <li><a href="/1.8/faq.html">FAQ</a></li>
                         </ul>
@@ -131,13 +131,13 @@
                 </ul>
             </div>
             <div class="col-xs-12 col-sm-9">
-                <h1 id="encrypting-a-file">Encrypting a file</h1>
+                <h1 id="encrypting-a-file">Encrypting a File</h1>
 
 <p>PDF encryption requires two passwords: the “user password” to open and view the file with restricted permissions, the “owner password” to access the file with all permission.</p>
 
-<h2 id="load-and-save-encrypted">Load and save encrypted</h2>
+<h2 id="load-and-save-encrypted">Load and Save Encrypted</h2>
 
-<p>This small sample shows how to encrypt a file so that it can be viewed, but not printed..</p>
+<p>This small sample shows how to encrypt a file so that it can be viewed, but not printed.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="n">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="s">"filename.pdf"</span><span class="o">);</span>
 
@@ -147,11 +147,11 @@
 
 <span class="n">AccessPermission</span> <span class="n">ap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AccessPermission</span><span class="o">();</span>
 
-<span class="c1">// disable printing, everything else is allowed</span>
+<span class="c1">// Disable printing, everything else is allowed</span>
 <span class="n">ap</span><span class="o">.</span><span class="na">setCanPrint</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
 
-<span class="c1">// owner password (to open the file with all permissions) is "12345"</span>
-<span class="c1">// user password (to open the file but with restricted permissions, is empty here) </span>
+<span class="c1">// Owner password (to open the file with all permissions) is "12345"</span>
+<span class="c1">// User password (to open the file but with restricted permissions, is empty here) </span>
 <span class="n">StandardProtectionPolicy</span> <span class="n">spp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StandardProtectionPolicy</span><span class="o">(</span><span class="s">"12345"</span><span class="o">,</span> <span class="s">""</span><span class="o">,</span> <span class="n">ap</span><span class="o">);</span>
 <span class="n">spp</span><span class="o">.</span><span class="na">setEncryptionKeyLength</span><span class="o">(</span><span class="n">keyLength</span><span class="o">);</span>
 <span class="n">spp</span><span class="o">.</span><span class="na">setPermissions</span><span class="o">(</span><span class="n">ap</span><span class="o">);</span>

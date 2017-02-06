@@ -23,10 +23,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command line utilities. Apache PDFBox is published under the Apache License v2.0.
+    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command-line utilities. Apache PDFBox is published under the Apache License v2.0.
 ">
 
-    <title>Apache PDFBox | Cookbook - Textextraction</title>
+    <title>Apache PDFBox | Cookbook - Text Extraction</title>
 
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/pygments-github.css" rel="stylesheet">
@@ -84,7 +84,7 @@
                                     <li><a href="/2.0/cookbook/encryption.html">Document Encryption</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/2.0/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/2.0/faq.html">FAQ</a></li>
                             <li><a href="/docs/2.0.3/javadocs/">API Docs</a></li>
                         </ul>
@@ -104,10 +104,10 @@
                                     <li><a href="/1.8/cookbook/workingwithmetadata.html">Working with Metadata</a></li>
                                     <li><a href="/1.8/cookbook/workingwithattachments.html">Working with Attachments</a></li>
                                     <li><a href="/1.8/cookbook/pdfavalidation.html">PDF/A Validation</a></li>
-                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A document</a></li>
+                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A Document</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/1.8/commandline.html">Command Line Tools</a></li>
+                            <li><a href="/1.8/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/docs/1.8.12/javadocs/">API Docs</a></li>
                             <li><a href="/1.8/faq.html">FAQ</a></li>
                         </ul>
@@ -131,13 +131,13 @@
                 </ul>
             </div>
             <div class="col-xs-12 col-sm-9">
-                <h1 id="textextraction">Textextraction</h1>
+                <h1 id="text-extraction">Text Extraction</h1>
 
 <h2 id="extracting-text">Extracting Text</h2>
 
-<p>See class:org.apache.pdfbox.util.PDFTextStripper<br />
-See class:org.apache.pdfbox.searchengine.lucene.LucenePDFDocument<br />
-See command line app:ExtractText</p>
+<p>See class: org.apache.pdfbox.util.PDFTextStripper<br />
+See class: org.apache.pdfbox.searchengine.lucene.LucenePDFDocument<br />
+See command-line app: ExtractText</p>
 
 <p>One of the main features of PDFBox is its ability to quickly and accurately extract text 
 from a variety of PDF documents. This functionality is encapsulated in the 
@@ -168,7 +168,7 @@ line application nor the LucenePDFDocument will be able to fulfill those require
 It is possible for users to utilize or extend the PDFTextStripper class to meet some of 
 these requirements.</p>
 
-<h3 id="limiting-the-extracted-text">Limiting The Extracted Text</h3>
+<h3 id="limiting-the-extracted-text">Limiting the Extracted Text</h3>
 
 <p>There are several ways that we can limit the text that is extracted during the extraction 
 process. The simplest is to specify the range of pages that you want to be extracted. 
