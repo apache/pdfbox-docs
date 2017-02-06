@@ -17,28 +17,29 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 
 layout:  default
-title:   Command Line Tools
+title:   Command-Line Tools
 ---
-# Command Line Tools
 
-PDFBox comes with a series of command line utilities. They are available as standard Java applications.
+# Command-Line Tools
+
+PDFBox comes with a series of command-line utilities. They are available as standard Java applications.
 
 See the [Dependencies](/2.0/dependencies.html) page for instructions on how to set your classpath in order to run
 PDFBox tools as Java applications.
 
-**Table of Contents**  
-[Decrypt](#decrypt)
-[Encrypt](#encrypt)
-[ExtractImages](#extractimages)
-[ExtractText](#extracttext)
-[OverlayPDF](#overlaypdf)
-[PDFDebugger](#pdfdebugger)
-[PDFMerger](#pdfmerger)
-[PDFSplit](#pdfsplit)
-[PDFToImage](#pdftoimage)
-[PrintPDF](#printpdf)
-[TextToPDF](#texttopdf)
-[WriteDecodedDoc](#writedecodeddoc)
+**Table of Contents**
+ - [Decrypt](#decrypt)
+ - [Encrypt](#encrypt)
+ - [ExtractImages](#extractimages)
+ - [ExtractText](#extracttext)
+ - [OverlayPDF](#overlaypdf)
+ - [PDFDebugger](#pdfdebugger)
+ - [PDFMerger](#pdfmerger)
+ - [PDFSplit](#pdfsplit)
+ - [PDFToImage](#pdftoimage)
+ - [PrintPDF](#printpdf)
+ - [TextToPDF](#texttopdf)
+ - [WriteDecodedDoc](#writedecodeddoc)
 
 ## Decrypt ##
 
@@ -46,9 +47,9 @@ This application will decrypt a PDF document.
 
 NOTE: You must have the owner password to decrypt the document!
 
-usage: ``java -jar pdfbox-app-2.y.z.jar Decrypt [OPTIONS] <inputfile> [outputfile]``
+Usage: ``java -jar pdfbox-app-2.y.z.jar Decrypt [OPTIONS] <inputfile> [outputfile]``
 
-| Command Line Parameter 	| Description |
+| Command-Line Parameter 	| Description |
 | ------------------------- | ----------- |
 | -password | Password to the PDF or certificate in keystore. |
 | -keyStore | Path to keystore that holds certificate to decrypt the document. This is only required if the document is encrypted with a certificate, otherwise only the password is required. |
@@ -60,9 +61,9 @@ usage: ``java -jar pdfbox-app-2.y.z.jar Decrypt [OPTIONS] <inputfile> [outputfil
 
 This application will encrypt a PDF document.
 
-usage: ``java -jar pdfbox-app-2.y.z.jar Encrypt [OPTIONS] <password> <inputfile>``
+Usage: ``java -jar pdfbox-app-2.y.z.jar Encrypt [OPTIONS] <password> <inputfile>``
 
-| Command Line Parameter | Default | Description |
+| Command-Line Parameter | Default | Description |
 | --- | --- | --- |
 | -O | | The owner password to the PDF, ignored if -certFile is specified. |
 | -U | | The user password to the PDF, ignored if -certFile is specified. |
@@ -83,9 +84,9 @@ usage: ``java -jar pdfbox-app-2.y.z.jar Encrypt [OPTIONS] <password> <inputfile>
 
 This application will extract all images from the given PDF document.
 
-usage: ``java -jar pdfbox-app-2.y.z.jar ExtractImages [OPTIONS] <inputfile> ``
+Usage: ``java -jar pdfbox-app-2.y.z.jar ExtractImages [OPTIONS] <inputfile> ``
 
-| Command Line Parameter | Default | Description |
+| Command-Line Parameter | Default | Description |
 | --- | --- | --- |
 | -password |  | The password to the PDF document. |
 | -prefix | PDF name | Image prefix to use. |
@@ -95,9 +96,9 @@ usage: ``java -jar pdfbox-app-2.y.z.jar ExtractImages [OPTIONS] <inputfile> ``
 
 This application will extract all text from the given PDF document.
 
-usage: ``java -jar pdfbox-app-2.y.z.jar ExtractText [OPTIONS] <inputfile> [Text file] ``
+Usage: ``java -jar pdfbox-app-2.y.z.jar ExtractText [OPTIONS] <inputfile> [Text file] ``
 
-| Command Line Parameter | Default | Description |
+| Command-Line Parameter | Default | Description |
 | --- | --- | --- |
 | -password |  | The password to the PDF document. |
 | -encoding | default encoding | The encoding type of the text file, e.g. ISO-8859-1, UTF-8, UTF-16BE. |
@@ -114,9 +115,9 @@ usage: ``java -jar pdfbox-app-2.y.z.jar ExtractText [OPTIONS] <inputfile> [Text 
 
 This application will overlay one document with the content of another document
 
-usage: ``java -jar pdfbox-app-2.y.z.jar OverlayPDF <input.pdf> [OPTIONS] <output.pdf>``
+Usage: ``java -jar pdfbox-app-2.y.z.jar OverlayPDF <input.pdf> [OPTIONS] <output.pdf>``
 
-| Command Line Parameter | Default | Description |
+| Command-Line Parameter | Default | Description |
 | --- | --- | --- |
 | inputfile | | The PDF file to be overlayed. |
 | defaultOverlay.pdf  | | Default overlay file. |
@@ -139,9 +140,9 @@ Examples:
 This application will take an existing PDF document and allows to analyze and inspect the internal structure.
 It is used as replacement for the PDFReader which was removed in 2.0.0.
 
-usage: ``java -jar pdfbox-app-2.y.z.jar PDFDebugger [inputfile] ``
+Usage: ``java -jar pdfbox-app-2.y.z.jar PDFDebugger [inputfile] ``
 
-| Command Line Parameter | Default | Description |
+| Command-Line Parameter | Default | Description |
 | --- | --- | --- |
 | -password | | The password to the PDF document. |
 | -viewstructure | | Activates the "view structure" view on startup. |
@@ -151,7 +152,7 @@ usage: ``java -jar pdfbox-app-2.y.z.jar PDFDebugger [inputfile] ``
 
 This application will take a list of pdf documents and merge them, saving the result in a new document.
 
-usage: ``java -jar pdfbox-app-2.y.z.jar PDFMerger <Source PDF files (2 ..n)> <Target PDF file>``
+Usage: ``java -jar pdfbox-app-2.y.z.jar PDFMerger <Source PDF files (2 ..n)> <Target PDF file>``
 
 ## PDFSplit ##
 
@@ -160,9 +161,9 @@ This application will take an existing PDF document and split it into a number o
 Per default the resulting files will be named after the original filenmame with `-<nr>` appended before the suffix.
 To override the filename use the `outputPrefix` option.
 
-usage: ``java -jar pdfbox-app-2.y.z.jar PDFSplit [OPTIONS] <PDF file>``
+Usage: ``java -jar pdfbox-app-2.y.z.jar PDFSplit [OPTIONS] <PDF file>``
 
-| Command Line Parameter | Default | Description |
+| Command-Line Parameter | Default | Description |
 | --- | --- | --- |
 | -password | | The password to the PDF document. |
 | -split | | Number of pages of every splitted part of the pdf.|
@@ -182,9 +183,9 @@ Examples:
 
 This application will create an image for every page in the PDF document.
 
-usage: ``java -jar pdfbox-app-2.y.z.jar PDFToImage [OPTIONS] <PDF file>``
+Usage: ``java -jar pdfbox-app-2.y.z.jar PDFToImage [OPTIONS] <PDF file>``
 
-| Command Line Parameter | Default | Description |
+| Command-Line Parameter | Default | Description |
 | --- | --- | --- |
 | -password | | The password to the PDF document.|
 | -imageType | jpg | The image type to write to. Currently only jpg or png. |
@@ -200,23 +201,23 @@ This application will send a pdf document to the printer.
 
 <p class="alert alert-info">You must have the correct permissions to print the document!</p>
 
-usage: ``java -jar pdfbox-app-2.y.z.jar PrintPDF [OPTIONS] <inputfile>``
+Usage: ``java -jar pdfbox-app-2.y.z.jar PrintPDF [OPTIONS] <inputfile>``
 
-| Command Line Parameter | Default | Description |
+| Command-Line Parameter | Default | Description |
 | --- | --- | --- |
 | -password | | The password to decrypt the PDF. |
 | -silentPrint | | Print the PDF without prompting for a printer. |
-| -printerName ``<name>`` |  | Print to specified printer |
-| -orientation [auto &#124; portrait &#124; landscape] |  auto | Print using orientation |
+| -printerName ``<name>`` | | Print to specified printer. |
+| -orientation [auto &#124; portrait &#124; landscape] | auto | Print using orientation. |
 | inputfile | | The PDF file to print. |
 
 ## TextToPDF ##
 
 This application will create a PDF document from a text file.
 
-usage: ``java -jar pdfbox-app-2.y.z.jar TextToPDF [OPTIONS] <outputfile> <textfile>``
+Usage: ``java -jar pdfbox-app-2.y.z.jar TextToPDF [OPTIONS] <outputfile> <textfile>``
 
-| Command Line Parameter | Default | Description |
+| Command-Line Parameter | Default | Description |
 | --- | --- | --- |
 | -standardFont | Helvetica | The font to use for the text. Either this or -ttf should be specified but not both. |
 | -ttf | | The TTF font to use for the text. Either this or -standardFont should be specified but not both. |
@@ -243,9 +244,9 @@ The following font names can be used for the parameter ``standardFont``:
 
 An application to decompress PDF documents.
 
-usage: ``java -jar pdfbox-app-2.y.z.jar WriteDecodedDoc <input-file> <output-file>``
+Usage: ``java -jar pdfbox-app-2.y.z.jar WriteDecodedDoc <input-file> <output-file>``
 
-| Command Line Parameter | Default | Description |
+| Command-Line Parameter | Default | Description |
 | --- | --- | --- |
 | -password |  | The password to the PDF document. |
 | <input-file> |  | The PDF file to decompress |

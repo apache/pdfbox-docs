@@ -50,9 +50,9 @@ System.out.println( "Trapped=" + info.getTrapped() );
 
 ## Accessing PDF Metadata
 
-See class:org.apache.pdfbox.pdmodel.common.PDMetadata  
-See example:AddMetadataFromDocInfo  
-See Adobe Documentation:XMP Specification  
+See class: org.apache.pdfbox.pdmodel.common.PDMetadata  
+See example: AddMetadataFromDocInfo  
+See Adobe Documentation: XMP Specification  
 
 PDF documents can have XML metadata associated with certain objects within a PDF document.
 For example, the following PD Model objects have the ability to contain metadata:
@@ -73,10 +73,10 @@ PDDocument doc = PDDocument.load( ... );
 PDDocumentCatalog catalog = doc.getDocumentCatalog();
 PDMetadata metadata = catalog.getMetadata();
 
-//to read the XML metadata
+// To read the XML metadata
 InputStream xmlInputStream = metadata.createInputStream();
 
-//or to write new XML metadata
+// Or to write new XML metadata
 InputStream newXMPData = ...;
 PDMetadata newMetadata = new PDMetadata(doc, newXMLData, false );
 catalog.setMetadata( newMetadata );

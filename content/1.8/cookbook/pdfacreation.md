@@ -17,18 +17,18 @@ license:   Licensed to the Apache Software Foundation (ASF) under one
            under the License.
 
 layout:    default
-title:     Create a valid PDF/A document
+title:     Create a Valid PDF/A Document
 ---
 
 # PDF/A Creation
 
-The Apache PDFBox API can be used to create a PDF/A File. PDF/A is a PDF file with some constraints to ensure its 
+The Apache PDFBox API can be used to create a PDF/A file. PDF/A is a PDF file with some constraints to ensure its 
 long time conservation. These constraints are described in ISO 19005.
 
 This small sample shows what should be added during creation of a PDF file to transform it in a valid PDF/A 
 document. The current example creates a valid PDF/A-1b document.
 
-## Load all the fonts used in document
+## Load All Fonts Used in the Document
 
 The PDF/A specification enforces that the fonts used in the document are present in the PDF File. You
 have to load them. As an example:
@@ -37,10 +37,11 @@ have to load them. As an example:
 InputStream fontStream = CreatePDFA.class.getResourceAsStream("/org/apache/pdfbox/resources/ttf/ArialMT.ttf");
 PDFont font = PDTrueTypeFont.loadTTF(doc, fontStream);
 ~~~
-## Including XMP metadata block
 
-It is imposed to have xmp metadata defined in the PDF. At least, the PDFA Schema (giving details on the version
-of PDF/A specification reached by the document) must be present. These lines create the xmp metadata for a
+## Include XMP Metadata Block
+
+It is required to have XMP metadata defined in the PDF. At least, the PDFA Schema (giving details on the version
+of PDF/A specification reached by the document) must be present. These lines create the XMP metadata for a
 PDF/A-1b document:
 
 ~~~java
@@ -53,13 +54,13 @@ pdfaid.setAbout("");
 metadata.importXMPMetadata(xmp);
 ~~~
 
-## Including color profile
+## Include Color Profile
 
 It is mandatory to include the color profile used by the document. Different profiles can be used. This 
 example takes one present in pdfbox:
 
 ~~~java
-// create output intent
+// Create output intent
 InputStream colorProfile = CreatePDFA.class.getResourceAsStream("/org/apache/pdfbox/resources/pdfa/sRGB Color Space Profile.icm");
 PDOutputIntent oi = new PDOutputIntent(doc, colorProfile); 
 oi.setInfo("sRGB IEC61966-2.1"); 

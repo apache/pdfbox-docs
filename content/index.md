@@ -25,7 +25,7 @@ title:   A Java PDF Library
     PDF documents. This project allows creation of new PDF documents, manipulation of existing
     documents and the ability to extract content from documents.
 
-    Apache PDFBox also includes several command line utilities.
+    Apache PDFBox also includes several command-line utilities.
     Apache PDFBox is published under the Apache License v2.0.</p>
 
 {% for post in site.categories.news limit:1 %}

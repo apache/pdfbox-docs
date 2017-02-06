@@ -117,23 +117,25 @@ Over the years the PDFBox project has come to adopt a number of coding conventio
 
 Here's an example of PDFBox's formatting style:
 
-    public class Foo extends Bar
+```java
+public class Foo extends Bar
+{
+    public static void main(String args[])
     {
-        public static void main(String args[])
+        try
         {
-            try
+            for (int i = 0; i < args.length; i++)
             {
-                for (int i = 0; i < args.length; i++)
-                {
-                    System.out.println(Integer.parseInt(args[i]));
-                }
-            }
-            catch (NumberFormatException e)
-            {
-                e.printStackTrace();
+                System.out.println(Integer.parseInt(args[i]));
             }
         }
+        catch (NumberFormatException e)
+        {
+            e.printStackTrace();
+        }
     }
+}
+```
 
 ## Eclipse Formatter
 

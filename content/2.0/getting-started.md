@@ -28,21 +28,23 @@ This content is under construction.
 
 To use the latest release you'll need to add the following dependency:
 
-    <dependency>
-      <groupId>org.apache.pdfbox</groupId>
-      <artifactId>pdfbox</artifactId>
-      <version>2.0.4</version>
-    </dependency>
+```xml
+<dependency>
+  <groupId>org.apache.pdfbox</groupId>
+  <artifactId>pdfbox</artifactId>
+  <version>2.0.4</version>
+</dependency>
+```
 
 ## PDFBox and Java 8 ##
 
-<p class="alert alert-warning">Important notice when using PDFBox with Java 8
-</p>
-Due to the change of the java color management module towards "LittleCMS", users can experience slow performance in color operations.
-Solution: disable LittleCMS in favour of the old KCMS (Kodak Color Management System):
+<p class="alert alert-warning">Important notice when using PDFBox with Java 8</p>
 
-- start with ``-Dsun.java2d.cmm=sun.java2d.cmm.kcms.KcmsServiceProvider``or call
-- ``System.setProperty("sun.java2d.cmm", "sun.java2d.cmm.kcms.KcmsServiceProvider");``
+Due to the change of the java color management module towards "LittleCMS", users can experience slow performance in color operations.
+A solution is to disable LittleCMS in favor of the old KCMS (Kodak Color Management System) by:
+
+ - Starting with ``-Dsun.java2d.cmm=sun.java2d.cmm.kcms.KcmsServiceProvider`` or
+ - Calling ``System.setProperty("sun.java2d.cmm", "sun.java2d.cmm.kcms.KcmsServiceProvider")``
 
 Sources:  
 http://www.subshell.com/en/subshell/blog/Wrong-Colors-in-Images-with-Java8-100.html  

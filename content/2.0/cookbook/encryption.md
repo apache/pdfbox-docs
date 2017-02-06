@@ -17,21 +17,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 
 layout:  default
-title:   Cookbook - Encrypting a file
+title:   Cookbook - Encrypting a File
 ---
 
-Encrypting a file
+Encrypting a File
 =================
 
 PDF encryption requires two passwords: the "user password" to open and view the file with restricted permissions, the "owner password" to access the file with all permission.
 
 
-Load and save encrypted
+Load and Save Encrypted
 -----------------------
 
-This small sample shows how to encrypt a file so that it can be viewed, but not printed..
+This small sample shows how to encrypt a file so that it can be viewed, but not printed.
 
-``` java
+```java
 PDDocument doc = PDDocument.load("filename.pdf");
 
 // Define the length of the encryption key.
@@ -43,8 +43,8 @@ AccessPermission ap = new AccessPermission();
 // disable printing, everything else is allowed
 ap.setCanPrint(false);
         
-// owner password (to open the file with all permissions) is "12345"
-// user password (to open the file but with restricted permissions, is empty here) 
+// Owner password (to open the file with all permissions) is "12345"
+// User password (to open the file but with restricted permissions, is empty here) 
 StandardProtectionPolicy spp = new StandardProtectionPolicy("12345", "", ap);
 spp.setEncryptionKeyLength(keyLength);
 spp.setPermissions(ap);

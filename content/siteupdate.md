@@ -22,9 +22,9 @@ title:   Updating the Website
 
 # Updating the PDFBox Website
 
-The content for the PDFBox website is kept in a [git repository](https://git-wip-us.apache.org/repos/asf/pdfbox-docs) which is also mirrored to [GitHub](https://github.com/apache/pdfbox-docs). The site is split into two parts: the static content and the Javadoc for the PDFBox API. Both parts are build independently as further described below.
+The content for the PDFBox website is kept in a [Git repository](https://git-wip-us.apache.org/repos/asf/pdfbox-docs) which is also mirrored to [GitHub](https://github.com/apache/pdfbox-docs). The site is split into two parts: the static content and the Javadoc for the PDFBox API. Both parts are build independently as further described below.
 
-## Project info
+## Project Info
 The site is based on [Jekyll](http://jekyllrb.com). So you have to be familiar with the [Markdown](http://daringfireball.net/projects/markdown/syntax) template language and have Jekyll (ver. 2+) installed to contribute to the project.
 
 ## Contribute
@@ -35,14 +35,14 @@ If you would like to enhance the website content you can submit a patch. To do s
 ### Install Jekyll
 Follow the instructions available on the [Jekyll](http://jekyllrb.com) website.
 
-### Check out from the git repository
-Before you can edit the site, you need to check it out from the git repository:
+### Checkout from the Git Repository
+Before you can edit the site, you need to check it out from the Git repository:
 
 ~~~
 git clone https://git-wip-us.apache.org/repos/asf/pdfbox-docs
 ~~~
 
-### Local changes
+### Local Changes
 You can now do the changes and additions to the sources of the PDFBox website. To test these locally use
 
 ~~~
@@ -55,24 +55,26 @@ which will compile the changes and run a local webserver at
 http://localhost:4000
 ~~~
 
-### Publish the website (for comitters only)
+### Publish the Website (For Comitters Only)
 After you have done the local changes follow these steps to publish the content:
 
 Add the following server configuration in your ~/.m2/settings.xml file
 
-	<server>
-	  <id>pdfbox-site</id>
-	  <username>** USERNAME **</username>
-	  <password>** PASSWORD **</password>
-	</server>
+~~~xml
+<server>
+  <id>pdfbox-site</id>
+  <username>** USERNAME **</username>
+  <password>** PASSWORD **</password>
+</server>
+~~~
 
 `pdfbox-site` is referenced from the PDFBox pom.xml file.
 
 <p class="alert alert-warning">The password should be encrypted following <a href="https://maven.apache.org/guides/mini/guide-encryption.html">Maven Password Encryption</a></p>
 
-Ensure that the new website content is build locally
+Ensure that the new website content can build locally
 
-~~~~
+~~~
 jekyll build
 ~~~
 
@@ -80,7 +82,7 @@ This will read the sources and generate the new content in the ``./staging`` dir
 
 When you are happy with the new content update the source repository
 
-~~~~
+~~~
 git commit -m "..."
 git push origin master
 ~~~
@@ -94,7 +96,7 @@ mvn scm-publish:publish-scm
 This will checkout the current content into the ``./target``directory, apply the changes from ``./staging`` and publish
 the changes to the PDFBox production website.
 
-### Update the JavaDocs for PDFBOX 2.x
+### Update the JavaDocs for PDFBox 2.x
 To publish the javadocs follow these steps:
 
 Run

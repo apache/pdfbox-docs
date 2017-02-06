@@ -34,7 +34,7 @@ There are some significant changes to the package structure of PDFBox:
 - all debugger related stuff was moved to the new package "pdfbox-debugger"
 - the new package "debugger-app" provides a standalone pre built binary for the debugger
 
-## Dependency updates
+## Dependency Updates
 All libraries on which PDFBox depends are updated to their latest stable versions:
 
 - Bouncy Castle 1.53

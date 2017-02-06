@@ -39,10 +39,9 @@ This is an ongoing effort and most/all deprecated methods will be removed in PDF
 In addition to the PDF parsing pdfbox does not always handle large PDF files well as some 
 of the references are implemented as int instead of long
 
-
 ## <span class="complete">Switch to Java 1.6</span>
 
-<span class="complete">PDFBox 2.0.0 has Java 6 as minimum requirement.</span>
+<span class="complete">PDFBox 2.0.0 has Java 6 as a minimum requirement.</span>
 
 ## <span class="complete">Break PDFBox into modules</span>
 
@@ -61,15 +60,15 @@ e.g. remove AWT from PDDocument.
 a PDF from top to bottom instead of respecting the XRef information.</span> The NonSequentialParser
 enhanced that situation but there is a need to have a cleaner foundation broken into several levels
 
-- io
-- tokenization
-- parsing according to structure
+- I/O
+- Tokenization
+- Parsing according to structure
 - COS level document
 - PD level document
-- add some self healing mechanism to process corrupt files
+- Add some self-healing mechanism to process corrupt files
 
-In addition handling documents which are not conforming shouldn't be part of the core parser
-but of a extentable approach e.g. by adding hooks to allow for handling parsing exceptions.
+In addition, handling documents which are not conforming shouldn't be part of the core parser
+but of an extensible approach, e.g. by adding hooks to allow for handling parsing exceptions.
 
 ## <span class="complete">Add the ability to create PDFs using unicode encoded text</span>
 
@@ -98,8 +97,8 @@ this is beneficial e.g. rendering, debugging ...
 - the caching parser would support applications such a PDFDebugger or PDFReader 
 
 ## Handling of PDF versions
+
 The current implementation is a mix of PDF 1.4 and some adhoc additions without a clear 
 distinction what is and is not supported. We could ad some support for explicitly handling
 versions in PDFBox e.g. my marking certain methods and properties to the PDF version support
 level. This could in addition be a good basis for PDF/A and other compliance checks. 
-

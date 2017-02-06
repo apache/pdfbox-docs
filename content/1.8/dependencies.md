@@ -22,15 +22,15 @@ title:   Dependencies
 
 # Dependencies
 
-PDFBox consists of a three related components and depends on a few external libraries. This page describes what these libraries are and how to include them in your application.
+PDFBox consists of three related components and depends on a few external libraries. This page describes what these libraries are and how to include them in your application.
 
-## Core components
+## Core Components
 
 <p class="alert alert-info">These components are needed during runtime, development and testing dependent on the details below.</p>
 
 The three PDFBox components are named ```pdfbox```, ```fontbox``` and ```jempbox```. The Maven groupId of all PDFBox components is org.apache.pdfbox.
 
-### Minimum Requirement
+### Minimum Requirements
 
 - Java 1.5
 - [commons-logging](http://commons.apache.org/logging/)
@@ -51,15 +51,17 @@ To support XMP metadata the jembox component is needed.
 To add the pdfbox, fontbox, jempbox and commons-logging jars to your application, the easiest thing is to declare the Maven dependency shown below. This gives you the main
 pdfbox library directly and the other required jars as transitive dependencies.
 
-    <dependency>
-      <groupId>org.apache.pdfbox</groupId>
-      <artifactId>pdfbox</artifactId>
-      <version>...</version>
-    </dependency>
+```xml
+<dependency>
+  <groupId>org.apache.pdfbox</groupId>
+  <artifactId>pdfbox</artifactId>
+  <version>...</version>
+</dependency>
+```
 
 Set the version field to the latest stable PDFBox version.
 
-## Optional dependencies
+## Optional Dependencies
 
 Some features in PDFBox depend on optional external libraries. You can enable these features simply by including the required libraries in the classpath of your application.
 
@@ -78,34 +80,36 @@ To write **TIFF** images a JAI ImageIO Core library will be needed.
 The most notable such optional feature is support for PDF encryption. Instead of implementing its own encryption algorithms, PDFBox uses libraries from the 
 [Legion of the Bouncy Castle](http://www.bouncycastle.org/). Both the bcprov and bcmail libraries are needed and can be included using the Maven dependencies shown below.
 
-    <dependency>
-      <groupId>org.bouncycastle</groupId>
-      <artifactId>bcprov-jdk15</artifactId>
-      <version>1.44</version>
-    </dependency>
-    <dependency>
-      <groupId>org.bouncycastle</groupId>
-      <artifactId>bcmail-jdk15</artifactId>
-      <version>1.44</version>
-    </dependency>
- 
-<br/>
+```xml
+<dependency>
+  <groupId>org.bouncycastle</groupId>
+  <artifactId>bcprov-jdk15</artifactId>
+  <version>1.44</version>
+</dependency>
+<dependency>
+  <groupId>org.bouncycastle</groupId>
+  <artifactId>bcmail-jdk15</artifactId>
+  <version>1.44</version>
+</dependency>
+```
 
-#### Support for bidirectional languages
+#### Support for Bidirectional Languages
 Another important optional feature is support for bidirectional languages like Arabic. PDFBox uses the ICU4J library from the 
 [International Components for Unicode](http://site.icu-project.org/) (ICU) project to support such languages in PDF documents. To add the ICU4J jar to your project, 
 use the following Maven dependency.
 
-    <dependency>
-      <groupId>com.ibm.icu</groupId>
-      <artifactId>icu4j</artifactId>
-      <version>3.8</version>
-    </dependency>
+```xml
+<dependency>
+  <groupId>com.ibm.icu</groupId>
+  <artifactId>icu4j</artifactId>
+  <version>3.8</version>
+</dependency>
+```
 
 PDFBox also contains extra support for use with the [Lucene](http://lucene.apache.org/) and [Ant](http://ant.apache.org/) projects. Since in these cases PDFBox is just an
 add-on feature to these projects, you should first set up your application to use Lucene or Ant and then add PDFBox support as described on this page.
 
-## Dependencies for Ant builds
+## Dependencies for Ant Builds
 
 The above instructions expect that you're using [Maven](http://maven.apache.org/) or another build tool like [Ivy](http://ant.apache.org/ivy/) that supports Maven dependencies.
 If you instead use tools like [Ant](http://ant.apache.org/) where you need to explicitly include all the required library jars in your application, you'll need to do

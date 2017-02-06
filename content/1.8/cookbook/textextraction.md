@@ -17,16 +17,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 
 layout:  default
-title:   Cookbook - Textextraction
+title:   Cookbook - Text Extraction
 ---
 
-# Textextraction
+# Text Extraction
 
 ## Extracting Text
 
-See class:org.apache.pdfbox.util.PDFTextStripper  
-See class:org.apache.pdfbox.searchengine.lucene.LucenePDFDocument  
-See command line app:ExtractText  
+See class: org.apache.pdfbox.util.PDFTextStripper  
+See class: org.apache.pdfbox.searchengine.lucene.LucenePDFDocument  
+See command-line app: ExtractText  
 
 One of the main features of PDFBox is its ability to quickly and accurately extract text 
 from a variety of PDF documents. This functionality is encapsulated in the 
@@ -57,7 +57,7 @@ line application nor the LucenePDFDocument will be able to fulfill those require
 It is possible for users to utilize or extend the PDFTextStripper class to meet some of 
 these requirements.
 
-### Limiting The Extracted Text
+### Limiting the Extracted Text
 
 There are several ways that we can limit the text that is extracted during the extraction 
 process. The simplest is to specify the range of pages that you want to be extracted. 

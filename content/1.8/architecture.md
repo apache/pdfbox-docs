@@ -73,7 +73,7 @@ As outlined above the basic PDF objects are represented in PDFBox in the org.apa
 | Stream | A stream of data, typically compressed. This is used for page contents, images and embedded font streams. | 12 0 obj << /Type /XObject >> stream 030004040404040404 endstream | org.apache.pdfbox.cos.COSStream | 7.3.8 |
 | Object | A wrapper to any of the other objects, this can be used to reference an object multiple times. An object is referenced by using two numbers, an object number and a generation number. Initially the generation number will be zero unless the object got replaced later in the stream. | 12 0 obj << /Type /XObject >> endobj | org.apache.pdfbox.cos.COSObject | |
 
-A page in a pdf document is represented with a COSDictionary. The entries that are available for a page can be seen in the PDF Reference and an example of a page looks like this:
+A page in a PDF document is represented with a COSDictionary. The entries that are available for a page can be seen in the PDF Reference and an example of a page looks like this:
 
 ```text
 <<

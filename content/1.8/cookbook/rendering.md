@@ -23,7 +23,7 @@ title:   Cookbook - Rendering
 Document Rendering
 ==================
 
-Convert a document to images
+Convert a Document to Images
 ----------------------------
 
 This small sample shows how to render (convert to images) a PDF document using PDFBox.

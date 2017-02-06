@@ -43,7 +43,7 @@ The PDF specification states that a standard set of 14 fonts will always be avai
 | PDType1Font.SYMBOL | Symbol Set |
 | PDType1Font.ZAPF_DINGBATS | Dingbat Typeface |
 
-## Hello World using a PDF base font
+## Hello World Using a PDF Base Font
 
 This small sample shows how to create a new document and print the text "Hello World" using one of the PDF base fonts.
 
@@ -74,7 +74,7 @@ document.save( "Hello World.pdf");
 document.close();
 ~~~
 
-## Hello World using a TrueType font
+## Hello World Using a TrueType Font
 
 This small sample shows how to create a new document and print the text "Hello World" using a TrueType font.
 
@@ -114,9 +114,9 @@ names to TTF font files. The UNKNOWN_FONT property in that file will tell PDFBox
 use when no mapping exists. 
 
 
-## Hello World using a Postscript Type1 font
+## Hello World Using a PostScript Type1 Font
 
-This small sample shows how to create a new document and print the text "Hello World" using a Postscript Type1 font.
+This small sample shows how to create a new document and print the text "Hello World" using a PostScript Type1 font.
 
 ~~~java
 // Create a document and add a page to it
@@ -124,7 +124,7 @@ PDDocument document = new PDDocument();
 PDPage page = new PDPage();
 document.addPage( page );
 
-// Create a new font object by loading a Postscript Type 1 font into the document
+// Create a new font object by loading a PostScript Type 1 font into the document
 PDFont font = new PDType1AfmPfbFont(doc,"cfm.afm");
 
 // Start a new content stream which will "hold" the to be created content

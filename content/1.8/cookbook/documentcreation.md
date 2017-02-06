@@ -22,7 +22,7 @@ title:   Cookbook - Document Creation
 
 # Document Creation
 
-## Create a blank PDF
+## Create a Blank PDF
 
 This small sample shows how to create a new PDF document using PDFBox.
 
@@ -42,7 +42,7 @@ document.save("BlankPage.pdf");
 document.close();
 ~~~
 
-## Hello World using a PDF base font
+## Hello World Using a PDF Base Font
 
 This small sample shows how to create a new document and print the text "Hello World" using one of the PDF base fonts.
 
