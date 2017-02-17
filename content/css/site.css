@@ -86,13 +86,15 @@ pre.highlight, .highlight > pre {
     color: darkslategrey;
     border: 0pt;
     border-radius: 0pt;
-    border-left: 5px solid #0088cc;
+    border-left: 2px solid #0088cc;
     padding-left: 2rem;
+    background-color: inherit;
 }
 
 code {
-  color: #000000;
-  background-color: #d5eaec;
+  color: #7e7e81;
+  padding: 0;
+  background-color: inherit;
 }
 
 /*
