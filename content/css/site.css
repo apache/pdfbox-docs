@@ -83,16 +83,18 @@ h4 .open-iconic {
 }
 
 pre.highlight, .highlight > pre {
+  background-color: inherit;
     color: darkslategrey;
+    padding-left: 2rem;
     border: 0pt;
     border-radius: 0pt;
-    border-left: 5px solid #0088cc;
-    padding-left: 2rem;
+    border-left: 2px solid #0088cc;
 }
 
 code {
-  color: #000000;
-  background-color: #d5eaec;
+  padding: 0;
+  background-color: inherit;
+  color: #7e7e81;
 }
 
 /*
