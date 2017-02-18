@@ -22,16 +22,16 @@ title:   Mailing Lists
 
 # Mailing Lists
 
-Mailing Lists are the primary communication channels for all projects at 
-The Apache Software Foundation. Therefore, this applies to Apache PDFBox, too. 
+Mailing Lists are the primary communication channels for all projects at
+The Apache Software Foundation. Therefore, this applies to Apache PDFBox, too.
 
-**Please read the [public forum archive policy](http://www.apache.org/foundation/public-archives.html) carefully before subscribing to one of our list.**
+**Please read the [public forum archive policy](https://www.apache.org/foundation/public-archives.html) carefully before subscribing to one of our list.**
 
-If you have any questions about or problems with Apache PDFBox, you can get them addressed 
-on the **Users Mailing List**. 
+If you have any questions about or problems with Apache PDFBox, you can get them addressed
+on the **Users Mailing List**.
 
-If you like to participate in the development of Apache PDFBox, 
-the **Developers Mailing List** is the place to be. 
+If you like to participate in the development of Apache PDFBox,
+the **Developers Mailing List** is the place to be.
 
 If you like to keep track of what's being changed inside the project, you can subscribe 
 to the **Commit Mailing List**.
