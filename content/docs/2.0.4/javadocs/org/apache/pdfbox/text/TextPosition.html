@@ -1,0 +1,698 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TextPosition (PDFBox reactor 2.0.4 API)</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="TextPosition (PDFBox reactor 2.0.4 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/TextPosition.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/apache/pdfbox/text/PDFTextStripperByArea.html" title="class in org.apache.pdfbox.text"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/pdfbox/text/TextPositionComparator.html" title="class in org.apache.pdfbox.text"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/apache/pdfbox/text/TextPosition.html" target="_top">Frames</a></li>
+<li><a href="TextPosition.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.apache.pdfbox.text</div>
+<h2 title="Class TextPosition" class="title">Class TextPosition</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>org.apache.pdfbox.text.TextPosition</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public final class <span class="strong">TextPosition</span>
+extends <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block">This represents a string and a position on the screen of those characters.</div>
+<dl><dt><span class="strong">Author:</span></dt>
+  <dd>Ben Litchfield</dd></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#TextPosition(int,%20float,%20float,%20org.apache.pdfbox.util.Matrix,%20float,%20float,%20float,%20float,%20float,%20java.lang.String,%20int[],%20org.apache.pdfbox.pdmodel.font.PDFont,%20float,%20int)">TextPosition</a></strong>(int&nbsp;pageRotation,
+            float&nbsp;pageWidth,
+            float&nbsp;pageHeight,
+            <a href="../../../../org/apache/pdfbox/util/Matrix.html" title="class in org.apache.pdfbox.util">Matrix</a>&nbsp;textMatrix,
+            float&nbsp;endX,
+            float&nbsp;endY,
+            float&nbsp;maxHeight,
+            float&nbsp;individualWidth,
+            float&nbsp;spaceWidth,
+            <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;unicode,
+            int[]&nbsp;charCodes,
+            <a href="../../../../org/apache/pdfbox/pdmodel/font/PDFont.html" title="class in org.apache.pdfbox.pdmodel.font">PDFont</a>&nbsp;font,
+            float&nbsp;fontSize,
+            int&nbsp;fontSizeInPt)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#contains(org.apache.pdfbox.text.TextPosition)">contains</a></strong>(<a href="../../../../org/apache/pdfbox/text/TextPosition.html" title="class in org.apache.pdfbox.text">TextPosition</a>&nbsp;tp2)</code>
+<div class="block">Determine if this TextPosition logically contains another (i.e. they overlap and should be
+ rendered on top of each other).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#getCharacterCodes()">getCharacterCodes</a></strong>()</code>
+<div class="block">Return the internal PDF character codes of the glyphs in this text.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>float</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#getDir()">getDir</a></strong>()</code>
+<div class="block">Return the direction/orientation of the string in this object based on its text matrix.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/pdfbox/pdmodel/font/PDFont.html" title="class in org.apache.pdfbox.pdmodel.font">PDFont</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#getFont()">getFont</a></strong>()</code>
+<div class="block">This will get the font for the text being drawn.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>float</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#getFontSize()">getFontSize</a></strong>()</code>
+<div class="block">This will get the font size that has been set with the "Tf" operator (Set text font and
+ size).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>float</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#getFontSizeInPt()">getFontSizeInPt</a></strong>()</code>
+<div class="block">This will get the font size in pt.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>float</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#getHeight()">getHeight</a></strong>()</code>
+<div class="block">This will get the maximum height of all characters in this string.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>float</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#getHeightDir()">getHeightDir</a></strong>()</code>
+<div class="block">This will get the maximum height of all characters in this string.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>float[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#getIndividualWidths()">getIndividualWidths</a></strong>()</code>
+<div class="block">Get the widths of each individual character.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/pdfbox/util/Matrix.html" title="class in org.apache.pdfbox.util">Matrix</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#getTextMatrix()">getTextMatrix</a></strong>()</code>
+<div class="block">The matrix containing the starting text position and scaling.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#getUnicode()">getUnicode</a></strong>()</code>
+<div class="block">Return the string of characters stored in this object.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>float</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#getWidth()">getWidth</a></strong>()</code>
+<div class="block">This will get the width of the string when page rotation adjusted coordinates are used.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>float</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#getWidthDirAdj()">getWidthDirAdj</a></strong>()</code>
+<div class="block">This will get the width of the string when text direction adjusted coordinates are used.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>float</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#getWidthOfSpace()">getWidthOfSpace</a></strong>()</code>
+<div class="block">This will get the width of a space character.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>float</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#getX()">getX</a></strong>()</code>
+<div class="block">This will get the page rotation adjusted x position of the character.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>float</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#getXDirAdj()">getXDirAdj</a></strong>()</code>
+<div class="block">This will get the text direction adjusted x position of the character.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>float</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#getXScale()">getXScale</a></strong>()</code>
+<div class="block">This will get the X scaling factor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>float</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#getY()">getY</a></strong>()</code>
+<div class="block">This will get the y position of the text, adjusted so that 0,0 is upper left and it is
+ adjusted based on the page rotation.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>float</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#getYDirAdj()">getYDirAdj</a></strong>()</code>
+<div class="block">This will get the y position of the text, adjusted so that 0,0 is upper left and it is
+ adjusted based on the text direction.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>float</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#getYScale()">getYScale</a></strong>()</code>
+<div class="block">This will get the Y scaling factor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#isDiacritic()">isDiacritic</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#mergeDiacritic(org.apache.pdfbox.text.TextPosition)">mergeDiacritic</a></strong>(<a href="../../../../org/apache/pdfbox/text/TextPosition.html" title="class in org.apache.pdfbox.text">TextPosition</a>&nbsp;diacritic)</code>
+<div class="block">Merge a single character TextPosition into the current object.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/TextPosition.html#toString()">toString</a></strong>()</code>
+<div class="block">Show the string data for this text position.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="TextPosition(int, float, float, org.apache.pdfbox.util.Matrix, float, float, float, float, float, java.lang.String, int[], org.apache.pdfbox.pdmodel.font.PDFont, float, int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>TextPosition</h4>
+<pre>public&nbsp;TextPosition(int&nbsp;pageRotation,
+            float&nbsp;pageWidth,
+            float&nbsp;pageHeight,
+            <a href="../../../../org/apache/pdfbox/util/Matrix.html" title="class in org.apache.pdfbox.util">Matrix</a>&nbsp;textMatrix,
+            float&nbsp;endX,
+            float&nbsp;endY,
+            float&nbsp;maxHeight,
+            float&nbsp;individualWidth,
+            float&nbsp;spaceWidth,
+            <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;unicode,
+            int[]&nbsp;charCodes,
+            <a href="../../../../org/apache/pdfbox/pdmodel/font/PDFont.html" title="class in org.apache.pdfbox.pdmodel.font">PDFont</a>&nbsp;font,
+            float&nbsp;fontSize,
+            int&nbsp;fontSizeInPt)</pre>
+<div class="block">Constructor.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>pageRotation</code> - rotation of the page that the text is located in</dd><dd><code>pageWidth</code> - rotation of the page that the text is located in</dd><dd><code>pageHeight</code> - rotation of the page that the text is located in</dd><dd><code>textMatrix</code> - text rendering matrix for start of text (in display units)</dd><dd><code>endX</code> - x coordinate of the end position</dd><dd><code>endY</code> - y coordinate of the end position</dd><dd><code>maxHeight</code> - Maximum height of text (in display units)</dd><dd><code>individualWidth</code> - The width of the given character/string. (in text units)</dd><dd><code>spaceWidth</code> - The width of the space character. (in display units)</dd><dd><code>unicode</code> - The string of Unicode characters to be displayed.</dd><dd><code>charCodes</code> - An array of the internal PDF character codes for the glyphs in this text.</dd><dd><code>font</code> - The current font for this text position.</dd><dd><code>fontSize</code> - The new font size.</dd><dd><code>fontSizeInPt</code> - The font size in pt units (see <a href="../../../../org/apache/pdfbox/text/TextPosition.html#getFontSizeInPt()"><code>getFontSizeInPt()</code></a> for details).</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getUnicode()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getUnicode</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getUnicode()</pre>
+<div class="block">Return the string of characters stored in this object. The length can be different than the
+ CharacterCodes length e.g. if ligatures are used ("fi", "fl", "ffl") where one glyph
+ represents several unicode characters.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The string on the screen.</dd></dl>
+</li>
+</ul>
+<a name="getCharacterCodes()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCharacterCodes</h4>
+<pre>public&nbsp;int[]&nbsp;getCharacterCodes()</pre>
+<div class="block">Return the internal PDF character codes of the glyphs in this text.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an array of internal PDF character codes</dd></dl>
+</li>
+</ul>
+<a name="getTextMatrix()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTextMatrix</h4>
+<pre>public&nbsp;<a href="../../../../org/apache/pdfbox/util/Matrix.html" title="class in org.apache.pdfbox.util">Matrix</a>&nbsp;getTextMatrix()</pre>
+<div class="block">The matrix containing the starting text position and scaling. Despite the name, it is not the
+ text matrix set by the "Tm" operator, it is really the effective text rendering matrix (which
+ is dependent on the current transformation matrix (set by the "cm" operator), the text matrix
+ (set by the "Tm" operator), the font size (set by the "Tf" operator) and the page cropbox).</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The Matrix containing the starting text position</dd></dl>
+</li>
+</ul>
+<a name="getDir()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDir</h4>
+<pre>public&nbsp;float&nbsp;getDir()</pre>
+<div class="block">Return the direction/orientation of the string in this object based on its text matrix.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The direction of the text (0, 90, 180, or 270)</dd></dl>
+</li>
+</ul>
+<a name="getX()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getX</h4>
+<pre>public&nbsp;float&nbsp;getX()</pre>
+<div class="block">This will get the page rotation adjusted x position of the character.
+ This is adjusted based on page rotation so that the upper left is 0,0.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The x coordinate of the character.</dd></dl>
+</li>
+</ul>
+<a name="getXDirAdj()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getXDirAdj</h4>
+<pre>public&nbsp;float&nbsp;getXDirAdj()</pre>
+<div class="block">This will get the text direction adjusted x position of the character.
+ This is adjusted based on text direction so that the first character
+ in that direction is in the upper left at 0,0.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The x coordinate of the text.</dd></dl>
+</li>
+</ul>
+<a name="getY()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getY</h4>
+<pre>public&nbsp;float&nbsp;getY()</pre>
+<div class="block">This will get the y position of the text, adjusted so that 0,0 is upper left and it is
+ adjusted based on the page rotation.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The adjusted y coordinate of the character.</dd></dl>
+</li>
+</ul>
+<a name="getYDirAdj()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getYDirAdj</h4>
+<pre>public&nbsp;float&nbsp;getYDirAdj()</pre>
+<div class="block">This will get the y position of the text, adjusted so that 0,0 is upper left and it is
+ adjusted based on the text direction.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The adjusted y coordinate of the character.</dd></dl>
+</li>
+</ul>
+<a name="getWidth()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getWidth</h4>
+<pre>public&nbsp;float&nbsp;getWidth()</pre>
+<div class="block">This will get the width of the string when page rotation adjusted coordinates are used.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The width of the text in display units.</dd></dl>
+</li>
+</ul>
+<a name="getWidthDirAdj()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getWidthDirAdj</h4>
+<pre>public&nbsp;float&nbsp;getWidthDirAdj()</pre>
+<div class="block">This will get the width of the string when text direction adjusted coordinates are used.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The width of the text in display units.</dd></dl>
+</li>
+</ul>
+<a name="getHeight()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getHeight</h4>
+<pre>public&nbsp;float&nbsp;getHeight()</pre>
+<div class="block">This will get the maximum height of all characters in this string.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The maximum height of all characters in this string.</dd></dl>
+</li>
+</ul>
+<a name="getHeightDir()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getHeightDir</h4>
+<pre>public&nbsp;float&nbsp;getHeightDir()</pre>
+<div class="block">This will get the maximum height of all characters in this string.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The maximum height of all characters in this string.</dd></dl>
+</li>
+</ul>
+<a name="getFontSize()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFontSize</h4>
+<pre>public&nbsp;float&nbsp;getFontSize()</pre>
+<div class="block">This will get the font size that has been set with the "Tf" operator (Set text font and
+ size). When the text is rendered, it may appear bigger or smaller depending on the current
+ transformation matrix (set by the "cm" operator) and the text matrix (set by the "Tm"
+ operator).</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The font size.</dd></dl>
+</li>
+</ul>
+<a name="getFontSizeInPt()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFontSizeInPt</h4>
+<pre>public&nbsp;float&nbsp;getFontSizeInPt()</pre>
+<div class="block">This will get the font size in pt. To get this size we have to multiply the font size from
+ <a href="../../../../org/apache/pdfbox/text/TextPosition.html#getFontSize()"><code>getFontSize()</code></a> with the text matrix (set by the "Tm" operator)
+ horizontal scaling factor and truncate the result to integer. The actual rendering may appear
+ bigger or smaller depending on the current transformation matrix (set by the "cm" operator).
+ To get the size in rendering, use <a href="../../../../org/apache/pdfbox/text/TextPosition.html#getXScale()"><code>getXScale()</code></a>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The font size in pt.</dd></dl>
+</li>
+</ul>
+<a name="getFont()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFont</h4>
+<pre>public&nbsp;<a href="../../../../org/apache/pdfbox/pdmodel/font/PDFont.html" title="class in org.apache.pdfbox.pdmodel.font">PDFont</a>&nbsp;getFont()</pre>
+<div class="block">This will get the font for the text being drawn.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The font size.</dd></dl>
+</li>
+</ul>
+<a name="getWidthOfSpace()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getWidthOfSpace</h4>
+<pre>public&nbsp;float&nbsp;getWidthOfSpace()</pre>
+<div class="block">This will get the width of a space character. This is useful for some algorithms such as the
+ text stripper, that need to know the width of a space character.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The width of a space character.</dd></dl>
+</li>
+</ul>
+<a name="getXScale()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getXScale</h4>
+<pre>public&nbsp;float&nbsp;getXScale()</pre>
+<div class="block">This will get the X scaling factor. This is dependent on the current transformation matrix
+ (set by the "cm" operator), the text matrix (set by the "Tm" operator) and the font size (set
+ by the "Tf" operator).</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The X scaling factor.</dd></dl>
+</li>
+</ul>
+<a name="getYScale()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getYScale</h4>
+<pre>public&nbsp;float&nbsp;getYScale()</pre>
+<div class="block">This will get the Y scaling factor. This is dependent on the current transformation matrix
+ (set by the "cm" operator), the text matrix (set by the "Tm" operator) and the font size (set
+ by the "Tf" operator).</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The Y scaling factor.</dd></dl>
+</li>
+</ul>
+<a name="getIndividualWidths()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getIndividualWidths</h4>
+<pre>public&nbsp;float[]&nbsp;getIndividualWidths()</pre>
+<div class="block">Get the widths of each individual character.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>An array that has the same length as the CharacterCodes array.</dd></dl>
+</li>
+</ul>
+<a name="contains(org.apache.pdfbox.text.TextPosition)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>contains</h4>
+<pre>public&nbsp;boolean&nbsp;contains(<a href="../../../../org/apache/pdfbox/text/TextPosition.html" title="class in org.apache.pdfbox.text">TextPosition</a>&nbsp;tp2)</pre>
+<div class="block">Determine if this TextPosition logically contains another (i.e. they overlap and should be
+ rendered on top of each other).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>tp2</code> - The other TestPosition to compare against</dd>
+<dt><span class="strong">Returns:</span></dt><dd>True if tp2 is contained in the bounding box of this text.</dd></dl>
+</li>
+</ul>
+<a name="mergeDiacritic(org.apache.pdfbox.text.TextPosition)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mergeDiacritic</h4>
+<pre>public&nbsp;void&nbsp;mergeDiacritic(<a href="../../../../org/apache/pdfbox/text/TextPosition.html" title="class in org.apache.pdfbox.text">TextPosition</a>&nbsp;diacritic)</pre>
+<div class="block">Merge a single character TextPosition into the current object. This is to be used only for
+ cases where we have a diacritic that overlaps an existing TextPosition. In a graphical
+ display, we could overlay them, but for text extraction we need to merge them. Use the
+ contains() method to test if two objects overlap.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>diacritic</code> - TextPosition to merge into the current TextPosition.</dd></dl>
+</li>
+</ul>
+<a name="isDiacritic()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isDiacritic</h4>
+<pre>public&nbsp;boolean&nbsp;isDiacritic()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>True if the current character is a diacritic char.</dd></dl>
+</li>
+</ul>
+<a name="toString()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>toString</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toString()</pre>
+<div class="block">Show the string data for this text position.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>A human readable form of this object.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/TextPosition.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/apache/pdfbox/text/PDFTextStripperByArea.html" title="class in org.apache.pdfbox.text"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/pdfbox/text/TextPositionComparator.html" title="class in org.apache.pdfbox.text"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/apache/pdfbox/text/TextPosition.html" target="_top">Frames</a></li>
+<li><a href="TextPosition.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2017 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>

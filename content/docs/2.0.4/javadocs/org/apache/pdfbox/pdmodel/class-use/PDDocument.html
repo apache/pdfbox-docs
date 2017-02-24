@@ -1,0 +1,1867 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Uses of Class org.apache.pdfbox.pdmodel.PDDocument (PDFBox reactor 2.0.4 API)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Uses of Class org.apache.pdfbox.pdmodel.PDDocument (PDFBox reactor 2.0.4 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="../package-summary.html">Package</a></li>
+<li><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">Class</a></li>
+<li class="navBarCell1Rev">Use</li>
+<li><a href="../package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev</li>
+<li>Next</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/apache/pdfbox/pdmodel/class-use/PDDocument.html" target="_top">Frames</a></li>
+<li><a href="PDDocument.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<div class="header">
+<h2 title="Uses of Class org.apache.pdfbox.pdmodel.PDDocument" class="title">Uses of Class<br>org.apache.pdfbox.pdmodel.PDDocument</h2>
+</div>
+<div class="classUseContainer">
+<ul class="blockList">
+<li class="blockList">
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing packages, and an explanation">
+<caption><span>Packages that use <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Package</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.debugger.pagepane">org.apache.pdfbox.debugger.pagepane</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.debugger.ui">org.apache.pdfbox.debugger.ui</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.examples.interactive.form">org.apache.pdfbox.examples.interactive.form</a></td>
+<td class="colLast">
+<div class="block">AcroForms samples for PDFBox.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.examples.pdmodel">org.apache.pdfbox.examples.pdmodel</a></td>
+<td class="colLast">
+<div class="block">These examples show how to use the classes in the PDModel package.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.examples.signature">org.apache.pdfbox.examples.signature</a></td>
+<td class="colLast">
+<div class="block">These examples will show how to gain access to the PDF signature.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.examples.util">org.apache.pdfbox.examples.util</a></td>
+<td class="colLast">
+<div class="block">The packages in this package will show how to use the PDFBox util API.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.multipdf">org.apache.pdfbox.multipdf</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdfparser">org.apache.pdfbox.pdfparser</a></td>
+<td class="colLast">
+<div class="block">The pdfparser package contains classes to parse PDF documents and objects within the document.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdfwriter">org.apache.pdfbox.pdfwriter</a></td>
+<td class="colLast">
+<div class="block">This is the persistence layer used to write the PDFBox documents to a stream.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel">org.apache.pdfbox.pdmodel</a></td>
+<td class="colLast">
+<div class="block">The PDModel package represents a high level API for creating and manipulating PDF documents.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel.common">org.apache.pdfbox.pdmodel.common</a></td>
+<td class="colLast">
+<div class="block">High level PD classes that are used throughout several packages are placed in the PDModel common package.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel.common.filespecification">org.apache.pdfbox.pdmodel.common.filespecification</a></td>
+<td class="colLast">
+<div class="block">The file specification package defines classes that are used for the PDF File Specification logic.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel.encryption">org.apache.pdfbox.pdmodel.encryption</a></td>
+<td class="colLast">
+<div class="block">The encryption package will handle the PDF document security handlers and the functionality of pluggable security handlers.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel.font">org.apache.pdfbox.pdmodel.font</a></td>
+<td class="colLast">
+<div class="block">Classes to deal with font functionality in a PDF Document.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel.graphics">org.apache.pdfbox.pdmodel.graphics</a></td>
+<td class="colLast">
+<div class="block">The PDModel graphics package deals with graphics states, operations, and parameters within the PDF document.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel.graphics.color">org.apache.pdfbox.pdmodel.graphics.color</a></td>
+<td class="colLast">
+<div class="block">This package deals with colors that are stored in a PDF document.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel.graphics.form">org.apache.pdfbox.pdmodel.graphics.form</a></td>
+<td class="colLast">
+<div class="block">This package deals with Form XObjects that are stored in a PDF document.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel.graphics.image">org.apache.pdfbox.pdmodel.graphics.image</a></td>
+<td class="colLast">
+<div class="block">This package deals with images that are stored in a PDF document.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel.interactive.annotation">org.apache.pdfbox.pdmodel.interactive.annotation</a></td>
+<td class="colLast">
+<div class="block">The annotation package contains classes that work with PDF annotation elements.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible">org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible</a></td>
+<td class="colLast">
+<div class="block">This is the visual signature part that help creating the visual representation for the digital signature.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline">org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline</a></td>
+<td class="colLast">
+<div class="block">The outline package allows for a PDF outline(bookmarks) to be created.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel.interactive.form">org.apache.pdfbox.pdmodel.interactive.form</a></td>
+<td class="colLast">
+<div class="block">The interactive package contains classes for handling Interactive Forms, also known as "AcroForms".</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.preflight">org.apache.pdfbox.preflight</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.preflight.metadata">org.apache.pdfbox.preflight.metadata</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.preflight.parser">org.apache.pdfbox.preflight.parser</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.preflight.process">org.apache.pdfbox.preflight.process</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.preflight.utils">org.apache.pdfbox.preflight.utils</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.printing">org.apache.pdfbox.printing</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.rendering">org.apache.pdfbox.rendering</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.text">org.apache.pdfbox.text</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.tools">org.apache.pdfbox.tools</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList">
+<ul class="blockList">
+<li class="blockList"><a name="org.apache.pdfbox.debugger.pagepane">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/debugger/pagepane/package-summary.html">org.apache.pdfbox.debugger.pagepane</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/pdfbox/debugger/pagepane/package-summary.html">org.apache.pdfbox.debugger.pagepane</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/debugger/pagepane/PagePane.html#PagePane(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.cos.COSDictionary,%20javax.swing.JLabel)">PagePane</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+        <a href="../../../../../org/apache/pdfbox/cos/COSDictionary.html" title="class in org.apache.pdfbox.cos">COSDictionary</a>&nbsp;pageDict,
+        <a href="http://download.oracle.com/javase/1.6.0/docs/api/javax/swing/JLabel.html?is-external=true" title="class or interface in javax.swing">JLabel</a>&nbsp;statuslabel)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.debugger.ui">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/debugger/ui/package-summary.html">org.apache.pdfbox.debugger.ui</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/pdfbox/debugger/ui/package-summary.html">org.apache.pdfbox.debugger.ui</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/debugger/ui/DocumentEntry.html#DocumentEntry(org.apache.pdfbox.pdmodel.PDDocument,%20java.lang.String)">DocumentEntry</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+             <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/debugger/ui/PDFTreeModel.html#PDFTreeModel(org.apache.pdfbox.pdmodel.PDDocument)">PDFTreeModel</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">Constructor to take a document.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.examples.interactive.form">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/examples/interactive/form/package-summary.html">org.apache.pdfbox.examples.interactive.form</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/examples/interactive/form/package-summary.html">org.apache.pdfbox.examples.interactive.form</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PrintFields.</span><code><strong><a href="../../../../../org/apache/pdfbox/examples/interactive/form/PrintFields.html#printFields(org.apache.pdfbox.pdmodel.PDDocument)">printFields</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;pdfDocument)</code>
+<div class="block">This will print all the fields from the document.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">SetField.</span><code><strong><a href="../../../../../org/apache/pdfbox/examples/interactive/form/SetField.html#setField(org.apache.pdfbox.pdmodel.PDDocument,%20java.lang.String,%20java.lang.String)">setField</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;pdfDocument,
+        <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+        <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
+<div class="block">This will set a single field in the document.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.examples.pdmodel">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/examples/pdmodel/package-summary.html">org.apache.pdfbox.examples.pdmodel</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/examples/pdmodel/package-summary.html">org.apache.pdfbox.examples.pdmodel</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PrintDocumentMetaData.</span><code><strong><a href="../../../../../org/apache/pdfbox/examples/pdmodel/PrintDocumentMetaData.html#printMetadata(org.apache.pdfbox.pdmodel.PDDocument)">printMetadata</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">This will print the documents data to System.out.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.examples.signature">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/examples/signature/package-summary.html">org.apache.pdfbox.examples.signature</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/examples/signature/package-summary.html">org.apache.pdfbox.examples.signature</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">CreateSignature.</span><code><strong><a href="../../../../../org/apache/pdfbox/examples/signature/CreateSignature.html#signDetached(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.OutputStream,%20org.apache.pdfbox.examples.signature.TSAClient)">signDetached</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+            <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;output,
+            <a href="../../../../../org/apache/pdfbox/examples/signature/TSAClient.html" title="class in org.apache.pdfbox.examples.signature">TSAClient</a>&nbsp;tsaClient)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.examples.util">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/examples/util/package-summary.html">org.apache.pdfbox.examples.util</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/examples/util/package-summary.html">org.apache.pdfbox.examples.util</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFHighlighter.</span><code><strong><a href="../../../../../org/apache/pdfbox/examples/util/PDFHighlighter.html#generateXMLHighlight(org.apache.pdfbox.pdmodel.PDDocument,%20java.lang.String[],%20java.io.Writer)">generateXMLHighlight</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;pdDocument,
+                    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;sWords,
+                    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</a>&nbsp;xmlOutput)</code>
+<div class="block">Generate an XML highlight string based on the PDF.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFHighlighter.</span><code><strong><a href="../../../../../org/apache/pdfbox/examples/util/PDFHighlighter.html#generateXMLHighlight(org.apache.pdfbox.pdmodel.PDDocument,%20java.lang.String,%20java.io.Writer)">generateXMLHighlight</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;pdDocument,
+                    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;highlightWord,
+                    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</a>&nbsp;xmlOutput)</code>
+<div class="block">Generate an XML highlight string based on the PDF.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/pdfbox/examples/util/package-summary.html">org.apache.pdfbox.examples.util</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/examples/util/DrawPrintTextLocations.html#DrawPrintTextLocations(org.apache.pdfbox.pdmodel.PDDocument,%20java.lang.String)">DrawPrintTextLocations</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                      <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)</code>
+<div class="block">Instantiate a new PDFTextStripper object.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.multipdf">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/multipdf/package-summary.html">org.apache.pdfbox.multipdf</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/multipdf/package-summary.html">org.apache.pdfbox.multipdf</a> that return <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">Splitter.</span><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/Splitter.html#createNewDocument()">createNewDocument</a></strong>()</code>
+<div class="block">Create a new document to write the split contents to.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PageExtractor.</span><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/PageExtractor.html#extract()">extract</a></strong>()</code>
+<div class="block">This will take a document and extract the desired pages into a new 
+ document.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PDFCloneUtility.</span><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/PDFCloneUtility.html#getDestination()">getDestination</a></strong>()</code>
+<div class="block">Returns the destination PDF document this cloner instance is set up for.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">Splitter.</span><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/Splitter.html#getDestinationDocument()">getDestinationDocument</a></strong>()</code>
+<div class="block">The source PDF document.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">LayerUtility.</span><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/LayerUtility.html#getDocument()">getDocument</a></strong>()</code>
+<div class="block">Returns the PDF document we work on.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">Splitter.</span><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/Splitter.html#getSourceDocument()">getSourceDocument</a></strong>()</code>
+<div class="block">The source PDF document.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">Overlay.</span><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/Overlay.html#overlay(java.util.Map)">overlay</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>,<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;specificPageOverlayFile)</code>
+<div class="block">This will add overlays to a documents.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/multipdf/package-summary.html">org.apache.pdfbox.multipdf</a> that return types with arguments of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&gt;</code></td>
+<td class="colLast"><span class="strong">Splitter.</span><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/Splitter.html#split(org.apache.pdfbox.pdmodel.PDDocument)">split</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">This will take a document and split into several other documents.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/multipdf/package-summary.html">org.apache.pdfbox.multipdf</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFMergerUtility.</span><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/PDFMergerUtility.html#appendDocument(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDDocument)">appendDocument</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;destination,
+              <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;source)</code>
+<div class="block">append all pages from source to destination.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/form/PDFormXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.form">PDFormXObject</a></code></td>
+<td class="colLast"><span class="strong">LayerUtility.</span><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/LayerUtility.html#importPageAsForm(org.apache.pdfbox.pdmodel.PDDocument,%20int)">importPageAsForm</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;sourceDoc,
+                int&nbsp;pageNumber)</code>
+<div class="block">Imports a page from some PDF file as a Form XObject so it can be placed on another page
+ in the target document.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/form/PDFormXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.form">PDFormXObject</a></code></td>
+<td class="colLast"><span class="strong">LayerUtility.</span><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/LayerUtility.html#importPageAsForm(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage)">importPageAsForm</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;sourceDoc,
+                <a href="../../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;page)</code>
+<div class="block">Imports a page from some PDF file as a Form XObject so it can be placed on another page
+ in the target document.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">Overlay.</span><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/Overlay.html#setAllPagesOverlayPDF(org.apache.pdfbox.pdmodel.PDDocument)">setAllPagesOverlayPDF</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;allPagesOverlayPDF)</code>
+<div class="block">Sets the all pages overlay PDF.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">Overlay.</span><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/Overlay.html#setDefaultOverlayPDF(org.apache.pdfbox.pdmodel.PDDocument)">setDefaultOverlayPDF</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;defaultOverlayPDF)</code>
+<div class="block">Sets the default overlay PDF.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">Overlay.</span><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/Overlay.html#setEvenPageOverlayPDF(org.apache.pdfbox.pdmodel.PDDocument)">setEvenPageOverlayPDF</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;evenPageOverlayPDF)</code>
+<div class="block">Sets the even page overlay PDF.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">Overlay.</span><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/Overlay.html#setFirstPageOverlayPDF(org.apache.pdfbox.pdmodel.PDDocument)">setFirstPageOverlayPDF</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;firstPageOverlayPDF)</code>
+<div class="block">Sets the first page overlay PDF.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">Overlay.</span><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/Overlay.html#setInputPDF(org.apache.pdfbox.pdmodel.PDDocument)">setInputPDF</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;inputPDF)</code>
+<div class="block">Sets the PDF to be overlayed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">Overlay.</span><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/Overlay.html#setLastPageOverlayPDF(org.apache.pdfbox.pdmodel.PDDocument)">setLastPageOverlayPDF</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;lastPageOverlayPDF)</code>
+<div class="block">Sets the last page overlay PDF.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">Overlay.</span><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/Overlay.html#setOddPageOverlayPDF(org.apache.pdfbox.pdmodel.PDDocument)">setOddPageOverlayPDF</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;oddPageOverlayPDF)</code>
+<div class="block">Sets the odd page overlay PDF.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&gt;</code></td>
+<td class="colLast"><span class="strong">Splitter.</span><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/Splitter.html#split(org.apache.pdfbox.pdmodel.PDDocument)">split</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">This will take a document and split into several other documents.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/pdfbox/multipdf/package-summary.html">org.apache.pdfbox.multipdf</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/LayerUtility.html#LayerUtility(org.apache.pdfbox.pdmodel.PDDocument)">LayerUtility</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">Creates a new instance.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/PageExtractor.html#PageExtractor(org.apache.pdfbox.pdmodel.PDDocument)">PageExtractor</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;sourceDocument)</code>
+<div class="block">Creates a new instance of PageExtractor</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/PageExtractor.html#PageExtractor(org.apache.pdfbox.pdmodel.PDDocument,%20int,%20int)">PageExtractor</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;sourceDocument,
+             int&nbsp;startPage,
+             int&nbsp;endPage)</code>
+<div class="block">Creates a new instance of PageExtractor</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/multipdf/PDFCloneUtility.html#PDFCloneUtility(org.apache.pdfbox.pdmodel.PDDocument)">PDFCloneUtility</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;dest)</code>
+<div class="block">Creates a new instance for the given target document.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdfparser">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/pdfparser/package-summary.html">org.apache.pdfbox.pdfparser</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/pdfparser/package-summary.html">org.apache.pdfbox.pdfparser</a> that return <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PDFParser.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdfparser/PDFParser.html#getPDDocument()">getPDDocument</a></strong>()</code>
+<div class="block">This will get the PD document that was parsed.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdfwriter">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/pdfwriter/package-summary.html">org.apache.pdfbox.pdfwriter</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/pdfwriter/package-summary.html">org.apache.pdfbox.pdfwriter</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">COSWriter.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdfwriter/COSWriter.html#write(org.apache.pdfbox.pdmodel.PDDocument)">write</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">This will write the pdf document.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">COSWriter.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdfwriter/COSWriter.html#write(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.interactive.digitalsignature.SignatureInterface)">write</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+     <a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/SignatureInterface.html" title="interface in org.apache.pdfbox.pdmodel.interactive.digitalsignature">SignatureInterface</a>&nbsp;signInterface)</code>
+<div class="block">This will write the pdf document.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/pdmodel/package-summary.html">org.apache.pdfbox.pdmodel</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/pdmodel/package-summary.html">org.apache.pdfbox.pdmodel</a> that return <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PDDocument.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html#load(byte[])">load</a></strong>(byte[]&nbsp;input)</code>
+<div class="block">Parses a PDF.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PDDocument.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html#load(byte[],%20java.lang.String)">load</a></strong>(byte[]&nbsp;input,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;password)</code>
+<div class="block">Parses a PDF.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PDDocument.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html#load(byte[],%20java.lang.String,%20java.io.InputStream,%20java.lang.String)">load</a></strong>(byte[]&nbsp;input,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;password,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;keyStore,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;alias)</code>
+<div class="block">Parses a PDF.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PDDocument.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html#load(byte[],%20java.lang.String,%20java.io.InputStream,%20java.lang.String,%20org.apache.pdfbox.io.MemoryUsageSetting)">load</a></strong>(byte[]&nbsp;input,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;password,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;keyStore,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;alias,
+    <a href="../../../../../org/apache/pdfbox/io/MemoryUsageSetting.html" title="class in org.apache.pdfbox.io">MemoryUsageSetting</a>&nbsp;memUsageSetting)</code>
+<div class="block">Parses a PDF.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PDDocument.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html#load(java.io.File)">load</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</code>
+<div class="block">Parses a PDF.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PDDocument.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html#load(java.io.File,%20org.apache.pdfbox.io.MemoryUsageSetting)">load</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+    <a href="../../../../../org/apache/pdfbox/io/MemoryUsageSetting.html" title="class in org.apache.pdfbox.io">MemoryUsageSetting</a>&nbsp;memUsageSetting)</code>
+<div class="block">Parses a PDF.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PDDocument.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html#load(java.io.File,%20java.lang.String)">load</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;password)</code>
+<div class="block">Parses a PDF.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PDDocument.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html#load(java.io.File,%20java.lang.String,%20java.io.InputStream,%20java.lang.String)">load</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;password,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;keyStore,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;alias)</code>
+<div class="block">Parses a PDF.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PDDocument.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html#load(java.io.File,%20java.lang.String,%20java.io.InputStream,%20java.lang.String,%20org.apache.pdfbox.io.MemoryUsageSetting)">load</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;password,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;keyStore,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;alias,
+    <a href="../../../../../org/apache/pdfbox/io/MemoryUsageSetting.html" title="class in org.apache.pdfbox.io">MemoryUsageSetting</a>&nbsp;memUsageSetting)</code>
+<div class="block">Parses a PDF.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PDDocument.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html#load(java.io.File,%20java.lang.String,%20org.apache.pdfbox.io.MemoryUsageSetting)">load</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;password,
+    <a href="../../../../../org/apache/pdfbox/io/MemoryUsageSetting.html" title="class in org.apache.pdfbox.io">MemoryUsageSetting</a>&nbsp;memUsageSetting)</code>
+<div class="block">Parses a PDF.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PDDocument.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html#load(java.io.InputStream)">load</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;input)</code>
+<div class="block">Parses a PDF.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PDDocument.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html#load(java.io.InputStream,%20org.apache.pdfbox.io.MemoryUsageSetting)">load</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;input,
+    <a href="../../../../../org/apache/pdfbox/io/MemoryUsageSetting.html" title="class in org.apache.pdfbox.io">MemoryUsageSetting</a>&nbsp;memUsageSetting)</code>
+<div class="block">Parses a PDF.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PDDocument.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html#load(java.io.InputStream,%20java.lang.String)">load</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;input,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;password)</code>
+<div class="block">Parses a PDF.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PDDocument.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html#load(java.io.InputStream,%20java.lang.String,%20java.io.InputStream,%20java.lang.String)">load</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;input,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;password,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;keyStore,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;alias)</code>
+<div class="block">Parses a PDF.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PDDocument.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html#load(java.io.InputStream,%20java.lang.String,%20java.io.InputStream,%20java.lang.String,%20org.apache.pdfbox.io.MemoryUsageSetting)">load</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;input,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;password,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;keyStore,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;alias,
+    <a href="../../../../../org/apache/pdfbox/io/MemoryUsageSetting.html" title="class in org.apache.pdfbox.io">MemoryUsageSetting</a>&nbsp;memUsageSetting)</code>
+<div class="block">Parses a PDF.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PDDocument.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html#load(java.io.InputStream,%20java.lang.String,%20org.apache.pdfbox.io.MemoryUsageSetting)">load</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;input,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;password,
+    <a href="../../../../../org/apache/pdfbox/io/MemoryUsageSetting.html" title="class in org.apache.pdfbox.io">MemoryUsageSetting</a>&nbsp;memUsageSetting)</code>
+<div class="block">Parses a PDF.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/pdfbox/pdmodel/package-summary.html">org.apache.pdfbox.pdmodel</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocumentCatalog.html#PDDocumentCatalog(org.apache.pdfbox.pdmodel.PDDocument)">PDDocumentCatalog</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocumentCatalog.html#PDDocumentCatalog(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.cos.COSDictionary)">PDDocumentCatalog</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+                 <a href="../../../../../org/apache/pdfbox/cos/COSDictionary.html" title="class in org.apache.pdfbox.cos">COSDictionary</a>&nbsp;rootDictionary)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.interactive.annotation.PDAppearanceStream)">PDPageContentStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+                   <a href="../../../../../org/apache/pdfbox/pdmodel/interactive/annotation/PDAppearanceStream.html" title="class in org.apache.pdfbox.pdmodel.interactive.annotation">PDAppearanceStream</a>&nbsp;appearance)</code>
+<div class="block">Create a new appearance stream.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.interactive.annotation.PDAppearanceStream,%20java.io.OutputStream)">PDPageContentStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+                   <a href="../../../../../org/apache/pdfbox/pdmodel/interactive/annotation/PDAppearanceStream.html" title="class in org.apache.pdfbox.pdmodel.interactive.annotation">PDAppearanceStream</a>&nbsp;appearance,
+                   <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;outputStream)</code>
+<div class="block">Create a new appearance stream.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage)">PDPageContentStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                   <a href="../../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;sourcePage)</code>
+<div class="block">Create a new PDPage content stream.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20boolean,%20boolean)">PDPageContentStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                   <a href="../../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;sourcePage,
+                   boolean&nbsp;appendContent,
+                   boolean&nbsp;compress)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>use <a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode,%20boolean)"><code>PDPageContentStream.PDPageContentStream(PDDocument, PDPage, PDPageContentStream.AppendMode, boolean)</code></a></i></div>
+</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20boolean,%20boolean,%20boolean)">PDPageContentStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                   <a href="../../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;sourcePage,
+                   boolean&nbsp;appendContent,
+                   boolean&nbsp;compress,
+                   boolean&nbsp;resetContext)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>use <a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode,%20boolean,%20boolean)"><code>PDPageContentStream.PDPageContentStream(PDDocument, PDPage, PDPageContentStream.AppendMode, boolean, boolean)</code></a></i></div>
+</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode,%20boolean)">PDPageContentStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                   <a href="../../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;sourcePage,
+                   <a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.AppendMode.html" title="enum in org.apache.pdfbox.pdmodel">PDPageContentStream.AppendMode</a>&nbsp;appendContent,
+                   boolean&nbsp;compress)</code>
+<div class="block">Create a new PDPage content stream.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.html#PDPageContentStream(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.PDPage,%20org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode,%20boolean,%20boolean)">PDPageContentStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                   <a href="../../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;sourcePage,
+                   <a href="../../../../../org/apache/pdfbox/pdmodel/PDPageContentStream.AppendMode.html" title="enum in org.apache.pdfbox.pdmodel">PDPageContentStream.AppendMode</a>&nbsp;appendContent,
+                   boolean&nbsp;compress,
+                   boolean&nbsp;resetContext)</code>
+<div class="block">Create a new PDPage content stream.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel.common">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/pdmodel/common/package-summary.html">org.apache.pdfbox.pdmodel.common</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/pdmodel/common/package-summary.html">org.apache.pdfbox.pdmodel.common</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/common/PDObjectStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDObjectStream</a></code></td>
+<td class="colLast"><span class="strong">PDObjectStream.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/common/PDObjectStream.html#createStream(org.apache.pdfbox.pdmodel.PDDocument)">createStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">This will create a new PDObjectStream object.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/pdfbox/pdmodel/common/package-summary.html">org.apache.pdfbox.pdmodel.common</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/common/PDMetadata.html#PDMetadata(org.apache.pdfbox.pdmodel.PDDocument)">PDMetadata</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">This will create a new PDMetadata object.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/common/PDMetadata.html#PDMetadata(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream)">PDMetadata</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+          <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;str)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/common/PDPageLabels.html#PDPageLabels(org.apache.pdfbox.pdmodel.PDDocument)">PDPageLabels</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">Creates an empty page label dictionary for the given document.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/common/PDPageLabels.html#PDPageLabels(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.cos.COSDictionary)">PDPageLabels</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+            <a href="../../../../../org/apache/pdfbox/cos/COSDictionary.html" title="class in org.apache.pdfbox.cos">COSDictionary</a>&nbsp;dict)</code>
+<div class="block">Creates an page label dictionary for a document using the information in
+ the given COS dictionary.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html#PDStream(org.apache.pdfbox.pdmodel.PDDocument)">PDStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">Creates a new PDStream object.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html#PDStream(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream)">PDStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+        <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;input)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html#PDStream(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream,%20org.apache.pdfbox.cos.COSArray)">PDStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+        <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;input,
+        <a href="../../../../../org/apache/pdfbox/cos/COSArray.html" title="class in org.apache.pdfbox.cos">COSArray</a>&nbsp;filters)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html#PDStream(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream,%20org.apache.pdfbox.cos.COSName)">PDStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+        <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;input,
+        <a href="../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&nbsp;filter)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel.common.filespecification">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/pdmodel/common/filespecification/package-summary.html">org.apache.pdfbox.pdmodel.common.filespecification</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/pdfbox/pdmodel/common/filespecification/package-summary.html">org.apache.pdfbox.pdmodel.common.filespecification</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile.html#PDEmbeddedFile(org.apache.pdfbox.pdmodel.PDDocument)">PDEmbeddedFile</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile.html#PDEmbeddedFile(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream)">PDEmbeddedFile</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+              <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;str)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile.html#PDEmbeddedFile(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream,%20org.apache.pdfbox.cos.COSName)">PDEmbeddedFile</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+              <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;input,
+              <a href="../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&nbsp;filter)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel.encryption">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/pdmodel/encryption/package-summary.html">org.apache.pdfbox.pdmodel.encryption</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/pdmodel/encryption/package-summary.html">org.apache.pdfbox.pdmodel.encryption</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">StandardSecurityHandler.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/encryption/StandardSecurityHandler.html#prepareDocumentForEncryption(org.apache.pdfbox.pdmodel.PDDocument)">prepareDocumentForEncryption</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">Prepare document for encryption.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><span class="strong">SecurityHandler.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/encryption/SecurityHandler.html#prepareDocumentForEncryption(org.apache.pdfbox.pdmodel.PDDocument)">prepareDocumentForEncryption</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">Prepare the document for encryption.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PublicKeySecurityHandler.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/encryption/PublicKeySecurityHandler.html#prepareDocumentForEncryption(org.apache.pdfbox.pdmodel.PDDocument)">prepareDocumentForEncryption</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">Prepare the document for encryption.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel.font">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/pdmodel/font/package-summary.html">org.apache.pdfbox.pdmodel.font</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/pdmodel/font/package-summary.html">org.apache.pdfbox.pdmodel.font</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType0Font.html" title="class in org.apache.pdfbox.pdmodel.font">PDType0Font</a></code></td>
+<td class="colLast"><span class="strong">PDType0Font.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType0Font.html#load(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.File)">load</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</code>
+<div class="block">Loads a TTF to be embedded into a document as a Type 0 font.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDTrueTypeFont.html" title="class in org.apache.pdfbox.pdmodel.font">PDTrueTypeFont</a></code></td>
+<td class="colLast"><span class="strong">PDTrueTypeFont.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDTrueTypeFont.html#load(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.File,%20org.apache.pdfbox.pdmodel.font.encoding.Encoding)">load</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+    <a href="../../../../../org/apache/pdfbox/pdmodel/font/encoding/Encoding.html" title="class in org.apache.pdfbox.pdmodel.font.encoding">Encoding</a>&nbsp;encoding)</code>
+<div class="block">Loads a TTF to be embedded into a document as a simple font.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType0Font.html" title="class in org.apache.pdfbox.pdmodel.font">PDType0Font</a></code></td>
+<td class="colLast"><span class="strong">PDType0Font.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType0Font.html#load(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream)">load</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;input)</code>
+<div class="block">Loads a TTF to be embedded into a document as a Type 0 font.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType0Font.html" title="class in org.apache.pdfbox.pdmodel.font">PDType0Font</a></code></td>
+<td class="colLast"><span class="strong">PDType0Font.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType0Font.html#load(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream,%20boolean)">load</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;input,
+    boolean&nbsp;embedSubset)</code>
+<div class="block">Loads a TTF to be embedded into a document as a Type 0 font.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDTrueTypeFont.html" title="class in org.apache.pdfbox.pdmodel.font">PDTrueTypeFont</a></code></td>
+<td class="colLast"><span class="strong">PDTrueTypeFont.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDTrueTypeFont.html#load(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream,%20org.apache.pdfbox.pdmodel.font.encoding.Encoding)">load</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;input,
+    <a href="../../../../../org/apache/pdfbox/pdmodel/font/encoding/Encoding.html" title="class in org.apache.pdfbox.pdmodel.font.encoding">Encoding</a>&nbsp;encoding)</code>
+<div class="block">Loads a TTF to be embedded into a document as a simple font.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType0Font.html" title="class in org.apache.pdfbox.pdmodel.font">PDType0Font</a></code></td>
+<td class="colLast"><span class="strong">PDType0Font.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType0Font.html#load(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.fontbox.ttf.TrueTypeFont,%20boolean)">load</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+    <a href="../../../../../org/apache/fontbox/ttf/TrueTypeFont.html" title="class in org.apache.fontbox.ttf">TrueTypeFont</a>&nbsp;ttf,
+    boolean&nbsp;embedSubset)</code>
+<div class="block">Loads a TTF to be embedded into a document as a Type 0 font.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDTrueTypeFont.html" title="class in org.apache.pdfbox.pdmodel.font">PDTrueTypeFont</a></code></td>
+<td class="colLast"><span class="strong">PDTrueTypeFont.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDTrueTypeFont.html#loadTTF(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.File)">loadTTF</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+       <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>Use <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType0Font.html#load(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.File)"><code>PDType0Font.load(PDDocument, File)</code></a> instead.</i></div>
+</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDTrueTypeFont.html" title="class in org.apache.pdfbox.pdmodel.font">PDTrueTypeFont</a></code></td>
+<td class="colLast"><span class="strong">PDTrueTypeFont.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDTrueTypeFont.html#loadTTF(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream)">loadTTF</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+       <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;input)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>Use <a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType0Font.html#load(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream)"><code>PDType0Font.load(PDDocument, InputStream)</code></a> instead.</i></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/pdfbox/pdmodel/font/package-summary.html">org.apache.pdfbox.pdmodel.font</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType1Font.html#PDType1Font(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream)">PDType1Font</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+           <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;pfbIn)</code>
+<div class="block">Creates a new Type 1 font for embedding.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/font/PDType1Font.html#PDType1Font(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream,%20org.apache.pdfbox.pdmodel.font.encoding.Encoding)">PDType1Font</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+           <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;pfbIn,
+           <a href="../../../../../org/apache/pdfbox/pdmodel/font/encoding/Encoding.html" title="class in org.apache.pdfbox.pdmodel.font.encoding">Encoding</a>&nbsp;encoding)</code>
+<div class="block">Creates a new Type 1 font for embedding.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel.graphics">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/package-summary.html">org.apache.pdfbox.pdmodel.graphics</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/package-summary.html">org.apache.pdfbox.pdmodel.graphics</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/PDXObject.html#PDXObject(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.cos.COSName)">PDXObject</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+         <a href="../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&nbsp;subtype)</code>
+<div class="block">Creates a new XObject of the given subtype for writing.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel.graphics.color">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/color/package-summary.html">org.apache.pdfbox.pdmodel.graphics.color</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/color/package-summary.html">org.apache.pdfbox.pdmodel.graphics.color</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDICCBased.html#PDICCBased(org.apache.pdfbox.pdmodel.PDDocument)">PDICCBased</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">Creates a new ICC color space with an empty stream.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDOutputIntent.html#PDOutputIntent(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream)">PDOutputIntent</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+              <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;colorProfile)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel.graphics.form">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/form/package-summary.html">org.apache.pdfbox.pdmodel.graphics.form</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/form/package-summary.html">org.apache.pdfbox.pdmodel.graphics.form</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/form/PDFormXObject.html#PDFormXObject(org.apache.pdfbox.pdmodel.PDDocument)">PDFormXObject</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">Creates a Form Image XObject for writing, in the given document.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/form/PDTransparencyGroup.html#PDTransparencyGroup(org.apache.pdfbox.pdmodel.PDDocument)">PDTransparencyGroup</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">Creates a Transparency Group for writing, in the given document.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel.graphics.image">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/package-summary.html">org.apache.pdfbox.pdmodel.graphics.image</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/package-summary.html">org.apache.pdfbox.pdmodel.graphics.image</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
+<td class="colLast"><span class="strong">CCITTFactory.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/CCITTFactory.html#createFromFile(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.File)">createFromFile</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+              <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</code>
+<div class="block">Creates a new CCITT Fax compressed image XObject from the first image of a TIFF file.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
+<td class="colLast"><span class="strong">CCITTFactory.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/CCITTFactory.html#createFromFile(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.File,%20int)">createFromFile</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+              <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+              int&nbsp;number)</code>
+<div class="block">Creates a new CCITT Fax compressed image XObject from a specific image of a TIFF file.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
+<td class="colLast"><span class="strong">PDImageXObject.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createFromFile(java.lang.String,%20org.apache.pdfbox.pdmodel.PDDocument)">createFromFile</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;imagePath,
+              <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">Create a PDImageXObject from an image file, see <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createFromFileByExtension(java.io.File,%20org.apache.pdfbox.pdmodel.PDDocument)"><code>PDImageXObject.createFromFileByExtension(File, PDDocument)</code></a> for
+ more details.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
+<td class="colLast"><span class="strong">PDImageXObject.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createFromFileByContent(java.io.File,%20org.apache.pdfbox.pdmodel.PDDocument)">createFromFileByContent</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+                       <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">Create a PDImageXObject from an image file.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
+<td class="colLast"><span class="strong">PDImageXObject.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createFromFileByExtension(java.io.File,%20org.apache.pdfbox.pdmodel.PDDocument)">createFromFileByExtension</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+                         <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">Create a PDImageXObject from an image file.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
+<td class="colLast"><span class="strong">LosslessFactory.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/LosslessFactory.html#createFromImage(org.apache.pdfbox.pdmodel.PDDocument,%20java.awt.image.BufferedImage)">createFromImage</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+               <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image)</code>
+<div class="block">Creates a new lossless encoded Image XObject from a Buffered Image.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
+<td class="colLast"><span class="strong">JPEGFactory.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/JPEGFactory.html#createFromImage(org.apache.pdfbox.pdmodel.PDDocument,%20java.awt.image.BufferedImage)">createFromImage</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+               <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image)</code>
+<div class="block">Creates a new JPEG Image XObject from a Buffered Image.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
+<td class="colLast"><span class="strong">CCITTFactory.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/CCITTFactory.html#createFromImage(org.apache.pdfbox.pdmodel.PDDocument,%20java.awt.image.BufferedImage)">createFromImage</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+               <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image)</code>
+<div class="block">Creates a new CCITT group 4 (T6) compressed image XObject from a b/w BufferedImage.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
+<td class="colLast"><span class="strong">JPEGFactory.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/JPEGFactory.html#createFromImage(org.apache.pdfbox.pdmodel.PDDocument,%20java.awt.image.BufferedImage,%20float)">createFromImage</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+               <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image,
+               float&nbsp;quality)</code>
+<div class="block">Creates a new JPEG Image XObject from a Buffered Image and a given quality.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
+<td class="colLast"><span class="strong">JPEGFactory.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/JPEGFactory.html#createFromImage(org.apache.pdfbox.pdmodel.PDDocument,%20java.awt.image.BufferedImage,%20float,%20int)">createFromImage</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+               <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image,
+               float&nbsp;quality,
+               int&nbsp;dpi)</code>
+<div class="block">Creates a new JPEG Image XObject from a Buffered Image, a given quality and DPI.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
+<td class="colLast"><span class="strong">CCITTFactory.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/CCITTFactory.html#createFromRandomAccess(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.io.RandomAccess)">createFromRandomAccess</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                      <a href="../../../../../org/apache/pdfbox/io/RandomAccess.html" title="interface in org.apache.pdfbox.io">RandomAccess</a>&nbsp;reader)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>Use <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/CCITTFactory.html#createFromFile(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.File)"><code>CCITTFactory.createFromFile(PDDocument, File)</code></a> instead.</i></div>
+</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
+<td class="colLast"><span class="strong">CCITTFactory.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/CCITTFactory.html#createFromRandomAccess(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.io.RandomAccess,%20int)">createFromRandomAccess</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                      <a href="../../../../../org/apache/pdfbox/io/RandomAccess.html" title="interface in org.apache.pdfbox.io">RandomAccess</a>&nbsp;reader,
+                      int&nbsp;number)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>Use <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/CCITTFactory.html#createFromFile(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.File,%20int)"><code>CCITTFactory.createFromFile(PDDocument, File, int)</code></a> instead.</i></div>
+</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
+<td class="colLast"><span class="strong">JPEGFactory.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/JPEGFactory.html#createFromStream(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream)">createFromStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;stream)</code>
+<div class="block">Creates a new JPEG Image XObject from an input stream containing JPEG data.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/package-summary.html">org.apache.pdfbox.pdmodel.graphics.image</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#PDImageXObject(org.apache.pdfbox.pdmodel.PDDocument)">PDImageXObject</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">Creates an Image XObject in the given document.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#PDImageXObject(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream,%20org.apache.pdfbox.cos.COSBase,%20int,%20int,%20int,%20org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace)">PDImageXObject</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+              <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;encodedStream,
+              <a href="../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&nbsp;cosFilter,
+              int&nbsp;width,
+              int&nbsp;height,
+              int&nbsp;bitsPerComponent,
+              <a href="../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a>&nbsp;initColorSpace)</code>
+<div class="block">Creates an Image XObject in the given document using the given filtered stream.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel.interactive.annotation">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/pdmodel/interactive/annotation/package-summary.html">org.apache.pdfbox.pdmodel.interactive.annotation</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/pdfbox/pdmodel/interactive/annotation/package-summary.html">org.apache.pdfbox.pdmodel.interactive.annotation</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/annotation/PDAppearanceStream.html#PDAppearanceStream(org.apache.pdfbox.pdmodel.PDDocument)">PDAppearanceStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">Creates a Form Image XObject for writing, in the given document.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/package-summary.html">org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/package-summary.html">org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible</a> that return <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PDFTemplateStructure.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDFTemplateStructure.html#getTemplate()">getTemplate</a></strong>()</code>
+<div class="block">Gets PDDocument template.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/package-summary.html">org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDVisibleSigBuilder.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDVisibleSigBuilder.html#closeTemplate(org.apache.pdfbox.pdmodel.PDDocument)">closeTemplate</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFTemplateBuilder.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDFTemplateBuilder.html#closeTemplate(org.apache.pdfbox.pdmodel.PDDocument)">closeTemplate</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;template)</code>
+<div class="block">Closes template</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDVisibleSigBuilder.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDVisibleSigBuilder.html#createAcroForm(org.apache.pdfbox.pdmodel.PDDocument)">createAcroForm</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFTemplateBuilder.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDFTemplateBuilder.html#createAcroForm(org.apache.pdfbox.pdmodel.PDDocument)">createAcroForm</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;template)</code>
+<div class="block">Creates Acro forms in the template.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDVisibleSigBuilder.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDVisibleSigBuilder.html#createHolderFormStream(org.apache.pdfbox.pdmodel.PDDocument)">createHolderFormStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFTemplateBuilder.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDFTemplateBuilder.html#createHolderFormStream(org.apache.pdfbox.pdmodel.PDDocument)">createHolderFormStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDVisibleSigBuilder.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDVisibleSigBuilder.html#createImageFormStream(org.apache.pdfbox.pdmodel.PDDocument)">createImageFormStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFTemplateBuilder.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDFTemplateBuilder.html#createImageFormStream(org.apache.pdfbox.pdmodel.PDDocument)">createImageFormStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDVisibleSigBuilder.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDVisibleSigBuilder.html#createInnerFormStream(org.apache.pdfbox.pdmodel.PDDocument)">createInnerFormStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFTemplateBuilder.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDFTemplateBuilder.html#createInnerFormStream(org.apache.pdfbox.pdmodel.PDDocument)">createInnerFormStream</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDVisibleSigBuilder.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDVisibleSigBuilder.html#createSignatureImage(org.apache.pdfbox.pdmodel.PDDocument,%20java.awt.image.BufferedImage)">createSignatureImage</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;template,
+                    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFTemplateBuilder.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDFTemplateBuilder.html#createSignatureImage(org.apache.pdfbox.pdmodel.PDDocument,%20java.awt.image.BufferedImage)">createSignatureImage</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;template,
+                    <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image)</code>
+<div class="block">Creates signature image.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDVisibleSigBuilder.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDVisibleSigBuilder.html#createVisualSignature(org.apache.pdfbox.pdmodel.PDDocument)">createVisualSignature</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFTemplateBuilder.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDFTemplateBuilder.html#createVisualSignature(org.apache.pdfbox.pdmodel.PDDocument)">createVisualSignature</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;template)</code>
+<div class="block">just to create visible signature</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFTemplateStructure.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDFTemplateStructure.html#setTemplate(org.apache.pdfbox.pdmodel.PDDocument)">setTemplate</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;template)</code>
+<div class="block">Wets PDDocument template.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/package-summary.html">org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDVisibleSignDesigner.html#PDVisibleSignDesigner(org.apache.pdfbox.pdmodel.PDDocument,%20java.awt.image.BufferedImage,%20int)">PDVisibleSignDesigner</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                     <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image,
+                     int&nbsp;page)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDVisibleSignDesigner.html#PDVisibleSignDesigner(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream,%20int)">PDVisibleSignDesigner</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                     <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;imageStream,
+                     int&nbsp;page)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/pdmodel/interactive/documentnavigation/outline/package-summary.html">org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/pdmodel/interactive/documentnavigation/outline/package-summary.html">org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a></code></td>
+<td class="colLast"><span class="strong">PDOutlineItem.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/documentnavigation/outline/PDOutlineItem.html#findDestinationPage(org.apache.pdfbox.pdmodel.PDDocument)">findDestinationPage</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">This method will attempt to find the page in this PDF document that this outline points to.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel.interactive.form">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/pdmodel/interactive/form/package-summary.html">org.apache.pdfbox.pdmodel.interactive.form</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/pdfbox/pdmodel/interactive/form/package-summary.html">org.apache.pdfbox.pdmodel.interactive.form</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#PDAcroForm(org.apache.pdfbox.pdmodel.PDDocument)">PDAcroForm</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html#PDAcroForm(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.cos.COSDictionary)">PDAcroForm</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+          <a href="../../../../../org/apache/pdfbox/cos/COSDictionary.html" title="class in org.apache.pdfbox.cos">COSDictionary</a>&nbsp;form)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.preflight">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/preflight/package-summary.html">org.apache.pdfbox.preflight</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subclasses, and an explanation">
+<caption><span>Subclasses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/preflight/package-summary.html">org.apache.pdfbox.preflight</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/preflight/PreflightDocument.html" title="class in org.apache.pdfbox.preflight">PreflightDocument</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.preflight.metadata">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/preflight/metadata/package-summary.html">org.apache.pdfbox.preflight.metadata</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/preflight/metadata/package-summary.html">org.apache.pdfbox.preflight.metadata</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/pdfbox/preflight/ValidationResult.ValidationError.html" title="class in org.apache.pdfbox.preflight">ValidationResult.ValidationError</a>&gt;</code></td>
+<td class="colLast"><span class="strong">SynchronizedMetaDataValidation.</span><code><strong><a href="../../../../../org/apache/pdfbox/preflight/metadata/SynchronizedMetaDataValidation.html#validateMetadataSynchronization(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.xmpbox.XMPMetadata)">validateMetadataSynchronization</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                               <a href="../../../../../org/apache/xmpbox/XMPMetadata.html" title="class in org.apache.xmpbox">XMPMetadata</a>&nbsp;metadata)</code>
+<div class="block">Check if document information entries and XMP information are synchronized</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.preflight.parser">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/preflight/parser/package-summary.html">org.apache.pdfbox.preflight.parser</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/preflight/parser/package-summary.html">org.apache.pdfbox.preflight.parser</a> that return <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PreflightParser.</span><code><strong><a href="../../../../../org/apache/pdfbox/preflight/parser/PreflightParser.html#getPDDocument()">getPDDocument</a></strong>()</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.preflight.process">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/preflight/process/package-summary.html">org.apache.pdfbox.preflight.process</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/preflight/process/package-summary.html">org.apache.pdfbox.preflight.process</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/pdfbox/preflight/ValidationResult.ValidationError.html" title="class in org.apache.pdfbox.preflight">ValidationResult.ValidationError</a>&gt;</code></td>
+<td class="colLast"><span class="strong">MetadataValidationProcess.</span><code><strong><a href="../../../../../org/apache/pdfbox/preflight/process/MetadataValidationProcess.html#checkStreamFilterUsage(org.apache.pdfbox.pdmodel.PDDocument)">checkStreamFilterUsage</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">Check if metadata dictionary has no stream filter</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../../../org/apache/pdfbox/cos/COSDictionary.html" title="class in org.apache.pdfbox.cos">COSDictionary</a></code></td>
+<td class="colLast"><span class="strong">TrailerValidationProcess.</span><code><strong><a href="../../../../../org/apache/pdfbox/preflight/process/TrailerValidationProcess.html#getLinearizedDictionary(org.apache.pdfbox.pdmodel.PDDocument)">getLinearizedDictionary</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">According to the PDF Reference, A linearized PDF contain a dictionary as first object (linearized dictionary) and
+ only this one in the first section.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.preflight.utils">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/preflight/utils/package-summary.html">org.apache.pdfbox.preflight.utils</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/preflight/utils/package-summary.html">org.apache.pdfbox.preflight.utils</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><span class="strong">COSUtils.</span><code><strong><a href="../../../../../org/apache/pdfbox/preflight/utils/COSUtils.html#closeDocumentQuietly(org.apache.pdfbox.pdmodel.PDDocument)">closeDocumentQuietly</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">Close the given Document.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.printing">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/printing/package-summary.html">org.apache.pdfbox.printing</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/pdfbox/printing/package-summary.html">org.apache.pdfbox.printing</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/printing/PDFPageable.html#PDFPageable(org.apache.pdfbox.pdmodel.PDDocument)">PDFPageable</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">Creates a new PDFPageable.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/printing/PDFPageable.html#PDFPageable(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.printing.Orientation)">PDFPageable</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+           <a href="../../../../../org/apache/pdfbox/printing/Orientation.html" title="enum in org.apache.pdfbox.printing">Orientation</a>&nbsp;orientation)</code>
+<div class="block">Creates a new PDFPageable with the given page orientation.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/printing/PDFPageable.html#PDFPageable(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.printing.Orientation,%20boolean)">PDFPageable</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+           <a href="../../../../../org/apache/pdfbox/printing/Orientation.html" title="enum in org.apache.pdfbox.printing">Orientation</a>&nbsp;orientation,
+           boolean&nbsp;showPageBorder)</code>
+<div class="block">Creates a new PDFPageable with the given page orientation and with optional page borders
+ shown.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/printing/PDFPageable.html#PDFPageable(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.printing.Orientation,%20boolean,%20float)">PDFPageable</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+           <a href="../../../../../org/apache/pdfbox/printing/Orientation.html" title="enum in org.apache.pdfbox.printing">Orientation</a>&nbsp;orientation,
+           boolean&nbsp;showPageBorder,
+           float&nbsp;dpi)</code>
+<div class="block">Creates a new PDFPageable with the given page orientation and with optional page borders
+ shown.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/printing/PDFPrintable.html#PDFPrintable(org.apache.pdfbox.pdmodel.PDDocument)">PDFPrintable</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">Creates a new PDFPrintable.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/printing/PDFPrintable.html#PDFPrintable(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.printing.Scaling)">PDFPrintable</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+            <a href="../../../../../org/apache/pdfbox/printing/Scaling.html" title="enum in org.apache.pdfbox.printing">Scaling</a>&nbsp;scaling)</code>
+<div class="block">Creates a new PDFPrintable with the given page scaling.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/printing/PDFPrintable.html#PDFPrintable(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.printing.Scaling,%20boolean)">PDFPrintable</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+            <a href="../../../../../org/apache/pdfbox/printing/Scaling.html" title="enum in org.apache.pdfbox.printing">Scaling</a>&nbsp;scaling,
+            boolean&nbsp;showPageBorder)</code>
+<div class="block">Creates a new PDFPrintable with the given page scaling and with optional page borders shown.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/printing/PDFPrintable.html#PDFPrintable(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.printing.Scaling,%20boolean,%20float)">PDFPrintable</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+            <a href="../../../../../org/apache/pdfbox/printing/Scaling.html" title="enum in org.apache.pdfbox.printing">Scaling</a>&nbsp;scaling,
+            boolean&nbsp;showPageBorder,
+            float&nbsp;dpi)</code>
+<div class="block">Creates a new PDFPrintable with the given page scaling and with optional page borders shown.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/printing/PDFPrintable.html#PDFPrintable(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.printing.Scaling,%20boolean,%20float,%20boolean)">PDFPrintable</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+            <a href="../../../../../org/apache/pdfbox/printing/Scaling.html" title="enum in org.apache.pdfbox.printing">Scaling</a>&nbsp;scaling,
+            boolean&nbsp;showPageBorder,
+            float&nbsp;dpi,
+            boolean&nbsp;center)</code>
+<div class="block">Creates a new PDFPrintable with the given page scaling and with optional page borders shown.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.rendering">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/rendering/package-summary.html">org.apache.pdfbox.rendering</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../org/apache/pdfbox/rendering/package-summary.html">org.apache.pdfbox.rendering</a> declared as <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PDFRenderer.</span><code><strong><a href="../../../../../org/apache/pdfbox/rendering/PDFRenderer.html#document">document</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/pdfbox/rendering/package-summary.html">org.apache.pdfbox.rendering</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/rendering/PDFRenderer.html#PDFRenderer(org.apache.pdfbox.pdmodel.PDDocument)">PDFRenderer</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">Creates a new PDFRenderer.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.text">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/text/package-summary.html">org.apache.pdfbox.text</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../org/apache/pdfbox/text/package-summary.html">org.apache.pdfbox.text</a> declared as <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">PDFTextStripper.</span><code><strong><a href="../../../../../org/apache/pdfbox/text/PDFTextStripper.html#document">document</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/text/package-summary.html">org.apache.pdfbox.text</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><span class="strong">PDFTextStripper.</span><code><strong><a href="../../../../../org/apache/pdfbox/text/PDFTextStripper.html#endDocument(org.apache.pdfbox.pdmodel.PDDocument)">endDocument</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">This method is available for subclasses of this class.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><span class="strong">PDFTextStripper.</span><code><strong><a href="../../../../../org/apache/pdfbox/text/PDFTextStripper.html#getText(org.apache.pdfbox.pdmodel.PDDocument)">getText</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">This will return the text of a document.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><span class="strong">PDFTextStripper.</span><code><strong><a href="../../../../../org/apache/pdfbox/text/PDFTextStripper.html#startDocument(org.apache.pdfbox.pdmodel.PDDocument)">startDocument</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">This method is available for subclasses of this class.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFTextStripper.</span><code><strong><a href="../../../../../org/apache/pdfbox/text/PDFTextStripper.html#writeText(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.Writer)">writeText</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+         <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</a>&nbsp;outputStream)</code>
+<div class="block">This will take a PDDocument and write the text of that document to the print writer.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.tools">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> in <a href="../../../../../org/apache/pdfbox/tools/package-summary.html">org.apache.pdfbox.tools</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/tools/package-summary.html">org.apache.pdfbox.tools</a> that return <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><span class="strong">TextToPDF.</span><code><strong><a href="../../../../../org/apache/pdfbox/tools/TextToPDF.html#createPDFFromText(java.io.Reader)">createPDFFromText</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io">Reader</a>&nbsp;text)</code>
+<div class="block">Create a PDF document with some text.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/pdfbox/tools/package-summary.html">org.apache.pdfbox.tools</a> with parameters of type <a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">ImportXFDF.</span><code><strong><a href="../../../../../org/apache/pdfbox/tools/ImportXFDF.html#close(org.apache.pdfbox.pdmodel.PDDocument)">close</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">Close the document.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">ImportFDF.</span><code><strong><a href="../../../../../org/apache/pdfbox/tools/ImportFDF.html#close(org.apache.pdfbox.pdmodel.PDDocument)">close</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">Close the document.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">ExportXFDF.</span><code><strong><a href="../../../../../org/apache/pdfbox/tools/ExportXFDF.html#close(org.apache.pdfbox.pdmodel.PDDocument)">close</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">Close the document.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">ExportFDF.</span><code><strong><a href="../../../../../org/apache/pdfbox/tools/ExportFDF.html#close(org.apache.pdfbox.pdmodel.PDDocument)">close</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">Close the document.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">TextToPDF.</span><code><strong><a href="../../../../../org/apache/pdfbox/tools/TextToPDF.html#createPDFFromText(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.Reader)">createPDFFromText</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+                 <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io">Reader</a>&nbsp;text)</code>
+<div class="block">Create a PDF document with some text.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFText2HTML.</span><code><strong><a href="../../../../../org/apache/pdfbox/tools/PDFText2HTML.html#endDocument(org.apache.pdfbox.pdmodel.PDDocument)">endDocument</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">This method is available for subclasses of this class.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">ImportXFDF.</span><code><strong><a href="../../../../../org/apache/pdfbox/tools/ImportXFDF.html#importFDF(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.fdf.FDFDocument)">importFDF</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;pdfDocument,
+         <a href="../../../../../org/apache/pdfbox/pdmodel/fdf/FDFDocument.html" title="class in org.apache.pdfbox.pdmodel.fdf">FDFDocument</a>&nbsp;fdfDocument)</code>
+<div class="block">This will takes the values from the fdf document and import them into the
+ PDF document.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">ImportFDF.</span><code><strong><a href="../../../../../org/apache/pdfbox/tools/ImportFDF.html#importFDF(org.apache.pdfbox.pdmodel.PDDocument,%20org.apache.pdfbox.pdmodel.fdf.FDFDocument)">importFDF</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;pdfDocument,
+         <a href="../../../../../org/apache/pdfbox/pdmodel/fdf/FDFDocument.html" title="class in org.apache.pdfbox.pdmodel.fdf">FDFDocument</a>&nbsp;fdfDocument)</code>
+<div class="block">This will takes the values from the fdf document and import them into the
+ PDF document.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><span class="strong">PDFText2HTML.</span><code><strong><a href="../../../../../org/apache/pdfbox/tools/PDFText2HTML.html#startDocument(org.apache.pdfbox.pdmodel.PDDocument)">startDocument</a></strong>(<a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="../package-summary.html">Package</a></li>
+<li><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">Class</a></li>
+<li class="navBarCell1Rev">Use</li>
+<li><a href="../package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev</li>
+<li>Next</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/apache/pdfbox/pdmodel/class-use/PDDocument.html" target="_top">Frames</a></li>
+<li><a href="PDDocument.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2017 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>
