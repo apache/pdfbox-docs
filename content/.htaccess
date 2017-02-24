@@ -1,7 +1,7 @@
 RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-RewriteRule ^apidocs(/?)$ /docs/2.0.3/javadocs [R=301,L]
+RewriteRule ^apidocs(/?)$ /docs/2.0.4/javadocs [R=301,L]
 RewriteRule ^commandlineutilities(/?)(.*)$ /2.0/commandline [R=301,L]
 RewriteRule ^downloads\.html$ /download.cgi
 RewriteRule ^downloads\.cgi$ /download.cgi
