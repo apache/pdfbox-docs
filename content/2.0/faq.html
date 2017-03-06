@@ -327,6 +327,7 @@ the word “Hello” is drawn.</li>
 
 <ul>
   <li>increase the <code class="highlighter-rouge">-Xmx</code> value when starting java</li>
+  <li>use a scratch file by loading files with this code <code class="highlighter-rouge">PDDocument.load(file, MemoryUsageSetting.setupTempFileOnly())</code></li>
   <li>be careful not to hold your images after rendering them, e.g. avoid putting all images of a PDF into a <code class="highlighter-rouge">List</code></li>
   <li>don’t forgot to close your <code class="highlighter-rouge">PDDocument</code> objects</li>
   <li>decrease the scale when calling <code class="highlighter-rouge">PDFRenderer.renderImage()</code>, or the dpi value when calling <code class="highlighter-rouge">PDFRenderer.renderImageWithDPI()</code></li>
