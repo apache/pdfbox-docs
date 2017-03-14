@@ -133,8 +133,6 @@
             <div class="col-xs-12 col-sm-9">
                 <h1 id="getting-started">Getting Started</h1>
 
-<p>This content is under construction.</p>
-
 <h2 id="maven">Maven</h2>
 
 <p>To use the latest release you’ll need to add the following dependency:</p>
@@ -162,6 +160,16 @@ A solution is to disable LittleCMS in favor of the old KCMS (Kodak Color Managem
 <p>Sources:<br />
 http://www.subshell.com/en/subshell/blog/Wrong-Colors-in-Images-with-Java8-100.html<br />
 https://bugs.openjdk.java.net/browse/JDK-8041125</p>
+
+<h2 id="rendering-performance">Rendering Performance</h2>
+
+<p class="alert alert-info">Since PDFBox 2.0.4</p>
+
+<p>PDFBox 2.0.4 introduced a new command line setting</p>
+
+<p><code class="highlighter-rouge">-Dorg.apache.pdfbox.rendering.UsePureJavaCMYKConversion=true</code></p>
+
+<p>which may improve the performance of rendering PDFs on some systems especially if there are a lot of images on a page.</p>
 
             </div>
         </div>
