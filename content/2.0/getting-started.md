@@ -22,8 +22,6 @@ title:   Getting Started
 
 # Getting Started
 
-This content is under construction.
-
 ## Maven
 
 To use the latest release you'll need to add the following dependency:
@@ -49,3 +47,13 @@ A solution is to disable LittleCMS in favor of the old KCMS (Kodak Color Managem
 Sources:  
 http://www.subshell.com/en/subshell/blog/Wrong-Colors-in-Images-with-Java8-100.html  
 https://bugs.openjdk.java.net/browse/JDK-8041125
+
+## Rendering Performance ##
+
+<p class="alert alert-info">Since PDFBox 2.0.4</p>
+
+PDFBox 2.0.4 introduced a new command line setting
+
+ ``-Dorg.apache.pdfbox.rendering.UsePureJavaCMYKConversion=true``
+
+which may improve the performance of rendering PDFs on some systems especially if there are a lot of images on a page.
