@@ -22,7 +22,7 @@ title:   Coding Conventions
 
 # Coding Conventions
 
-Over the years the PDFBox project has come to adopt a number of coding conventions. These are not always followed in old code but new code should try to follow these rules where possible.
+Over the years the PDFBox project has come to adopt a number of coding conventions. These are not always followed in old code but new code should follow these rules where possible.
 
 ### Formatting
 
@@ -112,7 +112,7 @@ Over the years the PDFBox project has come to adopt a number of coding conventio
 - Don't expose implementation details unless there is a clear need: allowing subclassing means that the behaviour of protected methods becomes part of the contract of the public AP.
 
 - Avoid unnecesary abstraction. While you're encouraged to avoid brittle designs, it's unlikey that an API designed for "future use" will have the correct API without any code which actually uses it.
- 
+
 ### Example
 
 Here's an example of PDFBox's formatting style:
@@ -139,9 +139,9 @@ public class Foo extends Bar
 
 ## Eclipse Formatter
 
-Eclipse users may download this preferences file: pdfbox-eclipse-formatter.xml and import this into Eclipse. 
+Eclipse users may download this preferences file: pdfbox-eclipse-formatter.xml and import this into Eclipse.
 (Window->Preferences, go to Java->Code Style->Formatter and click "Import...").
 Once you have done this you can reformat your code by using Source->Format (Ctrl+Shift+F).
 
-Also note that Eclipse will automatically format your import statements appropriately when 
+Also note that Eclipse will automatically format your import statements appropriately when
 you invoke Source -> Organize Imports (Ctrl+Shift+O).
