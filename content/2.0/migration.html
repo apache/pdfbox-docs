@@ -86,7 +86,7 @@
                             </li>
                             <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/2.0/faq.html">FAQ</a></li>
-                            <li><a href="/docs/2.0.4/javadocs/">API Docs</a></li>
+                            <li><a href="/docs/2.0.5/javadocs/">API Docs</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-node" id="v1-8">
@@ -198,7 +198,7 @@ results when switching to PDFBox 2.0.0.</p>
 
 <p>TrueType fonts shall now be loaded using</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">PDType0Font</span><span class="o">.</span><span class="na">load</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">PDType0Font</span><span class="o">.</span><span class="na">load</span>
 </code></pre>
 </div>
 
@@ -230,7 +230,7 @@ and so on. The <code class="highlighter-rouge">add</code> method now supports al
 
 <p>Prior to PDFBox 2.0 parsing the page content was done using</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">PDStream</span> <span class="n">contents</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="na">getContents</span><span class="o">();</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">PDStream</span> <span class="n">contents</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="na">getContents</span><span class="o">();</span>
 <span class="n">PDFStreamParser</span> <span class="n">parser</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDFStreamParser</span><span class="o">(</span><span class="n">contents</span><span class="o">.</span><span class="na">getStream</span><span class="o">());</span>
 <span class="n">parser</span><span class="o">.</span><span class="na">parse</span><span class="o">();</span>
 <span class="n">List</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">tokens</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="na">getTokens</span><span class="o">();</span>
@@ -239,7 +239,7 @@ and so on. The <code class="highlighter-rouge">add</code> method now supports al
 
 <p>With PDFBox 2.0 the code is reduced to</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">PDFStreamParser</span> <span class="n">parser</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDFStreamParser</span><span class="o">(</span><span class="n">page</span><span class="o">);</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">PDFStreamParser</span> <span class="n">parser</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDFStreamParser</span><span class="o">(</span><span class="n">page</span><span class="o">);</span>
 <span class="n">parser</span><span class="o">.</span><span class="na">parse</span><span class="o">();</span>
 <span class="n">List</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">tokens</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="na">getTokens</span><span class="o">();</span>
 </code></pre>
@@ -250,7 +250,7 @@ and so on. The <code class="highlighter-rouge">add</code> method now supports al
 <h3 id="iterating-pages">Iterating Pages</h3>
 <p>With PDFBox 2.0.0 the prefered way to iterate through the pages of a document is</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="k">for</span><span class="o">(</span><span class="n">PDPage</span> <span class="n">page</span> <span class="o">:</span> <span class="n">document</span><span class="o">.</span><span class="na">getPages</span><span class="o">())</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">for</span><span class="o">(</span><span class="n">PDPage</span> <span class="n">page</span> <span class="o">:</span> <span class="n">document</span><span class="o">.</span><span class="na">getPages</span><span class="o">())</span>
 <span class="o">{</span>
     <span class="o">...</span> <span class="o">(</span><span class="k">do</span> <span class="n">something</span><span class="o">)</span>
 <span class="o">}</span>
@@ -260,7 +260,7 @@ and so on. The <code class="highlighter-rouge">add</code> method now supports al
 <h3 id="pdf-rendering">PDF Rendering</h3>
 <p>With PDFBox 2.0.0 <code class="highlighter-rouge">PDPage.convertToImage</code> and <code class="highlighter-rouge">PDFImageWriter</code> have been removed. Instead the new <code class="highlighter-rouge">PDFRenderer</code> class shall be used.</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">PDDocument</span> <span class="n">document</span> <span class="o">=</span> <span class="n">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="n">pdfFilename</span><span class="o">));</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">PDDocument</span> <span class="n">document</span> <span class="o">=</span> <span class="n">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="n">pdfFilename</span><span class="o">));</span>
 <span class="n">PDFRenderer</span> <span class="n">pdfRenderer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDFRenderer</span><span class="o">(</span><span class="n">document</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">pageCounter</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
 <span class="k">for</span> <span class="o">(</span><span class="n">PDPage</span> <span class="n">page</span> <span class="o">:</span> <span class="n">document</span><span class="o">.</span><span class="na">getPages</span><span class="o">())</span>
@@ -304,7 +304,7 @@ https://bugs.openjdk.java.net/browse/JDK-8041125</p>
 
 <p>Users of <code class="highlighter-rouge">PDFPrinter.silentPrint()</code> should now use this code:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">PrinterJob</span> <span class="n">job</span> <span class="o">=</span> <span class="n">PrinterJob</span><span class="o">.</span><span class="na">getPrinterJob</span><span class="o">();</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">PrinterJob</span> <span class="n">job</span> <span class="o">=</span> <span class="n">PrinterJob</span><span class="o">.</span><span class="na">getPrinterJob</span><span class="o">();</span>
 <span class="n">job</span><span class="o">.</span><span class="na">setPageable</span><span class="o">(</span><span class="k">new</span> <span class="n">PDFPageable</span><span class="o">(</span><span class="n">document</span><span class="o">));</span>
 <span class="n">job</span><span class="o">.</span><span class="na">print</span><span class="o">();</span>
 </code></pre>
@@ -312,7 +312,7 @@ https://bugs.openjdk.java.net/browse/JDK-8041125</p>
 
 <p>While users of <code class="highlighter-rouge">PDFPrinter.print()</code> should now use this code:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">PrinterJob</span> <span class="n">job</span> <span class="o">=</span> <span class="n">PrinterJob</span><span class="o">.</span><span class="na">getPrinterJob</span><span class="o">();</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">PrinterJob</span> <span class="n">job</span> <span class="o">=</span> <span class="n">PrinterJob</span><span class="o">.</span><span class="na">getPrinterJob</span><span class="o">();</span>
 <span class="n">job</span><span class="o">.</span><span class="na">setPageable</span><span class="o">(</span><span class="k">new</span> <span class="n">PDFPageable</span><span class="o">(</span><span class="n">document</span><span class="o">));</span>
 <span class="k">if</span> <span class="o">(</span><span class="n">job</span><span class="o">.</span><span class="na">printDialog</span><span class="o">())</span> <span class="o">{</span>
     <span class="n">job</span><span class="o">.</span><span class="na">print</span><span class="o">();</span>
@@ -326,7 +326,7 @@ https://bugs.openjdk.java.net/browse/JDK-8041125</p>
 <p>In 1.8, to get the text colors, one method was to pass an expanded .properties file to the PDFStripper constructor. To achieve the same
 in PDFBox 2.0 you can extend <code class="highlighter-rouge">PDFTextStripper</code>and add the following <code class="highlighter-rouge">Operators</code> to the constructor:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">addOperator</span><span class="o">(</span><span class="k">new</span> <span class="n">SetStrokingColorSpace</span><span class="o">());</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">addOperator</span><span class="o">(</span><span class="k">new</span> <span class="n">SetStrokingColorSpace</span><span class="o">());</span>
 <span class="n">addOperator</span><span class="o">(</span><span class="k">new</span> <span class="n">SetNonStrokingColorSpace</span><span class="o">());</span>
 <span class="n">addOperator</span><span class="o">(</span><span class="k">new</span> <span class="n">SetStrokingDeviceCMYKColor</span><span class="o">());</span>
 <span class="n">addOperator</span><span class="o">(</span><span class="k">new</span> <span class="n">SetNonStrokingDeviceCMYKColor</span><span class="o">());</span>
@@ -348,7 +348,7 @@ tree are now represented by the <code class="highlighter-rouge">PDNonTerminalFie
 
 <p>With PDFBox 2.0.0 the prefered way to iterate through the fields is now</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">PDAcroForm</span> <span class="n">form</span><span class="o">;</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">PDAcroForm</span> <span class="n">form</span><span class="o">;</span>
 <span class="o">...</span>
 <span class="k">for</span> <span class="o">(</span><span class="n">PDField</span> <span class="n">field</span> <span class="o">:</span> <span class="n">form</span><span class="o">.</span><span class="na">getFieldTree</span><span class="o">())</span>
 <span class="o">{</span>
