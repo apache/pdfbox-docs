@@ -129,6 +129,9 @@
                     <li><a href="https://www.apache.org/foundation/thanks.html">ASF Sponsors</a></li>
                     <li><a href="https://www.apache.org/security/">Security</a></li>
                 </ul>
+                <iframe src="https://www.apache.org/ads/buttonbar.html"
+                    style="border-width:0; float: left" frameborder="0" scrolling="no"
+                width="135" height="265"></iframe>
             </div>
             <div class="col-xs-12 col-sm-9">
                 <h1 id="dependencies">Dependencies</h1>
@@ -163,7 +166,7 @@ included in the Java platform.</p>
 <h3 id="include-dependencies-using-maven">Include Dependencies Using Maven</h3>
 <p>To add the pdfbox, fontbox, xmpbox and commons-logging jars to your application, the easiest thing is to declare the Maven dependency shown below. This gives you the main pdfbox library directly and the other required jars as transitive dependencies.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>org.apache.pdfbox<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>pdfbox<span class="nt">&lt;/artifactId&gt;</span>
     <span class="nt">&lt;version&gt;</span>...<span class="nt">&lt;/version&gt;</span>
@@ -196,7 +199,7 @@ included in the Java platform.</p>
 
 <p>Encrypting and sigining PDFs requires the <em>bcprov</em>, <em>bcmail</em> and <em>bcpkix</em> libraries from the <a href="http://www.bouncycastle.org/">Legion of the Bouncy Castle</a>. These can be included in your Maven project using the following dependencies:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>org.bouncycastle<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>bcprov-jdk15on<span class="nt">&lt;/artifactId&gt;</span>
     <span class="nt">&lt;version&gt;</span>1.54<span class="nt">&lt;/version&gt;</span>

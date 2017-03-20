@@ -129,6 +129,9 @@
                     <li><a href="https://www.apache.org/foundation/thanks.html">ASF Sponsors</a></li>
                     <li><a href="https://www.apache.org/security/">Security</a></li>
                 </ul>
+                <iframe src="https://www.apache.org/ads/buttonbar.html"
+                    style="border-width:0; float: left" frameborder="0" scrolling="no"
+                width="135" height="265"></iframe>
             </div>
             <div class="col-xs-12 col-sm-9">
                 <h1 id="ideas">Ideas</h1>
@@ -150,18 +153,18 @@ implementation.</p>
 <p>In addition to the PDF parsing pdfbox does not always handle large PDF files well as some 
 of the references are implemented as int instead of long</p>
 
-<h2 id="span-classcompleteswitch-to-java-16span"><span class="complete">Switch to Java 1.6</span></h2>
+<h2 id="switch-to-java-16"><span class="complete">Switch to Java 1.6</span></h2>
 
 <p><span class="complete">PDFBox 2.0.0 has Java 6 as a minimum requirement.</span></p>
 
-<h2 id="span-classcompletebreak-pdfbox-into-modulesspan"><span class="complete">Break PDFBox into modules</span></h2>
+<h2 id="break-pdfbox-into-modules"><span class="complete">Break PDFBox into modules</span></h2>
 
 <p><span class="complete">In order to support different use cases and provide a minimal toolset PDFBox 2.0.0 should be 
 separated into different modules. This goes inline with rearranging some of the code
 e.g. remove AWT from PDDocument.
 </span></p>
 
-<h2 id="span-classcompleteenhance-the-font-renderingspan"><span class="complete">Enhance the font rendering</span></h2>
+<h2 id="enhance-the-font-rendering"><span class="complete">Enhance the font rendering</span></h2>
 
 <p><span class="complete">PDFBox 2.0.0 will render most of the fonts without using AWT.</span></p>
 
@@ -183,7 +186,7 @@ enhanced that situation but there is a need to have a cleaner foundation broken 
 <p>In addition, handling documents which are not conforming shouldn’t be part of the core parser
 but of an extensible approach, e.g. by adding hooks to allow for handling parsing exceptions.</p>
 
-<h2 id="span-classcompleteadd-the-ability-to-create-pdfs-using-unicode-encoded-textspan"><span class="complete">Add the ability to create PDFs using unicode encoded text</span></h2>
+<h2 id="add-the-ability-to-create-pdfs-using-unicode-encoded-text"><span class="complete">Add the ability to create PDFs using unicode encoded text</span></h2>
 
 <p><span class="complete">The recent PDFBox version is limited to WinANSI encoded text. 2.0.0 should have unicode support as well.</span></p>
 
