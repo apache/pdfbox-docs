@@ -1,0 +1,764 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PDShading (PDFBox reactor 2.0.5 API)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="PDShading (PDFBox reactor 2.0.5 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/PDShading.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/AxialShadingPaint.html" title="class in org.apache.pdfbox.pdmodel.graphics.shading"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShadingType1.html" title="class in org.apache.pdfbox.pdmodel.graphics.shading"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html" target="_top">Frames</a></li>
+<li><a href="PDShading.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.apache.pdfbox.pdmodel.graphics.shading</div>
+<h2 title="Class PDShading" class="title">Class PDShading</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>org.apache.pdfbox.pdmodel.graphics.shading.PDShading</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObjectable.html" title="interface in org.apache.pdfbox.pdmodel.common">COSObjectable</a></dd>
+</dl>
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShadingType1.html" title="class in org.apache.pdfbox.pdmodel.graphics.shading">PDShadingType1</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShadingType2.html" title="class in org.apache.pdfbox.pdmodel.graphics.shading">PDShadingType2</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShadingType4.html" title="class in org.apache.pdfbox.pdmodel.graphics.shading">PDShadingType4</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShadingType5.html" title="class in org.apache.pdfbox.pdmodel.graphics.shading">PDShadingType5</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public abstract class <span class="strong">PDShading</span>
+extends <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
+implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObjectable.html" title="interface in org.apache.pdfbox.pdmodel.common">COSObjectable</a></pre>
+<div class="block">A Shading Resource.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#SHADING_TYPE1">SHADING_TYPE1</a></strong></code>
+<div class="block">shading type 1 = function based shading.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#SHADING_TYPE2">SHADING_TYPE2</a></strong></code>
+<div class="block">shading type 2 = axial shading.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#SHADING_TYPE3">SHADING_TYPE3</a></strong></code>
+<div class="block">shading type 3 = radial shading.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#SHADING_TYPE4">SHADING_TYPE4</a></strong></code>
+<div class="block">shading type 4 = Free-Form Gouraud-Shaded Triangle Meshes.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#SHADING_TYPE5">SHADING_TYPE5</a></strong></code>
+<div class="block">shading type 5 = Lattice-Form Gouraud-Shaded Triangle Meshes.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#SHADING_TYPE6">SHADING_TYPE6</a></strong></code>
+<div class="block">shading type 6 = Coons Patch Meshes.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#SHADING_TYPE7">SHADING_TYPE7</a></strong></code>
+<div class="block">shading type 7 = Tensor-Product Patch Meshes.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#PDShading()">PDShading</a></strong>()</code>
+<div class="block">Default constructor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#PDShading(org.apache.pdfbox.cos.COSDictionary)">PDShading</a></strong>(<a href="../../../../../../org/apache/pdfbox/cos/COSDictionary.html" title="class in org.apache.pdfbox.cos">COSDictionary</a>&nbsp;shadingDictionary)</code>
+<div class="block">Constructor using the given shading dictionary.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html" title="class in org.apache.pdfbox.pdmodel.graphics.shading">PDShading</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#create(org.apache.pdfbox.cos.COSDictionary)">create</a></strong>(<a href="../../../../../../org/apache/pdfbox/cos/COSDictionary.html" title="class in org.apache.pdfbox.cos">COSDictionary</a>&nbsp;resourceDictionary)</code>
+<div class="block">Create the correct PD Model shading based on the COS base shading.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>float[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#evalFunction(float)">evalFunction</a></strong>(float&nbsp;inputValue)</code>
+<div class="block">Convert the input value using the functions of the shading dictionary.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>float[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#evalFunction(float[])">evalFunction</a></strong>(float[]&nbsp;input)</code>
+<div class="block">Convert the input values using the functions of the shading dictionary.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#getAntiAlias()">getAntiAlias</a></strong>()</code>
+<div class="block">This will return the AntiAlias value.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/cos/COSArray.html" title="class in org.apache.pdfbox.cos">COSArray</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#getBackground()">getBackground</a></strong>()</code>
+<div class="block">This will return the background.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDRectangle.html" title="class in org.apache.pdfbox.pdmodel.common">PDRectangle</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#getBBox()">getBBox</a></strong>()</code>
+<div class="block">An array of four numbers in the form coordinate system (see below),
+ giving the coordinates of the left, bottom, right, and top edges,
+ respectively, of the shading's bounding box.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#getColorSpace()">getColorSpace</a></strong>()</code>
+<div class="block">This will get the color space or null if none exists.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/cos/COSDictionary.html" title="class in org.apache.pdfbox.cos">COSDictionary</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#getCOSObject()">getCOSObject</a></strong>()</code>
+<div class="block">This will get the underlying dictionary.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/function/PDFunction.html" title="class in org.apache.pdfbox.pdmodel.common.function">PDFunction</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#getFunction()">getFunction</a></strong>()</code>
+<div class="block">This will return the function used to convert the color values.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#getShadingType()">getShadingType</a></strong>()</code>
+<div class="block">This will return the shading type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#getType()">getType</a></strong>()</code>
+<div class="block">This will return the type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#setAntiAlias(boolean)">setAntiAlias</a></strong>(boolean&nbsp;antiAlias)</code>
+<div class="block">This will set the AntiAlias value.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#setBackground(org.apache.pdfbox.cos.COSArray)">setBackground</a></strong>(<a href="../../../../../../org/apache/pdfbox/cos/COSArray.html" title="class in org.apache.pdfbox.cos">COSArray</a>&nbsp;newBackground)</code>
+<div class="block">This will set the background.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#setBBox(org.apache.pdfbox.pdmodel.common.PDRectangle)">setBBox</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDRectangle.html" title="class in org.apache.pdfbox.pdmodel.common">PDRectangle</a>&nbsp;newBBox)</code>
+<div class="block">This will set the BBox (bounding box) for this Shading.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#setColorSpace(org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace)">setColorSpace</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a>&nbsp;colorSpace)</code>
+<div class="block">This will set the color space for the shading.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#setFunction(org.apache.pdfbox.cos.COSArray)">setFunction</a></strong>(<a href="../../../../../../org/apache/pdfbox/cos/COSArray.html" title="class in org.apache.pdfbox.cos">COSArray</a>&nbsp;newFunctions)</code>
+<div class="block">This will set the functions COSArray for the color conversion.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#setFunction(org.apache.pdfbox.pdmodel.common.function.PDFunction)">setFunction</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/function/PDFunction.html" title="class in org.apache.pdfbox.pdmodel.common.function">PDFunction</a>&nbsp;newFunction)</code>
+<div class="block">This will set the function for the color conversion.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#setShadingType(int)">setShadingType</a></strong>(int&nbsp;shadingType)</code>
+<div class="block">This will set the shading type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/Paint.html?is-external=true" title="class or interface in java.awt">Paint</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html#toPaint(org.apache.pdfbox.util.Matrix)">toPaint</a></strong>(<a href="../../../../../../org/apache/pdfbox/util/Matrix.html" title="class in org.apache.pdfbox.util">Matrix</a>&nbsp;matrix)</code>
+<div class="block">Returns an AWT paint which corresponds to this shading</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="SHADING_TYPE1">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SHADING_TYPE1</h4>
+<pre>public static final&nbsp;int SHADING_TYPE1</pre>
+<div class="block">shading type 1 = function based shading.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.pdfbox.pdmodel.graphics.shading.PDShading.SHADING_TYPE1">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="SHADING_TYPE2">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SHADING_TYPE2</h4>
+<pre>public static final&nbsp;int SHADING_TYPE2</pre>
+<div class="block">shading type 2 = axial shading.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.pdfbox.pdmodel.graphics.shading.PDShading.SHADING_TYPE2">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="SHADING_TYPE3">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SHADING_TYPE3</h4>
+<pre>public static final&nbsp;int SHADING_TYPE3</pre>
+<div class="block">shading type 3 = radial shading.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.pdfbox.pdmodel.graphics.shading.PDShading.SHADING_TYPE3">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="SHADING_TYPE4">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SHADING_TYPE4</h4>
+<pre>public static final&nbsp;int SHADING_TYPE4</pre>
+<div class="block">shading type 4 = Free-Form Gouraud-Shaded Triangle Meshes.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.pdfbox.pdmodel.graphics.shading.PDShading.SHADING_TYPE4">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="SHADING_TYPE5">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SHADING_TYPE5</h4>
+<pre>public static final&nbsp;int SHADING_TYPE5</pre>
+<div class="block">shading type 5 = Lattice-Form Gouraud-Shaded Triangle Meshes.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.pdfbox.pdmodel.graphics.shading.PDShading.SHADING_TYPE5">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="SHADING_TYPE6">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SHADING_TYPE6</h4>
+<pre>public static final&nbsp;int SHADING_TYPE6</pre>
+<div class="block">shading type 6 = Coons Patch Meshes.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.pdfbox.pdmodel.graphics.shading.PDShading.SHADING_TYPE6">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="SHADING_TYPE7">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>SHADING_TYPE7</h4>
+<pre>public static final&nbsp;int SHADING_TYPE7</pre>
+<div class="block">shading type 7 = Tensor-Product Patch Meshes.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.pdfbox.pdmodel.graphics.shading.PDShading.SHADING_TYPE7">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="PDShading()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PDShading</h4>
+<pre>public&nbsp;PDShading()</pre>
+<div class="block">Default constructor.</div>
+</li>
+</ul>
+<a name="PDShading(org.apache.pdfbox.cos.COSDictionary)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>PDShading</h4>
+<pre>public&nbsp;PDShading(<a href="../../../../../../org/apache/pdfbox/cos/COSDictionary.html" title="class in org.apache.pdfbox.cos">COSDictionary</a>&nbsp;shadingDictionary)</pre>
+<div class="block">Constructor using the given shading dictionary.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>shadingDictionary</code> - the dictionary for this shading</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getCOSObject()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCOSObject</h4>
+<pre>public&nbsp;<a href="../../../../../../org/apache/pdfbox/cos/COSDictionary.html" title="class in org.apache.pdfbox.cos">COSDictionary</a>&nbsp;getCOSObject()</pre>
+<div class="block">This will get the underlying dictionary.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObjectable.html#getCOSObject()">getCOSObject</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObjectable.html" title="interface in org.apache.pdfbox.pdmodel.common">COSObjectable</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>the dictionary for this shading.</dd></dl>
+</li>
+</ul>
+<a name="getType()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getType</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getType()</pre>
+<div class="block">This will return the type.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the type of object that this is</dd></dl>
+</li>
+</ul>
+<a name="setShadingType(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setShadingType</h4>
+<pre>public&nbsp;void&nbsp;setShadingType(int&nbsp;shadingType)</pre>
+<div class="block">This will set the shading type.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>shadingType</code> - the new shading type</dd></dl>
+</li>
+</ul>
+<a name="getShadingType()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getShadingType</h4>
+<pre>public abstract&nbsp;int&nbsp;getShadingType()</pre>
+<div class="block">This will return the shading type.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the shading typ</dd></dl>
+</li>
+</ul>
+<a name="setBackground(org.apache.pdfbox.cos.COSArray)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setBackground</h4>
+<pre>public&nbsp;void&nbsp;setBackground(<a href="../../../../../../org/apache/pdfbox/cos/COSArray.html" title="class in org.apache.pdfbox.cos">COSArray</a>&nbsp;newBackground)</pre>
+<div class="block">This will set the background.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newBackground</code> - the new background</dd></dl>
+</li>
+</ul>
+<a name="getBackground()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBackground</h4>
+<pre>public&nbsp;<a href="../../../../../../org/apache/pdfbox/cos/COSArray.html" title="class in org.apache.pdfbox.cos">COSArray</a>&nbsp;getBackground()</pre>
+<div class="block">This will return the background.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the background</dd></dl>
+</li>
+</ul>
+<a name="getBBox()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBBox</h4>
+<pre>public&nbsp;<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDRectangle.html" title="class in org.apache.pdfbox.pdmodel.common">PDRectangle</a>&nbsp;getBBox()</pre>
+<div class="block">An array of four numbers in the form coordinate system (see below),
+ giving the coordinates of the left, bottom, right, and top edges,
+ respectively, of the shading's bounding box.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the BBox of the form</dd></dl>
+</li>
+</ul>
+<a name="setBBox(org.apache.pdfbox.pdmodel.common.PDRectangle)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setBBox</h4>
+<pre>public&nbsp;void&nbsp;setBBox(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDRectangle.html" title="class in org.apache.pdfbox.pdmodel.common">PDRectangle</a>&nbsp;newBBox)</pre>
+<div class="block">This will set the BBox (bounding box) for this Shading.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newBBox</code> - the new BBox</dd></dl>
+</li>
+</ul>
+<a name="setAntiAlias(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setAntiAlias</h4>
+<pre>public&nbsp;void&nbsp;setAntiAlias(boolean&nbsp;antiAlias)</pre>
+<div class="block">This will set the AntiAlias value.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>antiAlias</code> - the new AntiAlias value</dd></dl>
+</li>
+</ul>
+<a name="getAntiAlias()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAntiAlias</h4>
+<pre>public&nbsp;boolean&nbsp;getAntiAlias()</pre>
+<div class="block">This will return the AntiAlias value.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the AntiAlias value</dd></dl>
+</li>
+</ul>
+<a name="getColorSpace()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getColorSpace</h4>
+<pre>public&nbsp;<a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a>&nbsp;getColorSpace()
+                           throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">This will get the color space or null if none exists.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the color space for the shading</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if there is an error getting the color space</dd></dl>
+</li>
+</ul>
+<a name="setColorSpace(org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setColorSpace</h4>
+<pre>public&nbsp;void&nbsp;setColorSpace(<a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a>&nbsp;colorSpace)</pre>
+<div class="block">This will set the color space for the shading.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>colorSpace</code> - the color space</dd></dl>
+</li>
+</ul>
+<a name="create(org.apache.pdfbox.cos.COSDictionary)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>create</h4>
+<pre>public static&nbsp;<a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html" title="class in org.apache.pdfbox.pdmodel.graphics.shading">PDShading</a>&nbsp;create(<a href="../../../../../../org/apache/pdfbox/cos/COSDictionary.html" title="class in org.apache.pdfbox.cos">COSDictionary</a>&nbsp;resourceDictionary)
+                        throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Create the correct PD Model shading based on the COS base shading.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>resourceDictionary</code> - the COS shading dictionary</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the newly created shading resources object</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if we are unable to create the PDShading object</dd></dl>
+</li>
+</ul>
+<a name="setFunction(org.apache.pdfbox.pdmodel.common.function.PDFunction)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setFunction</h4>
+<pre>public&nbsp;void&nbsp;setFunction(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/function/PDFunction.html" title="class in org.apache.pdfbox.pdmodel.common.function">PDFunction</a>&nbsp;newFunction)</pre>
+<div class="block">This will set the function for the color conversion.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newFunction</code> - the new function</dd></dl>
+</li>
+</ul>
+<a name="setFunction(org.apache.pdfbox.cos.COSArray)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setFunction</h4>
+<pre>public&nbsp;void&nbsp;setFunction(<a href="../../../../../../org/apache/pdfbox/cos/COSArray.html" title="class in org.apache.pdfbox.cos">COSArray</a>&nbsp;newFunctions)</pre>
+<div class="block">This will set the functions COSArray for the color conversion.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newFunctions</code> - the new COSArray containing all functions</dd></dl>
+</li>
+</ul>
+<a name="getFunction()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFunction</h4>
+<pre>public&nbsp;<a href="../../../../../../org/apache/pdfbox/pdmodel/common/function/PDFunction.html" title="class in org.apache.pdfbox.pdmodel.common.function">PDFunction</a>&nbsp;getFunction()
+                       throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">This will return the function used to convert the color values.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the function</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if we were not able to create the function.</dd></dl>
+</li>
+</ul>
+<a name="evalFunction(float)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>evalFunction</h4>
+<pre>public&nbsp;float[]&nbsp;evalFunction(float&nbsp;inputValue)
+                     throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Convert the input value using the functions of the shading dictionary.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>inputValue</code> - the input value</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the output values</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - thrown if something went wrong</dd></dl>
+</li>
+</ul>
+<a name="evalFunction(float[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>evalFunction</h4>
+<pre>public&nbsp;float[]&nbsp;evalFunction(float[]&nbsp;input)
+                     throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Convert the input values using the functions of the shading dictionary.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>input</code> - the input values</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the output values</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - thrown if something went wrong</dd></dl>
+</li>
+</ul>
+<a name="toPaint(org.apache.pdfbox.util.Matrix)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>toPaint</h4>
+<pre>public abstract&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/Paint.html?is-external=true" title="class or interface in java.awt">Paint</a>&nbsp;toPaint(<a href="../../../../../../org/apache/pdfbox/util/Matrix.html" title="class in org.apache.pdfbox.util">Matrix</a>&nbsp;matrix)</pre>
+<div class="block">Returns an AWT paint which corresponds to this shading</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>matrix</code> - the pattern matrix concatenated with that of the parent content stream,
+               this matrix which maps the pattern's internal coordinate system to user space</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an AWT Paint instance</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/PDShading.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/AxialShadingPaint.html" title="class in org.apache.pdfbox.pdmodel.graphics.shading"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/shading/PDShadingType1.html" title="class in org.apache.pdfbox.pdmodel.graphics.shading"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/apache/pdfbox/pdmodel/graphics/shading/PDShading.html" target="_top">Frames</a></li>
+<li><a href="PDShading.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2017 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>
