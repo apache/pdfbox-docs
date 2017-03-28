@@ -129,6 +129,9 @@
                     <li><a href="https://www.apache.org/foundation/thanks.html">ASF Sponsors</a></li>
                     <li><a href="https://www.apache.org/security/">Security</a></li>
                 </ul>
+		<!-- dontation page logo/link-->
+		<a href="https://www.apache.org/foundation/contributing.html"><img width="135" src="https://s.apache.org/SupportApache"></a>
+		<!-- apachecon advert -->
                 <iframe src="https://www.apache.org/ads/buttonbar.html"
                     style="border-width:0; float: left" frameborder="0" scrolling="no"
                 width="135" height="265"></iframe>
@@ -167,7 +170,7 @@ included in the Java platform.</p>
 <p>To add the pdfbox, fontbox, jempbox and commons-logging jars to your application, the easiest thing is to declare the Maven dependency shown below. This gives you the main
 pdfbox library directly and the other required jars as transitive dependencies.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
   <span class="nt">&lt;groupId&gt;</span>org.apache.pdfbox<span class="nt">&lt;/groupId&gt;</span>
   <span class="nt">&lt;artifactId&gt;</span>pdfbox<span class="nt">&lt;/artifactId&gt;</span>
   <span class="nt">&lt;version&gt;</span>...<span class="nt">&lt;/version&gt;</span>
@@ -196,7 +199,7 @@ pdfbox library directly and the other required jars as transitive dependencies.<
 <p>The most notable such optional feature is support for PDF encryption. Instead of implementing its own encryption algorithms, PDFBox uses libraries from the 
 <a href="http://www.bouncycastle.org/">Legion of the Bouncy Castle</a>. Both the bcprov and bcmail libraries are needed and can be included using the Maven dependencies shown below.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
   <span class="nt">&lt;groupId&gt;</span>org.bouncycastle<span class="nt">&lt;/groupId&gt;</span>
   <span class="nt">&lt;artifactId&gt;</span>bcprov-jdk15<span class="nt">&lt;/artifactId&gt;</span>
   <span class="nt">&lt;version&gt;</span>1.44<span class="nt">&lt;/version&gt;</span>
@@ -214,7 +217,7 @@ pdfbox library directly and the other required jars as transitive dependencies.<
 <a href="http://site.icu-project.org/">International Components for Unicode</a> (ICU) project to support such languages in PDF documents. To add the ICU4J jar to your project, 
 use the following Maven dependency.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
   <span class="nt">&lt;groupId&gt;</span>com.ibm.icu<span class="nt">&lt;/groupId&gt;</span>
   <span class="nt">&lt;artifactId&gt;</span>icu4j<span class="nt">&lt;/artifactId&gt;</span>
   <span class="nt">&lt;version&gt;</span>3.8<span class="nt">&lt;/version&gt;</span>

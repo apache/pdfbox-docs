@@ -129,6 +129,9 @@
                     <li><a href="https://www.apache.org/foundation/thanks.html">ASF Sponsors</a></li>
                     <li><a href="https://www.apache.org/security/">Security</a></li>
                 </ul>
+		<!-- dontation page logo/link-->
+		<a href="https://www.apache.org/foundation/contributing.html"><img width="135" src="https://s.apache.org/SupportApache"></a>
+		<!-- apachecon advert -->
                 <iframe src="https://www.apache.org/ads/buttonbar.html"
                     style="border-width:0; float: left" frameborder="0" scrolling="no"
                 width="135" height="265"></iframe>
@@ -142,7 +145,7 @@
 
 <p>This small sample shows how to encrypt a file so that it can be viewed, but not printed.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="n">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="s">"filename.pdf"</span><span class="o">);</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="n">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="s">"filename.pdf"</span><span class="o">);</span>
 
 <span class="c1">// Define the length of the encryption key.</span>
 <span class="c1">// Possible values are 40 or 128 (256 will be available in PDFBox 2.0).</span>
