@@ -28,14 +28,32 @@ body {
 
 body > .container {
   min-width: 750px;
-  max-width: none !important;
+  max-width: none;
   padding-top: 20px;
 }
 
-/* Add some space around the pdfbox logo */
-.logo {
-    padding: 12px 0px;
-    width: 200px;
+.navbar-default {
+  background-color: #34a5da;
+  border: none;
+  border-radius: 0;
+}
+
+svg.pdfbox-brand-text, svg.pdfbox-brand-toolbox {
+    fill: white;
+}
+
+.pdfbox-brand-toolbox {
+  height: 44px;
+  vertical-align: middle;
+  margin-top: 2px;
+  margin-right: 0.4em
+}
+
+.pdfbox-brand-text {
+  width: 80px;
+  vertical-align: middle;
+  margin-top: 2px;
+  margin-right: 0.4em
 }
 
 /* Styling for the copyright footer */
