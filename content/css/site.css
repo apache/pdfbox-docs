@@ -44,6 +44,7 @@ svg.pdfbox-brand-text, svg.pdfbox-brand-toolbox {
 
 .pdfbox-brand-toolbox {
   height: 44px;
+  width: 48px;
   vertical-align: middle;
   margin-top: 2px;
   margin-right: 0.4em
@@ -51,6 +52,7 @@ svg.pdfbox-brand-text, svg.pdfbox-brand-toolbox {
 
 .pdfbox-brand-text {
   width: 80px;
+  height:46px;
   vertical-align: middle;
   margin-top: 2px;
   margin-right: 0.4em
