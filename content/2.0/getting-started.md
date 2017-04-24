@@ -45,7 +45,6 @@ A solution is to disable LittleCMS in favor of the old KCMS (Kodak Color Managem
  - Calling ``System.setProperty("sun.java2d.cmm", "sun.java2d.cmm.kcms.KcmsServiceProvider")``
 
 Sources:  
-http://www.subshell.com/en/subshell/blog/Wrong-Colors-in-Images-with-Java8-100.html  
 https://bugs.openjdk.java.net/browse/JDK-8041125
 
 ## Rendering Performance ##
