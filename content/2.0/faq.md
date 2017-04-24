@@ -47,7 +47,7 @@ title:   Frequently Asked Questions (FAQ)
 
 ### PDF Rendering
 
- - [I'm getting an OutOfMemoryError. What can I do?](#outofmemoryrrror)
+ - [I'm getting an OutOfMemoryError. What can I do?](#outofmemoryerror)
  - [A drop shadow is missing or at the wrong position when rendering a page](#dropshadow)
  - [Why are some texts in poor quality and not antialiased?](#textantialias)
 
@@ -195,7 +195,7 @@ the word "Hello" is drawn.
 
 ## PDF rendering
 
-<a name="outofmemoryrrror"></a>
+<a name="outofmemoryerror"></a>
 
 ### I'm getting an OutOfMemoryError. What can I do?
 
