@@ -29,6 +29,7 @@ PDFBox 2.0.0 requires at least Java 6
 There are some significant changes to the package structure of PDFBox:
 
 - Jempbox is no longer supported and was removed in favour of Xmpbox
+- the package `org.apache.pdfbox.pdmodel.edit` was removed. The class `PDPageContentStream` was moved to the parent package.
 - all examples were moved to the new package "pdfbox-examples"
 - all commandline tools were moved to the new package "pdfbox-tools"
 - all debugger related stuff was moved to the new package "pdfbox-debugger"
@@ -63,6 +64,7 @@ The API changes are reflected in the Javadoc for PDFBox 2.0.0. The most notable 
 - `PDXObjectForm` was renamed to `PDFormXObject` to be more in line with the PDF specification.
 - `PDXObjectImage` was renamed to `PDImageXObject` to be more in line with the PDF specification.
 - `PDPage.getContents().createInputStream()`was simplified to `PDPage.getContents()`.
+- `PDPageContentStream` was moved to `org.apache.pdfbox.pdmodel`.
 
 ### General Behaviour
 PDFBox 2.0.0 is now parsing PDF files following the Xref information in the PDF. This is similar to the functionality using
