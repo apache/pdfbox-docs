@@ -29,7 +29,7 @@ PDFBox 2.0.0 requires at least Java 6
 There are some significant changes to the package structure of PDFBox:
 
 - Jempbox is no longer supported and was removed in favour of Xmpbox
-- the package `org.apache.pdfbox.pdmodel.edit` was removed. The class `PDPageContentStream` was moved to the parent package.
+- the package `org.apache.pdfbox.pdmodel.edit` was removed. The only class contained `PDPageContentStream` was moved to the parent package.
 - all examples were moved to the new package "pdfbox-examples"
 - all commandline tools were moved to the new package "pdfbox-tools"
 - all debugger related stuff was moved to the new package "pdfbox-debugger"
