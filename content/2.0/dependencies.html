@@ -215,6 +215,9 @@ included in the Java platform.</p>
 
 <p>Maven dependencies for these components can be found in <a href="https://svn.apache.org/viewvc/pdfbox/trunk/parent/pom.xml?view=markup">parent/pom.xml</a>. Please make sure that any third party licenses are suitable for your project.</p>
 
+<p><strong>Note for JBIG2-Image-Decoder</strong>
+There is a know issue when using the JBIG2-Image-Decoder as an ImageIO Plugin. To resolve that see <a href="https://issues.apache.org/jira/browse/PDFBOX-3769">PDFBOX-3769</a> or <a href="https://github.com/Borisvl/JBIG2-Image-Decoder/issues/4">JBIG2-Image-Decoder issue</a>.</p>
+
 <h3 id="encryption-and-signing">Encryption and Signing</h3>
 
 <p>Encrypting and sigining PDFs requires the <em>bcprov</em>, <em>bcmail</em> and <em>bcpkix</em> libraries from the <a href="http://www.bouncycastle.org/">Legion of the Bouncy Castle</a>. These can be included in your Maven project using the following dependencies:</p>
