@@ -22,8 +22,16 @@
  */
 
 body {
-    font-size: 15px;
-    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, "Oxygen", "Ubuntu", "Cantarell", "Open Sans", Arial, sans-serif;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: "liga" on;
+    font-size: 16px;
+    line-height: 1.4;
 }
 
 body > .container {
@@ -93,7 +101,7 @@ h4 .oi {
 
 h4 .open-iconic {
     position: relative;
-    top: 0px;
+    top: 0;
     display: inline-block;
     width: 24px;
     height: 24px;
@@ -106,8 +114,8 @@ pre.highlight, .highlight > pre {
   background-color: inherit;
     color: darkslategrey;
     padding-left: 2rem;
-    border: 0pt;
-    border-radius: 0pt;
+    border: 0;
+    border-radius: 0;
     border-left: 2px solid #0088cc;
 }
 
@@ -211,6 +219,7 @@ table tr:nth-child(even) td, table tr.even td {
   .row-offcanvas {
     position: relative;
     -webkit-transition: all .25s ease-out;
+       -moz-transition: all .25s ease-out;
          -o-transition: all .25s ease-out;
             transition: all .25s ease-out;
   }
