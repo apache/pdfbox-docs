@@ -77,6 +77,9 @@ These libraries are optional and will be loaded if present on the classpath, oth
 
 Maven dependencies for these components can be found in [parent/pom.xml](https://svn.apache.org/viewvc/pdfbox/trunk/parent/pom.xml?view=markup). Please make sure that any third party licenses are suitable for your project.
 
+**Note for JBIG2-Image-Decoder**
+There is a know issue when using the JBIG2-Image-Decoder as an ImageIO Plugin. To resolve that see [PDFBOX-3769](https://issues.apache.org/jira/browse/PDFBOX-3769) or [JBIG2-Image-Decoder issue](https://github.com/Borisvl/JBIG2-Image-Decoder/issues/4).
+
 ### Encryption and Signing
 
 Encrypting and sigining PDFs requires the *bcprov*, *bcmail* and *bcpkix* libraries from the [Legion of the Bouncy Castle](http://www.bouncycastle.org/). These can be included in your Maven project using the following dependencies:
