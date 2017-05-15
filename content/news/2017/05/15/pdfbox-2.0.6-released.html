@@ -26,7 +26,7 @@
     <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command-line utilities. Apache PDFBox is published under the Apache License v2.0.
 ">
 
-    <title>Apache PDFBox | Updating the Website</title>
+    <title>Apache PDFBox | Apache PDFBox 2.0.6 released</title>
 
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/pygments-github.css" rel="stylesheet">
@@ -154,96 +154,12 @@
                 width="135" height="265"></iframe>
             </div>
             <div class="col-xs-12 col-sm-9">
-                <h1 id="updating-the-pdfbox-website">Updating the PDFBox Website</h1>
+                <p>The Apache PDFBox community is pleased to announce the release of
+Apache PDFBox version 2.0.6. It is available for download at:</p>
 
-<p>The content for the PDFBox website is kept in a <a href="https://git-wip-us.apache.org/repos/asf/pdfbox-docs">Git repository</a> which is also mirrored to <a href="https://github.com/apache/pdfbox-docs">GitHub</a>. The site is split into two parts: the static content and the Javadoc for the PDFBox API. Both parts are build independently as further described below.</p>
+<p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
 
-<h2 id="project-info">Project Info</h2>
-<p>The site is based on <a href="https://jekyllrb.com">Jekyll</a>. So you have to be familiar with the <a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> template language and have Jekyll (ver. 2+) installed to contribute to the project.</p>
-
-<h2 id="contribute">Contribute</h2>
-<p>If you would like to enhance the website content you can submit a patch. To do so please open a ticket at our <a href="https://issues.apache.org/jira/browse/PDFBOX">Issue Tracker</a>, use <code class="highlighter-rouge">Documentation</code> for the <code class="highlighter-rouge">Component</code> and add your patch to the ticket.</p>
-
-<h2 id="development">Development</h2>
-
-<h3 id="install-jekyll">Install Jekyll</h3>
-<p>Follow the instructions available on the <a href="https://jekyllrb.com">Jekyll</a> website.</p>
-
-<h3 id="checkout-from-the-git-repository">Checkout from the Git Repository</h3>
-<p>Before you can edit the site, you need to check it out from the Git repository:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>git clone https://git-wip-us.apache.org/repos/asf/pdfbox-docs
-</code></pre>
-</div>
-
-<h3 id="local-changes">Local Changes</h3>
-<p>You can now do the changes and additions to the sources of the PDFBox website. To test these locally use</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>jekyll serve
-</code></pre>
-</div>
-
-<p>which will compile the changes and run a local webserver at</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>http://localhost:4000
-</code></pre>
-</div>
-
-<h3 id="publish-the-website-for-comitters-only">Publish the Website (For Comitters Only)</h3>
-<p>After you have done the local changes follow these steps to publish the content:</p>
-
-<p>Add the following server configuration in your ~/.m2/settings.xml file</p>
-
-<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;server&gt;</span>
-  <span class="nt">&lt;id&gt;</span>pdfbox-site<span class="nt">&lt;/id&gt;</span>
-  <span class="nt">&lt;username&gt;</span>** USERNAME **<span class="nt">&lt;/username&gt;</span>
-  <span class="nt">&lt;password&gt;</span>** PASSWORD **<span class="nt">&lt;/password&gt;</span>
-<span class="nt">&lt;/server&gt;</span>
-</code></pre>
-</div>
-
-<p><code class="highlighter-rouge">pdfbox-site</code> is referenced from the PDFBox pom.xml file.</p>
-
-<p class="alert alert-warning">The password should be encrypted following <a href="https://maven.apache.org/guides/mini/guide-encryption.html">Maven Password Encryption</a></p>
-
-<p>Ensure that the new website content can build locally</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>jekyll build
-</code></pre>
-</div>
-
-<p>This will read the sources and generate the new content in the <code class="highlighter-rouge">./staging</code> directory.</p>
-
-<p>When you are happy with the new content update the source repository</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>git commit -m "..."
-git push origin master
-</code></pre>
-</div>
-
-<p>Upload the new content to the production site</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>mvn scm-publish:publish-scm
-</code></pre>
-</div>
-
-<p>This will checkout the current content into the <code class="highlighter-rouge">./target</code>directory, apply the changes from <code class="highlighter-rouge">./staging</code> and publish
-the changes to the PDFBox production website.</p>
-
-<h3 id="update-the-javadocs-for-pdfbox-2x">Update the JavaDocs for PDFBox 2.x</h3>
-<p>To publish the javadocs follow these steps:</p>
-
-<p>Run</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>$ mvn clean javadoc:aggregate scm-publish:publish-scm
-</code></pre>
-</div>
-
-<p>from the <code class="highlighter-rouge">&lt;SVN_ROOT&gt;/../pdfbox</code> directory.</p>
-
-<p>It uses the same <code class="highlighter-rouge">pdfbox-site</code> settings from above to connect to the repository.</p>
-
-<p class="alert alert-info">As <code>mvn clean</code> will delete the javadoc files download from the Apache CMS it's advised to configure <code>${svn.scmJavadocCheckoutDirectory}</code> to a local directory not below <code>./target</code>.</p>
+<p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12339779">full release notes</a> for details about this release.</p>
 
             </div>
         </div>
