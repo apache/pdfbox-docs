@@ -175,7 +175,7 @@ org.apache.pdfbox.ExtractText.</p>
 Lucene to be able to index a PDF document it must first be converted to text. PDFBox provides 
 a simple approach for adding PDF documents into a Lucene index.</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">Document</span> <span class="n">luceneDocument</span> <span class="o">=</span> <span class="n">LucenePDFDocument</span><span class="o">.</span><span class="na">getDocument</span><span class="o">(</span> <span class="o">...</span> <span class="o">);</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">Document</span> <span class="n">luceneDocument</span> <span class="o">=</span> <span class="n">LucenePDFDocument</span><span class="o">.</span><span class="na">getDocument</span><span class="o">(</span> <span class="o">...</span> <span class="o">);</span>
 </code></pre>
 </div>
 
@@ -200,7 +200,7 @@ process. The simplest is to specify the range of pages that you want to be extra
 For example, to only extract text from the second and third pages of the PDF document 
 you could do this:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">PDFTextStripper</span> <span class="n">stripper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDFTextStripper</span><span class="o">();</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">PDFTextStripper</span> <span class="n">stripper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDFTextStripper</span><span class="o">();</span>
 <span class="n">stripper</span><span class="o">.</span><span class="na">setStartPage</span><span class="o">(</span> <span class="mi">2</span> <span class="o">);</span>
 <span class="n">stripper</span><span class="o">.</span><span class="na">setEndPage</span><span class="o">(</span> <span class="mi">3</span> <span class="o">);</span>
 <span class="n">stripper</span><span class="o">.</span><span class="na">writeText</span><span class="o">(</span> <span class="o">...</span> <span class="o">);</span>

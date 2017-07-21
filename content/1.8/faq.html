@@ -178,8 +178,8 @@
 
 <h2 id="general-questions-1">General Questions</h2>
 
-<p><a name="log4j"></a></p>
-<h3 id="i-am-getting-the-below-log4j-warning-message-how-do-i-remove-it">I am getting the below Log4J warning message, how do I remove it?</h3>
+<p><a name="log4j"></a>
+### I am getting the below Log4J warning message, how do I remove it? ###</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>log4j:WARN No appenders could be found for logger (org.apache.pdfbox.util.ResourceLoader).
 log4j:WARN Please initialize the log4j system properly.
@@ -201,21 +201,21 @@ See the <a href="http://logging.apache.org/log4j/1.2/manual.html">log4j document
 </code></pre>
 </div>
 
-<p><a name="threadsafe"></a></p>
-<h3 id="is-pdfbox-thread-safe">Is PDFBox thread safe?</h3>
+<p><a name="threadsafe"></a>
+### Is PDFBox thread safe? ###</p>
 
 <p>No! Only one thread may access a single document at a time. You can have multiple threads
 each accessing their own PDDocument object.</p>
 
-<p><a name="notclosed"></a></p>
-<h3 id="why-do-i-get-a-warning-you-did-not-close-the-pdf-document">Why do I get a “Warning: You did not close the PDF Document”?</h3>
+<p><a name="notclosed"></a>
+### Why do I get a “Warning: You did not close the PDF Document”? ###</p>
 
 <p>You need to call close() on the PDDocument inside the finally block, if you
 don’t then the document will not be closed properly.  Also, you must close all
 PDDocument objects that get created.  The following code creates <strong>two</strong>
 PDDocument objects; one from the “new PDDocument()” and the second by the load method.</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDDocument</span><span class="o">();</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDDocument</span><span class="o">();</span>
 <span class="k">try</span>
 <span class="o">{</span>
    <span class="n">doc</span> <span class="o">=</span> <span class="n">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span> <span class="s">"my.pdf"</span> <span class="o">);</span>
@@ -232,8 +232,8 @@ PDDocument objects; one from the “new PDDocument()” and the second by the lo
 
 <h2 id="text-extraction-1">Text Extraction</h2>
 
-<p><a name="notext"></a></p>
-<h3 id="how-come-i-am-not-getting-any-text-from-the-pdf-document">How come I am not getting any text from the PDF document?</h3>
+<p><a name="notext"></a>
+### How come I am not getting any text from the PDF document? ###</p>
 
 <p>Text extraction from a pdf document is a complicated task and there are many factors
 involved that effect the possibility and accuracy of text extraction.  It would be helpful
@@ -246,8 +246,8 @@ should be able to as well and it is a bug if it cannot.  If Acrobat cannot extra
 You can tell by using the selection tool in Acrobat, if you can’t select any text then it is probably an image.</li>
 </ul>
 
-<p><a name="gibberish"></a></p>
-<h3 id="how-come-i-am-getting-gibberishg38g43g36g51g5-when-extracting-text">How come I am getting gibberish(G38G43G36G51G5) when extracting text?</h3>
+<p><a name="gibberish"></a>
+### How come I am getting gibberish(G38G43G36G51G5) when extracting text? ###</p>
 
 <p>This is because the characters in a PDF document can use a custom encoding
 instead of unicode or ASCII.  When you see gibberish text then it
@@ -255,23 +255,23 @@ probably means that a meaningless internal encoding is being used.  The
 only way to access the text is to use OCR.  This may be a future
 enhancement.</p>
 
-<p><a name="fontwidth"></a></p>
-<h3 id="what-does-javaioioexception-cant-handle-font-width-mean">What does “java.io.IOException: Can’t handle font width” mean?</h3>
+<p><a name="fontwidth"></a>
+### What does “java.io.IOException: Can’t handle font width” mean? ###</p>
 
 <p>This probably means that the “Resources” directory is not in your classpath. The
 Resources directory is included in the PDFBox jar so this is only a problem if you
 are building PDFBox yourself and not using the binary.</p>
 
-<p><a name="permission"></a></p>
-<h3 id="why-do-i-get-you-do-not-have-permission-to-extract-text-on-some-documents">Why do I get “You do not have permission to extract text” on some documents?</h3>
+<p><a name="permission"></a>
+### Why do I get “You do not have permission to extract text” on some documents? ###</p>
 
 <p>PDF documents have certain security permissions that can be applied to them and two 
 passwords associated with them, a user password and a master password. If the “cannot extract text”
 permission bit is set then you need to decrypt the document with the master password in order
 to extract the text.</p>
 
-<p><a name="partially"></a></p>
-<h3 id="cant-we-just-extract-the-text-without-parsing-the-whole-document-or-extract-text-as-it-is-parsed">Can’t we just extract the text without parsing the whole document or extract text as it is parsed?</h3>
+<p><a name="partially"></a>
+### Can’t we just extract the text without parsing the whole document or extract text as it is parsed? ###</p>
 
 <p>Not really, for a couple reasons.</p>
 
