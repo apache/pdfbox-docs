@@ -1,0 +1,1060 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PDImageXObject (PDFBox reactor 2.0.7 API)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="PDImageXObject (PDFBox reactor 2.0.7 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/PDImageXObject.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDInlineImage.html" title="class in org.apache.pdfbox.pdmodel.graphics.image"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" target="_top">Frames</a></li>
+<li><a href="PDImageXObject.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.apache.pdfbox.pdmodel.graphics.image</div>
+<h2 title="Class PDImageXObject" class="title">Class PDImageXObject</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/PDXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics">org.apache.pdfbox.pdmodel.graphics.PDXObject</a></li>
+<li>
+<ul class="inheritance">
+<li>org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObjectable.html" title="interface in org.apache.pdfbox.pdmodel.common">COSObjectable</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image">PDImage</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public final class <span class="strong">PDImageXObject</span>
+extends <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/PDXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics">PDXObject</a>
+implements <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image">PDImage</a></pre>
+<div class="block">An Image XObject.</div>
+<dl><dt><span class="strong">Author:</span></dt>
+  <dd>John Hewson, Ben Litchfield</dd></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#PDImageXObject(org.apache.pdfbox.pdmodel.PDDocument)">PDImageXObject</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">Creates an Image XObject in the given document.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#PDImageXObject(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream,%20org.apache.pdfbox.cos.COSBase,%20int,%20int,%20int,%20org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace)">PDImageXObject</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+              <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;encodedStream,
+              <a href="../../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&nbsp;cosFilter,
+              int&nbsp;width,
+              int&nbsp;height,
+              int&nbsp;bitsPerComponent,
+              <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a>&nbsp;initColorSpace)</code>
+<div class="block">Creates an Image XObject in the given document using the given filtered stream.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#PDImageXObject(org.apache.pdfbox.pdmodel.common.PDStream,%20org.apache.pdfbox.pdmodel.PDResources)">PDImageXObject</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;stream,
+              <a href="../../../../../../org/apache/pdfbox/pdmodel/PDResources.html" title="class in org.apache.pdfbox.pdmodel">PDResources</a>&nbsp;resources)</code>
+<div class="block">Creates an Image XObject with the given stream as its contents and current color spaces.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createFromByteArray(org.apache.pdfbox.pdmodel.PDDocument,%20byte[],%20java.lang.String)">createFromByteArray</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                   byte[]&nbsp;byteArray,
+                   <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Create a PDImageXObject from bytes of an image file.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createFromFile(java.lang.String,%20org.apache.pdfbox.pdmodel.PDDocument)">createFromFile</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;imagePath,
+              <a href="../../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">Create a PDImageXObject from an image file, see <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createFromFileByExtension(java.io.File,%20org.apache.pdfbox.pdmodel.PDDocument)"><code>createFromFileByExtension(File, PDDocument)</code></a> for
+ more details.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createFromFileByContent(java.io.File,%20org.apache.pdfbox.pdmodel.PDDocument)">createFromFileByContent</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+                       <a href="../../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">Create a PDImageXObject from an image file.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createFromFileByExtension(java.io.File,%20org.apache.pdfbox.pdmodel.PDDocument)">createFromFileByExtension</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+                         <a href="../../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">Create a PDImageXObject from an image file.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createInputStream()">createInputStream</a></strong>()</code>
+<div class="block">Returns an InputStream containing the image data, irrespective of whether this is an
+ inline image or an image XObject.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createInputStream(java.util.List)">createInputStream</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;stopFilters)</code>
+<div class="block">Returns an InputStream containing the image data, irrespective of whether this is an
+ inline image or an image XObject.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createThumbnail(org.apache.pdfbox.cos.COSStream)">createThumbnail</a></strong>(<a href="../../../../../../org/apache/pdfbox/cos/COSStream.html" title="class in org.apache.pdfbox.cos">COSStream</a>&nbsp;cosStream)</code>
+<div class="block">Creates a thumbnail Image XObject from the given COSBase and name.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#getBitsPerComponent()">getBitsPerComponent</a></strong>()</code>
+<div class="block">Returns bits per component of this image, or -1 if one has not been set.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/cos/COSArray.html" title="class in org.apache.pdfbox.cos">COSArray</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#getColorKeyMask()">getColorKeyMask</a></strong>()</code>
+<div class="block">Returns the color key mask array associated with this image, or null if there is none.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#getColorSpace()">getColorSpace</a></strong>()</code>
+<div class="block">Returns the image's color space.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/cos/COSArray.html" title="class in org.apache.pdfbox.cos">COSArray</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#getDecode()">getDecode</a></strong>()</code>
+<div class="block">Returns the decode array.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#getHeight()">getHeight</a></strong>()</code>
+<div class="block">Returns height of this image, or -1 if one has not been set.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#getImage()">getImage</a></strong>()</code>
+<div class="block">Returns the content of this image as an AWT buffered image with an (A)RGB color space.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#getInterpolate()">getInterpolate</a></strong>()</code>
+<div class="block">Returns true if the image should be interpolated when rendered.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#getMask()">getMask</a></strong>()</code>
+<div class="block">Returns the Mask Image XObject associated with this image, or null if there is none.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDMetadata.html" title="class in org.apache.pdfbox.pdmodel.common">PDMetadata</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#getMetadata()">getMetadata</a></strong>()</code>
+<div class="block">Returns the metadata associated with this XObject, or null if there is none.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#getOpaqueImage()">getOpaqueImage</a></strong>()</code>
+<div class="block">Returns an RGB buffered image containing the opaque image stream without any masks applied.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#getSoftMask()">getSoftMask</a></strong>()</code>
+<div class="block">Returns the Soft Mask Image XObject associated with this image, or null if there is none.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#getStencilImage(java.awt.Paint)">getStencilImage</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/Paint.html?is-external=true" title="class or interface in java.awt">Paint</a>&nbsp;paint)</code>
+<div class="block">Returns an ARGB image filled with the given paint and using this image as a mask.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#getStructParent()">getStructParent</a></strong>()</code>
+<div class="block">Returns the key of this XObject in the structural parent tree.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#getSuffix()">getSuffix</a></strong>()</code>
+<div class="block">This will get the suffix for this image type, e.g. jpg/png.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#getWidth()">getWidth</a></strong>()</code>
+<div class="block">Returns the width of this image, or -1 if one has not been set.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#isEmpty()">isEmpty</a></strong>()</code>
+<div class="block">Returns true if the image has no data.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#isStencil()">isStencil</a></strong>()</code>
+<div class="block">Returns true if the image is a stencil mask.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#setBitsPerComponent(int)">setBitsPerComponent</a></strong>(int&nbsp;bpc)</code>
+<div class="block">Set the number of bits per component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#setColorSpace(org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace)">setColorSpace</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a>&nbsp;cs)</code>
+<div class="block">Sets the color space for this image.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#setDecode(org.apache.pdfbox.cos.COSArray)">setDecode</a></strong>(<a href="../../../../../../org/apache/pdfbox/cos/COSArray.html" title="class in org.apache.pdfbox.cos">COSArray</a>&nbsp;decode)</code>
+<div class="block">Sets the decode array.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#setHeight(int)">setHeight</a></strong>(int&nbsp;h)</code>
+<div class="block">Sets the height of the image.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#setInterpolate(boolean)">setInterpolate</a></strong>(boolean&nbsp;value)</code>
+<div class="block">Sets the Interpolate flag, true for high-quality image scaling.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#setMetadata(org.apache.pdfbox.pdmodel.common.PDMetadata)">setMetadata</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDMetadata.html" title="class in org.apache.pdfbox.pdmodel.common">PDMetadata</a>&nbsp;meta)</code>
+<div class="block">Sets the metadata associated with this XObject, or null if there is none.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#setStencil(boolean)">setStencil</a></strong>(boolean&nbsp;isStencil)</code>
+<div class="block">Sets whether or not the image is a stencil.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#setStructParent(int)">setStructParent</a></strong>(int&nbsp;key)</code>
+<div class="block">Sets the key of this XObject in the structural parent tree.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#setWidth(int)">setWidth</a></strong>(int&nbsp;w)</code>
+<div class="block">Sets the width of the image.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.pdfbox.pdmodel.graphics.PDXObject">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;org.apache.pdfbox.pdmodel.graphics.<a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/PDXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics">PDXObject</a></h3>
+<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/PDXObject.html#createXObject(org.apache.pdfbox.cos.COSBase,%20org.apache.pdfbox.pdmodel.PDResources)">createXObject</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/PDXObject.html#getCOSObject()">getCOSObject</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/PDXObject.html#getCOSStream()">getCOSStream</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/PDXObject.html#getPDStream()">getPDStream</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/PDXObject.html#getStream()">getStream</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.pdfbox.pdmodel.common.COSObjectable">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;org.apache.pdfbox.pdmodel.common.<a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObjectable.html" title="interface in org.apache.pdfbox.pdmodel.common">COSObjectable</a></h3>
+<code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObjectable.html#getCOSObject()">getCOSObject</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="PDImageXObject(org.apache.pdfbox.pdmodel.PDDocument)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PDImageXObject</h4>
+<pre>public&nbsp;PDImageXObject(<a href="../../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)
+               throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Creates an Image XObject in the given document. This constructor is for internal PDFBox use
+ and is not for PDF generation. Users who want to create images should look at <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createFromFileByExtension(java.io.File,%20org.apache.pdfbox.pdmodel.PDDocument)"><code>createFromFileByExtension(File, PDDocument)</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>document</code> - the current document</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if there is an error creating the XObject.</dd></dl>
+</li>
+</ul>
+<a name="PDImageXObject(org.apache.pdfbox.pdmodel.PDDocument, java.io.InputStream, org.apache.pdfbox.cos.COSBase, int, int, int, org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PDImageXObject</h4>
+<pre>public&nbsp;PDImageXObject(<a href="../../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+              <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;encodedStream,
+              <a href="../../../../../../org/apache/pdfbox/cos/COSBase.html" title="class in org.apache.pdfbox.cos">COSBase</a>&nbsp;cosFilter,
+              int&nbsp;width,
+              int&nbsp;height,
+              int&nbsp;bitsPerComponent,
+              <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a>&nbsp;initColorSpace)
+               throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Creates an Image XObject in the given document using the given filtered stream. This
+ constructor is for internal PDFBox use and is not for PDF generation. Users who want to
+ create images should look at <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createFromFileByExtension(java.io.File,%20org.apache.pdfbox.pdmodel.PDDocument)"><code>createFromFileByExtension(File, PDDocument)</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>document</code> - the current document</dd><dd><code>encodedStream</code> - an encoded stream of image data</dd><dd><code>cosFilter</code> - the filter or a COSArray of filters</dd><dd><code>width</code> - the image width</dd><dd><code>height</code> - the image height</dd><dd><code>bitsPerComponent</code> - the bits per component</dd><dd><code>initColorSpace</code> - the color space</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if there is an error creating the XObject.</dd></dl>
+</li>
+</ul>
+<a name="PDImageXObject(org.apache.pdfbox.pdmodel.common.PDStream, org.apache.pdfbox.pdmodel.PDResources)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>PDImageXObject</h4>
+<pre>public&nbsp;PDImageXObject(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;stream,
+              <a href="../../../../../../org/apache/pdfbox/pdmodel/PDResources.html" title="class in org.apache.pdfbox.pdmodel">PDResources</a>&nbsp;resources)
+               throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Creates an Image XObject with the given stream as its contents and current color spaces. This
+ constructor is for internal PDFBox use and is not for PDF generation. Users who want to
+ create images should look at <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createFromFileByExtension(java.io.File,%20org.apache.pdfbox.pdmodel.PDDocument)"><code>createFromFileByExtension(File, PDDocument)</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>stream</code> - the XObject stream to read</dd><dd><code>resources</code> - the current resources</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if there is an error creating the XObject.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="createThumbnail(org.apache.pdfbox.cos.COSStream)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createThumbnail</h4>
+<pre>public static&nbsp;<a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a>&nbsp;createThumbnail(<a href="../../../../../../org/apache/pdfbox/cos/COSStream.html" title="class in org.apache.pdfbox.cos">COSStream</a>&nbsp;cosStream)
+                                      throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Creates a thumbnail Image XObject from the given COSBase and name.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cosStream</code> - the COS stream</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an XObject</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if there is an error creating the XObject.</dd></dl>
+</li>
+</ul>
+<a name="createFromFile(java.lang.String, org.apache.pdfbox.pdmodel.PDDocument)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createFromFile</h4>
+<pre>public static&nbsp;<a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a>&nbsp;createFromFile(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;imagePath,
+                            <a href="../../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)
+                                     throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Create a PDImageXObject from an image file, see <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#createFromFileByExtension(java.io.File,%20org.apache.pdfbox.pdmodel.PDDocument)"><code>createFromFileByExtension(File, PDDocument)</code></a> for
+ more details.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>imagePath</code> - the image file path.</dd><dd><code>doc</code> - the document that shall use this PDImageXObject.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>a PDImageXObject.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if there is an error when reading the file or creating the
+ PDImageXObject, or if the image type is not supported.</dd></dl>
+</li>
+</ul>
+<a name="createFromFileByExtension(java.io.File, org.apache.pdfbox.pdmodel.PDDocument)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createFromFileByExtension</h4>
+<pre>public static&nbsp;<a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a>&nbsp;createFromFileByExtension(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+                                       <a href="../../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)
+                                                throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Create a PDImageXObject from an image file. The file format is determined by the file name
+ suffix. The following suffixes are supported: jpg, jpeg, tif, tiff, gif, bmp and png. This is
+ a convenience method that calls <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/JPEGFactory.html#createFromStream(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream)"><code>JPEGFactory.createFromStream(org.apache.pdfbox.pdmodel.PDDocument, java.io.InputStream)</code></a>,
+ <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/CCITTFactory.html#createFromFile(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.File)"><code>CCITTFactory.createFromFile(org.apache.pdfbox.pdmodel.PDDocument, java.io.File)</code></a> or <a href="http://download.oracle.com/javase/1.6.0/docs/api/javax/imageio/ImageIO.html?is-external=true#read(java.io.File)" title="class or interface in javax.imageio"><code>ImageIO.read(java.io.File)</code></a> combined with
+ <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/LosslessFactory.html#createFromImage(org.apache.pdfbox.pdmodel.PDDocument,%20java.awt.image.BufferedImage)"><code>LosslessFactory.createFromImage(org.apache.pdfbox.pdmodel.PDDocument, java.awt.image.BufferedImage)</code></a>. (The later can also be used to create a
+ PDImageXObject from a BufferedImage).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>file</code> - the image file.</dd><dd><code>doc</code> - the document that shall use this PDImageXObject.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>a PDImageXObject.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if there is an error when reading the file or creating the
+ PDImageXObject.</dd>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the image type is not supported.</dd></dl>
+</li>
+</ul>
+<a name="createFromFileByContent(java.io.File, org.apache.pdfbox.pdmodel.PDDocument)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createFromFileByContent</h4>
+<pre>public static&nbsp;<a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a>&nbsp;createFromFileByContent(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+                                     <a href="../../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)
+                                              throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Create a PDImageXObject from an image file. The file format is determined by the file
+ content. The following file types are supported: jpg, jpeg, tif, tiff, gif, bmp and png. This
+ is a convenience method that calls <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/JPEGFactory.html#createFromStream(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.InputStream)"><code>JPEGFactory.createFromStream(org.apache.pdfbox.pdmodel.PDDocument, java.io.InputStream)</code></a>,
+ <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/CCITTFactory.html#createFromFile(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.File)"><code>CCITTFactory.createFromFile(org.apache.pdfbox.pdmodel.PDDocument, java.io.File)</code></a> or <a href="http://download.oracle.com/javase/1.6.0/docs/api/javax/imageio/ImageIO.html?is-external=true#read(java.io.File)" title="class or interface in javax.imageio"><code>ImageIO.read(java.io.File)</code></a> combined with
+ <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/LosslessFactory.html#createFromImage(org.apache.pdfbox.pdmodel.PDDocument,%20java.awt.image.BufferedImage)"><code>LosslessFactory.createFromImage(org.apache.pdfbox.pdmodel.PDDocument, java.awt.image.BufferedImage)</code></a>. (The later can also be used to create a
+ PDImageXObject from a BufferedImage).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>file</code> - the image file.</dd><dd><code>doc</code> - the document that shall use this PDImageXObject.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>a PDImageXObject.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if there is an error when reading the file or creating the
+ PDImageXObject.</dd>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the image type is not supported.</dd></dl>
+</li>
+</ul>
+<a name="createFromByteArray(org.apache.pdfbox.pdmodel.PDDocument, byte[], java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createFromByteArray</h4>
+<pre>public static&nbsp;<a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a>&nbsp;createFromByteArray(<a href="../../../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document,
+                                 byte[]&nbsp;byteArray,
+                                 <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
+                                          throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Create a PDImageXObject from bytes of an image file. The file format is determined by the
+ file content. The following file types are supported: jpg, jpeg, tif, tiff, gif, bmp and png.
+ This is a convenience method that calls <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/JPEGFactory.html#createFromByteArray(org.apache.pdfbox.pdmodel.PDDocument,%20byte[])"><code>JPEGFactory.createFromByteArray(org.apache.pdfbox.pdmodel.PDDocument, byte[])</code></a>,
+ <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/CCITTFactory.html#createFromFile(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.File)"><code>CCITTFactory.createFromFile(org.apache.pdfbox.pdmodel.PDDocument, java.io.File)</code></a> or <a href="http://download.oracle.com/javase/1.6.0/docs/api/javax/imageio/ImageIO.html?is-external=true#read(java.io.File)" title="class or interface in javax.imageio"><code>ImageIO.read(java.io.File)</code></a> combined with
+ <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/LosslessFactory.html#createFromImage(org.apache.pdfbox.pdmodel.PDDocument,%20java.awt.image.BufferedImage)"><code>LosslessFactory.createFromImage(org.apache.pdfbox.pdmodel.PDDocument, java.awt.image.BufferedImage)</code></a>. (The later can also be used to create a
+ PDImageXObject from a BufferedImage).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>byteArray</code> - bytes from an image file.</dd><dd><code>document</code> - the document that shall use this PDImageXObject.</dd><dd><code>name</code> - name of image file for exception messages, can be null.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>a PDImageXObject.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if there is an error when reading the file or creating the
+ PDImageXObject.</dd>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the image type is not supported.</dd></dl>
+</li>
+</ul>
+<a name="getMetadata()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMetadata</h4>
+<pre>public&nbsp;<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDMetadata.html" title="class in org.apache.pdfbox.pdmodel.common">PDMetadata</a>&nbsp;getMetadata()</pre>
+<div class="block">Returns the metadata associated with this XObject, or null if there is none.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the metadata associated with this object.</dd></dl>
+</li>
+</ul>
+<a name="setMetadata(org.apache.pdfbox.pdmodel.common.PDMetadata)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMetadata</h4>
+<pre>public&nbsp;void&nbsp;setMetadata(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDMetadata.html" title="class in org.apache.pdfbox.pdmodel.common">PDMetadata</a>&nbsp;meta)</pre>
+<div class="block">Sets the metadata associated with this XObject, or null if there is none.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>meta</code> - the metadata associated with this object</dd></dl>
+</li>
+</ul>
+<a name="getStructParent()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getStructParent</h4>
+<pre>public&nbsp;int&nbsp;getStructParent()</pre>
+<div class="block">Returns the key of this XObject in the structural parent tree.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>this object's key the structural parent tree</dd></dl>
+</li>
+</ul>
+<a name="setStructParent(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setStructParent</h4>
+<pre>public&nbsp;void&nbsp;setStructParent(int&nbsp;key)</pre>
+<div class="block">Sets the key of this XObject in the structural parent tree.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>key</code> - the new key for this XObject</dd></dl>
+</li>
+</ul>
+<a name="getImage()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getImage</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;getImage()
+                       throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Returns the content of this image as an AWT buffered image with an (A)RGB color space.
+ The size of the returned image is the larger of the size of the image itself or its mask.
+ The returned images are cached via a SoftReference.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#getImage()">getImage</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image">PDImage</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>content of this image as a buffered image.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getStencilImage(java.awt.Paint)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getStencilImage</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;getStencilImage(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/Paint.html?is-external=true" title="class or interface in java.awt">Paint</a>&nbsp;paint)
+                              throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Returns an ARGB image filled with the given paint and using this image as a mask.
+ The returned images are not cached.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#getStencilImage(java.awt.Paint)">getStencilImage</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image">PDImage</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>paint</code> - the paint to fill the visible portions of the image with</dd>
+<dt><span class="strong">Returns:</span></dt><dd>a masked image filled with the given paint</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the image cannot be read</dd></dl>
+</li>
+</ul>
+<a name="getOpaqueImage()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOpaqueImage</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;getOpaqueImage()
+                             throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Returns an RGB buffered image containing the opaque image stream without any masks applied.
+ If this Image XObject is a mask then the buffered image will contain the raw mask.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the image without any masks applied</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the image cannot be read</dd></dl>
+</li>
+</ul>
+<a name="getMask()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMask</h4>
+<pre>public&nbsp;<a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a>&nbsp;getMask()
+                       throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Returns the Mask Image XObject associated with this image, or null if there is none.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Mask Image XObject</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getColorKeyMask()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getColorKeyMask</h4>
+<pre>public&nbsp;<a href="../../../../../../org/apache/pdfbox/cos/COSArray.html" title="class in org.apache.pdfbox.cos">COSArray</a>&nbsp;getColorKeyMask()</pre>
+<div class="block">Returns the color key mask array associated with this image, or null if there is none.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Mask Image XObject</dd></dl>
+</li>
+</ul>
+<a name="getSoftMask()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSoftMask</h4>
+<pre>public&nbsp;<a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a>&nbsp;getSoftMask()
+                           throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Returns the Soft Mask Image XObject associated with this image, or null if there is none.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the SMask Image XObject, or null.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getBitsPerComponent()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBitsPerComponent</h4>
+<pre>public&nbsp;int&nbsp;getBitsPerComponent()</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#getBitsPerComponent()">PDImage</a></code></strong></div>
+<div class="block">Returns bits per component of this image, or -1 if one has not been set.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#getBitsPerComponent()">getBitsPerComponent</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image">PDImage</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="setBitsPerComponent(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setBitsPerComponent</h4>
+<pre>public&nbsp;void&nbsp;setBitsPerComponent(int&nbsp;bpc)</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#setBitsPerComponent(int)">PDImage</a></code></strong></div>
+<div class="block">Set the number of bits per component.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#setBitsPerComponent(int)">setBitsPerComponent</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image">PDImage</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>bpc</code> - The number of bits per component.</dd></dl>
+</li>
+</ul>
+<a name="getColorSpace()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getColorSpace</h4>
+<pre>public&nbsp;<a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a>&nbsp;getColorSpace()
+                           throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#getColorSpace()">PDImage</a></code></strong></div>
+<div class="block">Returns the image's color space.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#getColorSpace()">getColorSpace</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image">PDImage</a></code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is an error getting the color space.</dd></dl>
+</li>
+</ul>
+<a name="createInputStream()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createInputStream</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;createInputStream()
+                              throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#createInputStream()">PDImage</a></code></strong></div>
+<div class="block">Returns an InputStream containing the image data, irrespective of whether this is an
+ inline image or an image XObject.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#createInputStream()">createInputStream</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image">PDImage</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>Decoded stream</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the data could not be read.</dd></dl>
+</li>
+</ul>
+<a name="createInputStream(java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createInputStream</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;createInputStream(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;stopFilters)
+                              throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#createInputStream(java.util.List)">PDImage</a></code></strong></div>
+<div class="block">Returns an InputStream containing the image data, irrespective of whether this is an
+ inline image or an image XObject. The given filters will not be decoded.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#createInputStream(java.util.List)">createInputStream</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image">PDImage</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>stopFilters</code> - A list of filters to stop decoding at.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Decoded stream</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the data could not be read.</dd></dl>
+</li>
+</ul>
+<a name="isEmpty()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isEmpty</h4>
+<pre>public&nbsp;boolean&nbsp;isEmpty()</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#isEmpty()">PDImage</a></code></strong></div>
+<div class="block">Returns true if the image has no data.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#isEmpty()">isEmpty</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image">PDImage</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="setColorSpace(org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setColorSpace</h4>
+<pre>public&nbsp;void&nbsp;setColorSpace(<a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDColorSpace.html" title="class in org.apache.pdfbox.pdmodel.graphics.color">PDColorSpace</a>&nbsp;cs)</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#setColorSpace(org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace)">PDImage</a></code></strong></div>
+<div class="block">Sets the color space for this image.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#setColorSpace(org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace)">setColorSpace</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image">PDImage</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>cs</code> - The color space for this image.</dd></dl>
+</li>
+</ul>
+<a name="getHeight()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getHeight</h4>
+<pre>public&nbsp;int&nbsp;getHeight()</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#getHeight()">PDImage</a></code></strong></div>
+<div class="block">Returns height of this image, or -1 if one has not been set.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#getHeight()">getHeight</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image">PDImage</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="setHeight(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setHeight</h4>
+<pre>public&nbsp;void&nbsp;setHeight(int&nbsp;h)</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#setHeight(int)">PDImage</a></code></strong></div>
+<div class="block">Sets the height of the image.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#setHeight(int)">setHeight</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image">PDImage</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>h</code> - The height of the image.</dd></dl>
+</li>
+</ul>
+<a name="getWidth()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getWidth</h4>
+<pre>public&nbsp;int&nbsp;getWidth()</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#getWidth()">PDImage</a></code></strong></div>
+<div class="block">Returns the width of this image, or -1 if one has not been set.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#getWidth()">getWidth</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image">PDImage</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="setWidth(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setWidth</h4>
+<pre>public&nbsp;void&nbsp;setWidth(int&nbsp;w)</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#setWidth(int)">PDImage</a></code></strong></div>
+<div class="block">Sets the width of the image.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#setWidth(int)">setWidth</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image">PDImage</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>w</code> - The width of the image.</dd></dl>
+</li>
+</ul>
+<a name="getInterpolate()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getInterpolate</h4>
+<pre>public&nbsp;boolean&nbsp;getInterpolate()</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#getInterpolate()">PDImage</a></code></strong></div>
+<div class="block">Returns true if the image should be interpolated when rendered.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#getInterpolate()">getInterpolate</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image">PDImage</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="setInterpolate(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setInterpolate</h4>
+<pre>public&nbsp;void&nbsp;setInterpolate(boolean&nbsp;value)</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#setInterpolate(boolean)">PDImage</a></code></strong></div>
+<div class="block">Sets the Interpolate flag, true for high-quality image scaling.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#setInterpolate(boolean)">setInterpolate</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image">PDImage</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="setDecode(org.apache.pdfbox.cos.COSArray)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDecode</h4>
+<pre>public&nbsp;void&nbsp;setDecode(<a href="../../../../../../org/apache/pdfbox/cos/COSArray.html" title="class in org.apache.pdfbox.cos">COSArray</a>&nbsp;decode)</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#setDecode(org.apache.pdfbox.cos.COSArray)">PDImage</a></code></strong></div>
+<div class="block">Sets the decode array.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#setDecode(org.apache.pdfbox.cos.COSArray)">setDecode</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image">PDImage</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>decode</code> - the new decode array.</dd></dl>
+</li>
+</ul>
+<a name="getDecode()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDecode</h4>
+<pre>public&nbsp;<a href="../../../../../../org/apache/pdfbox/cos/COSArray.html" title="class in org.apache.pdfbox.cos">COSArray</a>&nbsp;getDecode()</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#getDecode()">PDImage</a></code></strong></div>
+<div class="block">Returns the decode array.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#getDecode()">getDecode</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image">PDImage</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="isStencil()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isStencil</h4>
+<pre>public&nbsp;boolean&nbsp;isStencil()</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#isStencil()">PDImage</a></code></strong></div>
+<div class="block">Returns true if the image is a stencil mask.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#isStencil()">isStencil</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image">PDImage</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="setStencil(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setStencil</h4>
+<pre>public&nbsp;void&nbsp;setStencil(boolean&nbsp;isStencil)</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#setStencil(boolean)">PDImage</a></code></strong></div>
+<div class="block">Sets whether or not the image is a stencil.
+ This corresponds to the <code>ImageMask</code> entry in the image stream's dictionary.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#setStencil(boolean)">setStencil</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image">PDImage</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>isStencil</code> - True to make the image a stencil.</dd></dl>
+</li>
+</ul>
+<a name="getSuffix()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getSuffix</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getSuffix()</pre>
+<div class="block">This will get the suffix for this image type, e.g. jpg/png.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html#getSuffix()">getSuffix</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image">PDImage</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>The image suffix or null if not available.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/PDImageXObject.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImage.html" title="interface in org.apache.pdfbox.pdmodel.graphics.image"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDInlineImage.html" title="class in org.apache.pdfbox.pdmodel.graphics.image"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" target="_top">Frames</a></li>
+<li><a href="PDImageXObject.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2017 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>

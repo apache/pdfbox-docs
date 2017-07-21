@@ -1,0 +1,884 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PDSignature (PDFBox reactor 2.0.7 API)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="PDSignature (PDFBox reactor 2.0.7 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/PDSignature.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValueTimeStamp.html" title="class in org.apache.pdfbox.pdmodel.interactive.digitalsignature"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/SignatureInterface.html" title="interface in org.apache.pdfbox.pdmodel.interactive.digitalsignature"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html" target="_top">Frames</a></li>
+<li><a href="PDSignature.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.apache.pdfbox.pdmodel.interactive.digitalsignature</div>
+<h2 title="Class PDSignature" class="title">Class PDSignature</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>org.apache.pdfbox.pdmodel.interactive.digitalsignature.PDSignature</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObjectable.html" title="interface in org.apache.pdfbox.pdmodel.common">COSObjectable</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">PDSignature</span>
+extends <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
+implements <a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObjectable.html" title="interface in org.apache.pdfbox.pdmodel.common">COSObjectable</a></pre>
+<div class="block">This represents a digital signature that can be attached to a document. To learn more about
+ digital signatures, read
+ <a href="https://www.adobe.com/devnet-docs/acrobatetk/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf">Digital
+ Signatures in a PDF</a> by Adobe.</div>
+<dl><dt><span class="strong">Author:</span></dt>
+  <dd>Ben Litchfield, Thomas Chojecki</dd></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#FILTER_ADOBE_PPKLITE">FILTER_ADOBE_PPKLITE</a></strong></code>
+<div class="block">A signature filter value.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#FILTER_CICI_SIGNIT">FILTER_CICI_SIGNIT</a></strong></code>
+<div class="block">A signature filter value.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#FILTER_ENTRUST_PPKEF">FILTER_ENTRUST_PPKEF</a></strong></code>
+<div class="block">A signature filter value.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#FILTER_VERISIGN_PPKVS">FILTER_VERISIGN_PPKVS</a></strong></code>
+<div class="block">A signature filter value.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#SUBFILTER_ADBE_PKCS7_DETACHED">SUBFILTER_ADBE_PKCS7_DETACHED</a></strong></code>
+<div class="block">A signature subfilter value.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#SUBFILTER_ADBE_PKCS7_SHA1">SUBFILTER_ADBE_PKCS7_SHA1</a></strong></code>
+<div class="block">A signature subfilter value.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#SUBFILTER_ADBE_X509_RSA_SHA1">SUBFILTER_ADBE_X509_RSA_SHA1</a></strong></code>
+<div class="block">A signature subfilter value.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#SUBFILTER_ETSI_CADES_DETACHED">SUBFILTER_ETSI_CADES_DETACHED</a></strong></code>
+<div class="block">A signature subfilter value.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#PDSignature()">PDSignature</a></strong>()</code>
+<div class="block">Default constructor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#PDSignature(org.apache.pdfbox.cos.COSDictionary)">PDSignature</a></strong>(<a href="../../../../../../org/apache/pdfbox/cos/COSDictionary.html" title="class in org.apache.pdfbox.cos">COSDictionary</a>&nbsp;dict)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#getByteRange()">getByteRange</a></strong>()</code>
+<div class="block">Read out the byterange from the file.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#getContactInfo()">getContactInfo</a></strong>()</code>
+<div class="block">Returns the contact info provided by the signer to enable a recipient to contact the signer
+ to verify the signature, e.g. a phone number.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#getContents(byte[])">getContents</a></strong>(byte[]&nbsp;pdfFile)</code>
+<div class="block">Will return the embedded signature between the byterange gap.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#getContents(java.io.InputStream)">getContents</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;pdfFile)</code>
+<div class="block">Will return the embedded signature between the byterange gap.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/cos/COSDictionary.html" title="class in org.apache.pdfbox.cos">COSDictionary</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#getCOSObject()">getCOSObject</a></strong>()</code>
+<div class="block">Convert this standard java object to a COS dictionary.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#getFilter()">getFilter</a></strong>()</code>
+<div class="block">Returns the filter.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#getLocation()">getLocation</a></strong>()</code>
+<div class="block">Returns the CPU host name or physical location of the signing.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#getName()">getName</a></strong>()</code>
+<div class="block">Returns the name of the person or authority signing the document.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDPropBuild.html" title="class in org.apache.pdfbox.pdmodel.interactive.digitalsignature">PDPropBuild</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#getPropBuild()">getPropBuild</a></strong>()</code>
+<div class="block">PDF signature build dictionary.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#getReason()">getReason</a></strong>()</code>
+<div class="block">Returns the reason for the signing, such as (I agree...).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/Calendar.html?is-external=true" title="class or interface in java.util">Calendar</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#getSignDate()">getSignDate</a></strong>()</code>
+<div class="block">Returns the sign date.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#getSignedContent(byte[])">getSignedContent</a></strong>(byte[]&nbsp;pdfFile)</code>
+<div class="block">Return the signed content of the document.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#getSignedContent(java.io.InputStream)">getSignedContent</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;pdfFile)</code>
+<div class="block">Return the signed content of the document.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#getSubFilter()">getSubFilter</a></strong>()</code>
+<div class="block">Returns the subfilter.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#setByteRange(int[])">setByteRange</a></strong>(int[]&nbsp;range)</code>
+<div class="block">Sets the byte range.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#setContactInfo(java.lang.String)">setContactInfo</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;contactInfo)</code>
+<div class="block">Sets the contact info provided by the signer to enable a recipient to contact the signer to
+ verify the signature, e.g. a phone number.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#setContents(byte[])">setContents</a></strong>(byte[]&nbsp;bytes)</code>
+<div class="block">Sets the contents.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#setFilter(org.apache.pdfbox.cos.COSName)">setFilter</a></strong>(<a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&nbsp;filter)</code>
+<div class="block">Set the filter.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#setLocation(java.lang.String)">setLocation</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;location)</code>
+<div class="block">Sets the CPU host name or physical location of the signing.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#setName(java.lang.String)">setName</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Sets the name of the person or authority signing the document.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#setPropBuild(org.apache.pdfbox.pdmodel.interactive.digitalsignature.PDPropBuild)">setPropBuild</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDPropBuild.html" title="class in org.apache.pdfbox.pdmodel.interactive.digitalsignature">PDPropBuild</a>&nbsp;propBuild)</code>
+<div class="block">PDF signature build dictionary.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#setReason(java.lang.String)">setReason</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;reason)</code>
+<div class="block">Sets the reason for the signing, such as (I agree...).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#setSignDate(java.util.Calendar)">setSignDate</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/Calendar.html?is-external=true" title="class or interface in java.util">Calendar</a>&nbsp;cal)</code>
+<div class="block">Set the sign date.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#setSubFilter(org.apache.pdfbox.cos.COSName)">setSubFilter</a></strong>(<a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&nbsp;subfilter)</code>
+<div class="block">Set a subfilter that specify the signature that should be used.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html#setType(org.apache.pdfbox.cos.COSName)">setType</a></strong>(<a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&nbsp;type)</code>
+<div class="block">Set the dictionary type.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="FILTER_ADOBE_PPKLITE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FILTER_ADOBE_PPKLITE</h4>
+<pre>public static final&nbsp;<a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a> FILTER_ADOBE_PPKLITE</pre>
+<div class="block">A signature filter value.</div>
+</li>
+</ul>
+<a name="FILTER_ENTRUST_PPKEF">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FILTER_ENTRUST_PPKEF</h4>
+<pre>public static final&nbsp;<a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a> FILTER_ENTRUST_PPKEF</pre>
+<div class="block">A signature filter value.</div>
+</li>
+</ul>
+<a name="FILTER_CICI_SIGNIT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FILTER_CICI_SIGNIT</h4>
+<pre>public static final&nbsp;<a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a> FILTER_CICI_SIGNIT</pre>
+<div class="block">A signature filter value.</div>
+</li>
+</ul>
+<a name="FILTER_VERISIGN_PPKVS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FILTER_VERISIGN_PPKVS</h4>
+<pre>public static final&nbsp;<a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a> FILTER_VERISIGN_PPKVS</pre>
+<div class="block">A signature filter value.</div>
+</li>
+</ul>
+<a name="SUBFILTER_ADBE_X509_RSA_SHA1">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SUBFILTER_ADBE_X509_RSA_SHA1</h4>
+<pre>public static final&nbsp;<a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a> SUBFILTER_ADBE_X509_RSA_SHA1</pre>
+<div class="block">A signature subfilter value.</div>
+</li>
+</ul>
+<a name="SUBFILTER_ADBE_PKCS7_DETACHED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SUBFILTER_ADBE_PKCS7_DETACHED</h4>
+<pre>public static final&nbsp;<a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a> SUBFILTER_ADBE_PKCS7_DETACHED</pre>
+<div class="block">A signature subfilter value.</div>
+</li>
+</ul>
+<a name="SUBFILTER_ETSI_CADES_DETACHED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SUBFILTER_ETSI_CADES_DETACHED</h4>
+<pre>public static final&nbsp;<a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a> SUBFILTER_ETSI_CADES_DETACHED</pre>
+<div class="block">A signature subfilter value.</div>
+</li>
+</ul>
+<a name="SUBFILTER_ADBE_PKCS7_SHA1">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>SUBFILTER_ADBE_PKCS7_SHA1</h4>
+<pre>public static final&nbsp;<a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a> SUBFILTER_ADBE_PKCS7_SHA1</pre>
+<div class="block">A signature subfilter value.</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="PDSignature()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PDSignature</h4>
+<pre>public&nbsp;PDSignature()</pre>
+<div class="block">Default constructor.</div>
+</li>
+</ul>
+<a name="PDSignature(org.apache.pdfbox.cos.COSDictionary)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>PDSignature</h4>
+<pre>public&nbsp;PDSignature(<a href="../../../../../../org/apache/pdfbox/cos/COSDictionary.html" title="class in org.apache.pdfbox.cos">COSDictionary</a>&nbsp;dict)</pre>
+<div class="block">Constructor.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>dict</code> - The signature dictionary.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getCOSObject()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCOSObject</h4>
+<pre>public&nbsp;<a href="../../../../../../org/apache/pdfbox/cos/COSDictionary.html" title="class in org.apache.pdfbox.cos">COSDictionary</a>&nbsp;getCOSObject()</pre>
+<div class="block">Convert this standard java object to a COS dictionary.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObjectable.html#getCOSObject()">getCOSObject</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObjectable.html" title="interface in org.apache.pdfbox.pdmodel.common">COSObjectable</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>The COS dictionary that matches this Java object.</dd></dl>
+</li>
+</ul>
+<a name="setType(org.apache.pdfbox.cos.COSName)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setType</h4>
+<pre>public&nbsp;void&nbsp;setType(<a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&nbsp;type)</pre>
+<div class="block">Set the dictionary type.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>type</code> - is the dictionary type.</dd></dl>
+</li>
+</ul>
+<a name="setFilter(org.apache.pdfbox.cos.COSName)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setFilter</h4>
+<pre>public&nbsp;void&nbsp;setFilter(<a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&nbsp;filter)</pre>
+<div class="block">Set the filter.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>filter</code> - the filter to be used</dd></dl>
+</li>
+</ul>
+<a name="setSubFilter(org.apache.pdfbox.cos.COSName)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSubFilter</h4>
+<pre>public&nbsp;void&nbsp;setSubFilter(<a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&nbsp;subfilter)</pre>
+<div class="block">Set a subfilter that specify the signature that should be used.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>subfilter</code> - the subfilter that shall be used.</dd></dl>
+</li>
+</ul>
+<a name="setName(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setName</h4>
+<pre>public&nbsp;void&nbsp;setName(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
+<div class="block">Sets the name of the person or authority signing the document. According to the PDF
+ specification, this value should be used only when it is not possible to extract the name
+ from the signature.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - the name to be used</dd></dl>
+</li>
+</ul>
+<a name="setLocation(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setLocation</h4>
+<pre>public&nbsp;void&nbsp;setLocation(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;location)</pre>
+<div class="block">Sets the CPU host name or physical location of the signing.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - the location to be used</dd></dl>
+</li>
+</ul>
+<a name="setReason(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setReason</h4>
+<pre>public&nbsp;void&nbsp;setReason(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;reason)</pre>
+<div class="block">Sets the reason for the signing, such as (I agree...).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>reason</code> - the reason to be used</dd></dl>
+</li>
+</ul>
+<a name="setContactInfo(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setContactInfo</h4>
+<pre>public&nbsp;void&nbsp;setContactInfo(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;contactInfo)</pre>
+<div class="block">Sets the contact info provided by the signer to enable a recipient to contact the signer to
+ verify the signature, e.g. a phone number.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>contactInfo</code> - the contact info to be used</dd></dl>
+</li>
+</ul>
+<a name="setSignDate(java.util.Calendar)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSignDate</h4>
+<pre>public&nbsp;void&nbsp;setSignDate(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/Calendar.html?is-external=true" title="class or interface in java.util">Calendar</a>&nbsp;cal)</pre>
+<div class="block">Set the sign date.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cal</code> - the date to be used as sign date</dd></dl>
+</li>
+</ul>
+<a name="getFilter()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFilter</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getFilter()</pre>
+<div class="block">Returns the filter.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the filter</dd></dl>
+</li>
+</ul>
+<a name="getSubFilter()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSubFilter</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getSubFilter()</pre>
+<div class="block">Returns the subfilter.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the subfilter</dd></dl>
+</li>
+</ul>
+<a name="getName()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getName</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getName()</pre>
+<div class="block">Returns the name of the person or authority signing the document. According to the PDF
+ specification, this value should be used only when it is not possible to extract the name
+ from the signature.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the name</dd></dl>
+</li>
+</ul>
+<a name="getLocation()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLocation</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getLocation()</pre>
+<div class="block">Returns the CPU host name or physical location of the signing.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the location</dd></dl>
+</li>
+</ul>
+<a name="getReason()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getReason</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getReason()</pre>
+<div class="block">Returns the reason for the signing, such as (I agree...).</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the reason</dd></dl>
+</li>
+</ul>
+<a name="getContactInfo()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getContactInfo</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getContactInfo()</pre>
+<div class="block">Returns the contact info provided by the signer to enable a recipient to contact the signer
+ to verify the signature, e.g. a phone number.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the contact info</dd></dl>
+</li>
+</ul>
+<a name="getSignDate()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSignDate</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/Calendar.html?is-external=true" title="class or interface in java.util">Calendar</a>&nbsp;getSignDate()</pre>
+<div class="block">Returns the sign date.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the sign date</dd></dl>
+</li>
+</ul>
+<a name="setByteRange(int[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setByteRange</h4>
+<pre>public&nbsp;void&nbsp;setByteRange(int[]&nbsp;range)</pre>
+<div class="block">Sets the byte range.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>range</code> - the byte range to be used</dd></dl>
+</li>
+</ul>
+<a name="getByteRange()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getByteRange</h4>
+<pre>public&nbsp;int[]&nbsp;getByteRange()</pre>
+<div class="block">Read out the byterange from the file.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>a integer array with the byterange</dd></dl>
+</li>
+</ul>
+<a name="getContents(java.io.InputStream)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getContents</h4>
+<pre>public&nbsp;byte[]&nbsp;getContents(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;pdfFile)
+                   throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Will return the embedded signature between the byterange gap.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>pdfFile</code> - The signed pdf file as InputStream</dd>
+<dt><span class="strong">Returns:</span></dt><dd>a byte array containing the signature</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the pdfFile can't be read</dd></dl>
+</li>
+</ul>
+<a name="getContents(byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getContents</h4>
+<pre>public&nbsp;byte[]&nbsp;getContents(byte[]&nbsp;pdfFile)
+                   throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Will return the embedded signature between the byterange gap.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>pdfFile</code> - The signed pdf file as byte array</dd>
+<dt><span class="strong">Returns:</span></dt><dd>a byte array containing the signature</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the pdfFile can't be read</dd></dl>
+</li>
+</ul>
+<a name="setContents(byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setContents</h4>
+<pre>public&nbsp;void&nbsp;setContents(byte[]&nbsp;bytes)</pre>
+<div class="block">Sets the contents.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>bytes</code> - contents to be used</dd></dl>
+</li>
+</ul>
+<a name="getSignedContent(java.io.InputStream)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSignedContent</h4>
+<pre>public&nbsp;byte[]&nbsp;getSignedContent(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;pdfFile)
+                        throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Return the signed content of the document. This is not a PDF file, nor is it the PDF file
+ before signing, it is the byte sequence made of the input minus the area where the signature
+ bytes will be. See "The ByteRange and signature value" in the document
+ <a href="https://www.adobe.com/devnet-docs/acrobatetk/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf#page=5">Digital
+ Signatures in a PDF</a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>pdfFile</code> - The signed pdf file as InputStream</dd>
+<dt><span class="strong">Returns:</span></dt><dd>a byte array containing only the signed part of the content</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the pdfFile can't be read</dd></dl>
+</li>
+</ul>
+<a name="getSignedContent(byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSignedContent</h4>
+<pre>public&nbsp;byte[]&nbsp;getSignedContent(byte[]&nbsp;pdfFile)
+                        throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Return the signed content of the document. This is not a PDF file, nor is it the PDF file
+ before signing, it is the byte sequence made of the input minus the area where the signature
+ bytes will be. See "The ByteRange and signature value" in the document
+ <a href="https://www.adobe.com/devnet-docs/acrobatetk/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf#page=5">Digital
+ Signatures in a PDF</a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>pdfFile</code> - The signed pdf file as byte array</dd>
+<dt><span class="strong">Returns:</span></dt><dd>a byte array containing only the signed part of the content</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the pdfFile can't be read</dd></dl>
+</li>
+</ul>
+<a name="getPropBuild()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPropBuild</h4>
+<pre>public&nbsp;<a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDPropBuild.html" title="class in org.apache.pdfbox.pdmodel.interactive.digitalsignature">PDPropBuild</a>&nbsp;getPropBuild()</pre>
+<div class="block">PDF signature build dictionary. Provides informations about the signature handler.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the pdf signature build dictionary.</dd></dl>
+</li>
+</ul>
+<a name="setPropBuild(org.apache.pdfbox.pdmodel.interactive.digitalsignature.PDPropBuild)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setPropBuild</h4>
+<pre>public&nbsp;void&nbsp;setPropBuild(<a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDPropBuild.html" title="class in org.apache.pdfbox.pdmodel.interactive.digitalsignature">PDPropBuild</a>&nbsp;propBuild)</pre>
+<div class="block">PDF signature build dictionary. Provides informations about the signature handler.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>propBuild</code> - the prop build</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/PDSignature.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSeedValueTimeStamp.html" title="class in org.apache.pdfbox.pdmodel.interactive.digitalsignature"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/SignatureInterface.html" title="interface in org.apache.pdfbox.pdmodel.interactive.digitalsignature"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/apache/pdfbox/pdmodel/interactive/digitalsignature/PDSignature.html" target="_top">Frames</a></li>
+<li><a href="PDSignature.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2017 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>

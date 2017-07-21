@@ -1,0 +1,757 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Uses of Class org.apache.pdfbox.pdmodel.common.PDStream (PDFBox reactor 2.0.6 API)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Uses of Class org.apache.pdfbox.pdmodel.common.PDStream (PDFBox reactor 2.0.6 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="../package-summary.html">Package</a></li>
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">Class</a></li>
+<li class="navBarCell1Rev">Use</li>
+<li><a href="../package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev</li>
+<li>Next</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/apache/pdfbox/pdmodel/common/class-use/PDStream.html" target="_top">Frames</a></li>
+<li><a href="PDStream.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<div class="header">
+<h2 title="Uses of Class org.apache.pdfbox.pdmodel.common.PDStream" class="title">Uses of Class<br>org.apache.pdfbox.pdmodel.common.PDStream</h2>
+</div>
+<div class="classUseContainer">
+<ul class="blockList">
+<li class="blockList">
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing packages, and an explanation">
+<caption><span>Packages that use <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Package</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdfparser">org.apache.pdfbox.pdfparser</a></td>
+<td class="colLast">
+<div class="block">The pdfparser package contains classes to parse PDF documents and objects within the document.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel">org.apache.pdfbox.pdmodel</a></td>
+<td class="colLast">
+<div class="block">The PDModel package represents a high level API for creating and manipulating PDF documents.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel.common">org.apache.pdfbox.pdmodel.common</a></td>
+<td class="colLast">
+<div class="block">High level PD classes that are used throughout several packages are placed in the PDModel common package.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel.common.filespecification">org.apache.pdfbox.pdmodel.common.filespecification</a></td>
+<td class="colLast">
+<div class="block">The file specification package defines classes that are used for the PDF File Specification logic.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel.common.function">org.apache.pdfbox.pdmodel.common.function</a></td>
+<td class="colLast">
+<div class="block">This package contains functions that are available in the PDF specification.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel.font">org.apache.pdfbox.pdmodel.font</a></td>
+<td class="colLast">
+<div class="block">Classes to deal with font functionality in a PDF Document.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel.graphics">org.apache.pdfbox.pdmodel.graphics</a></td>
+<td class="colLast">
+<div class="block">The PDModel graphics package deals with graphics states, operations, and parameters within the PDF document.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel.graphics.color">org.apache.pdfbox.pdmodel.graphics.color</a></td>
+<td class="colLast">
+<div class="block">This package deals with colors that are stored in a PDF document.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel.graphics.form">org.apache.pdfbox.pdmodel.graphics.form</a></td>
+<td class="colLast">
+<div class="block">This package deals with Form XObjects that are stored in a PDF document.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel.graphics.image">org.apache.pdfbox.pdmodel.graphics.image</a></td>
+<td class="colLast">
+<div class="block">This package deals with images that are stored in a PDF document.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel.graphics.pattern">org.apache.pdfbox.pdmodel.graphics.pattern</a></td>
+<td class="colLast">
+<div class="block">This package deals with patterns which are used instead of colors.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible">org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible</a></td>
+<td class="colLast">
+<div class="block">This is the visual signature part that help creating the visual representation for the digital signature.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.preflight.font.descriptor">org.apache.pdfbox.preflight.font.descriptor</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList">
+<ul class="blockList">
+<li class="blockList"><a name="org.apache.pdfbox.pdfparser">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a> in <a href="../../../../../../org/apache/pdfbox/pdfparser/package-summary.html">org.apache.pdfbox.pdfparser</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../../org/apache/pdfbox/pdfparser/package-summary.html">org.apache.pdfbox.pdfparser</a> with parameters of type <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdfparser/PDFStreamParser.html#PDFStreamParser(org.apache.pdfbox.pdmodel.common.PDStream)">PDFStreamParser</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;stream)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>Use <a href="../../../../../../org/apache/pdfbox/pdfparser/PDFStreamParser.html#PDFStreamParser(org.apache.pdfbox.contentstream.PDContentStream)"><code>PDFStreamParser.PDFStreamParser(PDContentStream)</code></a> instead.</i></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a> in <a href="../../../../../../org/apache/pdfbox/pdmodel/package-summary.html">org.apache.pdfbox.pdmodel</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/pdfbox/pdmodel/package-summary.html">org.apache.pdfbox.pdmodel</a> that return types with arguments of type <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&gt;</code></td>
+<td class="colLast"><span class="strong">PDPage.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/PDPage.html#getContentStreams()">getContentStreams</a></strong>()</code>
+<div class="block">Returns the content streams which make up this page.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/pdfbox/pdmodel/package-summary.html">org.apache.pdfbox.pdmodel</a> with parameters of type <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDPage.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/PDPage.html#setContents(org.apache.pdfbox.pdmodel.common.PDStream)">setContents</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;contents)</code>
+<div class="block">This will set the contents of this page.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Method parameters in <a href="../../../../../../org/apache/pdfbox/pdmodel/package-summary.html">org.apache.pdfbox.pdmodel</a> with type arguments of type <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDPage.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/PDPage.html#setContents(java.util.List)">setContents</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&gt;&nbsp;contents)</code>
+<div class="block">This will set the contents of this page.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel.common">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a> in <a href="../../../../../../org/apache/pdfbox/pdmodel/common/package-summary.html">org.apache.pdfbox.pdmodel.common</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subclasses, and an explanation">
+<caption><span>Subclasses of <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a> in <a href="../../../../../../org/apache/pdfbox/pdmodel/common/package-summary.html">org.apache.pdfbox.pdmodel.common</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDMetadata.html" title="class in org.apache.pdfbox.pdmodel.common">PDMetadata</a></strong></code>
+<div class="block">This class represents metadata for various objects in a PDF document.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDObjectStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDObjectStream</a></strong></code>
+<div class="block">A PDStream represents a stream in a PDF document.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel.common.filespecification">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a> in <a href="../../../../../../org/apache/pdfbox/pdmodel/common/filespecification/package-summary.html">org.apache.pdfbox.pdmodel.common.filespecification</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subclasses, and an explanation">
+<caption><span>Subclasses of <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a> in <a href="../../../../../../org/apache/pdfbox/pdmodel/common/filespecification/package-summary.html">org.apache.pdfbox.pdmodel.common.filespecification</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile.html" title="class in org.apache.pdfbox.pdmodel.common.filespecification">PDEmbeddedFile</a></strong></code>
+<div class="block">This represents an embedded file in a file specification.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel.common.function">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a> in <a href="../../../../../../org/apache/pdfbox/pdmodel/common/function/package-summary.html">org.apache.pdfbox.pdmodel.common.function</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/pdfbox/pdmodel/common/function/package-summary.html">org.apache.pdfbox.pdmodel.common.function</a> that return <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></code></td>
+<td class="colLast"><span class="strong">PDFunction.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/common/function/PDFunction.html#getPDStream()">getPDStream</a></strong>()</code>
+<div class="block">Returns the underlying PDStream.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel.font">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a> in <a href="../../../../../../org/apache/pdfbox/pdmodel/font/package-summary.html">org.apache.pdfbox.pdmodel.font</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/pdfbox/pdmodel/font/package-summary.html">org.apache.pdfbox.pdmodel.font</a> that return <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></code></td>
+<td class="colLast"><span class="strong">PDFontDescriptor.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#getCIDSet()">getCIDSet</a></strong>()</code>
+<div class="block">Get the CIDSet stream.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></code></td>
+<td class="colLast"><span class="strong">PDType3CharProc.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/font/PDType3CharProc.html#getContentStream()">getContentStream</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></code></td>
+<td class="colLast"><span class="strong">PDFontDescriptor.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#getFontFile()">getFontFile</a></strong>()</code>
+<div class="block">A stream containing a Type 1 font program.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></code></td>
+<td class="colLast"><span class="strong">PDFontDescriptor.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#getFontFile2()">getFontFile2</a></strong>()</code>
+<div class="block">A stream containing a true type font program.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></code></td>
+<td class="colLast"><span class="strong">PDFontDescriptor.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#getFontFile3()">getFontFile3</a></strong>()</code>
+<div class="block">A stream containing a font program that is not true type or type 1.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/pdfbox/pdmodel/font/package-summary.html">org.apache.pdfbox.pdmodel.font</a> with parameters of type <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFontDescriptor.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setCIDSet(org.apache.pdfbox.pdmodel.common.PDStream)">setCIDSet</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;stream)</code>
+<div class="block">Set a stream containing a CIDSet.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFontDescriptor.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setFontFile(org.apache.pdfbox.pdmodel.common.PDStream)">setFontFile</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;type1Stream)</code>
+<div class="block">Set the type 1 font program.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFontDescriptor.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setFontFile2(org.apache.pdfbox.pdmodel.common.PDStream)">setFontFile2</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;ttfStream)</code>
+<div class="block">Set the true type font program.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFontDescriptor.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html#setFontFile3(org.apache.pdfbox.pdmodel.common.PDStream)">setFontFile3</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;stream)</code>
+<div class="block">Set a stream containing a font program that is not true type or type 1.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel.graphics">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a> in <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/package-summary.html">org.apache.pdfbox.pdmodel.graphics</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/package-summary.html">org.apache.pdfbox.pdmodel.graphics</a> that return <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></code></td>
+<td class="colLast"><span class="strong">PDXObject.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/PDXObject.html#getPDStream()">getPDStream</a></strong>()</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>Use <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/PDXObject.html#getStream()"><code>PDXObject.getStream()</code></a> instead.</i></div>
+</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></code></td>
+<td class="colLast"><span class="strong">PDXObject.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/PDXObject.html#getStream()">getStream</a></strong>()</code>
+<div class="block">Returns the stream.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/package-summary.html">org.apache.pdfbox.pdmodel.graphics</a> with parameters of type <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/PDXObject.html#PDXObject(org.apache.pdfbox.pdmodel.common.PDStream,%20org.apache.pdfbox.cos.COSName)">PDXObject</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;stream,
+         <a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&nbsp;subtype)</code>
+<div class="block">Creates a new XObject from the given stream and subtype.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel.graphics.color">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a> in <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/package-summary.html">org.apache.pdfbox.pdmodel.graphics.color</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/package-summary.html">org.apache.pdfbox.pdmodel.graphics.color</a> that return <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></code></td>
+<td class="colLast"><span class="strong">PDICCBased.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/color/PDICCBased.html#getPDStream()">getPDStream</a></strong>()</code>
+<div class="block">Get the underlying ICC profile stream.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel.graphics.form">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a> in <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/form/package-summary.html">org.apache.pdfbox.pdmodel.graphics.form</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/form/package-summary.html">org.apache.pdfbox.pdmodel.graphics.form</a> that return <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></code></td>
+<td class="colLast"><span class="strong">PDFormXObject.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/form/PDFormXObject.html#getContentStream()">getContentStream</a></strong>()</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/form/package-summary.html">org.apache.pdfbox.pdmodel.graphics.form</a> with parameters of type <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/form/PDFormXObject.html#PDFormXObject(org.apache.pdfbox.pdmodel.common.PDStream)">PDFormXObject</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;stream)</code>
+<div class="block">Creates a Form XObject for reading.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/form/PDTransparencyGroup.html#PDTransparencyGroup(org.apache.pdfbox.pdmodel.common.PDStream)">PDTransparencyGroup</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;stream)</code>
+<div class="block">Creates a Transparency Group for reading.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel.graphics.image">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a> in <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/package-summary.html">org.apache.pdfbox.pdmodel.graphics.image</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/package-summary.html">org.apache.pdfbox.pdmodel.graphics.image</a> with parameters of type <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html#PDImageXObject(org.apache.pdfbox.pdmodel.common.PDStream,%20org.apache.pdfbox.pdmodel.PDResources)">PDImageXObject</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;stream,
+              <a href="../../../../../../org/apache/pdfbox/pdmodel/PDResources.html" title="class in org.apache.pdfbox.pdmodel">PDResources</a>&nbsp;resources)</code>
+<div class="block">Creates an Image XObject with the given stream as its contents and current color spaces.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel.graphics.pattern">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a> in <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/pattern/package-summary.html">org.apache.pdfbox.pdmodel.graphics.pattern</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/pattern/package-summary.html">org.apache.pdfbox.pdmodel.graphics.pattern</a> that return <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></code></td>
+<td class="colLast"><span class="strong">PDTilingPattern.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/pattern/PDTilingPattern.html#getContentStream()">getContentStream</a></strong>()</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a> in <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/package-summary.html">org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/package-summary.html">org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible</a> that return <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></code></td>
+<td class="colLast"><span class="strong">PDFTemplateStructure.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDFTemplateStructure.html#getHolderFormStream()">getHolderFormStream</a></strong>()</code>
+<div class="block">Sets HolderFormStream</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></code></td>
+<td class="colLast"><span class="strong">PDFTemplateStructure.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDFTemplateStructure.html#getImageFormStream()">getImageFormStream</a></strong>()</code>
+<div class="block">Gets Image form stream</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></code></td>
+<td class="colLast"><span class="strong">PDFTemplateStructure.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDFTemplateStructure.html#getInnerFormStream()">getInnerFormStream</a></strong>()</code>
+<div class="block">Gets Inner form Stream.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/package-summary.html">org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible</a> with parameters of type <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDVisibleSigBuilder.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDVisibleSigBuilder.html#createHolderForm(org.apache.pdfbox.pdmodel.PDResources,%20org.apache.pdfbox.pdmodel.common.PDStream,%20org.apache.pdfbox.pdmodel.common.PDRectangle)">createHolderForm</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/PDResources.html" title="class in org.apache.pdfbox.pdmodel">PDResources</a>&nbsp;holderFormResources,
+                <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;holderFormStream,
+                <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDRectangle.html" title="class in org.apache.pdfbox.pdmodel.common">PDRectangle</a>&nbsp;formrect)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFTemplateBuilder.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDFTemplateBuilder.html#createHolderForm(org.apache.pdfbox.pdmodel.PDResources,%20org.apache.pdfbox.pdmodel.common.PDStream,%20org.apache.pdfbox.pdmodel.common.PDRectangle)">createHolderForm</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/PDResources.html" title="class in org.apache.pdfbox.pdmodel">PDResources</a>&nbsp;holderFormResources,
+                <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;holderFormStream,
+                <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDRectangle.html" title="class in org.apache.pdfbox.pdmodel.common">PDRectangle</a>&nbsp;formrect)</code>
+<div class="block">Creates Form</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDVisibleSigBuilder.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDVisibleSigBuilder.html#createImageForm(org.apache.pdfbox.pdmodel.PDResources,%20org.apache.pdfbox.pdmodel.PDResources,%20org.apache.pdfbox.pdmodel.common.PDStream,%20org.apache.pdfbox.pdmodel.common.PDRectangle,%20java.awt.geom.AffineTransform,%20org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject)">createImageForm</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/PDResources.html" title="class in org.apache.pdfbox.pdmodel">PDResources</a>&nbsp;imageFormResources,
+               <a href="../../../../../../org/apache/pdfbox/pdmodel/PDResources.html" title="class in org.apache.pdfbox.pdmodel">PDResources</a>&nbsp;innerFormResource,
+               <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;imageFormStream,
+               <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDRectangle.html" title="class in org.apache.pdfbox.pdmodel.common">PDRectangle</a>&nbsp;formrect,
+               <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/geom/AffineTransform.html?is-external=true" title="class or interface in java.awt.geom">AffineTransform</a>&nbsp;at,
+               <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a>&nbsp;img)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFTemplateBuilder.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDFTemplateBuilder.html#createImageForm(org.apache.pdfbox.pdmodel.PDResources,%20org.apache.pdfbox.pdmodel.PDResources,%20org.apache.pdfbox.pdmodel.common.PDStream,%20org.apache.pdfbox.pdmodel.common.PDRectangle,%20java.awt.geom.AffineTransform,%20org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject)">createImageForm</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/PDResources.html" title="class in org.apache.pdfbox.pdmodel">PDResources</a>&nbsp;imageFormResources,
+               <a href="../../../../../../org/apache/pdfbox/pdmodel/PDResources.html" title="class in org.apache.pdfbox.pdmodel">PDResources</a>&nbsp;innerFormResource,
+               <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;imageFormStream,
+               <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDRectangle.html" title="class in org.apache.pdfbox.pdmodel.common">PDRectangle</a>&nbsp;formrect,
+               <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/awt/geom/AffineTransform.html?is-external=true" title="class or interface in java.awt.geom">AffineTransform</a>&nbsp;affineTransform,
+               <a href="../../../../../../org/apache/pdfbox/pdmodel/graphics/image/PDImageXObject.html" title="class in org.apache.pdfbox.pdmodel.graphics.image">PDImageXObject</a>&nbsp;img)</code>
+<div class="block">Creates Image form</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDVisibleSigBuilder.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDVisibleSigBuilder.html#createInnerForm(org.apache.pdfbox.pdmodel.PDResources,%20org.apache.pdfbox.pdmodel.common.PDStream,%20org.apache.pdfbox.pdmodel.common.PDRectangle)">createInnerForm</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/PDResources.html" title="class in org.apache.pdfbox.pdmodel">PDResources</a>&nbsp;innerFormResources,
+               <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;innerFormStream,
+               <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDRectangle.html" title="class in org.apache.pdfbox.pdmodel.common">PDRectangle</a>&nbsp;formrect)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFTemplateBuilder.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDFTemplateBuilder.html#createInnerForm(org.apache.pdfbox.pdmodel.PDResources,%20org.apache.pdfbox.pdmodel.common.PDStream,%20org.apache.pdfbox.pdmodel.common.PDRectangle)">createInnerForm</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/PDResources.html" title="class in org.apache.pdfbox.pdmodel">PDResources</a>&nbsp;innerFormResources,
+               <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;innerFormStream,
+               <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDRectangle.html" title="class in org.apache.pdfbox.pdmodel.common">PDRectangle</a>&nbsp;formrect)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDVisibleSigBuilder.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDVisibleSigBuilder.html#injectAppearanceStreams(org.apache.pdfbox.pdmodel.common.PDStream,%20org.apache.pdfbox.pdmodel.common.PDStream,%20org.apache.pdfbox.pdmodel.common.PDStream,%20org.apache.pdfbox.cos.COSName,%20org.apache.pdfbox.cos.COSName,%20org.apache.pdfbox.cos.COSName,%20org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSignDesigner)">injectAppearanceStreams</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;holderFormStream,
+                       <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;innerFormStream,
+                       <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;imageFormStream,
+                       <a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&nbsp;imageObjectName,
+                       <a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&nbsp;imageName,
+                       <a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&nbsp;innerFormName,
+                       <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDVisibleSignDesigner.html" title="class in org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible">PDVisibleSignDesigner</a>&nbsp;properties)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFTemplateBuilder.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDFTemplateBuilder.html#injectAppearanceStreams(org.apache.pdfbox.pdmodel.common.PDStream,%20org.apache.pdfbox.pdmodel.common.PDStream,%20org.apache.pdfbox.pdmodel.common.PDStream,%20org.apache.pdfbox.cos.COSName,%20org.apache.pdfbox.cos.COSName,%20org.apache.pdfbox.cos.COSName,%20org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSignDesigner)">injectAppearanceStreams</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;holderFormStream,
+                       <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;innerFormStream,
+                       <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;imageFormStream,
+                       <a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&nbsp;imageObjectName,
+                       <a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&nbsp;imageName,
+                       <a href="../../../../../../org/apache/pdfbox/cos/COSName.html" title="class in org.apache.pdfbox.cos">COSName</a>&nbsp;innerFormName,
+                       <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDVisibleSignDesigner.html" title="class in org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible">PDVisibleSignDesigner</a>&nbsp;properties)</code>
+<div class="block">injects appearance streams</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFTemplateStructure.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDFTemplateStructure.html#setHolderFormStream(org.apache.pdfbox.pdmodel.common.PDStream)">setHolderFormStream</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;holderFormStream)</code>
+<div class="block">Sets stream of holder form Stream</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFTemplateStructure.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDFTemplateStructure.html#setImageFormStream(org.apache.pdfbox.pdmodel.common.PDStream)">setImageFormStream</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;imageFormStream)</code>
+<div class="block">Sets image form stream</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PDFTemplateStructure.</span><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/digitalsignature/visible/PDFTemplateStructure.html#setInnterFormStream(org.apache.pdfbox.pdmodel.common.PDStream)">setInnterFormStream</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;innerFormStream)</code>
+<div class="block">Sets inner form stream</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.preflight.font.descriptor">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a> in <a href="../../../../../../org/apache/pdfbox/preflight/font/descriptor/package-summary.html">org.apache.pdfbox.preflight.font.descriptor</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/pdfbox/preflight/font/descriptor/package-summary.html">org.apache.pdfbox.preflight.font.descriptor</a> that return <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></code></td>
+<td class="colLast"><span class="strong">Type1DescriptorHelper.</span><code><strong><a href="../../../../../../org/apache/pdfbox/preflight/font/descriptor/Type1DescriptorHelper.html#extractFontFile(org.apache.pdfbox.pdmodel.font.PDFontDescriptor)">extractFontFile</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html" title="class in org.apache.pdfbox.pdmodel.font">PDFontDescriptor</a>&nbsp;fontDescriptor)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></code></td>
+<td class="colLast"><span class="strong">TrueTypeDescriptorHelper.</span><code><strong><a href="../../../../../../org/apache/pdfbox/preflight/font/descriptor/TrueTypeDescriptorHelper.html#extractFontFile(org.apache.pdfbox.pdmodel.font.PDFontDescriptor)">extractFontFile</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html" title="class in org.apache.pdfbox.pdmodel.font">PDFontDescriptor</a>&nbsp;fontDescriptor)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></code></td>
+<td class="colLast"><span class="strong">FontDescriptorHelper.</span><code><strong><a href="../../../../../../org/apache/pdfbox/preflight/font/descriptor/FontDescriptorHelper.html#extractFontFile(org.apache.pdfbox.pdmodel.font.PDFontDescriptor)">extractFontFile</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html" title="class in org.apache.pdfbox.pdmodel.font">PDFontDescriptor</a>&nbsp;fontDescriptor)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></code></td>
+<td class="colLast"><span class="strong">CIDType2DescriptorHelper.</span><code><strong><a href="../../../../../../org/apache/pdfbox/preflight/font/descriptor/CIDType2DescriptorHelper.html#extractFontFile(org.apache.pdfbox.pdmodel.font.PDFontDescriptor)">extractFontFile</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html" title="class in org.apache.pdfbox.pdmodel.font">PDFontDescriptor</a>&nbsp;fontDescriptor)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></code></td>
+<td class="colLast"><span class="strong">CIDType0DescriptorHelper.</span><code><strong><a href="../../../../../../org/apache/pdfbox/preflight/font/descriptor/CIDType0DescriptorHelper.html#extractFontFile(org.apache.pdfbox.pdmodel.font.PDFontDescriptor)">extractFontFile</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html" title="class in org.apache.pdfbox.pdmodel.font">PDFontDescriptor</a>&nbsp;fontDescriptor)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/pdfbox/preflight/font/descriptor/package-summary.html">org.apache.pdfbox.preflight.font.descriptor</a> with parameters of type <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><span class="strong">FontDescriptorHelper.</span><code><strong><a href="../../../../../../org/apache/pdfbox/preflight/font/descriptor/FontDescriptorHelper.html#checkFontFileMetaData(org.apache.pdfbox.pdmodel.font.PDFontDescriptor,%20org.apache.pdfbox.pdmodel.common.PDStream)">checkFontFileMetaData</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html" title="class in org.apache.pdfbox.pdmodel.font">PDFontDescriptor</a>&nbsp;fontDescriptor,
+                     <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;fontFile)</code>
+<div class="block">Type0, Type1 and TrueType FontValidator call this method to check the FontFile meta data.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><span class="strong">Type1DescriptorHelper.</span><code><strong><a href="../../../../../../org/apache/pdfbox/preflight/font/descriptor/Type1DescriptorHelper.html#processFontFile(org.apache.pdfbox.pdmodel.font.PDFontDescriptor,%20org.apache.pdfbox.pdmodel.common.PDStream)">processFontFile</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html" title="class in org.apache.pdfbox.pdmodel.font">PDFontDescriptor</a>&nbsp;fontDescriptor,
+               <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;fontFile)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><span class="strong">TrueTypeDescriptorHelper.</span><code><strong><a href="../../../../../../org/apache/pdfbox/preflight/font/descriptor/TrueTypeDescriptorHelper.html#processFontFile(org.apache.pdfbox.pdmodel.font.PDFontDescriptor,%20org.apache.pdfbox.pdmodel.common.PDStream)">processFontFile</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html" title="class in org.apache.pdfbox.pdmodel.font">PDFontDescriptor</a>&nbsp;fontDescriptor,
+               <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;fontFile)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected abstract void</code></td>
+<td class="colLast"><span class="strong">FontDescriptorHelper.</span><code><strong><a href="../../../../../../org/apache/pdfbox/preflight/font/descriptor/FontDescriptorHelper.html#processFontFile(org.apache.pdfbox.pdmodel.font.PDFontDescriptor,%20org.apache.pdfbox.pdmodel.common.PDStream)">processFontFile</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html" title="class in org.apache.pdfbox.pdmodel.font">PDFontDescriptor</a>&nbsp;fontDescriptor,
+               <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;fontFile)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><span class="strong">CIDType2DescriptorHelper.</span><code><strong><a href="../../../../../../org/apache/pdfbox/preflight/font/descriptor/CIDType2DescriptorHelper.html#processFontFile(org.apache.pdfbox.pdmodel.font.PDFontDescriptor,%20org.apache.pdfbox.pdmodel.common.PDStream)">processFontFile</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html" title="class in org.apache.pdfbox.pdmodel.font">PDFontDescriptor</a>&nbsp;fontDescriptor,
+               <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;fontFile)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><span class="strong">CIDType0DescriptorHelper.</span><code><strong><a href="../../../../../../org/apache/pdfbox/preflight/font/descriptor/CIDType0DescriptorHelper.html#processFontFile(org.apache.pdfbox.pdmodel.font.PDFontDescriptor,%20org.apache.pdfbox.pdmodel.common.PDStream)">processFontFile</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/font/PDFontDescriptor.html" title="class in org.apache.pdfbox.pdmodel.font">PDFontDescriptor</a>&nbsp;fontDescriptor,
+               <a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">PDStream</a>&nbsp;fontFile)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="../package-summary.html">Package</a></li>
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/common/PDStream.html" title="class in org.apache.pdfbox.pdmodel.common">Class</a></li>
+<li class="navBarCell1Rev">Use</li>
+<li><a href="../package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev</li>
+<li>Next</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/apache/pdfbox/pdmodel/common/class-use/PDStream.html" target="_top">Frames</a></li>
+<li><a href="PDStream.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2017 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>

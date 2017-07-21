@@ -1,0 +1,770 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PDChoice (PDFBox reactor 2.0.7 API)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="PDChoice (PDFBox reactor 2.0.7 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/PDChoice.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDCheckBox.html" title="class in org.apache.pdfbox.pdmodel.interactive.form"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDComboBox.html" title="class in org.apache.pdfbox.pdmodel.interactive.form"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html" target="_top">Frames</a></li>
+<li><a href="PDChoice.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.apache.pdfbox.pdmodel.interactive.form</div>
+<h2 title="Class PDChoice" class="title">Class PDChoice</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">org.apache.pdfbox.pdmodel.interactive.form.PDField</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDTerminalField.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">org.apache.pdfbox.pdmodel.interactive.form.PDTerminalField</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDVariableText.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">org.apache.pdfbox.pdmodel.interactive.form.PDVariableText</a></li>
+<li>
+<ul class="inheritance">
+<li>org.apache.pdfbox.pdmodel.interactive.form.PDChoice</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../../org/apache/pdfbox/pdmodel/common/COSObjectable.html" title="interface in org.apache.pdfbox.pdmodel.common">COSObjectable</a></dd>
+</dl>
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDComboBox.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">PDComboBox</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDListBox.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">PDListBox</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public abstract class <span class="strong">PDChoice</span>
+extends <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDVariableText.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">PDVariableText</a></pre>
+<div class="block">A choice field contains several text items, one or more of which shall be selected as the field
+ value.</div>
+<dl><dt><span class="strong">Author:</span></dt>
+  <dd>sug, John Hewson</dd></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#PDChoice(org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm)">PDChoice</a></strong>(<a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">PDAcroForm</a>&nbsp;acroForm)</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#getDefaultValue()">getDefaultValue</a></strong>()</code>
+<div class="block">Returns the default values, or an empty List.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#getOptions()">getOptions</a></strong>()</code>
+<div class="block">This will get the option values "Opt".</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#getOptionsDisplayValues()">getOptionsDisplayValues</a></strong>()</code>
+<div class="block">This will get the display values from the options.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#getOptionsExportValues()">getOptionsExportValues</a></strong>()</code>
+<div class="block">This will get the export values from the options.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#getSelectedOptionsIndex()">getSelectedOptionsIndex</a></strong>()</code>
+<div class="block">This will get the indices of the selected options - the 'I' key.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#getValue()">getValue</a></strong>()</code>
+<div class="block">Returns the selected values, or an empty List.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#getValueAsString()">getValueAsString</a></strong>()</code>
+<div class="block">Returns a string representation of the "V" entry, or an empty string.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#isCombo()">isCombo</a></strong>()</code>
+<div class="block">Determines if Combo is set.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#isCommitOnSelChange()">isCommitOnSelChange</a></strong>()</code>
+<div class="block">Determines if CommitOnSelChange is set.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#isDoNotSpellCheck()">isDoNotSpellCheck</a></strong>()</code>
+<div class="block">Determines if DoNotSpellCheck is set.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#isMultiSelect()">isMultiSelect</a></strong>()</code>
+<div class="block">Determines if MultiSelect is set.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#isSort()">isSort</a></strong>()</code>
+<div class="block">Determines if Sort is set.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#setCombo(boolean)">setCombo</a></strong>(boolean&nbsp;combo)</code>
+<div class="block">Set the Combo bit.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#setCommitOnSelChange(boolean)">setCommitOnSelChange</a></strong>(boolean&nbsp;commitOnSelChange)</code>
+<div class="block">Set the CommitOnSelChange bit.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#setDefaultValue(java.lang.String)">setDefaultValue</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
+<div class="block">Sets the default value of this field.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#setDoNotSpellCheck(boolean)">setDoNotSpellCheck</a></strong>(boolean&nbsp;doNotSpellCheck)</code>
+<div class="block">Set the DoNotSpellCheck bit.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#setMultiSelect(boolean)">setMultiSelect</a></strong>(boolean&nbsp;multiSelect)</code>
+<div class="block">Set the MultiSelect bit.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#setOptions(java.util.List)">setOptions</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;displayValues)</code>
+<div class="block">This will set the display values - the 'Opt' key.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#setOptions(java.util.List,%20java.util.List)">setOptions</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;exportValues,
+          <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;displayValues)</code>
+<div class="block">This will set the display and export values - the 'Opt' key.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#setSelectedOptionsIndex(java.util.List)">setSelectedOptionsIndex</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;values)</code>
+<div class="block">This will set the indices of the selected options - the 'I' key.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#setSort(boolean)">setSort</a></strong>(boolean&nbsp;sort)</code>
+<div class="block">Set the Sort bit.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#setValue(java.util.List)">setValue</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;values)</code>
+<div class="block">Sets the entry "V" to the given values.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#setValue(java.lang.String)">setValue</a></strong>(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
+<div class="block">Sets the selected value of this field.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.pdfbox.pdmodel.interactive.form.PDVariableText">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;org.apache.pdfbox.pdmodel.interactive.form.<a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDVariableText.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">PDVariableText</a></h3>
+<code><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDVariableText.html#getDefaultAppearance()">getDefaultAppearance</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDVariableText.html#getDefaultStyleString()">getDefaultStyleString</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDVariableText.html#getQ()">getQ</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDVariableText.html#getRichTextValue()">getRichTextValue</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDVariableText.html#getStringOrStream(org.apache.pdfbox.cos.COSBase)">getStringOrStream</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDVariableText.html#setDefaultAppearance(java.lang.String)">setDefaultAppearance</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDVariableText.html#setDefaultStyleString(java.lang.String)">setDefaultStyleString</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDVariableText.html#setQ(int)">setQ</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDVariableText.html#setRichTextValue(java.lang.String)">setRichTextValue</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.pdfbox.pdmodel.interactive.form.PDTerminalField">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;org.apache.pdfbox.pdmodel.interactive.form.<a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDTerminalField.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">PDTerminalField</a></h3>
+<code><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDTerminalField.html#applyChange()">applyChange</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDTerminalField.html#getFieldFlags()">getFieldFlags</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDTerminalField.html#getFieldType()">getFieldType</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDTerminalField.html#getWidget()">getWidget</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDTerminalField.html#getWidgets()">getWidgets</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDTerminalField.html#importFDF(org.apache.pdfbox.pdmodel.fdf.FDFField)">importFDF</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDTerminalField.html#setActions(org.apache.pdfbox.pdmodel.interactive.action.PDFormFieldAdditionalActions)">setActions</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDTerminalField.html#setWidgets(java.util.List)">setWidgets</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.pdfbox.pdmodel.interactive.form.PDField">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;org.apache.pdfbox.pdmodel.interactive.form.<a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">PDField</a></h3>
+<code><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#getAcroForm()">getAcroForm</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#getActions()">getActions</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#getAlternateFieldName()">getAlternateFieldName</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#getCOSObject()">getCOSObject</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#getFullyQualifiedName()">getFullyQualifiedName</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#getInheritableAttribute(org.apache.pdfbox.cos.COSName)">getInheritableAttribute</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#getMappingName()">getMappingName</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#getParent()">getParent</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#getPartialName()">getPartialName</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#isNoExport()">isNoExport</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#isReadOnly()">isReadOnly</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#isRequired()">isRequired</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#setAlternateFieldName(java.lang.String)">setAlternateFieldName</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#setFieldFlags(int)">setFieldFlags</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#setMappingName(java.lang.String)">setMappingName</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#setNoExport(boolean)">setNoExport</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#setPartialName(java.lang.String)">setPartialName</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#setReadOnly(boolean)">setReadOnly</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#setRequired(boolean)">setRequired</a>, <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#toString()">toString</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="PDChoice(org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>PDChoice</h4>
+<pre>public&nbsp;PDChoice(<a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDAcroForm.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">PDAcroForm</a>&nbsp;acroForm)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>acroForm</code> - The acroform.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#PDField(org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm)"><code>PDField.PDField(PDAcroForm)</code></a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getOptions()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOptions</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;getOptions()</pre>
+<div class="block">This will get the option values "Opt".
+ 
+ <p>
+ For a choice field the options array can either be an array
+ of text strings or an array of a two-element arrays.<br>
+ The method always only returns either the text strings or,
+ in case of two-element arrays, an array of the first element of 
+ the two-element arrays
+ </p>   
+ <p>
+ Use <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#getOptionsExportValues()"><code>getOptionsExportValues()</code></a> and <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#getOptionsDisplayValues()"><code>getOptionsDisplayValues()</code></a>
+ to get the entries of two-element arrays.
+ </p></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>List containing the export values.</dd></dl>
+</li>
+</ul>
+<a name="setOptions(java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setOptions</h4>
+<pre>public&nbsp;void&nbsp;setOptions(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;displayValues)</pre>
+<div class="block">This will set the display values - the 'Opt' key.
+ 
+ <p>
+ The Opt array specifies the list of options in the choice field either
+ as an array of text strings representing the display value 
+ or as an array of a two-element array where the
+ first element is the export value and the second the display value.
+ </p>
+ <p>
+ To set both the export and the display value use <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#setOptions(java.util.List,%20java.util.List)"><code>setOptions(List, List)</code></a>
+ </p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>displayValues</code> - List containing all possible options.</dd></dl>
+</li>
+</ul>
+<a name="setOptions(java.util.List, java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setOptions</h4>
+<pre>public&nbsp;void&nbsp;setOptions(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;exportValues,
+              <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;displayValues)</pre>
+<div class="block">This will set the display and export values - the 'Opt' key.
+
+ <p>
+ This will set both, the export value and the display value
+ of the choice field. If either one of the parameters is null or an 
+ empty list is supplied the options will
+ be removed.
+ </p>
+ <p>
+ An <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentException</code></a> will be thrown if the
+ number of items in the list differ.
+ </p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>exportValues</code> - List containing all possible export values.</dd><dd><code>displayValues</code> - List containing all possible display values.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#setOptions(java.util.List)"><code>setOptions(List)</code></a></dd></dl>
+</li>
+</ul>
+<a name="getOptionsDisplayValues()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOptionsDisplayValues</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;getOptionsDisplayValues()</pre>
+<div class="block">This will get the display values from the options.
+ 
+ <p>
+ For options with an array of text strings the display value and export value
+ are the same.<br>
+ For options with an array of two-element arrays the display value is the 
+ second entry in the two-element array.
+ </p></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>List containing all the display values.</dd></dl>
+</li>
+</ul>
+<a name="getOptionsExportValues()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOptionsExportValues</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;getOptionsExportValues()</pre>
+<div class="block">This will get the export values from the options.
+ 
+ <p>
+ For options with an array of text strings the display value and export value
+ are the same.<br>
+ For options with an array of two-element arrays the export value is the 
+ first entry in the two-element array.
+ </p></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>List containing all export values.</dd></dl>
+</li>
+</ul>
+<a name="getSelectedOptionsIndex()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSelectedOptionsIndex</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;getSelectedOptionsIndex()</pre>
+<div class="block">This will get the indices of the selected options - the 'I' key.
+ <p>
+ This is only needed if a choice field allows multiple selections and
+ two different items have the same export value or more than one values
+ is selected.
+ </p>
+ <p>The indices are zero-based</p></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>List containing the indices of all selected options.</dd></dl>
+</li>
+</ul>
+<a name="setSelectedOptionsIndex(java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSelectedOptionsIndex</h4>
+<pre>public&nbsp;void&nbsp;setSelectedOptionsIndex(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;values)</pre>
+<div class="block">This will set the indices of the selected options - the 'I' key.
+ <p>
+ This method is preferred over <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#setValue(java.util.List)"><code>setValue(List)</code></a> for choice fields which
+ <ul>
+  <li>do support multiple selections</li>
+  <li>have export values with the same value</li>
+ </ul>
+ <p>
+ Setting the index will set the value too.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>values</code> - List containing the indices of all selected options.</dd></dl>
+</li>
+</ul>
+<a name="isSort()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isSort</h4>
+<pre>public&nbsp;boolean&nbsp;isSort()</pre>
+<div class="block">Determines if Sort is set.
+ 
+ <p>
+ If set, the field’s option items shall be sorted alphabetically.
+ The sorting has to be done when writing the PDF. PDF Readers are supposed to
+ display the options in the order in which they occur in the Opt array. 
+ </p></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the options are sorted.</dd></dl>
+</li>
+</ul>
+<a name="setSort(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSort</h4>
+<pre>public&nbsp;void&nbsp;setSort(boolean&nbsp;sort)</pre>
+<div class="block">Set the Sort bit.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>sort</code> - The value for Sort.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#isSort()"><code>isSort()</code></a></dd></dl>
+</li>
+</ul>
+<a name="isMultiSelect()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isMultiSelect</h4>
+<pre>public&nbsp;boolean&nbsp;isMultiSelect()</pre>
+<div class="block">Determines if MultiSelect is set.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if multi select is allowed.</dd></dl>
+</li>
+</ul>
+<a name="setMultiSelect(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMultiSelect</h4>
+<pre>public&nbsp;void&nbsp;setMultiSelect(boolean&nbsp;multiSelect)</pre>
+<div class="block">Set the MultiSelect bit.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>multiSelect</code> - The value for MultiSelect.</dd></dl>
+</li>
+</ul>
+<a name="isDoNotSpellCheck()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isDoNotSpellCheck</h4>
+<pre>public&nbsp;boolean&nbsp;isDoNotSpellCheck()</pre>
+<div class="block">Determines if DoNotSpellCheck is set.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if spell checker is disabled.</dd></dl>
+</li>
+</ul>
+<a name="setDoNotSpellCheck(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDoNotSpellCheck</h4>
+<pre>public&nbsp;void&nbsp;setDoNotSpellCheck(boolean&nbsp;doNotSpellCheck)</pre>
+<div class="block">Set the DoNotSpellCheck bit.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>doNotSpellCheck</code> - The value for DoNotSpellCheck.</dd></dl>
+</li>
+</ul>
+<a name="isCommitOnSelChange()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isCommitOnSelChange</h4>
+<pre>public&nbsp;boolean&nbsp;isCommitOnSelChange()</pre>
+<div class="block">Determines if CommitOnSelChange is set.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if value shall be committed as soon as a selection is made.</dd></dl>
+</li>
+</ul>
+<a name="setCommitOnSelChange(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setCommitOnSelChange</h4>
+<pre>public&nbsp;void&nbsp;setCommitOnSelChange(boolean&nbsp;commitOnSelChange)</pre>
+<div class="block">Set the CommitOnSelChange bit.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>commitOnSelChange</code> - The value for CommitOnSelChange.</dd></dl>
+</li>
+</ul>
+<a name="isCombo()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isCombo</h4>
+<pre>public&nbsp;boolean&nbsp;isCombo()</pre>
+<div class="block">Determines if Combo is set.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if value the choice is a combo box..</dd></dl>
+</li>
+</ul>
+<a name="setCombo(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setCombo</h4>
+<pre>public&nbsp;void&nbsp;setCombo(boolean&nbsp;combo)</pre>
+<div class="block">Set the Combo bit.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>combo</code> - The value for Combo.</dd></dl>
+</li>
+</ul>
+<a name="setValue(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setValue</h4>
+<pre>public&nbsp;void&nbsp;setValue(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)
+              throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Sets the selected value of this field.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#setValue(java.lang.String)">setValue</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">PDField</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>value</code> - The name of the selected item.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the value could not be set</dd></dl>
+</li>
+</ul>
+<a name="setDefaultValue(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDefaultValue</h4>
+<pre>public&nbsp;void&nbsp;setDefaultValue(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)
+                     throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Sets the default value of this field.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>value</code> - The name of the selected item.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the value could not be set</dd></dl>
+</li>
+</ul>
+<a name="setValue(java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setValue</h4>
+<pre>public&nbsp;void&nbsp;setValue(<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;values)
+              throws <a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Sets the entry "V" to the given values. Requires <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#isMultiSelect()"><code>isMultiSelect()</code></a> to be true.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>values</code> - the list of values</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/1.6.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the appearance couldn't be generated.</dd></dl>
+</li>
+</ul>
+<a name="getValue()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getValue</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;getValue()</pre>
+<div class="block">Returns the selected values, or an empty List. This list always contains a single item
+ unless <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#isMultiSelect()"><code>isMultiSelect()</code></a> is true.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>A non-null string.</dd></dl>
+</li>
+</ul>
+<a name="getDefaultValue()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDefaultValue</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;getDefaultValue()</pre>
+<div class="block">Returns the default values, or an empty List. This list always contains a single item
+ unless <a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html#isMultiSelect()"><code>isMultiSelect()</code></a> is true.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>A non-null string.</dd></dl>
+</li>
+</ul>
+<a name="getValueAsString()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getValueAsString</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/1.6.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getValueAsString()</pre>
+<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#getValueAsString()">PDField</a></code></strong></div>
+<div class="block">Returns a string representation of the "V" entry, or an empty string.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html#getValueAsString()">getValueAsString</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDField.html" title="class in org.apache.pdfbox.pdmodel.interactive.form">PDField</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>The list of widget annotations.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/PDChoice.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDCheckBox.html" title="class in org.apache.pdfbox.pdmodel.interactive.form"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/pdfbox/pdmodel/interactive/form/PDComboBox.html" title="class in org.apache.pdfbox.pdmodel.interactive.form"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/apache/pdfbox/pdmodel/interactive/form/PDChoice.html" target="_top">Frames</a></li>
+<li><a href="PDChoice.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2017 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>
