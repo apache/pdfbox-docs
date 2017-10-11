@@ -170,7 +170,7 @@ Getting basic Metadata</p>
 <p>To set or retrieve basic information about the document the PDDocumentInformation object 
 provides a high level API to that information:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">PDDocumentInformation</span> <span class="n">info</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="na">getDocumentInformation</span><span class="o">();</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PDDocumentInformation</span> <span class="n">info</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="na">getDocumentInformation</span><span class="o">();</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="s">"Page Count="</span> <span class="o">+</span> <span class="n">document</span><span class="o">.</span><span class="na">getNumberOfPages</span><span class="o">()</span> <span class="o">);</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="s">"Title="</span> <span class="o">+</span> <span class="n">info</span><span class="o">.</span><span class="na">getTitle</span><span class="o">()</span> <span class="o">);</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="s">"Author="</span> <span class="o">+</span> <span class="n">info</span><span class="o">.</span><span class="na">getAuthor</span><span class="o">()</span> <span class="o">);</span>
@@ -181,8 +181,7 @@ provides a high level API to that information:</p>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="s">"Creation Date="</span> <span class="o">+</span> <span class="n">info</span><span class="o">.</span><span class="na">getCreationDate</span><span class="o">()</span> <span class="o">);</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="s">"Modification Date="</span> <span class="o">+</span> <span class="n">info</span><span class="o">.</span><span class="na">getModificationDate</span><span class="o">());</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="s">"Trapped="</span> <span class="o">+</span> <span class="n">info</span><span class="o">.</span><span class="na">getTrapped</span><span class="o">()</span> <span class="o">);</span>      
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="accessing-pdf-metadata">Accessing PDF Metadata</h2>
 
@@ -193,20 +192,19 @@ See Adobe Documentation: XMP Specification</p>
 <p>PDF documents can have XML metadata associated with certain objects within a PDF document.
 For example, the following PD Model objects have the ability to contain metadata:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>PDDocumentCatalog
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PDDocumentCatalog
 PDPage
 PDXObject
 PDICCBased
 PDStream
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The metadata that is stored in PDF objects conforms to the XMP specification, it is 
 recommended that you review that specification. Currently there is no high level API for 
 managing the XML metadata, PDFBox uses standard java InputStream/OutputStream to retrieve 
 or set the XML metadata.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="n">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span> <span class="o">...</span> <span class="o">);</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="n">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span> <span class="o">...</span> <span class="o">);</span>
 <span class="n">PDDocumentCatalog</span> <span class="n">catalog</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="na">getDocumentCatalog</span><span class="o">();</span>
 <span class="n">PDMetadata</span> <span class="n">metadata</span> <span class="o">=</span> <span class="n">catalog</span><span class="o">.</span><span class="na">getMetadata</span><span class="o">();</span>
 
@@ -217,8 +215,7 @@ or set the XML metadata.</p>
 <span class="n">InputStream</span> <span class="n">newXMPData</span> <span class="o">=</span> <span class="o">...;</span>
 <span class="n">PDMetadata</span> <span class="n">newMetadata</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDMetadata</span><span class="o">(</span><span class="n">doc</span><span class="o">,</span> <span class="n">newXMLData</span><span class="o">,</span> <span class="kc">false</span> <span class="o">);</span>
 <span class="n">catalog</span><span class="o">.</span><span class="na">setMetadata</span><span class="o">(</span> <span class="n">newMetadata</span> <span class="o">);</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
             </div>
         </div>

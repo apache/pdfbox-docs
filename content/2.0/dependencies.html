@@ -188,13 +188,12 @@ included in the Java platform.</p>
 <h3 id="include-dependencies-using-maven">Include Dependencies Using Maven</h3>
 <p>To add the pdfbox, fontbox, xmpbox and commons-logging jars to your application, the easiest thing is to declare the Maven dependency shown below. This gives you the main pdfbox library directly and the other required jars as transitive dependencies.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>org.apache.pdfbox<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>pdfbox<span class="nt">&lt;/artifactId&gt;</span>
     <span class="nt">&lt;version&gt;</span>...<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Set the version field to the latest stable PDFBox version.</p>
 
@@ -224,7 +223,7 @@ There is a know issue when using the JBIG2-Image-Decoder as an ImageIO Plugin. T
 
 <p>Encrypting and sigining PDFs requires the <em>bcprov</em>, <em>bcmail</em> and <em>bcpkix</em> libraries from the <a href="http://www.bouncycastle.org/">Legion of the Bouncy Castle</a>. These can be included in your Maven project using the following dependencies:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>org.bouncycastle<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>bcprov-jdk15on<span class="nt">&lt;/artifactId&gt;</span>
     <span class="nt">&lt;version&gt;</span>1.54<span class="nt">&lt;/version&gt;</span>
@@ -241,16 +240,14 @@ There is a know issue when using the JBIG2-Image-Decoder as an ImageIO Plugin. T
     <span class="nt">&lt;artifactId&gt;</span>bcpkix-jdk15on<span class="nt">&lt;/artifactId&gt;</span>
     <span class="nt">&lt;version&gt;</span>1.54<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="java-cryptography-extension-jce">Java Cryptography Extension (JCE)</h3>
 
 <p>256-bit AES encryption requires a JDK with “unlimited strength” cryptography, which requires extra files to be installed. For JDK 7, see <a href="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html">Java Cryptography Extension (JCE)</a>. If these files are not installed, building PDFBox will throw an exception with the following message:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>JCE unlimited strength jurisdiction policy files are not installed
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>JCE unlimited strength jurisdiction policy files are not installed
+</code></pre></div></div>
 
 <h2 id="dependencies-for-ant-builds">Dependencies for Ant Builds</h2>
 
