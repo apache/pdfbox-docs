@@ -33,7 +33,7 @@ Get involved today. All contributions to the project are greatly appreciated.
 
 The following is a list of developers with commit privileges that have directly contributed to the project in one way or another.
 
-| Id            | Name                  | Roles      | 
+| Id            | Name                  | Roles      |
 | ------------- | --------------------- | ---------- |
 | adam          | Adam Nichols          | PMC Member |
 | lehmi         | Andreas Lehmkühler    | PMC Chair  |
@@ -44,6 +44,7 @@ The following is a list of developers with commit privileges that have directly 
 | jeremias      | Jeremias Maerki       | PMC Member |
 | koch          | Johannes Koch         | PMC Member |
 | jahewson      | John Hewson           | PMC Member |
+| hennejg       | Jörg Henne            | PMC Member |
 | kjackson      | Kevin Jackson         | PMC Member |
 | msahyoun      | Maruan Sahyoun        | PMC Member |
 | pkoch         | Phillipp Koch         | PMC Member |
@@ -57,7 +58,7 @@ The following is a list of developers with commit privileges that have directly 
 
 The following is a list of former developers going emeritus from the PDFBox PMC.
 
-| Id            | Name                  | Roles      | 
+| Id            | Name                  | Roles      |
 | ------------- | -------------         | ---------- |
 | leleueri      | Eric Leleu            |            |
 | jukka         | Jukka Zitting         |            |
