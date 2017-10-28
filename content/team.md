@@ -39,6 +39,7 @@ The following is a list of developers with commit privileges that have directly 
 | lehmi         | Andreas Lehmkühler    | PMC Chair  |
 | blitchfield   | Ben Litchfield        | PMC Member |
 | carrier       | Brian Carrier         | PMC Member |
+| koehlecn      | Carolin Köhler        | PMC Member |
 | danielwilson  | Daniel Wilson         | PMC Member |
 | gbailleul     | Guillaume Bailleul    | PMC Member |
 | jeremias      | Jeremias Maerki       | PMC Member |
@@ -47,7 +48,9 @@ The following is a list of developers with commit privileges that have directly 
 | hennejg       | Jörg Henne            | PMC Member |
 | kjackson      | Kevin Jackson         | PMC Member |
 | msahyoun      | Maruan Sahyoun        | PMC Member |
+| mmayer        | Matthäus Mayer        | PMC Member |
 | pkoch         | Phillipp Koch         | PMC Member |
+| holdersn      | Sebastian Holder      | PMC Member |
 | tchojecki     | Thomas Chojecki       | PMC Member |
 | tallison      | Tim Allison           | PMC Member |
 | tboehme       | Timo Boehme           | PMC Member |
