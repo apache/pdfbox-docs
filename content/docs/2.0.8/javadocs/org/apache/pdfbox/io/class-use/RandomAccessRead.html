@@ -1,0 +1,337 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Uses of Interface org.apache.pdfbox.io.RandomAccessRead (PDFBox reactor 2.0.8 API)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Uses of Interface org.apache.pdfbox.io.RandomAccessRead (PDFBox reactor 2.0.8 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="../package-summary.html">Package</a></li>
+<li><a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">Class</a></li>
+<li class="navBarCell1Rev">Use</li>
+<li><a href="../package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev</li>
+<li>Next</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/apache/pdfbox/io/class-use/RandomAccessRead.html" target="_top">Frames</a></li>
+<li><a href="RandomAccessRead.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<div class="header">
+<h2 title="Uses of Interface org.apache.pdfbox.io.RandomAccessRead" class="title">Uses of Interface<br>org.apache.pdfbox.io.RandomAccessRead</h2>
+</div>
+<div class="classUseContainer">
+<ul class="blockList">
+<li class="blockList">
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing packages, and an explanation">
+<caption><span>Packages that use <a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Package</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.io">org.apache.pdfbox.io</a></td>
+<td class="colLast">
+<div class="block">This package contains IO streams.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdfparser">org.apache.pdfbox.pdfparser</a></td>
+<td class="colLast">
+<div class="block">The pdfparser package contains classes to parse PDF documents and objects within the document.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdfwriter">org.apache.pdfbox.pdfwriter</a></td>
+<td class="colLast">
+<div class="block">This is the persistence layer used to write the PDFBox documents to a stream.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.pdfbox.pdmodel">org.apache.pdfbox.pdmodel</a></td>
+<td class="colLast">
+<div class="block">The PDModel package represents a high level API for creating and manipulating PDF documents.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList">
+<ul class="blockList">
+<li class="blockList"><a name="org.apache.pdfbox.io">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a> in <a href="../../../../../org/apache/pdfbox/io/package-summary.html">org.apache.pdfbox.io</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
+<caption><span>Subinterfaces of <a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a> in <a href="../../../../../org/apache/pdfbox/io/package-summary.html">org.apache.pdfbox.io</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/io/RandomAccess.html" title="interface in org.apache.pdfbox.io">RandomAccess</a></strong></code>
+<div class="block">An interface to allow data to be stored completely in memory or
+ to use a scratch file on the disk.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../org/apache/pdfbox/io/package-summary.html">org.apache.pdfbox.io</a> that implement <a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/io/RandomAccessBuffer.html" title="class in org.apache.pdfbox.io">RandomAccessBuffer</a></strong></code>
+<div class="block">An implementation of the RandomAccess interface to store data in memory.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/io/RandomAccessBufferedFileInputStream.html" title="class in org.apache.pdfbox.io">RandomAccessBufferedFileInputStream</a></strong></code>
+<div class="block">Provides <a href="http://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io"><code>InputStream</code></a> access to portions of a file combined with
+ buffered reading of content.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/io/RandomAccessFile.html" title="class in org.apache.pdfbox.io">RandomAccessFile</a></strong></code>
+<div class="block">A RandomAccess implementation which allows data to be stored in a scratch file on the disk to
+ reduce memory consumption.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/pdfbox/io/package-summary.html">org.apache.pdfbox.io</a> with parameters of type <a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/io/RandomAccessInputStream.html#RandomAccessInputStream(org.apache.pdfbox.io.RandomAccessRead)">RandomAccessInputStream</a></strong>(<a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a>&nbsp;randomAccessRead)</code>
+<div class="block">Creates a new RandomAccessInputStream, with a position of zero.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdfparser">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a> in <a href="../../../../../org/apache/pdfbox/pdfparser/package-summary.html">org.apache.pdfbox.pdfparser</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../org/apache/pdfbox/pdfparser/package-summary.html">org.apache.pdfbox.pdfparser</a> declared as <a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a></code></td>
+<td class="colLast"><span class="strong">COSParser.</span><code><strong><a href="../../../../../org/apache/pdfbox/pdfparser/COSParser.html#source">source</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/pdfbox/pdfparser/package-summary.html">org.apache.pdfbox.pdfparser</a> with parameters of type <a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdfparser/COSParser.html#COSParser(org.apache.pdfbox.io.RandomAccessRead)">COSParser</a></strong>(<a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a>&nbsp;source)</code>
+<div class="block">Default constructor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdfparser/PDFParser.html#PDFParser(org.apache.pdfbox.io.RandomAccessRead)">PDFParser</a></strong>(<a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a>&nbsp;source)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdfparser/PDFParser.html#PDFParser(org.apache.pdfbox.io.RandomAccessRead,%20org.apache.pdfbox.io.ScratchFile)">PDFParser</a></strong>(<a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a>&nbsp;source,
+         <a href="../../../../../org/apache/pdfbox/io/ScratchFile.html" title="class in org.apache.pdfbox.io">ScratchFile</a>&nbsp;scratchFile)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdfparser/PDFParser.html#PDFParser(org.apache.pdfbox.io.RandomAccessRead,%20java.lang.String)">PDFParser</a></strong>(<a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a>&nbsp;source,
+         <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;decryptionPassword)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdfparser/PDFParser.html#PDFParser(org.apache.pdfbox.io.RandomAccessRead,%20java.lang.String,%20java.io.InputStream,%20java.lang.String)">PDFParser</a></strong>(<a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a>&nbsp;source,
+         <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;decryptionPassword,
+         <a href="http://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;keyStore,
+         <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;alias)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdfparser/PDFParser.html#PDFParser(org.apache.pdfbox.io.RandomAccessRead,%20java.lang.String,%20java.io.InputStream,%20java.lang.String,%20org.apache.pdfbox.io.ScratchFile)">PDFParser</a></strong>(<a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a>&nbsp;source,
+         <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;decryptionPassword,
+         <a href="http://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;keyStore,
+         <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;alias,
+         <a href="../../../../../org/apache/pdfbox/io/ScratchFile.html" title="class in org.apache.pdfbox.io">ScratchFile</a>&nbsp;scratchFile)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdfparser/PDFParser.html#PDFParser(org.apache.pdfbox.io.RandomAccessRead,%20java.lang.String,%20org.apache.pdfbox.io.ScratchFile)">PDFParser</a></strong>(<a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a>&nbsp;source,
+         <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;decryptionPassword,
+         <a href="../../../../../org/apache/pdfbox/io/ScratchFile.html" title="class in org.apache.pdfbox.io">ScratchFile</a>&nbsp;scratchFile)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdfwriter">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a> in <a href="../../../../../org/apache/pdfbox/pdfwriter/package-summary.html">org.apache.pdfbox.pdfwriter</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/pdfbox/pdfwriter/package-summary.html">org.apache.pdfbox.pdfwriter</a> with parameters of type <a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdfwriter/COSWriter.html#COSWriter(java.io.OutputStream,%20org.apache.pdfbox.io.RandomAccessRead)">COSWriter</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;outputStream,
+         <a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a>&nbsp;inputData)</code>
+<div class="block">COSWriter constructor for incremental updates.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.pdfbox.pdmodel">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a> in <a href="../../../../../org/apache/pdfbox/pdmodel/package-summary.html">org.apache.pdfbox.pdmodel</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/pdfbox/pdmodel/package-summary.html">org.apache.pdfbox.pdmodel</a> with parameters of type <a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html#PDDocument(org.apache.pdfbox.cos.COSDocument,%20org.apache.pdfbox.io.RandomAccessRead)">PDDocument</a></strong>(<a href="../../../../../org/apache/pdfbox/cos/COSDocument.html" title="class in org.apache.pdfbox.cos">COSDocument</a>&nbsp;doc,
+          <a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a>&nbsp;source)</code>
+<div class="block">Constructor that uses an existing document.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/pdfbox/pdmodel/PDDocument.html#PDDocument(org.apache.pdfbox.cos.COSDocument,%20org.apache.pdfbox.io.RandomAccessRead,%20org.apache.pdfbox.pdmodel.encryption.AccessPermission)">PDDocument</a></strong>(<a href="../../../../../org/apache/pdfbox/cos/COSDocument.html" title="class in org.apache.pdfbox.cos">COSDocument</a>&nbsp;doc,
+          <a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">RandomAccessRead</a>&nbsp;source,
+          <a href="../../../../../org/apache/pdfbox/pdmodel/encryption/AccessPermission.html" title="class in org.apache.pdfbox.pdmodel.encryption">AccessPermission</a>&nbsp;permission)</code>
+<div class="block">Constructor that uses an existing document.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="../package-summary.html">Package</a></li>
+<li><a href="../../../../../org/apache/pdfbox/io/RandomAccessRead.html" title="interface in org.apache.pdfbox.io">Class</a></li>
+<li class="navBarCell1Rev">Use</li>
+<li><a href="../package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev</li>
+<li>Next</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/apache/pdfbox/io/class-use/RandomAccessRead.html" target="_top">Frames</a></li>
+<li><a href="RandomAccessRead.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2017 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>

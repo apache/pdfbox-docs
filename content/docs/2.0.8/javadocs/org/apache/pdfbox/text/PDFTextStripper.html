@@ -1,0 +1,1693 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PDFTextStripper (PDFBox reactor 2.0.8 API)</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="PDFTextStripper (PDFBox reactor 2.0.8 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/PDFTextStripper.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/apache/pdfbox/text/PDFMarkedContentExtractor.html" title="class in org.apache.pdfbox.text"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/pdfbox/text/PDFTextStripperByArea.html" title="class in org.apache.pdfbox.text"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/apache/pdfbox/text/PDFTextStripper.html" target="_top">Frames</a></li>
+<li><a href="PDFTextStripper.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.apache.pdfbox.text</div>
+<h2 title="Class PDFTextStripper" class="title">Class PDFTextStripper</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html" title="class in org.apache.pdfbox.contentstream">org.apache.pdfbox.contentstream.PDFStreamEngine</a></li>
+<li>
+<ul class="inheritance">
+<li>org.apache.pdfbox.text.PDFTextStripper</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../../../org/apache/pdfbox/examples/util/DrawPrintTextLocations.html" title="class in org.apache.pdfbox.examples.util">DrawPrintTextLocations</a>, <a href="../../../../org/apache/pdfbox/examples/util/PDFHighlighter.html" title="class in org.apache.pdfbox.examples.util">PDFHighlighter</a>, <a href="../../../../org/apache/pdfbox/tools/PDFText2HTML.html" title="class in org.apache.pdfbox.tools">PDFText2HTML</a>, <a href="../../../../org/apache/pdfbox/text/PDFTextStripperByArea.html" title="class in org.apache.pdfbox.text">PDFTextStripperByArea</a>, <a href="../../../../org/apache/pdfbox/examples/util/PrintTextColors.html" title="class in org.apache.pdfbox.examples.util">PrintTextColors</a>, <a href="../../../../org/apache/pdfbox/examples/util/PrintTextLocations.html" title="class in org.apache.pdfbox.examples.util">PrintTextLocations</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">PDFTextStripper</span>
+extends <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html" title="class in org.apache.pdfbox.contentstream">PDFStreamEngine</a></pre>
+<div class="block">This class will take a pdf document and strip out all of the text and ignore the formatting and such. Please note; it
+ is up to clients of this class to verify that a specific user has the correct permissions to extract text from the
+ PDF document.
+ 
+ The basic flow of this process is that we get a document and use a series of processXXX() functions that work on
+ smaller and smaller chunks of the page. Eventually, we fully process each page and then print it.</div>
+<dl><dt><span class="strong">Author:</span></dt>
+  <dd>Ben Litchfield</dd></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../org/apache/pdfbox/text/TextPosition.html" title="class in org.apache.pdfbox.text">TextPosition</a>&gt;&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#charactersByArticle">charactersByArticle</a></strong></code>
+<div class="block">The charactersByArticle is used to extract text by article divisions.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#document">document</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#LINE_SEPARATOR">LINE_SEPARATOR</a></strong></code>
+<div class="block">The platform's line separator.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#output">output</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#PDFTextStripper()">PDFTextStripper</a></strong>()</code>
+<div class="block">Instantiate a new PDFTextStripper object.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#endArticle()">endArticle</a></strong>()</code>
+<div class="block">End an article.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#endDocument(org.apache.pdfbox.pdmodel.PDDocument)">endDocument</a></strong>(<a href="../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">This method is available for subclasses of this class.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#endPage(org.apache.pdfbox.pdmodel.PDPage)">endPage</a></strong>(<a href="../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;page)</code>
+<div class="block">End a page.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getAddMoreFormatting()">getAddMoreFormatting</a></strong>()</code>
+<div class="block">This will tell if the text stripper should add some more text formatting.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getArticleEnd()">getArticleEnd</a></strong>()</code>
+<div class="block">Returns the string which will be used at the end of an article.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getArticleStart()">getArticleStart</a></strong>()</code>
+<div class="block">Returns the string which will be used at the beginning of an article.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>float</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getAverageCharTolerance()">getAverageCharTolerance</a></strong>()</code>
+<div class="block">Get the current character width-based tolerance value that is being used to estimate where spaces in text should
+ be added.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../org/apache/pdfbox/text/TextPosition.html" title="class in org.apache.pdfbox.text">TextPosition</a>&gt;&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getCharactersByArticle()">getCharactersByArticle</a></strong>()</code>
+<div class="block">Character strings are grouped by articles.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getCurrentPageNo()">getCurrentPageNo</a></strong>()</code>
+<div class="block">Get the current page number that is being processed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>float</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getDropThreshold()">getDropThreshold</a></strong>()</code>
+<div class="block">the minimum whitespace, as a multiple of the max height of the current characters beyond which the current line
+ start is considered to be a paragraph start.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/pdfbox/pdmodel/interactive/documentnavigation/outline/PDOutlineItem.html" title="class in org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline">PDOutlineItem</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getEndBookmark()">getEndBookmark</a></strong>()</code>
+<div class="block">Get the bookmark where text extraction should end, inclusive.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getEndPage()">getEndPage</a></strong>()</code>
+<div class="block">This will get the last page that will be extracted.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>float</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getIndentThreshold()">getIndentThreshold</a></strong>()</code>
+<div class="block">returns the multiple of whitespace character widths for the current text which the current line start can be
+ indented from the previous line start beyond which the current line start is considered to be a paragraph start.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getLineSeparator()">getLineSeparator</a></strong>()</code>
+<div class="block">This will get the line separator.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html?is-external=true" title="class or interface in java.util.regex">Pattern</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getListItemPatterns()">getListItemPatterns</a></strong>()</code>
+<div class="block">returns a list of regular expression Patterns representing different common list item formats.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getOutput()">getOutput</a></strong>()</code>
+<div class="block">The output stream that is being written to.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getPageEnd()">getPageEnd</a></strong>()</code>
+<div class="block">Returns the string which will be used at the end of a page.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getPageStart()">getPageStart</a></strong>()</code>
+<div class="block">Returns the string which will be used at the beginning of a page.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getParagraphEnd()">getParagraphEnd</a></strong>()</code>
+<div class="block">Returns the string which will be used at the end of a paragraph.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getParagraphStart()">getParagraphStart</a></strong>()</code>
+<div class="block">Returns the string which will be used at the beginning of a paragraph.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getSeparateByBeads()">getSeparateByBeads</a></strong>()</code>
+<div class="block">This will tell if the text stripper should separate by beads.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getSortByPosition()">getSortByPosition</a></strong>()</code>
+<div class="block">This will tell if the text stripper should sort the text tokens before writing to the stream.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>float</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getSpacingTolerance()">getSpacingTolerance</a></strong>()</code>
+<div class="block">Get the current space width-based tolerance value that is being used to estimate where spaces in text should be
+ added.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/pdfbox/pdmodel/interactive/documentnavigation/outline/PDOutlineItem.html" title="class in org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline">PDOutlineItem</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getStartBookmark()">getStartBookmark</a></strong>()</code>
+<div class="block">Get the bookmark where text extraction should start, inclusive.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getStartPage()">getStartPage</a></strong>()</code>
+<div class="block">This is the page that the text extraction will start on.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getSuppressDuplicateOverlappingText()">getSuppressDuplicateOverlappingText</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getText(org.apache.pdfbox.pdmodel.PDDocument)">getText</a></strong>(<a href="../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)</code>
+<div class="block">This will return the text of a document.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#getWordSeparator()">getWordSeparator</a></strong>()</code>
+<div class="block">This will get the word separator.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected static <a href="http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html?is-external=true" title="class or interface in java.util.regex">Pattern</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#matchPattern(java.lang.String,%20java.util.List)">matchPattern</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;string,
+            <a href="http://docs.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html?is-external=true" title="class or interface in java.util.regex">Pattern</a>&gt;&nbsp;patterns)</code>
+<div class="block">iterates over the specified list of Patterns until it finds one that matches the specified string.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#processPage(org.apache.pdfbox.pdmodel.PDPage)">processPage</a></strong>(<a href="../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;page)</code>
+<div class="block">This will process the contents of a page.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#processPages(org.apache.pdfbox.pdmodel.PDPageTree)">processPages</a></strong>(<a href="../../../../org/apache/pdfbox/pdmodel/PDPageTree.html" title="class in org.apache.pdfbox.pdmodel">PDPageTree</a>&nbsp;pages)</code>
+<div class="block">This will process all of the pages and the text that is in them.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#processTextPosition(org.apache.pdfbox.text.TextPosition)">processTextPosition</a></strong>(<a href="../../../../org/apache/pdfbox/text/TextPosition.html" title="class in org.apache.pdfbox.text">TextPosition</a>&nbsp;text)</code>
+<div class="block">This will process a TextPosition object and add the text to the list of characters on a page.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#setAddMoreFormatting(boolean)">setAddMoreFormatting</a></strong>(boolean&nbsp;newAddMoreFormatting)</code>
+<div class="block">There will some additional text formatting be added if addMoreFormatting is set to true.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#setArticleEnd(java.lang.String)">setArticleEnd</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;articleEndValue)</code>
+<div class="block">Sets the string which will be used at the end of an article.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#setArticleStart(java.lang.String)">setArticleStart</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;articleStartValue)</code>
+<div class="block">Sets the string which will be used at the beginning of an article.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#setAverageCharTolerance(float)">setAverageCharTolerance</a></strong>(float&nbsp;averageCharToleranceValue)</code>
+<div class="block">Set the character width-based tolerance value that is used to estimate where spaces in text should be added.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#setDropThreshold(float)">setDropThreshold</a></strong>(float&nbsp;dropThresholdValue)</code>
+<div class="block">sets the minimum whitespace, as a multiple of the max height of the current characters beyond which the current
+ line start is considered to be a paragraph start.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#setEndBookmark(org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline.PDOutlineItem)">setEndBookmark</a></strong>(<a href="../../../../org/apache/pdfbox/pdmodel/interactive/documentnavigation/outline/PDOutlineItem.html" title="class in org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline">PDOutlineItem</a>&nbsp;aEndBookmark)</code>
+<div class="block">Set the bookmark where the text extraction should stop.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#setEndPage(int)">setEndPage</a></strong>(int&nbsp;endPageValue)</code>
+<div class="block">This will set the last page to be extracted by this class.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#setIndentThreshold(float)">setIndentThreshold</a></strong>(float&nbsp;indentThresholdValue)</code>
+<div class="block">sets the multiple of whitespace character widths for the current text which the current line start can be
+ indented from the previous line start beyond which the current line start is considered to be a paragraph start.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#setLineSeparator(java.lang.String)">setLineSeparator</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;separator)</code>
+<div class="block">Set the desired line separator for output text.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#setListItemPatterns(java.util.List)">setListItemPatterns</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html?is-external=true" title="class or interface in java.util.regex">Pattern</a>&gt;&nbsp;patterns)</code>
+<div class="block">use to supply a different set of regular expression patterns for matching list item starts.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#setPageEnd(java.lang.String)">setPageEnd</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pageEndValue)</code>
+<div class="block">Sets the string which will be used at the end of a page.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#setPageStart(java.lang.String)">setPageStart</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pageStartValue)</code>
+<div class="block">Sets the string which will be used at the beginning of a page.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#setParagraphEnd(java.lang.String)">setParagraphEnd</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;s)</code>
+<div class="block">Sets the string which will be used at the end of a paragraph.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#setParagraphStart(java.lang.String)">setParagraphStart</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;s)</code>
+<div class="block">Sets the string which will be used at the beginning of a paragraph.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#setShouldSeparateByBeads(boolean)">setShouldSeparateByBeads</a></strong>(boolean&nbsp;aShouldSeparateByBeads)</code>
+<div class="block">Set if the text stripper should group the text output by a list of beads.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#setSortByPosition(boolean)">setSortByPosition</a></strong>(boolean&nbsp;newSortByPosition)</code>
+<div class="block">The order of the text tokens in a PDF file may not be in the same as they appear visually on the screen.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#setSpacingTolerance(float)">setSpacingTolerance</a></strong>(float&nbsp;spacingToleranceValue)</code>
+<div class="block">Set the space width-based tolerance value that is used to estimate where spaces in text should be added.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#setStartBookmark(org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline.PDOutlineItem)">setStartBookmark</a></strong>(<a href="../../../../org/apache/pdfbox/pdmodel/interactive/documentnavigation/outline/PDOutlineItem.html" title="class in org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline">PDOutlineItem</a>&nbsp;aStartBookmark)</code>
+<div class="block">Set the bookmark where text extraction should start, inclusive.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#setStartPage(int)">setStartPage</a></strong>(int&nbsp;startPageValue)</code>
+<div class="block">This will set the first page to be extracted by this class.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#setSuppressDuplicateOverlappingText(boolean)">setSuppressDuplicateOverlappingText</a></strong>(boolean&nbsp;suppressDuplicateOverlappingTextValue)</code>
+<div class="block">By default the text stripper will attempt to remove text that overlapps each other.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#setWordSeparator(java.lang.String)">setWordSeparator</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;separator)</code>
+<div class="block">Set the desired word separator for output text.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#showGlyph(org.apache.pdfbox.util.Matrix,%20org.apache.pdfbox.pdmodel.font.PDFont,%20int,%20java.lang.String,%20org.apache.pdfbox.util.Vector)">showGlyph</a></strong>(<a href="../../../../org/apache/pdfbox/util/Matrix.html" title="class in org.apache.pdfbox.util">Matrix</a>&nbsp;textRenderingMatrix,
+         <a href="../../../../org/apache/pdfbox/pdmodel/font/PDFont.html" title="class in org.apache.pdfbox.pdmodel.font">PDFont</a>&nbsp;font,
+         int&nbsp;code,
+         <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;unicode,
+         <a href="../../../../org/apache/pdfbox/util/Vector.html" title="class in org.apache.pdfbox.util">Vector</a>&nbsp;displacement)</code>
+<div class="block">This method was originally written by Ben Litchfield for PDFStreamEngine.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#startArticle()">startArticle</a></strong>()</code>
+<div class="block">Start a new article, which is typically defined as a column on a single page (also referred to as a bead).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#startArticle(boolean)">startArticle</a></strong>(boolean&nbsp;isLTR)</code>
+<div class="block">Start a new article, which is typically defined as a column on a single page (also referred to as a bead).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#startDocument(org.apache.pdfbox.pdmodel.PDDocument)">startDocument</a></strong>(<a href="../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)</code>
+<div class="block">This method is available for subclasses of this class.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#startPage(org.apache.pdfbox.pdmodel.PDPage)">startPage</a></strong>(<a href="../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;page)</code>
+<div class="block">Start a new page.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#writeCharacters(org.apache.pdfbox.text.TextPosition)">writeCharacters</a></strong>(<a href="../../../../org/apache/pdfbox/text/TextPosition.html" title="class in org.apache.pdfbox.text">TextPosition</a>&nbsp;text)</code>
+<div class="block">Write the string in TextPosition to the output stream.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#writeLineSeparator()">writeLineSeparator</a></strong>()</code>
+<div class="block">Write the line separator value to the output stream.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#writePage()">writePage</a></strong>()</code>
+<div class="block">This will print the text of the processed page to "output".</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#writePageEnd()">writePageEnd</a></strong>()</code>
+<div class="block">Write something (if defined) at the end of a page.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#writePageStart()">writePageStart</a></strong>()</code>
+<div class="block">Write something (if defined) at the start of a page.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#writeParagraphEnd()">writeParagraphEnd</a></strong>()</code>
+<div class="block">Write something (if defined) at the end of a paragraph.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#writeParagraphSeparator()">writeParagraphSeparator</a></strong>()</code>
+<div class="block">writes the paragraph separator string to the output.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#writeParagraphStart()">writeParagraphStart</a></strong>()</code>
+<div class="block">Write something (if defined) at the start of a paragraph.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#writeString(java.lang.String)">writeString</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text)</code>
+<div class="block">Write a Java string to the output stream.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#writeString(java.lang.String,%20java.util.List)">writeString</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text,
+           <a href="http://docs.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../org/apache/pdfbox/text/TextPosition.html" title="class in org.apache.pdfbox.text">TextPosition</a>&gt;&nbsp;textPositions)</code>
+<div class="block">Write a Java string to the output stream.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#writeText(org.apache.pdfbox.pdmodel.PDDocument,%20java.io.Writer)">writeText</a></strong>(<a href="../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+         <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</a>&nbsp;outputStream)</code>
+<div class="block">This will take a PDDocument and write the text of that document to the print writer.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#writeWordSeparator()">writeWordSeparator</a></strong>()</code>
+<div class="block">Write the word separator value to the output stream.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.pdfbox.contentstream.PDFStreamEngine">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;org.apache.pdfbox.contentstream.<a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html" title="class in org.apache.pdfbox.contentstream">PDFStreamEngine</a></h3>
+<code><a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#addOperator(org.apache.pdfbox.contentstream.operator.OperatorProcessor)">addOperator</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#applyTextAdjustment(float,%20float)">applyTextAdjustment</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#beginText()">beginText</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#endText()">endText</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#getAppearance(org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotation)">getAppearance</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#getCurrentPage()">getCurrentPage</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#getGraphicsStackSize()">getGraphicsStackSize</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#getGraphicsState()">getGraphicsState</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#getInitialMatrix()">getInitialMatrix</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#getResources()">getResources</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#getTextLineMatrix()">getTextLineMatrix</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#getTextMatrix()">getTextMatrix</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#operatorException(org.apache.pdfbox.contentstream.operator.Operator,%20java.util.List,%20java.io.IOException)">operatorException</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#processAnnotation(org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotation,%20org.apache.pdfbox.pdmodel.interactive.annotation.PDAppearanceStream)">processAnnotation</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#processChildStream(org.apache.pdfbox.contentstream.PDContentStream,%20org.apache.pdfbox.pdmodel.PDPage)">processChildStream</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#processOperator(org.apache.pdfbox.contentstream.operator.Operator,%20java.util.List)">processOperator</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#processOperator(java.lang.String,%20java.util.List)">processOperator</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#processSoftMask(org.apache.pdfbox.pdmodel.graphics.form.PDTransparencyGroup)">processSoftMask</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#processTilingPattern(org.apache.pdfbox.pdmodel.graphics.pattern.PDTilingPattern,%20org.apache.pdfbox.pdmodel.graphics.color.PDColor,%20org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace)">processTilingPattern</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#processTilingPattern(org.apache.pdfbox.pdmodel.graphics.pattern.PDTilingPattern,%20org.apache.pdfbox.pdmodel.graphics.color.PDColor,%20org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace,%20org.apache.pdfbox.util.Matrix)">processTilingPattern</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#processTransparencyGroup(org.apache.pdfbox.pdmodel.graphics.form.PDTransparencyGroup)">processTransparencyGroup</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#processType3Stream(org.apache.pdfbox.pdmodel.font.PDType3CharProc,%20org.apache.pdfbox.util.Matrix)">processType3Stream</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#registerOperatorProcessor(java.lang.String,%20org.apache.pdfbox.contentstream.operator.OperatorProcessor)">registerOperatorProcessor</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#restoreGraphicsStack(java.util.Stack)">restoreGraphicsStack</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#restoreGraphicsState()">restoreGraphicsState</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#saveGraphicsStack()">saveGraphicsStack</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#saveGraphicsState()">saveGraphicsState</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#setLineDashPattern(org.apache.pdfbox.cos.COSArray,%20int)">setLineDashPattern</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#setTextLineMatrix(org.apache.pdfbox.util.Matrix)">setTextLineMatrix</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#setTextMatrix(org.apache.pdfbox.util.Matrix)">setTextMatrix</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#showAnnotation(org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotation)">showAnnotation</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#showFontGlyph(org.apache.pdfbox.util.Matrix,%20org.apache.pdfbox.pdmodel.font.PDFont,%20int,%20java.lang.String,%20org.apache.pdfbox.util.Vector)">showFontGlyph</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#showForm(org.apache.pdfbox.pdmodel.graphics.form.PDFormXObject)">showForm</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#showText(byte[])">showText</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#showTextString(byte[])">showTextString</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#showTextStrings(org.apache.pdfbox.cos.COSArray)">showTextStrings</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#showTransparencyGroup(org.apache.pdfbox.pdmodel.graphics.form.PDTransparencyGroup)">showTransparencyGroup</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#showType3Glyph(org.apache.pdfbox.util.Matrix,%20org.apache.pdfbox.pdmodel.font.PDType3Font,%20int,%20java.lang.String,%20org.apache.pdfbox.util.Vector)">showType3Glyph</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#transformedPoint(float,%20float)">transformedPoint</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#transformWidth(float)">transformWidth</a>, <a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#unsupportedOperator(org.apache.pdfbox.contentstream.operator.Operator,%20java.util.List)">unsupportedOperator</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LINE_SEPARATOR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LINE_SEPARATOR</h4>
+<pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> LINE_SEPARATOR</pre>
+<div class="block">The platform's line separator.</div>
+</li>
+</ul>
+<a name="charactersByArticle">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>charactersByArticle</h4>
+<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../org/apache/pdfbox/text/TextPosition.html" title="class in org.apache.pdfbox.text">TextPosition</a>&gt;&gt; charactersByArticle</pre>
+<div class="block">The charactersByArticle is used to extract text by article divisions. For example a PDF that has two columns like
+ a newspaper, we want to extract the first column and then the second column. In this example the PDF would have 2
+ beads(or articles), one for each column. The size of the charactersByArticle would be 5, because not all text on
+ the screen will fall into one of the articles. The five divisions are shown below
+
+ Text before first article
+ first article text
+ text between first article and second article
+ second article text
+ text after second article
+
+ Most PDFs won't have any beads, so charactersByArticle will contain a single entry.</div>
+</li>
+</ul>
+<a name="document">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>document</h4>
+<pre>protected&nbsp;<a href="../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a> document</pre>
+</li>
+</ul>
+<a name="output">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>output</h4>
+<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</a> output</pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="PDFTextStripper()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>PDFTextStripper</h4>
+<pre>public&nbsp;PDFTextStripper()
+                throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Instantiate a new PDFTextStripper object.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is an error loading the properties.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getText(org.apache.pdfbox.pdmodel.PDDocument)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getText</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getText(<a href="../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc)
+               throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">This will return the text of a document. See writeText. <br>
+ NOTE: The document must not be encrypted when coming into this method.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>doc</code> - The document to get the text from.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The text of the PDF document.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the doc state is invalid or it is encrypted.</dd></dl>
+</li>
+</ul>
+<a name="writeText(org.apache.pdfbox.pdmodel.PDDocument, java.io.Writer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeText</h4>
+<pre>public&nbsp;void&nbsp;writeText(<a href="../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;doc,
+             <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</a>&nbsp;outputStream)
+               throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">This will take a PDDocument and write the text of that document to the print writer.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>doc</code> - The document to get the data from.</dd><dd><code>outputStream</code> - The location to put the text.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If the doc is in an invalid state.</dd></dl>
+</li>
+</ul>
+<a name="processPages(org.apache.pdfbox.pdmodel.PDPageTree)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processPages</h4>
+<pre>protected&nbsp;void&nbsp;processPages(<a href="../../../../org/apache/pdfbox/pdmodel/PDPageTree.html" title="class in org.apache.pdfbox.pdmodel">PDPageTree</a>&nbsp;pages)
+                     throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">This will process all of the pages and the text that is in them.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>pages</code> - The pages object in the document.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is an error parsing the text.</dd></dl>
+</li>
+</ul>
+<a name="startDocument(org.apache.pdfbox.pdmodel.PDDocument)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>startDocument</h4>
+<pre>protected&nbsp;void&nbsp;startDocument(<a href="../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)
+                      throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">This method is available for subclasses of this class. It will be called before processing of the document start.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>document</code> - The PDF document that is being processed.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If an IO error occurs.</dd></dl>
+</li>
+</ul>
+<a name="endDocument(org.apache.pdfbox.pdmodel.PDDocument)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>endDocument</h4>
+<pre>protected&nbsp;void&nbsp;endDocument(<a href="../../../../org/apache/pdfbox/pdmodel/PDDocument.html" title="class in org.apache.pdfbox.pdmodel">PDDocument</a>&nbsp;document)
+                    throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">This method is available for subclasses of this class. It will be called after processing of the document
+ finishes.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>document</code> - The PDF document that is being processed.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If an IO error occurs.</dd></dl>
+</li>
+</ul>
+<a name="processPage(org.apache.pdfbox.pdmodel.PDPage)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processPage</h4>
+<pre>public&nbsp;void&nbsp;processPage(<a href="../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;page)
+                 throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">This will process the contents of a page.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>page</code> - The page to process.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is an error processing the page.</dd></dl>
+</li>
+</ul>
+<a name="startArticle()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>startArticle</h4>
+<pre>protected&nbsp;void&nbsp;startArticle()
+                     throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Start a new article, which is typically defined as a column on a single page (also referred to as a bead). This
+ assumes that the primary direction of text is left to right. Default implementation is to do nothing. Subclasses
+ may provide additional information.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is any error writing to the stream.</dd></dl>
+</li>
+</ul>
+<a name="startArticle(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>startArticle</h4>
+<pre>protected&nbsp;void&nbsp;startArticle(boolean&nbsp;isLTR)
+                     throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Start a new article, which is typically defined as a column on a single page (also referred to as a bead).
+ Default implementation is to do nothing. Subclasses may provide additional information.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>isLTR</code> - true if primary direction of text is left to right.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is any error writing to the stream.</dd></dl>
+</li>
+</ul>
+<a name="endArticle()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>endArticle</h4>
+<pre>protected&nbsp;void&nbsp;endArticle()
+                   throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">End an article. Default implementation is to do nothing. Subclasses may provide additional information.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is any error writing to the stream.</dd></dl>
+</li>
+</ul>
+<a name="startPage(org.apache.pdfbox.pdmodel.PDPage)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>startPage</h4>
+<pre>protected&nbsp;void&nbsp;startPage(<a href="../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;page)
+                  throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Start a new page. Default implementation is to do nothing. Subclasses may provide additional information.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>page</code> - The page we are about to process.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is any error writing to the stream.</dd></dl>
+</li>
+</ul>
+<a name="endPage(org.apache.pdfbox.pdmodel.PDPage)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>endPage</h4>
+<pre>protected&nbsp;void&nbsp;endPage(<a href="../../../../org/apache/pdfbox/pdmodel/PDPage.html" title="class in org.apache.pdfbox.pdmodel">PDPage</a>&nbsp;page)
+                throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">End a page. Default implementation is to do nothing. Subclasses may provide additional information.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>page</code> - The page we are about to process.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is any error writing to the stream.</dd></dl>
+</li>
+</ul>
+<a name="writePage()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writePage</h4>
+<pre>protected&nbsp;void&nbsp;writePage()
+                  throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">This will print the text of the processed page to "output". It will estimate, based on the coordinates of the
+ text, where newlines and word spacings should be placed. The text will be sorted only if that feature was
+ enabled.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is an error writing the text.</dd></dl>
+</li>
+</ul>
+<a name="writeLineSeparator()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeLineSeparator</h4>
+<pre>protected&nbsp;void&nbsp;writeLineSeparator()
+                           throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Write the line separator value to the output stream.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is a problem writing out the lineseparator to the document.</dd></dl>
+</li>
+</ul>
+<a name="writeWordSeparator()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeWordSeparator</h4>
+<pre>protected&nbsp;void&nbsp;writeWordSeparator()
+                           throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Write the word separator value to the output stream.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is a problem writing out the wordseparator to the document.</dd></dl>
+</li>
+</ul>
+<a name="writeCharacters(org.apache.pdfbox.text.TextPosition)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeCharacters</h4>
+<pre>protected&nbsp;void&nbsp;writeCharacters(<a href="../../../../org/apache/pdfbox/text/TextPosition.html" title="class in org.apache.pdfbox.text">TextPosition</a>&nbsp;text)
+                        throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Write the string in TextPosition to the output stream.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>text</code> - The text to write to the stream.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is an error when writing the text.</dd></dl>
+</li>
+</ul>
+<a name="writeString(java.lang.String, java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeString</h4>
+<pre>protected&nbsp;void&nbsp;writeString(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text,
+               <a href="http://docs.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../org/apache/pdfbox/text/TextPosition.html" title="class in org.apache.pdfbox.text">TextPosition</a>&gt;&nbsp;textPositions)
+                    throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Write a Java string to the output stream. The default implementation will ignore the <code>textPositions</code>
+ and just calls <a href="../../../../org/apache/pdfbox/text/PDFTextStripper.html#writeString(java.lang.String)"><code>writeString(String)</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>text</code> - The text to write to the stream.</dd><dd><code>textPositions</code> - The TextPositions belonging to the text.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is an error when writing the text.</dd></dl>
+</li>
+</ul>
+<a name="writeString(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeString</h4>
+<pre>protected&nbsp;void&nbsp;writeString(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text)
+                    throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Write a Java string to the output stream.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>text</code> - The text to write to the stream.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If there is an error when writing the text.</dd></dl>
+</li>
+</ul>
+<a name="processTextPosition(org.apache.pdfbox.text.TextPosition)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processTextPosition</h4>
+<pre>protected&nbsp;void&nbsp;processTextPosition(<a href="../../../../org/apache/pdfbox/text/TextPosition.html" title="class in org.apache.pdfbox.text">TextPosition</a>&nbsp;text)</pre>
+<div class="block">This will process a TextPosition object and add the text to the list of characters on a page. It takes care of
+ overlapping text.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>text</code> - The text to process.</dd></dl>
+</li>
+</ul>
+<a name="getStartPage()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getStartPage</h4>
+<pre>public&nbsp;int&nbsp;getStartPage()</pre>
+<div class="block">This is the page that the text extraction will start on. The pages start at page 1. For example in a 5 page PDF
+ document, if the start page is 1 then all pages will be extracted. If the start page is 4 then pages 4 and 5 will
+ be extracted. The default value is 1.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Value of property startPage.</dd></dl>
+</li>
+</ul>
+<a name="setStartPage(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setStartPage</h4>
+<pre>public&nbsp;void&nbsp;setStartPage(int&nbsp;startPageValue)</pre>
+<div class="block">This will set the first page to be extracted by this class.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>startPageValue</code> - New value of 1-based startPage property.</dd></dl>
+</li>
+</ul>
+<a name="getEndPage()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEndPage</h4>
+<pre>public&nbsp;int&nbsp;getEndPage()</pre>
+<div class="block">This will get the last page that will be extracted. This is inclusive, for example if a 5 page PDF an endPage
+ value of 5 would extract the entire document, an end page of 2 would extract pages 1 and 2. This defaults to
+ Integer.MAX_VALUE such that all pages of the pdf will be extracted.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Value of property endPage.</dd></dl>
+</li>
+</ul>
+<a name="setEndPage(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setEndPage</h4>
+<pre>public&nbsp;void&nbsp;setEndPage(int&nbsp;endPageValue)</pre>
+<div class="block">This will set the last page to be extracted by this class.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>endPageValue</code> - New value of 1-based endPage property.</dd></dl>
+</li>
+</ul>
+<a name="setLineSeparator(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setLineSeparator</h4>
+<pre>public&nbsp;void&nbsp;setLineSeparator(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;separator)</pre>
+<div class="block">Set the desired line separator for output text. The line.separator system property is used if the line separator
+ preference is not set explicitly using this method.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>separator</code> - The desired line separator string.</dd></dl>
+</li>
+</ul>
+<a name="getLineSeparator()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLineSeparator</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getLineSeparator()</pre>
+<div class="block">This will get the line separator.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The desired line separator string.</dd></dl>
+</li>
+</ul>
+<a name="getWordSeparator()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getWordSeparator</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getWordSeparator()</pre>
+<div class="block">This will get the word separator.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The desired word separator string.</dd></dl>
+</li>
+</ul>
+<a name="setWordSeparator(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setWordSeparator</h4>
+<pre>public&nbsp;void&nbsp;setWordSeparator(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;separator)</pre>
+<div class="block">Set the desired word separator for output text. The PDFBox text extraction algorithm will output a space
+ character if there is enough space between two words. By default a space character is used. If you need and
+ accurate count of characters that are found in a PDF document then you might want to set the word separator to
+ the empty string.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>separator</code> - The desired page separator string.</dd></dl>
+</li>
+</ul>
+<a name="getSuppressDuplicateOverlappingText()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSuppressDuplicateOverlappingText</h4>
+<pre>public&nbsp;boolean&nbsp;getSuppressDuplicateOverlappingText()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Returns the suppressDuplicateOverlappingText.</dd></dl>
+</li>
+</ul>
+<a name="getCurrentPageNo()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCurrentPageNo</h4>
+<pre>protected&nbsp;int&nbsp;getCurrentPageNo()</pre>
+<div class="block">Get the current page number that is being processed.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>A 1 based number representing the current page.</dd></dl>
+</li>
+</ul>
+<a name="getOutput()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOutput</h4>
+<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</a>&nbsp;getOutput()</pre>
+<div class="block">The output stream that is being written to.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The stream that output is being written to.</dd></dl>
+</li>
+</ul>
+<a name="getCharactersByArticle()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCharactersByArticle</h4>
+<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../org/apache/pdfbox/text/TextPosition.html" title="class in org.apache.pdfbox.text">TextPosition</a>&gt;&gt;&nbsp;getCharactersByArticle()</pre>
+<div class="block">Character strings are grouped by articles. It is quite common that there will only be a single article. This
+ returns a List that contains List objects, the inner lists will contain TextPosition objects.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>A double List of TextPositions for all text strings on the page.</dd></dl>
+</li>
+</ul>
+<a name="setSuppressDuplicateOverlappingText(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSuppressDuplicateOverlappingText</h4>
+<pre>public&nbsp;void&nbsp;setSuppressDuplicateOverlappingText(boolean&nbsp;suppressDuplicateOverlappingTextValue)</pre>
+<div class="block">By default the text stripper will attempt to remove text that overlapps each other. Word paints the same
+ character several times in order to make it look bold. By setting this to false all text will be extracted, which
+ means that certain sections will be duplicated, but better performance will be noticed.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>suppressDuplicateOverlappingTextValue</code> - The suppressDuplicateOverlappingText to set.</dd></dl>
+</li>
+</ul>
+<a name="getSeparateByBeads()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSeparateByBeads</h4>
+<pre>public&nbsp;boolean&nbsp;getSeparateByBeads()</pre>
+<div class="block">This will tell if the text stripper should separate by beads.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>If the text will be grouped by beads.</dd></dl>
+</li>
+</ul>
+<a name="setShouldSeparateByBeads(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setShouldSeparateByBeads</h4>
+<pre>public&nbsp;void&nbsp;setShouldSeparateByBeads(boolean&nbsp;aShouldSeparateByBeads)</pre>
+<div class="block">Set if the text stripper should group the text output by a list of beads. The default value is true!</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aShouldSeparateByBeads</code> - The new grouping of beads.</dd></dl>
+</li>
+</ul>
+<a name="getEndBookmark()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEndBookmark</h4>
+<pre>public&nbsp;<a href="../../../../org/apache/pdfbox/pdmodel/interactive/documentnavigation/outline/PDOutlineItem.html" title="class in org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline">PDOutlineItem</a>&nbsp;getEndBookmark()</pre>
+<div class="block">Get the bookmark where text extraction should end, inclusive. Default is null.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The ending bookmark.</dd></dl>
+</li>
+</ul>
+<a name="setEndBookmark(org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline.PDOutlineItem)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setEndBookmark</h4>
+<pre>public&nbsp;void&nbsp;setEndBookmark(<a href="../../../../org/apache/pdfbox/pdmodel/interactive/documentnavigation/outline/PDOutlineItem.html" title="class in org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline">PDOutlineItem</a>&nbsp;aEndBookmark)</pre>
+<div class="block">Set the bookmark where the text extraction should stop.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aEndBookmark</code> - The ending bookmark.</dd></dl>
+</li>
+</ul>
+<a name="getStartBookmark()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getStartBookmark</h4>
+<pre>public&nbsp;<a href="../../../../org/apache/pdfbox/pdmodel/interactive/documentnavigation/outline/PDOutlineItem.html" title="class in org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline">PDOutlineItem</a>&nbsp;getStartBookmark()</pre>
+<div class="block">Get the bookmark where text extraction should start, inclusive. Default is null.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The starting bookmark.</dd></dl>
+</li>
+</ul>
+<a name="setStartBookmark(org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline.PDOutlineItem)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setStartBookmark</h4>
+<pre>public&nbsp;void&nbsp;setStartBookmark(<a href="../../../../org/apache/pdfbox/pdmodel/interactive/documentnavigation/outline/PDOutlineItem.html" title="class in org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline">PDOutlineItem</a>&nbsp;aStartBookmark)</pre>
+<div class="block">Set the bookmark where text extraction should start, inclusive.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aStartBookmark</code> - The starting bookmark.</dd></dl>
+</li>
+</ul>
+<a name="getAddMoreFormatting()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAddMoreFormatting</h4>
+<pre>public&nbsp;boolean&nbsp;getAddMoreFormatting()</pre>
+<div class="block">This will tell if the text stripper should add some more text formatting.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if some more text formatting will be added</dd></dl>
+</li>
+</ul>
+<a name="setAddMoreFormatting(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setAddMoreFormatting</h4>
+<pre>public&nbsp;void&nbsp;setAddMoreFormatting(boolean&nbsp;newAddMoreFormatting)</pre>
+<div class="block">There will some additional text formatting be added if addMoreFormatting is set to true. Default is false.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newAddMoreFormatting</code> - Tell PDFBox to add some more text formatting</dd></dl>
+</li>
+</ul>
+<a name="getSortByPosition()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSortByPosition</h4>
+<pre>public&nbsp;boolean&nbsp;getSortByPosition()</pre>
+<div class="block">This will tell if the text stripper should sort the text tokens before writing to the stream.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true If the text tokens will be sorted before being written.</dd></dl>
+</li>
+</ul>
+<a name="setSortByPosition(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSortByPosition</h4>
+<pre>public&nbsp;void&nbsp;setSortByPosition(boolean&nbsp;newSortByPosition)</pre>
+<div class="block">The order of the text tokens in a PDF file may not be in the same as they appear visually on the screen. For
+ example, a PDF writer may write out all text by font, so all bold or larger text, then make a second pass and
+ write out the normal text.<br>
+ The default is to <b>not</b> sort by position.<br>
+ <br>
+ A PDF writer could choose to write each character in a different order. By default PDFBox does <b>not</b> sort
+ the text tokens before processing them due to performance reasons.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newSortByPosition</code> - Tell PDFBox to sort the text positions.</dd></dl>
+</li>
+</ul>
+<a name="getSpacingTolerance()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSpacingTolerance</h4>
+<pre>public&nbsp;float&nbsp;getSpacingTolerance()</pre>
+<div class="block">Get the current space width-based tolerance value that is being used to estimate where spaces in text should be
+ added. Note that the default value for this has been determined from trial and error.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The current tolerance / scaling factor</dd></dl>
+</li>
+</ul>
+<a name="setSpacingTolerance(float)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSpacingTolerance</h4>
+<pre>public&nbsp;void&nbsp;setSpacingTolerance(float&nbsp;spacingToleranceValue)</pre>
+<div class="block">Set the space width-based tolerance value that is used to estimate where spaces in text should be added. Note
+ that the default value for this has been determined from trial and error. Setting this value larger will reduce
+ the number of spaces added.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>spacingToleranceValue</code> - tolerance / scaling factor to use</dd></dl>
+</li>
+</ul>
+<a name="getAverageCharTolerance()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAverageCharTolerance</h4>
+<pre>public&nbsp;float&nbsp;getAverageCharTolerance()</pre>
+<div class="block">Get the current character width-based tolerance value that is being used to estimate where spaces in text should
+ be added. Note that the default value for this has been determined from trial and error.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The current tolerance / scaling factor</dd></dl>
+</li>
+</ul>
+<a name="setAverageCharTolerance(float)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setAverageCharTolerance</h4>
+<pre>public&nbsp;void&nbsp;setAverageCharTolerance(float&nbsp;averageCharToleranceValue)</pre>
+<div class="block">Set the character width-based tolerance value that is used to estimate where spaces in text should be added. Note
+ that the default value for this has been determined from trial and error. Setting this value larger will reduce
+ the number of spaces added.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>averageCharToleranceValue</code> - average tolerance / scaling factor to use</dd></dl>
+</li>
+</ul>
+<a name="getIndentThreshold()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getIndentThreshold</h4>
+<pre>public&nbsp;float&nbsp;getIndentThreshold()</pre>
+<div class="block">returns the multiple of whitespace character widths for the current text which the current line start can be
+ indented from the previous line start beyond which the current line start is considered to be a paragraph start.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the number of whitespace character widths to use when detecting paragraph indents.</dd></dl>
+</li>
+</ul>
+<a name="setIndentThreshold(float)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setIndentThreshold</h4>
+<pre>public&nbsp;void&nbsp;setIndentThreshold(float&nbsp;indentThresholdValue)</pre>
+<div class="block">sets the multiple of whitespace character widths for the current text which the current line start can be
+ indented from the previous line start beyond which the current line start is considered to be a paragraph start.
+ The default value is 2.0.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>indentThresholdValue</code> - the number of whitespace character widths to use when detecting paragraph indents.</dd></dl>
+</li>
+</ul>
+<a name="getDropThreshold()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDropThreshold</h4>
+<pre>public&nbsp;float&nbsp;getDropThreshold()</pre>
+<div class="block">the minimum whitespace, as a multiple of the max height of the current characters beyond which the current line
+ start is considered to be a paragraph start.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the character height multiple for max allowed whitespace between lines in the same paragraph.</dd></dl>
+</li>
+</ul>
+<a name="setDropThreshold(float)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDropThreshold</h4>
+<pre>public&nbsp;void&nbsp;setDropThreshold(float&nbsp;dropThresholdValue)</pre>
+<div class="block">sets the minimum whitespace, as a multiple of the max height of the current characters beyond which the current
+ line start is considered to be a paragraph start. The default value is 2.5.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>dropThresholdValue</code> - the character height multiple for max allowed whitespace between lines in the same
+ paragraph.</dd></dl>
+</li>
+</ul>
+<a name="getParagraphStart()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getParagraphStart</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getParagraphStart()</pre>
+<div class="block">Returns the string which will be used at the beginning of a paragraph.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the paragraph start string</dd></dl>
+</li>
+</ul>
+<a name="setParagraphStart(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setParagraphStart</h4>
+<pre>public&nbsp;void&nbsp;setParagraphStart(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;s)</pre>
+<div class="block">Sets the string which will be used at the beginning of a paragraph.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>s</code> - the paragraph start string</dd></dl>
+</li>
+</ul>
+<a name="getParagraphEnd()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getParagraphEnd</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getParagraphEnd()</pre>
+<div class="block">Returns the string which will be used at the end of a paragraph.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the paragraph end string</dd></dl>
+</li>
+</ul>
+<a name="setParagraphEnd(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setParagraphEnd</h4>
+<pre>public&nbsp;void&nbsp;setParagraphEnd(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;s)</pre>
+<div class="block">Sets the string which will be used at the end of a paragraph.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>s</code> - the paragraph end string</dd></dl>
+</li>
+</ul>
+<a name="getPageStart()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPageStart</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getPageStart()</pre>
+<div class="block">Returns the string which will be used at the beginning of a page.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the page start string</dd></dl>
+</li>
+</ul>
+<a name="setPageStart(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setPageStart</h4>
+<pre>public&nbsp;void&nbsp;setPageStart(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pageStartValue)</pre>
+<div class="block">Sets the string which will be used at the beginning of a page.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>pageStartValue</code> - the page start string</dd></dl>
+</li>
+</ul>
+<a name="getPageEnd()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPageEnd</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getPageEnd()</pre>
+<div class="block">Returns the string which will be used at the end of a page.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the page end string</dd></dl>
+</li>
+</ul>
+<a name="setPageEnd(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setPageEnd</h4>
+<pre>public&nbsp;void&nbsp;setPageEnd(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pageEndValue)</pre>
+<div class="block">Sets the string which will be used at the end of a page.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>pageEndValue</code> - the page end string</dd></dl>
+</li>
+</ul>
+<a name="getArticleStart()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getArticleStart</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getArticleStart()</pre>
+<div class="block">Returns the string which will be used at the beginning of an article.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the article start string</dd></dl>
+</li>
+</ul>
+<a name="setArticleStart(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setArticleStart</h4>
+<pre>public&nbsp;void&nbsp;setArticleStart(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;articleStartValue)</pre>
+<div class="block">Sets the string which will be used at the beginning of an article.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>articleStartValue</code> - the article start string</dd></dl>
+</li>
+</ul>
+<a name="getArticleEnd()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getArticleEnd</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getArticleEnd()</pre>
+<div class="block">Returns the string which will be used at the end of an article.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the article end string</dd></dl>
+</li>
+</ul>
+<a name="setArticleEnd(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setArticleEnd</h4>
+<pre>public&nbsp;void&nbsp;setArticleEnd(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;articleEndValue)</pre>
+<div class="block">Sets the string which will be used at the end of an article.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>articleEndValue</code> - the article end string</dd></dl>
+</li>
+</ul>
+<a name="writeParagraphSeparator()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeParagraphSeparator</h4>
+<pre>protected&nbsp;void&nbsp;writeParagraphSeparator()
+                                throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">writes the paragraph separator string to the output.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if something went wrong</dd></dl>
+</li>
+</ul>
+<a name="writeParagraphStart()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeParagraphStart</h4>
+<pre>protected&nbsp;void&nbsp;writeParagraphStart()
+                            throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Write something (if defined) at the start of a paragraph.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if something went wrong</dd></dl>
+</li>
+</ul>
+<a name="writeParagraphEnd()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeParagraphEnd</h4>
+<pre>protected&nbsp;void&nbsp;writeParagraphEnd()
+                          throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Write something (if defined) at the end of a paragraph.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if something went wrong</dd></dl>
+</li>
+</ul>
+<a name="writePageStart()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writePageStart</h4>
+<pre>protected&nbsp;void&nbsp;writePageStart()
+                       throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Write something (if defined) at the start of a page.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if something went wrong</dd></dl>
+</li>
+</ul>
+<a name="writePageEnd()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writePageEnd</h4>
+<pre>protected&nbsp;void&nbsp;writePageEnd()
+                     throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Write something (if defined) at the end of a page.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if something went wrong</dd></dl>
+</li>
+</ul>
+<a name="setListItemPatterns(java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setListItemPatterns</h4>
+<pre>protected&nbsp;void&nbsp;setListItemPatterns(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html?is-external=true" title="class or interface in java.util.regex">Pattern</a>&gt;&nbsp;patterns)</pre>
+<div class="block">use to supply a different set of regular expression patterns for matching list item starts.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>patterns</code> - list of patterns</dd></dl>
+</li>
+</ul>
+<a name="getListItemPatterns()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getListItemPatterns</h4>
+<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html?is-external=true" title="class or interface in java.util.regex">Pattern</a>&gt;&nbsp;getListItemPatterns()</pre>
+<div class="block">returns a list of regular expression Patterns representing different common list item formats. For example
+ numbered items of form:
+ <ol>
+ <li>some text</li>
+ <li>more text</li>
+ </ol>
+ or
+ <ul>
+ <li>some text</li>
+ <li>more text</li>
+ </ul>
+ etc., all begin with some character pattern. The pattern "\\d+\." (matches "1.", "2.", ...) or "\[\\d+\]"
+ (matches "[1]", "[2]", ...).
+ <p>
+ This method returns a list of such regular expression Patterns.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>a list of Pattern objects.</dd></dl>
+</li>
+</ul>
+<a name="matchPattern(java.lang.String, java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>matchPattern</h4>
+<pre>protected static&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html?is-external=true" title="class or interface in java.util.regex">Pattern</a>&nbsp;matchPattern(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;string,
+                   <a href="http://docs.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html?is-external=true" title="class or interface in java.util.regex">Pattern</a>&gt;&nbsp;patterns)</pre>
+<div class="block">iterates over the specified list of Patterns until it finds one that matches the specified string. Then returns
+ the Pattern.
+ <p>
+ Order of the supplied list of patterns is important as most common patterns should come first. Patterns should be
+ strict in general, and all will be used with case sensitivity on.
+ </p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>string</code> - the string to be searched</dd><dd><code>patterns</code> - list of patterns</dd>
+<dt><span class="strong">Returns:</span></dt><dd>matching pattern</dd></dl>
+</li>
+</ul>
+<a name="showGlyph(org.apache.pdfbox.util.Matrix, org.apache.pdfbox.pdmodel.font.PDFont, int, java.lang.String, org.apache.pdfbox.util.Vector)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>showGlyph</h4>
+<pre>protected&nbsp;void&nbsp;showGlyph(<a href="../../../../org/apache/pdfbox/util/Matrix.html" title="class in org.apache.pdfbox.util">Matrix</a>&nbsp;textRenderingMatrix,
+             <a href="../../../../org/apache/pdfbox/pdmodel/font/PDFont.html" title="class in org.apache.pdfbox.pdmodel.font">PDFont</a>&nbsp;font,
+             int&nbsp;code,
+             <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;unicode,
+             <a href="../../../../org/apache/pdfbox/util/Vector.html" title="class in org.apache.pdfbox.util">Vector</a>&nbsp;displacement)
+                  throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">This method was originally written by Ben Litchfield for PDFStreamEngine.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html#showGlyph(org.apache.pdfbox.util.Matrix,%20org.apache.pdfbox.pdmodel.font.PDFont,%20int,%20java.lang.String,%20org.apache.pdfbox.util.Vector)">showGlyph</a></code>&nbsp;in class&nbsp;<code><a href="../../../../org/apache/pdfbox/contentstream/PDFStreamEngine.html" title="class in org.apache.pdfbox.contentstream">PDFStreamEngine</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>textRenderingMatrix</code> - the current text rendering matrix, T<sub>rm</sub></dd><dd><code>font</code> - the current font</dd><dd><code>code</code> - internal PDF character code for the glyph</dd><dd><code>unicode</code> - the Unicode text for this glyph, or null if the PDF does provide it</dd><dd><code>displacement</code> - the displacement (i.e. advance) of the glyph in text space</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the glyph cannot be processed</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/PDFTextStripper.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/apache/pdfbox/text/PDFMarkedContentExtractor.html" title="class in org.apache.pdfbox.text"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/pdfbox/text/PDFTextStripperByArea.html" title="class in org.apache.pdfbox.text"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/apache/pdfbox/text/PDFTextStripper.html" target="_top">Frames</a></li>
+<li><a href="PDFTextStripper.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2002&#x2013;2017 <a href="http://pdfbox.apache.org">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>
