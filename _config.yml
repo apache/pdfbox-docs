@@ -6,7 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
   and the ability to extract content from documents. Apache PDFBox also includes several
   command-line utilities. Apache PDFBox is published under the Apache License v2.0.
 baseurl: ""
-url: "http://pdfbox.apache.org/"
+url: "https://pdfbox.apache.org/"
 
 
 # Build settings
