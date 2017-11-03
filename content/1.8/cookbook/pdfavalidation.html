@@ -163,7 +163,7 @@ Check Compliance with PDF/A-1b</p>
 
 <p>This small sample shows how to check the compliance of a file with the PDF/A-1b specification.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ValidationResult</span> <span class="n">result</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">ValidationResult</span> <span class="n">result</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
 
 <span class="n">PreflightParser</span> <span class="n">parser</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PreflightParser</span><span class="o">(</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span>
 <span class="k">try</span>
@@ -210,7 +210,8 @@ Check Compliance with PDF/A-1b</p>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">error</span><span class="o">.</span><span class="na">getErrorCode</span><span class="o">()</span> <span class="o">+</span> <span class="s">" : "</span> <span class="o">+</span> <span class="n">error</span><span class="o">.</span><span class="na">getDetails</span><span class="o">());</span>
     <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <h2 id="categories-of-validation-error">Categories of Validation Error</h2>
 
