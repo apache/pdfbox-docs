@@ -105,7 +105,7 @@
                             </li>
                             <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/2.0/faq.html">FAQ</a></li>
-                            <li><a href="/docs/2.0.7/javadocs/">API Docs</a></li>
+                            <li><a href="/docs/2.0.8/javadocs/">API Docs</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-node" id="v1-8">
@@ -174,35 +174,31 @@
 <h3 id="checkout-from-the-git-repository">Checkout from the Git Repository</h3>
 <p>Before you can edit the site, you need to check it out from the Git repository:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git clone https://git-wip-us.apache.org/repos/asf/pdfbox-docs
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://git-wip-us.apache.org/repos/asf/pdfbox-docs
+</code></pre></div></div>
 
 <h3 id="local-changes">Local Changes</h3>
 <p>You can now do the changes and additions to the sources of the PDFBox website. To test these locally use</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>jekyll serve
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll serve
+</code></pre></div></div>
 
 <p>which will compile the changes and run a local webserver at</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>http://localhost:4000
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://localhost:4000
+</code></pre></div></div>
 
 <h3 id="publish-the-website-for-comitters-only">Publish the Website (For Comitters Only)</h3>
 <p>After you have done the local changes follow these steps to publish the content:</p>
 
 <p>Add the following server configuration in your ~/.m2/settings.xml file</p>
 
-<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;server&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;server&gt;</span>
   <span class="nt">&lt;id&gt;</span>pdfbox-site<span class="nt">&lt;/id&gt;</span>
   <span class="nt">&lt;username&gt;</span>** USERNAME **<span class="nt">&lt;/username&gt;</span>
   <span class="nt">&lt;password&gt;</span>** PASSWORD **<span class="nt">&lt;/password&gt;</span>
 <span class="nt">&lt;/server&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><code class="highlighter-rouge">pdfbox-site</code> is referenced from the PDFBox pom.xml file.</p>
 
@@ -210,24 +206,21 @@
 
 <p>Ensure that the new website content can build locally</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>jekyll build
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build
+</code></pre></div></div>
 
 <p>This will read the sources and generate the new content in the <code class="highlighter-rouge">./staging</code> directory.</p>
 
 <p>When you are happy with the new content update the source repository</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git commit -m "..."
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -m "..."
 git push origin master
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Upload the new content to the production site</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>mvn scm-publish:publish-scm
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mvn scm-publish:publish-scm
+</code></pre></div></div>
 
 <p>This will checkout the current content into the <code class="highlighter-rouge">./target</code>directory, apply the changes from <code class="highlighter-rouge">./staging</code> and publish
 the changes to the PDFBox production website.</p>
@@ -237,9 +230,8 @@ the changes to the PDFBox production website.</p>
 
 <p>Run</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ mvn clean javadoc:aggregate scm-publish:publish-scm
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mvn clean javadoc:aggregate scm-publish:publish-scm
+</code></pre></div></div>
 
 <p>from the <code class="highlighter-rouge">&lt;SVN_ROOT&gt;/../pdfbox</code> directory.</p>
 

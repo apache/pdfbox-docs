@@ -105,7 +105,7 @@
                             </li>
                             <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/2.0/faq.html">FAQ</a></li>
-                            <li><a href="/docs/2.0.7/javadocs/">API Docs</a></li>
+                            <li><a href="/docs/2.0.8/javadocs/">API Docs</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-node" id="v1-8">
@@ -189,13 +189,12 @@ included in the Java platform.</p>
 <p>To add the pdfbox, fontbox, jempbox and commons-logging jars to your application, the easiest thing is to declare the Maven dependency shown below. This gives you the main
 pdfbox library directly and the other required jars as transitive dependencies.</p>
 
-<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
   <span class="nt">&lt;groupId&gt;</span>org.apache.pdfbox<span class="nt">&lt;/groupId&gt;</span>
   <span class="nt">&lt;artifactId&gt;</span>pdfbox<span class="nt">&lt;/artifactId&gt;</span>
   <span class="nt">&lt;version&gt;</span>...<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Set the version field to the latest stable PDFBox version.</p>
 
@@ -218,7 +217,7 @@ pdfbox library directly and the other required jars as transitive dependencies.<
 <p>The most notable such optional feature is support for PDF encryption. Instead of implementing its own encryption algorithms, PDFBox uses libraries from the 
 <a href="http://www.bouncycastle.org/">Legion of the Bouncy Castle</a>. Both the bcprov and bcmail libraries are needed and can be included using the Maven dependencies shown below.</p>
 
-<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
   <span class="nt">&lt;groupId&gt;</span>org.bouncycastle<span class="nt">&lt;/groupId&gt;</span>
   <span class="nt">&lt;artifactId&gt;</span>bcprov-jdk15<span class="nt">&lt;/artifactId&gt;</span>
   <span class="nt">&lt;version&gt;</span>1.44<span class="nt">&lt;/version&gt;</span>
@@ -228,21 +227,19 @@ pdfbox library directly and the other required jars as transitive dependencies.<
   <span class="nt">&lt;artifactId&gt;</span>bcmail-jdk15<span class="nt">&lt;/artifactId&gt;</span>
   <span class="nt">&lt;version&gt;</span>1.44<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="support-for-bidirectional-languages">Support for Bidirectional Languages</h4>
 <p>Another important optional feature is support for bidirectional languages like Arabic. PDFBox uses the ICU4J library from the 
 <a href="http://site.icu-project.org/">International Components for Unicode</a> (ICU) project to support such languages in PDF documents. To add the ICU4J jar to your project, 
 use the following Maven dependency.</p>
 
-<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
   <span class="nt">&lt;groupId&gt;</span>com.ibm.icu<span class="nt">&lt;/groupId&gt;</span>
   <span class="nt">&lt;artifactId&gt;</span>icu4j<span class="nt">&lt;/artifactId&gt;</span>
   <span class="nt">&lt;version&gt;</span>3.8<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>PDFBox also contains extra support for use with the <a href="http://lucene.apache.org/">Lucene</a> and <a href="http://ant.apache.org/">Ant</a> projects. Since in these cases PDFBox is just an
 add-on feature to these projects, you should first set up your application to use Lucene or Ant and then add PDFBox support as described on this page.</p>

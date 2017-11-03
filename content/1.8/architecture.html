@@ -105,7 +105,7 @@
                             </li>
                             <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/2.0/faq.html">FAQ</a></li>
-                            <li><a href="/docs/2.0.7/javadocs/">API Docs</a></li>
+                            <li><a href="/docs/2.0.8/javadocs/">API Docs</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-node" id="v1-8">
@@ -272,21 +272,19 @@ doesn’t provide the functionality needed.</p>
 
 <p>A page in a PDF document is represented with a COSDictionary. The entries that are available for a page can be seen in the PDF Reference and an example of a page looks like this:</p>
 
-<div class="language-text highlighter-rouge"><pre class="highlight"><code>&lt;&lt;
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;&lt;
     /Type /Page
     /MediaBox [0 0 612 915]
     /Contents 56 0 R
 &gt;&gt;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The information within the dictionary can be accessed using the COS model</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">COSDictionary</span> <span class="n">page</span> <span class="o">=</span> <span class="o">...;</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">COSDictionary</span> <span class="n">page</span> <span class="o">=</span> <span class="o">...;</span>
 <span class="n">COSArray</span> <span class="n">mediaBox</span> <span class="o">=</span> <span class="o">(</span><span class="n">COSArray</span><span class="o">)</span><span class="n">page</span><span class="o">.</span><span class="na">getDictionaryObject</span><span class="o">(</span> <span class="s">"MediaBox"</span> <span class="o">);</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="s">"Width:"</span> <span class="o">+</span> <span class="n">mediaBox</span><span class="o">.</span><span class="na">get</span><span class="o">(</span> <span class="mi">3</span> <span class="o">)</span> <span class="o">);</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>As can be seen from that little example the COS model provides a low level API to access 
 information within the PDF. In order to use the COS model successfully a good knowledge of
@@ -304,11 +302,10 @@ available to access the attributes.</p>
 
 <p>The same code from above to get the page width can be rewritten to use PD Model classes.</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">PDPage</span> <span class="n">page</span> <span class="o">=</span> <span class="o">...;</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PDPage</span> <span class="n">page</span> <span class="o">=</span> <span class="o">...;</span>
 <span class="n">PDRectangle</span> <span class="n">mediaBox</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="na">getMediaBox</span><span class="o">();</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="s">"Width:"</span> <span class="o">+</span> <span class="n">mediaBox</span><span class="o">.</span><span class="na">getWidth</span><span class="o">()</span> <span class="o">);</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>PD Model objects sit on top of COS model. Typically, the classes in the PD Model will only
 store a COS object and all setter/getter methods will modify data that is stored in the
