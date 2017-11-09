@@ -212,6 +212,8 @@ Usage: ``java -jar pdfbox-app-2.y.z.jar PrintPDF [OPTIONS] <inputfile>``
 | -silentPrint | | Print the PDF without prompting for a printer. |
 | -printerName ``<name>`` | | Print to specified printer. |
 | -orientation [auto &#124; portrait &#124; landscape] | auto | Print using orientation. |
+| -border | | Print with border. |
+| -dpi | | Render into intermediate image with specific dpi and then print. |
 | inputfile | | The PDF file to print. |
 
 ## TextToPDF ##
