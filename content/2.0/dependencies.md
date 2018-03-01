@@ -68,8 +68,7 @@ PDFBox does not ship with all features enabled. Third party components are neces
 
 PDF supports embedded image files, however support for some formats require third party libraries which are distributed under terms incompatible with the Apache 2.0 license:
 
-- Reading **JBIG2** images: [JBIG2 ImageIO](https://github.com/levigo/jbig2-imageio) or [JBIG2-Image-Decoder
-](https://github.com/Borisvl/JBIG2-Image-Decoder)
+- Reading **JBIG2** images: [JBIG2 ImageIO](https://pdfbox.apache.org/download.cgi#JBIG2)
 - Reading **JPEG 2000 (JPX)** images: [JAI Image I/O Tools Core](https://java.net/projects/jai-imageio-core)
 - Writing **TIFF** images requires *JAI Image I/O Tools Core* also.
 
@@ -77,8 +76,16 @@ These libraries are optional and will be loaded if present on the classpath, oth
 
 Maven dependencies for these components can be found in [parent/pom.xml](https://svn.apache.org/viewvc/pdfbox/trunk/parent/pom.xml?view=markup). Please make sure that any third party licenses are suitable for your project.
 
-**Note for JBIG2-Image-Decoder**
-There is a know issue when using the JBIG2-Image-Decoder as an ImageIO Plugin. To resolve that see [PDFBOX-3769](https://issues.apache.org/jira/browse/PDFBOX-3769) or [JBIG2-Image-Decoder issue](https://github.com/Borisvl/JBIG2-Image-Decoder/issues/4).
+To include the JBIG2 library  the following part can be included in your project pom.xml:
+
+```xml
+<dependency>
+    <groupId>org.apache.pdfbox</groupId>
+    <artifactId>jbig2-imageio</artifactId>
+    <version>3.0.0</version>
+    <scope>test</scope>
+</dependency>
+```
 
 ### Encryption and Signing
 
