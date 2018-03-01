@@ -209,7 +209,7 @@ included in the Java platform.</p>
 
 <p>These libraries are optional and will be loaded if present on the classpath, otherwise support for these image formats will be disabled and a warning will be logged when an unsupported image is encountered.</p>
 
-<p>Maven dependencies for these components can be found in <a href="https://svn.apache.org/viewvc/pdfbox/trunk/parent/pom.xml?view=markup">parent/pom.xml</a>. Please make sure that any third party licenses are suitable for your project.</p>
+<p>Maven dependencies for these components can be found in <a href="https://svn.apache.org/viewvc/pdfbox/trunk/parent/pom.xml?view=markup">parent/pom.xml</a>. <strong>Change the scope of the components if needed</strong>. Please make sure that any third party licenses are suitable for your project.</p>
 
 <p>To include the JBIG2 library  the following part can be included in your project pom.xml:</p>
 
@@ -217,7 +217,6 @@ included in the Java platform.</p>
     <span class="nt">&lt;groupId&gt;</span>org.apache.pdfbox<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>jbig2-imageio<span class="nt">&lt;/artifactId&gt;</span>
     <span class="nt">&lt;version&gt;</span>3.0.0<span class="nt">&lt;/version&gt;</span>
-    <span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
 </code></pre></div></div>
 
