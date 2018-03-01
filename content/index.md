@@ -29,7 +29,7 @@ title:   A Java PDF Library
     Apache PDFBox is published under the Apache License v2.0.</p>
 
 {% for post in site.categories.news limit:1 %}
-<h2>{{ post.title }} ({{ post.date  | date: "%Y-%m-%d"}})</h2>
+<h2>{{ post.title }}<br><small>{{ post.date  | date: "%Y-%m-%d"}}</small></h2>
 {{ post.content }}
 {% endfor %}
 
@@ -84,6 +84,6 @@ skills. Subscribe to the [Mailing Lists](/mailinglists.html) and find out how yo
 
 ## News
 {% for post in site.categories.news offset:1 limit:5 %}
-<h3>{{ post.title }} ({{ post.date  | date: "%Y-%m-%d"}}) </h3>
+<h3>{{ post.title }}<br><small>{{ post.date  | date: "%Y-%m-%d"}}</small></h3>
 {{ post.content }}
 {% endfor %}
