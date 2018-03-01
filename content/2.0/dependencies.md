@@ -74,7 +74,7 @@ PDF supports embedded image files, however support for some formats require thir
 
 These libraries are optional and will be loaded if present on the classpath, otherwise support for these image formats will be disabled and a warning will be logged when an unsupported image is encountered.
 
-Maven dependencies for these components can be found in [parent/pom.xml](https://svn.apache.org/viewvc/pdfbox/trunk/parent/pom.xml?view=markup). Please make sure that any third party licenses are suitable for your project.
+Maven dependencies for these components can be found in [parent/pom.xml](https://svn.apache.org/viewvc/pdfbox/trunk/parent/pom.xml?view=markup). **Change the scope of the components if needed**. Please make sure that any third party licenses are suitable for your project.
 
 To include the JBIG2 library  the following part can be included in your project pom.xml:
 
@@ -83,7 +83,6 @@ To include the JBIG2 library  the following part can be included in your project
     <groupId>org.apache.pdfbox</groupId>
     <artifactId>jbig2-imageio</artifactId>
     <version>3.0.0</version>
-    <scope>test</scope>
 </dependency>
 ```
 
