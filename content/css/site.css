@@ -22,16 +22,17 @@
  */
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, "Oxygen", "Ubuntu", "Cantarell", "Open Sans", Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     letter-spacing: 0;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -moz-font-feature-settings: "liga" on;
     font-size: 16px;
-    line-height: 1.4;
+    line-height: 1.5;
+    color: rgba(0,0,0,0.8);
 }
 
 body > .container {
@@ -82,8 +83,9 @@ svg.pdfbox-brand-text, svg.pdfbox-brand-toolbox {
 
 /* headings */
 h1, h2, h3, h4, h5 {
-    font-family: "OpenSans", "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
-    font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  color: rgba(0,0,0,0.8);
 }
 
 h1 {
@@ -110,6 +112,12 @@ h4 .open-iconic {
     fill: #0088cc;
 }
 
+code, kbd, pre, samp {
+    font-family: 'Inconsolata',monospace;
+    font-size: 16px;
+    line-height: 1.2
+}
+
 pre.highlight, .highlight > pre {
   background-color: inherit;
     color: darkslategrey;
@@ -122,7 +130,7 @@ pre.highlight, .highlight > pre {
 code {
   padding: 0;
   background-color: inherit;
-  color: #7e7e81;
+  color: rgba(0,0,0);
 }
 
 /*
