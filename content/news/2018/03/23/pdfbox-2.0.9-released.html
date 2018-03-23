@@ -26,7 +26,7 @@
     <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command-line utilities. Apache PDFBox is published under the Apache License v2.0.
 ">
 
-    <title>Apache PDFBox | Cookbook - Fill a Form Field</title>
+    <title>Apache PDFBox | Apache PDFBox 2.0.9 released</title>
 
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/pygments-github.css" rel="stylesheet">
@@ -151,62 +151,12 @@
 		<a href="https://www.apache.org/foundation/contributing.html"><img width="135" src="/images/SupportApache.jpg"></a>
             </div>
             <div class="col-xs-12 col-sm-9">
-                <h1 id="fill-a-form-field">Fill a Form Field</h1>
+                <p>The Apache PDFBox community is pleased to announce the release of
+Apache PDFBox version 2.0.9. It is available for download at:</p>
 
-<p>Form fields within a PDF are defined as part of the AcroForm entry within the PDF’s document catalog.
-Form there individual fields can be accessed. Fields might be organized in a tree structure so it might
-be neccessary to walk through the tree to get an individual field.</p>
+<p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
 
-<p>Load the PDF document.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>:::java
-// load the document
-PDDocument pdfDocument = PDDocument.loadNonSeq(new File(... ), null);
-</code></pre>
-</div>
-
-<p>Get the docoument catalog and the AcroForm which might be contained within.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>:::java
-// get the document catalog
-PDDocumentCatalog docCatalog = pdfDocument.getDocumentCatalog();
-PDAcroForm acroForm = docCatalog.getAcroForm();
-</code></pre>
-</div>
-
-<p>Retrieve an individual field and set its value.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>:::java
-// as there might not be an AcroForm entry a null check is necessary
-if (acroForm != null)
-{
-    PDField field = (PDField) acroForm.getField( "fieldName" );
-    field.setValue("new field value");
-}
-</code></pre>
-</div>
-
-<p>If a field is nested within the form tree a fully qualified name might be provided
-to access the field.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>:::java
-// as there might not be an AcroForm entry a null check is neccessary
-if (acroForm != null)
-{
-    PDField field = (PDField) acroForm.getField( "fieldsParentName.fieldName" );
-    field.setValue("new field value");
-}
-</code></pre>
-</div>
-
-<p>Save and close the filled out form.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>:::java
-doc.save(filledForm);
-doc.close();
-</code></pre>
-</div>
-
+<p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12342085">full release notes</a> for details about this release.</p>
 
             </div>
         </div>
