@@ -19,46 +19,11 @@
      limitations under the License.
      -->
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{site.description}}">
-
-    <title>Apache PDFBox | {% if page.title %}{{ page.title }}{% endif %}</title>
-
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/pygments-github.css" rel="stylesheet">
-    <link href="/css/site.css" rel="stylesheet">
-
-    {% if headers.atom %}
-        <link rel="alternate" href="{{ headers.atom.url }}" type="application/atom+xml" title="{{ headers.atom.title }}" />
-    {% endif %}
-
-    {% if headers.base %}
-        <base href="{{ headers.base }}" />
-    {% endif %}
-
-    {% if headers.notice %}
-        <!-- {{ headers.notice }} -->
-    {% endif %}
-
-</head>
+{% include head.html %}
 
 <body>
-    <nav class="navbar navbar-default navbar-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="/">
-            {% include images/pdfbox-toolbox.svg %}
-            {% include images/pdfbox-text.svg %}
-          </a>
-          <p class="pull-right visible-xs">
-            <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Menu</button>
-          </p>
-        </div>
-      </div>
-    </nav>
+
+  {% include header.html %}
 
     <div class="container">
 
@@ -145,58 +110,10 @@
         </div>
     </div>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="span3">
-                    <!-- nothing in here on purpose -->
-                </div>
-                <div class="span9">
-                    <p>Copyright © 2009&ndash;{{ site.time | date: '%Y' }} <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
-                        <br/>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    {% include footer.html %}
 
-        <!-- Twitter Bootstrap and jQuery after this line. -->
-    <script src="//code.jquery.com/jquery-latest.min.js"></script>
-    <script src="/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
+    {% include footer_scripts.html %}
 
-        $(document).ready(function () {
-                $('[data-toggle="offcanvas"]').click(function () {
-                $('.row-offcanvas').toggleClass('active')
-            });
-        });
-
-        $(function() {
-            // collapse tree nodes dynamically to support noscript
-            $('.sidebar-node').addClass('collapsed');
-
-
-            // toggle expand/collapse
-            $('.sidebar-node > a').click(function(e) {
-                $(this).parent().toggleClass('collapsed');
-                e.preventDefault();
-            });
-
-            // preserve expand/collapse across page navigation
-            var path = document.location.pathname;
-            if (path.indexOf('/1.8') == 0) {
-                $('#v1-8').removeClass('collapsed');
-                if (path.indexOf('/1.8/cookbook') == 0) {
-                    $('#v1-8-cookbook').removeClass('collapsed');
-                }
-            } else {
-                $('#v2-0').removeClass('collapsed');
-                if (path.indexOf('/2.0/cookbook') == 0) {
-                    $('#v2-0-cookbook').removeClass('collapsed');
-                }
-            }
-
-        });
-    </script>
 
 </body>
 

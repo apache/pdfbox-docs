@@ -1,0 +1,25 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{site.description}}">
+
+    <title>Apache PDFBox | {% if page.title %}{{ page.title }}{% endif %}</title>
+
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/pygments-github.css" rel="stylesheet">
+    <link href="/css/site.css" rel="stylesheet">
+
+    {% if headers.atom %}
+        <link rel="alternate" href="{{ headers.atom.url }}" type="application/atom+xml" title="{{ headers.atom.title }}" />
+    {% endif %}
+
+    {% if headers.base %}
+        <base href="{{ headers.base }}" />
+    {% endif %}
+
+    {% if headers.notice %}
+        <!-- {{ headers.notice }} -->
+    {% endif %}
+
+</head>

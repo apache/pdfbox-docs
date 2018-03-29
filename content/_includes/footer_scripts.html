@@ -1,0 +1,38 @@
+<!-- Twitter Bootstrap and jQuery after this line. -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+            $('[data-toggle="offcanvas"]').click(function () {
+            $('.row-offcanvas').toggleClass('active')
+        });
+    });
+
+    $(function() {
+        // collapse tree nodes dynamically to support noscript
+        $('.sidebar-node').addClass('collapsed');
+
+
+        // toggle expand/collapse
+        $('.sidebar-node > a').click(function(e) {
+            $(this).parent().toggleClass('collapsed');
+            e.preventDefault();
+        });
+
+        // preserve expand/collapse across page navigation
+        var path = document.location.pathname;
+        if (path.indexOf('/1.8') == 0) {
+            $('#v1-8').removeClass('collapsed');
+            if (path.indexOf('/1.8/cookbook') == 0) {
+                $('#v1-8-cookbook').removeClass('collapsed');
+            }
+        } else {
+            $('#v2-0').removeClass('collapsed');
+            if (path.indexOf('/2.0/cookbook') == 0) {
+                $('#v2-0-cookbook').removeClass('collapsed');
+            }
+        }
+
+    });
+</script>
