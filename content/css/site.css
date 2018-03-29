@@ -22,10 +22,11 @@
  */
 
  /* 01 Import Fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
 @import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: rgb(0,0,0);
@@ -34,6 +35,40 @@ body {
 body > .container {
   padding-top: 20px;
 }
+
+.main-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+  background-color: #34a5da;
+  border: none;
+  border-radius: 0;
+}
+
+.main-header nav {
+   align-self: center;
+   margin: 0 0.8em 0 0;
+}
+
+.main-header ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 50%;
+}
+
+.main-header li > a  {
+  color: white;
+  font-weight: 600;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+#menu-toggle {display: none;}
+.label-toggle {display: none;}
+
+
 
 .navbar-default {
   background-color: #34a5da;
