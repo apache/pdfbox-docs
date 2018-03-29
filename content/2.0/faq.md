@@ -16,40 +16,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          specific language governing permissions and limitations
          under the License.
 
-layout:  default
+layout:  documentation
 title:   Frequently Asked Questions (FAQ)
 ---
 
 # Frequently Asked Questions
-
-### General Questions
-
- - [I am getting the below Log4J warning message, how do I remove it?](#log4j)
- - [Is PDFBox thread safe?](#threadsafe)
- - [Why do I get a "Warning: You did not close the PDF Document"?](#notclosed)
-
-### Font Handling
-
- - [I'm getting java.lang.IllegalArgumentException: ... is not available in this font's encoding: WinAnsiEncoding](#fontencoding)
-
-### PDF Creation
-
- - [I'm creating a PDF but my page is empty. Why?](#emptypage)
-
-### Text Extraction
-
- - [Why does the extracted text appear in the wrong sequence?](#textorder)
- - [How come I am not getting any text from the PDF document?](#notext)
- - [How come I am getting gibberish(G38G43G36G51G5) when extracting text?](#gibberish)
- - [What does "java.io.IOException: Can't handle font width" mean?](#fontwidth)
- - [Why do I get "You do not have permission to extract text" on some documents?](#permission)
- - [Can't we just extract the text without parsing the whole document or extract text as it is parsed?](#partially)
-
-### PDF Rendering
-
- - [I'm getting an OutOfMemoryError. What can I do?](#outofmemoryerror)
- - [A drop shadow is missing or at the wrong position when rendering a page](#dropshadow)
- - [Why are some texts in poor quality and not antialiased?](#textantialias)
 
 ## General Questions
 

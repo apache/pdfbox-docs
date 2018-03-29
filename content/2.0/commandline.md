@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          specific language governing permissions and limitations
          under the License.
 
-layout:  default
+layout:  documentation
 title:   Command-Line Tools
 ---
 
@@ -26,20 +26,6 @@ PDFBox comes with a series of command-line utilities. They are available as stan
 
 See the [Dependencies](/2.0/dependencies.html) page for instructions on how to set your classpath in order to run
 PDFBox tools as Java applications.
-
-**Table of Contents**
- - [Decrypt](#decrypt)
- - [Encrypt](#encrypt)
- - [ExtractImages](#extractimages)
- - [ExtractText](#extracttext)
- - [OverlayPDF](#overlaypdf)
- - [PDFDebugger](#pdfdebugger)
- - [PDFMerger](#pdfmerger)
- - [PDFSplit](#pdfsplit)
- - [PDFToImage](#pdftoimage)
- - [PrintPDF](#printpdf)
- - [TextToPDF](#texttopdf)
- - [WriteDecodedDoc](#writedecodeddoc)
 
 ## Decrypt ##
 
