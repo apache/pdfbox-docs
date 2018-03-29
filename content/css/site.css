@@ -332,6 +332,10 @@ table tr:nth-child(even) td, table tr.even td {
     margin: 2rem 0;
 }
 
+.documentation code {
+  color: black;
+}
+
 
 /*
  * Off Canvas
