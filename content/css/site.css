@@ -152,10 +152,12 @@ code, kbd, pre, samp {
 pre.highlight, .highlight > pre {
   background-color: inherit;
     color: darkslategrey;
-    padding-left: 2rem;
     border: 0;
     border-radius: 0;
-    border-left: 2px solid #0088cc;
+    border-left: 2px solid #5a5c5d;
+    padding-left: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 code {
@@ -298,7 +300,7 @@ table tr:nth-child(even) td, table tr.even td {
 
 .documentation aside {
   min-width: 22rem;
-  max-width: 22rem;  
+  max-width: 22rem;
   padding-left: 2rem;
 }
 
@@ -323,6 +325,11 @@ table tr:nth-child(even) td, table tr.even td {
   border-radius: 2px;
   padding: 4px 5px 4px 23px;
   display: block;
+}
+
+.documentation div.highlight {
+    background: #f8f8f8;
+    margin: 2rem 0;
 }
 
 
