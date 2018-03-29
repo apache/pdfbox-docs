@@ -77,128 +77,28 @@
 </header>
 
 
-    <div class="container">
+  <div class="container documentation">
+    <nav>
+      <h1>Documentation</h1>
+      <ul>
+        <li><a href="/2.0/migration.html">Migration Guide</a></li>
+        <li><a href="/2.0/getting-started.html">Getting Started</a></li>
+        <li><a href="/2.0/examples.html">Examples</a></li>
+        <li><a href="/2.0/dependencies.html">Dependencies</a></li>
+        <li class="sidebar-node" id="v2-0-cookbook">
+            <a href="#">Cookbook</a>
+            <ul>
+                <li><a href="/2.0/cookbook/encryption.html">Document Encryption</a></li>
+            </ul>
+        </li>
+        <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
+        <li><a href="/2.0/faq.html">FAQ</a></li>
+        <li><a href="/docs/2.0.8/javadocs/">API Docs</a></li>
+    </nav>
+    <section>
+      <h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
 
-        <div class="row row-offcanvas row-offcanvas-left">
-            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-
-                <ul class="sidebar">
-                    <li class="sidebar-header">Apache PDFBox</li>
-                    <li><a href="/index.html">Overview</a></li>
-                    <li><a href="https://www.apache.org/licenses">License</a></li>
-                    <li><a href="/download.cgi">Downloads</a></li>
-
-                    <li class="sidebar-header">Community</li>
-                    <li><a href="/support.html">Support</a></li>
-                    <li><a href="/mailinglists.html">Mailing Lists</a></li>
-                    <li><a href="https://issues.apache.org/jira/browse/PDFBOX">Issue Tracker</a></li>
-                    <li><a href="/team.html">Project Team</a></li>
-
-                    <li class="sidebar-header">Documentation</li>
-                    <li class="sidebar-node" id="v2-0">
-                        <a href="#">2.0</a>
-                        <ul>
-                            <li><a href="/2.0/migration.html">Migration Guide</a></li>
-                            <li><a href="/2.0/getting-started.html">Getting Started</a></li>
-                            <li><a href="/2.0/examples.html">Examples</a></li>
-                            <li><a href="/2.0/dependencies.html">Dependencies</a></li>
-                            <li class="sidebar-node" id="v2-0-cookbook">
-                                <a href="#">Cookbook</a>
-                                <ul>
-                                    <li><a href="/2.0/cookbook/encryption.html">Document Encryption</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
-                            <li><a href="/2.0/faq.html">FAQ</a></li>
-                            <li><a href="/docs/2.0.8/javadocs/">API Docs</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-node" id="v1-8">
-                        <a href="#">1.8</a>
-                        <ul>
-                            <li><a href="/1.8/architecture.html">Architecture</a></li>
-                            <li><a href="/1.8/dependencies.html">Dependencies</a></li>
-                            <li class="sidebar-node" id="v1-8-cookbook">
-                                <a href="#">Cookbook</a>
-                                <ul>
-                                    <li><a href="/1.8/cookbook/documentcreation.html">Document Creation</a></li>
-                                    <li><a href="/1.8/cookbook/textextraction.html">Text Extraction</a></li>
-                                    <li><a href="/1.8/cookbook/encryption.html">Document Encryption</a></li>
-                                    <li><a href="/1.8/cookbook/workingwithfonts.html">Working with Fonts</a></li>
-                                    <li><a href="/1.8/cookbook/workingwithmetadata.html">Working with Metadata</a></li>
-                                    <li><a href="/1.8/cookbook/workingwithattachments.html">Working with Attachments</a></li>
-                                    <li><a href="/1.8/cookbook/pdfavalidation.html">PDF/A Validation</a></li>
-                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A Document</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="/1.8/commandline.html">Command-Line Tools</a></li>
-                            <li><a href="/docs/1.8.13/javadocs/">API Docs</a></li>
-                            <li><a href="/1.8/faq.html">FAQ</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="sidebar-header">Development</li>
-                    <li><a href="/building.html">Building from Source</a></li>
-                    <li><a href="/codingconventions.html">Coding Conventions</a></li>
-                    <li><a href="/siteupdate.html">Update the Website</a></li>
-                    <li><a href="https://builds.apache.org/view/All/job/PDFBox-trunk/">Jenkins</a></li>
-                    <li><a href="https://travis-ci.org/apache/pdfbox">Travis CI</a></li>
-                    <li><a href="https://builds.apache.org/analysis/overview?id=org.apache.pdfbox%3Apdfbox-reactor">SonarQube</a></li>
-                    <li><a href="https://issues.apache.org/jira/browse/PDFBOX">JIRA</a></li>
-                    <li><a href="/ideas.html">Ideas</a></li>
-                    <li><a href="/references.html">External Links</a></li>
-
-                    <li class="sidebar-header">Apache Software Foundation</li>
-                    <li><a href="https://www.apache.org/">Apache Software Foundation</a></li>
-                    <li><a href="https://www.apache.org/foundation/thanks.html">ASF Sponsors</a></li>
-                    <li><a href="https://www.apache.org/security/">Security</a></li>
-                </ul>
-		<!-- dontation page logo/link-->
-		<a href="https://www.apache.org/foundation/contributing.html"><img width="135" src="/images/SupportApache.jpg"></a>
-            </div>
-            <div class="col-xs-12 col-sm-9">
-                <h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
-
-<h3 id="general-questions">General Questions</h3>
-
-<ul>
-  <li><a href="#log4j">I am getting the below Log4J warning message, how do I remove it?</a></li>
-  <li><a href="#threadsafe">Is PDFBox thread safe?</a></li>
-  <li><a href="#notclosed">Why do I get a “Warning: You did not close the PDF Document”?</a></li>
-</ul>
-
-<h3 id="font-handling">Font Handling</h3>
-
-<ul>
-  <li><a href="#fontencoding">I’m getting java.lang.IllegalArgumentException: … is not available in this font’s encoding: WinAnsiEncoding</a></li>
-</ul>
-
-<h3 id="pdf-creation">PDF Creation</h3>
-
-<ul>
-  <li><a href="#emptypage">I’m creating a PDF but my page is empty. Why?</a></li>
-</ul>
-
-<h3 id="text-extraction">Text Extraction</h3>
-
-<ul>
-  <li><a href="#textorder">Why does the extracted text appear in the wrong sequence?</a></li>
-  <li><a href="#notext">How come I am not getting any text from the PDF document?</a></li>
-  <li><a href="#gibberish">How come I am getting gibberish(G38G43G36G51G5) when extracting text?</a></li>
-  <li><a href="#fontwidth">What does “java.io.IOException: Can’t handle font width” mean?</a></li>
-  <li><a href="#permission">Why do I get “You do not have permission to extract text” on some documents?</a></li>
-  <li><a href="#partially">Can’t we just extract the text without parsing the whole document or extract text as it is parsed?</a></li>
-</ul>
-
-<h3 id="pdf-rendering">PDF Rendering</h3>
-
-<ul>
-  <li><a href="#outofmemoryerror">I’m getting an OutOfMemoryError. What can I do?</a></li>
-  <li><a href="#dropshadow">A drop shadow is missing or at the wrong position when rendering a page</a></li>
-  <li><a href="#textantialias">Why are some texts in poor quality and not antialiased?</a></li>
-</ul>
-
-<h2 id="general-questions-1">General Questions</h2>
+<h2 id="general-questions">General Questions</h2>
 
 <p><a name="log4j"></a></p>
 
@@ -253,7 +153,7 @@ PDDocument objects; one from the “new PDDocument()” and the second by the lo
 <span class="o">}</span>
 </code></pre></div></div>
 
-<h2 id="font-handling-1">Font Handling</h2>
+<h2 id="font-handling">Font Handling</h2>
 
 <p><a name="fontencoding"></a></p>
 
@@ -263,7 +163,7 @@ PDDocument objects; one from the “new PDDocument()” and the second by the lo
 If not, but if it is available in this font (in windows, have a look with charmap.exe), then load the font with
 PDType0Font.load(), see also in the EmbeddedFonts.java example in the source code download.</p>
 
-<h2 id="pdf-creation-1">PDF Creation</h2>
+<h2 id="pdf-creation">PDF Creation</h2>
 
 <p><a name="emptypage"></a></p>
 
@@ -271,7 +171,7 @@ PDType0Font.load(), see also in the EmbeddedFonts.java example in the source cod
 
 <p>Make sure that you closed your content stream before saving.</p>
 
-<h2 id="text-extraction-1">Text Extraction</h2>
+<h2 id="text-extraction">Text Extraction</h2>
 
 <p><a name="textorder"></a></p>
 
@@ -339,7 +239,7 @@ the pdf could have been written such that “World” gets drawn and then the cu
 the word “Hello” is drawn.</li>
 </ul>
 
-<h2 id="pdf-rendering-1">PDF rendering</h2>
+<h2 id="pdf-rendering">PDF rendering</h2>
 
 <p><a name="outofmemoryerror"></a></p>
 
@@ -372,11 +272,50 @@ rendered directly, but as a shaped clipping from a background. Java graphics doe
 Soft clipping could be achieved with some extra steps <a href="https://community.oracle.com/blogs/campbell/2006/07/19/java-2d-trickery-soft-clipping">https://community.oracle.com/blogs/campbell/2006/07/19/java-2d-trickery-soft-clipping</a>,
 but these would cost additional time and memory space. You can have a higher quality by rendering at a higher dpi and then downscale the image.</p>
 
-            </div>
-        </div>
-    </div>
+    </section>
+    <aside>
+      <h1>Table of Contents</h1>
+      <ul>
+  <li><a href="#general-questions">General Questions</a>
+    <ul>
+      <li><a href="#i-am-getting-the-below-log4j-warning-message-how-do-i-remove-it">I am getting the below Log4J warning message, how do I remove it?</a></li>
+      <li><a href="#is-pdfbox-thread-safe">Is PDFBox thread safe?</a></li>
+      <li><a href="#why-do-i-get-a-warning-you-did-not-close-the-pdf-document">Why do I get a “Warning: You did not close the PDF Document”?</a></li>
+    </ul>
+  </li>
+  <li><a href="#font-handling">Font Handling</a>
+    <ul>
+      <li><a href="#im-getting-javalangillegalargumentexception--is-not-available-in-this-fonts-encoding-winansiencoding">I’m getting java.lang.IllegalArgumentException: … is not available in this font’s encoding: WinAnsiEncoding</a></li>
+    </ul>
+  </li>
+  <li><a href="#pdf-creation">PDF Creation</a>
+    <ul>
+      <li><a href="#im-creating-a-pdf-but-my-page-is-empty-why">I’m creating a PDF but my page is empty. Why?</a></li>
+    </ul>
+  </li>
+  <li><a href="#text-extraction">Text Extraction</a>
+    <ul>
+      <li><a href="#why-does-the-extracted-text-appear-in-the-wrong-sequence">Why does the extracted text appear in the wrong sequence?</a></li>
+      <li><a href="#how-come-i-am-not-getting-any-text-from-the-pdf-document">How come I am not getting any text from the PDF document?</a></li>
+      <li><a href="#how-come-i-am-getting-gibberishg38g43g36g51g5-when-extracting-text">How come I am getting gibberish(G38G43G36G51G5) when extracting text?</a></li>
+      <li><a href="#what-does-javaioioexception-cant-handle-font-width-mean">What does “java.io.IOException: Can’t handle font width” mean?</a></li>
+      <li><a href="#why-do-i-get-you-do-not-have-permission-to-extract-text-on-some-documents">Why do I get “You do not have permission to extract text” on some documents?</a></li>
+      <li><a href="#cant-we-just-extract-the-text-without-parsing-the-whole-document-or-extract-text-as-it-is-parsed">Can’t we just extract the text without parsing the whole document or extract text as it is parsed?</a></li>
+    </ul>
+  </li>
+  <li><a href="#pdf-rendering">PDF rendering</a>
+    <ul>
+      <li><a href="#im-getting-an-outofmemoryerror-what-can-i-do">I’m getting an OutOfMemoryError. What can I do?</a></li>
+      <li><a href="#a-drop-shadow-is-missing-or-at-the-wrong-position-when-rendering-a-page">A drop shadow is missing or at the wrong position when rendering a page</a></li>
+      <li><a href="#why-are-some-texts-in-poor-quality-and-not-antialiased">Why are some texts in poor quality and not antialiased?</a></li>
+    </ul>
+  </li>
+</ul>
 
-    <footer class="footer">
+    </aside>
+  </div>
+
+  <footer class="footer">
     <div class="container">
         <div class="row">
             <div class="span3">
@@ -390,8 +329,7 @@ but these would cost additional time and memory space. You can have a higher qua
     </div>
 </footer>
 
-
-    <!-- Twitter Bootstrap and jQuery after this line. -->
+  <!-- Twitter Bootstrap and jQuery after this line. -->
 <script src="//code.jquery.com/jquery-latest.min.js"></script>
 <script src="/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript">
@@ -429,7 +367,6 @@ but these would cost additional time and memory space. You can have a higher qua
 
     });
 </script>
-
 
 
 </body>

@@ -33,7 +33,7 @@ body {
 }
 
 body > .container {
-  padding-top: 20px;
+  padding-top: 5rem;
 }
 
 .main-header {
@@ -168,9 +168,7 @@ code {
  * Default styling for the tables copied over from bootstrap
  * to get basic styling for tables created through markdown
  */
-table {
-    width: 100%;
-}
+
 
 table th, table td {
     padding: 8px;
@@ -247,6 +245,84 @@ table tr:nth-child(even) td, table tr.even td {
 
 .sidebar-node.collapsed > a::before {
   content: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#0088cc' d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z' transform='translate(1)' /%3E%3C/svg%3E");
+}
+
+.documentation {
+  display: flex;
+}
+
+.documentation section h1, .documentation section h2,
+.documentation section h3, .documentation section h4,
+.documentation section ul,
+.documentation section p {
+  padding-left: 3rem;
+  padding-right: 1rem;
+}
+
+.documentation section table {
+  margin-left: 3rem;
+  margin-right: 1rem;
+}
+
+.documentation section ul {
+  padding-left: 5rem;
+}
+
+.documentation nav {
+  min-width: 25rem;
+  box-shadow: 1px 0 0 rgba(81,88,90,0.17);
+}
+
+.documentation nav h1 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.documentation nav ul {
+  list-style: none;
+}
+
+.documentation nav > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.documentation nav li a {
+  padding: .20em 15px;
+}
+
+.documentation nav li a:hover, .documentation nav li a:focus {
+  background-color: #eee;
+  text-decoration: none;
+}
+
+.documentation aside {
+  min-width: 22rem;
+  max-width: 22rem;  
+  padding-left: 2rem;
+}
+
+.documentation aside h1 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.documentation aside ul {
+  list-style: none;
+  padding: 0 1rem;
+}
+
+.documentation aside > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.documentation aside a {
+  font-size: 13px;
+  text-decoration: none;
+  border-radius: 2px;
+  padding: 4px 5px 4px 23px;
+  display: block;
 }
 
 
