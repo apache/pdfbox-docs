@@ -26,22 +26,29 @@
   {% include header.html %}
 
   <div class="container documentation">
-    <nav>
+    <nav class="accordion-menu">
       <h1>Documentation</h1>
+
       <ul>
         <li><a href="/2.0/migration.html">Migration Guide</a></li>
         <li><a href="/2.0/getting-started.html">Getting Started</a></li>
         <li><a href="/2.0/examples.html">Examples</a></li>
         <li><a href="/2.0/dependencies.html">Dependencies</a></li>
-        <li class="sidebar-node" id="v2-0-cookbook">
-            <a href="#">Cookbook</a>
-            <ul>
-                <li><a href="/2.0/cookbook/encryption.html">Document Encryption</a></li>
-            </ul>
+
+        <li class="has-children">
+          <input type="checkbox" checked>
+          <i></i>
+          <label>Cookbook</label>
+          <ul>
+            <li><a href="/2.0/cookbook/encryption.html">Document Encryption</a></li>
+          </ul>
+
         </li>
+
         <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
         <li><a href="/2.0/faq.html">FAQ</a></li>
         <li><a href="/docs/2.0.8/javadocs/">API Docs</a></li>
+      </ul>
     </nav>
     <section>
       {{ content }}
@@ -53,7 +60,6 @@
   </div>
 
   {% include footer.html %}
-  {% include footer_scripts.html %}
 
 </body>
 
