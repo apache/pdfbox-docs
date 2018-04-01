@@ -412,7 +412,6 @@ table tr:nth-child(even) td, table tr.even td {
   cursor: pointer;
   width: 100%;
   height: 100%;
-  z-index: 1;
   opacity: 0;
 }
 .accordion-menu ul li input[type=checkbox]:checked ~ ul  {
