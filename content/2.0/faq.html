@@ -78,22 +78,29 @@
 
 
   <div class="container documentation">
-    <nav>
+    <nav class="accordion-menu">
       <h1>Documentation</h1>
+
       <ul>
         <li><a href="/2.0/migration.html">Migration Guide</a></li>
         <li><a href="/2.0/getting-started.html">Getting Started</a></li>
         <li><a href="/2.0/examples.html">Examples</a></li>
         <li><a href="/2.0/dependencies.html">Dependencies</a></li>
-        <li class="sidebar-node" id="v2-0-cookbook">
-            <a href="#">Cookbook</a>
-            <ul>
-                <li><a href="/2.0/cookbook/encryption.html">Document Encryption</a></li>
-            </ul>
+
+        <li class="has-children">
+          <input type="checkbox" checked>
+          <i></i>
+          <label>Cookbook</label>
+          <ul>
+            <li><a href="/2.0/cookbook/encryption.html">Document Encryption</a></li>
+          </ul>
+
         </li>
+
         <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
         <li><a href="/2.0/faq.html">FAQ</a></li>
         <li><a href="/docs/2.0.8/javadocs/">API Docs</a></li>
+      </ul>
     </nav>
     <section>
       <h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
@@ -328,45 +335,6 @@ but these would cost additional time and memory space. You can have a higher qua
         </div>
     </div>
 </footer>
-
-  <!-- Twitter Bootstrap and jQuery after this line. -->
-<script src="//code.jquery.com/jquery-latest.min.js"></script>
-<script src="/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-
-    $(document).ready(function () {
-            $('[data-toggle="offcanvas"]').click(function () {
-            $('.row-offcanvas').toggleClass('active')
-        });
-    });
-
-    $(function() {
-        // collapse tree nodes dynamically to support noscript
-        $('.sidebar-node').addClass('collapsed');
-
-
-        // toggle expand/collapse
-        $('.sidebar-node > a').click(function(e) {
-            $(this).parent().toggleClass('collapsed');
-            e.preventDefault();
-        });
-
-        // preserve expand/collapse across page navigation
-        var path = document.location.pathname;
-        if (path.indexOf('/1.8') == 0) {
-            $('#v1-8').removeClass('collapsed');
-            if (path.indexOf('/1.8/cookbook') == 0) {
-                $('#v1-8-cookbook').removeClass('collapsed');
-            }
-        } else {
-            $('#v2-0').removeClass('collapsed');
-            if (path.indexOf('/2.0/cookbook') == 0) {
-                $('#v2-0-cookbook').removeClass('collapsed');
-            }
-        }
-
-    });
-</script>
 
 
 </body>
