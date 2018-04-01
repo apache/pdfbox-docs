@@ -1,73 +1,54 @@
 @import url(/css/site.css);
 .documentation {
   display: flex; }
-
-.documentation section h1, .documentation section h2,
-.documentation section h3, .documentation section h4,
-.documentation section ul,
-.documentation section p {
-  padding-left: 3rem;
-  padding-right: 1rem; }
-
-.documentation section table {
-  margin-left: 3rem;
-  margin-right: 1rem; }
-
-.documentation section ul {
-  padding-left: 5rem; }
-
-.documentation nav {
-  min-width: 25rem;
-  box-shadow: 1px 0 0 rgba(81, 88, 90, 0.17); }
-
-.documentation nav h1 {
-  font-size: 1.2rem;
-  text-transform: uppercase; }
-
-.documentation nav ul {
-  list-style: none; }
-
-.documentation nav > ul {
-  list-style: none;
-  padding: 0; }
-
-.documentation nav li a {
-  padding: 0.2em 15px; }
-
-.documentation nav li a:hover, .documentation nav li a:focus {
-  background-color: #eee;
-  text-decoration: none; }
-
-.documentation aside {
-  min-width: 22rem;
-  max-width: 22rem;
-  padding-left: 2rem; }
-
-.documentation aside h1 {
-  font-size: 1.2rem;
-  text-transform: uppercase; }
-
-.documentation aside ul {
-  list-style: none;
-  padding: 0 1rem; }
-
-.documentation aside > ul {
-  list-style: none;
-  padding: 0; }
-
-.documentation aside a {
-  font-size: 13px;
-  text-decoration: none;
-  border-radius: 2px;
-  padding: 4px 5px 4px 23px;
-  display: block; }
-
-.documentation div.highlight {
-  background: #f8f8f8;
-  margin: 2rem 0; }
-
-.documentation code {
-  color: black; }
+  .documentation section h1, .documentation section h2, .documentation section h3, .documentation section h4, .documentation section ul, .documentation section p {
+    padding-left: 3rem;
+    padding-right: 1rem; }
+  .documentation section table {
+    margin-left: 3rem;
+    margin-right: 1rem; }
+  .documentation section ul {
+    padding-left: 5rem; }
+  .documentation nav {
+    min-width: 25rem;
+    box-shadow: 1px 0 0 rgba(81, 88, 90, 0.17); }
+    .documentation nav h1 {
+      font-size: 1.2rem;
+      text-transform: uppercase; }
+    .documentation nav ul {
+      list-style: none; }
+    .documentation nav > ul {
+      list-style: none;
+      padding: 0; }
+    .documentation nav li a {
+      padding: .20em 15px; }
+      .documentation nav li a:hover, .documentation nav li a:focus {
+        background-color: #eee;
+        text-decoration: none; }
+  .documentation aside {
+    min-width: 22rem;
+    max-width: 22rem;
+    padding-left: 2rem; }
+    .documentation aside h1 {
+      font-size: 1.2rem;
+      text-transform: uppercase; }
+    .documentation aside ul {
+      list-style: none;
+      padding: 0 1rem; }
+    .documentation aside > ul {
+      list-style: none;
+      padding: 0; }
+    .documentation aside a {
+      font-size: 13px;
+      text-decoration: none;
+      border-radius: 2px;
+      padding: 4px 5px 4px 23px;
+      display: block; }
+  .documentation div.highlight {
+    background: #f8f8f8;
+    margin: 2rem 0; }
+  .documentation code {
+    color: black; }
 
 .accordion-menu ul li i:before, .accordion-menu ul li i:after {
   transition: all 0.25s ease-in-out; }
@@ -80,7 +61,7 @@
   cursor: pointer;
   display: block;
   font-size: 1em;
-  padding: 0.2em 15px;
+  padding: .20em 15px;
   text-transform: uppercase; }
 
 .accordion-menu ul {
