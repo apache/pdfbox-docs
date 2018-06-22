@@ -166,8 +166,6 @@
     <li><a href="#18x">PDFBox 1.8.14 release</a></li>
     <li><a href="#JBIG2">JBIG2 ImageIO plugin 3.0.1 release</a></li>
     <li><a href="#oldreleases">Previous releases</a></li>
-    <li><a href="#scm">Latest source from version control</a></li>
-    <li><a href="#snapshot">Latest development snapshot build</a></li>
 </ul>
 
 <p>See also the <a href="#exportcontrol">export control</a> information related to the encryption features included in Apache PDFBox.</p>
@@ -345,7 +343,7 @@ Alternatively, <a href="https://www.apache.org/mirrors/">view the complete list 
 
 <p>
     It is essential that you verify the integrity of the downloaded files using the PGP signatures or
-    MD5 and SHA1/SHA512 checksums. Please read <a href="https://httpd.apache.org/dev/verification.html">Verifying Apache HTTP Server Releases</a>
+    SHA512 checksums. Please read <a href="https://httpd.apache.org/dev/verification.html">Verifying Apache HTTP Server Releases</a>
     for more information on why you should verify our releases.
 </p>
 
@@ -373,7 +371,7 @@ or
 
 <pre>
 % gpg --import KEYS
-% gpg --verify pdfbox-X.Y.Z-src.zip.asc
+% gpg --verify pdfbox-X.Y.Z-src.zip.asc pdfbox-X.Y.Z-src.zip
 </pre>
 
 <a name="oldreleases"></a>
@@ -384,33 +382,6 @@ or
     Older releases (up to version `0.7.3`) published from SourceForge are still available on
     <a href="https://sourceforge.net/projects/pdfbox/files/PDFBox/">SourceForge Files</a>.
 </p>
-
-<a name="scm"></a>
-<h2>Latest source from version control</h2>
-
-To fetch the latest source code from the trunk in the Subversion repository, just run the following command:
-
-<pre>
-svn checkout https://svn.apache.org/repos/asf/pdfbox/trunk/
-</pre>
-
-<p>
-    You can also browse the Subversion repository using <a href="https://svn.apache.org/viewvc/pdfbox/">ViewVC</a>;
-</p>
-
-<p>
-    We also have a read-only <a href="https://git.apache.org/">Git mirror</a> which is further mirrored to GitHub as <a href="https://github.com/apache/pdfbox">apache/pdfbox</a>.
-</p>
-
-<a name="snapshot"></a>
-<h2>Latest development snapshot</h2>
-
-<p>
-    Development snapshots are built automatically from the latest SVN trunk. <strong>Snapshots are unreleased development previews and may change without notice.</strong>
-    Snapshots do not have their own version numbers and there is no guarantee of API stability between snapshots.
-</p>
-
-<a href="https://repository.apache.org/content/groups/snapshots/org/apache/pdfbox/">Download a snapshot build</a>
 
 <a name="exportcontrol"></a>
 <h2>Export control information</h2>
