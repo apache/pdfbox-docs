@@ -26,10 +26,14 @@ Building PDFBox from source is only necessary if you're wanting to contribute co
 
 ## Obtaining the Source
 
-You can obtain the latest source of PDFBox from our [SVN repo](http://pdfbox.apache.org/download.cgi) The current trunk is v3.0.0-SNAPSHOT. There is a seperate branch for the 1.8.x series. You can fetch the latest 2.0 trunk using Subversion:
+You can obtain the latest source of PDFBox from our [SVN repo](http://svn.apache.org/repos/asf/pdfbox/). The current trunk is 3.0.0-SNAPSHOT. There is a separate branch for the 1.8.x and the 2.0.x series. You can fetch the latest trunk version using Subversion:
 
     svn checkout http://svn.apache.org/repos/asf/pdfbox/trunk/
     cd trunk
+
+You can also browse the Subversion repository using [ViewVC](https://svn.apache.org/viewvc/pdfbox/).
+
+We also have a read-only [Git mirror](https://git.apache.org/) which is further mirrored to GitHub as [apache/pdfbox](https://github.com/apache/pdfbox).
 
 ## Build dependencies
 
