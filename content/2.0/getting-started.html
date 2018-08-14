@@ -99,7 +99,7 @@
 
         <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
         <li><a href="/2.0/faq.html">FAQ</a></li>
-        <li><a href="/docs/2.0.8/javadocs/">API Docs</a></li>
+        <li><a href="/docs/2.0.11/javadocs/">API Docs</a></li>
       </ul>
     </nav>
     <section>
@@ -109,13 +109,12 @@
 
 <p>To use the latest release you’ll need to add the following dependency:</p>
 
-<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
   <span class="nt">&lt;groupId&gt;</span>org.apache.pdfbox<span class="nt">&lt;/groupId&gt;</span>
   <span class="nt">&lt;artifactId&gt;</span>pdfbox<span class="nt">&lt;/artifactId&gt;</span>
   <span class="nt">&lt;version&gt;</span>2.0.4<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="pdfbox-and-java-8">PDFBox and Java 8</h2>
 
@@ -138,9 +137,8 @@ https://bugs.openjdk.java.net/browse/JDK-8041125</p>
 
 <p>PDFBox 2.0.4 introduced a new command line setting</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code> -Dorg.apache.pdfbox.rendering.UsePureJavaCMYKConversion=true
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> -Dorg.apache.pdfbox.rendering.UsePureJavaCMYKConversion=true
+</code></pre></div></div>
 
 <p>which may improve the performance of rendering PDFs on some systems especially if there are a lot of images on a page.</p>
 
