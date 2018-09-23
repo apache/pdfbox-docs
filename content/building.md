@@ -44,7 +44,7 @@ We also have a read-only [Git mirror](https://git.apache.org/) which is further 
 
 ### PDFBox 2.0
 
-- JDK 6+
+- JDK 7
 - [Java Cryptography Extension (JCE)](#java-cryptography-extension-jce)
 - [Maven 3](http://maven.apache.org/)
 
