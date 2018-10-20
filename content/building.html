@@ -110,7 +110,7 @@
                             </li>
                             <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/2.0/faq.html">FAQ</a></li>
-                            <li><a href="/docs/2.0.11/javadocs/">API Docs</a></li>
+                            <li><a href="/docs/2.0.12/javadocs/">API Docs</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-node" id="v1-8">
@@ -165,10 +165,9 @@
 
 <p>You can obtain the latest source of PDFBox from our <a href="http://svn.apache.org/repos/asf/pdfbox/">SVN repo</a>. The current trunk is 3.0.0-SNAPSHOT. There is a separate branch for the 1.8.x and the 2.0.x series. You can fetch the latest trunk version using Subversion:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>svn checkout http://svn.apache.org/repos/asf/pdfbox/trunk/
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>svn checkout http://svn.apache.org/repos/asf/pdfbox/trunk/
 cd trunk
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>You can also browse the Subversion repository using <a href="https://svn.apache.org/viewvc/pdfbox/">ViewVC</a>.</p>
 
@@ -195,17 +194,15 @@ cd trunk
 
 <p>Building PDFBox 2.0 requires a JDK with “unlimited strength” cryptography, which requires extra files to be installed. For JDK 7, see <a href="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html">Java Cryptography Extension (JCE)</a>. If these files are not installed, building PDFBox will fail the following test:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>TestPublicKeyEncryption.setUp:70 JCE unlimited strength jurisdiction policy files are not installed
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TestPublicKeyEncryption.setUp:70 JCE unlimited strength jurisdiction policy files are not installed
+</code></pre></div></div>
 
 <h2 id="building-with-maven">Building with Maven</h2>
 
 <p>In the root directory of PDFBox:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>mvn clean install
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mvn clean install
+</code></pre></div></div>
 
 <hr />
 

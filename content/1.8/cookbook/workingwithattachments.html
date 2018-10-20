@@ -110,7 +110,7 @@
                             </li>
                             <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/2.0/faq.html">FAQ</a></li>
-                            <li><a href="/docs/2.0.11/javadocs/">API Docs</a></li>
+                            <li><a href="/docs/2.0.12/javadocs/">API Docs</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-node" id="v1-8">
@@ -183,7 +183,7 @@ attribute of the <code class="highlighter-rouge">PDComplexFileSpecification</cod
 menu. PDFBox allows attachments to be added to and extracted from PDF documents. 
 Attachments are part of the named tree that is attached to the document catalog.</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">PDEmbeddedFilesNameTreeNode</span> <span class="n">efTree</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDEmbeddedFilesNameTreeNode</span><span class="o">();</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PDEmbeddedFilesNameTreeNode</span> <span class="n">efTree</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDEmbeddedFilesNameTreeNode</span><span class="o">();</span>
 
 <span class="c1">//first create the file specification, which holds the embedded file</span>
 <span class="n">PDComplexFileSpecification</span> <span class="n">fs</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDComplexFileSpecification</span><span class="o">();</span>
@@ -204,8 +204,7 @@ Attachments are part of the named tree that is attached to the document catalog.
 <span class="n">PDDocumentNameDictionary</span> <span class="n">names</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDDocumentNameDictionary</span><span class="o">(</span> <span class="n">doc</span><span class="o">.</span><span class="na">getDocumentCatalog</span><span class="o">()</span> <span class="o">);</span>
 <span class="n">names</span><span class="o">.</span><span class="na">setEmbeddedFiles</span><span class="o">(</span> <span class="n">efTree</span> <span class="o">);</span>
 <span class="n">doc</span><span class="o">.</span><span class="na">getDocumentCatalog</span><span class="o">().</span><span class="na">setNames</span><span class="o">(</span> <span class="n">names</span> <span class="o">);</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
             </div>
         </div>

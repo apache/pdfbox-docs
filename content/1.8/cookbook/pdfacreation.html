@@ -110,7 +110,7 @@
                             </li>
                             <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/2.0/faq.html">FAQ</a></li>
-                            <li><a href="/docs/2.0.11/javadocs/">API Docs</a></li>
+                            <li><a href="/docs/2.0.12/javadocs/">API Docs</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-node" id="v1-8">
@@ -170,10 +170,9 @@ document. The current example creates a valid PDF/A-1b document.</p>
 <p>The PDF/A specification enforces that the fonts used in the document are present in the PDF File. You
 have to load them. As an example:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">InputStream</span> <span class="n">fontStream</span> <span class="o">=</span> <span class="n">CreatePDFA</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getResourceAsStream</span><span class="o">(</span><span class="s">"/org/apache/pdfbox/resources/ttf/ArialMT.ttf"</span><span class="o">);</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">InputStream</span> <span class="n">fontStream</span> <span class="o">=</span> <span class="n">CreatePDFA</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getResourceAsStream</span><span class="o">(</span><span class="s">"/org/apache/pdfbox/resources/ttf/ArialMT.ttf"</span><span class="o">);</span>
 <span class="n">PDFont</span> <span class="n">font</span> <span class="o">=</span> <span class="n">PDTrueTypeFont</span><span class="o">.</span><span class="na">loadTTF</span><span class="o">(</span><span class="n">doc</span><span class="o">,</span> <span class="n">fontStream</span><span class="o">);</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="include-xmp-metadata-block">Include XMP Metadata Block</h2>
 
@@ -181,22 +180,21 @@ have to load them. As an example:</p>
 of PDF/A specification reached by the document) must be present. These lines create the XMP metadata for a
 PDF/A-1b document:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">XMPMetadata</span> <span class="n">xmp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">XMPMetadata</span><span class="o">();</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">XMPMetadata</span> <span class="n">xmp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">XMPMetadata</span><span class="o">();</span>
 <span class="n">XMPSchemaPDFAId</span> <span class="n">pdfaid</span> <span class="o">=</span> <span class="k">new</span> <span class="n">XMPSchemaPDFAId</span><span class="o">(</span><span class="n">xmp</span><span class="o">);</span>
 <span class="n">xmp</span><span class="o">.</span><span class="na">addSchema</span><span class="o">(</span><span class="n">pdfaid</span><span class="o">);</span>
 <span class="n">pdfaid</span><span class="o">.</span><span class="na">setConformance</span><span class="o">(</span><span class="s">"B"</span><span class="o">);</span>
 <span class="n">pdfaid</span><span class="o">.</span><span class="na">setPart</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
 <span class="n">pdfaid</span><span class="o">.</span><span class="na">setAbout</span><span class="o">(</span><span class="s">""</span><span class="o">);</span>
 <span class="n">metadata</span><span class="o">.</span><span class="na">importXMPMetadata</span><span class="o">(</span><span class="n">xmp</span><span class="o">);</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="include-color-profile">Include Color Profile</h2>
 
 <p>It is mandatory to include the color profile used by the document. Different profiles can be used. This 
 example takes one present in pdfbox:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// Create output intent</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Create output intent</span>
 <span class="n">InputStream</span> <span class="n">colorProfile</span> <span class="o">=</span> <span class="n">CreatePDFA</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getResourceAsStream</span><span class="o">(</span><span class="s">"/org/apache/pdfbox/resources/pdfa/sRGB Color Space Profile.icm"</span><span class="o">);</span>
 <span class="n">PDOutputIntent</span> <span class="n">oi</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDOutputIntent</span><span class="o">(</span><span class="n">doc</span><span class="o">,</span> <span class="n">colorProfile</span><span class="o">);</span> 
 <span class="n">oi</span><span class="o">.</span><span class="na">setInfo</span><span class="o">(</span><span class="s">"sRGB IEC61966-2.1"</span><span class="o">);</span> 
@@ -204,16 +202,14 @@ example takes one present in pdfbox:</p>
 <span class="n">oi</span><span class="o">.</span><span class="na">setOutputConditionIdentifier</span><span class="o">(</span><span class="s">"sRGB IEC61966-2.1"</span><span class="o">);</span> 
 <span class="n">oi</span><span class="o">.</span><span class="na">setRegistryName</span><span class="o">(</span><span class="s">"http://www.color.org"</span><span class="o">);</span> 
 <span class="n">cat</span><span class="o">.</span><span class="na">addOutputIntent</span><span class="o">(</span><span class="n">oi</span><span class="o">);</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="complete-example">Complete example</h2>
 
 <p>The complete example can be found in pdfbox-example. The source file is</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>src/main/java/org/apache/pdfbox/examples/pdfa/CreatePDFA.java
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>src/main/java/org/apache/pdfbox/examples/pdfa/CreatePDFA.java
+</code></pre></div></div>
 
 
             </div>
