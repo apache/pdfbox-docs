@@ -92,7 +92,6 @@ Usage: ``java -jar pdfbox-app-2.y.z.jar ExtractText [OPTIONS] <inputfile> [Text 
 | -html | false | Output in HTML format instead of raw text. |
 | -sort | false | Sort the text before writing. |
 | -ignoreBeads | false | Disables the separation by beads. |
-| -force | false | Enables pdfbox to ignore corrupt objects. |
 | -debug | false | Enables debug output about the time consumption of every stage. |
 | -startPage | 1 | The first page to extract, one based. |
 | -endPage | Integer.MAX_INT | The last page to extract, one based. |
