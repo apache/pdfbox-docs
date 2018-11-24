@@ -86,6 +86,7 @@ Usage: ``java -jar pdfbox-app-2.y.z.jar ExtractText [OPTIONS] <inputfile> [Text 
 
 | Command-Line Parameter | Default | Description |
 | --- | --- | --- |
+| -alwaysNext | false | Process next page (if applicable) despite IOException (ignored when -html) |
 | -password |  | The password to the PDF document. |
 | -encoding | default encoding | The encoding type of the text file, e.g. ISO-8859-1, UTF-8, UTF-16BE. |
 | -console | false | Send text to console instead of file. |
@@ -93,6 +94,7 @@ Usage: ``java -jar pdfbox-app-2.y.z.jar ExtractText [OPTIONS] <inputfile> [Text 
 | -sort | false | Sort the text before writing. |
 | -ignoreBeads | false | Disables the separation by beads. |
 | -debug | false | Enables debug output about the time consumption of every stage. |
+| -rotationMagic | false | Analyze each page for rotated/skewed text, rotate to 0° and extract separately (slower, and ignored when -html) |
 | -startPage | 1 | The first page to extract, one based. |
 | -endPage | Integer.MAX_INT | The last page to extract, one based. |
 
