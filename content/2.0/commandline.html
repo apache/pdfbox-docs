@@ -286,6 +286,11 @@ PDFBox tools as Java applications.</p>
   </thead>
   <tbody>
     <tr>
+      <td>-alwaysNext</td>
+      <td>false</td>
+      <td>Process next page (if applicable) despite IOException (ignored when -html)</td>
+    </tr>
+    <tr>
       <td>-password</td>
       <td> </td>
       <td>The password to the PDF document.</td>
@@ -316,14 +321,14 @@ PDFBox tools as Java applications.</p>
       <td>Disables the separation by beads.</td>
     </tr>
     <tr>
-      <td>-force</td>
-      <td>false</td>
-      <td>Enables pdfbox to ignore corrupt objects.</td>
-    </tr>
-    <tr>
       <td>-debug</td>
       <td>false</td>
       <td>Enables debug output about the time consumption of every stage.</td>
+    </tr>
+    <tr>
+      <td>-rotationMagic</td>
+      <td>false</td>
+      <td>Analyze each page for rotated/skewed text, rotate to 0° and extract separately (slower, and ignored when -html)</td>
     </tr>
     <tr>
       <td>-startPage</td>
