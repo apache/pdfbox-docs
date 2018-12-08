@@ -112,13 +112,13 @@
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
   <span class="nt">&lt;groupId&gt;</span>org.apache.pdfbox<span class="nt">&lt;/groupId&gt;</span>
   <span class="nt">&lt;artifactId&gt;</span>pdfbox<span class="nt">&lt;/artifactId&gt;</span>
-  <span class="nt">&lt;version&gt;</span>2.0.4<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;version&gt;</span>2.0.13<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
 </code></pre></div></div>
 
 <h2 id="pdfbox-and-java-8">PDFBox and Java 8</h2>
 
-<p class="alert alert-warning">Important notice when using PDFBox with Java 8</p>
+<p class="alert alert-warning">Important notice when using PDFBox with Java 8 or Java 9</p>
 
 <p>Due to the change of the java color management module towards “LittleCMS”, users can experience slow performance in color operations.
 A solution is to disable LittleCMS in favor of the old KCMS (Kodak Color Management System) by:</p>
