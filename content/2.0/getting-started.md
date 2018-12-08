@@ -30,13 +30,13 @@ To use the latest release you'll need to add the following dependency:
 <dependency>
   <groupId>org.apache.pdfbox</groupId>
   <artifactId>pdfbox</artifactId>
-  <version>2.0.4</version>
+  <version>2.0.13</version>
 </dependency>
 ```
 
 ## PDFBox and Java 8 ##
 
-<p class="alert alert-warning">Important notice when using PDFBox with Java 8</p>
+<p class="alert alert-warning">Important notice when using PDFBox with Java 8 or Java 9</p>
 
 Due to the change of the java color management module towards "LittleCMS", users can experience slow performance in color operations.
 A solution is to disable LittleCMS in favor of the old KCMS (Kodak Color Management System) by:
