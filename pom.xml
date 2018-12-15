@@ -33,14 +33,13 @@
         <properties>
             <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
             <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-            <svn.scmContentUrl>svn:https://svn.apache.org/repos/infra/websites/production/pdfbox/content</svn.scmContentUrl>
-            <git.scmContentUrl>git:https://git-wip-us.apache.org/repos/asf/pdfbox-docs</git.scmContentUrl>
+            <git.scmContentUrl>git:https://gitbox.apache.org/repos/asf/pdfbox-docs.git</git.scmContentUrl>
         </properties>
-        
+
         <build>
-            <!-- 
+            <!--
             	Publish to Apache CMS
-            	After completion log in to https://cms.apache.org/pdfbox/publish 
+            	After completion log in to https://cms.apache.org/pdfbox/publish
             	and click on the Submit button to commit to production.
              -->
             <plugins>
@@ -51,7 +50,7 @@
                     <configuration>
                         <content>staging</content>
                         <!--
-                            set to 'true' if you'd like to test the changes without doing the 
+                            set to 'true' if you'd like to test the changes without doing the
                             scm update operations
                         -->
                         <dryRun>false</dryRun>
