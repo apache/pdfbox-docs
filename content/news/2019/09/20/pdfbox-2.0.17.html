@@ -26,7 +26,7 @@
     <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command-line utilities. Apache PDFBox is published under the Apache License v2.0.
 ">
 
-    <title>Apache PDFBox | Cookbook - Document Creation</title>
+    <title>Apache PDFBox | Apache PDFBox 2.0.17 released</title>
 
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/pygments-github.css" rel="stylesheet">
@@ -157,56 +157,12 @@
 		<a href="https://www.apache.org/foundation/contributing.html"><img width="135" src="/images/SupportApache.jpg"></a>
             </div>
             <div class="col-xs-12 col-sm-9">
-                <h1 id="document-creation">Document Creation</h1>
+                <p>The Apache PDFBox community is pleased to announce the release of
+Apache PDFBox version 2.0.17. It is available for download at:</p>
 
-<h2 id="create-a-blank-pdf">Create a Blank PDF</h2>
+<p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
 
-<p>This small sample shows how to create a new PDF document using PDFBox.</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Create a new empty document</span>
-<span class="nc">PDDocument</span> <span class="n">document</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDDocument</span><span class="o">();</span>
-
-<span class="c1">// Create a new blank page and add it to the document</span>
-<span class="nc">PDPage</span> <span class="n">blankPage</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDPage</span><span class="o">();</span>
-<span class="n">document</span><span class="o">.</span><span class="na">addPage</span><span class="o">(</span> <span class="n">blankPage</span> <span class="o">);</span>
-
-<span class="c1">// Save the newly created document</span>
-<span class="n">document</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="s">"BlankPage.pdf"</span><span class="o">);</span>
-
-<span class="c1">// finally make sure that the document is properly</span>
-<span class="c1">// closed.</span>
-<span class="n">document</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-</code></pre></div></div>
-
-<h2 id="hello-world-using-a-pdf-base-font">Hello World Using a PDF Base Font</h2>
-
-<p>This small sample shows how to create a new document and print the text “Hello World” using one of the PDF base fonts.</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Create a document and add a page to it</span>
-<span class="nc">PDDocument</span> <span class="n">document</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDDocument</span><span class="o">();</span>
-<span class="nc">PDPage</span> <span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDPage</span><span class="o">();</span>
-<span class="n">document</span><span class="o">.</span><span class="na">addPage</span><span class="o">(</span> <span class="n">page</span> <span class="o">);</span>
-
-<span class="c1">// Create a new font object selecting one of the PDF base fonts</span>
-<span class="nc">PDFont</span> <span class="n">font</span> <span class="o">=</span> <span class="nc">PDType1Font</span><span class="o">.</span><span class="na">HELVETICA_BOLD</span><span class="o">;</span>
-
-<span class="c1">// Start a new content stream which will "hold" the to be created content</span>
-<span class="nc">PDPageContentStream</span> <span class="n">contentStream</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDPageContentStream</span><span class="o">(</span><span class="n">document</span><span class="o">,</span> <span class="n">page</span><span class="o">);</span>
-
-<span class="c1">// Define a text content stream using the selected font, moving the cursor and drawing the text "Hello World"</span>
-<span class="n">contentStream</span><span class="o">.</span><span class="na">beginText</span><span class="o">();</span>
-<span class="n">contentStream</span><span class="o">.</span><span class="na">setFont</span><span class="o">(</span> <span class="n">font</span><span class="o">,</span> <span class="mi">12</span> <span class="o">);</span>
-<span class="n">contentStream</span><span class="o">.</span><span class="na">moveTextPositionByAmount</span><span class="o">(</span> <span class="mi">100</span><span class="o">,</span> <span class="mi">700</span> <span class="o">);</span>
-<span class="n">contentStream</span><span class="o">.</span><span class="na">drawString</span><span class="o">(</span> <span class="s">"Hello World"</span> <span class="o">);</span>
-<span class="n">contentStream</span><span class="o">.</span><span class="na">endText</span><span class="o">();</span>
-
-<span class="c1">// Make sure that the content stream is closed:</span>
-<span class="n">contentStream</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-
-<span class="c1">// Save the results and ensure that the document is properly closed:</span>
-<span class="n">document</span><span class="o">.</span><span class="na">save</span><span class="o">(</span> <span class="s">"Hello World.pdf"</span><span class="o">);</span>
-<span class="n">document</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-</code></pre></div></div>
+<p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12345681">full release notes</a> for details about this release.</p>
 
             </div>
         </div>
