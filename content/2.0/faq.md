@@ -52,10 +52,8 @@ log4j.configuration=file:///<path to config file>
 
 ### Is PDFBox thread safe? ###
 
-PDFBox has experimental support for *read-only* operations on the same PDDocument from different threads.
-
-For all other uses cases only one thread may access a single document at a time. You can have multiple threads
-each accessing their own PDDocument object.
+No! Only one thread may access a single document at a time. You can have multiple threads each accessing their own
+PDDocument object.
 
 <a name="notclosed"></a>
 
