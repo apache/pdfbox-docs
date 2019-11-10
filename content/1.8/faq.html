@@ -143,7 +143,7 @@
                     <li><a href="/siteupdate.html">Update the Website</a></li>
                     <li><a href="https://builds.apache.org/view/All/job/PDFBox-trunk/">Jenkins</a></li>
                     <li><a href="https://travis-ci.org/apache/pdfbox">Travis CI</a></li>
-                    <li><a href="https://builds.apache.org/analysis/overview?id=org.apache.pdfbox%3Apdfbox-reactor">SonarQube</a></li>
+                    <li><a href="https://sonarcloud.io/project/issues?id=pdfbox-reactor">SonarCloud</a></li>
                     <li><a href="https://issues.apache.org/jira/browse/PDFBOX">JIRA</a></li>
                     <li><a href="/ideas.html">Ideas</a></li>
                     <li><a href="/references.html">External Links</a></li>
@@ -213,10 +213,10 @@ don’t then the document will not be closed properly.  Also, you must close all
 PDDocument objects that get created.  The following code creates <strong>two</strong>
 PDDocument objects; one from the “new PDDocument()” and the second by the load method.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDDocument</span><span class="o">();</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDDocument</span><span class="o">();</span>
 <span class="k">try</span>
 <span class="o">{</span>
-   <span class="n">doc</span> <span class="o">=</span> <span class="nc">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span> <span class="s">"my.pdf"</span> <span class="o">);</span>
+   <span class="n">doc</span> <span class="o">=</span> <span class="n">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span> <span class="s">"my.pdf"</span> <span class="o">);</span>
 <span class="o">}</span>
 <span class="k">finally</span>
 <span class="o">{</span>

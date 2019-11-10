@@ -143,7 +143,7 @@
                     <li><a href="/siteupdate.html">Update the Website</a></li>
                     <li><a href="https://builds.apache.org/view/All/job/PDFBox-trunk/">Jenkins</a></li>
                     <li><a href="https://travis-ci.org/apache/pdfbox">Travis CI</a></li>
-                    <li><a href="https://builds.apache.org/analysis/overview?id=org.apache.pdfbox%3Apdfbox-reactor">SonarQube</a></li>
+                    <li><a href="https://sonarcloud.io/project/issues?id=pdfbox-reactor">SonarCloud</a></li>
                     <li><a href="https://issues.apache.org/jira/browse/PDFBOX">JIRA</a></li>
                     <li><a href="/ideas.html">Ideas</a></li>
                     <li><a href="/references.html">External Links</a></li>
@@ -282,9 +282,9 @@ doesn’t provide the functionality needed.</p>
 
 <p>The information within the dictionary can be accessed using the COS model</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">COSDictionary</span> <span class="n">page</span> <span class="o">=</span> <span class="o">...;</span>
-<span class="nc">COSArray</span> <span class="n">mediaBox</span> <span class="o">=</span> <span class="o">(</span><span class="nc">COSArray</span><span class="o">)</span><span class="n">page</span><span class="o">.</span><span class="na">getDictionaryObject</span><span class="o">(</span> <span class="s">"MediaBox"</span> <span class="o">);</span>
-<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="s">"Width:"</span> <span class="o">+</span> <span class="n">mediaBox</span><span class="o">.</span><span class="na">get</span><span class="o">(</span> <span class="mi">3</span> <span class="o">)</span> <span class="o">);</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">COSDictionary</span> <span class="n">page</span> <span class="o">=</span> <span class="o">...;</span>
+<span class="n">COSArray</span> <span class="n">mediaBox</span> <span class="o">=</span> <span class="o">(</span><span class="n">COSArray</span><span class="o">)</span><span class="n">page</span><span class="o">.</span><span class="na">getDictionaryObject</span><span class="o">(</span> <span class="s">"MediaBox"</span> <span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="s">"Width:"</span> <span class="o">+</span> <span class="n">mediaBox</span><span class="o">.</span><span class="na">get</span><span class="o">(</span> <span class="mi">3</span> <span class="o">)</span> <span class="o">);</span>
 </code></pre></div></div>
 
 <p>As can be seen from that little example the COS model provides a low level API to access 
@@ -303,9 +303,9 @@ available to access the attributes.</p>
 
 <p>The same code from above to get the page width can be rewritten to use PD Model classes.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">PDPage</span> <span class="n">page</span> <span class="o">=</span> <span class="o">...;</span>
-<span class="nc">PDRectangle</span> <span class="n">mediaBox</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="na">getMediaBox</span><span class="o">();</span>
-<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="s">"Width:"</span> <span class="o">+</span> <span class="n">mediaBox</span><span class="o">.</span><span class="na">getWidth</span><span class="o">()</span> <span class="o">);</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PDPage</span> <span class="n">page</span> <span class="o">=</span> <span class="o">...;</span>
+<span class="n">PDRectangle</span> <span class="n">mediaBox</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="na">getMediaBox</span><span class="o">();</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="s">"Width:"</span> <span class="o">+</span> <span class="n">mediaBox</span><span class="o">.</span><span class="na">getWidth</span><span class="o">()</span> <span class="o">);</span>
 </code></pre></div></div>
 
 <p>PD Model objects sit on top of COS model. Typically, the classes in the PD Model will only

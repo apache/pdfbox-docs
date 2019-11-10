@@ -146,10 +146,10 @@ don’t then the document will not be closed properly.  Also, you must close all
 PDDocument objects that get created.  The following code creates <strong>two</strong>
 PDDocument objects; one from the “new PDDocument()” and the second by the load method.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDDocument</span><span class="o">();</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDDocument</span><span class="o">();</span>
 <span class="k">try</span>
 <span class="o">{</span>
-   <span class="n">doc</span> <span class="o">=</span> <span class="nc">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span> <span class="s">"my.pdf"</span> <span class="o">);</span>
+   <span class="n">doc</span> <span class="o">=</span> <span class="n">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span> <span class="s">"my.pdf"</span> <span class="o">);</span>
 <span class="o">}</span>
 <span class="k">finally</span>
 <span class="o">{</span>
