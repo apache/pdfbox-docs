@@ -35,6 +35,8 @@ You can also browse the Subversion repository using [ViewVC](https://svn.apache.
 
 We also have a read-only [Git mirror](https://git.apache.org/) which is further mirrored to GitHub as [apache/pdfbox](https://github.com/apache/pdfbox).
 
+The sources for the **Java ImageIO plugin for the JBIG2 image format** are available in the  [Apache Git Repository](https://git-wip-us.apache.org/repos/asf?p=pdfbox-jbig2.git) or can be loaded from [GitHub](https://github.com/apache/pdfbox-jbig2).
+
 ## Build dependencies
 
 ### PDFBox 1.8
@@ -46,6 +48,11 @@ We also have a read-only [Git mirror](https://git.apache.org/) which is further 
 
 - JDK 7
 - [Java Cryptography Extension (JCE)](#java-cryptography-extension-jce)
+- [Maven 3](http://maven.apache.org/)
+
+### Java ImageIO plugin for JBIG2
+
+- JDK 6
 - [Maven 3](http://maven.apache.org/)
 
 ### Java Cryptography Extension (JCE)
