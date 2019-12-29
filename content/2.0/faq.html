@@ -144,10 +144,10 @@ don’t then the document will not be closed properly.  Also, you must close all
 PDDocument objects that get created.  The following code creates <strong>two</strong>
 PDDocument objects; one from the “new PDDocument()” and the second by the load method.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDDocument</span><span class="o">();</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDDocument</span><span class="o">();</span>
 <span class="k">try</span>
 <span class="o">{</span>
-   <span class="n">doc</span> <span class="o">=</span> <span class="nc">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span> <span class="s">"my.pdf"</span> <span class="o">);</span>
+   <span class="n">doc</span> <span class="o">=</span> <span class="n">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span> <span class="s">"my.pdf"</span> <span class="o">);</span>
 <span class="o">}</span>
 <span class="k">finally</span>
 <span class="o">{</span>
@@ -169,6 +169,25 @@ If not, but if it is available in this font (in windows, have a look with charma
 PDType0Font.load(), see also in the EmbeddedFonts.java example in the source code download.</p>
 
 <h2 id="pdf-creation">PDF Creation</h2>
+
+<p><a name="layout"></a></p>
+
+<h3 id="can-i-use-pdfbox-to-create-complex-layouts">Can I use PDFBox to create complex layouts?</h3>
+<p>I’d like to use PDFBox to create a complex layout containing several paragraphs, tables, images etc. Is PDFBox fit for that purpose?</p>
+
+<p>PDFBox being a low level PDF library provides the APIs to create page content such as text, images etc. But at this point in time it doesn’t provide a higher level API to do page layout, paragraph handling, automatic line wrapping or create tables and such.</p>
+
+<p>But PDFBox is the foundation of some projects which might help in that case. This includes projects such as</p>
+<ul>
+  <li><a href="http://dhorions.github.io/boxable/">Boxable</a></li>
+  <li><a href="https://github.com/errt/BoxTable">BoxTable</a></li>
+  <li><a href="https://github.com/vandeseer/easytable">easytable</a></li>
+  <li><a href="https://github.com/ralfstuckert/pdfbox-layout">pdfbox-layout</a></li>
+  <li><a href="https://github.com/GlenKPeterson/PdfLayoutManager">PdfLayoutManager</a></li>
+  <li><a href="https://github.com/phax/ph-pdf-layout">ph-pdf-layout</a></li>
+</ul>
+
+<p>You may also want to consider using <a href="https://xmlgraphics.apache.org/fop/">Apache FOP</a> which allows to create complex documents from XML data and templates-</p>
 
 <p><a name="emptypage"></a></p>
 
@@ -295,6 +314,7 @@ but these would cost additional time and memory space. You can have a higher qua
   </li>
   <li><a href="#pdf-creation">PDF Creation</a>
     <ul>
+      <li><a href="#can-i-use-pdfbox-to-create-complex-layouts">Can I use PDFBox to create complex layouts?</a></li>
       <li><a href="#im-creating-a-pdf-but-my-page-is-empty-why">I’m creating a PDF but my page is empty. Why?</a></li>
     </ul>
   </li>
