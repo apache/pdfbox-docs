@@ -1,0 +1,7 @@
+staging/
+target/
+.classpath
+.project
+.sass-cache/
+.settings/
+
