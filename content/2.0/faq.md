@@ -91,6 +91,23 @@ PDType0Font.load(), see also in the EmbeddedFonts.java example in the source cod
 
 ## PDF Creation
 
+<a name="layout"></a>
+
+### Can I use PDFBox to create complex layouts?
+I'd like to use PDFBox to create a complex layout containing several paragraphs, tables, images etc. Is PDFBox fit for that purpose?
+
+PDFBox being a low level PDF library provides the APIs to create page content such as text, images etc. But at this point in time it doesn't provide a higher level API to do page layout, paragraph handling, automatic line wrapping or create tables and such.
+
+But PDFBox is the foundation of some projects which might help in that case. This includes projects such as
+- [Boxable](http://dhorions.github.io/boxable/)
+- [BoxTable](https://github.com/errt/BoxTable)
+- [easytable](https://github.com/vandeseer/easytable)
+- [pdfbox-layout](https://github.com/ralfstuckert/pdfbox-layout)
+- [PdfLayoutManager](https://github.com/GlenKPeterson/PdfLayoutManager)
+- [ph-pdf-layout](https://github.com/phax/ph-pdf-layout)
+
+You may also want to consider using [Apache FOP](https://xmlgraphics.apache.org/fop/) which allows to create complex documents from XML data and templates-
+
 <a name="emptypage"></a>
 
 ### I'm creating a PDF but my page is empty. Why?
