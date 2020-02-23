@@ -183,25 +183,25 @@ attribute of the <code class="highlighter-rouge">PDComplexFileSpecification</cod
 menu. PDFBox allows attachments to be added to and extracted from PDF documents. 
 Attachments are part of the named tree that is attached to the document catalog.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PDEmbeddedFilesNameTreeNode</span> <span class="n">efTree</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDEmbeddedFilesNameTreeNode</span><span class="o">();</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">PDEmbeddedFilesNameTreeNode</span> <span class="n">efTree</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDEmbeddedFilesNameTreeNode</span><span class="o">();</span>
 
 <span class="c1">//first create the file specification, which holds the embedded file</span>
-<span class="n">PDComplexFileSpecification</span> <span class="n">fs</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDComplexFileSpecification</span><span class="o">();</span>
+<span class="nc">PDComplexFileSpecification</span> <span class="n">fs</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDComplexFileSpecification</span><span class="o">();</span>
 <span class="n">fs</span><span class="o">.</span><span class="na">setFile</span><span class="o">(</span> <span class="s">"Test.txt"</span> <span class="o">);</span>
-<span class="n">InputStream</span> <span class="n">is</span> <span class="o">=</span> <span class="o">...;</span>
-<span class="n">PDEmbeddedFile</span> <span class="n">ef</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDEmbeddedFile</span><span class="o">(</span><span class="n">doc</span><span class="o">,</span> <span class="n">is</span> <span class="o">);</span>
+<span class="nc">InputStream</span> <span class="n">is</span> <span class="o">=</span> <span class="o">...;</span>
+<span class="nc">PDEmbeddedFile</span> <span class="n">ef</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDEmbeddedFile</span><span class="o">(</span><span class="n">doc</span><span class="o">,</span> <span class="n">is</span> <span class="o">);</span>
 <span class="c1">//set some of the attributes of the embedded file</span>
 <span class="n">ef</span><span class="o">.</span><span class="na">setSubtype</span><span class="o">(</span> <span class="s">"test/plain"</span> <span class="o">);</span>
 <span class="n">ef</span><span class="o">.</span><span class="na">setSize</span><span class="o">(</span> <span class="n">data</span><span class="o">.</span><span class="na">length</span> <span class="o">);</span>
-<span class="n">ef</span><span class="o">.</span><span class="na">setCreationDate</span><span class="o">(</span> <span class="k">new</span> <span class="n">GregorianCalendar</span><span class="o">()</span> <span class="o">);</span>
+<span class="n">ef</span><span class="o">.</span><span class="na">setCreationDate</span><span class="o">(</span> <span class="k">new</span> <span class="nc">GregorianCalendar</span><span class="o">()</span> <span class="o">);</span>
 <span class="n">fs</span><span class="o">.</span><span class="na">setEmbeddedFile</span><span class="o">(</span> <span class="n">ef</span> <span class="o">);</span>
 
 <span class="c1">//now add the entry to the embedded file tree and set in the document.</span>
-<span class="n">Map</span> <span class="n">efMap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">();</span>
+<span class="nc">Map</span> <span class="n">efMap</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">();</span>
 <span class="n">efMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span> <span class="s">"My first attachment"</span><span class="o">,</span> <span class="n">fs</span> <span class="o">);</span>
 <span class="n">efTree</span><span class="o">.</span><span class="na">setNames</span><span class="o">(</span> <span class="n">efMap</span> <span class="o">);</span>
 <span class="c1">//attachments are stored as part of the "names" dictionary in the document catalog</span>
-<span class="n">PDDocumentNameDictionary</span> <span class="n">names</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDDocumentNameDictionary</span><span class="o">(</span> <span class="n">doc</span><span class="o">.</span><span class="na">getDocumentCatalog</span><span class="o">()</span> <span class="o">);</span>
+<span class="nc">PDDocumentNameDictionary</span> <span class="n">names</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDDocumentNameDictionary</span><span class="o">(</span> <span class="n">doc</span><span class="o">.</span><span class="na">getDocumentCatalog</span><span class="o">()</span> <span class="o">);</span>
 <span class="n">names</span><span class="o">.</span><span class="na">setEmbeddedFiles</span><span class="o">(</span> <span class="n">efTree</span> <span class="o">);</span>
 <span class="n">doc</span><span class="o">.</span><span class="na">getDocumentCatalog</span><span class="o">().</span><span class="na">setNames</span><span class="o">(</span> <span class="n">names</span> <span class="o">);</span>
 </code></pre></div></div>
@@ -217,7 +217,7 @@ Attachments are part of the named tree that is attached to the document catalog.
                 <!-- nothing in here on purpose -->
             </div>
             <div class="span9">
-                <p>Copyright © 2009&ndash;2019 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                <p>Copyright © 2009&ndash;2020 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
                     <br/>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
             </div>
         </div>

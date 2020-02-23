@@ -235,15 +235,15 @@
 <p>This small sample shows how to create a new document and print the text “Hello World” using one of the PDF base fonts.</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Create a document and add a page to it</span>
-<span class="n">PDDocument</span> <span class="n">document</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDDocument</span><span class="o">();</span>
-<span class="n">PDPage</span> <span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDPage</span><span class="o">();</span>
+<span class="nc">PDDocument</span> <span class="n">document</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDDocument</span><span class="o">();</span>
+<span class="nc">PDPage</span> <span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDPage</span><span class="o">();</span>
 <span class="n">document</span><span class="o">.</span><span class="na">addPage</span><span class="o">(</span> <span class="n">page</span> <span class="o">);</span>
 
 <span class="c1">// Create a new font object selecting one of the PDF base fonts</span>
-<span class="n">PDFont</span> <span class="n">font</span> <span class="o">=</span> <span class="n">PDType1Font</span><span class="o">.</span><span class="na">HELVETICA_BOLD</span><span class="o">;</span>
+<span class="nc">PDFont</span> <span class="n">font</span> <span class="o">=</span> <span class="nc">PDType1Font</span><span class="o">.</span><span class="na">HELVETICA_BOLD</span><span class="o">;</span>
 
 <span class="c1">// Start a new content stream which will "hold" the to be created content</span>
-<span class="n">PDPageContentStream</span> <span class="n">contentStream</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDPageContentStream</span><span class="o">(</span><span class="n">document</span><span class="o">,</span> <span class="n">page</span><span class="o">);</span>
+<span class="nc">PDPageContentStream</span> <span class="n">contentStream</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDPageContentStream</span><span class="o">(</span><span class="n">document</span><span class="o">,</span> <span class="n">page</span><span class="o">);</span>
 
 <span class="c1">// Define a text content stream using the selected font, moving the cursor and drawing the text "Hello World"</span>
 <span class="n">contentStream</span><span class="o">.</span><span class="na">beginText</span><span class="o">();</span>
@@ -265,15 +265,15 @@
 <p>This small sample shows how to create a new document and print the text “Hello World” using a TrueType font.</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Create a document and add a page to it</span>
-<span class="n">PDDocument</span> <span class="n">document</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDDocument</span><span class="o">();</span>
-<span class="n">PDPage</span> <span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDPage</span><span class="o">();</span>
+<span class="nc">PDDocument</span> <span class="n">document</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDDocument</span><span class="o">();</span>
+<span class="nc">PDPage</span> <span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDPage</span><span class="o">();</span>
 <span class="n">document</span><span class="o">.</span><span class="na">addPage</span><span class="o">(</span> <span class="n">page</span> <span class="o">);</span>
 
 <span class="c1">// Create a new font object by loading a TrueType font into the document</span>
-<span class="n">PDFont</span> <span class="n">font</span> <span class="o">=</span> <span class="n">PDTrueTypeFont</span><span class="o">.</span><span class="na">loadTTF</span><span class="o">(</span><span class="n">document</span><span class="o">,</span> <span class="s">"Arial.ttf"</span><span class="o">);</span>
+<span class="nc">PDFont</span> <span class="n">font</span> <span class="o">=</span> <span class="nc">PDTrueTypeFont</span><span class="o">.</span><span class="na">loadTTF</span><span class="o">(</span><span class="n">document</span><span class="o">,</span> <span class="s">"Arial.ttf"</span><span class="o">);</span>
 
 <span class="c1">// Start a new content stream which will "hold" the to be created content</span>
-<span class="n">PDPageContentStream</span> <span class="n">contentStream</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDPageContentStream</span><span class="o">(</span><span class="n">document</span><span class="o">,</span> <span class="n">page</span><span class="o">);</span>
+<span class="nc">PDPageContentStream</span> <span class="n">contentStream</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDPageContentStream</span><span class="o">(</span><span class="n">document</span><span class="o">,</span> <span class="n">page</span><span class="o">);</span>
 
 <span class="c1">// Define a text content stream using the selected font, moving the cursor and drawing the text "Hello World"</span>
 <span class="n">contentStream</span><span class="o">.</span><span class="na">beginText</span><span class="o">();</span>
@@ -303,15 +303,15 @@ use when no mapping exists.</p>
 <p>This small sample shows how to create a new document and print the text “Hello World” using a PostScript Type1 font.</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Create a document and add a page to it</span>
-<span class="n">PDDocument</span> <span class="n">document</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDDocument</span><span class="o">();</span>
-<span class="n">PDPage</span> <span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDPage</span><span class="o">();</span>
+<span class="nc">PDDocument</span> <span class="n">document</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDDocument</span><span class="o">();</span>
+<span class="nc">PDPage</span> <span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDPage</span><span class="o">();</span>
 <span class="n">document</span><span class="o">.</span><span class="na">addPage</span><span class="o">(</span> <span class="n">page</span> <span class="o">);</span>
 
 <span class="c1">// Create a new font object by loading a PostScript Type 1 font into the document</span>
-<span class="n">PDFont</span> <span class="n">font</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDType1AfmPfbFont</span><span class="o">(</span><span class="n">doc</span><span class="o">,</span><span class="s">"cfm.afm"</span><span class="o">);</span>
+<span class="nc">PDFont</span> <span class="n">font</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDType1AfmPfbFont</span><span class="o">(</span><span class="n">doc</span><span class="o">,</span><span class="s">"cfm.afm"</span><span class="o">);</span>
 
 <span class="c1">// Start a new content stream which will "hold" the to be created content</span>
-<span class="n">PDPageContentStream</span> <span class="n">contentStream</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDPageContentStream</span><span class="o">(</span><span class="n">document</span><span class="o">,</span> <span class="n">page</span><span class="o">);</span>
+<span class="nc">PDPageContentStream</span> <span class="n">contentStream</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDPageContentStream</span><span class="o">(</span><span class="n">document</span><span class="o">,</span> <span class="n">page</span><span class="o">);</span>
 
 <span class="c1">// Define a text content stream using the selected font, moving the cursor and drawing the text "Hello World"</span>
 <span class="n">contentStream</span><span class="o">.</span><span class="na">beginText</span><span class="o">();</span>
@@ -339,7 +339,7 @@ use when no mapping exists.</p>
                 <!-- nothing in here on purpose -->
             </div>
             <div class="span9">
-                <p>Copyright © 2009&ndash;2019 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                <p>Copyright © 2009&ndash;2020 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
                     <br/>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
             </div>
         </div>

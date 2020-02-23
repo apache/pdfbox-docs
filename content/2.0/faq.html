@@ -144,10 +144,10 @@ don’t then the document will not be closed properly.  Also, you must close all
 PDDocument objects that get created.  The following code creates <strong>two</strong>
 PDDocument objects; one from the “new PDDocument()” and the second by the load method.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PDDocument</span><span class="o">();</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">PDDocument</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDDocument</span><span class="o">();</span>
 <span class="k">try</span>
 <span class="o">{</span>
-   <span class="n">doc</span> <span class="o">=</span> <span class="n">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span> <span class="s">"my.pdf"</span> <span class="o">);</span>
+   <span class="n">doc</span> <span class="o">=</span> <span class="nc">PDDocument</span><span class="o">.</span><span class="na">load</span><span class="o">(</span> <span class="s">"my.pdf"</span> <span class="o">);</span>
 <span class="o">}</span>
 <span class="k">finally</span>
 <span class="o">{</span>
@@ -347,7 +347,7 @@ but these would cost additional time and memory space. You can have a higher qua
                 <!-- nothing in here on purpose -->
             </div>
             <div class="span9">
-                <p>Copyright © 2009&ndash;2019 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                <p>Copyright © 2009&ndash;2020 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
                     <br/>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
             </div>
         </div>
