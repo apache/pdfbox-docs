@@ -22,6 +22,18 @@ title:   Blog
 
 # Blog
 
+{% comment %}
+As we transition from Jekyll to Eleventy because of the new maven/node.js based build
+there are two loops with different collection objects to be able to render with Jekyll
+as well as with Eleventy. will be cleaned up after the transisiton has been completed.
+{% endcomment %}
+{% comment %}this block will be handled by Eleventy{% endcomment %}
+{% for post in collections.posts reversed %}
+<h2>{{ post.data.title }}<br><small>{{ post.data.page.date | date: "%Y-%m-%d"}}</small></h2>
+{{ post.templateContent }}
+{% endfor %}
+
+{% comment %}this block will be handled by Jekyll{% endcomment %}
 {% for post in site.posts %}
 <h2>{{ post.title }}<br><small>{{ post.date  | date: "%Y-%m-%d"}}</small></h2>
 {{ post.content }}
