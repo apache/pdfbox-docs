@@ -1,0 +1,19 @@
+{
+  "name": "pdfbox-docs",
+  "version": "1.0.0-SNAPSHOT",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://gitbox.apache.org/repos/asf/pdfbox-docs.git"
+  },
+  "scripts": {
+    "build:noop": "echo \"Error: no test specified\" && exit 1",
+    "build": "run-s build:*",
+    "check:html": "html-validate 'staging/content/*/**/*.html'",
+    "checks": "run-s check:*"
+  },
+  "devDependencies": {
+    "html-validate": "^2.23.0",
+    "npm-run-all": "^4.1.5"
+  }
+}
