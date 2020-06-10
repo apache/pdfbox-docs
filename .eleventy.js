@@ -4,7 +4,10 @@ module.exports = function(eleventyConfig) {
   // needs the markdown-it-anchor plugin
   const markdownIt = require("markdown-it");
   const markdownItAnchor = require("markdown-it-anchor");
-  const markdownLib = markdownIt().use(markdownItAnchor);
+  const options = {
+    html: true
+  };
+  const markdownLib = markdownIt(options).use(markdownItAnchor);
   eleventyConfig.setLibrary("md", markdownLib);
 
   // copy static files to output
