@@ -26,6 +26,21 @@ title:   A Java PDF Library
     documents and the ability to extract content from documents. Apache PDFBox also includes several
     command-line utilities. Apache PDFBox is published under the Apache License v2.0.</p>
 
+    {% comment %}
+As we transition from Jekyll to Eleventy because of the new maven/node.js based build
+there are two loops with different collection objects to be able to render with Jekyll
+as well as with Eleventy. will be cleaned up after the transisiton has been completed.
+{% endcomment %}
+{% comment %}this block will be handled by Eleventy{% endcomment %}
+{% if collections.posts.length > 0 %}
+{% assign items = collections.posts  | reverse %}
+{% for post in items limit:1%}
+<h2>{{ post.data.title }}<br><small>{{ post.data.page.date | date: "%Y-%m-%d"}}</small></h2>
+{{ post.templateContent }}
+{% endfor %}
+{% endif %}
+
+{% comment %}this block will be handled by Jekyll{% endcomment %}
 {% for post in site.categories.news limit:1 %}
 <h2>{{ post.title }}<br><small>{{ post.date  | date: "%Y-%m-%d"}}</small></h2>
 {{ post.content }}
@@ -81,6 +96,21 @@ skills. Subscribe to the [Mailing Lists](/mailinglists.html) and find out how yo
 </div>
 
 ## News
+
+{% comment %}
+As we transition from Jekyll to Eleventy because of the new maven/node.js based build
+there are two loops with different collection objects to be able to render with Jekyll
+as well as with Eleventy. will be cleaned up after the transisiton has been completed.
+{% endcomment %}
+{% comment %}this block will be handled by Eleventy{% endcomment %}
+{% if collections.posts.length > 0 %}
+{% assign items = collections.posts %}
+{% for post in items offset:1 limit:5 %}
+<h2>{{ post.data.title }}<br><small>{{ post.data.page.date | date: "%Y-%m-%d"}}</small></h2>
+{{ post.templateContent }}
+{% endfor %}
+{% endif %}
+
 {% for post in site.categories.news offset:1 limit:5 %}
 <h3>{{ post.title }}<br><small>{{ post.date  | date: "%Y-%m-%d"}}</small></h3>
 {{ post.content }}

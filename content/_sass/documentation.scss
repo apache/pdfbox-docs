@@ -58,6 +58,16 @@
       text-transform: uppercase;
     }
 
+    ol {
+      list-style: none;
+      padding: 0 1rem;
+    }
+
+    & > ol {
+      list-style: none;
+      padding: 0;
+    }
+
     ul {
       list-style: none;
       padding: 0 1rem;

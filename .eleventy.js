@@ -7,6 +7,10 @@ module.exports = function(eleventyConfig) {
   const options = {
     html: true
   };
+
+  const pluginTOC = require('eleventy-plugin-nesting-toc');
+  eleventyConfig.addPlugin(pluginTOC, {tags: ['h2', 'h3']});
+
   const markdownLib = markdownIt(options).use(markdownItAnchor);
   eleventyConfig.setLibrary("md", markdownLib);
 
