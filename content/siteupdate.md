@@ -108,3 +108,48 @@ from the `<SVN_ROOT>/../pdfbox` directory.
 It uses the same `pdfbox-site` settings from above to connect to the repository.
 
 <p class="alert alert-info">As <code>mvn clean</code> will delete the javadoc files download from the Apache CMS it's advised to configure <code>${svn.scmJavadocCheckoutDirectory}</code> to a local directory not below <code>./target</code>.</p>
+
+## Build with Maven
+
+The project provides a simple way to build the website sources locally using the build tool [Maven](https://maven.apache.org/).
+
+The Maven build automatically downloads the tool binaries such as `node` and `yarn` for you. You do not need to install
+those tools on your host then. The binaries are added to the local project sources only and generate the website content.
+
+As the Maven build uses pinned versions of `node` and `yarn` that are tested to build the website you most likely avoid
+build errors due to incompatible versions of `Node.js` tooling installed on your machine.
+
+### Preparing Maven
+
+Make sure that you have Maven installed.
+
+    $ mvn --version
+
+If this command fails with an error, you do not have Maven installed.
+
+Please install Maven using your favorite package manager (like [Homebrew](https://brew.sh/)) or from
+official [Maven binaries](https://maven.apache.org/install.html)
+
+### Building from scratch
+
+When building everything from scratch the build executes following steps:
+
+- Download `Node.js` and `npm` binaries to the local project
+- Load required libraries to the local project using `npm`
+- Build the website content using Eleventy
+
+You can do all of this with one single command:
+
+    $ mvn package
+
+The whole process takes up to five minutes (time to grab some coffee!)
+
+When the build is finished you should see the generated website in the `public` directory.
+
+### Clean build
+
+When rebuilding the website the process uses some cached content.
+If you want to start from scratch for some reason you can simply add the `clean` operation to the build which removes
+all generated sources in the project first.
+
+    $ mvn clean package
