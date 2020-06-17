@@ -24,18 +24,22 @@ title:   Updating the Website
 
 The content for the PDFBox website is kept in a [Git repository](https://git-wip-us.apache.org/repos/asf/pdfbox-docs) which is also mirrored to [GitHub](https://github.com/apache/pdfbox-docs). The site is split into two parts: the static content and the Javadoc for the PDFBox API. Both parts are build independently as further described below.
 
-## Project Info
-The site is based on [Jekyll](https://jekyllrb.com). So you have to be familiar with the [Markdown](https://daringfireball.net/projects/markdown/syntax) template language and have Jekyll (ver. 2+) installed to contribute to the project.
-
-## Contribute
+# Contribute
 If you would like to enhance the website content you can submit a patch. To do so please open a ticket at our [Issue Tracker](https://issues.apache.org/jira/browse/PDFBOX), use `Documentation` for the `Component` and add your patch to the ticket.
 
 ## Development
 
-### Install Jekyll
-Follow the instructions available on the [Jekyll](https://jekyllrb.com) website.
+Tools used to generate the website:
+
+- [Git](https://git-scm.com/) a source code management tool used to fetch document sources from different
+  github repositories.
+- [Node.js](https://nodejs.org/) a JavaScript runtime used to build the website. You will need to use Node.js version 10.
+  and manage required libraries.
+- (installed via npm) [Eleventy](https://www.11ty.dev//) a simpler static site generator.
+- (optional) [Maven](https://maven.apache.org/) a build tool used to run the complete website generating process
 
 ### Checkout from the Git Repository
+
 Before you can edit the site, you need to check it out from the Git repository:
 
 ~~~
@@ -43,16 +47,12 @@ git clone https://git-wip-us.apache.org/repos/asf/pdfbox-docs
 ~~~
 
 ### Local Changes
-You can now do the changes and additions to the sources of the PDFBox website. To test these locally use
+
+To build the website go to the project root directory and run:
 
 ~~~
-jekyll serve
-~~~
-
-which will compile the changes and run a local webserver at
-
-~~~
-http://localhost:4000
+$ npm install # needed only once, or if dependencies change
+$ npm run build   # to perform the build
 ~~~
 
 ### Publish the Website (For Comitters Only)
@@ -75,7 +75,7 @@ Add the following server configuration in your ~/.m2/settings.xml file
 Ensure that the new website content can build locally
 
 ~~~
-jekyll build
+npm run build
 ~~~
 
 This will read the sources and generate the new content in the ``./staging`` directory.
@@ -100,8 +100,9 @@ the changes to the PDFBox production website.
 To publish the javadocs follow these steps:
 
 Run
-
-	$ mvn clean javadoc:aggregate scm-publish:publish-scm
+~~~
+  $ mvn clean javadoc:aggregate scm-publish:publish-scm
+~~~
 
 from the `<SVN_ROOT>/../pdfbox` directory.
 
@@ -113,11 +114,11 @@ It uses the same `pdfbox-site` settings from above to connect to the repository.
 
 The project provides a simple way to build the website sources locally using the build tool [Maven](https://maven.apache.org/).
 
-The Maven build automatically downloads the tool binaries such as `node` and `yarn` for you. You do not need to install
+The Maven build automatically downloads the tool binaries such as `node` and `npm` for you. You do not need to install
 those tools on your host then. The binaries are added to the local project sources only and generate the website content.
 
-As the Maven build uses pinned versions of `node` and `yarn` that are tested to build the website you most likely avoid
-build errors due to incompatible versions of `Node.js` tooling installed on your machine.
+As the Maven build uses pinned versions of `node` and `npm` that are tested to build the website you most likely avoid
+build errors due to incompatible versions of `node.js` tooling installed on your machine.
 
 ### Preparing Maven
 
