@@ -55,6 +55,25 @@ $ npm install # needed only once, or if dependencies change
 $ npm run build   # to perform the build
 ~~~
 
+### Preview Changes
+
+While changing the content the website generation can be done in **Preview** mode. This will fire up a little webserver and update the browser window when there are changes so these are reflected immediately.
+~~~
+$ npm install # needed only once, or if dependencies change
+$ npm run preview   # to start the preview mode
+~~~
+
+### Validate the generated files
+
+To validate the generated website document go to the project root directory and run:
+
+~~~
+$ npm run checks
+~~~
+
+This will validate the generated HTML for conformance to the specification as well as run accessibility tests. Testing is done using [HTML-validate](https://html-validate.org/).
+
+
 ### Publish the Website (For Comitters Only)
 After you have done the local changes follow these steps to publish the content:
 
