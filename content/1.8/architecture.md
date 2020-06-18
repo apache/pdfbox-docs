@@ -65,11 +65,11 @@ As outlined above the basic PDF objects are represented in PDFBox in the org.apa
 | PDF Type | Description | Example | PDFBox class | ISO 32000 |
 | --- | --- | --- | --- | --- |
 | Boolean | Standard True/False values | true | org.apache.pdfbox.cos.COSBoolean | 7.3.2 |
-| Number | Integer and floating point numbers | 1 2.3 | org.apache.pdfbox.cos.COSInteger<br/>org.apache.pdfbox.cos.COSFloat | 7.3.3 |
+| Number | Integer and floating point numbers | 1 2.3 | org.apache.pdfbox.cos.COSInteger<br>org.apache.pdfbox.cos.COSFloat | 7.3.3 |
 | String | A sequence of characters | (This is a string) | org.apache.pdfbox.cos.COSString | 7.3.4 |
 | Name | A predefined value in a PDF document, typically used as a key in a dictionary | /Type | org.apache.pdfbox.cos.COSName | 7.3.5 |
 | Array | Arrays are one-dimensional lists of objects accessed by a numeric index. Within an array each basic object is permitted as an entry. | [549 3.14 false (Ralph) /SomeName] | org.apache.pdfbox.cos.COSArray | 7.3.6 |
-| Dictionary | A map of name value pairs | <<<br/>/Type /XObject<br/>/Name (Name)</br>/Size 1</br>>> | org.apache.pdfbox.cos.COSDictionary | 7.3.7 |
+| Dictionary | A map of name value pairs | <<<br>/Type /XObject<br>/Name (Name)<br>/Size 1<br>>> | org.apache.pdfbox.cos.COSDictionary | 7.3.7 |
 | Stream | A stream of data, typically compressed. This is used for page contents, images and embedded font streams. | 12 0 obj << /Type /XObject >> stream 030004040404040404 endstream | org.apache.pdfbox.cos.COSStream | 7.3.8 |
 | Object | A wrapper to any of the other objects, this can be used to reference an object multiple times. An object is referenced by using two numbers, an object number and a generation number. Initially the generation number will be zero unless the object got replaced later in the stream. | 12 0 obj << /Type /XObject >> endobj | org.apache.pdfbox.cos.COSObject | |
 

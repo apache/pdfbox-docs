@@ -241,5 +241,5 @@ Usage: ``java -jar pdfbox-app-2.y.z.jar WriteDecodedDoc <input-file> <output-fil
 | Command-Line Parameter | Default | Description |
 | --- | --- | --- |
 | -password |  | The password to the PDF document. |
-| <input-file> |  | The PDF file to decompress |
-| <output-file> |  | The destination PDF file |
+| input-file |  | The PDF file to decompress |
+| output-file |  | The destination PDF file |

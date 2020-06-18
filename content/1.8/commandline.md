@@ -262,5 +262,5 @@ Usage: ``java -jar pdfbox-app-x.y.z.jar WriteDecodedDoc <input-file> <output-fil
 | --- | --- | --- |
 | -password |  | The password to the PDF document. |
 | -nonSeq 	| false | Use the new non sequential parser. |
-| <input-file> |  | The PDF file to decompress |
-| <output-file> |  | The destination PDF file |
+| input-file |  | The PDF file to decompress |
+| output-file |  | The destination PDF file |

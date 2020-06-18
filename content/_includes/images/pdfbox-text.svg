@@ -1,4 +1,6 @@
-<svg class="pdfbox-brand-text" xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" viewBox="0 0 109.81066666651577 30.943999999957384">
+<svg focusable="false" class="pdfbox-brand-text" xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" viewBox="0 0 109.81066666651577 30.943999999957384" aria-labelledby="brandTextTitle brandTextDesc" role="img">
+  <title id="brandTextTitle">PDFBox brand text</title>
+  <desc id="brandTextDesc">PDFBox, the brand text.</desc>
   <path d="M0 .31h6.528q1.792 0 3.157.47 1.366.468 2.475 1.663 1.11 1.194 1.536 2.816.427 1.57.427 4.3 0 2-.256 3.45-.214 1.41-.982 2.64-.896 1.492-2.39 2.345-1.492.81-3.924.81H4.36v11.87H0V.305zm4.352 14.42h2.09q1.323 0 2.05-.383.724-.384 1.065-1.024.342-.683.384-1.622.09-.93.09-2.09 0-1.06-.08-2-.04-.98-.38-1.66-.3-.72-.98-1.11-.68-.43-1.96-.43H4.36v10.32z" fill-rule="evenodd"/>
   <path d="M17.333.31h6.443q3.712 0 5.675 2.09 1.97 2.048 1.97 5.76v14.208q0 4.267-2.09 6.315-2.05 2.005-5.93 2.005h-6.06V.308zm4.352 26.282h2.006q1.84 0 2.61-.896.77-.94.77-2.9V8.16q0-1.792-.72-2.773-.72-.982-2.64-.982H21.7v22.187z" fill-rule="evenodd"/>
   <path d="M35.583.31h12.97v4.095h-8.618v9.216h7.51v4.1h-7.51v12.97h-4.352V.31z"/>
