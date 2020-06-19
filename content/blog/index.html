@@ -23,13 +23,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command-line utilities. Apache PDFBox is published under the Apache License v2.0.
-">
+    <meta name="description" content="">
 
-    <title>Apache PDFBox | Blog</title>
+    <title>Apache PDFBox |  Blog</title>
 
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/pygments-github.css" rel="stylesheet">
+    <link href="/css/prism.css" rel="stylesheet">
     <link href="/css/styles.css" rel="stylesheet">
 
     
@@ -45,8 +44,10 @@
 
   <header class="main-header">
     <div class="main-header-logo">
-      <a href="/">
-        <svg class="pdfbox-brand-toolbox" viewBox="0 0 744.09448819 1052.3622047" xmlns="http://www.w3.org/2000/svg">
+      <a href="/" aria-label="Navigation to the PDFBox home page">
+        <svg focusable="false" class="pdfbox-brand-toolbox" viewBox="0 0 744.09448819 1052.3622047" xmlns="http://www.w3.org/2000/svg" aria-labelledby="brandImageTitle brandImageDesc" role="img">
+  <title id="brandImageTitle">PDFBox Brand Logo</title>
+  <desc id="brandImageDesc">The PDFBox logo showing a toolbox.</desc>
   <g transform="matrix(1.25 0 0 -1.25 -317.14 1018.08)" clip-path="url(#clipPath3375)">
     <path d="M821.924 376.535L463.24 122.525l-203.83 76.86c23.89 6.02 46.87 15.197 68.335 27.29 60.063 33.835 105.686 88.46 128.282 153.59 2.634 4.66 8.11 6.92 13.265 5.47 4.667-1.31 8.01-5.41 8.353-10.247l-3.572-188.12 334.99 193.957c2.41 1 5.113 1.028 7.54.075 2.315-.907 4.21-2.64 5.32-4.865zm-1.307 97.91l.13-78.324c-.87-2.72-3.342-4.61-6.197-4.75-3.104-.14-5.924 1.8-6.893 4.75l1.29 79.54c.386 2.92 2.893 5.09 5.835 5.04 3.37-.04 6.022-2.89 5.835-6.25z"/>
     <path d="M751.88 651.666c-.237.002-.48-.022-.723-.077l-363.512-25.15c-10.37-.73-19.583-6.76-24.588-15.87-6.943-12.64-4.677-28.26 5.864-37.72 2.85-2.56 6.22-4.49 8.97-7.16 2.19-2.12 3.93-4.65 5.12-7.45 23.7-26.86 30.3-64.76 17.08-98.05-4.75-11.96-11.97-22.77-21.2-31.73l-73.74 16.1 46.69 115.89c2.01 3.07.64 7.21-2.8 8.49-2.8 1.03-5.91-.34-7.03-3.1L286.49 448.8l-11.79 4.32c-2.097.28-4.21-.39-5.76-1.825-1.16-1.077-1.925-2.516-2.16-4.083l-11.53-189.68c1.66-1.83 4.03-2.85 6.5-2.798 2.533.05 4.913 1.22 6.5 3.197 6.22 22.46 11.216 45.23 14.96 68.22 5.137 31.55 7.91 63.43 8.3 95.39l136.152-15.28c2.396-1.09 5.032-1.56 7.66-1.35 2.75.22 5.396 1.16 7.663 2.73 41.62 19.22 83.375 38.15 125.26 56.79 41.615 18.52 83.36 36.75 125.23 54.68 1.935-.16 3.703-1.16 4.843-2.73 1.266-1.74 1.618-3.99.948-6.04-3.8-3.45-7.333-7.19-10.575-11.17-3.5-4.3-6.65-8.88-9.42-13.69.11-.34.22-.68.35-1.01.32-.85.7-1.68 1.25-2.41 2.42-3.16 7.04-3.55 9.96-.84 8.66 9.71 19.21 17.557 31.01 23.05 10.67 4.97 22.17 7.927 33.92 8.717 2.58 1.626 4.23 4.39 4.43 7.437.14 2.06-.41 4.103-1.56 5.815-3.63-.24-7.27.26-10.71 1.47-3.55 1.25-6.81 3.23-9.55 5.815l19.55 78.14c-1.4 1.684-3.13 3.07-5.08 4.06-2.28 1.16-4.81 1.76-7.37 1.746-53.05-4.71-106.21-8.08-159.433-10.11-53.34-2.035-106.73-2.72-160.1-2.056-3.79-.575-6.82 3.092-5.54 6.7.63 1.784 2.31 2.98 4.2 2.996l321.783 26.06c2.094.873 3.99 1.933 5.74 3.18 1.46 1.036 2.987 2.365 2.947 4.34-.034 1.75-1.484 3.09-3.154 3.11zm-23.61-56.02c.952-.32 1.776-.934 2.354-1.755.472-.67.76-1.45.833-2.27l-12.96-35.37c-2.706-3.39-5.87-6.4-9.404-8.92-3.324-2.37-6.945-4.3-10.77-5.73l-260.77-58.65-21.01 80.83 311.727 31.88z"/>
@@ -54,7 +55,9 @@
   </g>
 </svg>
 
-        <svg class="pdfbox-brand-text" xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" viewBox="0 0 109.81066666651577 30.943999999957384">
+        <svg focusable="false" class="pdfbox-brand-text" xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" viewBox="0 0 109.81066666651577 30.943999999957384" aria-labelledby="brandTextTitle brandTextDesc" role="img">
+  <title id="brandTextTitle">PDFBox brand text</title>
+  <desc id="brandTextDesc">PDFBox, the brand text.</desc>
   <path d="M0 .31h6.528q1.792 0 3.157.47 1.366.468 2.475 1.663 1.11 1.194 1.536 2.816.427 1.57.427 4.3 0 2-.256 3.45-.214 1.41-.982 2.64-.896 1.492-2.39 2.345-1.492.81-3.924.81H4.36v11.87H0V.305zm4.352 14.42h2.09q1.323 0 2.05-.383.724-.384 1.065-1.024.342-.683.384-1.622.09-.93.09-2.09 0-1.06-.08-2-.04-.98-.38-1.66-.3-.72-.98-1.11-.68-.43-1.96-.43H4.36v10.32z" fill-rule="evenodd"/>
   <path d="M17.333.31h6.443q3.712 0 5.675 2.09 1.97 2.048 1.97 5.76v14.208q0 4.267-2.09 6.315-2.05 2.005-5.93 2.005h-6.06V.308zm4.352 26.282h2.006q1.84 0 2.61-.896.77-.94.77-2.9V8.16q0-1.792-.72-2.773-.72-.982-2.64-.982H21.7v22.187z" fill-rule="evenodd"/>
   <path d="M35.583.31h12.97v4.095h-8.618v9.216h7.51v4.1h-7.51v12.97h-4.352V.31z"/>
@@ -67,13 +70,12 @@
       </a>
     </div>
     <nav class="wrapper">
-      <input type="checkbox" id="menu-toggle" />
+      <input type="checkbox" id="menu-toggle">
       <label for="menu-toggle" class="label-toggle"></label>
       <ul>
         <li><a href="/blog">Blog</a></li>
       </ul>
     </nav>
-  </container>
 </header>
 
 
@@ -155,312 +157,204 @@
                     <li><a href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
                 </ul>
 		<!-- dontation page logo/link-->
-		<a href="https://www.apache.org/foundation/contributing.html"><img width="135" src="/images/SupportApache.jpg"></a>
+		<a href="https://www.apache.org/foundation/contributing.html"><img width="135" src="/images/SupportApache.jpg" alt="Support Apache"></a>
             </div>
             <div class="col-xs-12 col-sm-9">
                 <h1 id="blog">Blog</h1>
-
-<h2>Apache PDFBox 2.0.20 released<br /><small>2020-05-07</small></h2>
+<h2>Apache PDFBox 2.0.20 released<br><small>2020-05-07</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 2.0.20. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12346996">full release notes</a> for details about this release.</p>
-
-<h2>Apache PDFBox 2.0.19 released<br /><small>2020-02-23</small></h2>
+<h2>Apache PDFBox 2.0.19 released<br><small>2020-02-23</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 2.0.19. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12346594">full release notes</a> for details about this release.</p>
-
-<h2>Apache PDFBox 2.0.18 released<br /><small>2019-12-23</small></h2>
+<h2>Apache PDFBox 2.0.18 released<br><small>2019-12-23</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 2.0.18. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12346159">full release notes</a> for details about this release.</p>
-
-<h2>Apache PBFBox JBIG2 ImageIO plugin 3.0.3 released<br /><small>2019-12-18</small></h2>
+<h2>Apache PBFBox JBIG2 ImageIO plugin 3.0.3 released<br><small>2019-12-18</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox JBIG2 ImageIO plugin version 3.0.3. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12344157">full release notes</a> for details about this release.</p>
-
-<h2>Apache PDFBox 2.0.17 released<br /><small>2019-09-20</small></h2>
+<h2>Apache PDFBox 2.0.17 released<br><small>2019-09-20</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 2.0.17. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12345681">full release notes</a> for details about this release.</p>
-
-<h2>Apache PDFBox 2.0.16 released<br /><small>2019-06-27</small></h2>
+<h2>Apache PDFBox 2.0.16 released<br><small>2019-06-27</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 2.0.16. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12345355">full release notes</a> for details about this release.</p>
-
-<h2>CVE-2019-0228 XML External Entity vulnerability<br /><small>2019-04-12</small></h2>
+<h2>CVE-2019-0228 XML External Entity vulnerability<br><small>2019-04-12</small></h2>
 <p>Due to a XML External Entity vulnerability we strongly recommend to update to the most recent version of Apache PDFBox.</p>
-
 <p><strong>Versions Affected:</strong>
 Apache PDFBox 2.0.14 only</p>
-
 <p><strong>Mitigation:</strong>
 Upgrade to Apache PDFBox 2.0.15</p>
-
-<h2>Apache PDFBox 2.0.15 released<br /><small>2019-04-11</small></h2>
+<h2>Apache PDFBox 2.0.15 released<br><small>2019-04-11</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 2.0.15. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12344997">full release notes</a> for details about this release.</p>
-
-<h2>Apache PDFBox 2.0.14 released<br /><small>2019-02-28</small></h2>
+<h2>Apache PDFBox 2.0.14 released<br><small>2019-02-28</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 2.0.14. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12344563">full release notes</a> for details about this release.</p>
-
-<h2>Apache PDFBox 2.0.13 released<br /><small>2018-12-02</small></h2>
+<h2>Apache PDFBox 2.0.13 released<br><small>2018-12-02</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 2.0.13. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12344153">full release notes</a> for details about this release.</p>
-
-<h2>[CVE-2018-11797] DoS vulnerability in Apache PDFBox parser<br /><small>2018-10-05</small></h2>
+<h2>[CVE-2018-11797] DoS vulnerability in Apache PDFBox parser<br><small>2018-10-05</small></h2>
 <p>DoS vulnerability in Apache PDFBox parser we strongly recommend to update to the most recent version of Apache PDFBox.</p>
-
 <p><strong>Versions Affected:</strong>
 Apache PDFBox 1.8.0 to 1.8.15 and 2.0.0RC1 to 2.0.11. Earlier, unsupported versions may be affected as well.</p>
-
 <p><strong>Mitigation:</strong>
 Upgrade to Apache PDFBox 1.8.16 respectively 2.0.12</p>
-
-<h2>Apache PDFBox 1.8.16 and 2.0.12 released<br /><small>2018-10-05</small></h2>
+<h2>Apache PDFBox 1.8.16 and 2.0.12 released<br><small>2018-10-05</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 1.8.16 and 2.0.12. They are available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the full release notes <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12343490">1.8.16</a> and <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12343489">2.0.12</a> for details about this release.</p>
-
-<h2>Apache PBFBox JBIG2 ImageIO plugin 3.0.2 released<br /><small>2018-09-25</small></h2>
+<h2>Apache PBFBox JBIG2 ImageIO plugin 3.0.2 released<br><small>2018-09-25</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox JBIG2 ImageIO plugin version 3.0.2. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12343308">full release notes</a> for details about this release.</p>
-
-<h2>[CVE-2018-8036] DoS (OOM) Vulnerability in Apache PDFBox's AFMParser<br /><small>2018-06-30</small></h2>
+<h2>[CVE-2018-8036] DoS (OOM) Vulnerability in Apache PDFBox's AFMParser<br><small>2018-06-30</small></h2>
 <p>Due to a DoS (OOM) Vulnerability in AFMParser we strongly recommend to update to the most recent version of Apache PDFBox.</p>
-
 <p><strong>Versions Affected:</strong>
 Apache PDFBox 1.8.0 to 1.8.14 and 2.0.0RC1 to 2.0.10. Earlier, unsupported versions may be affected as well.</p>
-
 <p><strong>Mitigation:</strong>
 Upgrade to Apache PDFBox 1.8.15 respectively 2.0.11</p>
-
-<h2>Apache PDFBox 1.8.15 and 2.0.11 released<br /><small>2018-06-29</small></h2>
+<h2>Apache PDFBox 1.8.15 and 2.0.11 released<br><small>2018-06-29</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox versions 1.8.15 and 2.0.11. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12343070">full release notes 1.8.15</a> and <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12343466">full release notes 2.0.11</a> for details about these releases.</p>
-
-<h2>Apache PDFBox 2.0.10 released<br /><small>2018-06-21</small></h2>
+<h2>Apache PDFBox 2.0.10 released<br><small>2018-06-21</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 2.0.10. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12342889">full release notes</a> for details about this release.</p>
-
-<h2>Apache PBFBox JBIG2 ImageIO plugin 3.0.1 released<br /><small>2018-05-17</small></h2>
+<h2>Apache PBFBox JBIG2 ImageIO plugin 3.0.1 released<br><small>2018-05-17</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox JBIG2 ImageIO plugin version 3.0.1. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12342838">full release notes</a> for details about this release.</p>
-
-<h2>Apache PDFBox 1.8.14 released<br /><small>2018-04-20</small></h2>
+<h2>Apache PDFBox 1.8.14 released<br><small>2018-04-20</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 1.8.14. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12338760">full release notes</a> for details about this release.</p>
-
-<h2>Apache PDFBox 2.0.9 released<br /><small>2018-03-23</small></h2>
+<h2>Apache PDFBox 2.0.9 released<br><small>2018-03-23</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 2.0.9. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12342085">full release notes</a> for details about this release.</p>
-
-<h2>Apache PBFBox JBIG2 ImageIO plugin 3.0.0 released<br /><small>2018-02-27</small></h2>
+<h2>Apache PBFBox JBIG2 ImageIO plugin 3.0.0 released<br><small>2018-02-27</small></h2>
 <p>The Apache PDFBox community is pleased to announce the new release of
 Apache JBIG2 ImageIO plugin version 3.0.0. It is the first release under
 the umbrella of the PDFBox PMC and is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12342175">full release notes</a> for details about this release.</p>
-
-<h2>Apache PDFBox 2.0.8 released<br /><small>2017-11-02</small></h2>
+<h2>Apache PDFBox 2.0.8 released<br><small>2017-11-02</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 2.0.8. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12341096">full release notes</a> for details about this release.</p>
-
-<h2>Apache PDFBox 2.0.7 released<br /><small>2017-07-20</small></h2>
+<h2>Apache PDFBox 2.0.7 released<br><small>2017-07-20</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 2.0.7. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12340513">full release notes</a> for details about this release.</p>
-
-<h2>Apache PDFBox 2.0.6 released<br /><small>2017-05-15</small></h2>
+<h2>Apache PDFBox 2.0.6 released<br><small>2017-05-15</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 2.0.6. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12339779">full release notes</a> for details about this release.</p>
-
-<h2>Apache PDFBox 2.0.5 released<br /><small>2017-03-17</small></h2>
+<h2>Apache PDFBox 2.0.5 released<br><small>2017-03-17</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 2.0.5. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12338759">full release notes</a> for details about this release.</p>
-
-<h2>Apache PDFBox 2.0.4 released<br /><small>2016-12-16</small></h2>
+<h2>Apache PDFBox 2.0.4 released<br><small>2016-12-16</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 2.0.4. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12336070">full release notes</a> for details about this release.</p>
-
-<h2>Apache PDFBox 1.8.13 released<br /><small>2016-12-09</small></h2>
+<h2>Apache PDFBox 1.8.13 released<br><small>2016-12-09</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 1.8.13.</p>
-
 <p>The release is available for download at: <a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12335586">full release notes</a> for details about this release.</p>
-
-<h2>Apache PDFBox 2.0.3 released<br /><small>2016-09-17</small></h2>
+<h2>Apache PDFBox 2.0.3 released<br><small>2016-09-17</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 2.0.3. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12336070">full release notes</a> for details about this release.</p>
-
-<h2>Apache PDFBox 2.0.2 released<br /><small>2016-06-09</small></h2>
+<h2>Apache PDFBox 2.0.2 released<br><small>2016-06-09</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 2.0.2. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12335585">full release notes</a> for details about this release.</p>
-
-<h2>CVE-2016-2175 XML External Entity vulnerability<br /><small>2016-05-27</small></h2>
+<h2>CVE-2016-2175 XML External Entity vulnerability<br><small>2016-05-27</small></h2>
 <p>Due to a XML External Entity vulnerability we strongly recommend to update to the most recent version of Apache PDFBox.</p>
-
 <p><strong>Versions Affected:</strong>
 Apache PDFBox 1.8.0 to 1.8.11 and 2.0.0. Earlier, unsupported versions may be affected as well.</p>
-
 <p><strong>Mitigation:</strong>
 Upgrade to Apache PDFBox 1.8.12 respectively 2.0.1</p>
-
-<h2>Apache PDFBox 1.8.12 and 2.0.1 released<br /><small>2016-04-26</small></h2>
+<h2>Apache PDFBox 1.8.12 and 2.0.1 released<br><small>2016-04-26</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 1.8.12 and 2.0.1. They are available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the full release notes <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12334652">1.8.12</a> and <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12335342">2.0.1</a> for details about this release.</p>
-
-<h2>Apache PDFBox 2.0.0 released<br /><small>2016-03-18</small></h2>
+<h2>Apache PDFBox 2.0.0 released<br><small>2016-03-18</small></h2>
 <p>After more than 3 years of development the Apache PDFBox community is pleased to
 announce the release of Apache PDFBox version 2.0.0. It is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">http://pdfbox.apache.org/download.cgi</a></p>
-
 <p>The <a href="https://pdfbox.apache.org/2.0/migration.html">Migration Guide</a> shall give users coming from
 PDFBox 1.8 or earlier an overview about things to look at when switching over. More details to come.</p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12319281">full release notes</a> for details about this release.</p>
-
-<h2>Apache PDFBox 1.8.11 released<br /><small>2016-01-18</small></h2>
+<h2>Apache PDFBox 1.8.11 released<br><small>2016-01-18</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 1.8.11.</p>
-
 <p>The release is available for download at: <a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12333061">full release notes</a> for details about this release.</p>
-
-<h2>Apache PDFBox 2.0.0 RC3 released<br /><small>2016-01-15</small></h2>
+<h2>Apache PDFBox 2.0.0 RC3 released<br><small>2016-01-15</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 2.0.0 RC3. The release is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>The numerous feedback on our second release candidate helps us to make
 this release candidate better again, e. g. optimized font cache, improved text
 extraction. A lot of bug fixes are included as well.
-We’d like to thank everybody who helps us to get a step foward.
+We'd like to thank everybody who helps us to get a step foward.
 Please have a look at the new release candidate as well, so that the next
 release hopefully could be the final one.</p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12319281">full release notes</a> for details about this release.</p>
-
-<h2>Apache PDFBox 2.0.0 RC2 released<br /><small>2015-11-22</small></h2>
+<h2>Apache PDFBox 2.0.0 RC2 released<br><small>2015-11-22</small></h2>
 <p>The Apache PDFBox community is pleased to announce the release of
 Apache PDFBox version 2.0.0 RC2. The release is available for download at:</p>
-
 <p><a href="https://pdfbox.apache.org/download.cgi">https://pdfbox.apache.org/download.cgi</a></p>
-
 <p>The numerous feedback on our first release candidate helps us to fix a lot
-of issues. We’d like to thank everybody who helps us to get a step foward.
+of issues. We'd like to thank everybody who helps us to get a step foward.
 Please have a look at the new release candidate as well, so that the next
 release hopefully could be the final one.</p>
-
 <p>See the <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310760&amp;version=12319281">full release notes</a> for details about this release.</p>
-
-<h2>Apache PDFBox 2.0.0 RC1 released<br /><small>2015-10-19</small></h2>
+<h2>Apache PDFBox 2.0.0 RC1 released<br><small>2015-10-19</small></h2>
 <p>With the initial discussions starting 3 years ago PDFBox 2.0.0 is in the works for
 quite some time now - <strong>and we are in the final stages!</strong> To give you the opportunity
 to provide feedback a <a href="https://pdfbox.apache.org/download.cgi">PDFBox 2.0.0-RC1 Release Candidate</a>
 is now available.</p>
-
 <p>The <a href="https://pdfbox.apache.org/2.0/migration.html">Migration Guide</a> shall give users coming from
 PDFBox 1.8 or earlier an overview about things to look at when switching over. More details to come.</p>
-
 
             </div>
         </div>
@@ -474,7 +368,7 @@ PDFBox 1.8 or earlier an overview about things to look at when switching over. M
             </div>
             <div class="span9">
                 <p>Copyright © 2009&ndash;2020 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
-                    <br/>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
+                    <br>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
             </div>
         </div>
     </div>
@@ -484,7 +378,7 @@ PDFBox 1.8 or earlier an overview about things to look at when switching over. M
     <!-- Twitter Bootstrap and jQuery after this line. -->
 <script src="//code.jquery.com/jquery-latest.min.js"></script>
 <script src="/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript">
+<script >
 
     $(document).ready(function () {
             $('[data-toggle="offcanvas"]').click(function () {

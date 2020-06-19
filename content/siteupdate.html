@@ -23,13 +23,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command-line utilities. Apache PDFBox is published under the Apache License v2.0.
-">
+    <meta name="description" content="">
 
-    <title>Apache PDFBox | Updating the Website</title>
+    <title>Apache PDFBox |  Updating the Website</title>
 
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/pygments-github.css" rel="stylesheet">
+    <link href="/css/prism.css" rel="stylesheet">
     <link href="/css/styles.css" rel="stylesheet">
 
     
@@ -45,8 +44,10 @@
 
   <header class="main-header">
     <div class="main-header-logo">
-      <a href="/">
-        <svg class="pdfbox-brand-toolbox" viewBox="0 0 744.09448819 1052.3622047" xmlns="http://www.w3.org/2000/svg">
+      <a href="/" aria-label="Navigation to the PDFBox home page">
+        <svg focusable="false" class="pdfbox-brand-toolbox" viewBox="0 0 744.09448819 1052.3622047" xmlns="http://www.w3.org/2000/svg" aria-labelledby="brandImageTitle brandImageDesc" role="img">
+  <title id="brandImageTitle">PDFBox Brand Logo</title>
+  <desc id="brandImageDesc">The PDFBox logo showing a toolbox.</desc>
   <g transform="matrix(1.25 0 0 -1.25 -317.14 1018.08)" clip-path="url(#clipPath3375)">
     <path d="M821.924 376.535L463.24 122.525l-203.83 76.86c23.89 6.02 46.87 15.197 68.335 27.29 60.063 33.835 105.686 88.46 128.282 153.59 2.634 4.66 8.11 6.92 13.265 5.47 4.667-1.31 8.01-5.41 8.353-10.247l-3.572-188.12 334.99 193.957c2.41 1 5.113 1.028 7.54.075 2.315-.907 4.21-2.64 5.32-4.865zm-1.307 97.91l.13-78.324c-.87-2.72-3.342-4.61-6.197-4.75-3.104-.14-5.924 1.8-6.893 4.75l1.29 79.54c.386 2.92 2.893 5.09 5.835 5.04 3.37-.04 6.022-2.89 5.835-6.25z"/>
     <path d="M751.88 651.666c-.237.002-.48-.022-.723-.077l-363.512-25.15c-10.37-.73-19.583-6.76-24.588-15.87-6.943-12.64-4.677-28.26 5.864-37.72 2.85-2.56 6.22-4.49 8.97-7.16 2.19-2.12 3.93-4.65 5.12-7.45 23.7-26.86 30.3-64.76 17.08-98.05-4.75-11.96-11.97-22.77-21.2-31.73l-73.74 16.1 46.69 115.89c2.01 3.07.64 7.21-2.8 8.49-2.8 1.03-5.91-.34-7.03-3.1L286.49 448.8l-11.79 4.32c-2.097.28-4.21-.39-5.76-1.825-1.16-1.077-1.925-2.516-2.16-4.083l-11.53-189.68c1.66-1.83 4.03-2.85 6.5-2.798 2.533.05 4.913 1.22 6.5 3.197 6.22 22.46 11.216 45.23 14.96 68.22 5.137 31.55 7.91 63.43 8.3 95.39l136.152-15.28c2.396-1.09 5.032-1.56 7.66-1.35 2.75.22 5.396 1.16 7.663 2.73 41.62 19.22 83.375 38.15 125.26 56.79 41.615 18.52 83.36 36.75 125.23 54.68 1.935-.16 3.703-1.16 4.843-2.73 1.266-1.74 1.618-3.99.948-6.04-3.8-3.45-7.333-7.19-10.575-11.17-3.5-4.3-6.65-8.88-9.42-13.69.11-.34.22-.68.35-1.01.32-.85.7-1.68 1.25-2.41 2.42-3.16 7.04-3.55 9.96-.84 8.66 9.71 19.21 17.557 31.01 23.05 10.67 4.97 22.17 7.927 33.92 8.717 2.58 1.626 4.23 4.39 4.43 7.437.14 2.06-.41 4.103-1.56 5.815-3.63-.24-7.27.26-10.71 1.47-3.55 1.25-6.81 3.23-9.55 5.815l19.55 78.14c-1.4 1.684-3.13 3.07-5.08 4.06-2.28 1.16-4.81 1.76-7.37 1.746-53.05-4.71-106.21-8.08-159.433-10.11-53.34-2.035-106.73-2.72-160.1-2.056-3.79-.575-6.82 3.092-5.54 6.7.63 1.784 2.31 2.98 4.2 2.996l321.783 26.06c2.094.873 3.99 1.933 5.74 3.18 1.46 1.036 2.987 2.365 2.947 4.34-.034 1.75-1.484 3.09-3.154 3.11zm-23.61-56.02c.952-.32 1.776-.934 2.354-1.755.472-.67.76-1.45.833-2.27l-12.96-35.37c-2.706-3.39-5.87-6.4-9.404-8.92-3.324-2.37-6.945-4.3-10.77-5.73l-260.77-58.65-21.01 80.83 311.727 31.88z"/>
@@ -54,7 +55,9 @@
   </g>
 </svg>
 
-        <svg class="pdfbox-brand-text" xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" viewBox="0 0 109.81066666651577 30.943999999957384">
+        <svg focusable="false" class="pdfbox-brand-text" xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" viewBox="0 0 109.81066666651577 30.943999999957384" aria-labelledby="brandTextTitle brandTextDesc" role="img">
+  <title id="brandTextTitle">PDFBox brand text</title>
+  <desc id="brandTextDesc">PDFBox, the brand text.</desc>
   <path d="M0 .31h6.528q1.792 0 3.157.47 1.366.468 2.475 1.663 1.11 1.194 1.536 2.816.427 1.57.427 4.3 0 2-.256 3.45-.214 1.41-.982 2.64-.896 1.492-2.39 2.345-1.492.81-3.924.81H4.36v11.87H0V.305zm4.352 14.42h2.09q1.323 0 2.05-.383.724-.384 1.065-1.024.342-.683.384-1.622.09-.93.09-2.09 0-1.06-.08-2-.04-.98-.38-1.66-.3-.72-.98-1.11-.68-.43-1.96-.43H4.36v10.32z" fill-rule="evenodd"/>
   <path d="M17.333.31h6.443q3.712 0 5.675 2.09 1.97 2.048 1.97 5.76v14.208q0 4.267-2.09 6.315-2.05 2.005-5.93 2.005h-6.06V.308zm4.352 26.282h2.006q1.84 0 2.61-.896.77-.94.77-2.9V8.16q0-1.792-.72-2.773-.72-.982-2.64-.982H21.7v22.187z" fill-rule="evenodd"/>
   <path d="M35.583.31h12.97v4.095h-8.618v9.216h7.51v4.1h-7.51v12.97h-4.352V.31z"/>
@@ -67,13 +70,12 @@
       </a>
     </div>
     <nav class="wrapper">
-      <input type="checkbox" id="menu-toggle" />
+      <input type="checkbox" id="menu-toggle">
       <label for="menu-toggle" class="label-toggle"></label>
       <ul>
         <li><a href="/blog">Blog</a></li>
       </ul>
     </nav>
-  </container>
 </header>
 
 
@@ -155,91 +157,99 @@
                     <li><a href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
                 </ul>
 		<!-- dontation page logo/link-->
-		<a href="https://www.apache.org/foundation/contributing.html"><img width="135" src="/images/SupportApache.jpg"></a>
+		<a href="https://www.apache.org/foundation/contributing.html"><img width="135" src="/images/SupportApache.jpg" alt="Support Apache"></a>
             </div>
             <div class="col-xs-12 col-sm-9">
                 <h1 id="updating-the-pdfbox-website">Updating the PDFBox Website</h1>
-
 <p>The content for the PDFBox website is kept in a <a href="https://git-wip-us.apache.org/repos/asf/pdfbox-docs">Git repository</a> which is also mirrored to <a href="https://github.com/apache/pdfbox-docs">GitHub</a>. The site is split into two parts: the static content and the Javadoc for the PDFBox API. Both parts are build independently as further described below.</p>
-
-<h2 id="project-info">Project Info</h2>
-<p>The site is based on <a href="https://jekyllrb.com">Jekyll</a>. So you have to be familiar with the <a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> template language and have Jekyll (ver. 2+) installed to contribute to the project.</p>
-
-<h2 id="contribute">Contribute</h2>
-<p>If you would like to enhance the website content you can submit a patch. To do so please open a ticket at our <a href="https://issues.apache.org/jira/browse/PDFBOX">Issue Tracker</a>, use <code class="highlighter-rouge">Documentation</code> for the <code class="highlighter-rouge">Component</code> and add your patch to the ticket.</p>
-
+<h1 id="contribute">Contribute</h1>
+<p>If you would like to enhance the website content you can submit a patch. To do so please open a ticket at our <a href="https://issues.apache.org/jira/browse/PDFBOX">Issue Tracker</a>, use <code>Documentation</code> for the <code>Component</code> and add your patch to the ticket.</p>
 <h2 id="development">Development</h2>
-
-<h3 id="install-jekyll">Install Jekyll</h3>
-<p>Follow the instructions available on the <a href="https://jekyllrb.com">Jekyll</a> website.</p>
-
+<p>Tools used to generate the website:</p>
+<ul>
+<li><a href="https://git-scm.com/">Git</a> a source code management tool used to fetch document sources from different
+github repositories.</li>
+<li><a href="https://nodejs.org/">Node.js</a> a JavaScript runtime used to build the website. You will need to use Node.js version 10.
+and manage required libraries.</li>
+<li>(installed via npm) <a href="https://www.11ty.dev//">Eleventy</a> a simpler static site generator.</li>
+<li>(optional) <a href="https://maven.apache.org/">Maven</a> a build tool used to run the complete website generating process</li>
+</ul>
 <h3 id="checkout-from-the-git-repository">Checkout from the Git Repository</h3>
 <p>Before you can edit the site, you need to check it out from the Git repository:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://git-wip-us.apache.org/repos/asf/pdfbox-docs
-</code></pre></div></div>
-
+<pre><code>git clone https://git-wip-us.apache.org/repos/asf/pdfbox-docs
+</code></pre>
 <h3 id="local-changes">Local Changes</h3>
-<p>You can now do the changes and additions to the sources of the PDFBox website. To test these locally use</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll serve
-</code></pre></div></div>
-
-<p>which will compile the changes and run a local webserver at</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://localhost:4000
-</code></pre></div></div>
-
-<h3 id="publish-the-website-for-comitters-only">Publish the Website (For Comitters Only)</h3>
+<p>To build the website go to the project root directory and run:</p>
+<pre><code>$ npm install # needed only once, or if dependencies change
+$ npm run build   # to perform the build
+</code></pre>
+<h3 id="preview-changes">Preview Changes</h3>
+<p>While changing the content the website generation can be done in <strong>Preview</strong> mode. This will fire up a little webserver and update the browser window when there are changes so these are reflected immediately.</p>
+<pre><code>$ npm install # needed only once, or if dependencies change
+$ npm run preview   # to start the preview mode
+</code></pre>
+<h3 id="validate-the-generated-files">Validate the generated files</h3>
+<p>To validate the generated website document go to the project root directory and run:</p>
+<pre><code>$ npm run checks
+</code></pre>
+<p>This will validate the generated HTML for conformance to the specification as well as run accessibility tests. Testing is done using <a href="https://html-validate.org/">HTML-validate</a>.</p>
+<h3 id="publish-the-website-(for-comitters-only)">Publish the Website (For Comitters Only)</h3>
 <p>After you have done the local changes follow these steps to publish the content:</p>
-
 <p>Add the following server configuration in your ~/.m2/settings.xml file</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;server&gt;</span>
-  <span class="nt">&lt;id&gt;</span>pdfbox-site<span class="nt">&lt;/id&gt;</span>
-  <span class="nt">&lt;username&gt;</span>** USERNAME **<span class="nt">&lt;/username&gt;</span>
-  <span class="nt">&lt;password&gt;</span>** PASSWORD **<span class="nt">&lt;/password&gt;</span>
-<span class="nt">&lt;/server&gt;</span>
-</code></pre></div></div>
-
-<p><code class="highlighter-rouge">pdfbox-site</code> is referenced from the PDFBox pom.xml file.</p>
-
+<pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>server</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">></span></span>pdfbox-site<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>username</span><span class="token punctuation">></span></span>** USERNAME **<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>username</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>password</span><span class="token punctuation">></span></span>** PASSWORD **<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>password</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>server</span><span class="token punctuation">></span></span></code></pre>
+<p><code>pdfbox-site</code> is referenced from the PDFBox pom.xml file.</p>
 <p class="alert alert-warning">The password should be encrypted following <a href="https://maven.apache.org/guides/mini/guide-encryption.html">Maven Password Encryption</a></p>
-
 <p>Ensure that the new website content can build locally</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build
-</code></pre></div></div>
-
-<p>This will read the sources and generate the new content in the <code class="highlighter-rouge">./staging</code> directory.</p>
-
+<pre><code>npm run build
+</code></pre>
+<p>This will read the sources and generate the new content in the <code>./staging</code> directory.</p>
 <p>When you are happy with the new content update the source repository</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -m "..."
+<pre><code>git commit -m &quot;...&quot;
 git push origin master
-</code></pre></div></div>
-
+</code></pre>
 <p>Upload the new content to the production site</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mvn scm-publish:publish-scm
-</code></pre></div></div>
-
-<p>This will checkout the current content into the <code class="highlighter-rouge">./target</code>directory, apply the changes from <code class="highlighter-rouge">./staging</code> and publish
+<pre><code>mvn scm-publish:publish-scm
+</code></pre>
+<p>This will checkout the current content into the <code>./target</code>directory, apply the changes from <code>./staging</code> and publish
 the changes to the PDFBox production website.</p>
-
-<h3 id="update-the-javadocs-for-pdfbox-2x">Update the JavaDocs for PDFBox 2.x</h3>
+<h3 id="update-the-javadocs-for-pdfbox-2.x">Update the JavaDocs for PDFBox 2.x</h3>
 <p>To publish the javadocs follow these steps:</p>
-
 <p>Run</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mvn clean javadoc:aggregate scm-publish:publish-scm
-</code></pre></div></div>
-
-<p>from the <code class="highlighter-rouge">&lt;SVN_ROOT&gt;/../pdfbox</code> directory.</p>
-
-<p>It uses the same <code class="highlighter-rouge">pdfbox-site</code> settings from above to connect to the repository.</p>
-
+<pre><code>  $ mvn clean javadoc:aggregate scm-publish:publish-scm
+</code></pre>
+<p>from the <code>&lt;SVN_ROOT&gt;/../pdfbox</code> directory.</p>
+<p>It uses the same <code>pdfbox-site</code> settings from above to connect to the repository.</p>
 <p class="alert alert-info">As <code>mvn clean</code> will delete the javadoc files download from the Apache CMS it's advised to configure <code>${svn.scmJavadocCheckoutDirectory}</code> to a local directory not below <code>./target</code>.</p>
+<h2 id="build-with-maven">Build with Maven</h2>
+<p>The project provides a simple way to build the website sources locally using the build tool <a href="https://maven.apache.org/">Maven</a>.</p>
+<p>The Maven build automatically downloads the tool binaries such as <code>node</code> and <code>npm</code> for you. You do not need to install
+those tools on your host then. The binaries are added to the local project sources only and generate the website content.</p>
+<p>As the Maven build uses pinned versions of <code>node</code> and <code>npm</code> that are tested to build the website you most likely avoid
+build errors due to incompatible versions of <code>node.js</code> tooling installed on your machine.</p>
+<h3 id="preparing-maven">Preparing Maven</h3>
+<p>Make sure that you have Maven installed.</p>
+<pre><code>$ mvn --version
+</code></pre>
+<p>If this command fails with an error, you do not have Maven installed.</p>
+<p>Please install Maven using your favorite package manager (like <a href="https://brew.sh/">Homebrew</a>) or from
+official <a href="https://maven.apache.org/install.html">Maven binaries</a></p>
+<h3 id="building-from-scratch">Building from scratch</h3>
+<p>When building everything from scratch the build executes following steps:</p>
+<ul>
+<li>Download <code>Node.js</code> and <code>npm</code> binaries to the local project</li>
+<li>Load required libraries to the local project using <code>npm</code></li>
+<li>Build the website content using Eleventy</li>
+</ul>
+<p>You can do all of this with one single command:</p>
+<pre><code>$ mvn package
+</code></pre>
+<p>The whole process takes up to five minutes (time to grab some coffee!)</p>
+<p>When the build is finished you should see the generated website in the <code>public</code> directory.</p>
+<h3 id="clean-build">Clean build</h3>
+<p>When rebuilding the website the process uses some cached content.
+If you want to start from scratch for some reason you can simply add the <code>clean</code> operation to the build which removes
+all generated sources in the project first.</p>
+<pre><code>$ mvn clean package</code></pre>
 
             </div>
         </div>
@@ -253,7 +263,7 @@ the changes to the PDFBox production website.</p>
             </div>
             <div class="span9">
                 <p>Copyright © 2009&ndash;2020 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
-                    <br/>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
+                    <br>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
             </div>
         </div>
     </div>
@@ -263,7 +273,7 @@ the changes to the PDFBox production website.</p>
     <!-- Twitter Bootstrap and jQuery after this line. -->
 <script src="//code.jquery.com/jquery-latest.min.js"></script>
 <script src="/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript">
+<script >
 
     $(document).ready(function () {
             $('[data-toggle="offcanvas"]').click(function () {
