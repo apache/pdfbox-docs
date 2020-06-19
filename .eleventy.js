@@ -8,9 +8,16 @@ module.exports = function(eleventyConfig) {
     html: true
   };
 
+  // table of contents plugin
   const pluginTOC = require('eleventy-plugin-nesting-toc');
   eleventyConfig.addPlugin(pluginTOC, {tags: ['h2', 'h3']});
 
+  // syntax highlighting plugin
+  const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+  eleventyConfig.addPlugin(syntaxHighlight);
+
+  // add anchor generation to markdown
+  // needed for toc plugin to work
   const markdownLib = markdownIt(options).use(markdownItAnchor);
   eleventyConfig.setLibrary("md", markdownLib);
 
