@@ -49,8 +49,8 @@
   }
 
   aside {
-    min-width: 22rem;
-    max-width: 22rem;
+    min-width: 25rem;
+    max-width: 25rem;
     padding-left: 2rem;
 
     h1 {
@@ -84,6 +84,15 @@
       border-radius: 2px;
       padding: 4px 5px 4px 23px;
       display: block;
+    }
+
+    & .edit-link {
+      float: right;
+      padding: 0;
+    }
+
+    & h1 svg {
+      fill: #337ab7;
     }
   }
 
