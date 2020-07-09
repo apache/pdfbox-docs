@@ -1,5 +1,6 @@
 node/
 node_modules/
+content/css/styles.css*
 staging/
 target/
 package-lock.json

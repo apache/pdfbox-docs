@@ -16,6 +16,13 @@
 */
 
 /*
+ * Variables
+ */
+
+$primary-text-color: #161616; 
+$secondary-text-color: #393939;
+
+/*
  *  The follwing rules are in addition to the base bootstrap css
  *  Some of the CSS is copied over from bootstrap as markdown, the primary
  *  format used to add content, doesn't allow to classes to the elements
@@ -29,7 +36,7 @@ body {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: rgb(0,0,0);
+    color: $primary-text-color;
 }
 
 body > .container {
@@ -112,7 +119,11 @@ svg.pdfbox-brand-text, svg.pdfbox-brand-toolbox {
 
 /* headings */
 h1, h2, h3, h4, h5 {
-  color: rgba(0,0,0,0.87);
+  color: $primary-text-color;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  color: $secondary-text-color;
 }
 
 h1 {
