@@ -40,14 +40,18 @@ int keyLength = 256;
 
 AccessPermission ap = new AccessPermission();
 
-// disable printing, everything else is allowed
+// disable printing, 
 ap.setCanPrint(false);
+//disable copying
+ap.setCanExtractContent(false);
+//Disable other things if needed...
 
 // Owner password (to open the file with all permissions) is "12345"
 // User password (to open the file but with restricted permissions, is empty here)
 StandardProtectionPolicy spp = new StandardProtectionPolicy("12345", "", ap);
 spp.setEncryptionKeyLength(keyLength);
-spp.setPermissions(ap);
+
+//Apply protection
 doc.protect(spp);
 
 doc.save("filename-encrypted.pdf");
