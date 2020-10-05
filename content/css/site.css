@@ -29,7 +29,7 @@ body {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: rgb(0,0,0);
+    color: #161616;
 }
 
 body > .container {
@@ -112,7 +112,7 @@ svg.pdfbox-brand-text, svg.pdfbox-brand-toolbox {
 
 /* headings */
 h1, h2, h3, h4, h5 {
-  color: rgba(0,0,0,0.87);
+  color: #161616;
 }
 
 h1 {
