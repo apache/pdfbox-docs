@@ -35,7 +35,10 @@ You can also browse the Subversion repository using [ViewVC](https://svn.apache.
 
 We also have a read-only [Git mirror](https://git.apache.org/) which is further mirrored to GitHub as [apache/pdfbox](https://github.com/apache/pdfbox).
 
-The sources for the **Java ImageIO plugin for the JBIG2 image format** are available in the  [Apache Git Repository](https://git-wip-us.apache.org/repos/asf?p=pdfbox-jbig2.git) or can be loaded from [GitHub](https://github.com/apache/pdfbox-jbig2).
+The sources for the **Java ImageIO plugin for the JBIG2 image format** are available in the  [Apache Git Repository](https://git-wip-us.apache.org/repos/asf/pdfbox-jbig2.git) or can be loaded from [GitHub](https://github.com/apache/pdfbox-jbig2):
+
+    git clone https://git-wip-us.apache.org/repos/asf/pdfbox-jbig2.git
+    cd pdfbox-jbig2
 
 ## Build dependencies
 
