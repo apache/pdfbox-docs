@@ -71,7 +71,28 @@ To validate the generated website document go to the project root directory and 
 $ npm run checks
 ~~~
 
-This will validate the generated HTML for conformance to the specification as well as run accessibility tests. Testing is done using [HTML-validate](https://html-validate.org/).
+### Reuse code from examples in the documentation
+
+In order to reuse code from the examples project in the documentation the shortcode `codesnippet` can be used.
+
+The shortcode expects two variables 
+
+- the **relative** path to the examples code such as `interactive/form/CreateCheckBox.java`
+- the version to be used such as `trunk` or `2.0`
+
+In addition - in order to be able to only put parts of the code into
+the documentation the following comments can be added to the java code
+
+~~~
+//DOC-START
+...
+//DOC-END
+~~~
+
+The DOC-START/DOC-END pair can be placed multiple times into the Java
+code. Everything between these special comment lines will be added the
+other content will be omitted. This will allow to skip license
+header, import statements etc. to concentrate on the important bits.
 
 
 ### Publish the Website (For Comitters Only)
