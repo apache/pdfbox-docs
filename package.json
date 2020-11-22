@@ -15,9 +15,9 @@
     "check:html": "html-validate 'staging/content/*/**/*.html'",
     "checks": "run-s check:*"
   },
-
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-cache-assets": "^2.0.3",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "html-validate": "^2.23.0",
     "markdown-it-anchor": "^5.3.0",

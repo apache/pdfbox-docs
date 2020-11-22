@@ -1,3 +1,5 @@
+const snippets = require("./content/_data/snippets");
+
 module.exports = function(eleventyConfig) {
 
   // enable generation of header anchor tags
@@ -32,6 +34,12 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("posts", function(collectionApi) {
     return collectionApi.getFilteredByGlob("./content/_posts/*.md");
   });
+
+  eleventyConfig.addLiquidShortcode('codesnippet', async function(url, version) {
+    return await snippets(url, version);
+  });
+
+  eleventyConfig.addWatchTarget("./content/css/");
 
   return {
     dir: {

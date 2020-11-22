@@ -4,6 +4,7 @@ content/css/styles.css*
 staging/
 target/
 package-lock.json
+.cache
 .classpath
 .project
 .sass-cache/
