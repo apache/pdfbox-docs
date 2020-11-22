@@ -192,7 +192,23 @@ $ npm run preview   # to start the preview mode
 <p>To validate the generated website document go to the project root directory and run:</p>
 <pre><code>$ npm run checks
 </code></pre>
-<p>This will validate the generated HTML for conformance to the specification as well as run accessibility tests. Testing is done using <a href="https://html-validate.org/">HTML-validate</a>.</p>
+<h3 id="reuse-code-from-examples-in-the-documentation">Reuse code from examples in the documentation</h3>
+<p>In order to reuse code from the examples project in the documentation the shortcode <code>codesnippet</code> can be used.</p>
+<p>The shortcode expects two variables</p>
+<ul>
+<li>the <strong>relative</strong> path to the examples code such as <code>interactive/form/CreateCheckBox.java</code></li>
+<li>the version to be used such as <code>trunk</code> or <code>2.0</code></li>
+</ul>
+<p>In addition - in order to be able to only put parts of the code into
+the documentation the following comments can be added to the java code</p>
+<pre><code>//DOC-START
+...
+//DOC-END
+</code></pre>
+<p>The DOC-START/DOC-END pair can be placed multiple times into the Java
+code. Everything between these special comment lines will be added the
+other content will be omitted. This will allow to skip license
+header, import statements etc. to concentrate on the important bits.</p>
 <h3 id="publish-the-website-(for-comitters-only)">Publish the Website (For Comitters Only)</h3>
 <p>After you have done the local changes follow these steps to publish the content:</p>
 <p>Add the following server configuration in your ~/.m2/settings.xml file</p>
