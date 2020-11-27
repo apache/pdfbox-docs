@@ -7,11 +7,12 @@
     "url": "https://gitbox.apache.org/repos/asf/pdfbox-docs.git"
   },
   "scripts": {
-    "sass": "sass --style=compressed --load-path=content/_sass content/css/styles.sass content/css/styles.css",
-    "build": "npm run sass & eleventy",
-    "preview": "npm-run-all sass --parallel preview:*",
+    "build:sass": "sass --style=compressed --load-path=content/_sass content/css/styles.sass content/css/styles.css",
+    "build:eleventy": "eleventy",
+    "build": "npm-run-all build:*",
     "preview:eleventy": "eleventy --serve",
-    "preview:sass": "npm run sass -- --watch",
+    "preview:sass": "sass --watch --load-path=content/_sass content/css/styles.sass content/css/styles.css",
+    "preview": "npm-run-all build:sass --parallel preview:*",
     "check:html": "html-validate 'staging/content/*/**/*.html'",
     "checks": "run-s check:*"
   },

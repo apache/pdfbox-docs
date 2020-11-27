@@ -39,7 +39,8 @@ module.exports = function(eleventyConfig) {
     return await snippets(url, version);
   });
 
-  eleventyConfig.addWatchTarget("./content/css/");
+  eleventyConfig.addWatchTarget("./content/css");
+  eleventyConfig.addWatchTarget("./content/_sass");
 
   return {
     dir: {
