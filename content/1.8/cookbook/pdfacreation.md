@@ -17,7 +17,7 @@ license:   Licensed to the Apache Software Foundation (ASF) under one
            under the License.
 
 layout:    default
-title:     Create a Valid PDF/A Document
+title:     PDF/A Creation
 ---
 
 # PDF/A Creation

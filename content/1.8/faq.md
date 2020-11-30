@@ -18,6 +18,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 layout:  documentation
 title:   Frequently Asked Questions (FAQ)
+
+eleventyNavigation:
+  order: 4
+  key: FAQ
 ---
 
 # Frequently Asked Questions

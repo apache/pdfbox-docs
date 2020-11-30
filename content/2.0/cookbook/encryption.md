@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 
 layout:  documentation
-title:   Cookbook - Encrypting a File
+title:   Encrypting a File
 ---
 
 Encrypting a File

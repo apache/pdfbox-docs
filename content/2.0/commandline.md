@@ -18,6 +18,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 layout:  documentation
 title:   Command-Line Tools
+eleventyNavigation:
+  order: 5
 ---
 
 # Command-Line Tools

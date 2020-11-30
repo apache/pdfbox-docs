@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 
 layout:  default
-title:   Cookbook - PDF/A Validation
+title:   PDF/A Validation
 ---
 
 # PDF/A Validation

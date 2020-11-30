@@ -18,6 +18,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 layout:  documentation
 title:   Dependencies
+eleventyNavigation:
+  order: 3
 ---
 
 # Dependencies

@@ -18,6 +18,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          
 layout:  documentation
 title:   Architecture
+
+eleventyNavigation:
+  order: 0
+
 ---
 
 # Architecture

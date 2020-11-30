@@ -1,6 +1,8 @@
-const snippets = require("./content/_data/snippets");
+const snippets = require("./lib/filters/snippets");
 
 module.exports = function(eleventyConfig) {
+
+  eleventyConfig.setDataDeepMerge(true);
 
   // enable generation of header anchor tags
   // needs the markdown-it-anchor plugin
@@ -10,6 +12,11 @@ module.exports = function(eleventyConfig) {
     html: true
   };
 
+    // add anchor generation to markdown
+  // needed for toc plugin to work
+  const markdownLib = markdownIt(options).use(markdownItAnchor);
+  eleventyConfig.setLibrary("md", markdownLib);
+
   // table of contents plugin
   const pluginTOC = require('eleventy-plugin-nesting-toc');
   eleventyConfig.addPlugin(pluginTOC, {tags: ['h2', 'h3']});
@@ -17,11 +24,6 @@ module.exports = function(eleventyConfig) {
   // syntax highlighting plugin
   const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
   eleventyConfig.addPlugin(syntaxHighlight);
-
-  // add anchor generation to markdown
-  // needed for toc plugin to work
-  const markdownLib = markdownIt(options).use(markdownItAnchor);
-  eleventyConfig.setLibrary("md", markdownLib);
 
   // copy static files to output
   eleventyConfig.addPassthroughCopy("./content/bootstrap");
@@ -35,9 +37,17 @@ module.exports = function(eleventyConfig) {
     return collectionApi.getFilteredByGlob("./content/_posts/*.md");
   });
 
+  eleventyConfig.addCollection("docs", function(collectionApi) {
+    return collectionApi.getAll().filter(function(item) {
+      return item.data.eleventyNavigation !== undefined; 
+    });
+  });
+
   eleventyConfig.addLiquidShortcode('codesnippet', async function(url, version) {
     return await snippets(url, version);
   });
+
+  eleventyConfig.addFilter('navigation', require("./lib/filters/navigation.js"));
 
   eleventyConfig.addWatchTarget("./content/css");
   eleventyConfig.addWatchTarget("./content/_sass");

@@ -17,11 +17,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 
 layout:  documentation
-title:   Examples
+title:   API Docs
+
+permalink: false
+
 eleventyNavigation:
-  order: 2
+  order: 5
+  url: https://pdfbox.apache.org/docs/1.8.13/javadocs/
 ---
-
-# Examples
-
-This content is under construction. Please look at our [examples](https://svn.apache.org/viewvc/pdfbox/trunk/examples/src/main/java/org/apache/pdfbox/examples/) directory in SVN.

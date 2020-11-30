@@ -18,6 +18,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 layout:  documentation
 title:   PDFBox 2.0.0 Migration Guide
+eleventyNavigation:
+  order: 0
+  key: Migration
 ---
 
 # Migration to PDFBox 2.0.0

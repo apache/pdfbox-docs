@@ -17,12 +17,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 
 layout:  default
-title:   Cookbook - Document Creation
+title:   Document Creation
 ---
 
 # Document Creation
 
-## Create a Blank PDF
+## Create a Blank PDF XX
 
 This small sample shows how to create a new PDF document using PDFBox.
 

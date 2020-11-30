@@ -25,31 +25,39 @@
 
   {% include header.html %}
 
+  {% assign items =  collections.docs | navigation: eleventyNavigation %}
+
   <div class="container documentation">
-    <nav class="accordion-menu">
+    <nav class="accordion-menu" role="navigation">
       <h1>Documentation</h1>
-
       <ul>
-        <li><a href="/2.0/migration.html">Migration Guide</a></li>
-        <li><a href="/2.0/getting-started.html">Getting Started</a></li>
-        <li><a href="/2.0/examples.html">Examples</a></li>
-        <li><a href="/2.0/dependencies.html">Dependencies</a></li>
-
-        <li class="has-children">
-          <input type="checkbox" checked>
-          <i></i>
-          <label>Cookbook</label>
-          <ul>
-            <li><a href="/2.0/cookbook/encryption.html">Document Encryption</a></li>
-          </ul>
-
-        </li>
-
-        <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
-        <li><a href="/2.0/faq.html">FAQ</a></li>
-        <li><a href="/docs/2.0.13/javadocs/">API Docs</a></li>
+        {%- for link in items -%}
+          {%- if link.children.size == 0 -%}
+          <li>
+            <a href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}>
+              {{ link.key }}
+            </a>
+          </li>
+          {%- elsif link.children.size > 0 -%}
+          <li class="has-children">
+            <input type="checkbox" checked>
+            <i></i>
+            <label>{{ link.key }}</label>
+              <ul>
+                {%- for child_link in link.children -%}
+                  <li>
+                    <a href="{{ child_link.url }}" {% if child_link.active %}aria-current="page"{% endif %}>
+                      {{ child_link.key }}
+                    </a>  
+                  </li>
+                {%- endfor -%}
+              </ul>
+          </li>
+          {%- endif -%}
+        {%- endfor -%}
       </ul>
     </nav>
+
     <section>
       {{ content }}
     </section>
@@ -60,6 +68,7 @@
       </a></h1>
       
       {{ content | toc | safe }}
+
     </aside>
   </div>
 

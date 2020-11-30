@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 
 layout:  default
-title:   Cookbook - Rendering
+title:   Document Rendering
 ---
 
 Document Rendering
