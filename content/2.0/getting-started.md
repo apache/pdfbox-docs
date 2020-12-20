@@ -32,7 +32,7 @@ To use the latest release you'll need to add the following dependency:
 <dependency>
   <groupId>org.apache.pdfbox</groupId>
   <artifactId>pdfbox</artifactId>
-  <version>2.0.21</version>
+  <version>2.0.22</version>
 </dependency>
 ```
 
@@ -46,7 +46,7 @@ A solution is to disable LittleCMS in favor of the old KCMS (Kodak Color Managem
  - Starting with ``-Dsun.java2d.cmm=sun.java2d.cmm.kcms.KcmsServiceProvider`` or
  - Calling ``System.setProperty("sun.java2d.cmm", "sun.java2d.cmm.kcms.KcmsServiceProvider")``
 
-Sources:  
+Sources:
 https://bugs.openjdk.java.net/browse/JDK-8041125
 
 ## Rendering Performance ##
