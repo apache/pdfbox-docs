@@ -47,7 +47,7 @@ We appreciate the use of topic branches.
 
     # update enhance the documentation
 
-    git commit -m "<JIRA issue number> This is my commit message."
+    git commit -m "<JIRA issue number>: This is my commit message."
 
     git push origin <JIRA issue number>
 
