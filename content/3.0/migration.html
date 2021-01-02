@@ -25,7 +25,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command-line utilities. Apache PDFBox is published under the Apache License v2.0.">
 
-    <title>Apache PDFBox |  Page Not Found</title>
+    <title>Apache PDFBox |  PDFBox 3.0 Migration Guide</title>
 
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/prism.css" rel="stylesheet">
@@ -79,107 +79,101 @@
 </header>
 
 
-    <div class="container">
+  
 
-        <div class="row row-offcanvas row-offcanvas-left">
-            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+  <div class="container documentation">
+    <nav class="accordion-menu" role="navigation">
+      <h1>Documentation</h1>
+      <ul><li>
+            <a href="/3.0/migration.html" >
+              Migration
+            </a>
+          </li></ul>
+    </nav>
 
-                <ul class="sidebar">
-                    <li class="sidebar-header">Apache PDFBox</li>
-                    <li><a href="/index.html">Overview</a></li>
-                    <li><a href="https://www.apache.org/licenses">License</a></li>
-                    <li><a href="/download.html">Download</a></li>
-
-                    <li class="sidebar-header">Community</li>
-                    <li><a href="/support.html">Support</a></li>
-                    <li><a href="/mailinglists.html">Mailing Lists</a></li>
-                    <li><a href="https://issues.apache.org/jira/browse/PDFBOX">Issue Tracker</a></li>
-                    <li><a href="/team.html">Project Team</a></li>
-
-                    <li class="sidebar-header">Documentation</li>
-                    <li class="sidebar-node" id="v3-0">
-                        <a href="#">3.0 (Pre Release)</a>
-                        <ul>
-                            <li><a href="/3.0/migration.html">Migration Guide</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-node" id="v2-0">
-                        <a href="#">2.0</a>
-                        <ul>
-                            <li><a href="/2.0/migration.html">Migration Guide</a></li>
-                            <li><a href="/2.0/getting-started.html">Getting Started</a></li>
-                            <li><a href="/2.0/examples.html">Examples</a></li>
-                            <li><a href="/2.0/dependencies.html">Dependencies</a></li>
-                            <li class="sidebar-node" id="v2-0-cookbook">
-                                <a href="#">Cookbook</a>
-                                <ul>
-                                    <li><a href="/2.0/cookbook/encryption.html">Document Encryption</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
-                            <li><a href="/2.0/faq.html">FAQ</a></li>
-                            <li><a href="/docs/2.0.13/javadocs/">API Docs</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-node" id="v1-8">
-                        <a href="#">1.8</a>
-                        <ul>
-                            <li><a href="/1.8/architecture.html">Architecture</a></li>
-                            <li><a href="/1.8/dependencies.html">Dependencies</a></li>
-                            <li class="sidebar-node" id="v1-8-cookbook">
-                                <a href="#">Cookbook</a>
-                                <ul>
-                                    <li><a href="/1.8/cookbook/documentcreation.html">Document Creation</a></li>
-                                    <li><a href="/1.8/cookbook/textextraction.html">Text Extraction</a></li>
-                                    <li><a href="/1.8/cookbook/encryption.html">Document Encryption</a></li>
-                                    <li><a href="/1.8/cookbook/workingwithfonts.html">Working with Fonts</a></li>
-                                    <li><a href="/1.8/cookbook/workingwithmetadata.html">Working with Metadata</a></li>
-                                    <li><a href="/1.8/cookbook/workingwithattachments.html">Working with Attachments</a></li>
-                                    <li><a href="/1.8/cookbook/pdfavalidation.html">PDF/A Validation</a></li>
-                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A Document</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="/1.8/commandline.html">Command-Line Tools</a></li>
-                            <li><a href="/docs/1.8.13/javadocs/">API Docs</a></li>
-                            <li><a href="/1.8/faq.html">FAQ</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="sidebar-header">Development</li>
-                    <li><a href="/building.html">Building from Source</a></li>
-                    <li><a href="/codingconventions.html">Coding Conventions</a></li>
-                    <li><a href="/siteupdate.html">Update the Website</a></li>
-                    <li><a href="https://builds.apache.org/view/All/job/PDFBox-trunk/">Jenkins</a></li>
-                    <li><a href="https://travis-ci.org/apache/pdfbox">Travis CI</a></li>
-                    <li><a href="https://sonarcloud.io/project/issues?id=pdfbox-reactor">SonarCloud</a></li>
-                    <li><a href="https://issues.apache.org/jira/browse/PDFBOX">JIRA</a></li>
-                    <li><a href="/ideas.html">Ideas</a></li>
-                    <li><a href="/references.html">External Links</a></li>
-
-                    <li class="sidebar-header">Apache Software Foundation</li>
-                    <li><a href="https://www.apache.org/foundation/">About</a></li>
-                    <li><a href="https://www.apache.org/security/">Security</a></li>
-                    <li><a href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></li>
-                    <li><a href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
-                </ul>
-		<!-- dontation page logo/link-->
-		<a href="https://www.apache.org/foundation/contributing.html"><img width="135" src="/images/SupportApache.jpg" alt="Support Apache"></a>
-            </div>
-            <div class="col-xs-12 col-sm-9">
-                <h1 id="404">404</h1>
-<p>We're sorry, but the page you requested cannot be found.</p>
-<p>Maybe you</p>
+    <section>
+      <h1 id="pdfbox-3.0-migration-guide">PDFBox 3.0 Migration Guide</h1>
+<p class="alert alert-warning">Work in progress!  This is guide is improved over time. If you believe there is
+a missing topic, open an issue or help us with a contribution to improve the guide.
+</p>
+<p>This guide describes the updates in Apache PDFBox 3.0 release. Use the information provided to upgrade your PDFBox 2.x applications
+to PDFBox 3.0. It provides information about the new, deprecated and unsupported features in this release.</p>
+<h2 id="java-versions">Java Versions</h2>
+<p>PDFBox 3.0 requires at least Java 8. Testing has been done up to Java 11.</p>
+<h2 id="dependency-updates">Dependency Updates</h2>
+<p>All libraries on which PDFBox depends are updated to their latest stable versions:</p>
 <ul>
-<li>typed the address incorrectly</li>
-<li>followed a link from another site that pointed to this page.</li>
+<li>Bouncy Castle 1.68</li>
+<li>Apache Commons Logging 1.2</li>
 </ul>
-<p>If you came by following a broken link, please report the <a href="https://issues.apache.org/jira/browse/pdfbox">issue</a>.</p>
+<p>For test support the libraries are updated to</p>
+<ul>
+<li>JUnit 5.7</li>
+<li>JAI Image Core 1.4.0</li>
+<li>JAI JPEG2000 1.4.0</li>
+<li>JBIG ImageIO Plugin 3.0.3</li>
+<li>Apache Commons IO 2.8</li>
+</ul>
+<h2 id="general-changes-for-pdfbox-3.0">General Changes for PDFBox 3.0</h2>
+<p>This section explains the fundamental differences between PDFBox 3.0 and 2.x releases.</p>
+<h3 id="deprecated-apis-and-components">Deprecated APIs and Components</h3>
+<p>All deprecated APIs and components from PDFBox 2.x have been removed in PDFBox 3.0. Deprecated APIs in
+<code>PDPageContentStream</code> have been kept but you are encouraged to replace them with the non deprecated calls
+as they are treated to be of <strong>internal use only</strong>.</p>
+<h3 id="use-loader-to-get-a-pdf-document">Use <strong>Loader</strong> to get a PDF document</h3>
+<p>For loading a PDF <code>PDDocument.load</code> has been replaced with the <code>Loader</code> methods. The same is true for loading a FDF document.</p>
+<p>When saving a PDF this will now be done in compressed mode per default. To override that use <code>PDDocument.save</code> with <code>CompressParameters.NO_COMPRESSION</code>.</p>
+<p>PDFBox now loads a PDF Document incrementally reducing the initial memory footprint. This will also reduce the memory needed to
+consume a PDF if only certain parts of the PDF are accessed. Note that, due to the nature of PDF, uses such as iterationg over all pages,
+accessing annotations, signing a PDF etc. might still load all parts of the PDF overtime leading to a similar memory consumption as with PDFBox 2.0.</p>
+<h2 id="changes-in-common-functions">Changes in Common Functions</h2>
+<h3 id="interactive-forms">Interactive Forms</h3>
+<p>When accessing <code>AcroForms</code> using <code>PDDocumentCatalog.getAcroForm()</code> a number of fix ups are applied aligning PDFBox with most of the default behaviour
+of Adobe Reader. If you'd like to bypass this use <code>PDDocumentCatalog.getAcroForm(null)</code>.</p>
 
-            </div>
-        </div>
-    </div>
+    </section>
+    <aside>
+      
+      <h1>Table of Contents<a class="edit-link" href="https://github.com/apache/pdfbox-docs/edit/master/./content/3.0/migration.md" title="Edit this page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.013 1.427a1.75 1.75 0 012.474 0l1.086 1.086a1.75 1.75 0 010 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 01-.927-.928l.929-3.25a1.75 1.75 0 01.445-.758l8.61-8.61zm1.414 1.06a.25.25 0 00-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 000-.354l-1.086-1.086zM11.189 6.25L9.75 4.81l-6.286 6.287a.25.25 0 00-.064.108l-.558 1.953 1.953-.558a.249.249 0 00.108-.064l6.286-6.286z"/></svg>
+      </a></h1>
+      
+      <nav class="toc">
+                <ol>
+                    
+                    <li><a href="#java-versions">Java Versions</a>
+            		</li>
 
-    <footer class="footer">
+                    <li><a href="#dependency-updates">Dependency Updates</a>
+            		</li>
+
+                    <li><a href="#general-changes-for-pdfbox-3.0">General Changes for PDFBox 3.0</a>
+            
+                <ol>
+                    
+                    <li><a href="#deprecated-apis-and-components">Deprecated APIs and Components</a>
+            		</li>
+
+                    <li><a href="#use-loader-to-get-a-pdf-document">Use Loader to get a PDF document</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#changes-in-common-functions">Changes in Common Functions</a>
+            
+                <ol>
+                    
+                    <li><a href="#interactive-forms">Interactive Forms</a>
+            		</li>
+                </ol>
+            		</li>
+                </ol>
+            </nav>
+
+    </aside>
+  </div>
+
+  <footer class="footer">
     <div class="container">
         <div class="row">
             <div class="span3">
@@ -192,46 +186,6 @@
         </div>
     </div>
 </footer>
-
-
-    <script>
-
-    function addCollapsed(el) {
-        el.classList.add('collapsed');
-    }
-
-    function toggleCollapsed(ev) {
-        ev.target.parentNode.classList.toggle('collapsed');
-        ev.preventDefault();
-    }
-
-    function addClickEvent(el) {
-        console.log(el);
-        el.addEventListener('click', toggleCollapsed);
-    }
-
-    document.querySelectorAll('.sidebar-node').forEach(addCollapsed);
-    document.querySelectorAll('.sidebar-node > a').forEach(addClickEvent);
-
-    // preserve expand/collapse across page navigation
-    var path = document.location.pathname;
-    if (path.indexOf('/1.8') == 0) {
-        var el = document.getElementById("#v1-8");
-        el.classList.toggle("collapsed");
-        if (path.indexOf('/1.8/cookbook') == 0) {
-            el = document.getElementById('v1-8-cookbook');
-            el.classList.remove('collapsed');
-        }
-    } else {
-        var el = document.getElementById("v2-0");
-        console.log(el);
-        el.classList.remove("collapsed");
-        if (path.indexOf('/2.0/cookbook') == 0) {
-            el = document.getElementById('#v2-0-cookbook');
-            el.classList.remove('collapsed');
-        }
-    }
-</script>
 
 
 </body>
