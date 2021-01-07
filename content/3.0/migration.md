@@ -25,7 +25,7 @@ eleventyNavigation:
 
 # PDFBox 3.0 Migration Guide
 
-<p class="alert alert-warning">Work in progress!  This is guide is improved over time. If you believe there is
+<p class="alert alert-warning">Work in progress!  This is guide will be improved over time. If you believe there is
 a missing topic, open an issue or help us with a contribution to improve the guide.
 </p>
 
@@ -75,3 +75,21 @@ accessing annotations, signing a PDF etc. might still load all parts of the PDF 
 
 When accessing `AcroForms` using `PDDocumentCatalog.getAcroForm()` a number of fix ups are applied aligning PDFBox with most of the default behaviour
 of Adobe Reader. If you'd like to bypass this use `PDDocumentCatalog.getAcroForm(null)`.
+
+The fix ups include
+
+- setting default font resources if they are not already part of the AcroForm
+- create form fields from orphaned widget annotations under certain conditions
+- create the normal appearance stream under certain conditions
+
+You can lookup the details in the `org.apache.pdfbox.pdmodel.fixup` package of the source distribution and also create your own fix up(s).
+
+## Changes in PDFBox App
+
+The command line interface for the PDFBox App has been rewritten. As a result
+
+- the individual commands have been changed 
+- passing input and output files have been changed from using parameters to using options/flags to reduce the ambiguity
+- all commands now return an exit code
+- all commands now support passing `-h` or `--help` to display usage information
+- all commands now support passing `-V` or `--version` to display the version information
