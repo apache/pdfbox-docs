@@ -35,7 +35,7 @@
             <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
             <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
             <git.scmContentUrl>git:https://gitbox.apache.org/repos/asf/pdfbox-docs.git</git.scmContentUrl>
-            <node.version>v12.18.1</node.version>
+            <node.version>v14.15.4</node.version>
         </properties>
 
         <build>
