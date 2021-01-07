@@ -1,0 +1,6 @@
+{
+    "name": "PDFJuice",
+    "url": "https://github.com/andrescg2sj/PDFJuice",
+    "license": "Apache License v2",
+    "description": "This project provides some tools that help the user to extract structured information form PDF documents. Currently, the program is able to export them to HTML."
+}

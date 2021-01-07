@@ -1,0 +1,6 @@
+{
+    "name": "Apache Nutch",
+    "url": "https://nutch.apache.org/",
+    "license": "Apache License v2",
+    "description": "Apache Nutch is open source web-search software. It builds on Apache Lucene, adding web-specifics, such as a crawler, a link-graph database, parsers for HTML and other document formats, etc."
+}

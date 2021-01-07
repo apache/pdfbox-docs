@@ -1,0 +1,6 @@
+{
+    "name": "JpdfUnit",
+    "url": "http://jpdfunit.sourceforge.net/",
+    "license": "Apache License v2",
+    "description": "pdfUnit is a framework for testing a generated pdf document with the JUnit Test Framework."
+}

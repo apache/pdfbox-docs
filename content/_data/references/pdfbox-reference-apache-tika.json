@@ -1,0 +1,6 @@
+{
+    "name": "Apache Tika",
+    "url": "https://tika.apache.org/",
+    "license": "Apache License v2",
+    "description": "Apache Tika is a toolkit for detecting and extracting metadata and structured text content from various documents using existing parser libraries."
+}

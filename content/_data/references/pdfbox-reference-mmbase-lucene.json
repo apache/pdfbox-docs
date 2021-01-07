@@ -1,0 +1,6 @@
+{
+    "name": "MMBase Lucene Module",
+    "url": "http://mmapps.sourceforge.net/lucenemodule/",
+    "license": "MPL",
+    "description": "MMBase Lucene Module is a plugin (module) for the MMBase content management system that enables Lucene full text search through it's content, and thanks to PDFBox also PDF content."
+}

@@ -1,0 +1,6 @@
+{
+    "name": "SimplexRepaginator",
+    "url": "https://github.com/esialb/simplexrepaginator",
+    "license": "Apache License v2",
+    "description": "Simplex Repaginator converts simplex-scanned PDFs into properly duplex-paginated PDFs and vice versa."
+}

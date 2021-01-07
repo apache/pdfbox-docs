@@ -1,0 +1,6 @@
+{
+    "name": "Orbeon PresentationServer",
+    "url": "https://www.orbeon.com/",
+    "license": "LGPL",
+    "description": "Orbeon PresentationServer (OPS) is an open source J2EE-based platform for XML-centric web applications. OPS is built around XHTML, XForms, XSLT, XML pipelines, and Web Services, which makes it ideal for applications that capture, process and present XML data. Commercial consulting/training/support is available through orbeon."
+}
