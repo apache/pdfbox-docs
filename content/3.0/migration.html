@@ -93,7 +93,7 @@
 
     <section>
       <h1 id="pdfbox-3.0-migration-guide">PDFBox 3.0 Migration Guide</h1>
-<p class="alert alert-warning">Work in progress!  This is guide is improved over time. If you believe there is
+<p class="alert alert-warning">Work in progress!  This is guide will be improved over time. If you believe there is
 a missing topic, open an issue or help us with a contribution to improve the guide.
 </p>
 <p>This guide describes the updates in Apache PDFBox 3.0 release. Use the information provided to upgrade your PDFBox 2.x applications
@@ -130,6 +130,22 @@ accessing annotations, signing a PDF etc. might still load all parts of the PDF 
 <h3 id="interactive-forms">Interactive Forms</h3>
 <p>When accessing <code>AcroForms</code> using <code>PDDocumentCatalog.getAcroForm()</code> a number of fix ups are applied aligning PDFBox with most of the default behaviour
 of Adobe Reader. If you'd like to bypass this use <code>PDDocumentCatalog.getAcroForm(null)</code>.</p>
+<p>The fix ups include</p>
+<ul>
+<li>setting default font resources if they are not already part of the AcroForm</li>
+<li>create form fields from orphaned widget annotations under certain conditions</li>
+<li>create the normal appearance stream under certain conditions</li>
+</ul>
+<p>You can lookup the details in the <code>org.apache.pdfbox.pdmodel.fixup</code> package of the source distribution and also create your own fix up(s).</p>
+<h2 id="changes-in-pdfbox-app">Changes in PDFBox App</h2>
+<p>The command line interface for the PDFBox App has been rewritten. As a result</p>
+<ul>
+<li>the individual commands have been changed</li>
+<li>passing input and output files have been changed from using parameters to using options/flags to reduce the ambiguity</li>
+<li>all commands now return an exit code</li>
+<li>all commands now support passing <code>-h</code> or <code>--help</code> to display usage information</li>
+<li>all commands now support passing <code>-V</code> or <code>--version</code> to display the version information</li>
+</ul>
 
     </section>
     <aside>
@@ -166,6 +182,9 @@ of Adobe Reader. If you'd like to bypass this use <code>PDDocumentCatalog.getAcr
                     <li><a href="#interactive-forms">Interactive Forms</a>
             		</li>
                 </ol>
+            		</li>
+
+                    <li><a href="#changes-in-pdfbox-app">Changes in PDFBox App</a>
             		</li>
                 </ol>
             </nav>
