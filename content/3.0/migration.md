@@ -66,7 +66,7 @@ For loading a PDF `PDDocument.load` has been replaced with the `Loader` methods.
 When saving a PDF this will now be done in compressed mode per default. To override that use `PDDocument.save` with `CompressParameters.NO_COMPRESSION`.
 
 PDFBox now loads a PDF Document incrementally reducing the initial memory footprint. This will also reduce the memory needed to
-consume a PDF if only certain parts of the PDF are accessed. Note that, due to the nature of PDF, uses such as iterationg over all pages,
+consume a PDF if only certain parts of the PDF are accessed. Note that, due to the nature of PDF, uses such as iterating over all pages,
 accessing annotations, signing a PDF etc. might still load all parts of the PDF overtime leading to a similar memory consumption as with PDFBox 2.0.   
 
 ## Changes in Common Functions 
