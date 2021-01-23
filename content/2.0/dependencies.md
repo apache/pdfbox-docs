@@ -84,7 +84,7 @@ To include the JBIG2 library  the following part can be included in your project
 <dependency>
     <groupId>org.apache.pdfbox</groupId>
     <artifactId>jbig2-imageio</artifactId>
-    <version>3.0.0</version>
+    <version>...</version>
 </dependency>
 ```
 
