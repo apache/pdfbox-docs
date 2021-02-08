@@ -124,7 +124,7 @@ as they are treated to be of <strong>internal use only</strong>.</p>
 <p>For loading a PDF <code>PDDocument.load</code> has been replaced with the <code>Loader</code> methods. The same is true for loading a FDF document.</p>
 <p>When saving a PDF this will now be done in compressed mode per default. To override that use <code>PDDocument.save</code> with <code>CompressParameters.NO_COMPRESSION</code>.</p>
 <p>PDFBox now loads a PDF Document incrementally reducing the initial memory footprint. This will also reduce the memory needed to
-consume a PDF if only certain parts of the PDF are accessed. Note that, due to the nature of PDF, uses such as iterationg over all pages,
+consume a PDF if only certain parts of the PDF are accessed. Note that, due to the nature of PDF, uses such as iterating over all pages,
 accessing annotations, signing a PDF etc. might still load all parts of the PDF overtime leading to a similar memory consumption as with PDFBox 2.0.</p>
 <h2 id="changes-in-common-functions">Changes in Common Functions</h2>
 <h3 id="interactive-forms">Interactive Forms</h3>
