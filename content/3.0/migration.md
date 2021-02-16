@@ -67,7 +67,9 @@ When saving a PDF this will now be done in compressed mode per default. To overr
 
 PDFBox now loads a PDF Document incrementally reducing the initial memory footprint. This will also reduce the memory needed to
 consume a PDF if only certain parts of the PDF are accessed. Note that, due to the nature of PDF, uses such as iterating over all pages,
-accessing annotations, signing a PDF etc. might still load all parts of the PDF overtime leading to a similar memory consumption as with PDFBox 2.0.   
+accessing annotations, signing a PDF etc. might still load all parts of the PDF overtime leading to a similar memory consumption as with PDFBox 2.0.
+
+The input file must not be used as output for saving operations. It will corrupt the file and throw an exception as parts of the file are read the first time when saving it.
 
 ## Changes in Common Functions 
 
