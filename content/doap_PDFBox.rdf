@@ -30,10 +30,17 @@
     <shortdesc>The Apache PDFBox library is an open source Java tool for working with PDF documents.</shortdesc>
     <bug-database rdf:resource="https://issues.apache.org/jira/browse/PDFBOX" />
     <mailing-list rdf:resource="https://pdfbox.apache.org/mailinglists.html" />
-    <download-page rdf:resource="https://pdfbox.apache.org/download.cgi" />
+    <download-page rdf:resource="https://pdfbox.apache.org/download.html" />
     <programming-language>Java</programming-language>
     <category rdf:resource="https://projects.apache.org/category/content" />
     <category rdf:resource="https://projects.apache.org/category/library" />
+    <release>
+      <Version>
+        <name>Apache PDFBox</name>
+        <created>2021-03-18</created>
+        <revision>2.0.23</revision>
+      </Version>
+    </release>
     <release>
       <Version>
         <name>Apache PDFBox</name>
