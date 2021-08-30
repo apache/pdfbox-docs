@@ -127,6 +127,11 @@ as they are treated to be of <strong>internal use only</strong>.</p>
 consume a PDF if only certain parts of the PDF are accessed. Note that, due to the nature of PDF, uses such as iterating over all pages,
 accessing annotations, signing a PDF etc. might still load all parts of the PDF overtime leading to a similar memory consumption as with PDFBox 2.0.</p>
 <p>The input file must not be used as output for saving operations. It will corrupt the file and throw an exception as parts of the file are read the first time when saving it.</p>
+<h3 id="static-instances-for-standard-14-fonts-removed">Static instances for Standard 14 fonts removed</h3>
+<p>The static instances of <code>PDType1Font</code> for the standard 14 fonts were removed as the underlying <code>COSDictionary</code> isn't supposed to be immutable which led to several issues.</p>
+<p>A new constructor for <code>PDType1Font</code> was introduced to create a standard 14 font. The new Enum <code>Standard14Fonts.FontName</code> is the one and only parameter and defines the
+name of the standard 14 font for which the instance of <code>PDType1Font</code> is created for. That instance isn't a singleton anymore and has to be recreated if necessary or cached
+by the user if suitable.</p>
 <h2 id="changes-in-common-functions">Changes in Common Functions</h2>
 <h3 id="interactive-forms">Interactive Forms</h3>
 <p>When accessing <code>AcroForms</code> using <code>PDDocumentCatalog.getAcroForm()</code> a number of fix ups are applied aligning PDFBox with most of the default behaviour
@@ -172,6 +177,9 @@ of Adobe Reader. If you'd like to bypass this use <code>PDDocumentCatalog.getAcr
             		</li>
 
                     <li><a href="#use-loader-to-get-a-pdf-document">Use Loader to get a PDF document</a>
+            		</li>
+
+                    <li><a href="#static-instances-for-standard-14-fonts-removed">Static instances for Standard 14 fonts removed</a>
             		</li>
                 </ol>
             		</li>
