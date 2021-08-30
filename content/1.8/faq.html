@@ -101,10 +101,6 @@
                       Encrypting a File
                     </a>  
                   </li><li>
-                    <a href="/1.8/cookbook/documentcreation.html" >
-                      Document Creation
-                    </a>  
-                  </li><li>
                     <a href="/1.8/cookbook/fill-form-field.html" >
                       Fill a Form Field
                     </a>  
@@ -113,28 +109,32 @@
                       PDF/A Validation
                     </a>  
                   </li><li>
-                    <a href="/1.8/cookbook/rendering.html" >
-                      Document Rendering
+                    <a href="/1.8/cookbook/documentcreation.html" >
+                      Document Creation
                     </a>  
                   </li><li>
                     <a href="/1.8/cookbook/pdfacreation.html" >
                       PDF/A Creation
                     </a>  
                   </li><li>
-                    <a href="/1.8/cookbook/textextraction.html" >
-                      Text Extraction
-                    </a>  
-                  </li><li>
-                    <a href="/1.8/cookbook/workingwithattachments.html" >
-                      Working with Attachments
+                    <a href="/1.8/cookbook/rendering.html" >
+                      Document Rendering
                     </a>  
                   </li><li>
                     <a href="/1.8/cookbook/workingwithfonts.html" >
                       Working with Fonts
                     </a>  
                   </li><li>
+                    <a href="/1.8/cookbook/textextraction.html" >
+                      Text Extraction
+                    </a>  
+                  </li><li>
                     <a href="/1.8/cookbook/workingwithmetadata.html" >
                       Working with Metadata
+                    </a>  
+                  </li><li>
+                    <a href="/1.8/cookbook/workingwithattachments.html" >
+                      Working with Attachments
                     </a>  
                   </li></ul>
           </li><li>
@@ -195,8 +195,8 @@ Resources directory is included in the PDFBox jar so this is only a problem if y
 are building PDFBox yourself and not using the binary.</p>
 <h3 id="why-do-i-get-%22you-do-not-have-permission-to-extract-text%22-on-some-documents">Why do I get &quot;You do not have permission to extract text&quot; on some documents</h3>
 <p>PDF documents have certain security permissions that can be applied to them and two
-passwords associated with them, a user password and a master password. If the &quot;cannot extract text&quot;
-permission bit is set then you need to decrypt the document with the master password in order
+passwords associated with them, an user password and an owner password. If the &quot;cannot extract text&quot;
+permission bit is set then you need to decrypt the document with the owner password in order
 to extract the text.</p>
 <h3 id="can't-we-just-extract-the-text-without-parsing-the-whole-document-or-extract-text-as-it-is-parsed">Can't we just extract the text without parsing the whole document or extract text as it is parsed</h3>
 <p>Not really, for a couple reasons.</p>
