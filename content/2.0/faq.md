@@ -165,8 +165,8 @@ are building PDFBox yourself and not using the binary.
 ### Why do I get "You do not have permission to extract text" on some documents? ###
 
 PDF documents have certain security permissions that can be applied to them and two
-passwords associated with them, a user password and a master password. If the "cannot extract text"
-permission bit is set then you need to decrypt the document with the master password in order
+passwords associated with them, an user password and an owner password. If the "cannot extract text"
+permission bit is set then you need to decrypt the document with the owner password in order
 to extract the text.
 
 <a name="partially"></a>
