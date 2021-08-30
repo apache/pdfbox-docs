@@ -71,6 +71,14 @@ accessing annotations, signing a PDF etc. might still load all parts of the PDF 
 
 The input file must not be used as output for saving operations. It will corrupt the file and throw an exception as parts of the file are read the first time when saving it.
 
+### Static instances for Standard 14 fonts removed ###
+
+The static instances of `PDType1Font` for the standard 14 fonts were removed as the underlying `COSDictionary` isn't supposed to be immutable which led to several issues.
+
+A new constructor for `PDType1Font` was introduced to create a standard 14 font. The new Enum `Standard14Fonts.FontName` is the one and only parameter and defines the
+name of the standard 14 font for which the instance of `PDType1Font` is created for. That instance isn't a singleton anymore and has to be recreated if necessary or cached
+by the user if suitable.
+
 ## Changes in Common Functions 
 
 ### Interactive Forms
