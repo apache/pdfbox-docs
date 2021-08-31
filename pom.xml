@@ -112,6 +112,7 @@
                         <checkoutDirectory>${svn.scmCheckoutDirectory}</checkoutDirectory>
                         <ignorePathsToDelete>
                             <ignorePathToDelete>docs**</ignorePathToDelete>
+                            <ignorePathToDelete>.asf.yaml</ignorePathToDelete>
                         </ignorePathsToDelete>
                         <serverId>pdfbox-site</serverId>
                     </configuration>

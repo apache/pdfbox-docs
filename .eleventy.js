@@ -32,7 +32,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./content/.htaccess");
   eleventyConfig.addPassthroughCopy("./content/doap_PDFBox.rdf");
   eleventyConfig.addPassthroughCopy("./content/download.cgi");
-  eleventyConfig.addPassthroughCopy("./content/.asf.yaml");
 
   eleventyConfig.addCollection("posts", function(collectionApi) {
     return collectionApi.getFilteredByGlob("./content/_posts/*.md");
