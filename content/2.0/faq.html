@@ -154,7 +154,7 @@ PDDocument objects; one from the &quot;new PDDocument()&quot; and the second by 
 <h2 id="font-handling">Font Handling</h2>
 <p><a name="fontencoding"></a></p>
 <h3 id="i'm-getting-java.lang.illegalargumentexception%3A-...-is-not-available-in-this-font's-encoding%3A-winansiencoding">I'm getting java.lang.IllegalArgumentException: ... is not available in this font's encoding: WinAnsiEncoding</h3>
-<p>Check whether the character is available in WinAnsiEncoding by looking at the <a href="https://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/PDF32000_2008.pdf">PDF Specification</a> Appendix D.
+<p>Check whether the character is available in WinAnsiEncoding by looking at the <a href="https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf">PDF Specification</a> Appendix D.
 If not, but if it is available in this font (in windows, have a look with charmap.exe), then load the font with
 PDType0Font.load(), see also in the EmbeddedFonts.java example in the source code download.</p>
 <h2 id="pdf-creation">PDF Creation</h2>
