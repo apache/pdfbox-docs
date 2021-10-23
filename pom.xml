@@ -35,7 +35,7 @@
             <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
             <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
             <git.scmContentUrl>git:https://gitbox.apache.org/repos/asf/pdfbox-docs.git</git.scmContentUrl>
-            <node.version>v14.15.4</node.version>
+            <node.version>v14.18.1</node.version>
         </properties>
 
         <build>
@@ -49,12 +49,12 @@
                     <plugin>
                         <groupId>com.github.eirslett</groupId>
                         <artifactId>frontend-maven-plugin</artifactId>
-                        <version>1.7.5</version>
+                        <version>1.12.0</version>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-scm-publish-plugin</artifactId>
-                        <version>1.1</version>
+                        <version>3.1.0</version>
                     </plugin>
                 </plugins>
             </pluginManagement>
