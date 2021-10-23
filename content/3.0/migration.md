@@ -38,16 +38,17 @@ PDFBox 3.0 requires at least Java 8. Testing has been done up to Java 11.
 ## Dependency Updates
 All libraries on which PDFBox depends are updated to their latest stable versions:
 
-- Bouncy Castle 1.68
+- Bouncy Castle 1.69
 - Apache Commons Logging 1.2
+- picocli 4.6.1
 
 For test support the libraries are updated to
 
-- JUnit 5.7
+- JUnit 5.8
 - JAI Image Core 1.4.0
 - JAI JPEG2000 1.4.0
 - JBIG ImageIO Plugin 3.0.3
-- Apache Commons IO 2.8
+- Apache Commons IO 2.11
 
 ## General Changes for PDFBox 3.0
 
