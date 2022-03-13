@@ -112,7 +112,7 @@ to PDFBox 3.0. It provides information about the new, deprecated and unsupported
 <li>JUnit 5.8</li>
 <li>JAI Image Core 1.4.0</li>
 <li>JAI JPEG2000 1.4.0</li>
-<li>JBIG ImageIO Plugin 3.0.3</li>
+<li>JBIG ImageIO Plugin 3.0.4</li>
 <li>Apache Commons IO 2.11</li>
 </ul>
 <h2 id="general-changes-for-pdfbox-3.0">General Changes for PDFBox 3.0</h2>
@@ -121,6 +121,13 @@ to PDFBox 3.0. It provides information about the new, deprecated and unsupported
 <p>All deprecated APIs and components from PDFBox 2.x have been removed in PDFBox 3.0. Deprecated APIs in
 <code>PDPageContentStream</code> have been kept but you are encouraged to replace them with the non deprecated calls
 as they are treated to be of <strong>internal use only</strong>.</p>
+<h3 id="new-maven-module-for-io-classes">New maven module for IO-classes</h3>
+<p>All basic classes used for io-operations where moved to a separate module for a shared usage.</p>
+<pre><code>    &lt;dependency&gt;
+        &lt;groupId&gt;org.apache.pdfbox&lt;/groupId&gt;
+        &lt;artifactId&gt;io&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+</code></pre>
 <h3 id="use-loader-to-get-a-pdf-document">Use <strong>Loader</strong> to get a PDF document</h3>
 <p>For loading a PDF <code>PDDocument.load</code> has been replaced with the <code>Loader</code> methods. The same is true for loading a FDF document.</p>
 <p>When saving a PDF this will now be done in compressed mode per default. To override that use <code>PDDocument.save</code> with <code>CompressParameters.NO_COMPRESSION</code>.</p>
@@ -175,6 +182,9 @@ of Adobe Reader. If you'd like to bypass this use <code>PDDocumentCatalog.getAcr
                 <ol>
                     
                     <li><a href="#deprecated-apis-and-components">Deprecated APIs and Components</a>
+            		</li>
+
+                    <li><a href="#new-maven-module-for-io-classes">New maven module for IO-classes</a>
             		</li>
 
                     <li><a href="#use-loader-to-get-a-pdf-document">Use Loader to get a PDF document</a>
