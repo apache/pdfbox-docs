@@ -47,7 +47,7 @@ For test support the libraries are updated to
 - JUnit 5.8
 - JAI Image Core 1.4.0
 - JAI JPEG2000 1.4.0
-- JBIG ImageIO Plugin 3.0.3
+- JBIG ImageIO Plugin 3.0.4
 - Apache Commons IO 2.11
 
 ## General Changes for PDFBox 3.0
@@ -58,7 +58,18 @@ This section explains the fundamental differences between PDFBox 3.0 and 2.x rel
 
 All deprecated APIs and components from PDFBox 2.x have been removed in PDFBox 3.0. Deprecated APIs in
 `PDPageContentStream` have been kept but you are encouraged to replace them with the non deprecated calls
-as they are treated to be of **internal use only**.  
+as they are treated to be of **internal use only**.
+
+### New maven module for IO-classes
+
+All basic classes used for io-operations where moved to a separate module for a shared usage.
+
+~~~
+    <dependency>
+        <groupId>org.apache.pdfbox</groupId>
+        <artifactId>io</artifactId>
+    </dependency>
+~~~
 
 ### Use **Loader** to get a PDF document
 
