@@ -4,6 +4,10 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.setDataDeepMerge(true);
 
+  eleventyConfig.setLiquidOptions({
+    dynamicPartials: false,
+  });
+
   // enable generation of header anchor tags
   // needs the markdown-it-anchor plugin
   const markdownIt = require("markdown-it");
