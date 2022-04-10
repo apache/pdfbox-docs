@@ -125,10 +125,10 @@
     </nav>
 
     <section>
-      <h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
-<h2 id="general-questions">General Questions</h2>
+      <h1 id="frequently-asked-questions" tabindex="-1">Frequently Asked Questions</h1>
+<h2 id="general-questions" tabindex="-1">General Questions</h2>
 <p><a name="log4j"></a></p>
-<h3 id="i-am-getting-the-below-log4j-warning-message%2C-how-do-i-remove-it%3F">I am getting the below Log4J warning message, how do I remove it?</h3>
+<h3 id="i-am-getting-the-below-log4j-warning-message%2C-how-do-i-remove-it%3F" tabindex="-1">I am getting the below Log4J warning message, how do I remove it?</h3>
 <pre><code>log4j:WARN No appenders could be found for logger (org.apache.pdfbox.util.ResourceLoader).
 log4j:WARN Please initialize the log4j system properly.
 </code></pre>
@@ -141,25 +141,25 @@ See the <a href="http://logging.apache.org/log4j/1.2/manual.html">log4j document
 <pre><code>log4j.configuration=file:///&lt;path to config file&gt;
 </code></pre>
 <p><a name="threadsafe"></a></p>
-<h3 id="is-pdfbox-thread-safe%3F">Is PDFBox thread safe?</h3>
+<h3 id="is-pdfbox-thread-safe%3F" tabindex="-1">Is PDFBox thread safe?</h3>
 <p>No! Only one thread may access a single document at a time. You can have multiple threads each accessing their own
 PDDocument object.</p>
 <p><a name="notclosed"></a></p>
-<h3 id="why-do-i-get-a-%22warning%3A-you-did-not-close-the-pdf-document%22%3F">Why do I get a &quot;Warning: You did not close the PDF Document&quot;?</h3>
+<h3 id="why-do-i-get-a-%22warning%3A-you-did-not-close-the-pdf-document%22%3F" tabindex="-1">Why do I get a &quot;Warning: You did not close the PDF Document&quot;?</h3>
 <p>You need to call close() on the PDDocument inside the finally block, if you
 don't then the document will not be closed properly.  Also, you must close all
 PDDocument objects that get created.  The following code creates <strong>two</strong>
 PDDocument objects; one from the &quot;new PDDocument()&quot; and the second by the load method.</p>
 <pre class="language-java"><code class="language-java"><span class="token class-name">PDDocument</span> doc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PDDocument</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token keyword">try</span><br><span class="token punctuation">{</span><br>   doc <span class="token operator">=</span> <span class="token class-name">PDDocument</span><span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span> <span class="token string">"my.pdf"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token keyword">finally</span><br><span class="token punctuation">{</span><br>   <span class="token keyword">if</span><span class="token punctuation">(</span> doc <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token punctuation">)</span><br>   <span class="token punctuation">{</span><br>      doc<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>   <span class="token punctuation">}</span><br><span class="token punctuation">}</span></code></pre>
-<h2 id="font-handling">Font Handling</h2>
+<h2 id="font-handling" tabindex="-1">Font Handling</h2>
 <p><a name="fontencoding"></a></p>
-<h3 id="i'm-getting-java.lang.illegalargumentexception%3A-...-is-not-available-in-this-font's-encoding%3A-winansiencoding">I'm getting java.lang.IllegalArgumentException: ... is not available in this font's encoding: WinAnsiEncoding</h3>
+<h3 id="i'm-getting-java.lang.illegalargumentexception%3A-...-is-not-available-in-this-font's-encoding%3A-winansiencoding" tabindex="-1">I'm getting java.lang.IllegalArgumentException: ... is not available in this font's encoding: WinAnsiEncoding</h3>
 <p>Check whether the character is available in WinAnsiEncoding by looking at the <a href="https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf">PDF Specification</a> Appendix D.
 If not, but if it is available in this font (in windows, have a look with charmap.exe), then load the font with
 PDType0Font.load(), see also in the EmbeddedFonts.java example in the source code download.</p>
-<h2 id="pdf-creation">PDF Creation</h2>
+<h2 id="pdf-creation" tabindex="-1">PDF Creation</h2>
 <p><a name="layout"></a></p>
-<h3 id="can-i-use-pdfbox-to-create-complex-layouts%3F">Can I use PDFBox to create complex layouts?</h3>
+<h3 id="can-i-use-pdfbox-to-create-complex-layouts%3F" tabindex="-1">Can I use PDFBox to create complex layouts?</h3>
 <p>I'd like to use PDFBox to create a complex layout containing several paragraphs, tables, images etc. Is PDFBox fit for that purpose?</p>
 <p>PDFBox being a low level PDF library provides the APIs to create page content such as text, images etc. But at this point in time it doesn't provide a higher level API to do page layout, paragraph handling, automatic line wrapping or create tables and such.</p>
 <p>But PDFBox is the foundation of some projects which might help in that case. This includes projects such as</p>
@@ -173,17 +173,17 @@ PDType0Font.load(), see also in the EmbeddedFonts.java example in the source cod
 </ul>
 <p>You may also want to consider using <a href="https://xmlgraphics.apache.org/fop/">Apache FOP</a> which allows to create complex documents from XML data and templates-</p>
 <p><a name="emptypage"></a></p>
-<h3 id="i'm-creating-a-pdf-but-my-page-is-empty.-why%3F">I'm creating a PDF but my page is empty. Why?</h3>
+<h3 id="i'm-creating-a-pdf-but-my-page-is-empty.-why%3F" tabindex="-1">I'm creating a PDF but my page is empty. Why?</h3>
 <p>Make sure that you closed your content stream before saving.</p>
-<h2 id="text-extraction">Text Extraction</h2>
+<h2 id="text-extraction" tabindex="-1">Text Extraction</h2>
 <p><a name="textorder"></a></p>
-<h3 id="why-does-the-extracted-text-appear-in-the-wrong-sequence%3F">Why does the extracted text appear in the wrong sequence?</h3>
+<h3 id="why-does-the-extracted-text-appear-in-the-wrong-sequence%3F" tabindex="-1">Why does the extracted text appear in the wrong sequence?</h3>
 <p>By default, text extraction is done in the same sequence as the text in the PDF page content stream.
 PDF is a graphic format, not a text format, and unlike HTML, it has no requirements that text one on page
 be rendered in a certain order. The order is the one that was determined by the software that created the PDF.
 To get text sorted from left to right and top to botton, use <code>setSortByPosition(true)</code>.</p>
 <p><a name="notext"></a></p>
-<h3 id="how-come-i-am-not-getting-any-text-from-the-pdf-document%3F">How come I am not getting any text from the PDF document?</h3>
+<h3 id="how-come-i-am-not-getting-any-text-from-the-pdf-document%3F" tabindex="-1">How come I am not getting any text from the PDF document?</h3>
 <p>Text extraction from a pdf document is a complicated task and there are many factors
 involved that effect the possibility and accuracy of text extraction.  It would be helpful
 to the PDFBox team if you could try a couple things.</p>
@@ -194,25 +194,25 @@ should be able to as well and it is a bug if it cannot.  If Acrobat cannot extra
 You can tell by using the selection tool in Acrobat, if you can't select any text then it is probably an image.</li>
 </ul>
 <p><a name="gibberish"></a></p>
-<h3 id="how-come-i-am-getting-gibberish(g38g43g36g51g5)-when-extracting-text%3F">How come I am getting gibberish(G38G43G36G51G5) when extracting text?</h3>
+<h3 id="how-come-i-am-getting-gibberish(g38g43g36g51g5)-when-extracting-text%3F" tabindex="-1">How come I am getting gibberish(G38G43G36G51G5) when extracting text?</h3>
 <p>This is because the characters in a PDF document can use a custom encoding
 instead of unicode or ASCII.  When you see gibberish text then it
 probably means that a meaningless internal encoding is being used.  The
 only way to access the text is to use OCR.  This may be a future
 enhancement.</p>
 <p><a name="fontwidth"></a></p>
-<h3 id="what-does-%22java.io.ioexception%3A-can't-handle-font-width%22-mean%3F">What does &quot;java.io.IOException: Can't handle font width&quot; mean?</h3>
+<h3 id="what-does-%22java.io.ioexception%3A-can't-handle-font-width%22-mean%3F" tabindex="-1">What does &quot;java.io.IOException: Can't handle font width&quot; mean?</h3>
 <p>This probably means that the &quot;Resources&quot; directory is not in your classpath. The
 Resources directory is included in the PDFBox jar so this is only a problem if you
 are building PDFBox yourself and not using the binary.</p>
 <p><a name="permission"></a></p>
-<h3 id="why-do-i-get-%22you-do-not-have-permission-to-extract-text%22-on-some-documents%3F">Why do I get &quot;You do not have permission to extract text&quot; on some documents?</h3>
+<h3 id="why-do-i-get-%22you-do-not-have-permission-to-extract-text%22-on-some-documents%3F" tabindex="-1">Why do I get &quot;You do not have permission to extract text&quot; on some documents?</h3>
 <p>PDF documents have certain security permissions that can be applied to them and two
 passwords associated with them, an user password and an owner password. If the &quot;cannot extract text&quot;
 permission bit is set then you need to decrypt the document with the owner password in order
 to extract the text.</p>
 <p><a name="partially"></a></p>
-<h3 id="can't-we-just-extract-the-text-without-parsing-the-whole-document-or-extract-text-as-it-is-parsed%3F">Can't we just extract the text without parsing the whole document or extract text as it is parsed?</h3>
+<h3 id="can't-we-just-extract-the-text-without-parsing-the-whole-document-or-extract-text-as-it-is-parsed%3F" tabindex="-1">Can't we just extract the text without parsing the whole document or extract text as it is parsed?</h3>
 <p>Not really, for a couple reasons.</p>
 <ul>
 <li>If the document is encrypted then you need to parse at least until the encryption dictionary before
@@ -222,9 +222,9 @@ you can decrypt.</li>
 the pdf could have been written such that &quot;World&quot; gets drawn and then the cursor moves to the left and
 the word &quot;Hello&quot; is drawn.</li>
 </ul>
-<h2 id="pdf-rendering">PDF rendering</h2>
+<h2 id="pdf-rendering" tabindex="-1">PDF rendering</h2>
 <p><a name="outofmemoryerror"></a></p>
-<h3 id="i'm-getting-an-outofmemoryerror.-what-can-i-do%3F">I'm getting an OutOfMemoryError. What can I do?</h3>
+<h3 id="i'm-getting-an-outofmemoryerror.-what-can-i-do%3F" tabindex="-1">I'm getting an OutOfMemoryError. What can I do?</h3>
 <p>The memory footprint depends on the PDF itself and on the resolution you use for rendering. Some possible options:</p>
 <ul>
 <li>increase the <code>-Xmx</code> value when starting java</li>
@@ -235,10 +235,10 @@ the word &quot;Hello&quot; is drawn.</li>
 <li>disable the cache for <code>PDImageXObject</code> objects by calling <code>PDDocument.setResourceCache()</code> with a cache object that is derived from <code>DefaultResourceCache</code> and whose call <code>public void put(COSObject indirect, PDXObject xobject)</code> does nothing. Be aware that this will slow down rendering for PDF files that have an identical image in several pages (e.g. a company logo or a background). More about this can be read in <a href="https://issues.apache.org/jira/browse/PDFBOX-3700">PDFBOX-3700</a>.</li>
 </ul>
 <p><a name="dropshadow"></a></p>
-<h3 id="a-drop-shadow-is-missing-or-at-the-wrong-position-when-rendering-a-page">A drop shadow is missing or at the wrong position when rendering a page</h3>
+<h3 id="a-drop-shadow-is-missing-or-at-the-wrong-position-when-rendering-a-page" tabindex="-1">A drop shadow is missing or at the wrong position when rendering a page</h3>
 <p>Please attach your file in the <a href="https://issues.apache.org/jira/browse/PDFBOX-3000">PDFBOX-3000</a> issue.</p>
 <p><a name="textantialias"></a></p>
-<h3 id="why-are-some-texts-in-poor-quality-and-not-antialiased%3F">Why are some texts in poor quality and not antialiased?</h3>
+<h3 id="why-are-some-texts-in-poor-quality-and-not-antialiased%3F" tabindex="-1">Why are some texts in poor quality and not antialiased?</h3>
 <p>This is because in some PDFs (e.g. the one in PDFBOX-2814 <a href="https://issues.apache.org/jira/browse/PDFBOX-2814">https://issues.apache.org/jira/browse/PDFBOX-2814</a>), text is not
 rendered directly, but as a shaped clipping from a background. Java graphics does not support &quot;soft clipping&quot;
 <a href="https://bugs.openjdk.java.net/browse/JDK-4212743">https://bugs.openjdk.java.net/browse/JDK-4212743</a>, and because of that, the edges are not looking smooth.
@@ -342,7 +342,7 @@ but these would cost additional time and memory space. You can have a higher qua
                 <!-- nothing in here on purpose -->
             </div>
             <div class="span9">
-                <p>Copyright © 2009&ndash; <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                <p>Copyright © 2009&ndash;2022 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
                     <br>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
             </div>
         </div>

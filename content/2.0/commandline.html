@@ -125,11 +125,11 @@
     </nav>
 
     <section>
-      <h1 id="command-line-tools">Command-Line Tools</h1>
+      <h1 id="command-line-tools" tabindex="-1">Command-Line Tools</h1>
 <p>PDFBox comes with a series of command-line utilities. They are available as standard Java applications.</p>
 <p>See the <a href="/2.0/dependencies.html">Dependencies</a> page for instructions on how to set your classpath in order to run
 PDFBox tools as Java applications.</p>
-<h2 id="decrypt">Decrypt</h2>
+<h2 id="decrypt" tabindex="-1">Decrypt</h2>
 <p>This application will decrypt a PDF document.</p>
 <p>NOTE: You must have the owner password to decrypt the document!</p>
 <p>Usage: <code>java -jar pdfbox-app-2.y.z.jar Decrypt [OPTIONS] &lt;inputfile&gt; [outputfile]</code></p>
@@ -163,7 +163,7 @@ PDFBox tools as Java applications.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="encrypt">Encrypt</h2>
+<h2 id="encrypt" tabindex="-1">Encrypt</h2>
 <p>This application will encrypt a PDF document.</p>
 <p>Usage: <code>java -jar pdfbox-app-2.y.z.jar Encrypt [OPTIONS] &lt;password&gt; &lt;inputfile&gt;</code></p>
 <table>
@@ -247,7 +247,7 @@ PDFBox tools as Java applications.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="extractimages">ExtractImages</h2>
+<h2 id="extractimages" tabindex="-1">ExtractImages</h2>
 <p>This application will extract all images from the given PDF document.</p>
 <p>Usage: <code>java -jar pdfbox-app-2.y.z.jar ExtractImages [OPTIONS] &lt;inputfile&gt; </code></p>
 <table>
@@ -276,7 +276,7 @@ PDFBox tools as Java applications.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="extracttext">ExtractText</h2>
+<h2 id="extracttext" tabindex="-1">ExtractText</h2>
 <p>This application will extract all text from the given PDF document.</p>
 <p>Usage: <code>java -jar pdfbox-app-2.y.z.jar ExtractText [OPTIONS] &lt;inputfile&gt; [Text file] </code></p>
 <table>
@@ -345,7 +345,7 @@ PDFBox tools as Java applications.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="overlaypdf">OverlayPDF</h2>
+<h2 id="overlaypdf" tabindex="-1">OverlayPDF</h2>
 <p>This application will overlay one document with the content of another document</p>
 <p>Usage: <code>java -jar pdfbox-app-2.y.z.jar OverlayPDF &lt;input.pdf&gt; [OPTIONS] &lt;output.pdf&gt;</code></p>
 <table>
@@ -410,7 +410,7 @@ PDFBox tools as Java applications.</p>
 <li>OverlayPDF input.pdf defaultOverlay.pdf -page 10 overlayForPage10.pdf -position foreground output.pdf</li>
 <li>OverlayPDF input.pdf -odd oddOverlay.pdf -even evenOverlay.pdf output.pdf</li>
 </ul>
-<h2 id="pdfdebugger">PDFDebugger</h2>
+<h2 id="pdfdebugger" tabindex="-1">PDFDebugger</h2>
 <p>This application will take an existing PDF document and allows to analyze and inspect the internal structure.
 It is used as replacement for the PDFReader which was removed in 2.0.0.</p>
 <p>Usage: <code>java -jar pdfbox-app-2.y.z.jar PDFDebugger [inputfile] </code></p>
@@ -440,10 +440,10 @@ It is used as replacement for the PDFReader which was removed in 2.0.0.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="pdfmerger">PDFMerger</h2>
+<h2 id="pdfmerger" tabindex="-1">PDFMerger</h2>
 <p>This application will take a list of pdf documents and merge them, saving the result in a new document.</p>
 <p>Usage: <code>java -jar pdfbox-app-2.y.z.jar PDFMerger &lt;Source PDF files (2 ..n)&gt; &lt;Target PDF file&gt;</code></p>
-<h2 id="pdfsplit">PDFSplit</h2>
+<h2 id="pdfsplit" tabindex="-1">PDFSplit</h2>
 <p>This application will take an existing PDF document and split it into a number of new documents.</p>
 <p>Per default the resulting files will be named after the original filenmame with <code>-&lt;nr&gt;</code> appended before the suffix.
 To override the filename use the <code>outputPrefix</code> option.</p>
@@ -491,7 +491,7 @@ To override the filename use the <code>outputPrefix</code> option.</p>
 <li>PDFSplit -startPage 5 -endPage 10 sample_with_13_pages.pdf will provide a pdf containing all pages from 5 to 10 of the source pdf</li>
 <li>PDFSplit -split 2 -startPage 5 -endPage 10 sample_with_13_pages.pdf will provide 3 pdfs containing all pages from 5 to 10 of the source pdf 2 pages each</li>
 </ul>
-<h2 id="pdftoimage">PDFToImage</h2>
+<h2 id="pdftoimage" tabindex="-1">PDFToImage</h2>
 <p>This application will create an image for every page in the PDF document.</p>
 <p>Usage: <code>java -jar pdfbox-app-2.y.z.jar PDFToImage [OPTIONS] &lt;PDF file&gt;</code></p>
 <table>
@@ -555,7 +555,7 @@ To override the filename use the <code>outputPrefix</code> option.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="printpdf">PrintPDF</h2>
+<h2 id="printpdf" tabindex="-1">PrintPDF</h2>
 <p>This application will send a pdf document to the printer.</p>
 <p class="alert alert-info">You must have the correct permissions to print the document!</p>
 <p>Usage: <code>java -jar pdfbox-app-2.y.z.jar PrintPDF [OPTIONS] &lt;inputfile&gt;</code></p>
@@ -605,7 +605,7 @@ To override the filename use the <code>outputPrefix</code> option.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="texttopdf">TextToPDF</h2>
+<h2 id="texttopdf" tabindex="-1">TextToPDF</h2>
 <p>This application will create a PDF document from a text file.</p>
 <p>Usage: <code>java -jar pdfbox-app-2.y.z.jar TextToPDF [OPTIONS] &lt;outputfile&gt; &lt;textfile&gt;</code></p>
 <table>
@@ -651,7 +651,7 @@ To override the filename use the <code>outputPrefix</code> option.</p>
 <li>Times-BoldItalic</li>
 <li>ZapfDingbats</li>
 </ul>
-<h2 id="writedecodeddoc">WriteDecodedDoc</h2>
+<h2 id="writedecodeddoc" tabindex="-1">WriteDecodedDoc</h2>
 <p>An application to decompress PDF documents.</p>
 <p>Usage: <code>java -jar pdfbox-app-2.y.z.jar WriteDecodedDoc &lt;input-file&gt; &lt;output-file&gt;</code></p>
 <table>
@@ -739,7 +739,7 @@ To override the filename use the <code>outputPrefix</code> option.</p>
                 <!-- nothing in here on purpose -->
             </div>
             <div class="span9">
-                <p>Copyright © 2009&ndash; <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                <p>Copyright © 2009&ndash;2022 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
                     <br>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
             </div>
         </div>

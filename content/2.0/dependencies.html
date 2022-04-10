@@ -125,11 +125,11 @@
     </nav>
 
     <section>
-      <h1 id="dependencies">Dependencies</h1>
-<h2 id="core-components">Core Components</h2>
+      <h1 id="dependencies" tabindex="-1">Dependencies</h1>
+<h2 id="core-components" tabindex="-1">Core Components</h2>
 <p class="alert alert-info">These components are needed during runtime, development and testing dependent on the details below.</p>
 <p>The three PDFBox components are named <code>pdfbox</code>, <code>fontbox</code> and <code>xmpbox</code>. The Maven groupId of all PDFBox components is org.apache.pdfbox.</p>
-<h3 id="minimum-requirements">Minimum Requirements</h3>
+<h3 id="minimum-requirements" tabindex="-1">Minimum Requirements</h3>
 <p>PDFBox has the following basic dependencies:</p>
 <ul>
 <li>Java 6</li>
@@ -139,17 +139,17 @@
 or let commons-logging fall back to the standard <a href="http://java.sun.com/j2se/1.4.2/docs/guide/util/logging/overview.html">java.util.logging API</a>
 included in the Java platform.</p>
 <p>For <strong>PDFBox Preflight tests only</strong> <a href="https://commons.apache.org/proper/commons-io/">commons-io 2.4</a> is needed.</p>
-<h3 id="font-handling">Font Handling</h3>
+<h3 id="font-handling" tabindex="-1">Font Handling</h3>
 <p>For font handling the fontbox component is needed.</p>
-<h3 id="xmp-metadata">XMP Metadata</h3>
+<h3 id="xmp-metadata" tabindex="-1">XMP Metadata</h3>
 <p>To support XMP metadata the xmpbox component is needed.</p>
-<h3 id="include-dependencies-using-maven">Include Dependencies Using Maven</h3>
+<h3 id="include-dependencies-using-maven" tabindex="-1">Include Dependencies Using Maven</h3>
 <p>To add the pdfbox, fontbox, xmpbox and commons-logging jars to your application, the easiest thing is to declare the Maven dependency shown below. This gives you the main pdfbox library directly and the other required jars as transitive dependencies.</p>
 <pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.apache.pdfbox<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>pdfbox<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span></code></pre>
 <p>Set the version field to the latest stable PDFBox version.</p>
-<h2 id="optional-components">Optional Components</h2>
+<h2 id="optional-components" tabindex="-1">Optional Components</h2>
 <p>PDFBox does not ship with all features enabled. Third party components are necessary to get full support for certain functionality.</p>
-<h3 id="jai-image-i%2Fo">JAI Image I/O</h3>
+<h3 id="jai-image-i%2Fo" tabindex="-1">JAI Image I/O</h3>
 <p>PDF supports embedded image files, however support for some formats require third party libraries which are distributed under terms incompatible with the Apache 2.0 license:</p>
 <ul>
 <li>Reading <strong>JBIG2</strong> images: <a href="https://pdfbox.apache.org/download.cgi#JBIG2">JBIG2 ImageIO</a></li>
@@ -160,14 +160,14 @@ included in the Java platform.</p>
 <p>Maven dependencies for these components can be found in <a href="https://svn.apache.org/viewvc/pdfbox/trunk/parent/pom.xml?view=markup">parent/pom.xml</a>. <strong>Change the scope of the components if needed</strong>. Please make sure that any third party licenses are suitable for your project.</p>
 <p>To include the JBIG2 library  the following part can be included in your project pom.xml:</p>
 <pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.apache.pdfbox<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>jbig2-imageio<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>3.0.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span></code></pre>
-<h3 id="encryption-and-signing">Encryption and Signing</h3>
+<h3 id="encryption-and-signing" tabindex="-1">Encryption and Signing</h3>
 <p>Encrypting and sigining PDFs requires the <em>bcprov</em>, <em>bcmail</em> and <em>bcpkix</em> libraries from the <a href="http://www.bouncycastle.org/">Legion of the Bouncy Castle</a>. These can be included in your Maven project using the following dependencies:</p>
 <pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.bouncycastle<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>bcprov-jdk15on<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.64<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span><br><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.bouncycastle<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>bcmail-jdk15on<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.64<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span><br><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.bouncycastle<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>bcpkix-jdk15on<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.64<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span></code></pre>
-<h3 id="java-cryptography-extension-(jce)">Java Cryptography Extension (JCE)</h3>
+<h3 id="java-cryptography-extension-(jce)" tabindex="-1">Java Cryptography Extension (JCE)</h3>
 <p>256-bit AES encryption requires a JDK with &quot;unlimited strength&quot; cryptography, which requires extra files to be installed. For JDK 7, see <a href="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html">Java Cryptography Extension (JCE)</a>. If these files are not installed, building PDFBox will throw an exception with the following message:</p>
 <pre><code>JCE unlimited strength jurisdiction policy files are not installed
 </code></pre>
-<h2 id="dependencies-for-ant-builds">Dependencies for Ant Builds</h2>
+<h2 id="dependencies-for-ant-builds" tabindex="-1">Dependencies for Ant Builds</h2>
 <p>The above instructions expect that you're using <a href="http://maven.apache.org/">Maven</a> or another build tool like
 <a href="http://ant.apache.org/ivy/">Ivy</a> that supports Maven dependencies.
 If you instead use tools like <a href="http://ant.apache.org/">Ant</a> where you need to explicitly include all the required
@@ -234,7 +234,7 @@ directory. You can then simply copy all the libraries you need from this directo
                 <!-- nothing in here on purpose -->
             </div>
             <div class="span9">
-                <p>Copyright © 2009&ndash; <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                <p>Copyright © 2009&ndash;2022 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
                     <br>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
             </div>
         </div>

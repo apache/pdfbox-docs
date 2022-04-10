@@ -125,10 +125,10 @@
     </nav>
 
     <section>
-      <h1 id="migration-to-pdfbox-2.0.0">Migration to PDFBox 2.0.0</h1>
-<h2 id="environment">Environment</h2>
+      <h1 id="migration-to-pdfbox-2.0.0" tabindex="-1">Migration to PDFBox 2.0.0</h1>
+<h2 id="environment" tabindex="-1">Environment</h2>
 <p>PDFBox 2.0.0 requires at least Java 6</p>
-<h2 id="packages">Packages</h2>
+<h2 id="packages" tabindex="-1">Packages</h2>
 <p>There are some significant changes to the package structure of PDFBox:</p>
 <ul>
 <li>Jempbox is no longer supported and was removed in favour of Xmpbox</li>
@@ -138,7 +138,7 @@
 <li>all debugger related stuff was moved to the new package &quot;pdfbox-debugger&quot;</li>
 <li>the new package &quot;debugger-app&quot; provides a standalone pre built binary for the debugger</li>
 </ul>
-<h2 id="dependency-updates">Dependency Updates</h2>
+<h2 id="dependency-updates" tabindex="-1">Dependency Updates</h2>
 <p>All libraries on which PDFBox depends are updated to their latest stable versions:</p>
 <ul>
 <li>Bouncy Castle 1.53</li>
@@ -155,10 +155,10 @@
 <ul>
 <li>Apache Commons IO 2.4</li>
 </ul>
-<h2 id="breaking-changes-to-the-library">Breaking Changes to the Library</h2>
-<h3 id="deprecated-api-calls">Deprecated API calls</h3>
+<h2 id="breaking-changes-to-the-library" tabindex="-1">Breaking Changes to the Library</h2>
+<h3 id="deprecated-api-calls" tabindex="-1">Deprecated API calls</h3>
 <p>Most deprecated API calls in PDFBox 1.8.x have been removed for PDFBox 2.0.0</p>
-<h3 id="api-changes">API Changes</h3>
+<h3 id="api-changes" tabindex="-1">API Changes</h3>
 <p>The API changes are reflected in the Javadoc for PDFBox 2.0.0. The most notable changes are:</p>
 <ul>
 <li><code>getCOSDictionary()</code> is no longer used. Instead <code>getCOSObject</code> now returns the matching <code>COSBase</code> subtype.</li>
@@ -167,23 +167,23 @@
 <li><code>PDPage.getContents().createInputStream()</code>was simplified to <code>PDPage.getContents()</code>.</li>
 <li><code>PDPageContentStream</code> was moved to <code>org.apache.pdfbox.pdmodel</code>.</li>
 </ul>
-<h3 id="general-behaviour">General Behaviour</h3>
+<h3 id="general-behaviour" tabindex="-1">General Behaviour</h3>
 <p>PDFBox 2.0.0 is now parsing PDF files following the Xref information in the PDF. This is similar to the functionality using
 <code>PDDocument.loadNonSeq</code> with PDFBox 1.8.x. Users still using <code>PDDocument.load</code> with PDFBox 1.8.x might experience different
 results when switching to PDFBox 2.0.0.</p>
-<h3 id="font-handling">Font Handling</h3>
+<h3 id="font-handling" tabindex="-1">Font Handling</h3>
 <p>Font handling now has full Unicode support and supports font subsetting.</p>
 <p>TrueType fonts shall now be loaded using</p>
 <pre class="language-java"><code class="language-java"><span class="token class-name">PDType0Font</span><span class="token punctuation">.</span>load</code></pre>
 <p>to leverage that.</p>
 <p><code>PDAfmPfbFont</code> has been removed. To load such a font pass the pfb file to <code>PDType1Font</code>. Loading the afm file is no longer required.</p>
-<h3 id="pdf-resources-handling">PDF Resources Handling</h3>
+<h3 id="pdf-resources-handling" tabindex="-1">PDF Resources Handling</h3>
 <p>The individual calls to add resources such as <code>PDResources.addFont(PDFont font)</code> and <code>PDResources.addXObject(PDXObject xobject, String prefix)</code>
 have been replaced with <code>PDResources.add(resource type)</code> where <code>resource type</code> represents the different resource classes such as <code>PDFont</code>, <code>PDAbstractPattern</code>
 and so on. The <code>add</code> method now supports all the different type of resources available.</p>
 <p>Instead of returning a <code>Map</code> like with <code>PDResources.getFonts()</code> or <code>PDResources.getXObjects()</code> in 2.0 an <code>Iterable&lt;COSName&gt;</code> of references shall be retrieved with <code>PDResources.getFontNames()</code> or
 <code>PDResources.getXObjectNames()</code>. The individual item can be retrieved with <code>PDResources.getFont(COSName fontName)</code> or <code>PDResources.getXObject(COSName xObjectName)</code>.</p>
-<h3 id="working-with-images">Working with Images</h3>
+<h3 id="working-with-images" tabindex="-1">Working with Images</h3>
 <p>The individual classes <code>PDJpeg()</code>, <code>PDPixelMap()</code> and <code>PDCCitt()</code> to import images have been replaced with <code>PDImageXObject.createFromFile</code> which works for JPG, TIFF (only G4 compression), PNG, BMP and GIF.</p>
 <p>In addition there are some specialized classes:</p>
 <ul>
@@ -191,17 +191,17 @@ and so on. The <code>add</code> method now supports all the different type of re
 <li><code>CCITTFactory.createFromFile</code> (for bitonal TIFF images with G4 compression).</li>
 <li><code>LosslessFactory.createFromImage</code> (this is best if you start with a BufferedImage).</li>
 </ul>
-<h3 id="parsing-the-page-content">Parsing the Page Content</h3>
+<h3 id="parsing-the-page-content" tabindex="-1">Parsing the Page Content</h3>
 <p>Getting the content for a page has been simplified.</p>
 <p>Prior to PDFBox 2.0 parsing the page content was done using</p>
 <pre class="language-java"><code class="language-java"><span class="token class-name">PDStream</span> contents <span class="token operator">=</span> page<span class="token punctuation">.</span><span class="token function">getContents</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token class-name">PDFStreamParser</span> parser <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PDFStreamParser</span><span class="token punctuation">(</span>contents<span class="token punctuation">.</span><span class="token function">getStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>parser<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Object</span><span class="token punctuation">></span></span> tokens <span class="token operator">=</span> parser<span class="token punctuation">.</span><span class="token function">getTokens</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>With PDFBox 2.0 the code is reduced to</p>
 <pre class="language-java"><code class="language-java"><span class="token class-name">PDFStreamParser</span> parser <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PDFStreamParser</span><span class="token punctuation">(</span>page<span class="token punctuation">)</span><span class="token punctuation">;</span><br>parser<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Object</span><span class="token punctuation">></span></span> tokens <span class="token operator">=</span> parser<span class="token punctuation">.</span><span class="token function">getTokens</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>In addition this also works if the page content is defined as an <strong>array of content streams</strong>.</p>
-<h3 id="iterating-pages">Iterating Pages</h3>
+<h3 id="iterating-pages" tabindex="-1">Iterating Pages</h3>
 <p>With PDFBox 2.0.0 the prefered way to iterate through the pages of a document is</p>
 <pre class="language-java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token class-name">PDPage</span> page <span class="token operator">:</span> document<span class="token punctuation">.</span><span class="token function">getPages</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><br><span class="token punctuation">{</span><br>    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">(</span><span class="token keyword">do</span> something<span class="token punctuation">)</span><br><span class="token punctuation">}</span></code></pre>
-<h3 id="pdf-rendering">PDF Rendering</h3>
+<h3 id="pdf-rendering" tabindex="-1">PDF Rendering</h3>
 <p>With PDFBox 2.0.0 <code>PDPage.convertToImage</code> and <code>PDFImageWriter</code> have been removed. Instead the new <code>PDFRenderer</code> class shall be used.</p>
 <pre class="language-java"><code class="language-java"><span class="token class-name">PDDocument</span> document <span class="token operator">=</span> <span class="token class-name">PDDocument</span><span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span>pdfFilename<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token class-name">PDFRenderer</span> pdfRenderer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PDFRenderer</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token keyword">int</span> pageCounter <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><br><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">PDPage</span> page <span class="token operator">:</span> document<span class="token punctuation">.</span><span class="token function">getPages</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><br><span class="token punctuation">{</span><br>    <span class="token comment">// note that the page number parameter is zero based</span><br>    <span class="token class-name">BufferedImage</span> bim <span class="token operator">=</span> pdfRenderer<span class="token punctuation">.</span><span class="token function">renderImageWithDPI</span><span class="token punctuation">(</span>pageCounter<span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">,</span> <span class="token class-name">ImageType</span><span class="token punctuation">.</span>RGB<span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>    <span class="token comment">// suffix in filename will be used as the file format</span><br>    <span class="token class-name">ImageIOUtil</span><span class="token punctuation">.</span><span class="token function">writeImage</span><span class="token punctuation">(</span>bim<span class="token punctuation">,</span> pdfFilename <span class="token operator">+</span> <span class="token string">"-"</span> <span class="token operator">+</span> <span class="token punctuation">(</span>pageCounter<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">".png"</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br>document<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p><code>ImageIOUtil</code> has been moved into the <code>org.apache.pdfbox.tools.imageio</code> package. This is in the <code>pdfbox-tools</code> download. If you are using maven, the <code>artifactId</code> has the same name.</p>
@@ -220,32 +220,32 @@ https://bugs.openjdk.java.net/browse/JDK-8041125</p>
 <p>PDFBox 2.0.4 introduced a new command line setting</p>
 <p><code>-Dorg.apache.pdfbox.rendering.UsePureJavaCMYKConversion=true</code></p>
 <p>which may improve the performance of rendering PDFs on some systems especially if there are a lot of images on a page.</p>
-<h3 id="pdf-printing">PDF Printing</h3>
+<h3 id="pdf-printing" tabindex="-1">PDF Printing</h3>
 <p>With PDFBox 2.0.0 <code>PDFPrinter</code> has been removed.</p>
 <p>Users of <code>PDFPrinter.silentPrint()</code> should now use this code:</p>
 <pre class="language-java"><code class="language-java"><span class="token class-name">PrinterJob</span> job <span class="token operator">=</span> <span class="token class-name">PrinterJob</span><span class="token punctuation">.</span><span class="token function">getPrinterJob</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>job<span class="token punctuation">.</span><span class="token function">setPageable</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">PDFPageable</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>job<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>While users of <code>PDFPrinter.print()</code> should now use this code:</p>
 <pre class="language-java"><code class="language-java"><span class="token class-name">PrinterJob</span> job <span class="token operator">=</span> <span class="token class-name">PrinterJob</span><span class="token punctuation">.</span><span class="token function">getPrinterJob</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>job<span class="token punctuation">.</span><span class="token function">setPageable</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">PDFPageable</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token keyword">if</span> <span class="token punctuation">(</span>job<span class="token punctuation">.</span><span class="token function">printDialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    job<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
 <p>Advanced use case examples can be found in th examples package under org/apache/pdfbox/examples/printing/Printing.java</p>
-<h3 id="text-extraction">Text Extraction</h3>
+<h3 id="text-extraction" tabindex="-1">Text Extraction</h3>
 <p>In 1.8, to get the text colors, one method was to pass an expanded .properties file to the PDFStripper constructor. To achieve the same
 in PDFBox 2.0 you can extend <code>PDFTextStripper</code>and add the following <code>Operators</code> to the constructor:</p>
 <pre class="language-java"><code class="language-java"><span class="token function">addOperator</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">SetStrokingColorSpace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token function">addOperator</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">SetNonStrokingColorSpace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token function">addOperator</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">SetStrokingDeviceCMYKColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token function">addOperator</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">SetNonStrokingDeviceCMYKColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token function">addOperator</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">SetNonStrokingDeviceRGBColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token function">addOperator</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">SetStrokingDeviceRGBColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token function">addOperator</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">SetNonStrokingDeviceGrayColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token function">addOperator</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">SetStrokingDeviceGrayColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token function">addOperator</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">SetStrokingColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token function">addOperator</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">SetStrokingColorN</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token function">addOperator</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">SetNonStrokingColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token function">addOperator</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">SetNonStrokingColorN</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<h3 id="interactive-forms">Interactive Forms</h3>
+<h3 id="interactive-forms" tabindex="-1">Interactive Forms</h3>
 <p>Large parts of the support for interactive forms (AcroForms) have been rewritten. The most notable change from 1.8.x is that
 there is a clear distinction between fields and the annotations representing them visually. Intermediate nodes in a field
 tree are now represented by the <code>PDNonTerminalField</code> class.</p>
 <p>With PDFBox 2.0.0 the prefered way to iterate through the fields is now</p>
 <pre class="language-java"><code class="language-java"><span class="token class-name">PDAcroForm</span> form<span class="token punctuation">;</span><br><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><br><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">PDField</span> field <span class="token operator">:</span> form<span class="token punctuation">.</span><span class="token function">getFieldTree</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><br><span class="token punctuation">{</span><br>    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">(</span><span class="token keyword">do</span> something<span class="token punctuation">)</span><br><span class="token punctuation">}</span></code></pre>
 <p>Most <code>PDField</code> subclasses now accept Java generic types such as <code>String</code> as parameters instead of the former <code>COSBase</code> subclasses.</p>
-<h4 id="pdfield.getwidget()-removed">PDField.getWidget() removed</h4>
+<h4 id="pdfield.getwidget()-removed" tabindex="-1">PDField.getWidget() removed</h4>
 <p>As form fields do support multiple annotations <code>PDField.getWidget()</code> has been removed in favour of <code>PDField.getWidgets()</code>which returns all
 annotations associated with a field.</p>
-<h4 id="pdunknownfield-removed">PDUnknownField removed</h4>
+<h4 id="pdunknownfield-removed" tabindex="-1">PDUnknownField removed</h4>
 <p>The <code>PDUnknownField</code> class has been removed, such fields are treated as <code>null</code> <a href="https://issues.apache.org/jira/browse/PDFBOX-2885">see PDFBOX-2885</a>.</p>
-<h3 id="document-outline">Document Outline</h3>
+<h3 id="document-outline" tabindex="-1">Document Outline</h3>
 <p>The method <code>PDOutlineNode.appendChild()</code> has been renamed to <code>PDOutlineNode.addLast()</code>. There is now also a complementary method <code>PDOutlineNode.addFirst()</code>.</p>
-<h3 id="why-was-the-replacetext-example-removed%3F">Why was the ReplaceText example removed?</h3>
+<h3 id="why-was-the-replacetext-example-removed%3F" tabindex="-1">Why was the ReplaceText example removed?</h3>
 <p>The ReplaceText example has been removed as it gave the incorrect illusion that text can be replaced easily.
 Words are often split, as seen by this excerpt of a content stream:</p>
 <pre><code>[ (Do) -29 (c) -1 (umen) 30 (tation) ] TJ
@@ -335,7 +335,7 @@ To understand this yourself, view any file with PDFDebugger and have a look at t
                 <!-- nothing in here on purpose -->
             </div>
             <div class="span9">
-                <p>Copyright © 2009&ndash; <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                <p>Copyright © 2009&ndash;2022 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
                     <br>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
             </div>
         </div>

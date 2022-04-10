@@ -168,11 +168,11 @@
 		<a  href="https://www.apache.org/events/current-event.html"><img src="https://www.apache.org/events/current-event-125x125.png" alt="Apache events"></a>
             </div>
             <div class="col-xs-12 col-sm-9">
-                <h1 id="updating-the-pdfbox-website">Updating the PDFBox Website</h1>
-<p>The content for the PDFBox website is kept in a <a href="https://git-wip-us.apache.org/repos/asf/pdfbox-docs">Git repository</a> which is also mirrored to <a href="https://github.com/apache/pdfbox-docs">GitHub</a>. The site is split into two parts: the static content and the Javadoc for the PDFBox API. Both parts are build independently as further described below.</p>
-<h1 id="contribute">Contribute</h1>
+                <h1 id="updating-the-pdfbox-website" tabindex="-1">Updating the PDFBox Website</h1>
+<p>The content for the PDFBox website is kept in a <a href="https://gitbox.apache.org/repos/asf/pdfbox-docs">Git repository</a> which is also mirrored to <a href="https://github.com/apache/pdfbox-docs">GitHub</a>. The site is split into two parts: the static content and the Javadoc for the PDFBox API. Both parts are build independently as further described below.</p>
+<h1 id="contribute" tabindex="-1">Contribute</h1>
 <p>If you would like to enhance the website content you can submit a patch. To do so please open a ticket at our <a href="https://issues.apache.org/jira/browse/PDFBOX">Issue Tracker</a>, use <code>Documentation</code> for the <code>Component</code> and add your patch to the ticket.</p>
-<h2 id="development">Development</h2>
+<h2 id="development" tabindex="-1">Development</h2>
 <p>Tools used to generate the website:</p>
 <ul>
 <li><a href="https://git-scm.com/">Git</a> a source code management tool used to fetch document sources from different
@@ -182,25 +182,25 @@ and manage required libraries.</li>
 <li>(installed via npm) <a href="https://www.11ty.dev//">Eleventy</a> a simpler static site generator.</li>
 <li>(optional) <a href="https://maven.apache.org/">Maven</a> a build tool used to run the complete website generating process</li>
 </ul>
-<h3 id="checkout-from-the-git-repository">Checkout from the Git Repository</h3>
+<h3 id="checkout-from-the-git-repository" tabindex="-1">Checkout from the Git Repository</h3>
 <p>Before you can edit the site, you need to check it out from the Git repository:</p>
-<pre><code>git clone https://git-wip-us.apache.org/repos/asf/pdfbox-docs
+<pre><code>git clone https://gitbox.apache.org/repos/asf/pdfbox-docs
 </code></pre>
-<h3 id="local-changes">Local Changes</h3>
+<h3 id="local-changes" tabindex="-1">Local Changes</h3>
 <p>To build the website go to the project root directory and run:</p>
 <pre><code>$ npm install # needed only once, or if dependencies change
 $ npm run build   # to perform the build
 </code></pre>
-<h3 id="preview-changes">Preview Changes</h3>
+<h3 id="preview-changes" tabindex="-1">Preview Changes</h3>
 <p>While changing the content the website generation can be done in <strong>Preview</strong> mode. This will fire up a little webserver and update the browser window when there are changes so these are reflected immediately.</p>
 <pre><code>$ npm install # needed only once, or if dependencies change
 $ npm run preview   # to start the preview mode
 </code></pre>
-<h3 id="validate-the-generated-files">Validate the generated files</h3>
+<h3 id="validate-the-generated-files" tabindex="-1">Validate the generated files</h3>
 <p>To validate the generated website document go to the project root directory and run:</p>
 <pre><code>$ npm run checks
 </code></pre>
-<h3 id="reuse-code-from-examples-in-the-documentation">Reuse code from examples in the documentation</h3>
+<h3 id="reuse-code-from-examples-in-the-documentation" tabindex="-1">Reuse code from examples in the documentation</h3>
 <p>In order to reuse code from the examples project in the documentation the shortcode <code>codesnippet</code> can be used.</p>
 <p>The shortcode expects two variables</p>
 <ul>
@@ -217,7 +217,7 @@ the documentation the following comments can be added to the java code</p>
 code. Everything between these special comment lines will be added the
 other content will be omitted. This will allow to skip license
 header, import statements etc. to concentrate on the important bits.</p>
-<h3 id="publish-the-website-(for-comitters-only)">Publish the Website (For Comitters Only)</h3>
+<h3 id="publish-the-website-(for-comitters-only)" tabindex="-1">Publish the Website (For Comitters Only)</h3>
 <p>After you have done the local changes follow these steps to publish the content:</p>
 <p>Add the following server configuration in your ~/.m2/settings.xml file</p>
 <pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>server</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">></span></span>pdfbox-site<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>username</span><span class="token punctuation">></span></span>** USERNAME **<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>username</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>password</span><span class="token punctuation">></span></span>** PASSWORD **<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>password</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>server</span><span class="token punctuation">></span></span></code></pre>
@@ -236,7 +236,7 @@ git push origin master
 </code></pre>
 <p>This will checkout the current content into the <code>./target</code>directory, apply the changes from <code>./staging</code> and publish
 the changes to the PDFBox production website.</p>
-<h3 id="update-the-javadocs-for-pdfbox-2.x">Update the JavaDocs for PDFBox 2.x</h3>
+<h3 id="update-the-javadocs-for-pdfbox-2.x" tabindex="-1">Update the JavaDocs for PDFBox 2.x</h3>
 <p>To publish the javadocs follow these steps:</p>
 <p>Run</p>
 <pre><code>  $ mvn clean javadoc:aggregate scm-publish:publish-scm
@@ -244,20 +244,20 @@ the changes to the PDFBox production website.</p>
 <p>from the <code>&lt;SVN_ROOT&gt;/../pdfbox</code> directory.</p>
 <p>It uses the same <code>pdfbox-site</code> settings from above to connect to the repository.</p>
 <p class="alert alert-info">As <code>mvn clean</code> will delete the javadoc files download from the Apache CMS it's advised to configure <code>${svn.scmJavadocCheckoutDirectory}</code> to a local directory not below <code>./target</code>.</p>
-<h2 id="build-with-maven">Build with Maven</h2>
+<h2 id="build-with-maven" tabindex="-1">Build with Maven</h2>
 <p>The project provides a simple way to build the website sources locally using the build tool <a href="https://maven.apache.org/">Maven</a>.</p>
 <p>The Maven build automatically downloads the tool binaries such as <code>node</code> and <code>npm</code> for you. You do not need to install
 those tools on your host then. The binaries are added to the local project sources only and generate the website content.</p>
 <p>As the Maven build uses pinned versions of <code>node</code> and <code>npm</code> that are tested to build the website you most likely avoid
 build errors due to incompatible versions of <code>node.js</code> tooling installed on your machine.</p>
-<h3 id="preparing-maven">Preparing Maven</h3>
+<h3 id="preparing-maven" tabindex="-1">Preparing Maven</h3>
 <p>Make sure that you have Maven installed.</p>
 <pre><code>$ mvn --version
 </code></pre>
 <p>If this command fails with an error, you do not have Maven installed.</p>
 <p>Please install Maven using your favorite package manager (like <a href="https://brew.sh/">Homebrew</a>) or from
 official <a href="https://maven.apache.org/install.html">Maven binaries</a></p>
-<h3 id="building-from-scratch">Building from scratch</h3>
+<h3 id="building-from-scratch" tabindex="-1">Building from scratch</h3>
 <p>When building everything from scratch the build executes following steps:</p>
 <ul>
 <li>Download <code>Node.js</code> and <code>npm</code> binaries to the local project</li>
@@ -269,11 +269,12 @@ official <a href="https://maven.apache.org/install.html">Maven binaries</a></p>
 </code></pre>
 <p>The whole process takes up to five minutes (time to grab some coffee!)</p>
 <p>When the build is finished you should see the generated website in the <code>public</code> directory.</p>
-<h3 id="clean-build">Clean build</h3>
+<h3 id="clean-build" tabindex="-1">Clean build</h3>
 <p>When rebuilding the website the process uses some cached content.
 If you want to start from scratch for some reason you can simply add the <code>clean</code> operation to the build which removes
 all generated sources in the project first.</p>
-<pre><code>$ mvn clean package</code></pre>
+<pre><code>$ mvn clean package
+</code></pre>
 
             </div>
         </div>

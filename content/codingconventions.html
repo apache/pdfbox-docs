@@ -168,9 +168,9 @@
 		<a  href="https://www.apache.org/events/current-event.html"><img src="https://www.apache.org/events/current-event-125x125.png" alt="Apache events"></a>
             </div>
             <div class="col-xs-12 col-sm-9">
-                <h1 id="coding-conventions">Coding Conventions</h1>
+                <h1 id="coding-conventions" tabindex="-1">Coding Conventions</h1>
 <p>Over the years the PDFBox project has come to adopt a number of coding conventions. These are not always followed in old code but new code should follow these rules where possible.</p>
-<h3 id="formatting">Formatting</h3>
+<h3 id="formatting" tabindex="-1">Formatting</h3>
 <ul>
 <li>
 <p>Braces go on their own line.</p>
@@ -194,7 +194,7 @@
 <p>Prefer aligned wrapped parameter lists.</p>
 </li>
 </ul>
-<h3 id="whitespace">Whitespace</h3>
+<h3 id="whitespace" tabindex="-1">Whitespace</h3>
 <ul>
 <li>
 <p>Four spaces for indents, no tabs.</p>
@@ -212,7 +212,7 @@
 <p>Prefer not following casts with a blank space.</p>
 </li>
 </ul>
-<h3 id="structure">Structure</h3>
+<h3 id="structure" tabindex="-1">Structure</h3>
 <ul>
 <li>
 <p>Do not use package imports (e.g. <code>import java.util.*</code>)</p>
@@ -228,7 +228,7 @@ Constructors<br>
 Methods</p>
 </li>
 </ul>
-<h3 id="javadoc">JavaDoc</h3>
+<h3 id="javadoc" tabindex="-1">JavaDoc</h3>
 <ul>
 <li>
 <p>Public and protected methods and fields must have JavaDoc.</p>
@@ -249,7 +249,7 @@ Methods</p>
 <p>Private methods do not require JavaDoc but may have partial JavaDoc if it adds valuable information.</p>
 </li>
 </ul>
-<h3 id="comments">Comments</h3>
+<h3 id="comments" tabindex="-1">Comments</h3>
 <ul>
 <li>
 <p>Only use line comments within code, never block comments.</p>
@@ -261,7 +261,7 @@ Methods</p>
 <p>Prefix line comments by a space <code>// like this</code>.</p>
 </li>
 </ul>
-<h3 id="variables">Variables</h3>
+<h3 id="variables" tabindex="-1">Variables</h3>
 <ul>
 <li>
 <p>Prefer initializing variables when they are declared, rather than C-style declaration before use.</p>
@@ -270,7 +270,7 @@ Methods</p>
 <p>Always use final fields when possible.</p>
 </li>
 </ul>
-<h3 id="control-flow">Control Flow</h3>
+<h3 id="control-flow" tabindex="-1">Control Flow</h3>
 <ul>
 <li>
 <p>Prefer multiple return statements over additional control flow logic.</p>
@@ -279,7 +279,7 @@ Methods</p>
 <p>Prefer switch statements over multi-clause if-then statements.</p>
 </li>
 </ul>
-<h3 id="api-design">API Design</h3>
+<h3 id="api-design" tabindex="-1">API Design</h3>
 <ul>
 <li>
 <p>Give variables and methods meaningful names. Keep these short but don't use abbreviations. Prefer using the same terminology as the PDF spec.</p>
@@ -300,10 +300,10 @@ Methods</p>
 <p>Avoid unnecesary abstraction. While you're encouraged to avoid brittle designs, it's unlikey that an API designed for &quot;future use&quot; will have the correct API without any code which actually uses it.</p>
 </li>
 </ul>
-<h3 id="example">Example</h3>
+<h3 id="example" tabindex="-1">Example</h3>
 <p>Here's an example of PDFBox's formatting style:</p>
 <pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Foo</span> <span class="token keyword">extends</span> <span class="token class-name">Bar</span><br><span class="token punctuation">{</span><br>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><br>    <span class="token punctuation">{</span><br>        <span class="token keyword">try</span><br>        <span class="token punctuation">{</span><br>            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> args<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><br>            <span class="token punctuation">{</span><br>                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>args<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>            <span class="token punctuation">}</span><br>        <span class="token punctuation">}</span><br>        <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">NumberFormatException</span> e<span class="token punctuation">)</span><br>        <span class="token punctuation">{</span><br>            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br>    <span class="token punctuation">}</span><br><span class="token punctuation">}</span></code></pre>
-<h2 id="eclipse-formatter">Eclipse Formatter</h2>
+<h2 id="eclipse-formatter" tabindex="-1">Eclipse Formatter</h2>
 <p>Eclipse users may download this preferences file: pdfbox-eclipse-formatter.xml and import this into Eclipse.
 (Window-&gt;Preferences, go to Java-&gt;Code Style-&gt;Formatter and click &quot;Import...&quot;).
 Once you have done this you can reformat your code by using Source-&gt;Format (Ctrl+Shift+F).</p>

@@ -168,46 +168,46 @@
 		<a  href="https://www.apache.org/events/current-event.html"><img src="https://www.apache.org/events/current-event-125x125.png" alt="Apache events"></a>
             </div>
             <div class="col-xs-12 col-sm-9">
-                <h1 id="building-from-source">Building from Source</h1>
+                <h1 id="building-from-source" tabindex="-1">Building from Source</h1>
 <p>Building PDFBox from source is only necessary if you're wanting to contribute code to the PDFBox project. Most users should use the <a href="http://pdfbox.apache.org/download.cgi">binary releases</a> instead.</p>
-<h2 id="obtaining-the-source">Obtaining the Source</h2>
+<h2 id="obtaining-the-source" tabindex="-1">Obtaining the Source</h2>
 <p>You can obtain the latest source of PDFBox from our <a href="http://svn.apache.org/repos/asf/pdfbox/">SVN repo</a>. The current trunk is 3.0.0-SNAPSHOT. There is a separate branch for the 1.8.x and the 2.0.x series. You can fetch the latest trunk version using Subversion:</p>
 <pre><code>svn checkout http://svn.apache.org/repos/asf/pdfbox/trunk/
 cd trunk
 </code></pre>
 <p>You can also browse the Subversion repository using <a href="https://svn.apache.org/viewvc/pdfbox/">ViewVC</a>.</p>
 <p>We also have a read-only <a href="https://git.apache.org/">Git mirror</a> which is further mirrored to GitHub as <a href="https://github.com/apache/pdfbox">apache/pdfbox</a>.</p>
-<p>The sources for the <strong>Java ImageIO plugin for the JBIG2 image format</strong> are available in the  <a href="https://git-wip-us.apache.org/repos/asf/pdfbox-jbig2.git">Apache Git Repository</a> or can be loaded from <a href="https://github.com/apache/pdfbox-jbig2">GitHub</a>:</p>
-<pre><code>git clone https://git-wip-us.apache.org/repos/asf/pdfbox-jbig2.git
+<p>The sources for the <strong>Java ImageIO plugin for the JBIG2 image format</strong> are available in the  <a href="https://gitbox.apache.org/repos/asf/pdfbox-jbig2.git">Apache Git Repository</a> or can be loaded from <a href="https://github.com/apache/pdfbox-jbig2">GitHub</a>:</p>
+<pre><code>git clone https://gitbox.apache.org/repos/asf/pdfbox-jbig2.git
 cd pdfbox-jbig2
 </code></pre>
-<h2 id="build-dependencies">Build dependencies</h2>
-<h3 id="pdfbox-1.8">PDFBox 1.8</h3>
+<h2 id="build-dependencies" tabindex="-1">Build dependencies</h2>
+<h3 id="pdfbox-1.8" tabindex="-1">PDFBox 1.8</h3>
 <ul>
 <li>JDK 5 or 6</li>
 <li><a href="http://maven.apache.org/">Maven 3</a></li>
 </ul>
-<h3 id="pdfbox-2.0">PDFBox 2.0</h3>
+<h3 id="pdfbox-2.0" tabindex="-1">PDFBox 2.0</h3>
 <ul>
 <li>JDK 7</li>
 <li><a href="#java-cryptography-extension-jce">Java Cryptography Extension (JCE)</a></li>
 <li><a href="http://maven.apache.org/">Maven 3</a></li>
 </ul>
-<h3 id="java-imageio-plugin-for-jbig2">Java ImageIO plugin for JBIG2</h3>
+<h3 id="java-imageio-plugin-for-jbig2" tabindex="-1">Java ImageIO plugin for JBIG2</h3>
 <ul>
 <li>JDK 6</li>
 <li><a href="http://maven.apache.org/">Maven 3</a></li>
 </ul>
-<h3 id="java-cryptography-extension-(jce)">Java Cryptography Extension (JCE)</h3>
+<h3 id="java-cryptography-extension-(jce)" tabindex="-1">Java Cryptography Extension (JCE)</h3>
 <p>Building PDFBox 2.0 requires a JDK with &quot;unlimited strength&quot; cryptography, which requires extra files to be installed. For JDK 7, see <a href="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html">Java Cryptography Extension (JCE)</a>. If these files are not installed, building PDFBox will fail the following test:</p>
 <pre><code>TestPublicKeyEncryption.setUp:70 JCE unlimited strength jurisdiction policy files are not installed
 </code></pre>
-<h2 id="building-with-maven">Building with Maven</h2>
+<h2 id="building-with-maven" tabindex="-1">Building with Maven</h2>
 <p>In the root directory of PDFBox:</p>
 <pre><code>mvn clean install
 </code></pre>
 <hr>
-<h2 id="building-with-ant-(deprecated%2C-removed-in-2.0.0)">Building with Ant (Deprecated, removed in 2.0.0)</h2>
+<h2 id="building-with-ant-(deprecated%2C-removed-in-2.0.0)" tabindex="-1">Building with Ant (Deprecated, removed in 2.0.0)</h2>
 <p>The old Ant build is still available, and can be used especially for
 building .NET binaries with IKVM:</p>
 <ol>
@@ -231,7 +231,7 @@ PDFBox.</p>
 </ol>
 <p>NOTE: If you want to run PDFBox from an IDE them you will need to add
 the 'Resources' directory to the project classpath in your IDE.</p>
-<h3 id="dependencies-for-ant-builds">Dependencies for Ant Builds</h3>
+<h3 id="dependencies-for-ant-builds" tabindex="-1">Dependencies for Ant Builds</h3>
 <p>The above instructions expect that you're using <a href="http://maven.apache.org/">Maven</a> or another build tool like <a href="http://ant.apache.org/ivy/">Ivy</a> that supports Maven dependencies.
 If you instead use tools like <a href="http://ant.apache.org/">Ant</a> where you need to explicitly include all the required library jars in your application, you'll need to do
 something different.</p>

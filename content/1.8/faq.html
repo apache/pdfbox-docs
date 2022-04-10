@@ -105,16 +105,12 @@
                       Encrypting a File
                     </a>  
                   </li><li>
-                    <a href="/1.8/cookbook/pdfacreation.html" >
-                      PDF/A Creation
-                    </a>  
-                  </li><li>
                     <a href="/1.8/cookbook/fill-form-field.html" >
                       Fill a Form Field
                     </a>  
                   </li><li>
-                    <a href="/1.8/cookbook/pdfavalidation.html" >
-                      PDF/A Validation
+                    <a href="/1.8/cookbook/pdfacreation.html" >
+                      PDF/A Creation
                     </a>  
                   </li><li>
                     <a href="/1.8/cookbook/rendering.html" >
@@ -125,16 +121,20 @@
                       Text Extraction
                     </a>  
                   </li><li>
+                    <a href="/1.8/cookbook/pdfavalidation.html" >
+                      PDF/A Validation
+                    </a>  
+                  </li><li>
                     <a href="/1.8/cookbook/workingwithattachments.html" >
                       Working with Attachments
                     </a>  
                   </li><li>
-                    <a href="/1.8/cookbook/workingwithfonts.html" >
-                      Working with Fonts
-                    </a>  
-                  </li><li>
                     <a href="/1.8/cookbook/workingwithmetadata.html" >
                       Working with Metadata
+                    </a>  
+                  </li><li>
+                    <a href="/1.8/cookbook/workingwithfonts.html" >
+                      Working with Fonts
                     </a>  
                   </li></ul>
           </li><li>
@@ -153,9 +153,9 @@
     </nav>
 
     <section>
-      <h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
-<h2 id="general-questions">General Questions</h2>
-<h3 id="i-am-getting-the-below-log4j-warning-message%2C-how-do-i-remove-it">I am getting the below Log4J warning message, how do I remove it</h3>
+      <h1 id="frequently-asked-questions" tabindex="-1">Frequently Asked Questions</h1>
+<h2 id="general-questions" tabindex="-1">General Questions</h2>
+<h3 id="i-am-getting-the-below-log4j-warning-message%2C-how-do-i-remove-it" tabindex="-1">I am getting the below Log4J warning message, how do I remove it</h3>
 <pre class="language-shell"><code class="language-shell">log4j:WARN No appenders could be found <span class="token keyword">for</span> logger <span class="token punctuation">(</span>org.apache.pdfbox.util.ResourceLoader<span class="token punctuation">)</span>.<br>log4j:WARN Please initialize the log4j system properly.</code></pre>
 <p>This message means that you need to configure the log4j logging system.
 See the <a href="http://logging.apache.org/log4j/1.2/manual.html">log4j documentation</a> for more information.</p>
@@ -163,17 +163,17 @@ See the <a href="http://logging.apache.org/log4j/1.2/manual.html">log4j document
 <pre class="language-shell"><code class="language-shell">java -Dlog4j.configuration<span class="token operator">=</span>log4j.xml org.apache.pdfbox.ExtractText <span class="token operator">&lt;</span>PDF-file<span class="token operator">></span> <span class="token operator">&lt;</span>output-text-file<span class="token operator">></span></code></pre>
 <p>If this is not working for you then you may have to specify the log4j config file using a URL path, like this:</p>
 <pre class="language-shell"><code class="language-shell">log4j.configuration<span class="token operator">=</span>file:///<span class="token operator">&lt;</span>path to config file<span class="token operator">></span></code></pre>
-<h3 id="is-pdfbox-thread-safe">Is PDFBox thread safe</h3>
+<h3 id="is-pdfbox-thread-safe" tabindex="-1">Is PDFBox thread safe</h3>
 <p>No! Only one thread may access a single document at a time. You can have multiple threads
 each accessing their own PDDocument object.</p>
-<h3 id="why-do-i-get-a-%22warning%3A-you-did-not-close-the-pdf-document%22">Why do I get a &quot;Warning: You did not close the PDF Document&quot;</h3>
+<h3 id="why-do-i-get-a-%22warning%3A-you-did-not-close-the-pdf-document%22" tabindex="-1">Why do I get a &quot;Warning: You did not close the PDF Document&quot;</h3>
 <p>You need to call close() on the PDDocument inside the finally block, if you
 don't then the document will not be closed properly.  Also, you must close all
 PDDocument objects that get created.  The following code creates <strong>two</strong>
 PDDocument objects; one from the &quot;new PDDocument()&quot; and the second by the load method.</p>
 <pre class="language-java"><code class="language-java"><span class="token class-name">PDDocument</span> doc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PDDocument</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token keyword">try</span><br><span class="token punctuation">{</span><br>   doc <span class="token operator">=</span> <span class="token class-name">PDDocument</span><span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span> <span class="token string">"my.pdf"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token keyword">finally</span><br><span class="token punctuation">{</span><br>   <span class="token keyword">if</span><span class="token punctuation">(</span> doc <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token punctuation">)</span><br>   <span class="token punctuation">{</span><br>      doc<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>   <span class="token punctuation">}</span><br><span class="token punctuation">}</span></code></pre>
-<h2 id="text-extraction">Text Extraction</h2>
-<h3 id="how-come-i-am-not-getting-any-text-from-the-pdf-document">How come I am not getting any text from the PDF document</h3>
+<h2 id="text-extraction" tabindex="-1">Text Extraction</h2>
+<h3 id="how-come-i-am-not-getting-any-text-from-the-pdf-document" tabindex="-1">How come I am not getting any text from the PDF document</h3>
 <p>Text extraction from a pdf document is a complicated task and there are many factors
 involved that effect the possibility and accuracy of text extraction.  It would be helpful
 to the PDFBox team if you could try a couple things.</p>
@@ -183,22 +183,22 @@ should be able to as well and it is a bug if it cannot.  If Acrobat cannot extra
 <li>It might really be an image instead of text.  Some PDF documents are just images that have been scanned in.
 You can tell by using the selection tool in Acrobat, if you can't select any text then it is probably an image.</li>
 </ul>
-<h3 id="how-come-i-am-getting-gibberish(g38g43g36g51g5)-when-extracting-text">How come I am getting gibberish(G38G43G36G51G5) when extracting text</h3>
+<h3 id="how-come-i-am-getting-gibberish(g38g43g36g51g5)-when-extracting-text" tabindex="-1">How come I am getting gibberish(G38G43G36G51G5) when extracting text</h3>
 <p>This is because the characters in a PDF document can use a custom encoding
 instead of unicode or ASCII.  When you see gibberish text then it
 probably means that a meaningless internal encoding is being used.  The
 only way to access the text is to use OCR.  This may be a future
 enhancement.</p>
-<h3 id="what-does-%22java.io.ioexception%3A-can't-handle-font-width%22-mean">What does &quot;java.io.IOException: Can't handle font width&quot; mean</h3>
+<h3 id="what-does-%22java.io.ioexception%3A-can't-handle-font-width%22-mean" tabindex="-1">What does &quot;java.io.IOException: Can't handle font width&quot; mean</h3>
 <p>This probably means that the &quot;Resources&quot; directory is not in your classpath. The
 Resources directory is included in the PDFBox jar so this is only a problem if you
 are building PDFBox yourself and not using the binary.</p>
-<h3 id="why-do-i-get-%22you-do-not-have-permission-to-extract-text%22-on-some-documents">Why do I get &quot;You do not have permission to extract text&quot; on some documents</h3>
+<h3 id="why-do-i-get-%22you-do-not-have-permission-to-extract-text%22-on-some-documents" tabindex="-1">Why do I get &quot;You do not have permission to extract text&quot; on some documents</h3>
 <p>PDF documents have certain security permissions that can be applied to them and two
 passwords associated with them, an user password and an owner password. If the &quot;cannot extract text&quot;
 permission bit is set then you need to decrypt the document with the owner password in order
 to extract the text.</p>
-<h3 id="can't-we-just-extract-the-text-without-parsing-the-whole-document-or-extract-text-as-it-is-parsed">Can't we just extract the text without parsing the whole document or extract text as it is parsed</h3>
+<h3 id="can't-we-just-extract-the-text-without-parsing-the-whole-document-or-extract-text-as-it-is-parsed" tabindex="-1">Can't we just extract the text without parsing the whole document or extract text as it is parsed</h3>
 <p>Not really, for a couple reasons.</p>
 <ul>
 <li>If the document is encrypted then you need to parse at least until the encryption dictionary before
@@ -267,7 +267,7 @@ the word &quot;Hello&quot; is drawn.</li>
                 <!-- nothing in here on purpose -->
             </div>
             <div class="span9">
-                <p>Copyright © 2009&ndash; <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                <p>Copyright © 2009&ndash;2022 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
                     <br>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
             </div>
         </div>

@@ -168,27 +168,27 @@
 		<a  href="https://www.apache.org/events/current-event.html"><img src="https://www.apache.org/events/current-event-125x125.png" alt="Apache events"></a>
             </div>
             <div class="col-xs-12 col-sm-9">
-                <h1 id="ideas">Ideas</h1>
+                <h1 id="ideas" tabindex="-1">Ideas</h1>
 <p>There are several ideas to enhance PDFBox. These are outlined below together with
 comments and the releases they are planned for as soon as there is agreement to do the
 implementation.</p>
-<h2 id="enhance-type-safety">Enhance type safety</h2>
+<h2 id="enhance-type-safety" tabindex="-1">Enhance type safety</h2>
 <p>Enhance the type safety of PDFBox and add more generic collections and code cleanup.</p>
-<h2 id="remove-all-deprecated-methods">Remove all deprecated methods</h2>
+<h2 id="remove-all-deprecated-methods" tabindex="-1">Remove all deprecated methods</h2>
 <p>This is an ongoing effort and most/all deprecated methods will be removed in PDFBox 2.0.0</p>
-<h2 id="handle-large-pdf-files">Handle large PDF files</h2>
+<h2 id="handle-large-pdf-files" tabindex="-1">Handle large PDF files</h2>
 <p>In addition to the PDF parsing pdfbox does not always handle large PDF files well as some
 of the references are implemented as int instead of long</p>
-<h2 id="switch-to-java-1.6"><span class="complete">Switch to Java 1.6</span></h2>
+<h2 id="switch-to-java-1.6" tabindex="-1"><span class="complete">Switch to Java 1.6</span></h2>
 <p><span class="complete">PDFBox 2.0.0 has Java 6 as a minimum requirement.</span></p>
-<h2 id="break-pdfbox-into-modules"><span class="complete">Break PDFBox into modules</span></h2>
+<h2 id="break-pdfbox-into-modules" tabindex="-1"><span class="complete">Break PDFBox into modules</span></h2>
 <p><span class="complete">In order to support different use cases and provide a minimal toolset PDFBox 2.0.0 should be
 separated into different modules. This goes inline with rearranging some of the code
 e.g. remove AWT from PDDocument.
 </span></p>
-<h2 id="enhance-the-font-rendering"><span class="complete">Enhance the font rendering</span></h2>
+<h2 id="enhance-the-font-rendering" tabindex="-1"><span class="complete">Enhance the font rendering</span></h2>
 <p><span class="complete">PDFBox 2.0.0 will render most of the fonts without using AWT.</span></p>
-<h2 id="replace%2Fenhance-pdf-parsing">Replace/enhance PDF parsing</h2>
+<h2 id="replace%2Fenhance-pdf-parsing" tabindex="-1">Replace/enhance PDF parsing</h2>
 <p><span class="complete">The old &quot;classic&quot; PDF parser in PDFBox is not in line with the PDF specification as it parses
 a PDF from top to bottom instead of respecting the XRef information.</span> The NonSequentialParser
 enhanced that situation but there is a need to have a cleaner foundation broken into several levels</p>
@@ -202,12 +202,12 @@ enhanced that situation but there is a need to have a cleaner foundation broken 
 </ul>
 <p>In addition, handling documents which are not conforming shouldn't be part of the core parser
 but of an extensible approach, e.g. by adding hooks to allow for handling parsing exceptions.</p>
-<h2 id="add-the-ability-to-create-pdfs-using-unicode-encoded-text"><span class="complete">Add the ability to create PDFs using unicode encoded text</span></h2>
+<h2 id="add-the-ability-to-create-pdfs-using-unicode-encoded-text" tabindex="-1"><span class="complete">Add the ability to create PDFs using unicode encoded text</span></h2>
 <p><span class="complete">The recent PDFBox version is limited to WinANSI encoded text. 2.0.0 should have unicode support as well.</span></p>
-<h2 id="rearchitect-the-cos-level-objects">Rearchitect the COS level objects</h2>
+<h2 id="rearchitect-the-cos-level-objects" tabindex="-1">Rearchitect the COS level objects</h2>
 <p>The COS level objects need to be refactored to be in line with the new parser. In addition
 method signatures, constructing ... should be made similar across the COS objects</p>
-<h2 id="parsing-on-demand">Parsing on demand</h2>
+<h2 id="parsing-on-demand" tabindex="-1">Parsing on demand</h2>
 <p>Instead of always parsing the complete document PDFs should be parsable on demand making
 objects only available as they are needed to enhance performance and minimize memory footprint.</p>
 <p>This might be achieved by providing a layered approach where a base (non caching) parser provides
@@ -222,7 +222,7 @@ only to support text extraction, merging, splitting … - the benefit would be a
 consumption as well as a potential faster processing</li>
 <li>the caching parser would support applications such a PDFDebugger or PDFReader</li>
 </ul>
-<h2 id="handling-of-pdf-versions">Handling of PDF versions</h2>
+<h2 id="handling-of-pdf-versions" tabindex="-1">Handling of PDF versions</h2>
 <p>The current implementation is a mix of PDF 1.4 and some adhoc additions without a clear
 distinction what is and is not supported. We could ad some support for explicitly handling
 versions in PDFBox e.g. my marking certain methods and properties to the PDF version support

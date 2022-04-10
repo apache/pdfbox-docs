@@ -105,16 +105,12 @@
                       Encrypting a File
                     </a>  
                   </li><li>
-                    <a href="/1.8/cookbook/pdfacreation.html" >
-                      PDF/A Creation
-                    </a>  
-                  </li><li>
                     <a href="/1.8/cookbook/fill-form-field.html" >
                       Fill a Form Field
                     </a>  
                   </li><li>
-                    <a href="/1.8/cookbook/pdfavalidation.html" >
-                      PDF/A Validation
+                    <a href="/1.8/cookbook/pdfacreation.html" >
+                      PDF/A Creation
                     </a>  
                   </li><li>
                     <a href="/1.8/cookbook/rendering.html" >
@@ -125,16 +121,20 @@
                       Text Extraction
                     </a>  
                   </li><li>
+                    <a href="/1.8/cookbook/pdfavalidation.html" >
+                      PDF/A Validation
+                    </a>  
+                  </li><li>
                     <a href="/1.8/cookbook/workingwithattachments.html" >
                       Working with Attachments
                     </a>  
                   </li><li>
-                    <a href="/1.8/cookbook/workingwithfonts.html" >
-                      Working with Fonts
-                    </a>  
-                  </li><li>
                     <a href="/1.8/cookbook/workingwithmetadata.html" >
                       Working with Metadata
+                    </a>  
+                  </li><li>
+                    <a href="/1.8/cookbook/workingwithfonts.html" >
+                      Working with Fonts
                     </a>  
                   </li></ul>
           </li><li>
@@ -153,7 +153,7 @@
     </nav>
 
     <section>
-      <h1 id="architecture">Architecture</h1>
+      <h1 id="architecture" tabindex="-1">Architecture</h1>
 <p>In order to get the most out of PDFBox it is neccessary to understand how a PDF document
 is organized as PDFBox was architected around the concepts layed out in the
 ISO-32000 (PDF) Specification</p>
@@ -161,7 +161,7 @@ ISO-32000 (PDF) Specification</p>
 <li><a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=51502">ISO Site</a></li>
 <li><a href="https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf">Adobe Version</a></li>
 </ul>
-<h2 id="quick-introduction-to-the-pdf-format">Quick Introduction to the PDF format</h2>
+<h2 id="quick-introduction-to-the-pdf-format" tabindex="-1">Quick Introduction to the PDF format</h2>
 <p>A PDF file is made up of a sequence of bytes. These bytes, grouped into tokens,
 make up the basic objects upon which higher level objects and structures are built [see ISO-32000 7.3].</p>
 <p class="alert alert-info">PDFBox makes these basic objects available in the 
@@ -181,7 +181,7 @@ as pages, bookmarks, annotations [see ISO-32000 7.7].</p>
 inspect the underlying structure or to handle special cases where the higher level PD model
 doesn't provide the functionality needed.</p>
 <p class="alert alert-info">It's always the COS model which is represented in the PDF file.</p>
-<h2 id="the-cos-model">The COS Model</h2>
+<h2 id="the-cos-model" tabindex="-1">The COS Model</h2>
 <p>As outlined above the basic PDF objects are represented in PDFBox in the org.apache.pdfbox.cos package.</p>
 <table>
 <thead>
@@ -259,7 +259,7 @@ doesn't provide the functionality needed.</p>
 <p>As can be seen from that little example the COS model provides a low level API to access
 information within the PDF. In order to use the COS model successfully a good knowledge of
 the PDF specification is needed.</p>
-<h2 id="the-pd-model">The PD Model</h2>
+<h2 id="the-pd-model" tabindex="-1">The PD Model</h2>
 <p>The COS Model allows access to all aspects of a PDF document. This type of programming is
 tedious and error prone though because the user must know all of the names of the
 parameters and no helper methods are available. The PD Model was created to help
@@ -307,7 +307,7 @@ the Calendar is converted to a string in the COSDictionary.</p>
                 <!-- nothing in here on purpose -->
             </div>
             <div class="span9">
-                <p>Copyright © 2009&ndash; <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                <p>Copyright © 2009&ndash;2022 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
                     <br>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
             </div>
         </div>

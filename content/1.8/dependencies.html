@@ -105,16 +105,12 @@
                       Encrypting a File
                     </a>  
                   </li><li>
-                    <a href="/1.8/cookbook/pdfacreation.html" >
-                      PDF/A Creation
-                    </a>  
-                  </li><li>
                     <a href="/1.8/cookbook/fill-form-field.html" >
                       Fill a Form Field
                     </a>  
                   </li><li>
-                    <a href="/1.8/cookbook/pdfavalidation.html" >
-                      PDF/A Validation
+                    <a href="/1.8/cookbook/pdfacreation.html" >
+                      PDF/A Creation
                     </a>  
                   </li><li>
                     <a href="/1.8/cookbook/rendering.html" >
@@ -125,16 +121,20 @@
                       Text Extraction
                     </a>  
                   </li><li>
+                    <a href="/1.8/cookbook/pdfavalidation.html" >
+                      PDF/A Validation
+                    </a>  
+                  </li><li>
                     <a href="/1.8/cookbook/workingwithattachments.html" >
                       Working with Attachments
                     </a>  
                   </li><li>
-                    <a href="/1.8/cookbook/workingwithfonts.html" >
-                      Working with Fonts
-                    </a>  
-                  </li><li>
                     <a href="/1.8/cookbook/workingwithmetadata.html" >
                       Working with Metadata
+                    </a>  
+                  </li><li>
+                    <a href="/1.8/cookbook/workingwithfonts.html" >
+                      Working with Fonts
                     </a>  
                   </li></ul>
           </li><li>
@@ -153,12 +153,12 @@
     </nav>
 
     <section>
-      <h1 id="dependencies">Dependencies</h1>
+      <h1 id="dependencies" tabindex="-1">Dependencies</h1>
 <p>PDFBox consists of three related components and depends on a few external libraries. This page describes what these libraries are and how to include them in your application.</p>
-<h2 id="core-components">Core Components</h2>
+<h2 id="core-components" tabindex="-1">Core Components</h2>
 <p class="alert alert-info">These components are needed during runtime, development and testing dependent on the details below.</p>
 <p>The three PDFBox components are named <code>pdfbox</code>, <code>fontbox</code> and <code>jempbox</code>. The Maven groupId of all PDFBox components is org.apache.pdfbox.</p>
-<h3 id="minimum-requirements">Minimum Requirements</h3>
+<h3 id="minimum-requirements" tabindex="-1">Minimum Requirements</h3>
 <ul>
 <li>Java 1.5</li>
 <li><a href="http://commons.apache.org/logging/">commons-logging</a></li>
@@ -168,34 +168,34 @@ Commons Logging is a generic wrapper around different logging frameworks, so you
 or let commons-logging fall back to the standard <a href="http://java.sun.com/j2se/1.4.2/docs/guide/util/logging/overview.html">java.util.logging API</a>
 included in the Java platform.</p>
 <p>For <strong>PDFBox Preflight only</strong> <a href="https://commons.apache.org/proper/commons-io/">commons-io 1.4</a> is needed.</p>
-<h3 id="font-handling">Font Handling</h3>
+<h3 id="font-handling" tabindex="-1">Font Handling</h3>
 <p>For font handling the fontbox component is needed.</p>
-<h3 id="xmp-metadata">XMP Metadata</h3>
+<h3 id="xmp-metadata" tabindex="-1">XMP Metadata</h3>
 <p>To support XMP metadata the jembox component is needed.</p>
 <p>To add the pdfbox, fontbox, jempbox and commons-logging jars to your application, the easiest thing is to declare the Maven dependency shown below. This gives you the main
 pdfbox library directly and the other required jars as transitive dependencies.</p>
 <pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.apache.pdfbox<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>pdfbox<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span></code></pre>
 <p>Set the version field to the latest stable PDFBox version.</p>
-<h2 id="optional-dependencies">Optional Dependencies</h2>
+<h2 id="optional-dependencies" tabindex="-1">Optional Dependencies</h2>
 <p>Some features in PDFBox depend on optional external libraries. You can enable these features simply by including the required libraries in the classpath of your application.</p>
-<h3 id="extented-image-format-support">Extented Image Format Support</h3>
+<h3 id="extented-image-format-support" tabindex="-1">Extented Image Format Support</h3>
 <p>To support JBIG2 and writing TIFF images additional libraries are needed.</p>
 <p class="alert alert-warning">The image plugins described below are not part of the PDFBox distribution because of incompatible licensing terms. Please make sure to check if the licensing terms are compatible to your usage.</p>
 <p>For <strong>JBIG2</strong> support a Java ImageIO Plugin such as the <a href="https://github.com/levigo/jbig2-imageio">Levigo Plugin</a> or <a href="https://github.com/Borisvl/JBIG2-Image-Decoder">JBIG2-Image-Decoder
 </a> will be needed.</p>
 <p>To write <strong>TIFF</strong> images a JAI ImageIO Core library will be needed.</p>
-<h4 id="pdf-encryption-and-signing">PDF Encryption and Signing</h4>
+<h4 id="pdf-encryption-and-signing" tabindex="-1">PDF Encryption and Signing</h4>
 <p>The most notable such optional feature is support for PDF encryption. Instead of implementing its own encryption algorithms, PDFBox uses libraries from the
 <a href="http://www.bouncycastle.org/">Legion of the Bouncy Castle</a>. Both the bcprov and bcmail libraries are needed and can be included using the Maven dependencies shown below.</p>
 <pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.bouncycastle<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>bcprov-jdk15<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.44<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.bouncycastle<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>bcmail-jdk15<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.44<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span></code></pre>
-<h4 id="support-for-bidirectional-languages">Support for Bidirectional Languages</h4>
+<h4 id="support-for-bidirectional-languages" tabindex="-1">Support for Bidirectional Languages</h4>
 <p>Another important optional feature is support for bidirectional languages like Arabic. PDFBox uses the ICU4J library from the
 <a href="http://site.icu-project.org/">International Components for Unicode</a> (ICU) project to support such languages in PDF documents. To add the ICU4J jar to your project,
 use the following Maven dependency.</p>
 <pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.ibm.icu<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>icu4j<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>3.8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span></code></pre>
 <p>PDFBox also contains extra support for use with the <a href="http://lucene.apache.org/">Lucene</a> and <a href="http://ant.apache.org/">Ant</a> projects. Since in these cases PDFBox is just an
 add-on feature to these projects, you should first set up your application to use Lucene or Ant and then add PDFBox support as described on this page.</p>
-<h2 id="dependencies-for-ant-builds">Dependencies for Ant Builds</h2>
+<h2 id="dependencies-for-ant-builds" tabindex="-1">Dependencies for Ant Builds</h2>
 <p>The above instructions expect that you're using <a href="http://maven.apache.org/">Maven</a> or another build tool like <a href="http://ant.apache.org/ivy/">Ivy</a> that supports Maven dependencies.
 If you instead use tools like <a href="http://ant.apache.org/">Ant</a> where you need to explicitly include all the required library jars in your application, you'll need to do
 something different.</p>
@@ -251,7 +251,7 @@ libraries discussed above into the pdfbox/target/dependencies directory. You can
                 <!-- nothing in here on purpose -->
             </div>
             <div class="span9">
-                <p>Copyright © 2009&ndash; <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                <p>Copyright © 2009&ndash;2022 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
                     <br>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
             </div>
         </div>

@@ -168,8 +168,8 @@
 		<a  href="https://www.apache.org/events/current-event.html"><img src="https://www.apache.org/events/current-event-125x125.png" alt="Apache events"></a>
             </div>
             <div class="col-xs-12 col-sm-9">
-                <h1 id="text-extraction">Text Extraction</h1>
-<h2 id="extracting-text">Extracting Text</h2>
+                <h1 id="text-extraction" tabindex="-1">Text Extraction</h1>
+<h2 id="extracting-text" tabindex="-1">Extracting Text</h2>
 <p>See class: org.apache.pdfbox.util.PDFTextStripper<br>
 See class: org.apache.pdfbox.searchengine.lucene.LucenePDFDocument<br>
 See command-line app: ExtractText</p>
@@ -177,7 +177,7 @@ See command-line app: ExtractText</p>
 from a variety of PDF documents. This functionality is encapsulated in the
 org.apache.pdfbox.util.PDFTextStripper and can be easily executed on the command line with
 org.apache.pdfbox.ExtractText.</p>
-<h2 id="lucene-integration">Lucene Integration</h2>
+<h2 id="lucene-integration" tabindex="-1">Lucene Integration</h2>
 <p>Lucene is an open source text search library from the Apache Jakarta Project. In order for
 Lucene to be able to index a PDF document it must first be converted to text. PDFBox provides
 a simple approach for adding PDF documents into a Lucene index.</p>
@@ -188,12 +188,12 @@ extracts a variety of metadata fields from the PDF to be added to the index, the
 shows details on those fields. This approach is very simple and should be sufficient for
 most users, if not then you can use some of the advanced text extraction techniques
 described in the next section.</p>
-<h2 id="advanced-text-extraction">Advanced Text Extraction</h2>
+<h2 id="advanced-text-extraction" tabindex="-1">Advanced Text Extraction</h2>
 <p>Some applications will have complex text extraction requiments and neither the command
 line application nor the LucenePDFDocument will be able to fulfill those requirements.
 It is possible for users to utilize or extend the PDFTextStripper class to meet some of
 these requirements.</p>
-<h3 id="limiting-the-extracted-text">Limiting the Extracted Text</h3>
+<h3 id="limiting-the-extracted-text" tabindex="-1">Limiting the Extracted Text</h3>
 <p>There are several ways that we can limit the text that is extracted during the extraction
 process. The simplest is to specify the range of pages that you want to be extracted.
 For example, to only extract text from the second and third pages of the PDF document
@@ -262,11 +262,11 @@ feature of the PDFTextStripper. Not all bookmarks point to a page in the current
 </tbody>
 </table>
 <p>NOTE: PDFTextStripper will check both the startPage/endPage and the startBookmark/endBookmark to determine if text should be extracted from the current page.</p>
-<h3 id="external-glyph-list">External Glyph List</h3>
+<h3 id="external-glyph-list" tabindex="-1">External Glyph List</h3>
 <p>Some PDF files need to map between glyph names and Unicode values during text extraction.
 PDFBox comes with an Adobe Glyph List, but you may encounter files with glyph names that
 are not in that map. To use your own glyphlist file, supply the file name to the <code>glyphlist_ext</code> JVM property.</p>
-<h3 id="right-to-left-text">Right to Left Text</h3>
+<h3 id="right-to-left-text" tabindex="-1">Right to Left Text</h3>
 <p>Extracting text in languages whose text goes from right to left (such as Arabic and Hebrew)
 in PDF files can result in text that is backwards. PDFBox can normalize and reverse the text
 if the ICU4J jar file has been placed on the classpath (it is an optional dependency).
@@ -284,7 +284,7 @@ or org.apache.pdfbox.ExtractText to ensure accurate output.</p>
                 <!-- nothing in here on purpose -->
             </div>
             <div class="span9">
-                <p>Copyright © 2009&ndash; <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                <p>Copyright © 2009&ndash;2022 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
                     <br>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
             </div>
         </div>
