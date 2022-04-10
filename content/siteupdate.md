@@ -22,7 +22,7 @@ title:   Updating the Website
 
 # Updating the PDFBox Website
 
-The content for the PDFBox website is kept in a [Git repository](https://git-wip-us.apache.org/repos/asf/pdfbox-docs) which is also mirrored to [GitHub](https://github.com/apache/pdfbox-docs). The site is split into two parts: the static content and the Javadoc for the PDFBox API. Both parts are build independently as further described below.
+The content for the PDFBox website is kept in a [Git repository](https://gitbox.apache.org/repos/asf/pdfbox-docs) which is also mirrored to [GitHub](https://github.com/apache/pdfbox-docs). The site is split into two parts: the static content and the Javadoc for the PDFBox API. Both parts are build independently as further described below.
 
 # Contribute
 If you would like to enhance the website content you can submit a patch. To do so please open a ticket at our [Issue Tracker](https://issues.apache.org/jira/browse/PDFBOX), use `Documentation` for the `Component` and add your patch to the ticket.
@@ -43,7 +43,7 @@ Tools used to generate the website:
 Before you can edit the site, you need to check it out from the Git repository:
 
 ~~~
-git clone https://git-wip-us.apache.org/repos/asf/pdfbox-docs
+git clone https://gitbox.apache.org/repos/asf/pdfbox-docs
 ~~~
 
 ### Local Changes
