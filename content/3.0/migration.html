@@ -99,17 +99,17 @@ a missing topic, open an issue or help us with a contribution to improve the gui
 <p>This guide describes the updates in Apache PDFBox 3.0 release. Use the information provided to upgrade your PDFBox 2.x applications
 to PDFBox 3.0. It provides information about the new, deprecated and unsupported features in this release.</p>
 <h2 id="java-versions" tabindex="-1">Java Versions</h2>
-<p>PDFBox 3.0 requires at least Java 8. Testing has been done up to Java 11.</p>
+<p>PDFBox 3.0 requires at least Java 8. Testing has been done up to Java 19.</p>
 <h2 id="dependency-updates" tabindex="-1">Dependency Updates</h2>
 <p>All libraries on which PDFBox depends are updated to their latest stable versions:</p>
 <ul>
-<li>Bouncy Castle 1.69</li>
+<li>Bouncy Castle 1.70</li>
 <li>Apache Commons Logging 1.2</li>
-<li>picocli 4.6.1</li>
+<li>picocli 4.6.3</li>
 </ul>
 <p>For test support the libraries are updated to</p>
 <ul>
-<li>JUnit 5.8</li>
+<li>JUnit 5.8.2</li>
 <li>JAI Image Core 1.4.0</li>
 <li>JAI JPEG2000 1.4.0</li>
 <li>JBIG ImageIO Plugin 3.0.4</li>
@@ -128,13 +128,38 @@ as they are treated to be of <strong>internal use only</strong>.</p>
         &lt;artifactId&gt;io&lt;/artifactId&gt;
     &lt;/dependency&gt;
 </code></pre>
+<p>The whole code was overhauled including the following changes:</p>
+<ul>
+<li>switch to java.nio</li>
+<li>add support for memory mapped files for reading</li>
+<li>use the origin source when creating a new reader to process parts of it</li>
+<li>read operations no longer use scratch files</li>
+</ul>
 <h3 id="use-loader-to-get-a-pdf-document" tabindex="-1">Use <strong>Loader</strong> to get a PDF document</h3>
-<p>For loading a PDF <code>PDDocument.load</code> has been replaced with the <code>Loader</code> methods. The same is true for loading a FDF document.</p>
-<p>When saving a PDF this will now be done in compressed mode per default. To override that use <code>PDDocument.save</code> with <code>CompressParameters.NO_COMPRESSION</code>.</p>
+<p>The new class <em><strong>org.apache.pdfbox.Loader</strong></em> is used for loading a PDF. It offers several methods to load a pdf using different kind of sources. All load methods have been removed from <em><strong>org.apache.pdfbox.pdmodel.PDDocument</strong></em>. The same is true for loading a FDF document.</p>
+<p>Sample usage:</p>
+<pre><code>    try (PDDocument document = Loader.loadPDF(new File(&quot;yourfile.pdf&quot;)))
+    {
+        for (PDPage page : document.getPages())
+        {
+            ....
+        }
+    }
+</code></pre>
+<h3 id="changes-when-saving-pdf" tabindex="-1">Changes when saving PDF</h3>
+<h4 id="compressed-saving-by-default" tabindex="-1">Compressed saving by default</h4>
+<p>When saving a PDF this will now be done in compressed mode by default. To override that use <code>PDDocument.save</code> with <code>CompressParameters.NO_COMPRESSION</code>.</p>
+<h4 id="don't-use-the-source-as-output" tabindex="-1">Don't use the source as output</h4>
+<p>The input file must not be used as output for saving operations. It will corrupt the file and throw an exception as parts of the file are read the first time when saving it.</p>
+<h3 id="reduced-memory-usage" tabindex="-1">Reduced memory usage</h3>
+<h4 id="incremental-parsing" tabindex="-1">Incremental Parsing</h4>
 <p>PDFBox now loads a PDF Document incrementally reducing the initial memory footprint. This will also reduce the memory needed to
 consume a PDF if only certain parts of the PDF are accessed. Note that, due to the nature of PDF, uses such as iterating over all pages,
 accessing annotations, signing a PDF etc. might still load all parts of the PDF overtime leading to a similar memory consumption as with PDFBox 2.0.</p>
-<p>The input file must not be used as output for saving operations. It will corrupt the file and throw an exception as parts of the file are read the first time when saving it.</p>
+<h4 id="improved-io-operations" tabindex="-1">Improved IO operations</h4>
+<p>The introduction of the new io classes has a positive impact on the memory usage. Especially the re-usage of the source for reading parts of it instead of using intermediate streams reduces the memory footprint significantly.</p>
+<h4 id="further-optimizations" tabindex="-1">Further optimizations</h4>
+<p>There were a lot of changes and optimizations which have a more or less huge impact on the memory consumption.</p>
 <h3 id="static-instances-for-standard-14-fonts-removed" tabindex="-1">Static instances for Standard 14 fonts removed</h3>
 <p>The static instances of <code>PDType1Font</code> for the standard 14 fonts were removed as the underlying <code>COSDictionary</code> isn't supposed to be immutable which led to several issues.</p>
 <p>A new constructor for <code>PDType1Font</code> was introduced to create a standard 14 font. The new Enum <code>Standard14Fonts.FontName</code> is the one and only parameter and defines the
@@ -188,6 +213,12 @@ of Adobe Reader. If you'd like to bypass this use <code>PDDocumentCatalog.getAcr
             		</li>
 
                     <li><a href="#use-loader-to-get-a-pdf-document">Use Loader to get a PDF document</a>
+            		</li>
+
+                    <li><a href="#changes-when-saving-pdf">Changes when saving PDF</a>
+            		</li>
+
+                    <li><a href="#reduced-memory-usage">Reduced memory usage</a>
             		</li>
 
                     <li><a href="#static-instances-for-standard-14-fonts-removed">Static instances for Standard 14 fonts removed</a>
