@@ -33,18 +33,18 @@ This guide describes the updates in Apache PDFBox 3.0 release. Use the informati
 to PDFBox 3.0. It provides information about the new, deprecated and unsupported features in this release.
 
 ## Java Versions
-PDFBox 3.0 requires at least Java 8. Testing has been done up to Java 11.
+PDFBox 3.0 requires at least Java 8. Testing has been done up to Java 19.
 
 ## Dependency Updates
 All libraries on which PDFBox depends are updated to their latest stable versions:
 
-- Bouncy Castle 1.69
+- Bouncy Castle 1.70
 - Apache Commons Logging 1.2
-- picocli 4.6.1
+- picocli 4.6.3
 
 For test support the libraries are updated to
 
-- JUnit 5.8
+- JUnit 5.8.2
 - JAI Image Core 1.4.0
 - JAI JPEG2000 1.4.0
 - JBIG ImageIO Plugin 3.0.4
@@ -71,20 +71,49 @@ All basic classes used for io-operations where moved to a separate module for a 
     </dependency>
 ~~~
 
+The whole code was overhauled including the following changes:
+- switch to java.nio
+- add support for memory mapped files for reading
+- use the origin source when creating a new reader to process parts of it
+- read operations no longer use scratch files
+
 ### Use **Loader** to get a PDF document
 
-For loading a PDF `PDDocument.load` has been replaced with the `Loader` methods. The same is true for loading a FDF document.
+The new class ***org.apache.pdfbox.Loader*** is used for loading a PDF. It offers several methods to load a pdf using different kind of sources. All load methods have been removed from ***org.apache.pdfbox.pdmodel.PDDocument***. The same is true for loading a FDF document.
 
-When saving a PDF this will now be done in compressed mode per default. To override that use `PDDocument.save` with `CompressParameters.NO_COMPRESSION`.
+Sample usage:
+~~~
+    try (PDDocument document = Loader.loadPDF(new File("yourfile.pdf")))
+    {
+        for (PDPage page : document.getPages())
+        {
+            ....
+        }
+    }
+~~~
 
+### Changes when saving PDF
+
+#### Compressed saving by default
+When saving a PDF this will now be done in compressed mode by default. To override that use `PDDocument.save` with `CompressParameters.NO_COMPRESSION`.
+
+#### Don't use the source as output
+The input file must not be used as output for saving operations. It will corrupt the file and throw an exception as parts of the file are read the first time when saving it.
+
+### Reduced memory usage
+
+#### Incremental Parsing
 PDFBox now loads a PDF Document incrementally reducing the initial memory footprint. This will also reduce the memory needed to
 consume a PDF if only certain parts of the PDF are accessed. Note that, due to the nature of PDF, uses such as iterating over all pages,
 accessing annotations, signing a PDF etc. might still load all parts of the PDF overtime leading to a similar memory consumption as with PDFBox 2.0.
 
-The input file must not be used as output for saving operations. It will corrupt the file and throw an exception as parts of the file are read the first time when saving it.
+#### Improved IO operations
+The introduction of the new io classes has a positive impact on the memory usage. Especially the re-usage of the source for reading parts of it instead of using intermediate streams reduces the memory footprint significantly.
 
-### Static instances for Standard 14 fonts removed ###
+#### Further optimizations
+There were a lot of changes and optimizations which have a more or less huge impact on the memory consumption.
 
+### Static instances for Standard 14 fonts removed
 The static instances of `PDType1Font` for the standard 14 fonts were removed as the underlying `COSDictionary` isn't supposed to be immutable which led to several issues.
 
 A new constructor for `PDType1Font` was introduced to create a standard 14 font. The new Enum `Standard14Fonts.FontName` is the one and only parameter and defines the
