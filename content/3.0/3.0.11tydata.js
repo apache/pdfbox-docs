@@ -1,8 +1,8 @@
 module.exports = {
     eleventyComputed: {
-        release: '2.0.26',
+        release: '3.0.0-alpha3',
         eleventyNavigation: {
-            version: '2.0',
+            version: '3.0',
             key: data => data.eleventyNavigation && data.eleventyNavigation.key ? data.eleventyNavigation.key : data.title,
             parent: data => data.parent
         },
