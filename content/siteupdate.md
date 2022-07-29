@@ -136,19 +136,13 @@ mvn scm-publish:publish-scm
 This will checkout the current content into the ``./target``directory, apply the changes from ``./staging`` and publish
 the changes to the PDFBox production website.
 
-### Update the JavaDocs for PDFBox 2.x
-To publish the javadocs follow these steps:
+### Update the Javadoc for PDFBox
+The Javadoc for PDFBox is hosted on [javadoc.io](https://javadoc.io/) which uses the `pdfbox-<version>-javadoc.jar` built at release time as a source. javadoc.io also makes older versions of the Javadoc available.
 
-Run
-~~~
-  $ mvn clean javadoc:aggregate scm-publish:publish-scm
-~~~
+In order to update the documentation to match a latest release of a branch
 
-from the `<SVN_ROOT>/../pdfbox` directory.
-
-It uses the same `pdfbox-site` settings from above to connect to the repository.
-
-<p class="alert alert-info">As <code>mvn clean</code> will delete the javadoc files download from the Apache CMS it's advised to configure <code>${svn.scmJavadocCheckoutDirectory}</code> to a local directory not below <code>./target</code>.</p>
+- update the `release` variable in the matching subdirectories `<version>.11tydata.js` file
+- update the link(s) in the `_layouts\documentation.html` file
 
 ## Build with Maven
 
