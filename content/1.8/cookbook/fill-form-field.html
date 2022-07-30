@@ -101,6 +101,7 @@
                         <a href="#">3.0 (Pre Release)</a>
                         <ul>
                             <li><a href="/3.0/migration.html">Migration Guide</a></li>
+                            <li><a href="https://javadoc.io/doc/org.apache.pdfbox/pdfbox/3.0.0-alpha3/index.html">API Docs</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-node" id="v2-0">
@@ -118,7 +119,7 @@
                             </li>
                             <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/2.0/faq.html">FAQ</a></li>
-                            <li><a href="/docs/2.0.13/javadocs/">API Docs</a></li>
+                            <li><a href="https://javadoc.io/doc/org.apache.pdfbox/pdfbox/2.0.26/index.html">API Docs</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-node" id="v1-8">
@@ -140,7 +141,7 @@
                                 </ul>
                             </li>
                             <li><a href="/1.8/commandline.html">Command-Line Tools</a></li>
-                            <li><a href="/docs/1.8.13/javadocs/">API Docs</a></li>
+                            <li><a href="https://javadoc.io/doc/org.apache.pdfbox/pdfbox/1.8.16/index.html">API Docs</a></li>
                             <li><a href="/1.8/faq.html">FAQ</a></li>
                         </ul>
                     </li>
@@ -173,40 +174,35 @@
 Form there individual fields can be accessed. Fields might be organized in a tree structure so it might
 be neccessary to walk through the tree to get an individual field.</p>
 <p>Load the PDF document.</p>
-<pre><code>:::java
+<p>:::java
 // load the document
-PDDocument pdfDocument = PDDocument.loadNonSeq(new File(... ), null);
-</code></pre>
+PDDocument pdfDocument = PDDocument.loadNonSeq(new File(... ), null);</p>
 <p>Get the docoument catalog and the AcroForm which might be contained within.</p>
-<pre><code>:::java
+<p>:::java
 // get the document catalog
 PDDocumentCatalog docCatalog = pdfDocument.getDocumentCatalog();
-PDAcroForm acroForm = docCatalog.getAcroForm();
-</code></pre>
+PDAcroForm acroForm = docCatalog.getAcroForm();</p>
 <p>Retrieve an individual field and set its value.</p>
-<pre><code>:::java
+<p>:::java
 // as there might not be an AcroForm entry a null check is necessary
 if (acroForm != null)
 {
-    PDField field = (PDField) acroForm.getField( &quot;fieldName&quot; );
-    field.setValue(&quot;new field value&quot;);
-}
-</code></pre>
+PDField field = (PDField) acroForm.getField( &quot;fieldName&quot; );
+field.setValue(&quot;new field value&quot;);
+}</p>
 <p>If a field is nested within the form tree a fully qualified name might be provided
 to access the field.</p>
-<pre><code>:::java
+<p>:::java
 // as there might not be an AcroForm entry a null check is neccessary
 if (acroForm != null)
 {
-    PDField field = (PDField) acroForm.getField( &quot;fieldsParentName.fieldName&quot; );
-    field.setValue(&quot;new field value&quot;);
-}
-</code></pre>
+PDField field = (PDField) acroForm.getField( &quot;fieldsParentName.fieldName&quot; );
+field.setValue(&quot;new field value&quot;);
+}</p>
 <p>Save and close the filled out form.</p>
-<pre><code>:::java
+<p>:::java
 doc.save(filledForm);
-doc.close();
-</code></pre>
+doc.close();</p>
 
             </div>
         </div>

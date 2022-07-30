@@ -101,6 +101,7 @@
                         <a href="#">3.0 (Pre Release)</a>
                         <ul>
                             <li><a href="/3.0/migration.html">Migration Guide</a></li>
+                            <li><a href="https://javadoc.io/doc/org.apache.pdfbox/pdfbox/3.0.0-alpha3/index.html">API Docs</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-node" id="v2-0">
@@ -118,7 +119,7 @@
                             </li>
                             <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/2.0/faq.html">FAQ</a></li>
-                            <li><a href="/docs/2.0.13/javadocs/">API Docs</a></li>
+                            <li><a href="https://javadoc.io/doc/org.apache.pdfbox/pdfbox/2.0.26/index.html">API Docs</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-node" id="v1-8">
@@ -140,7 +141,7 @@
                                 </ul>
                             </li>
                             <li><a href="/1.8/commandline.html">Command-Line Tools</a></li>
-                            <li><a href="/docs/1.8.13/javadocs/">API Docs</a></li>
+                            <li><a href="https://javadoc.io/doc/org.apache.pdfbox/pdfbox/1.8.16/index.html">API Docs</a></li>
                             <li><a href="/1.8/faq.html">FAQ</a></li>
                         </ul>
                     </li>
@@ -171,41 +172,34 @@
                 <h1 id="document-rendering" tabindex="-1">Document Rendering</h1>
 <h2 id="convert-a-document-to-images" tabindex="-1">Convert a Document to Images</h2>
 <p>This small sample shows how to render (convert to images) a PDF document using PDFBox.</p>
-<pre><code>:::java
-    String filename = &quot;YOURFILENAMEHERE.pdf&quot;;
-
-    // open the document
-    PDDocument doc = PDDocument.loadNonSeq(new File(filename), null);
-
-    boolean b;
-    List&lt;PDPage&gt; pages = doc.getDocumentCatalog().getAllPages();
-    for (int p = 0; p &lt; pages.size(); ++p)
-    {
-        // RGB image with 300 dpi
-        BufferedImage bim = pages.get(p).convertToImage(BufferedImage.TYPE_INT_RGB, 300);
-        
-        // save as PNG with default metadata
-        b = ImageIO.write(bim, &quot;png&quot;, new File(&quot;rgbpage&quot; + (p+1) + &quot;.png&quot;));
-        if (!b)
-        {
-            // error handling
-        }
-
-        // B/W image with 300 dpi
-        bim = pages.get(p).convertToImage(BufferedImage.TYPE_BYTE_BINARY, 300);
-        
-        // save as TIF with dpi in the metadata
-        // PDFBox will choose the best compression for you - here: CCITT G4
-        // you need to add jai_imageio.jar to your classpath for this to work
-        b = ImageIOUtil.writeImage(bim, &quot;bwpage-&quot; + (p+1) + &quot;.tif&quot;, 300);
-        if (!b)
-        {
-            // error handling
-        }
-    }
-
-    doc.close();
-</code></pre>
+<p>:::java
+String filename = &quot;YOURFILENAMEHERE.pdf&quot;;</p>
+<p>// open the document
+PDDocument doc = PDDocument.loadNonSeq(new File(filename), null);</p>
+<p>boolean b;
+List<PDPage> pages = doc.getDocumentCatalog().getAllPages();
+for (int p = 0; p &lt; pages.size(); ++p)
+{
+// RGB image with 300 dpi
+BufferedImage bim = pages.get(p).convertToImage(BufferedImage.TYPE_INT_RGB, 300);</p>
+<p>// save as PNG with default metadata
+b = ImageIO.write(bim, &quot;png&quot;, new File(&quot;rgbpage&quot; + (p+1) + &quot;.png&quot;));
+if (!b)
+{
+// error handling
+}</p>
+<p>// B/W image with 300 dpi
+bim = pages.get(p).convertToImage(BufferedImage.TYPE_BYTE_BINARY, 300);</p>
+<p>// save as TIF with dpi in the metadata
+// PDFBox will choose the best compression for you - here: CCITT G4
+// you need to add jai_imageio.jar to your classpath for this to work
+b = ImageIOUtil.writeImage(bim, &quot;bwpage-&quot; + (p+1) + &quot;.tif&quot;, 300);
+if (!b)
+{
+// error handling
+}
+}</p>
+<p>doc.close();</p>
 
             </div>
         </div>

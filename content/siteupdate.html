@@ -101,6 +101,7 @@
                         <a href="#">3.0 (Pre Release)</a>
                         <ul>
                             <li><a href="/3.0/migration.html">Migration Guide</a></li>
+                            <li><a href="https://javadoc.io/doc/org.apache.pdfbox/pdfbox/3.0.0-alpha3/index.html">API Docs</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-node" id="v2-0">
@@ -118,7 +119,7 @@
                             </li>
                             <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/2.0/faq.html">FAQ</a></li>
-                            <li><a href="/docs/2.0.13/javadocs/">API Docs</a></li>
+                            <li><a href="https://javadoc.io/doc/org.apache.pdfbox/pdfbox/2.0.26/index.html">API Docs</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-node" id="v1-8">
@@ -140,7 +141,7 @@
                                 </ul>
                             </li>
                             <li><a href="/1.8/commandline.html">Command-Line Tools</a></li>
-                            <li><a href="/docs/1.8.13/javadocs/">API Docs</a></li>
+                            <li><a href="https://javadoc.io/doc/org.apache.pdfbox/pdfbox/1.8.16/index.html">API Docs</a></li>
                             <li><a href="/1.8/faq.html">FAQ</a></li>
                         </ul>
                     </li>
@@ -236,14 +237,13 @@ git push origin master
 </code></pre>
 <p>This will checkout the current content into the <code>./target</code>directory, apply the changes from <code>./staging</code> and publish
 the changes to the PDFBox production website.</p>
-<h3 id="update-the-javadocs-for-pdfbox-2.x" tabindex="-1">Update the JavaDocs for PDFBox 2.x</h3>
-<p>To publish the javadocs follow these steps:</p>
-<p>Run</p>
-<pre><code>  $ mvn clean javadoc:aggregate scm-publish:publish-scm
-</code></pre>
-<p>from the <code>&lt;SVN_ROOT&gt;/../pdfbox</code> directory.</p>
-<p>It uses the same <code>pdfbox-site</code> settings from above to connect to the repository.</p>
-<p class="alert alert-info">As <code>mvn clean</code> will delete the javadoc files download from the Apache CMS it's advised to configure <code>${svn.scmJavadocCheckoutDirectory}</code> to a local directory not below <code>./target</code>.</p>
+<h3 id="update-the-javadoc-for-pdfbox" tabindex="-1">Update the Javadoc for PDFBox</h3>
+<p>The Javadoc for PDFBox is hosted on <a href="https://javadoc.io/">javadoc.io</a> which uses the <code>pdfbox-&lt;version&gt;-javadoc.jar</code> built at release time as a source. javadoc.io also makes older versions of the Javadoc available.</p>
+<p>In order to update the documentation to match a latest release of a branch</p>
+<ul>
+<li>update the <code>release</code> variable in the matching subdirectories <code>&lt;version&gt;.11tydata.js</code> file</li>
+<li>update the link(s) in the <code>_layouts\documentation.html</code> file</li>
+</ul>
 <h2 id="build-with-maven" tabindex="-1">Build with Maven</h2>
 <p>The project provides a simple way to build the website sources locally using the build tool <a href="https://maven.apache.org/">Maven</a>.</p>
 <p>The Maven build automatically downloads the tool binaries such as <code>node</code> and <code>npm</code> for you. You do not need to install
@@ -252,8 +252,7 @@ those tools on your host then. The binaries are added to the local project sourc
 build errors due to incompatible versions of <code>node.js</code> tooling installed on your machine.</p>
 <h3 id="preparing-maven" tabindex="-1">Preparing Maven</h3>
 <p>Make sure that you have Maven installed.</p>
-<pre><code>$ mvn --version
-</code></pre>
+<p>$ mvn --version</p>
 <p>If this command fails with an error, you do not have Maven installed.</p>
 <p>Please install Maven using your favorite package manager (like <a href="https://brew.sh/">Homebrew</a>) or from
 official <a href="https://maven.apache.org/install.html">Maven binaries</a></p>
@@ -265,16 +264,14 @@ official <a href="https://maven.apache.org/install.html">Maven binaries</a></p>
 <li>Build the website content using Eleventy</li>
 </ul>
 <p>You can do all of this with one single command:</p>
-<pre><code>$ mvn package
-</code></pre>
+<p>$ mvn package</p>
 <p>The whole process takes up to five minutes (time to grab some coffee!)</p>
 <p>When the build is finished you should see the generated website in the <code>public</code> directory.</p>
 <h3 id="clean-build" tabindex="-1">Clean build</h3>
 <p>When rebuilding the website the process uses some cached content.
 If you want to start from scratch for some reason you can simply add the <code>clean</code> operation to the build which removes
 all generated sources in the project first.</p>
-<pre><code>$ mvn clean package
-</code></pre>
+<p>$ mvn clean package</p>
 
             </div>
         </div>

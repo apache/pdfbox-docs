@@ -101,6 +101,7 @@
                         <a href="#">3.0 (Pre Release)</a>
                         <ul>
                             <li><a href="/3.0/migration.html">Migration Guide</a></li>
+                            <li><a href="https://javadoc.io/doc/org.apache.pdfbox/pdfbox/3.0.0-alpha3/index.html">API Docs</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-node" id="v2-0">
@@ -118,7 +119,7 @@
                             </li>
                             <li><a href="/2.0/commandline.html">Command-Line Tools</a></li>
                             <li><a href="/2.0/faq.html">FAQ</a></li>
-                            <li><a href="/docs/2.0.13/javadocs/">API Docs</a></li>
+                            <li><a href="https://javadoc.io/doc/org.apache.pdfbox/pdfbox/2.0.26/index.html">API Docs</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-node" id="v1-8">
@@ -140,7 +141,7 @@
                                 </ul>
                             </li>
                             <li><a href="/1.8/commandline.html">Command-Line Tools</a></li>
-                            <li><a href="/docs/1.8.13/javadocs/">API Docs</a></li>
+                            <li><a href="https://javadoc.io/doc/org.apache.pdfbox/pdfbox/1.8.16/index.html">API Docs</a></li>
                             <li><a href="/1.8/faq.html">FAQ</a></li>
                         </ul>
                     </li>
@@ -188,8 +189,7 @@ example takes one present in pdfbox:</p>
 <pre class="language-java"><code class="language-java"><span class="token comment">// Create output intent</span><br><span class="token class-name">InputStream</span> colorProfile <span class="token operator">=</span> <span class="token class-name">CreatePDFA</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">.</span><span class="token function">getResourceAsStream</span><span class="token punctuation">(</span><span class="token string">"/org/apache/pdfbox/resources/pdfa/sRGB Color Space Profile.icm"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token class-name">PDOutputIntent</span> oi <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PDOutputIntent</span><span class="token punctuation">(</span>doc<span class="token punctuation">,</span> colorProfile<span class="token punctuation">)</span><span class="token punctuation">;</span> <br>oi<span class="token punctuation">.</span><span class="token function">setInfo</span><span class="token punctuation">(</span><span class="token string">"sRGB IEC61966-2.1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <br>oi<span class="token punctuation">.</span><span class="token function">setOutputCondition</span><span class="token punctuation">(</span><span class="token string">"sRGB IEC61966-2.1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <br>oi<span class="token punctuation">.</span><span class="token function">setOutputConditionIdentifier</span><span class="token punctuation">(</span><span class="token string">"sRGB IEC61966-2.1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <br>oi<span class="token punctuation">.</span><span class="token function">setRegistryName</span><span class="token punctuation">(</span><span class="token string">"http://www.color.org"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <br>cat<span class="token punctuation">.</span><span class="token function">addOutputIntent</span><span class="token punctuation">(</span>oi<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <h2 id="complete-example" tabindex="-1">Complete example</h2>
 <p>The complete example can be found in pdfbox-example. The source file is</p>
-<pre><code>src/main/java/org/apache/pdfbox/examples/pdfa/CreatePDFA.java
-</code></pre>
+<p>src/main/java/org/apache/pdfbox/examples/pdfa/CreatePDFA.java</p>
 
             </div>
         </div>
