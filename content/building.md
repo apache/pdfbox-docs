@@ -44,7 +44,7 @@ The sources for the **Java ImageIO plugin for the JBIG2 image format** are avail
 
 ### PDFBox 1.8
 
-- JDK 5 or 6
+- JDK 8 (build only)
 - [Maven 3](http://maven.apache.org/)
 
 ### PDFBox 2.0
