@@ -36,6 +36,13 @@
     <category rdf:resource="https://projects.apache.org/category/library" />
     <release>
       <Version>
+        <name>Apache PDFBox</name>
+        <created>2022-15-09</created>
+        <revision>1.8.17</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
         <name>Apache PDFBox JBIG2 ImageIO Plugin</name>
         <created>2022-03-01</created>
         <revision>3.0.4</revision>
