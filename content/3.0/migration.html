@@ -140,11 +140,31 @@ as they are treated to be of <strong>internal use only</strong>.</p>
 <li>add support for memory mapped files for reading</li>
 <li>use the origin source when creating a new reader to process parts of it</li>
 <li>read operations no longer use scratch files</li>
+<li>provide an interface to implement an individual class to read an pdf</li>
+<li>provide an interface to implement an individual cache holding streams when creating/writing a pdf</li>
 </ul>
+<p>PDFBox offers the following implementations of the interface &quot;org.apache.pdfbox.io.RandomAccessRead&quot; to be used as source to read a pdf:</p>
+<ul>
+<li><em><strong>org.apache.pdfbox.io.RandomAccessReadBuffer</strong></em></li>
+</ul>
+<p>RandomAccessReadBuffer stores all the data in memory. It is backed by the given byte array or ByteBuffer. Using the constructor with an InputStream copies the data to the buffer. Internally the data is stored in a chunk of ByteBuffers with a default chunk size of 4KB.</p>
+<ul>
+<li><em><strong>org.apache.pdfbox.io.RandomAccessReadBufferedFile</strong></em></li>
+</ul>
+<p>RandomAccessReadBufferedFile is backed by the given file. It has an in-memory cache using pages with a size of 4KB. The cache follows the FIFO principle. If the the maximum of 1000 pages is reached the first added page is replaced with new data.</p>
+<ul>
+<li><em><strong>org.apache.pdfbox.io.RandomAccessReadMemoryMappedFile</strong></em></li>
+</ul>
+<p>RandomAccessReadMemoryMappedFile uses the memory mapping feature of java. The whole file is mapped to memory and the maximum allowed file size is <em><strong>Integer.MAX_VALUE</strong></em>.</p>
+<p class="alert alert-warning">There is a <a href="https://bugs.openjdk.java.net/browse/JDK-4715154">known issue</a> with locked files after closing the memory mapped file on windows. PDFBox implements its own unmapper as a workaround.</p>
+<ul>
+<li><em><strong>Implementing your own reader</strong></em></li>
+</ul>
+<p>If there is any need to implement your own reader it has to implement the interface <code>org.apache.pdfbox.io.RandomAccessRead</code>. It shall be done thread safe to avoid issues in multithreaded environments.</p>
 <h3 id="use-loader-to-get-a-pdf-document" tabindex="-1">Use <strong>Loader</strong> to get a PDF document</h3>
 <p>The new class <em><strong>org.apache.pdfbox.Loader</strong></em> is used for loading a PDF. It offers several methods to load a pdf using different kind of sources. All load methods have been removed from <em><strong>org.apache.pdfbox.pdmodel.PDDocument</strong></em>. The same is true for loading a FDF document.</p>
-<p>Sample usage:</p>
-<pre><code>    try (PDDocument document = Loader.loadPDF(new File(&quot;yourfile.pdf&quot;)))
+<p>The most flexible way is to use an instance of RandomAccessRead such as the following sample:</p>
+<pre><code>    try (PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(&quot;yourfile.pdf&quot;)))
     {
         for (PDPage page : document.getPages())
         {
@@ -152,6 +172,15 @@ as they are treated to be of <strong>internal use only</strong>.</p>
         }
     }
 </code></pre>
+<p><em><strong>org.apache.pdfbox.Loader</strong></em> provides two other kind of load methods for your convenience.</p>
+<ul>
+<li><em><strong>using a byte array as input</strong></em></li>
+</ul>
+<p>If a byte array is provided as source PDFBox uses <code>org.apache.pdfbox.io.RandomAccessReadBuffer</code> to hold the data. The byte buffer is backed by the given byte array.</p>
+<ul>
+<li><em><strong>using a file as input</strong></em></li>
+</ul>
+<p>If a file is provided as source PDFBox uses <code>org.apache.pdfbox.io.RandomAccessReadBufferedFile</code> to wrap the source data using the in-memory cache as described above.</p>
 <h3 id="changes-when-saving-pdf" tabindex="-1">Changes when saving PDF</h3>
 <h4 id="compressed-saving-by-default" tabindex="-1">Compressed saving by default</h4>
 <p>When saving a PDF this will now be done in compressed mode by default. To override that use <code>PDDocument.save</code> with <code>CompressParameters.NO_COMPRESSION</code>.</p>
