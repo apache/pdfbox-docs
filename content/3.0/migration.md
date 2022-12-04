@@ -78,14 +78,37 @@ The whole code was overhauled including the following changes:
 - add support for memory mapped files for reading
 - use the origin source when creating a new reader to process parts of it
 - read operations no longer use scratch files
+- provide an interface to implement an individual class to read an pdf
+- provide an interface to implement an individual cache holding streams when creating/writing a pdf
+
+PDFBox offers the following implementations of the interface "org.apache.pdfbox.io.RandomAccessRead" to be used as source to read a pdf:
+
+- ***org.apache.pdfbox.io.RandomAccessReadBuffer***
+
+RandomAccessReadBuffer stores all the data in memory. It is backed by the given byte array or ByteBuffer. Using the constructor with an InputStream copies the data to the buffer. Internally the data is stored in a chunk of ByteBuffers with a default chunk size of 4KB.
+
+- ***org.apache.pdfbox.io.RandomAccessReadBufferedFile***
+
+RandomAccessReadBufferedFile is backed by the given file. It has an in-memory cache using pages with a size of 4KB. The cache follows the FIFO principle. If the the maximum of 1000 pages is reached the first added page is replaced with new data.
+
+- ***org.apache.pdfbox.io.RandomAccessReadMemoryMappedFile***
+
+RandomAccessReadMemoryMappedFile uses the memory mapping feature of java. The whole file is mapped to memory and the maximum allowed file size is ***Integer.MAX_VALUE***.
+
+<p class="alert alert-warning">There is a <a href="https://bugs.openjdk.java.net/browse/JDK-4715154">known issue</a> with locked files after closing the memory mapped file on windows. PDFBox implements its own unmapper as a workaround.</p>
+
+- ***Implementing your own reader***
+
+If there is any need to implement your own reader it has to implement the interface `org.apache.pdfbox.io.RandomAccessRead`. It shall be done thread safe to avoid issues in multithreaded environments.
 
 ### Use **Loader** to get a PDF document
 
 The new class ***org.apache.pdfbox.Loader*** is used for loading a PDF. It offers several methods to load a pdf using different kind of sources. All load methods have been removed from ***org.apache.pdfbox.pdmodel.PDDocument***. The same is true for loading a FDF document.
 
-Sample usage:
+The most flexible way is to use an instance of RandomAccessRead such as the following sample:
+
 ~~~
-    try (PDDocument document = Loader.loadPDF(new File("yourfile.pdf")))
+    try (PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile("yourfile.pdf")))
     {
         for (PDPage page : document.getPages())
         {
@@ -93,6 +116,16 @@ Sample usage:
         }
     }
 ~~~
+
+***org.apache.pdfbox.Loader*** provides two other kind of load methods for your convenience.
+
+- ***using a byte array as input***
+
+If a byte array is provided as source PDFBox uses `org.apache.pdfbox.io.RandomAccessReadBuffer` to hold the data. The byte buffer is backed by the given byte array.
+
+- ***using a file as input***
+
+If a file is provided as source PDFBox uses `org.apache.pdfbox.io.RandomAccessReadBufferedFile` to wrap the source data using the in-memory cache as described above.
 
 ### Changes when saving PDF
 
