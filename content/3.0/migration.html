@@ -160,7 +160,7 @@ as they are treated to be of <strong>internal use only</strong>.</p>
 <ul>
 <li><em><strong>Implementing your own reader</strong></em></li>
 </ul>
-<p>If there is any need to implement your own reader it has to implement the interface <code>org.apache.pdfbox.io.RandomAccessRead</code>. It shall be done thread safe to avoid issues in multithreaded environments.</p>
+<p>If there is any need to implement your own reader one has to implement the interface <code>org.apache.pdfbox.io.RandomAccessRead</code>. It shall be done thread safe to avoid issues in multithreaded environments.</p>
 <h3 id="use-loader-to-get-a-pdf-document" tabindex="-1">Use <strong>Loader</strong> to get a PDF document</h3>
 <p>The new class <em><strong>org.apache.pdfbox.Loader</strong></em> is used for loading a PDF. It offers several methods to load a pdf using different kind of sources. All load methods have been removed from <em><strong>org.apache.pdfbox.pdmodel.PDDocument</strong></em>. The same is true for loading a FDF document.</p>
 <p>The most flexible way is to use an instance of RandomAccessRead such as the following sample:</p>
@@ -285,7 +285,7 @@ of Adobe Reader. If you'd like to bypass this use <code>PDDocumentCatalog.getAcr
                 <!-- nothing in here on purpose -->
             </div>
             <div class="span9">
-                <p>Copyright © 2009&ndash;2022 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                <p>Copyright © 2009&ndash;2023 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
                     <br>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
             </div>
         </div>
