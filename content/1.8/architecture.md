@@ -31,7 +31,7 @@ is organized as PDFBox was architected around the concepts layed out in the
 ISO-32000 (PDF) Specification
 
 - [ISO Site](http://www.iso.org/iso/catalogue_detail.htm?csnumber=51502)
-- [Adobe Version](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf)
+- [Adobe Version](https://opensource.adobe.com/dc-acrobat-sdk-docs/standards/pdfstandards/pdf/PDF32000_2008.pdf)
 
 ## Quick Introduction to the PDF format
 
