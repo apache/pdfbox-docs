@@ -139,9 +139,11 @@ public class Foo extends Bar
 
 ## Eclipse Formatter
 
-Eclipse users may download this preferences file: pdfbox-eclipse-formatter.xml and import this into Eclipse.
-(Window->Preferences, go to Java->Code Style->Formatter and click "Import...").
-Once you have done this you can reformat your code by using Source->Format (Ctrl+Shift+F).
+**Eclipse** users may download this preferences file: `pdfbox-eclipse-formatter.xml` and import this into Eclipse.
+(*Window->Preferences*, go to *Java->Code Style->Formatter* and click "*Import...*").
+Once you have done this you can reformat your code by using *Source->Format* (`Ctrl+Shift+F`).
 
 Also note that Eclipse will automatically format your import statements appropriately when
-you invoke Source -> Organize Imports (Ctrl+Shift+O).
+you invoke *Source -> Organize Imports* (`Ctrl+Shift+O`).
+
+**IntelliJ IDEA** users may leverage the same format preferences by importing them into [Adapter for Eclipse Code Formatter](https://plugins.jetbrains.com/plugin/6546-adapter-for-eclipse-code-formatter) plugin. To make the code conform to the format rules, run *Code -> Reformat Code* command (`Ctrl+Alt+L`) and/or make sure to set the same named flag in *Commit* dialog.
