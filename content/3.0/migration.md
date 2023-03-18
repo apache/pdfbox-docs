@@ -99,7 +99,7 @@ RandomAccessReadMemoryMappedFile uses the memory mapping feature of java. The wh
 
 - ***Implementing your own reader***
 
-If there is any need to implement your own reader it has to implement the interface `org.apache.pdfbox.io.RandomAccessRead`. It shall be done thread safe to avoid issues in multithreaded environments.
+If there is any need to implement your own reader one has to implement the interface `org.apache.pdfbox.io.RandomAccessRead`. It shall be done thread safe to avoid issues in multithreaded environments.
 
 ### Use **Loader** to get a PDF document
 
