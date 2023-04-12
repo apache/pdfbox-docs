@@ -81,6 +81,8 @@ The whole code was overhauled including the following changes:
 - provide an interface to implement an individual class to read an pdf
 - provide an interface to implement an individual cache holding streams when creating/writing a pdf
 
+#### Reader implementations
+
 PDFBox offers the following implementations of the interface "org.apache.pdfbox.io.RandomAccessRead" to be used as source to read a pdf:
 
 - ***org.apache.pdfbox.io.RandomAccessReadBuffer***
@@ -99,7 +101,19 @@ RandomAccessReadMemoryMappedFile uses the memory mapping feature of java. The wh
 
 - ***Implementing your own reader***
 
-If there is any need to implement your own reader one has to implement the interface `org.apache.pdfbox.io.RandomAccessRead`. It shall be done thread safe to avoid issues in multithreaded environments.
+If there is any need to implement a different reader one has to implement the interface `org.apache.pdfbox.io.RandomAccessRead`. It shall be done thread safe to avoid issues in multithreaded environments.
+
+#### Stream cache
+
+PDFBox 3.0.x no longer uses a separate cache when reading a pdf, but still does for write operations. 
+
+***Default stream cache***
+
+3.0.x introduces the interface `RandomAccessStreamCache` to define a cache in a more flexible way. The well known class `ScratchFile` is the default implementation. The MemoryUsageSetting parameter within the loadPDF methods was replaced by a parameter using the new functional interface `StreamCacheCreateFunction` to encapsulate the caching details within the IO package. `IOUtils` provides two variants of a possible cache (memory only and temporary file only) for convenience. The loader uses a memory only cache as default if the caller doesn't provide any cache. 
+
+***Implementing your own stream cache***
+
+If there is any need to implement a different cache one has to implement the interface `org.apache.pdfbox.io.RandomAccessStreamCache`. It shall be done thread safe to avoid issues in multithreaded environments.
 
 ### Use **Loader** to get a PDF document
 
