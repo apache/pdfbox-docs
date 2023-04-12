@@ -143,6 +143,7 @@ as they are treated to be of <strong>internal use only</strong>.</p>
 <li>provide an interface to implement an individual class to read an pdf</li>
 <li>provide an interface to implement an individual cache holding streams when creating/writing a pdf</li>
 </ul>
+<h4 id="reader-implementations" tabindex="-1">Reader implementations</h4>
 <p>PDFBox offers the following implementations of the interface &quot;org.apache.pdfbox.io.RandomAccessRead&quot; to be used as source to read a pdf:</p>
 <ul>
 <li><em><strong>org.apache.pdfbox.io.RandomAccessReadBuffer</strong></em></li>
@@ -160,7 +161,13 @@ as they are treated to be of <strong>internal use only</strong>.</p>
 <ul>
 <li><em><strong>Implementing your own reader</strong></em></li>
 </ul>
-<p>If there is any need to implement your own reader one has to implement the interface <code>org.apache.pdfbox.io.RandomAccessRead</code>. It shall be done thread safe to avoid issues in multithreaded environments.</p>
+<p>If there is any need to implement a different reader one has to implement the interface <code>org.apache.pdfbox.io.RandomAccessRead</code>. It shall be done thread safe to avoid issues in multithreaded environments.</p>
+<h4 id="stream-cache" tabindex="-1">Stream cache</h4>
+<p>PDFBox 3.0.x no longer uses a separate cache when reading a pdf, but still does for write operations.</p>
+<p><em><strong>Default stream cache</strong></em></p>
+<p>3.0.x introduces the interface <code>RandomAccessStreamCache</code> to define a cache in a more flexible way. The well known class <code>ScratchFile</code> is the default implementation. The MemoryUsageSetting parameter within the loadPDF methods was replaced by a parameter using the new functional interface <code>StreamCacheCreateFunction</code> to encapsulate the caching details within the IO package. <code>IOUtils</code> provides two variants of a possible cache (memory only and temporary file only) for convenience. The loader uses a memory only cache as default if the caller doesn't provide any cache.</p>
+<p><em><strong>Implementing your own stream cache</strong></em></p>
+<p>If there is any need to implement a different cache one has to implement the interface <code>org.apache.pdfbox.io.RandomAccessStreamCache</code>. It shall be done thread safe to avoid issues in multithreaded environments.</p>
 <h3 id="use-loader-to-get-a-pdf-document" tabindex="-1">Use <strong>Loader</strong> to get a PDF document</h3>
 <p>The new class <em><strong>org.apache.pdfbox.Loader</strong></em> is used for loading a PDF. It offers several methods to load a pdf using different kind of sources. All load methods have been removed from <em><strong>org.apache.pdfbox.pdmodel.PDDocument</strong></em>. The same is true for loading a FDF document.</p>
 <p>The most flexible way is to use an instance of RandomAccessRead such as the following sample:</p>
