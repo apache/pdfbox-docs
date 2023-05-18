@@ -25,7 +25,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents. Apache PDFBox also includes several command-line utilities. Apache PDFBox is published under the Apache License v2.0.">
 
-    <title>Apache PDFBox |  Page Not Found</title>
+    <title>Apache PDFBox |  Security</title>
 
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/prism.css" rel="stylesheet">
@@ -168,14 +168,27 @@
 		<a  href="https://www.apache.org/events/current-event.html"><img src="https://www.apache.org/events/current-event-125x125.png" alt="Apache events"></a>
             </div>
             <div class="col-xs-12 col-sm-9">
-                <h1 id="404" tabindex="-1">404</h1>
-<p>We're sorry, but the page you requested cannot be found.</p>
-<p>Maybe you</p>
+                <h1 id="security" tabindex="-1">Security</h1>
+<h2 id="security-model" tabindex="-1">Security Model</h2>
+<p>Processing untrusted PDFs is only supported to a point: malformed PDFs
+will not cause remote code execution or other privilege escalation
+problems. However, processing them they may cause unchecked exceptions
+such as <code>StackOverflowException</code> or <code>NullPointerException</code>, or even use
+unexpected amounts of memory.</p>
+<h2 id="reporting-security-issues" tabindex="-1">Reporting security issues</h2>
+<p>The Apache Software Foundation takes a very active stance in eliminating and disclosing security problems against its products.</p>
+<p>We strongly encourage folks to report such problems to our private security mailing list first, before disclosing them in a public forum.</p>
+<p>Please note that the security mailing list should only be used for reporting undisclosed security vulnerabilities and managing the process of fixing such vulnerabilities. We cannot accept regular bug reports or other queries at this address. All mail sent to this address that does not relate to an undisclosed security problem in our source code will be ignored.</p>
+<p>If you need to report a bug that isn't an undisclosed security vulnerability, please contact one of our <a href="https://pdfbox.apache.org/mailinglists.html">mailing lists</a>.</p>
+<p>The private security mailing address is: <a href="mailto:security@apache.org">security@apache.org</a>. Please send one plain-text email for each vulnerability you are reporting.</p>
+<p>An overview of the vulnerability handling process is:</p>
 <ul>
-<li>typed the address incorrectly</li>
-<li>followed a link from another site that pointed to this page.</li>
+<li>The reporter reports the vulnerability privately to <a href="security@apache.org">security@apache.org</a>.</li>
+<li>The PDFBox security team works privately with the reporter to resolve the vulnerability.</li>
+<li>The PDFBox project creates a new release of the package the vulnerabilty affects to deliver its fix.</li>
+<li>The PDFBox project publicly announces the vulnerability and describes how to apply the fix.</li>
 </ul>
-<p>If you came by following a broken link, please report the <a href="https://issues.apache.org/jira/browse/pdfbox">issue</a>.</p>
+<p>Committers should read <a href="https://www.apache.org/security/committers.html">a more detailed description of the process</a>. Reporters of security vulnerabilities may also find it useful</p>
 
             </div>
         </div>
