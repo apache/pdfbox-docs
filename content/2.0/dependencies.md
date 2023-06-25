@@ -95,20 +95,20 @@ Encrypting and sigining PDFs requires the *bcprov*, *bcmail* and *bcpkix* librar
 ```xml
 <dependency>
     <groupId>org.bouncycastle</groupId>
-    <artifactId>bcprov-jdk15on</artifactId>
-    <version>1.64</version>
+    <artifactId>bcprov-jdk15to18</artifactId>
+    <version>1.75</version>
 </dependency>
 
 <dependency>
     <groupId>org.bouncycastle</groupId>
-    <artifactId>bcmail-jdk15on</artifactId>
-    <version>1.64</version>
+    <artifactId>bcmail-jdk15to18</artifactId>
+    <version>1.75</version>
 </dependency>
 
 <dependency>
     <groupId>org.bouncycastle</groupId>
-    <artifactId>bcpkix-jdk15on</artifactId>
-    <version>1.64</version>
+    <artifactId>bcpkix-jdk15to18</artifactId>
+    <version>1.75</version>
 </dependency>
 ```
 
