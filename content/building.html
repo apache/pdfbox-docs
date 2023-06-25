@@ -172,15 +172,13 @@
 <p>Building PDFBox from source is only necessary if you're wanting to contribute code to the PDFBox project. Most users should use the <a href="http://pdfbox.apache.org/download.cgi">binary releases</a> instead.</p>
 <h2 id="obtaining-the-source" tabindex="-1">Obtaining the Source</h2>
 <p>You can obtain the latest source of PDFBox from our <a href="http://svn.apache.org/repos/asf/pdfbox/">SVN repo</a>. The current trunk is 3.0.0-SNAPSHOT. There is a separate branch for the 1.8.x and the 2.0.x series. You can fetch the latest trunk version using Subversion:</p>
-<pre><code>svn checkout http://svn.apache.org/repos/asf/pdfbox/trunk/
-cd trunk
-</code></pre>
+<p>svn checkout http://svn.apache.org/repos/asf/pdfbox/trunk/
+cd trunk</p>
 <p>You can also browse the Subversion repository using <a href="https://svn.apache.org/viewvc/pdfbox/">ViewVC</a>.</p>
 <p>We also have a read-only <a href="https://git.apache.org/">Git mirror</a> which is further mirrored to GitHub as <a href="https://github.com/apache/pdfbox">apache/pdfbox</a>.</p>
 <p>The sources for the <strong>Java ImageIO plugin for the JBIG2 image format</strong> are available in the  <a href="https://gitbox.apache.org/repos/asf/pdfbox-jbig2.git">Apache Git Repository</a> or can be loaded from <a href="https://github.com/apache/pdfbox-jbig2">GitHub</a>:</p>
-<pre><code>git clone https://gitbox.apache.org/repos/asf/pdfbox-jbig2.git
-cd pdfbox-jbig2
-</code></pre>
+<p>git clone https://gitbox.apache.org/repos/asf/pdfbox-jbig2.git
+cd pdfbox-jbig2</p>
 <h2 id="build-dependencies" tabindex="-1">Build dependencies</h2>
 <h3 id="pdfbox-1.8" tabindex="-1">PDFBox 1.8</h3>
 <ul>
@@ -200,12 +198,10 @@ cd pdfbox-jbig2
 </ul>
 <h3 id="java-cryptography-extension-(jce)" tabindex="-1">Java Cryptography Extension (JCE)</h3>
 <p>Building PDFBox 2.0 requires a JDK with &quot;unlimited strength&quot; cryptography, which requires extra files to be installed. For JDK 7, see <a href="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html">Java Cryptography Extension (JCE)</a>. If these files are not installed, building PDFBox will fail the following test:</p>
-<pre><code>TestPublicKeyEncryption.setUp:70 JCE unlimited strength jurisdiction policy files are not installed
-</code></pre>
+<p>TestPublicKeyEncryption.setUp:70 JCE unlimited strength jurisdiction policy files are not installed</p>
 <h2 id="building-with-maven" tabindex="-1">Building with Maven</h2>
 <p>In the root directory of PDFBox:</p>
-<pre><code>mvn clean install
-</code></pre>
+<p>mvn clean install</p>
 <hr>
 <h2 id="building-with-ant-(deprecated%2C-removed-in-2.0.0)" tabindex="-1">Building with Ant (Deprecated, removed in 2.0.0)</h2>
 <p>The old Ant build is still available, and can be used especially for

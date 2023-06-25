@@ -251,8 +251,7 @@ those tools on your host then. The binaries are added to the local project sourc
 build errors due to incompatible versions of <code>node.js</code> tooling installed on your machine.</p>
 <h3 id="preparing-maven" tabindex="-1">Preparing Maven</h3>
 <p>Make sure that you have Maven installed.</p>
-<pre><code>$ mvn --version
-</code></pre>
+<p>$ mvn --version</p>
 <p>If this command fails with an error, you do not have Maven installed.</p>
 <p>Please install Maven using your favorite package manager (like <a href="https://brew.sh/">Homebrew</a>) or from
 official <a href="https://maven.apache.org/install.html">Maven binaries</a></p>
@@ -264,16 +263,14 @@ official <a href="https://maven.apache.org/install.html">Maven binaries</a></p>
 <li>Build the website content using Eleventy</li>
 </ul>
 <p>You can do all of this with one single command:</p>
-<pre><code>$ mvn package
-</code></pre>
+<p>$ mvn package</p>
 <p>The whole process takes up to five minutes (time to grab some coffee!)</p>
 <p>When the build is finished you should see the generated website in the <code>public</code> directory.</p>
 <h3 id="clean-build" tabindex="-1">Clean build</h3>
 <p>When rebuilding the website the process uses some cached content.
 If you want to start from scratch for some reason you can simply add the <code>clean</code> operation to the build which removes
 all generated sources in the project first.</p>
-<pre><code>$ mvn clean package
-</code></pre>
+<p>$ mvn clean package</p>
 
             </div>
         </div>

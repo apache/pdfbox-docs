@@ -184,12 +184,11 @@ See example: AddMetadataFromDocInfo<br>
 See Adobe Documentation: XMP Specification</p>
 <p>PDF documents can have XML metadata associated with certain objects within a PDF document.
 For example, the following PD Model objects have the ability to contain metadata:</p>
-<pre><code>PDDocumentCatalog
+<p>PDDocumentCatalog
 PDPage
 PDXObject
 PDICCBased
-PDStream
-</code></pre>
+PDStream</p>
 <p>The metadata that is stored in PDF objects conforms to the XMP specification, it is
 recommended that you review that specification. Currently there is no high level API for
 managing the XML metadata, PDFBox uses standard java InputStream/OutputStream to retrieve
