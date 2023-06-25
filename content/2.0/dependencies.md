@@ -111,6 +111,7 @@ Encrypting and sigining PDFs requires the *bcprov*, *bcmail* and *bcpkix* librar
     <version>1.75</version>
 </dependency>
 ```
+<p class="alert alert-info">It is always a good idea to check for a newer version of Bouncy Castle. If you are using a more recent java version you might adapt the <b>artifactId</b> as well.</p>
 
 ### Java Cryptography Extension (JCE)
 
