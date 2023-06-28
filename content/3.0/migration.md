@@ -64,7 +64,7 @@ as they are treated to be of **internal use only**.
 
 ### New maven module for IO-classes
 
-All basic classes used for io-operations where moved to a separate module for a shared usage.
+All basic classes used for io-operations were moved to a separate module for a shared usage.
 
 ~~~
     <dependency>
