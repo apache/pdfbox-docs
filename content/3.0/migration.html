@@ -144,28 +144,41 @@ as they are treated to be of <strong>internal use only</strong>.</p>
 <li>provide an interface to implement an individual cache holding streams when creating/writing a pdf</li>
 </ul>
 <h4 id="reader-implementations" tabindex="-1">Reader implementations</h4>
-<p>PDFBox offers the following implementations of the interface &quot;org.apache.pdfbox.io.RandomAccessRead&quot; to be used as source to read a pdf:</p>
+<p>PDFBox offers the following implementations of the interface <code>org.apache.pdfbox.io.RandomAccessRead</code> to be used as source to read a pdf:</p>
 <ul>
 <li><em><strong>org.apache.pdfbox.io.RandomAccessReadBuffer</strong></em></li>
 </ul>
-<p>RandomAccessReadBuffer stores all the data in memory. It is backed by the given byte array or ByteBuffer. Using the constructor with an InputStream copies the data to the buffer. Internally the data is stored in a chunk of ByteBuffers with a default chunk size of 4KB.</p>
+<p><code>RandomAccessReadBuffe</code>r stores all the data in memory. It is backed by the given byte array or ByteBuffer. Using the constructor with an InputStream copies the data to the buffer. Internally the data is stored in a chunk of ByteBuffers with a default chunk size of 4KB.</p>
 <ul>
 <li><em><strong>org.apache.pdfbox.io.RandomAccessReadBufferedFile</strong></em></li>
 </ul>
-<p>RandomAccessReadBufferedFile is backed by the given file. It has an in-memory cache using pages with a size of 4KB. The cache follows the FIFO principle. If the the maximum of 1000 pages is reached the first added page is replaced with new data.</p>
+<p><code>RandomAccessReadBufferedFile</code> is backed by the given file. It has an in-memory cache using pages with a size of 4KB. The cache follows the FIFO principle. If the the maximum of 1000 pages is reached the first added page is replaced with new data.</p>
 <ul>
 <li><em><strong>org.apache.pdfbox.io.RandomAccessReadMemoryMappedFile</strong></em></li>
 </ul>
-<p>RandomAccessReadMemoryMappedFile uses the memory mapping feature of java. The whole file is mapped to memory and the maximum allowed file size is <em><strong>Integer.MAX_VALUE</strong></em>.</p>
+<p><code>RandomAccessReadMemoryMappedFile</code> uses the memory mapping feature of java. The whole file is mapped to memory and the maximum allowed file size is <em><strong>Integer.MAX_VALUE</strong></em>.</p>
 <p class="alert alert-warning">There is a <a href="https://bugs.openjdk.java.net/browse/JDK-4715154">known issue</a> with locked files after closing the memory mapped file on windows. PDFBox implements its own unmapper as a workaround.</p>
-<ul>
-<li><em><strong>Implementing your own reader</strong></em></li>
-</ul>
+<p><em><strong>Implementing your own reader</strong></em></p>
 <p>If there is any need to implement a different reader one has to implement the interface <code>org.apache.pdfbox.io.RandomAccessRead</code>. It shall be done thread safe to avoid issues in multithreaded environments.</p>
+<h4 id="writer-implementations" tabindex="-1">Writer implementations</h4>
+<p>PDFBox offers the following implementation of the interface <code>org.apache.pdfbox.io.RandomAccess</code> to be used to write and read data.</p>
+<ul>
+<li><em><strong>org.apache.pdfbox.io.RandomAccessReadWriteBuffer</strong></em></li>
+</ul>
+<p><code>RandomAccessReadWriteBuffer</code> extends the class <code>RandomAccessReadBuffer</code> and stores the all the data in memory as well. The implementation adds the ability to write data to the buffer which is automatically expanded by a new chunk.</p>
 <h4 id="stream-cache" tabindex="-1">Stream cache</h4>
-<p>PDFBox 3.0.x no longer uses a separate cache when reading a pdf, but still does for write operations.</p>
-<p><em><strong>Default stream cache</strong></em></p>
-<p>3.0.x introduces the interface <code>RandomAccessStreamCache</code> to define a cache in a more flexible way. The well known class <code>ScratchFile</code> is the default implementation. The MemoryUsageSetting parameter within the loadPDF methods was replaced by a parameter using the new functional interface <code>StreamCacheCreateFunction</code> to encapsulate the caching details within the IO package. <code>IOUtils</code> provides two variants of a possible cache (memory only and temporary file only) for convenience. The loader uses a memory only cache as default if the caller doesn't provide any cache.</p>
+<p>PDFBox 3.0.x no longer uses a separate cache when reading a pdf, but still does for write operations. It introduces the interface <code>org.apache.pdfbox.io.RandomAccessStreamCache</code> to define a cache factory in a more flexible way.</p>
+<p><em><strong>Provided implementations</strong></em></p>
+<ul>
+<li><em><strong>org.apache.pdfbox.io.RandomAccessStreamCache</strong></em></li>
+</ul>
+<p><code>RandomAccessStreamCacheImpl</code> is a simple default implementaion using <code>RandomAccessReadWriteBuffer</code> as buffer.</p>
+<ul>
+<li><em><strong>org.apache.pdfbox.io.ScratchFile</strong></em></li>
+</ul>
+<p>The well known class <code>ScratchFile</code> is another implementation for a cache factory. It can be configured to use memory only, temp file only or a fix of both.</p>
+<p><em><strong>org.apache.pdfbox.io.MemoryUsageSetting</strong></em></p>
+<p>The MemoryUsageSetting parameter within the loadPDF methods was replaced by a parameter using the new functional interface <code>StreamCacheCreateFunction</code> to encapsulate the caching details within the IO package. <code>IOUtils</code> provides two variants of a possible cache for convenience. The memory only one uses <code>RandomAccessStreamCache</code> and the temporary file only uses <code>ScratchFile</code> as cache buffer factory. The newly introduced loader uses a memory only cache as default if the caller doesn't provide any cache.</p>
 <p><em><strong>Implementing your own stream cache</strong></em></p>
 <p>If there is any need to implement a different cache one has to implement the interface <code>org.apache.pdfbox.io.RandomAccessStreamCache</code>. It shall be done thread safe to avoid issues in multithreaded environments.</p>
 <h3 id="use-loader-to-get-a-pdf-document" tabindex="-1">Use <strong>Loader</strong> to get a PDF document</h3>
@@ -197,7 +210,7 @@ as they are treated to be of <strong>internal use only</strong>.</p>
 <h4 id="incremental-parsing" tabindex="-1">Incremental Parsing</h4>
 <p>PDFBox now loads a PDF Document incrementally reducing the initial memory footprint. This will also reduce the memory needed to
 consume a PDF if only certain parts of the PDF are accessed. Note that, due to the nature of PDF, uses such as iterating over all pages,
-accessing annotations, signing a PDF etc. might still load all parts of the PDF overtime leading to a similar memory consumption as with PDFBox 2.0.</p>
+accessing annotations, signing a PDF etc. might still load all parts of the PDF overtime which might consume a significant amount of memory.</p>
 <h4 id="improved-io-operations" tabindex="-1">Improved IO operations</h4>
 <p>The introduction of the new io classes has a positive impact on the memory usage. Especially the re-usage of the source for reading parts of it instead of using intermediate streams reduces the memory footprint significantly.</p>
 <h4 id="further-optimizations" tabindex="-1">Further optimizations</h4>
@@ -226,6 +239,20 @@ of Adobe Reader. If you'd like to bypass this use <code>PDDocumentCatalog.getAcr
 <li>all commands now return an exit code</li>
 <li>all commands now support passing <code>-h</code> or <code>--help</code> to display usage information</li>
 <li>all commands now support passing <code>-V</code> or <code>--version</code> to display the version information</li>
+</ul>
+<h2 id="changes-in-pdfdebugger" tabindex="-1">Changes in PDFDebugger</h2>
+<p>The following features were added to the PDFDebugger:</p>
+<ul>
+<li>text extraction of the selected page</li>
+<li>detailed information about the glyph metrics used by text extraction
+<ul>
+<li>text stripper text position</li>
+<li>text stripper beads</li>
+<li>approximate text bounds</li>
+<li>glyph bounds</li>
+</ul>
+</li>
+<li>new tree view showing the cross reference table information for all indirect objects</li>
 </ul>
 
     </section>
@@ -278,6 +305,9 @@ of Adobe Reader. If you'd like to bypass this use <code>PDDocumentCatalog.getAcr
             		</li>
 
                     <li><a href="#changes-in-pdfbox-app">Changes in PDFBox App</a>
+            		</li>
+
+                    <li><a href="#changes-in-pdfdebugger">Changes in PDFDebugger</a>
             		</li>
                 </ol>
             </nav>
