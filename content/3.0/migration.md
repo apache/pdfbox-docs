@@ -83,33 +83,51 @@ The whole code was overhauled including the following changes:
 
 #### Reader implementations
 
-PDFBox offers the following implementations of the interface "org.apache.pdfbox.io.RandomAccessRead" to be used as source to read a pdf:
+PDFBox offers the following implementations of the interface `org.apache.pdfbox.io.RandomAccessRead` to be used as source to read a pdf:
 
 - ***org.apache.pdfbox.io.RandomAccessReadBuffer***
 
-RandomAccessReadBuffer stores all the data in memory. It is backed by the given byte array or ByteBuffer. Using the constructor with an InputStream copies the data to the buffer. Internally the data is stored in a chunk of ByteBuffers with a default chunk size of 4KB.
+`RandomAccessReadBuffe`r stores all the data in memory. It is backed by the given byte array or ByteBuffer. Using the constructor with an InputStream copies the data to the buffer. Internally the data is stored in a chunk of ByteBuffers with a default chunk size of 4KB.
 
 - ***org.apache.pdfbox.io.RandomAccessReadBufferedFile***
 
-RandomAccessReadBufferedFile is backed by the given file. It has an in-memory cache using pages with a size of 4KB. The cache follows the FIFO principle. If the the maximum of 1000 pages is reached the first added page is replaced with new data.
+`RandomAccessReadBufferedFile` is backed by the given file. It has an in-memory cache using pages with a size of 4KB. The cache follows the FIFO principle. If the the maximum of 1000 pages is reached the first added page is replaced with new data.
 
 - ***org.apache.pdfbox.io.RandomAccessReadMemoryMappedFile***
 
-RandomAccessReadMemoryMappedFile uses the memory mapping feature of java. The whole file is mapped to memory and the maximum allowed file size is ***Integer.MAX_VALUE***.
+`RandomAccessReadMemoryMappedFile` uses the memory mapping feature of java. The whole file is mapped to memory and the maximum allowed file size is ***Integer.MAX_VALUE***.
 
 <p class="alert alert-warning">There is a <a href="https://bugs.openjdk.java.net/browse/JDK-4715154">known issue</a> with locked files after closing the memory mapped file on windows. PDFBox implements its own unmapper as a workaround.</p>
 
-- ***Implementing your own reader***
+***Implementing your own reader***
 
 If there is any need to implement a different reader one has to implement the interface `org.apache.pdfbox.io.RandomAccessRead`. It shall be done thread safe to avoid issues in multithreaded environments.
 
+#### Writer implementations
+
+PDFBox offers the following implementation of the interface `org.apache.pdfbox.io.RandomAccess` to be used to write and read data. 
+
+- ***org.apache.pdfbox.io.RandomAccessReadWriteBuffer***
+
+`RandomAccessReadWriteBuffer` extends the class `RandomAccessReadBuffer` and stores the all the data in memory as well. The implementation adds the ability to write data to the buffer which is automatically expanded by a new chunk.
+
 #### Stream cache
 
-PDFBox 3.0.x no longer uses a separate cache when reading a pdf, but still does for write operations. 
+PDFBox 3.0.x no longer uses a separate cache when reading a pdf, but still does for write operations. It introduces the interface `org.apache.pdfbox.io.RandomAccessStreamCache` to define a cache factory in a more flexible way. 
 
-***Default stream cache***
+***Provided implementations***
 
-3.0.x introduces the interface `RandomAccessStreamCache` to define a cache in a more flexible way. The well known class `ScratchFile` is the default implementation. The MemoryUsageSetting parameter within the loadPDF methods was replaced by a parameter using the new functional interface `StreamCacheCreateFunction` to encapsulate the caching details within the IO package. `IOUtils` provides two variants of a possible cache (memory only and temporary file only) for convenience. The loader uses a memory only cache as default if the caller doesn't provide any cache. 
+- ***org.apache.pdfbox.io.RandomAccessStreamCache***
+
+`RandomAccessStreamCacheImpl` is a simple default implementaion using `RandomAccessReadWriteBuffer` as buffer.
+
+- ***org.apache.pdfbox.io.ScratchFile***
+
+The well known class `ScratchFile` is another implementation for a cache factory. It can be configured to use memory only, temp file only or a fix of both.
+
+***org.apache.pdfbox.io.MemoryUsageSetting***
+
+The MemoryUsageSetting parameter within the loadPDF methods was replaced by a parameter using the new functional interface `StreamCacheCreateFunction` to encapsulate the caching details within the IO package. `IOUtils` provides two variants of a possible cache for convenience. The memory only one uses `RandomAccessStreamCache` and the temporary file only uses `ScratchFile` as cache buffer factory. The newly introduced loader uses a memory only cache as default if the caller doesn't provide any cache. 
 
 ***Implementing your own stream cache***
 
@@ -154,7 +172,7 @@ The input file must not be used as output for saving operations. It will corrupt
 #### Incremental Parsing
 PDFBox now loads a PDF Document incrementally reducing the initial memory footprint. This will also reduce the memory needed to
 consume a PDF if only certain parts of the PDF are accessed. Note that, due to the nature of PDF, uses such as iterating over all pages,
-accessing annotations, signing a PDF etc. might still load all parts of the PDF overtime leading to a similar memory consumption as with PDFBox 2.0.
+accessing annotations, signing a PDF etc. might still load all parts of the PDF overtime which might consume a significant amount of memory.
 
 #### Improved IO operations
 The introduction of the new io classes has a positive impact on the memory usage. Especially the re-usage of the source for reading parts of it instead of using intermediate streams reduces the memory footprint significantly.
@@ -193,3 +211,18 @@ The command line interface for the PDFBox App has been rewritten. As a result
 - all commands now return an exit code
 - all commands now support passing `-h` or `--help` to display usage information
 - all commands now support passing `-V` or `--version` to display the version information
+
+## Changes in PDFDebugger
+
+The following features were added to the PDFDebugger:
+
+- text extraction of the selected page
+- detailed information about the glyph metrics used by text extraction
+  - text stripper text position
+  - text stripper beads
+  - approximate text bounds
+  - glyph bounds
+- new tree view showing the cross reference table information for all indirect objects
+
+
+
