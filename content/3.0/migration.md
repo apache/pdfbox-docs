@@ -40,17 +40,18 @@ Apache Xmpbox no longer depends on `javax.xml.bind.jaxb-api`. All test classes w
 
 All libraries on which PDFBox depends are updated to their latest stable versions:
 
-- Bouncy Castle 1.70
+- Bouncy Castle 1.75
 - Apache Commons Logging 1.2
-- picocli 4.6.3
+- picocli 4.7.4
 
 For test support the libraries are updated to
 
-- JUnit 5.8.2
+- JUnit 5.10.0
 - JAI Image Core 1.4.0
 - JAI JPEG2000 1.4.0
 - Apache JBIG ImageIO Plugin 3.0.4
-- Apache Commons IO 2.11
+- Apache Commons IO 2.13
+- Apache Log4j 2.20.0
 
 ## General Changes for PDFBox 3.0
 
