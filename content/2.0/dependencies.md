@@ -78,12 +78,37 @@ These libraries are optional and will be loaded if present on the classpath, oth
 
 Maven dependencies for these components can be found in [parent/pom.xml](https://svn.apache.org/viewvc/pdfbox/trunk/parent/pom.xml?view=markup). **Change the scope of the components if needed**. Please make sure that any third party licenses are suitable for your project.
 
-To include the JBIG2 library  the following part can be included in your project pom.xml:
+To include the JBIG2 library the following part can be included in your project pom.xml:
 
 ```xml
 <dependency>
     <groupId>org.apache.pdfbox</groupId>
     <artifactId>jbig2-imageio</artifactId>
+    <version>...</version>
+</dependency>
+```
+
+To include the JAI capabilities the following part can be included in your project pom.xml:
+
+```xml
+<dependency>
+    <groupId>com.github.jai-imageio</groupId>
+    <artifactId>jai-imageio-core</artifactId>
+    <version>...</version>
+</dependency>
+<dependency>
+    <groupId>com.github.jai-imageio</groupId>
+    <artifactId>jai-imageio-jpeg2000</artifactId>
+    <version>...</version>
+</dependency>
+```
+
+For more reliable JPEG decoding the following part from the [TwelveMonkeys library](https://github.com/haraldk/TwelveMonkeys) can be included in your project pom.xml:
+
+```xml
+<dependency>
+    <groupId>com.twelvemonkeys.imageio</groupId>
+    <artifactId>imageio-jpeg</artifactId>
     <version>...</version>
 </dependency>
 ```
