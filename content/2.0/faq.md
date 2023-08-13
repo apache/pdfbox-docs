@@ -197,12 +197,6 @@ The memory footprint depends on the PDF itself and on the resolution you use for
 - decrease the scale when calling `PDFRenderer.renderImage()`, or the dpi value when calling `PDFRenderer.renderImageWithDPI()`
 - disable the cache for `PDImageXObject` objects by calling `PDDocument.setResourceCache()` with a cache object that is derived from `DefaultResourceCache` and whose call `public void put(COSObject indirect, PDXObject xobject)` does nothing. Be aware that this will slow down rendering for PDF files that have an identical image in several pages (e.g. a company logo or a background). More about this can be read in [PDFBOX-3700](https://issues.apache.org/jira/browse/PDFBOX-3700).
 
-<a name="dropshadow"></a>
-
-### A drop shadow is missing or at the wrong position when rendering a page
-
-Please attach your file in the [PDFBOX-3000](https://issues.apache.org/jira/browse/PDFBOX-3000) issue.
-
 <a name="textantialias"></a>
 
 ### Why are some texts in poor quality and not antialiased?
