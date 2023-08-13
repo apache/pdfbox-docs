@@ -206,3 +206,9 @@ rendered directly, but as a shaped clipping from a background. Java graphics doe
 <https://bugs.openjdk.java.net/browse/JDK-4212743>, and because of that, the edges are not looking smooth.
 Soft clipping could be achieved with [some extra steps](https://web.archive.org/web/20200814083145/https://community.oracle.com/blogs/campbell/2006/07/19/java-2d-trickery-soft-clipping),
 but these would cost additional time and memory space. You can have a higher quality by rendering at a higher dpi and then downscale the image.
+
+<a name="badraster"></a>
+
+### What to do with the IllegalArgumentException "Numbers of source Raster bands and source color space components do not match"?
+
+Sadly, this is a known bug in Java Imaging. Use the twelvemonkeys library as described in the [dependencies](dependencies.html) page.
