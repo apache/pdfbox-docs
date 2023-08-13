@@ -7,7 +7,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          "License"); you may not use this file except in compliance
          with the License.  You may obtain a copy of the License at
 
-           http://www.apache.org/licenses/LICENSE-2.0
+           http://www.apache.org/licenses-2.0
 
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
@@ -207,8 +207,8 @@ Please attach your file in the [PDFBOX-3000](https://issues.apache.org/jira/brow
 
 ### Why are some texts in poor quality and not antialiased?
 
-This is because in some PDFs (e.g. the one in PDFBOX-2814 <https://issues.apache.org/jira/browse/PDFBOX-2814>), text is not
+This is because in some PDFs (e.g. the one in [PDFBOX-2814](https://issues.apache.org/jira/browse/PDFBOX-2814), text is not
 rendered directly, but as a shaped clipping from a background. Java graphics does not support "soft clipping"
 <https://bugs.openjdk.java.net/browse/JDK-4212743>, and because of that, the edges are not looking smooth.
-Soft clipping could be achieved with some extra steps <https://community.oracle.com/blogs/campbell/2006/07/19/java-2d-trickery-soft-clipping>,
+Soft clipping could be achieved with [some extra steps](https://web.archive.org/web/20200814083145/https://community.oracle.com/blogs/campbell/2006/07/19/java-2d-trickery-soft-clipping),
 but these would cost additional time and memory space. You can have a higher quality by rendering at a higher dpi and then downscale the image.
