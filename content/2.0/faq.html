@@ -235,16 +235,16 @@ the word &quot;Hello&quot; is drawn.</li>
 <li>decrease the scale when calling <code>PDFRenderer.renderImage()</code>, or the dpi value when calling <code>PDFRenderer.renderImageWithDPI()</code></li>
 <li>disable the cache for <code>PDImageXObject</code> objects by calling <code>PDDocument.setResourceCache()</code> with a cache object that is derived from <code>DefaultResourceCache</code> and whose call <code>public void put(COSObject indirect, PDXObject xobject)</code> does nothing. Be aware that this will slow down rendering for PDF files that have an identical image in several pages (e.g. a company logo or a background). More about this can be read in <a href="https://issues.apache.org/jira/browse/PDFBOX-3700">PDFBOX-3700</a>.</li>
 </ul>
-<p><a name="dropshadow"></a></p>
-<h3 id="a-drop-shadow-is-missing-or-at-the-wrong-position-when-rendering-a-page" tabindex="-1">A drop shadow is missing or at the wrong position when rendering a page</h3>
-<p>Please attach your file in the <a href="https://issues.apache.org/jira/browse/PDFBOX-3000">PDFBOX-3000</a> issue.</p>
 <p><a name="textantialias"></a></p>
 <h3 id="why-are-some-texts-in-poor-quality-and-not-antialiased%3F" tabindex="-1">Why are some texts in poor quality and not antialiased?</h3>
-<p>This is because in some PDFs (e.g. the one in PDFBOX-2814 <a href="https://issues.apache.org/jira/browse/PDFBOX-2814">https://issues.apache.org/jira/browse/PDFBOX-2814</a>), text is not
+<p>This is because in some PDFs (e.g. the one in <a href="https://issues.apache.org/jira/browse/PDFBOX-2814">PDFBOX-2814</a>, text is not
 rendered directly, but as a shaped clipping from a background. Java graphics does not support &quot;soft clipping&quot;
 <a href="https://bugs.openjdk.java.net/browse/JDK-4212743">https://bugs.openjdk.java.net/browse/JDK-4212743</a>, and because of that, the edges are not looking smooth.
-Soft clipping could be achieved with some extra steps <a href="https://community.oracle.com/blogs/campbell/2006/07/19/java-2d-trickery-soft-clipping">https://community.oracle.com/blogs/campbell/2006/07/19/java-2d-trickery-soft-clipping</a>,
+Soft clipping could be achieved with <a href="https://web.archive.org/web/20200814083145/https://community.oracle.com/blogs/campbell/2006/07/19/java-2d-trickery-soft-clipping">some extra steps</a>,
 but these would cost additional time and memory space. You can have a higher quality by rendering at a higher dpi and then downscale the image.</p>
+<p><a name="badraster"></a></p>
+<h3 id="what-to-do-with-the-illegalargumentexception-%22numbers-of-source-raster-bands-and-source-color-space-components-do-not-match%22%3F" tabindex="-1">What to do with the IllegalArgumentException &quot;Numbers of source Raster bands and source color space components do not match&quot;?</h3>
+<p>Sadly, this is a known bug in Java Imaging. Use the twelvemonkeys library as described in the <a href="dependencies.html">dependencies</a> page.</p>
 
     </section>
     <aside>
@@ -323,10 +323,10 @@ but these would cost additional time and memory space. You can have a higher qua
                     <li><a href="#i'm-getting-an-outofmemoryerror.-what-can-i-do%3F">I'm getting an OutOfMemoryError. What can I do?</a>
             		</li>
 
-                    <li><a href="#a-drop-shadow-is-missing-or-at-the-wrong-position-when-rendering-a-page">A drop shadow is missing or at the wrong position when rendering a page</a>
+                    <li><a href="#why-are-some-texts-in-poor-quality-and-not-antialiased%3F">Why are some texts in poor quality and not antialiased?</a>
             		</li>
 
-                    <li><a href="#why-are-some-texts-in-poor-quality-and-not-antialiased%3F">Why are some texts in poor quality and not antialiased?</a>
+                    <li><a href="#what-to-do-with-the-illegalargumentexception-%22numbers-of-source-raster-bands-and-source-color-space-components-do-not-match%22%3F">What to do with the IllegalArgumentException "Numbers of source Raster bands and source color space components do not match"?</a>
             		</li>
                 </ol>
             		</li>
