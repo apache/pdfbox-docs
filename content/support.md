@@ -41,7 +41,6 @@ If you are sure you have found a bug then please report the problem in our
 
 **Before you submit a bug there are several things you can try first**
 
- - For **PDFBOX 1.8.x** try using the non-sequential parser (``PDDocument.loadNonSeq`` instead of ``PDDocument.load``, and "-nonSeq" with the command-line applications)
  - For issues with text extraction try if Adobe Reader can extract the text
  - Try the latest SNAPSHOT to see if it's fixed in the pre-release
  - Search the mailing list to see if has been discussed before
