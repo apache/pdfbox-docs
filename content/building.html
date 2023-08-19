@@ -122,30 +122,6 @@
                             <li><a href="https://javadoc.io/doc/org.apache.pdfbox/pdfbox/2.0.29/index.html">API Docs&emsp;<small>via javadoc.io</small></a></li>
                         </ul>
                     </li>
-                    <li class="sidebar-node" id="v1-8">
-                        <a href="#">1.8</a>
-                        <ul>
-                            <li><a href="/1.8/architecture.html">Architecture</a></li>
-                            <li><a href="/1.8/dependencies.html">Dependencies</a></li>
-                            <li class="sidebar-node" id="v1-8-cookbook">
-                                <a href="#">Cookbook</a>
-                                <ul>
-                                    <li><a href="/1.8/cookbook/documentcreation.html">Document Creation</a></li>
-                                    <li><a href="/1.8/cookbook/textextraction.html">Text Extraction</a></li>
-                                    <li><a href="/1.8/cookbook/encryption.html">Document Encryption</a></li>
-                                    <li><a href="/1.8/cookbook/workingwithfonts.html">Working with Fonts</a></li>
-                                    <li><a href="/1.8/cookbook/workingwithmetadata.html">Working with Metadata</a></li>
-                                    <li><a href="/1.8/cookbook/workingwithattachments.html">Working with Attachments</a></li>
-                                    <li><a href="/1.8/cookbook/pdfavalidation.html">PDF/A Validation</a></li>
-                                    <li><a href="/1.8/cookbook/pdfacreation.html">Creating a PDF/A Document</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="/1.8/commandline.html">Command-Line Tools</a></li>
-                            <li><a href="https://javadoc.io/doc/org.apache.pdfbox/pdfbox/1.8.17/index.html">API Docs&emsp;<small>via javadoc.io</small></a></li>
-                            <li><a href="/1.8/faq.html">FAQ</a></li>
-                        </ul>
-                    </li>
-
                     <li class="sidebar-header">Development</li>
                     <li><a href="/building.html">Building from Source</a></li>
                     <li><a href="/codingconventions.html">Coding Conventions</a></li>
@@ -171,7 +147,7 @@
                 <h1 id="building-from-source" tabindex="-1">Building from Source</h1>
 <p>Building PDFBox from source is only necessary if you're wanting to contribute code to the PDFBox project. Most users should use the <a href="http://pdfbox.apache.org/download.cgi">binary releases</a> instead.</p>
 <h2 id="obtaining-the-source" tabindex="-1">Obtaining the Source</h2>
-<p>You can obtain the latest source of PDFBox from our <a href="http://svn.apache.org/repos/asf/pdfbox/">SVN repo</a>. The current trunk is 3.0.0-SNAPSHOT. There is a separate branch for the 1.8.x and the 2.0.x series. You can fetch the latest trunk version using Subversion:</p>
+<p>You can obtain the latest source of PDFBox from our <a href="http://svn.apache.org/repos/asf/pdfbox/">SVN repo</a>. The current trunk is 4.0.0-SNAPSHOT. There is a separate branch for the 3.0.x and the 2.0.x series. You can fetch the latest trunk version using Subversion:</p>
 <p>svn checkout http://svn.apache.org/repos/asf/pdfbox/trunk/
 cd trunk</p>
 <p>You can also browse the Subversion repository using <a href="https://svn.apache.org/viewvc/pdfbox/">ViewVC</a>.</p>
@@ -180,18 +156,23 @@ cd trunk</p>
 <p>git clone https://gitbox.apache.org/repos/asf/pdfbox-jbig2.git
 cd pdfbox-jbig2</p>
 <h2 id="build-dependencies" tabindex="-1">Build dependencies</h2>
-<h3 id="pdfbox-1.8" tabindex="-1">PDFBox 1.8</h3>
+<h3 id="pdfbox-4.0.0-snapshot" tabindex="-1">PDFBox 4.0.0-SNAPSHOT</h3>
 <ul>
-<li>JDK 8 (build only)</li>
+<li>JDK 11</li>
 <li><a href="http://maven.apache.org/">Maven 3</a></li>
 </ul>
-<h3 id="pdfbox-2.0" tabindex="-1">PDFBox 2.0</h3>
+<h3 id="pdfbox-3.0.x" tabindex="-1">PDFBox 3.0.x</h3>
+<ul>
+<li>JDK 8</li>
+<li><a href="http://maven.apache.org/">Maven 3</a></li>
+</ul>
+<h3 id="pdfbox-2.0.x" tabindex="-1">PDFBox 2.0.x</h3>
 <ul>
 <li>JDK 7</li>
 <li><a href="#java-cryptography-extension-jce">Java Cryptography Extension (JCE)</a></li>
 <li><a href="http://maven.apache.org/">Maven 3</a></li>
 </ul>
-<h3 id="java-imageio-plugin-for-jbig2" tabindex="-1">Java ImageIO plugin for JBIG2</h3>
+<h3 id="java-imageio-plugin-for-jbig2-3.0.x" tabindex="-1">Java ImageIO plugin for JBIG2 3.0.x</h3>
 <ul>
 <li>JDK 6</li>
 <li><a href="http://maven.apache.org/">Maven 3</a></li>
@@ -202,37 +183,6 @@ cd pdfbox-jbig2</p>
 <h2 id="building-with-maven" tabindex="-1">Building with Maven</h2>
 <p>In the root directory of PDFBox:</p>
 <p>mvn clean install</p>
-<hr>
-<h2 id="building-with-ant-(deprecated%2C-removed-in-2.0.0)" tabindex="-1">Building with Ant (Deprecated, removed in 2.0.0)</h2>
-<p>The old Ant build is still available, and can be used especially for
-building .NET binaries with IKVM:</p>
-<ol>
-<li>
-<p>Install <a href="http://ant.apache.org/">ANT</a>. PDFBox currently uses 1.6.2
-but other versions probably work as well.</p>
-</li>
-<li>
-<p>(optional) Setup IKVM, if you want to build the .NET DLL version of
-PDFBox.</p>
-<ol>
-<li><a href="http://www.ikvm.net/">IKVM</a> binaries</li>
-<li>In the build.properties, set the ikvm.dir property:<br>
-<code>ikvm.dir=C:\\javalib\\ikvm-12-07-2004\\ikvm</code></li>
-</ol>
-</li>
-<li>
-<p>Run &quot;<code>ant</code>&quot; from the root PDFBox directory. This will create the
-.zip package distribution. See the build file for other ant targets.</p>
-</li>
-</ol>
-<p>NOTE: If you want to run PDFBox from an IDE them you will need to add
-the 'Resources' directory to the project classpath in your IDE.</p>
-<h3 id="dependencies-for-ant-builds" tabindex="-1">Dependencies for Ant Builds</h3>
-<p>The above instructions expect that you're using <a href="http://maven.apache.org/">Maven</a> or another build tool like <a href="http://ant.apache.org/ivy/">Ivy</a> that supports Maven dependencies.
-If you instead use tools like <a href="http://ant.apache.org/">Ant</a> where you need to explicitly include all the required library jars in your application, you'll need to do
-something different.</p>
-<p>The easiest approach is to run <code>mvn dependency:copy-dependencies</code> inside the pdfbox directory of the latest PDFBox source release. This will copy all the required and optional
-libraries discussed above into the pdfbox/target/dependencies directory. You can then simply copy all the libraries you need from this directory to your application.</p>
 
             </div>
         </div>
