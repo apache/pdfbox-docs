@@ -144,7 +144,7 @@ as they are treated to be of <strong>internal use only</strong>.</p>
 <p>All basic classes used for io-operations were moved to a separate module for a shared usage.</p>
 <pre><code>    &lt;dependency&gt;
         &lt;groupId&gt;org.apache.pdfbox&lt;/groupId&gt;
-        &lt;artifactId&gt;io&lt;/artifactId&gt;
+        &lt;artifactId&gt;pdfbox-io&lt;/artifactId&gt;
     &lt;/dependency&gt;
 </code></pre>
 <p>The whole code was overhauled including the following changes:</p>
@@ -233,6 +233,12 @@ accessing annotations, signing a PDF etc. might still load all parts of the PDF 
 <p>A new constructor for <code>PDType1Font</code> was introduced to create a standard 14 font. The new Enum <code>Standard14Fonts.FontName</code> is the one and only parameter and defines the
 name of the standard 14 font for which the instance of <code>PDType1Font</code> is created for. That instance isn't a singleton anymore and has to be recreated if necessary or cached
 by the user if suitable.</p>
+<h3 id="changes-to-color-methods" tabindex="-1">Changes to color methods</h3>
+<p>The <code>int</code> triple overloads of the <code>setStrokingColor</code> and <code>setNonStrokingColor</code> methods of <code>PDAbstractContentStream</code>, with inputs representing RGB colors defined in the 0-255
+range, have been removed. While usages passing in <code>int</code> triples will compile (thanks to implicit casting of the <code>int</code> values to <code>float</code>), an <code>IllegalArgumentException</code> can be
+thrown at runtime as the <code>float</code> overloads of these methods accept only values in the range 0-1.</p>
+<p>To retain RGB colors defines as 0-255 integer triples, construct a <code>java.awt.Color</code> instance and use the relevant overload. Alternatively, convert values to the 0-1
+range and define using <code>float</code> triples instead.</p>
 <h2 id="changes-in-common-functions" tabindex="-1">Changes in Common Functions</h2>
 <h3 id="interactive-forms" tabindex="-1">Interactive Forms</h3>
 <p>When accessing <code>AcroForms</code> using <code>PDDocumentCatalog.getAcroForm()</code> a number of fix ups are applied aligning PDFBox with most of the default behaviour
@@ -304,6 +310,9 @@ of Adobe Reader. If you'd like to bypass this use <code>PDDocumentCatalog.getAcr
             		</li>
 
                     <li><a href="#static-instances-for-standard-14-fonts-removed">Static instances for Standard 14 fonts removed</a>
+            		</li>
+
+                    <li><a href="#changes-to-color-methods">Changes to color methods</a>
             		</li>
                 </ol>
             		</li>
