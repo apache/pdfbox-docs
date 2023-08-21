@@ -70,7 +70,7 @@ All basic classes used for io-operations were moved to a separate module for a s
 ~~~
     <dependency>
         <groupId>org.apache.pdfbox</groupId>
-        <artifactId>io</artifactId>
+        <artifactId>pdfbox-io</artifactId>
     </dependency>
 ~~~
 
