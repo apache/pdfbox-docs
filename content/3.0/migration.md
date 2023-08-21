@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
+         under the License. 
 
 layout:  documentation
 title:   PDFBox 3.0 Migration Guide
@@ -187,6 +187,15 @@ The static instances of `PDType1Font` for the standard 14 fonts were removed as 
 A new constructor for `PDType1Font` was introduced to create a standard 14 font. The new Enum `Standard14Fonts.FontName` is the one and only parameter and defines the
 name of the standard 14 font for which the instance of `PDType1Font` is created for. That instance isn't a singleton anymore and has to be recreated if necessary or cached
 by the user if suitable.
+
+### Changes to color methods
+
+The `int` triple overloads of the `setStrokingColor` and `setNonStrokingColor` methods of `PDAbstractContentStream`, with inputs representing RGB colors defined in the 0-255
+range, have been removed. While usages passing in `int` triples will compile (thanks to implicit casting of the `int` values to `float`), an `IllegalArgumentException` can be
+thrown at runtime as the `float` overloads of these methods accept only values in the range 0-1.
+
+To retain RGB colors defines as 0-255 integer triples, construct a `java.awt.Color` instance and use the relevant overload. Alternatively, convert values to the 0-1
+range and define using `float` triples instead.
 
 ## Changes in Common Functions 
 
