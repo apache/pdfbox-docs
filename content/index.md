@@ -86,7 +86,7 @@ skills. Subscribe to the [Mailing Lists](/mailinglists.html) and find out how yo
 ## News
 
 {% if collections.posts.length > 0 %}
-{% assign items = collections.posts.reverse %}
+{% assign items = collections.posts | reverse %}
 {% for post in items offset:1 limit:5 %}
 <h2>{{ post.data.title }}<br><small>{{ post.data.page.date | date: "%Y-%m-%d"}}</small></h2>
 {{ post.templateContent }}

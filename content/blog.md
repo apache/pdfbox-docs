@@ -22,7 +22,7 @@ title:   Blog
 
 # Blog
 
-{% for post in collections.posts %}
+{% for post in collections.posts reversed %}
 <h2>{{ post.data.title }}<br><small>{{ post.data.page.date | date: "%Y-%m-%d"}}</small></h2>
 {{ post.templateContent }}
 {% endfor %}
