@@ -41,13 +41,15 @@ To use the latest release you'll need to add the following dependency:
 <p class="alert alert-warning">Important notice when using PDFBox with Java 8 before 1.8.0_191 or Java 9 before 9.0.4</p>
 
 Due to the change of the java color management module towards "LittleCMS", users can experience slow performance in color operations.
-A solution is to disable LittleCMS in favor of the old KCMS (Kodak Color Management System) by:
+A solution for the versions above is to disable LittleCMS in favor of the old KCMS (Kodak Color Management System) by:
 
  - Starting with ``-Dsun.java2d.cmm=sun.java2d.cmm.kcms.KcmsServiceProvider`` or
  - Calling ``System.setProperty("sun.java2d.cmm", "sun.java2d.cmm.kcms.KcmsServiceProvider")``
 
 Sources:
 https://bugs.openjdk.java.net/browse/JDK-8041125
+
+While the performance has somewhat improved since then, the first version that truly fixed the bug is Java 18.
 
 ## Rendering Performance ##
 
