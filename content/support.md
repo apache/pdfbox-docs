@@ -37,7 +37,7 @@ And there are additonal resources available on sites such as [Stack Overflow](ht
 you are really certain it's a problem in the PDFBox software. Try using the Mailing Lists first.</p>
 
 If you are sure you have found a bug then please report the problem in our
-[JIRA Issue Tracker](https://issues.apache.org/jira/browse/PDFBOX).
+[JIRA Issue Tracker](https://issues.apache.org/jira/browse/PDFBOX). If you have to [request a JIRA account](https://selfserve.apache.org/jira-account.html), then mention some details about your problem so that we know you're not a spammer.
 
 **Before you submit a bug there are several things you can try first**
 
@@ -50,7 +50,7 @@ If you are sure you have found a bug then please report the problem in our
 
  - Attach the PDF that makes trouble by using "More", "Attach files" in the JIRA issue tracker
  - If your file is too large, upload it to a sharehoster, or use the PDFSplit application to isolate the troublesome page
- - Mention the PDFBox version you are using.
+ - Mention the PDFBox and Java versions you are using.
  - Attach the shortest possible code that reproduces the problem. Insert java code between {code}...{code}. Or try to reproduce the problem with the command-line applications.
  - Mention what you were doing, what was the expected behaviour, and what happened instead
  - Provide a stack trace of an exception if there is one
@@ -61,7 +61,7 @@ If you are sure you have found a bug then please report the problem in our
  - Upload files to a host that requires registration to read the file.
  - Create an issue in the JIRA issue tracker and then go on vacation so you won't repond to our questions / suggestions.
  - Ask "how to" questions in the JIRA issue tracker. Ask such questions on the mailing lists, on stackoverflow.com, and look at the sample and the test code in the sources.
- - Attach PDF files with confidential and/or personal data (name, DoB, bank data, health data, SSN) without getting permission from the client and/or the people mentioned on the PDF
+ - Attach PDF files with confidential and/or personal data (name, DoB, bank data, health data, SSN, photograph) without getting permission from the client and/or the people mentioned on the PDF
  - Create issues about obsolete PDFBox versions
 
 <p class="alert alert-info">We can sometimes solve problems without having the PDF, but it is difficult.</p>
