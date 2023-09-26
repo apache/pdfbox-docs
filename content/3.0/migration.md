@@ -163,7 +163,7 @@ If a file is provided as source PDFBox uses `org.apache.pdfbox.io.RandomAccessRe
 ### Changes when saving PDF
 
 #### Compressed saving by default
-When saving a PDF this will now be done in compressed mode by default. To override that use `PDDocument.save` with `CompressParameters.NO_COMPRESSION`.
+When saving a PDF this will now be done in compressed mode by default. To override that (e.g. if you want to create a PDF/A-1b document) use `PDDocument.save` with `CompressParameters.NO_COMPRESSION`.
 
 #### Don't use the source as output
 The input file must not be used as output for saving operations. It will corrupt the file and throw an exception as parts of the file are read the first time when saving it.
