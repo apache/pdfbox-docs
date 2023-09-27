@@ -216,7 +216,7 @@ as they are treated to be of <strong>internal use only</strong>.</p>
 <p>If a file is provided as source PDFBox uses <code>org.apache.pdfbox.io.RandomAccessReadBufferedFile</code> to wrap the source data using the in-memory cache as described above.</p>
 <h3 id="changes-when-saving-pdf" tabindex="-1">Changes when saving PDF</h3>
 <h4 id="compressed-saving-by-default" tabindex="-1">Compressed saving by default</h4>
-<p>When saving a PDF this will now be done in compressed mode by default. To override that use <code>PDDocument.save</code> with <code>CompressParameters.NO_COMPRESSION</code>.</p>
+<p>When saving a PDF this will now be done in compressed mode by default. To override that (e.g. if you want to create a PDF/A-1b document) use <code>PDDocument.save</code> with <code>CompressParameters.NO_COMPRESSION</code>.</p>
 <h4 id="don't-use-the-source-as-output" tabindex="-1">Don't use the source as output</h4>
 <p>The input file must not be used as output for saving operations. It will corrupt the file and throw an exception as parts of the file are read the first time when saving it.</p>
 <h3 id="reduced-memory-usage" tabindex="-1">Reduced memory usage</h3>
