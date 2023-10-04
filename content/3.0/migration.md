@@ -197,6 +197,10 @@ thrown at runtime as the `float` overloads of these methods accept only values i
 To retain RGB colors defines as 0-255 integer triples, construct a `java.awt.Color` instance and use the relevant overload. Alternatively, convert values to the 0-1
 range and define using `float` triples instead.
 
+### Changes to annotation classes
+
+Instead of using the `PDAnnotationTextMarkup`, `PDAnnotationSquareCircle` or the `PDAnnotationMarkup` classes when creating certain annotations, use their subclasses `PDAnnotationCaret`, `PDAnnotationFreeText`, `PDAnnotationInk`, `PDAnnotationPolygon`, `PDAnnotationPolyline`, `PDAnnotationSound`, `PDAnnotationCircle`, `PDAnnotationSquare`,  `PDAnnotationHighlight`, `PDAnnotationSquiggly`, `PDAnnotationStrikeout` and `PDAnnotationUnderline`.
+
 ## Changes in Common Functions 
 
 ### Interactive Forms
