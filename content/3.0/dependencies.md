@@ -7,7 +7,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          "License"); you may not use this file except in compliance
          with the License.  You may obtain a copy of the License at
 
-           http://www.apache.org/licenses/LICENSE-2.0
+           http://www.apache.org/licenses-2.0
 
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
@@ -113,27 +113,27 @@ For more reliable JPEG decoding the following part from the [TwelveMonkeys libra
 </dependency>
 ```
 
-### Encryption and Signing
+### Public key encryption and signing
 
-Encrypting and sigining PDFs requires the *bcprov*, *bcmail* and *bcpkix* libraries from the [Legion of the Bouncy Castle](http://www.bouncycastle.org/). These can be included in your Maven project using the following dependencies:
+Public key encryption and signing PDFs requires the *bcprov*, *bcmail* and *bcpkix* libraries from the [Legion of the Bouncy Castle](http://www.bouncycastle.org/). These can be included in your Maven project using the following dependencies:
 
 ```xml
 <dependency>
     <groupId>org.bouncycastle</groupId>
-    <artifactId>bcprov-jdk15to18</artifactId>
-    <version>1.75</version>
+    <artifactId>bcprov-jdk18on</artifactId>
+    <version>1.77</version>
 </dependency>
 
 <dependency>
     <groupId>org.bouncycastle</groupId>
-    <artifactId>bcmail-jdk15to18</artifactId>
-    <version>1.75</version>
+    <artifactId>bcmail-jdk18on</artifactId>
+    <version>1.77</version>
 </dependency>
 
 <dependency>
     <groupId>org.bouncycastle</groupId>
-    <artifactId>bcpkix-jdk15to18</artifactId>
-    <version>1.75</version>
+    <artifactId>bcpkix-jdk18on</artifactId>
+    <version>1.77</version>
 </dependency>
 ```
-<p class="alert alert-info">It is always a good idea to check for a newer version of Bouncy Castle. If you are using a more recent java version you might adapt the <b>artifactId</b> as well.</p>
+<p class="alert alert-info">It is always a good idea to check for a newer version of the Bouncy Castle libraries. If you are using a more recent java version you might adapt the <b>artifactId</b> as well.</p>
