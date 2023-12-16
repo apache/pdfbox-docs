@@ -28,7 +28,7 @@ If you have questions about how to use PDFBox do ask on the [Users Mailing List]
 
 The PDFBox examples and the test code in the sources will also provide additional information.
 
-And there are additonal resources available on sites such as [Stack Overflow](http://stackoverflow.com/search?q=pdfbox "Stack Overflow").
+And there are additonal resources available on sites such as [Stack Overflow](http://stackoverflow.com/search?q=pdfbox).
 
 
 ## Filing a Bug Report or Enhancement Request
@@ -54,6 +54,7 @@ If you are sure you have found a bug then please report the problem in our
  - Attach the shortest possible code that reproduces the problem. Insert java code between {code}...{code}. Or try to reproduce the problem with the command-line applications.
  - Mention what you were doing, what was the expected behaviour, and what happened instead
  - Provide a stack trace of an exception if there is one
+ - Make sure logging is active up to INFO level, and include the log output
  - Be patient: all the people here are unpaid volunteers who work for you in their free time
 
 **And please DON'T**
