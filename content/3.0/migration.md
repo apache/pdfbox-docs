@@ -171,9 +171,11 @@ The input file must not be used as output for saving operations. It will corrupt
 ### Reduced memory usage
 
 #### Incremental Parsing
-PDFBox now loads a PDF Document incrementally reducing the initial memory footprint. This will also reduce the memory needed to
+PDFBox now loads a PDF Document incrementally reducing the initial memory footprint (on demand parsing). This will also reduce the memory needed to
 consume a PDF if only certain parts of the PDF are accessed. Note that, due to the nature of PDF, uses such as iterating over all pages,
 accessing annotations, signing a PDF etc. might still load all parts of the PDF overtime which might consume a significant amount of memory.
+
+Do not try to access parts of the document after the PDDocument object has been closed, because this may lead to incorrect results, as shown in [PDFBOX-5720](https://issues.apache.org/jira/browse/PDFBOX-5720).
 
 #### Improved IO operations
 The introduction of the new io classes has a positive impact on the memory usage. Especially the re-usage of the source for reading parts of it instead of using intermediate streams reduces the memory footprint significantly.
