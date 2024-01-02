@@ -40,18 +40,17 @@ PDFBox 4.0 requires at least Java 11. Testing has been done up to Java 20.
 
 All libraries on which PDFBox depends are updated to their latest stable versions:
 
-- Bouncy Castle 1.75
-- Apache Commons Logging 1.2
-- picocli 4.7.4
+- Bouncy Castle 1.77
+- Apache Log4j 2.22.1
+- picocli 4.7.5
 
 For test support the libraries are updated to
 
-- JUnit 5.10.0
+- JUnit 5.10.1
 - JAI Image Core 1.4.0
 - JAI JPEG2000 1.4.0
 - Apache JBIG ImageIO Plugin 3.0.4
-- Apache Commons IO 2.13
-- Apache Log4j 2.20.0
+- Apache Commons IO 2.15.0
 
 ## General Changes for PDFBox 4.0
 
@@ -64,3 +63,15 @@ was still limited to PDF/A 1B.
 
 People looking for an open source preflight solution might check [VeraPDF](https://verapdf.org/). The VeraPDF parser is based on a PDFBox fork and
 was stream lined to fit their needs. But VeraPDF is still using the PDFBox parser as possible alternative.
+
+### Switch to Apache Log4j
+
+Apache Commons Logging was replaced by Apache Log4j, some of the obvious reasons were
+
+- maintainabilty and performance
+- flexibility
+- JPMS support
+- lambda logging support
+
+[PDFBOX-5695](https://issues.apache.org/jira/browse/PDFBOX-5695) provides more details about the reasons and the transition itself.
+
