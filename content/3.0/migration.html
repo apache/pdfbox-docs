@@ -101,6 +101,10 @@
               Command-Line Tools
             </a>
           </li><li>
+            <a href="/3.0/faq.html" >
+              FAQ
+            </a>
+          </li><li>
           <a href="https://javadoc.io/doc/org.apache.pdfbox/pdfbox/3.0.0-alpha3/index.html" >
             API Docs&emsp;<small>via javadoc.io</small>
           </a>
@@ -221,9 +225,10 @@ as they are treated to be of <strong>internal use only</strong>.</p>
 <p>The input file must not be used as output for saving operations. It will corrupt the file and throw an exception as parts of the file are read the first time when saving it.</p>
 <h3 id="reduced-memory-usage" tabindex="-1">Reduced memory usage</h3>
 <h4 id="incremental-parsing" tabindex="-1">Incremental Parsing</h4>
-<p>PDFBox now loads a PDF Document incrementally reducing the initial memory footprint. This will also reduce the memory needed to
+<p>PDFBox now loads a PDF Document incrementally reducing the initial memory footprint (on demand parsing). This will also reduce the memory needed to
 consume a PDF if only certain parts of the PDF are accessed. Note that, due to the nature of PDF, uses such as iterating over all pages,
 accessing annotations, signing a PDF etc. might still load all parts of the PDF overtime which might consume a significant amount of memory.</p>
+<p>Do not try to access parts of the document after the PDDocument object has been closed, because this may lead to incorrect results, as shown in <a href="https://issues.apache.org/jira/browse/PDFBOX-5720">PDFBOX-5720</a>.</p>
 <h4 id="improved-io-operations" tabindex="-1">Improved IO operations</h4>
 <p>The introduction of the new io classes has a positive impact on the memory usage. Especially the re-usage of the source for reading parts of it instead of using intermediate streams reduces the memory footprint significantly.</p>
 <h4 id="further-optimizations" tabindex="-1">Further optimizations</h4>
@@ -349,7 +354,7 @@ of Adobe Reader. If you'd like to bypass this use <code>PDDocumentCatalog.getAcr
                 <!-- nothing in here on purpose -->
             </div>
             <div class="span9">
-                <p>Copyright © 2009&ndash;2023 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                <p>Copyright © 2009&ndash;2024 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
                     <br>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
             </div>
         </div>

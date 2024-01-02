@@ -109,18 +109,17 @@ to PDFBox 4.0. It provides information about the new, deprecated and unsupported
 <h2 id="dependency-updates" tabindex="-1">Dependency Updates</h2>
 <p>All libraries on which PDFBox depends are updated to their latest stable versions:</p>
 <ul>
-<li>Bouncy Castle 1.75</li>
-<li>Apache Commons Logging 1.2</li>
-<li>picocli 4.7.4</li>
+<li>Bouncy Castle 1.77</li>
+<li>Apache Log4j 2.22.1</li>
+<li>picocli 4.7.5</li>
 </ul>
 <p>For test support the libraries are updated to</p>
 <ul>
-<li>JUnit 5.10.0</li>
+<li>JUnit 5.10.1</li>
 <li>JAI Image Core 1.4.0</li>
 <li>JAI JPEG2000 1.4.0</li>
 <li>Apache JBIG ImageIO Plugin 3.0.4</li>
-<li>Apache Commons IO 2.13</li>
-<li>Apache Log4j 2.20.0</li>
+<li>Apache Commons IO 2.15.0</li>
 </ul>
 <h2 id="general-changes-for-pdfbox-4.0" tabindex="-1">General Changes for PDFBox 4.0</h2>
 <p>This section explains the fundamental differences between PDFBox 4.0 and 3.x releases.</p>
@@ -129,6 +128,15 @@ to PDFBox 4.0. It provides information about the new, deprecated and unsupported
 was still limited to PDF/A 1B.</p>
 <p>People looking for an open source preflight solution might check <a href="https://verapdf.org/">VeraPDF</a>. The VeraPDF parser is based on a PDFBox fork and
 was stream lined to fit their needs. But VeraPDF is still using the PDFBox parser as possible alternative.</p>
+<h3 id="switch-to-apache-log4j" tabindex="-1">Switch to Apache Log4j</h3>
+<p>Apache Commons Logging was replaced by Apache Log4j, some of the obvious reasons were</p>
+<ul>
+<li>maintainabilty and performance</li>
+<li>flexibility</li>
+<li>JPMS support</li>
+<li>lambda logging support</li>
+</ul>
+<p><a href="https://issues.apache.org/jira/browse/PDFBOX-5695">PDFBOX-5695</a> provides more details about the reasons and the transition itself.</p>
 
     </section>
     <aside>
@@ -152,6 +160,9 @@ was stream lined to fit their needs. But VeraPDF is still using the PDFBox parse
                     
                     <li><a href="#preflight-was-removed">Preflight was removed</a>
             		</li>
+
+                    <li><a href="#switch-to-apache-log4j">Switch to Apache Log4j</a>
+            		</li>
                 </ol>
             		</li>
                 </ol>
@@ -167,7 +178,7 @@ was stream lined to fit their needs. But VeraPDF is still using the PDFBox parse
                 <!-- nothing in here on purpose -->
             </div>
             <div class="span9">
-                <p>Copyright © 2009&ndash;2023 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                <p>Copyright © 2009&ndash;2024 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
                     <br>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
             </div>
         </div>

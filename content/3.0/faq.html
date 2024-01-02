@@ -85,40 +85,27 @@
     <nav class="accordion-menu" role="navigation">
       <h1>Documentation</h1>
       <ul><li>
-            <a href="/2.0/migration.html" >
+            <a href="/3.0/migration.html" >
               Migration
             </a>
           </li><li>
-            <a href="/2.0/getting-started.html" >
+            <a href="/3.0/getting-started.html" >
               Getting Started
             </a>
           </li><li>
-            <a href="/2.0/examples.html" >
-              Examples
-            </a>
-          </li><li>
-            <a href="/2.0/dependencies.html" >
+            <a href="/3.0/dependencies.html" >
               Dependencies
             </a>
-          </li><li class="has-children">
-            <input type="checkbox" checked>
-            <i></i>
-            <label>Cookbook</label>
-              <ul><li>
-                    <a href="/2.0/cookbook/encryption.html" >
-                      Encrypting a File
-                    </a>  
-                  </li></ul>
           </li><li>
-            <a href="/2.0/commandline.html" >
+            <a href="/3.0/commandline.html" >
               Command-Line Tools
             </a>
           </li><li>
-            <a href="/2.0/faq.html" >
+            <a href="/3.0/faq.html" >
               FAQ
             </a>
           </li><li>
-          <a href="https://javadoc.io/doc/org.apache.pdfbox/pdfbox/2.0.27/index.html" >
+          <a href="https://javadoc.io/doc/org.apache.pdfbox/pdfbox/3.0.0-alpha3/index.html" >
             API Docs&emsp;<small>via javadoc.io</small>
           </a>
         </li>
@@ -151,7 +138,7 @@ PDDocument object.</p>
 don't then the document will not be closed properly.  Also, you must close all
 PDDocument objects that get created.  The following code creates <strong>two</strong>
 PDDocument objects; one from the &quot;new PDDocument()&quot; and the second by the load method.</p>
-<pre class="language-java"><code class="language-java"><span class="token class-name">PDDocument</span> doc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PDDocument</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token keyword">try</span><br><span class="token punctuation">{</span><br>   doc <span class="token operator">=</span> <span class="token class-name">PDDocument</span><span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span> <span class="token string">"my.pdf"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token keyword">finally</span><br><span class="token punctuation">{</span><br>   <span class="token keyword">if</span><span class="token punctuation">(</span> doc <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token punctuation">)</span><br>   <span class="token punctuation">{</span><br>      doc<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>   <span class="token punctuation">}</span><br><span class="token punctuation">}</span></code></pre>
+<pre class="language-java"><code class="language-java"><span class="token class-name">PDDocument</span> doc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PDDocument</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token keyword">try</span><br><span class="token punctuation">{</span><br>   doc <span class="token operator">=</span> <span class="token class-name">PDDocument</span><span class="token punctuation">.</span><span class="token function">loadPDF</span><span class="token punctuation">(</span> <span class="token string">"my.pdf"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token keyword">finally</span><br><span class="token punctuation">{</span><br>   <span class="token keyword">if</span><span class="token punctuation">(</span> doc <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token punctuation">)</span><br>   <span class="token punctuation">{</span><br>      doc<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>   <span class="token punctuation">}</span><br><span class="token punctuation">}</span></code></pre>
 <h2 id="font-handling" tabindex="-1">Font Handling</h2>
 <p><a name="fontencoding"></a></p>
 <h3 id="i'm-getting-java.lang.illegalargumentexception%3A-...-is-not-available-in-this-font's-encoding%3A-winansiencoding" tabindex="-1">I'm getting java.lang.IllegalArgumentException: ... is not available in this font's encoding: WinAnsiEncoding</h3>
@@ -245,11 +232,21 @@ but these would cost additional time and memory space. You can have a higher qua
 <p><a name="badraster"></a></p>
 <h3 id="what-to-do-with-the-illegalargumentexception-%22numbers-of-source-raster-bands-and-source-color-space-components-do-not-match%22%3F" tabindex="-1">What to do with the IllegalArgumentException &quot;Numbers of source Raster bands and source color space components do not match&quot;?</h3>
 <p>Sadly, this is a known bug in Java Imaging. Use the twelvemonkeys library as described in the <a href="dependencies.html">dependencies</a> page.</p>
+<h3 id="does-pdfbox-support-complex-scripts%3F" tabindex="-1">Does PDFBox support complex scripts?</h3>
+<p>Thanks to contributions we have supported Bengali and Latin ligatures since 3.0.0.
+Starting with version 3.0.2 we also support Devanagari and Gujarati.
+However there are some caveats: PDFBox will support only one language in a specific font, thus it is
+best to use a font that is specific enough, e.g. the <a href="https://pagure.io/lohit">Lohit fonts</a>.
+For example, the Mangal font is meant to be a Devangari font, but PDFBox will choose Bengali
+because that one is also claimed to be supported and is checked first.
+It is not possible to deactivate the feature.
+The features may be incomplete because we do not yet support all GSUB tables,
+and we don't support GPOS at all.</p>
 
     </section>
     <aside>
       
-      <h1>Table of Contents<a class="edit-link" href="https://github.com/apache/pdfbox-docs/edit/master/./content/2.0/faq.md" title="Edit this page">
+      <h1>Table of Contents<a class="edit-link" href="https://github.com/apache/pdfbox-docs/edit/master/./content/3.0/faq.md" title="Edit this page">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.013 1.427a1.75 1.75 0 012.474 0l1.086 1.086a1.75 1.75 0 010 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 01-.927-.928l.929-3.25a1.75 1.75 0 01.445-.758l8.61-8.61zm1.414 1.06a.25.25 0 00-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 000-.354l-1.086-1.086zM11.189 6.25L9.75 4.81l-6.286 6.287a.25.25 0 00-.064.108l-.558 1.953 1.953-.558a.249.249 0 00.108-.064l6.286-6.286z"/></svg>
       </a></h1>
       
@@ -327,6 +324,9 @@ but these would cost additional time and memory space. You can have a higher qua
             		</li>
 
                     <li><a href="#what-to-do-with-the-illegalargumentexception-%22numbers-of-source-raster-bands-and-source-color-space-components-do-not-match%22%3F">What to do with the IllegalArgumentException "Numbers of source Raster bands and source color space components do not match"?</a>
+            		</li>
+
+                    <li><a href="#does-pdfbox-support-complex-scripts%3F">Does PDFBox support complex scripts?</a>
             		</li>
                 </ol>
             		</li>
