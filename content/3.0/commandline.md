@@ -116,7 +116,7 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar export:text [OPTIONS] -i=<infile>``
 
 This application will overlay one document with the content of another document
 
-Usage: ``java -jar pdfbox-app-3.y.z.jar overlayPDF [OPTIONS] -i=<infile> -o=<outfile>``
+Usage: ``java -jar pdfbox-app-3.y.z.jar overlay [OPTIONS] -i=<infile> -o=<outfile>``
 
 | Command-Line Parameter | Default | Description |
 | --- | --- | --- |
