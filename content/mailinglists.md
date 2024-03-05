@@ -36,10 +36,12 @@ the **Developers Mailing List** is the place to be.
 If you like to keep track of what's being changed inside the project, you can subscribe 
 to the **Commit Mailing List**.
 
+If you have any issues with subscribing to one of the lists use the **Help** link to get support.
+
 <p class="alert alert-info">Please use the Users Mailing List if you are unsure which list to use</p>
 
-| Name | Address | Subscribe | Unsubscribe | Help | Archive | MarkMail |
-| --- | --- | --- | ---| ---| --- | --- |
-| Users | users@pdfbox.apache.org | [Subscribe](mailto:users-subscribe@pdfbox.apache.org) | [Unsubscribe](mailto:users-unsubscribe@pdfbox.apache.org) | [Help](mailto:users-help@pdfbox.apache.org) | [Archive](https://lists.apache.org/list.html?users@pdfbox.apache.org) | [MarkMail](http://pdfbox-users.markmail.org/) |
-| Developers | dev@pdfbox.apache.org | [Subscribe](mailto:dev-subscribe@pdfbox.apache.org) | [Unsubscribe](mailto:dev-unsubscribe@pdfbox.apache.org) | [Help](mailto:dev-help@pdfbox.apache.org) | [Archive](https://lists.apache.org/list.html?dev@pdfbox.apache.org) | [MarkMail](http://pdfbox-dev.markmail.org/) |
-| Commits List | commits@pdfbox.apache.org | [Subscribe](mailto:commits-subscribe@pdfbox.apache.org) | [Unsubscribe](mailto:commits-unsubscribe@pdfbox.apache.org) | [Help](mailto:commits-help@pdfbox.apache.org) | [Archive](https://lists.apache.org/list.html?commits@pdfbox.apache.org) | [MarkMail](http://pdfbox-commits.markmail.org/) |
+| Name | Address | Subscribe | Unsubscribe | Help | Archive |
+| --- | --- | --- | ---| ---| --- |
+| Users | users@pdfbox.apache.org | [Subscribe](mailto:users-subscribe@pdfbox.apache.org) | [Unsubscribe](mailto:users-unsubscribe@pdfbox.apache.org) | [Help](mailto:users-help@pdfbox.apache.org) | [Archive](https://lists.apache.org/list.html?users@pdfbox.apache.org) |
+| Developers | dev@pdfbox.apache.org | [Subscribe](mailto:dev-subscribe@pdfbox.apache.org) | [Unsubscribe](mailto:dev-unsubscribe@pdfbox.apache.org) | [Help](mailto:dev-help@pdfbox.apache.org) | [Archive](https://lists.apache.org/list.html?dev@pdfbox.apache.org) |
+| Commits List | commits@pdfbox.apache.org | [Subscribe](mailto:commits-subscribe@pdfbox.apache.org) | [Unsubscribe](mailto:commits-unsubscribe@pdfbox.apache.org) | [Help](mailto:commits-help@pdfbox.apache.org) | [Archive](https://lists.apache.org/list.html?commits@pdfbox.apache.org) |
