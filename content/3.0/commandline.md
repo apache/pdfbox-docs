@@ -129,14 +129,14 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar overlay [OPTIONS] -i=<infile> -o=<outfil
 | -o, --output=\<outfile> | | the resulting PDF file. |
 | -odd=\<oddPageOverlay> | | overlay file used for odd pages. |
 | -page=\<Integer=specificPageOverlay> | | overlay file used for the given page number, may occur more than once. |
-| -position=\<position> | background | Where to put the overlay, foreground or background. |
+| -position=\<position> | BACKGROUND | Where to put the overlay, FOREGROUND or BACKGROUND. |
 | -useAllPages=\<useAllPagesOverlay| | overlay file used for overlay, all pages are used by simply repeating them |
 | -V, --version | | Print version information and exit. |
 
 Examples:
 
 - overlayPDF -i=input.pdf -default=overlay.pdf -o=output.pdf
-- overlayPDF -i=input.pdf -default=defaultOverlay.pdf -page="10=overlayForPage10.pdf" -position=foreground -o=output.pdf
+- overlayPDF -i=input.pdf -default=defaultOverlay.pdf -page="10=overlayForPage10.pdf" -position=FOREGROUND -o=output.pdf
 - overlayPDF -i=input.pdf -odd=oddOverlay.pdf -even=evenOverlay.pdf -o=output.pdf
 
 ## PDFDebugger ##
