@@ -138,6 +138,30 @@ Public key encryption and signing PDFs requires the *bcprov*, *bcmail* and *bcpk
 ```
 <p class="alert alert-info">It is always a good idea to check for a newer version of the Bouncy Castle libraries. If you are using a more recent java version you might adapt the <b>artifactId</b> as well.</p>
 
+### Activation and Bind
+
+The *activation* and *bind* libraries have been removed from the jdk starting with jdk9. They are needed for preflight and some examples. 
+
+These can be included in your Maven project using the following dependencies:
+
+```xml
+    <dependency>
+        <groupId>javax.xml.bind</groupId>
+        <artifactId>jaxb-api</artifactId>
+        <version>2.3.1</version>
+    </dependency>
+    <dependency>
+        <groupId>javax.activation</groupId>
+        <artifactId>activation</artifactId>
+        <version>1.1.1</version>
+    </dependency>
+```
+When using the preflight command-line app, copy the jar files into a "lib" subdirectory and run the app like this (use ";" instead of ":" on Windows):
+
+``java -cp "preflight-app-2.0.31-SNAPSHOT.jar:./lib/*" org.apache.pdfbox.preflight.Validator_A1b args``
+
+<p class="alert alert-info">It is always a good idea to check for a newer version of the libraries. If you are using a more recent java version you might adapt the <b>artifactId</b> as well.</p>
+
 ### Java Cryptography Extension (JCE)
 
 256-bit AES encryption requires a JDK with "unlimited strength" cryptography, which requires extra files to be installed. For JDK 7, see [Java Cryptography Extension (JCE)](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html). If these files are not installed, building PDFBox will throw an exception with the following message:
