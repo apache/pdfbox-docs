@@ -121,19 +121,19 @@ Public key encryption and signing PDFs requires the *bcprov*, *bcmail* and *bcpk
 <dependency>
     <groupId>org.bouncycastle</groupId>
     <artifactId>bcprov-jdk18on</artifactId>
-    <version>1.77</version>
+    <version>1.78.1</version>
 </dependency>
 
 <dependency>
     <groupId>org.bouncycastle</groupId>
     <artifactId>bcmail-jdk18on</artifactId>
-    <version>1.77</version>
+    <version>1.78.1</version>
 </dependency>
 
 <dependency>
     <groupId>org.bouncycastle</groupId>
     <artifactId>bcpkix-jdk18on</artifactId>
-    <version>1.77</version>
+    <version>1.78.1</version>
 </dependency>
 ```
 <p class="alert alert-info">It is always a good idea to check for a newer version of the Bouncy Castle libraries. If you are using a more recent java version you might adapt the <b>artifactId</b> as well.</p>
