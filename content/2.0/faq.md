@@ -82,6 +82,11 @@ finally
 }
 ```
 
+### Why do I not get all fields when iterating?
+
+Call ``getFieldTree()`` instead of ``getFields()``. The later one only returns root-level fields.
+
+
 ## Font Handling
 
 <a name="fontencoding"></a>
