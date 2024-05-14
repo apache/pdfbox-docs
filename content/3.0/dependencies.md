@@ -71,7 +71,7 @@ PDFBox does not ship with all features enabled. Third party components are neces
 PDF supports embedded image files, however support for some formats require third party libraries which are distributed under terms incompatible with the Apache 2.0 license:
 
 - Reading **JBIG2** images: [JBIG2 ImageIO](https://pdfbox.apache.org/download.cgi#JBIG2)
-- Reading **JPEG 2000 (JPX)** images: [JAI Image I/O Tools Core](https://java.net/projects/jai-imageio-core)
+- Reading **JPEG 2000 (JPX)** images: [JAI Image I/O Tools](https://www.oracle.com/java/technologies/java-archive-downloads-java-client-downloads.html)
 - Writing **TIFF** images requires *JAI Image I/O Tools Core* also.
 
 These libraries are optional and will be loaded if present on the classpath, otherwise support for these image formats will be disabled and a warning will be logged when an unsupported image is encountered.
