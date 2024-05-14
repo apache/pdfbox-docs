@@ -72,7 +72,7 @@ PDF supports embedded image files, however support for some formats require thir
 
 - Reading **JBIG2** images: [JBIG2 ImageIO](https://pdfbox.apache.org/download.cgi#JBIG2)
 - Reading **JPEG 2000 (JPX)** images: [JAI Image I/O Tools](https://www.oracle.com/java/technologies/java-archive-downloads-java-client-downloads.html)
-- Writing **TIFF** images requires *JAI Image I/O Tools Core* also.
+- Writing **TIFF** images also requires *JAI Image I/O Tools Core*.
 
 These libraries are optional and will be loaded if present on the classpath, otherwise support for these image formats will be disabled and a warning will be logged when an unsupported image is encountered.
 
