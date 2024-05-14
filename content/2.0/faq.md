@@ -212,3 +212,8 @@ but these would cost additional time and memory space. You can have a higher qua
 ### What to do with the IllegalArgumentException "Numbers of source Raster bands and source color space components do not match"?
 
 Sadly, this is a known bug in Java Imaging. Use the twelvemonkeys library as described in the [dependencies](dependencies.html) page.
+
+### Why do black inkblots, black stains, black clouds or black spots appear when rendering?
+
+This is a bug in the original java JPEG2000 decoder. You can see examples of such images in [PDFBOX-1752](https://issues.apache.org/jira/browse/PDFBOX-1752) and related issues.
+Use the newer (1.4.0 or higher) `jai-imageio-jpeg2000` and `jai-imageio-core` decoders as explained in the [dependencies](dependencies.html) page.
