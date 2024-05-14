@@ -92,6 +92,27 @@ Check whether the character is available in WinAnsiEncoding by looking at the [P
 If not, but if it is available in this font (in windows, have a look with charmap.exe), then load the font with
 PDType0Font.load(), see also in the EmbeddedFonts.java example in the source code download.
 
+### What fonts do I need on my system?
+
+Windows or Mac usually have the minimum fonts needed. You do need fonts that aren't embedded in PDFs
+if these fonts are outside of the "Standard 14 fonts" set, and any specific fonts that you want
+when you are creating PDFs.
+
+For rendering and text extraction, you'll need the "Standard 14 fonts" mentioned in the
+PDF specification: Times-Roman, Helvetica, Courier, Symbol, Times-Bold, Helvetica-Bold, Courier-Bold,
+Symbol, ZapfDingbats, Times-Italic, Helvetica-Oblique, Courier-Oblique, Times-BoldItalic,
+Helvetica-BoldOblique, Courier-BoldOblique. You can get most of these fonts on linux by running
+``sudo apt-get install ttf-mscorefonts-installer``. Arial is as good as Helvetica.
+MS-Gothic can be used instead of ZapfDingbats.
+See also [this stackoverflow answer](https://stackoverflow.com/a/67437624/535646) about getting ZapfDingbats
+from ghostscript fonts. The Times/Courier/Helvetica fonts can also be replaced with the appropriate
+Liberation or Nimbus fonts. The exact substitution logic that PDFBox uses can be read in the file
+``FontMapperImpl.java`` from the source code download.
+
+To create PDFs with "Standard 14 fonts" only, no extra fonts files are needed
+(version 2.0.5 or higher),
+as these are not embedded and PDFBox has all the metrics and no longer needs to access the actual fonts.
+
 ## PDF Creation
 
 <a name="layout"></a>

@@ -104,6 +104,27 @@ It is not possible to deactivate the feature in 3.0.2 but it will be in 3.0.3.
 The features may be incomplete because we do not yet support all GSUB table formats,
 and we don't support GPOS at all.
 
+### What fonts do I need on my system?
+
+Windows or Mac usually have the minimum fonts needed. You do need fonts that aren't embedded in PDFs
+if these fonts are outside of the "Standard 14 fonts" set, and any specific fonts that you want
+when you are creating PDFs.
+
+For rendering and text extraction, you'll need the "Standard 14 fonts" mentioned in the
+PDF specification: Times-Roman, Helvetica, Courier, Symbol, Times-Bold, Helvetica-Bold, Courier-Bold,
+Symbol, ZapfDingbats, Times-Italic, Helvetica-Oblique, Courier-Oblique, Times-BoldItalic,
+Helvetica-BoldOblique, Courier-BoldOblique. You can get most of these fonts on linux by running
+``sudo apt-get install ttf-mscorefonts-installer``. Arial is as good as Helvetica.
+MS-Gothic can be used instead of ZapfDingbats.
+See also [this stackoverflow answer](https://stackoverflow.com/a/67437624/535646) about getting ZapfDingbats
+from ghostscript fonts. The Times/Courier/Helvetica fonts can also be replaced with the appropriate
+Liberation or Nimbus fonts. The exact substitution logic that PDFBox uses can be read in the file
+``FontMapperImpl.java`` from the source code download.
+
+To create PDFs with "Standard 14 fonts" only, no extra fonts files are needed
+(version 2.0.5 or higher),
+as these are not embedded and PDFBox has all the metrics and no longer needs to access the actual fonts.
+
 ## PDF Creation
 
 <a name="layout"></a>
