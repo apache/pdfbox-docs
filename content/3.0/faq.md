@@ -125,6 +125,14 @@ To create PDFs with "Standard 14 fonts" only, no extra fonts files are needed
 (version 2.0.5 or higher),
 as these are not embedded and PDFBox has all the metrics and no longer needs to access the actual fonts.
 
+### Why do external fonts seem corrupt when loaded as a resource?
+
+If your program runs properly when the font is loaded from a file but not when loaded from the
+resources, check whether 
+[resource filtering](https://maven.apache.org/plugins/maven-resources-plugin/examples/filter.html)
+is activated in the maven-resources-plugin in your maven build script, and disable it for font files.
+See [this stackoverflow answer](https://stackoverflow.com/a/25503853/535646) on how to fix this.
+
 ## PDF Creation
 
 <a name="layout"></a>
