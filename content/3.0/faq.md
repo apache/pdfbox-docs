@@ -213,7 +213,7 @@ The memory footprint depends on the PDF itself and on the resolution you use for
 
 ### Why are some texts in poor quality and not antialiased?
 
-This is because in some PDFs (e.g. the one in [PDFBOX-2814](https://issues.apache.org/jira/browse/PDFBOX-2814), text is not
+This is because in some PDFs (e.g. the one in [PDFBOX-2814](https://issues.apache.org/jira/browse/PDFBOX-2814)), text is not
 rendered directly, but as a shaped clipping from a background. Java graphics does not support "soft clipping"
 <https://bugs.openjdk.java.net/browse/JDK-4212743>, and because of that, the edges are not looking smooth.
 Soft clipping could be achieved with [some extra steps](https://web.archive.org/web/20200814083145/https://community.oracle.com/blogs/campbell/2006/07/19/java-2d-trickery-soft-clipping),
