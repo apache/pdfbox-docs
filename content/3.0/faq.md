@@ -264,3 +264,16 @@ Sadly, this is a known bug in Java Imaging. Use the twelvemonkeys library as des
 
 This is a bug in the original java JPEG2000 decoder. You can see examples of such images in [PDFBOX-1752](https://issues.apache.org/jira/browse/PDFBOX-1752) and related issues.
 Use the newer (1.4.0 or higher) `jai-imageio-jpeg2000` and `jai-imageio-core` decoders as explained in the [dependencies](dependencies.html) page.
+
+### Why is printing so slow for some PDFs?
+
+If display rendering happens within a decent time but not printing,
+then the cause is likely transparent elements. Java renders these much slower when printing,
+see [here](https://blog.idrsolutions.com/avoid-transparency-when-printing-in-java/) for an
+explanation, and [PDFBOX-3046](https://issues.apache.org/jira/browse/PDFBOX-3046) 
+and related issues for sample files.
+
+A workaround is to use a specific dpi for the constructors of ``PDFPageable`` and ``PDFPrintable``,
+PDFBox will then render into an image
+and print that one. You should experiment with 300, 600 and 1200 dpi by trying it with
+the command-line app.
