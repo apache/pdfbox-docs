@@ -156,8 +156,14 @@ These can be included in your Maven project using the following dependencies:
         <version>1.1.1</version>
     </dependency>
 ```
-When using the preflight command-line app, copy the jar files into a "lib" subdirectory and run the app like this (use ";" instead of ":" on Windows):
-
-``java -cp "preflight-app-3.0.2-SNAPSHOT.jar:./lib/*" org.apache.pdfbox.preflight.Validator_A1b args``
-
 <p class="alert alert-info">It is always a good idea to check for a newer version of the libraries. If you are using a more recent java version you might adapt the <b>artifactId</b> as well.</p>
+
+### Using additional libraries from the command line
+
+When using one of the command-line apps, copy the jar files into a "lib" subdirectory and run the app like this (use ";" instead of ":" on Windows):
+
+``java -cp "pdfbox-app-3.0.2.jar:./lib/*" org.apache.pdfbox.tools.PDFBox args``
+
+or
+
+``java -cp "preflight-app-3.0.2.jar:./lib/*" org.apache.pdfbox.preflight.Validator_A1b args``
