@@ -92,6 +92,18 @@ Check whether the character is available in WinAnsiEncoding by looking at the [P
 If not, but if it is available in this font (in windows, have a look with charmap.exe), then load the font with
 PDType0Font.load(), see also in the EmbeddedFonts.java example in the source code download.
 
+### Does PDFBox support complex scripts?
+
+Thanks to contributions we have supported Bengali and Latin ligatures since 3.0.0.
+Starting with version 3.0.2 we also support Devanagari and Gujarati.
+However there are some caveats: PDFBox will support only one language in a specific font, thus it is
+best to use a font that is specific enough, e.g. the [Lohit fonts](https://pagure.io/lohit).
+For example, the Mangal font is meant to be a Devangari font, but PDFBox will choose Bengali
+because that one is also claimed to be supported and is checked first.
+It is not possible to deactivate the feature in 3.0.2 but it will be in 3.0.3.
+The features may be incomplete because we do not yet support all GSUB table formats,
+and we don't support GPOS at all.
+
 ## PDF Creation
 
 <a name="layout"></a>
@@ -213,14 +225,7 @@ but these would cost additional time and memory space. You can have a higher qua
 
 Sadly, this is a known bug in Java Imaging. Use the twelvemonkeys library as described in the [dependencies](dependencies.html) page.
 
-### Does PDFBox support complex scripts?
+### Why do black inkblots, black stains, black clouds or black spots appear when rendering?
 
-Thanks to contributions we have supported Bengali and Latin ligatures since 3.0.0.
-Starting with version 3.0.2 we also support Devanagari and Gujarati.
-However there are some caveats: PDFBox will support only one language in a specific font, thus it is
-best to use a font that is specific enough, e.g. the [Lohit fonts](https://pagure.io/lohit).
-For example, the Mangal font is meant to be a Devangari font, but PDFBox will choose Bengali
-because that one is also claimed to be supported and is checked first.
-It is not possible to deactivate the feature.
-The features may be incomplete because we do not yet support all GSUB tables,
-and we don't support GPOS at all.
+This is a bug in the original java JPEG2000 decoder. You can see examples of such images in [PDFBOX-1752](https://issues.apache.org/jira/browse/PDFBOX-1752) and related issues.
+Use the newer (1.4.0 or higher) `jai-imageio-jpeg2000` and `jai-imageio-core` decoders as explained in the [dependencies](dependencies.html) page.
