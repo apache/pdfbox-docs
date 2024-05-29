@@ -120,7 +120,7 @@ PDFBox 3.0.x no longer uses a separate cache when reading a pdf, but still does 
 
 - ***org.apache.pdfbox.io.RandomAccessStreamCache***
 
-`RandomAccessStreamCacheImpl` is a simple default implementaion using `RandomAccessReadWriteBuffer` as buffer.
+`RandomAccessStreamCacheImpl` is a simple default implementation using `RandomAccessReadWriteBuffer` as buffer.
 
 - ***org.apache.pdfbox.io.ScratchFile***
 
