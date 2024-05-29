@@ -203,6 +203,10 @@ range and define using `float` triples instead.
 
 Instead of using the `PDAnnotationTextMarkup`, `PDAnnotationSquareCircle` or the `PDAnnotationMarkup` classes when creating certain annotations, use their subclasses `PDAnnotationCaret`, `PDAnnotationFreeText`, `PDAnnotationInk`, `PDAnnotationPolygon`, `PDAnnotationPolyline`, `PDAnnotationSound`, `PDAnnotationCircle`, `PDAnnotationSquare`,  `PDAnnotationHighlight`, `PDAnnotationSquiggly`, `PDAnnotationStrikeout` and `PDAnnotationUnderline`.
 
+### Changes with charsets
+
+The convenience class `org.apache.pdfbox.util.Charsets` has been removed. Please use the java class `java.​nio.​charset.​StandardCharsets` instead.
+
 ## Changes in Common Functions 
 
 ### Interactive Forms
