@@ -139,12 +139,47 @@ don't then the document will not be closed properly.  Also, you must close all
 PDDocument objects that get created.  The following code creates <strong>two</strong>
 PDDocument objects; one from the &quot;new PDDocument()&quot; and the second by the load method.</p>
 <pre class="language-java"><code class="language-java"><span class="token class-name">PDDocument</span> doc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PDDocument</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token keyword">try</span><br><span class="token punctuation">{</span><br>   doc <span class="token operator">=</span> <span class="token class-name">PDDocument</span><span class="token punctuation">.</span><span class="token function">loadPDF</span><span class="token punctuation">(</span> <span class="token string">"my.pdf"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token keyword">finally</span><br><span class="token punctuation">{</span><br>   <span class="token keyword">if</span><span class="token punctuation">(</span> doc <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token punctuation">)</span><br>   <span class="token punctuation">{</span><br>      doc<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>   <span class="token punctuation">}</span><br><span class="token punctuation">}</span></code></pre>
+<h3 id="why-do-i-not-get-all-fields-when-iterating%3F" tabindex="-1">Why do I not get all fields when iterating?</h3>
+<p>Call <code>getFieldTree()</code> instead of <code>getFields()</code>. The later one only returns root-level fields.</p>
 <h2 id="font-handling" tabindex="-1">Font Handling</h2>
 <p><a name="fontencoding"></a></p>
 <h3 id="i'm-getting-java.lang.illegalargumentexception%3A-...-is-not-available-in-this-font's-encoding%3A-winansiencoding" tabindex="-1">I'm getting java.lang.IllegalArgumentException: ... is not available in this font's encoding: WinAnsiEncoding</h3>
 <p>Check whether the character is available in WinAnsiEncoding by looking at the <a href="https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf">PDF Specification</a> Appendix D.
 If not, but if it is available in this font (in windows, have a look with charmap.exe), then load the font with
 PDType0Font.load(), see also in the EmbeddedFonts.java example in the source code download.</p>
+<h3 id="does-pdfbox-support-complex-scripts%3F" tabindex="-1">Does PDFBox support complex scripts?</h3>
+<p>Thanks to contributions we have supported Bengali and Latin ligatures since 3.0.0.
+Starting with version 3.0.2 we also support Devanagari and Gujarati.
+However there are some caveats: PDFBox will support only one language in a specific font, thus it is
+best to use a font that is specific enough, e.g. the <a href="https://pagure.io/lohit">Lohit fonts</a>.
+For example, the Mangal font is meant to be a Devangari font, but PDFBox will choose Bengali
+because that one is also claimed to be supported and is checked first.
+It is not possible to deactivate the feature in 3.0.2 but it will be in 3.0.3.
+The features may be incomplete because we do not yet support all GSUB table formats,
+and we don't support GPOS at all.</p>
+<h3 id="what-fonts-do-i-need-on-my-system%3F" tabindex="-1">What fonts do I need on my system?</h3>
+<p>Windows or Mac usually have the minimum fonts needed. You do need fonts that aren't embedded in PDFs
+if these fonts are outside of the &quot;Standard 14 fonts&quot; set, and any specific fonts that you want
+when you are creating PDFs.</p>
+<p>For rendering and text extraction, you'll need the &quot;Standard 14 fonts&quot; mentioned in the
+PDF specification: Times-Roman, Helvetica, Courier, Symbol, Times-Bold, Helvetica-Bold, Courier-Bold,
+Symbol, ZapfDingbats, Times-Italic, Helvetica-Oblique, Courier-Oblique, Times-BoldItalic,
+Helvetica-BoldOblique, Courier-BoldOblique. You can get most of these fonts on linux by running
+<code>sudo apt-get install ttf-mscorefonts-installer</code>. Arial is as good as Helvetica.
+MS-Gothic can be used instead of ZapfDingbats.
+See also <a href="https://stackoverflow.com/a/67437624/535646">this stackoverflow answer</a> about getting ZapfDingbats
+from ghostscript fonts. The Times/Courier/Helvetica fonts can also be replaced with the appropriate
+Liberation or Nimbus fonts. The exact substitution logic that PDFBox uses can be read in the file
+<code>FontMapperImpl.java</code> from the source code download.</p>
+<p>To create PDFs with &quot;Standard 14 fonts&quot; only, no extra fonts files are needed
+(version 2.0.5 or higher),
+as these are not embedded and PDFBox has all the metrics and no longer needs to access the actual fonts.</p>
+<h3 id="why-do-external-fonts-seem-corrupt-when-loaded-as-a-resource%3F" tabindex="-1">Why do external fonts seem corrupt when loaded as a resource?</h3>
+<p>If your program runs properly when the font is loaded from a file but not when loaded from the
+resources, check whether
+<a href="https://maven.apache.org/plugins/maven-resources-plugin/examples/filter.html">resource filtering</a>
+is activated in the maven-resources-plugin in your maven build script, and disable it for font files.
+See <a href="https://stackoverflow.com/a/25503853/535646">this stackoverflow answer</a> on how to fix this.</p>
 <h2 id="pdf-creation" tabindex="-1">PDF Creation</h2>
 <p><a name="layout"></a></p>
 <h3 id="can-i-use-pdfbox-to-create-complex-layouts%3F" tabindex="-1">Can I use PDFBox to create complex layouts?</h3>
@@ -216,7 +251,8 @@ the word &quot;Hello&quot; is drawn.</li>
 <p>The memory footprint depends on the PDF itself and on the resolution you use for rendering. Some possible options:</p>
 <ul>
 <li>increase the <code>-Xmx</code> value when starting java</li>
-<li>use a scratch file by loading files with this code <code>PDDocument.load(file, MemoryUsageSetting.setupTempFileOnly())</code></li>
+<li>use a scratch file by loading files with this code <code>Loader.loadPDF(file, IOUtils.createTempFileOnlyStreamCache())</code></li>
+<li>activate subsampling by calling <code>setSubsamplingAllowed(true)</code> on your <code>PDFRenderer</code> object</li>
 <li>be careful not to hold your images after rendering them, e.g. avoid putting all images of a PDF into a <code>List</code></li>
 <li>don't forgot to close your <code>PDDocument</code> objects</li>
 <li>decrease the scale when calling <code>PDFRenderer.renderImage()</code>, or the dpi value when calling <code>PDFRenderer.renderImageWithDPI()</code></li>
@@ -224,7 +260,7 @@ the word &quot;Hello&quot; is drawn.</li>
 </ul>
 <p><a name="textantialias"></a></p>
 <h3 id="why-are-some-texts-in-poor-quality-and-not-antialiased%3F" tabindex="-1">Why are some texts in poor quality and not antialiased?</h3>
-<p>This is because in some PDFs (e.g. the one in <a href="https://issues.apache.org/jira/browse/PDFBOX-2814">PDFBOX-2814</a>, text is not
+<p>This is because in some PDFs (e.g. the one in <a href="https://issues.apache.org/jira/browse/PDFBOX-2814">PDFBOX-2814</a>), text is not
 rendered directly, but as a shaped clipping from a background. Java graphics does not support &quot;soft clipping&quot;
 <a href="https://bugs.openjdk.java.net/browse/JDK-4212743">https://bugs.openjdk.java.net/browse/JDK-4212743</a>, and because of that, the edges are not looking smooth.
 Soft clipping could be achieved with <a href="https://web.archive.org/web/20200814083145/https://community.oracle.com/blogs/campbell/2006/07/19/java-2d-trickery-soft-clipping">some extra steps</a>,
@@ -232,16 +268,19 @@ but these would cost additional time and memory space. You can have a higher qua
 <p><a name="badraster"></a></p>
 <h3 id="what-to-do-with-the-illegalargumentexception-%22numbers-of-source-raster-bands-and-source-color-space-components-do-not-match%22%3F" tabindex="-1">What to do with the IllegalArgumentException &quot;Numbers of source Raster bands and source color space components do not match&quot;?</h3>
 <p>Sadly, this is a known bug in Java Imaging. Use the twelvemonkeys library as described in the <a href="dependencies.html">dependencies</a> page.</p>
-<h3 id="does-pdfbox-support-complex-scripts%3F" tabindex="-1">Does PDFBox support complex scripts?</h3>
-<p>Thanks to contributions we have supported Bengali and Latin ligatures since 3.0.0.
-Starting with version 3.0.2 we also support Devanagari and Gujarati.
-However there are some caveats: PDFBox will support only one language in a specific font, thus it is
-best to use a font that is specific enough, e.g. the <a href="https://pagure.io/lohit">Lohit fonts</a>.
-For example, the Mangal font is meant to be a Devangari font, but PDFBox will choose Bengali
-because that one is also claimed to be supported and is checked first.
-It is not possible to deactivate the feature.
-The features may be incomplete because we do not yet support all GSUB tables,
-and we don't support GPOS at all.</p>
+<h3 id="why-do-black-inkblots%2C-black-stains%2C-black-clouds-or-black-spots-appear-when-rendering%3F" tabindex="-1">Why do black inkblots, black stains, black clouds or black spots appear when rendering?</h3>
+<p>This is a bug in the original java JPEG2000 decoder. You can see examples of such images in <a href="https://issues.apache.org/jira/browse/PDFBOX-1752">PDFBOX-1752</a> and related issues.
+Use the newer (1.4.0 or higher) <code>jai-imageio-jpeg2000</code> and <code>jai-imageio-core</code> decoders as explained in the <a href="dependencies.html">dependencies</a> page.</p>
+<h3 id="why-is-printing-so-slow-for-some-pdfs%3F" tabindex="-1">Why is printing so slow for some PDFs?</h3>
+<p>If display rendering happens within a decent time but not printing,
+then the cause is likely transparent elements. Java renders these much slower when printing,
+see <a href="https://blog.idrsolutions.com/avoid-transparency-when-printing-in-java/">here</a> for an
+explanation, and <a href="https://issues.apache.org/jira/browse/PDFBOX-3046">PDFBOX-3046</a>
+and related issues for sample files.</p>
+<p>A workaround is to use a specific dpi for the constructors of <code>PDFPageable</code> and <code>PDFPrintable</code>,
+PDFBox will then render into an image
+and print that one. You should experiment with 300, 600 and 1200 dpi by trying it with
+the command-line app.</p>
 
     </section>
     <aside>
@@ -265,6 +304,9 @@ and we don't support GPOS at all.</p>
 
                     <li><a href="#why-do-i-get-a-%22warning%3A-you-did-not-close-the-pdf-document%22%3F">Why do I get a "Warning: You did not close the PDF Document"?</a>
             		</li>
+
+                    <li><a href="#why-do-i-not-get-all-fields-when-iterating%3F">Why do I not get all fields when iterating?</a>
+            		</li>
                 </ol>
             		</li>
 
@@ -273,6 +315,15 @@ and we don't support GPOS at all.</p>
                 <ol>
                     
                     <li><a href="#i'm-getting-java.lang.illegalargumentexception%3A-...-is-not-available-in-this-font's-encoding%3A-winansiencoding">I'm getting java.lang.IllegalArgumentException: ... is not available in this font's encoding: WinAnsiEncoding</a>
+            		</li>
+
+                    <li><a href="#does-pdfbox-support-complex-scripts%3F">Does PDFBox support complex scripts?</a>
+            		</li>
+
+                    <li><a href="#what-fonts-do-i-need-on-my-system%3F">What fonts do I need on my system?</a>
+            		</li>
+
+                    <li><a href="#why-do-external-fonts-seem-corrupt-when-loaded-as-a-resource%3F">Why do external fonts seem corrupt when loaded as a resource?</a>
             		</li>
                 </ol>
             		</li>
@@ -326,7 +377,10 @@ and we don't support GPOS at all.</p>
                     <li><a href="#what-to-do-with-the-illegalargumentexception-%22numbers-of-source-raster-bands-and-source-color-space-components-do-not-match%22%3F">What to do with the IllegalArgumentException "Numbers of source Raster bands and source color space components do not match"?</a>
             		</li>
 
-                    <li><a href="#does-pdfbox-support-complex-scripts%3F">Does PDFBox support complex scripts?</a>
+                    <li><a href="#why-do-black-inkblots%2C-black-stains%2C-black-clouds-or-black-spots-appear-when-rendering%3F">Why do black inkblots, black stains, black clouds or black spots appear when rendering?</a>
+            		</li>
+
+                    <li><a href="#why-is-printing-so-slow-for-some-pdfs%3F">Why is printing so slow for some PDFs?</a>
             		</li>
                 </ol>
             		</li>
