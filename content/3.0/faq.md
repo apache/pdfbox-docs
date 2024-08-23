@@ -93,7 +93,7 @@ Call ``getFieldTree()`` instead of ``getFields()``. The later one only returns r
 
 ### I'm getting java.lang.IllegalArgumentException: ... is not available in this font's encoding: WinAnsiEncoding
 
-Check whether the character is available in WinAnsiEncoding by looking at the [PDF Specification](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) Appendix D.
+Check whether the character is available in WinAnsiEncoding by looking at the [PDF Specification](https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/PDF32000_2008.pdf) Annex D.
 If not, but if it is available in this font (in windows, have a look with charmap.exe), then load the font with
 PDType0Font.load(), see also in the EmbeddedFonts.java example in the source code download.
 
