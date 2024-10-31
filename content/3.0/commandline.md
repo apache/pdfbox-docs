@@ -103,6 +103,7 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar export:text [OPTIONS] -i=<infile>``
 | -endPage=\<endPage> | Integer.MAX_INT | The last page to extract (1 based, inclusive) |
 | -h, --help | | Show help message and exit. |
 | -html | false | Output in HTML format instead of raw text. |
+| -md   | false | Output in Markdown format instead of raw text. (since 3.0.4) |
 | -i, --input=\<infile> | | The PDF file to encrypt. |
 | -ignoreBeads | false | Disables the separation by beads. |
 | -o, --output=\<outfile> | | the exported text file. |

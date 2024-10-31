@@ -93,6 +93,7 @@ Usage: ``java -jar pdfbox-app-2.y.z.jar ExtractText [OPTIONS] <inputfile> [Text 
 | -encoding | default encoding | The encoding type of the text file, e.g. ISO-8859-1, UTF-8, UTF-16BE. |
 | -console | false | Send text to console instead of file. |
 | -html | false | Output in HTML format instead of raw text. |
+| -md   | false | Output in Markdown format instead of raw text. (since 2.0.33) |
 | -sort | false | Sort the text before writing. |
 | -ignoreBeads | false | Disables the separation by beads. |
 | -debug | false | Enables debug output about the time consumption of every stage. |
