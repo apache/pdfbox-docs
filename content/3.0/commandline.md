@@ -231,7 +231,7 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar print [OPTIONS] -i=<infile>``
 | Command-Line Parameter | Default | Description |
 | --- | --- | --- |
 | -border | | Print with border. |
-| -dpi=\<dpi> | | render into intermediate image with specific dpi and then print |
+| -dpi=\<dpi> | | render into intermediate image with specific dpi and then print.  Use -1 for automatic detection of printer resolution. |
 | -duplex=\<duplex> | DOCUMENT | print using duplex (SIMPLEX, DUPLEX, TUMBLE, DOCUMENT). |
 | -h, --help | | Show help message and exit. |
 | -i, --input=\<infile> | | the PDF file to print. |

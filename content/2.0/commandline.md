@@ -203,7 +203,7 @@ Usage: ``java -jar pdfbox-app-2.y.z.jar PrintPDF [OPTIONS] <inputfile>``
 | -printerName ``<name>`` | | Print to specified printer. |
 | -orientation [auto &#124; portrait &#124; landscape] | auto | Print using orientation. |
 | -border | | Print with border. |
-| -dpi | | Render into intermediate image with specific dpi and then print. |
+| -dpi | | Render into intermediate image with specific dpi and then print. Use -1 for automatic detection of printer resolution. |
 | inputfile | | The PDF file to print. |
 
 ## TextToPDF ##
