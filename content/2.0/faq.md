@@ -108,7 +108,7 @@ PDF specification: Times-Roman, Helvetica, Courier, Symbol, Times-Bold, Helvetic
 Symbol, ZapfDingbats, Times-Italic, Helvetica-Oblique, Courier-Oblique, Times-BoldItalic,
 Helvetica-BoldOblique, Courier-BoldOblique. You can get most of these fonts on linux by running
 ``sudo apt-get install ttf-mscorefonts-installer``. Arial is as good as Helvetica.
-MS-Gothic can be used instead of ZapfDingbats.
+MS-Gothic or DejaVu Sans can be used instead of ZapfDingbats.
 See also [this stackoverflow answer](https://stackoverflow.com/a/67437624/535646) about getting ZapfDingbats
 from ghostscript fonts. The Times/Courier/Helvetica fonts can also be replaced with the appropriate
 Liberation or Nimbus fonts. The exact substitution logic that PDFBox uses can be read in the file
