@@ -215,8 +215,10 @@ Usage: ``java -jar pdfbox-app-2.y.z.jar TextToPDF [OPTIONS] <outputfile> <textfi
 | Command-Line Parameter | Default | Description |
 | --- | --- | --- |
 | -standardFont | Helvetica | The font to use for the text. Either this or -ttf should be specified but not both. |
-| -ttf | | The TTF font to use for the text. Either this or -standardFont should be specified but not both. |
-| -fontSize | 10 | The size of the font to use. |
+| -pageSize | LETTER | The page size to use (LETTER, LEGAL, A0, A1, A2, A3, A4, A5, A6). |
+| -ttf | | The TrueType font to use for the text. Either this or -standardFont should be specified but not both. |
+| -fontSize | 10.0 | The size of the font to use. |
+| -lineSpacing | 1.05 | The factor of the font size for the line height. |
 
 The following font names can be used for the parameter ``standardFont``:
 

@@ -252,16 +252,17 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar fromText [OPTIONS] -i=<infile> -o=<outfi
 
 | Command-Line Parameter | Default | Description |
 | --- | --- | --- |
-| -charset=\<charset> | UTF-8 | the charset to use. |
-| -fontSize=\<fontSize> | 10 | the size of the font to use. |
+| -charset=\<charset> | UTF-8 | The charset to use. |
+| -fontSize=\<fontSize> | 10.0 | The size of the font to use. |
+| -lineSpacing=\<factor> | 1.05 | The factor of the font size for the line height. |
 | -h, --help | | Show help message and exit. |
-| -i, --input=\<infile> | | the text file to convert. |
-| -landscape | | set orientation to landscape. |
-| -o, --output=\<outfile> | | the generated PDF file. |
-| -pageSize=\<pageSize> | LETTER | the page size to use (LETTER, LEGAL, A0, A1, A2, A3, A4, A5, A6). |
+| -i, --input=\<infile> | | The text file to convert. |
+| -landscape | | Set orientation to landscape. |
+| -o, --output=\<outfile> | | The generated PDF file. |
+| -pageSize=\<pageSize> | LETTER | The page size to use (LETTER, LEGAL, A0, A1, A2, A3, A4, A5, A6). |
 | -standardFont=\<standardFont> | Helvetica | The font to use for the text. Either this or -ttf should be specified but not both. |
-| -ttf=\<ttfFile> | | The TTF font to use for the text. Either this or -standardFont should be specified but not both. |
-| -V, --version | | print version information and exit. |
+| -ttf=\<ttfFile> | | The TrueType font to use for the text. Either this or -standardFont should be specified but not both. |
+| -V, --version | | Print version information and exit. |
 
 The following font names can be used for the parameter ``standardFont``:
 
