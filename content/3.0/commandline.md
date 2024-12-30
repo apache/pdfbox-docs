@@ -255,6 +255,7 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar fromText [OPTIONS] -i=<infile> -o=<outfi
 | -charset=\<charset> | UTF-8 | The charset to use. |
 | -fontSize=\<fontSize> | 10.0 | The size of the font to use. |
 | -lineSpacing=\<factor> | 1.05 | The factor of the font size for the line height. |
+| -margins \<left> \<right> \<top> \<bottom> | 40.0 40.0 40.0 40.0 | The page margins. |
 | -h, --help | | Show help message and exit. |
 | -i, --input=\<infile> | | The text file to convert. |
 | -landscape | | Set orientation to landscape. |

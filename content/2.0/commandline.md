@@ -219,6 +219,7 @@ Usage: ``java -jar pdfbox-app-2.y.z.jar TextToPDF [OPTIONS] <outputfile> <textfi
 | -ttf | | The TrueType font to use for the text. Either this or -standardFont should be specified but not both. |
 | -fontSize | 10.0 | The size of the font to use. |
 | -lineSpacing | 1.05 | The factor of the font size for the line height. |
+| -margins | 40.0 40.0 40.0 40.0 | Left top right bottom page margins. |
 
 The following font names can be used for the parameter ``standardFont``:
 
