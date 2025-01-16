@@ -37,6 +37,13 @@
     <release>
       <Version>
         <name>Apache PDFBox</name>
+        <created>2025-01-16</created>
+        <revision>2.0.33</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
+        <name>Apache PDFBox</name>
         <created>2024-08-08</created>
         <revision>3.0.3</revision>
       </Version>
@@ -44,15 +51,15 @@
     <release>
       <Version>
         <name>Apache PDFBox</name>
-        <created>2024-03-24</created>
-        <revision>2.0.31</revision>
+        <created>2024-07-24</created>
+        <revision>2.0.32</revision>
       </Version>
     </release>
     <release>
       <Version>
         <name>Apache PDFBox</name>
-        <created>2024-07-24</created>
-        <revision>2.0.32</revision>
+        <created>2024-03-24</created>
+        <revision>2.0.31</revision>
       </Version>
     </release>
     <release>

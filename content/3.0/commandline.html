@@ -342,6 +342,11 @@ PDFBox tools as Java applications.</p>
 <td>Output in HTML format instead of raw text.</td>
 </tr>
 <tr>
+<td>-md</td>
+<td>false</td>
+<td>Output in Markdown format instead of raw text. (since 3.0.4)</td>
+</tr>
+<tr>
 <td>-i, --input=&lt;infile&gt;</td>
 <td></td>
 <td>The PDF file to encrypt.</td>
@@ -690,7 +695,7 @@ To override the filename use the <code>outputPrefix</code> option.</p>
 <tr>
 <td>-dpi=&lt;dpi&gt;</td>
 <td></td>
-<td>render into intermediate image with specific dpi and then print</td>
+<td>render into intermediate image with specific dpi and then print.  Use -1 for automatic detection of printer resolution.</td>
 </tr>
 <tr>
 <td>-duplex=&lt;duplex&gt;</td>
@@ -764,12 +769,22 @@ To override the filename use the <code>outputPrefix</code> option.</p>
 <tr>
 <td>-charset=&lt;charset&gt;</td>
 <td>UTF-8</td>
-<td>the charset to use.</td>
+<td>The charset to use.</td>
 </tr>
 <tr>
 <td>-fontSize=&lt;fontSize&gt;</td>
-<td>10</td>
-<td>the size of the font to use.</td>
+<td>10.0</td>
+<td>The size of the font to use.</td>
+</tr>
+<tr>
+<td>-lineSpacing=&lt;factor&gt;</td>
+<td>1.05</td>
+<td>The factor of the font size for the line height.</td>
+</tr>
+<tr>
+<td>-margins &lt;left&gt; &lt;right&gt; &lt;top&gt; &lt;bottom&gt;</td>
+<td>40.0 40.0 40.0 40.0</td>
+<td>The page margins.</td>
 </tr>
 <tr>
 <td>-h, --help</td>
@@ -779,22 +794,22 @@ To override the filename use the <code>outputPrefix</code> option.</p>
 <tr>
 <td>-i, --input=&lt;infile&gt;</td>
 <td></td>
-<td>the text file to convert.</td>
+<td>The text file to convert.</td>
 </tr>
 <tr>
 <td>-landscape</td>
 <td></td>
-<td>set orientation to landscape.</td>
+<td>Set orientation to landscape.</td>
 </tr>
 <tr>
 <td>-o, --output=&lt;outfile&gt;</td>
 <td></td>
-<td>the generated PDF file.</td>
+<td>The generated PDF file.</td>
 </tr>
 <tr>
 <td>-pageSize=&lt;pageSize&gt;</td>
 <td>LETTER</td>
-<td>the page size to use (LETTER, LEGAL, A0, A1, A2, A3, A4, A5, A6).</td>
+<td>The page size to use (LETTER, LEGAL, A0, A1, A2, A3, A4, A5, A6).</td>
 </tr>
 <tr>
 <td>-standardFont=&lt;standardFont&gt;</td>
@@ -804,12 +819,12 @@ To override the filename use the <code>outputPrefix</code> option.</p>
 <tr>
 <td>-ttf=&lt;ttfFile&gt;</td>
 <td></td>
-<td>The TTF font to use for the text. Either this or -standardFont should be specified but not both.</td>
+<td>The TrueType font to use for the text. Either this or -standardFont should be specified but not both.</td>
 </tr>
 <tr>
 <td>-V, --version</td>
 <td></td>
-<td>print version information and exit.</td>
+<td>Print version information and exit.</td>
 </tr>
 </tbody>
 </table>
@@ -926,7 +941,7 @@ To override the filename use the <code>outputPrefix</code> option.</p>
                 <!-- nothing in here on purpose -->
             </div>
             <div class="span9">
-                <p>Copyright © 2009&ndash;2024 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                <p>Copyright © 2009&ndash;2025 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
                     <br>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
             </div>
         </div>

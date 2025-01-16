@@ -157,7 +157,7 @@ PDDocument objects; one from the &quot;new PDDocument()&quot; and the second by 
 <h2 id="font-handling" tabindex="-1">Font Handling</h2>
 <p><a name="fontencoding"></a></p>
 <h3 id="i'm-getting-java.lang.illegalargumentexception%3A-...-is-not-available-in-this-font's-encoding%3A-winansiencoding" tabindex="-1">I'm getting java.lang.IllegalArgumentException: ... is not available in this font's encoding: WinAnsiEncoding</h3>
-<p>Check whether the character is available in WinAnsiEncoding by looking at the <a href="https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf">PDF Specification</a> Appendix D.
+<p>Check whether the character is available in WinAnsiEncoding by looking at the <a href="https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/PDF32000_2008.pdf">PDF Specification</a> Annex D.
 If not, but if it is available in this font (in windows, have a look with charmap.exe), then load the font with
 PDType0Font.load(), see also in the EmbeddedFonts.java example in the source code download.</p>
 <h3 id="what-fonts-do-i-need-on-my-system%3F" tabindex="-1">What fonts do I need on my system?</h3>
@@ -169,7 +169,7 @@ PDF specification: Times-Roman, Helvetica, Courier, Symbol, Times-Bold, Helvetic
 Symbol, ZapfDingbats, Times-Italic, Helvetica-Oblique, Courier-Oblique, Times-BoldItalic,
 Helvetica-BoldOblique, Courier-BoldOblique. You can get most of these fonts on linux by running
 <code>sudo apt-get install ttf-mscorefonts-installer</code>. Arial is as good as Helvetica.
-MS-Gothic can be used instead of ZapfDingbats.
+MS-Gothic or DejaVu Sans can be used instead of ZapfDingbats.
 See also <a href="https://stackoverflow.com/a/67437624/535646">this stackoverflow answer</a> about getting ZapfDingbats
 from ghostscript fonts. The Times/Courier/Helvetica fonts can also be replaced with the appropriate
 Liberation or Nimbus fonts. The exact substitution logic that PDFBox uses can be read in the file
@@ -397,7 +397,7 @@ the command-line app.</p>
                 <!-- nothing in here on purpose -->
             </div>
             <div class="span9">
-                <p>Copyright © 2009&ndash;2024 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                <p>Copyright © 2009&ndash;2025 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
                     <br>Apache PDFBox, PDFBox, Apache, the Apache feather logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
             </div>
         </div>
