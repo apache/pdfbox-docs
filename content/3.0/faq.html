@@ -154,9 +154,9 @@ However there are some caveats: PDFBox will support only one language in a speci
 best to use a font that is specific enough, e.g. the <a href="https://pagure.io/lohit">Lohit fonts</a>.
 For example, the Mangal font is meant to be a Devangari font, but PDFBox will choose Bengali
 because that one is also claimed to be supported and is checked first.
-It is not possible to deactivate the feature in 3.0.2 but it will be in 3.0.3.
+Since 3.0.3 it is possible to deactivate the feature by calling <code>PDFont.setEnableGsub(false)</code>.
 The features may be incomplete because we do not yet support all GSUB table formats,
-and we don't support GPOS at all.</p>
+and we don't support GPOS at all. Text extraction may be incorrect.</p>
 <h3 id="what-fonts-do-i-need-on-my-system%3F" tabindex="-1">What fonts do I need on my system?</h3>
 <p>Windows or Mac usually have the minimum fonts needed. You do need fonts that aren't embedded in PDFs
 if these fonts are outside of the &quot;Standard 14 fonts&quot; set, and any specific fonts that you want
