@@ -203,8 +203,15 @@ Usage: ``java -jar pdfbox-app-2.y.z.jar PrintPDF [OPTIONS] <inputfile>``
 | -printerName ``<name>`` | | Print to specified printer. |
 | -orientation [auto &#124; portrait &#124; landscape] | auto | Print using orientation. |
 | -border | | Print with border. |
+| -duplex \<duplex> | DOCUMENT | print using duplex (SIMPLEX, DUPLEX, TUMBLE, DOCUMENT). |
+| -mediaSize \<mediaSize> | | print using media size name. |
+| -noColorOpt | | disable color optimizations (useful when printing barcodes). |
+| -orientation [auto &#124; portrait &#124; landscape] | auto | Print using orientation. |
+| -tray \<tray> | | print using tray. |
 | -dpi | | Render into intermediate image with specific dpi and then print. Use -1 for automatic detection of printer resolution. |
 | inputfile | | The PDF file to print. |
+
+mediaSize and tray cannot be combined. Running the command without parameters will show a help text and all available settings for all printers.
 
 ## TextToPDF ##
 

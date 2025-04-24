@@ -235,6 +235,7 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar print [OPTIONS] -i=<infile>``
 | -duplex=\<duplex> | DOCUMENT | print using duplex (SIMPLEX, DUPLEX, TUMBLE, DOCUMENT). |
 | -h, --help | | Show help message and exit. |
 | -i, --input=\<infile> | | the PDF file to print. |
+| -listPrinters | | list all printers with available settings |
 | -mediaSize=\<mediaSize> | | print using media size name. |
 | -noColorOpt | | disable color optimizations (useful when printing barcodes). |
 | -orientation | AUTO | print using orientation (AUTO, LANDSCAPE, PORTRAIT). |
@@ -243,6 +244,8 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar print [OPTIONS] -i=<infile>``
 | -silentPrint | | print without printer dialog box. |
 | -tray=\<tray> | | print using tray. |
 | -V, --version | | print version information and exit. |
+
+mediaSize and tray can only be combined when running on jdk 1.8.
 
 ## TextToPDF ##
 
