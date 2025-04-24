@@ -600,6 +600,31 @@ To override the filename use the <code>outputPrefix</code> option.</p>
 <td>Print with border.</td>
 </tr>
 <tr>
+<td>-duplex &lt;duplex&gt;</td>
+<td>DOCUMENT</td>
+<td>print using duplex (SIMPLEX, DUPLEX, TUMBLE, DOCUMENT).</td>
+</tr>
+<tr>
+<td>-mediaSize &lt;mediaSize&gt;</td>
+<td></td>
+<td>print using media size name.</td>
+</tr>
+<tr>
+<td>-noColorOpt</td>
+<td></td>
+<td>disable color optimizations (useful when printing barcodes).</td>
+</tr>
+<tr>
+<td>-orientation [auto | portrait | landscape]</td>
+<td>auto</td>
+<td>Print using orientation.</td>
+</tr>
+<tr>
+<td>-tray &lt;tray&gt;</td>
+<td></td>
+<td>print using tray.</td>
+</tr>
+<tr>
 <td>-dpi</td>
 <td></td>
 <td>Render into intermediate image with specific dpi and then print. Use -1 for automatic detection of printer resolution.</td>
@@ -611,6 +636,7 @@ To override the filename use the <code>outputPrefix</code> option.</p>
 </tr>
 </tbody>
 </table>
+<p>mediaSize and tray cannot be combined. Running the command without parameters will show a help text and all available settings for all printers.</p>
 <h2 id="texttopdf" tabindex="-1">TextToPDF</h2>
 <p>This application will create a PDF document from a text file.</p>
 <p>Usage: <code>java -jar pdfbox-app-2.y.z.jar TextToPDF [OPTIONS] &lt;outputfile&gt; &lt;textfile&gt;</code></p>

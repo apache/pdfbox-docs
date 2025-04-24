@@ -713,6 +713,11 @@ To override the filename use the <code>outputPrefix</code> option.</p>
 <td>the PDF file to print.</td>
 </tr>
 <tr>
+<td>-listPrinters</td>
+<td></td>
+<td>list all printers with available settings</td>
+</tr>
+<tr>
 <td>-mediaSize=&lt;mediaSize&gt;</td>
 <td></td>
 <td>print using media size name.</td>
@@ -754,6 +759,7 @@ To override the filename use the <code>outputPrefix</code> option.</p>
 </tr>
 </tbody>
 </table>
+<p>mediaSize and tray can only be combined when running on jdk 1.8.</p>
 <h2 id="texttopdf" tabindex="-1">TextToPDF</h2>
 <p>This application will create a PDF document from a text file.</p>
 <p>Usage: <code>java -jar pdfbox-app-3.y.z.jar fromText [OPTIONS] -i=&lt;infile&gt; -o=&lt;outfile&gt;</code></p>
