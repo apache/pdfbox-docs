@@ -254,7 +254,7 @@ the word &quot;Hello&quot; is drawn.</li>
 <p>The memory footprint depends on the PDF itself and on the resolution you use for rendering. Some possible options:</p>
 <ul>
 <li>increase the <code>-Xmx</code> value when starting java</li>
-<li>use a scratch file by loading files with this code <code>PDDocument.load(file, MemoryUsageSetting.setupTempFileOnly())</code></li>
+<li>use a scratch file by loading files with this code <code>PDDocument.load(file, MemoryUsageSetting.setupTempFileOnly())</code> or with <code>PDDocument.load(file, MemoryUsageSetting.setupMixed(...))</code>.</li>
 <li>activate subsampling by calling <code>setSubsamplingAllowed(true)</code> on your <code>PDFRenderer</code> object</li>
 <li>be careful not to hold your images after rendering them, e.g. avoid putting all images of a PDF into a <code>List</code></li>
 <li>don't forgot to close your <code>PDDocument</code> objects</li>
