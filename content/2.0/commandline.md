@@ -201,7 +201,7 @@ Usage: ``java -jar pdfbox-app-2.y.z.jar PrintPDF [OPTIONS] <inputfile>``
 | -password | | The password to decrypt the PDF. |
 | -silentPrint | | Print the PDF without prompting for a printer. |
 | -printerName ``<name>`` | | Print to specified printer. |
-| -orientation [auto &#124; portrait &#124; landscape] | auto | Print using orientation. |
+| -orientation [auto &#124; portrait &#124; landscape &#124; reverse_landscape] | auto | Print using orientation. |
 | -border | | Print with border. |
 | -duplex \<duplex> | DOCUMENT | print using duplex (SIMPLEX, DUPLEX, TUMBLE, DOCUMENT). |
 | -mediaSize \<mediaSize> | | print using media size name. |

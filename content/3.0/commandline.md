@@ -238,7 +238,7 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar print [OPTIONS] -i=<infile>``
 | -listPrinters | | list all printers with available settings |
 | -mediaSize=\<mediaSize> | | print using media size name. |
 | -noColorOpt | | disable color optimizations (useful when printing barcodes). |
-| -orientation | AUTO | print using orientation (AUTO, LANDSCAPE, PORTRAIT). |
+| -orientation | AUTO | print using orientation (AUTO, LANDSCAPE, REVERSE_LANDSCAPE, PORTRAIT). |
 | -password=[\<password>] | | Password for the PDF.
 | -printerName=\<printerName> | | print to specified printer. |
 | -silentPrint | | print without printer dialog box. |
