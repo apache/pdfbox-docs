@@ -549,24 +549,11 @@ PDFBox 1.8 or earlier an overview about things to look at when switching over. M
     document.querySelectorAll('.sidebar-node > a').forEach(addClickEvent);
 
     // preserve expand/collapse across page navigation
-    var path = document.location.pathname;
-    if (path.indexOf('/1.8') == 0) {
-        var el = document.getElementById("#v1-8");
-        el.classList.toggle("collapsed");
-        if (path.indexOf('/1.8/cookbook') == 0) {
-            el = document.getElementById('v1-8-cookbook');
-            el.classList.remove('collapsed');
-        }
-    } else {
-        var el = document.getElementById("v2-0");
-        console.log(el);
-        el.classList.remove("collapsed");
-        if (path.indexOf('/2.0/cookbook') == 0) {
-            el = document.getElementById('#v2-0-cookbook');
-            el.classList.remove('collapsed');
-        }
-    }
+    var el = document.getElementById("v3-0");
+    console.log(el);
+    el.classList.remove("collapsed");
 </script>
+
 
 
 </body>
