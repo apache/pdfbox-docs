@@ -207,6 +207,11 @@ Instead of using the `PDAnnotationTextMarkup`, `PDAnnotationSquareCircle` or the
 
 The convenience class `org.apache.pdfbox.util.Charsets` has been removed. Please use the java class `java.​nio.​charset.​StandardCharsets` instead.
 
+### Changes when needing all objects
+
+Instead of using the `COSDocument.getObjects()` to get all objects, use `COSDocument.getXrefTable().keySet()`
+to get all the object keys, and then call `COSDocument.getObjectFromPool()` with these keys.
+
 ## Changes in Common Functions 
 
 ### Interactive Forms
