@@ -113,27 +113,27 @@ For more reliable JPEG decoding the following part from the [TwelveMonkeys libra
 </dependency>
 ```
 
-### Public key encryption and signing
+### Public key encryption/decryption and signatures
 
-Public key encryption and signing PDFs requires the *bcprov*, *bcmail* and *bcpkix* libraries from the [Legion of the Bouncy Castle](http://www.bouncycastle.org/). These can be included in your Maven project using the following dependencies:
+Public key encryption/decryption and signing/verifying PDFs requires the *bcprov*, *bcmail* and *bcpkix* libraries from the [Legion of the Bouncy Castle](http://www.bouncycastle.org/). These can be included in your Maven project using the following dependencies:
 
 ```xml
 <dependency>
     <groupId>org.bouncycastle</groupId>
     <artifactId>bcprov-jdk18on</artifactId>
-    <version>1.78.1</version>
+    <version>1.81</version>
 </dependency>
 
 <dependency>
     <groupId>org.bouncycastle</groupId>
     <artifactId>bcmail-jdk18on</artifactId>
-    <version>1.78.1</version>
+    <version>1.81</version>
 </dependency>
 
 <dependency>
     <groupId>org.bouncycastle</groupId>
     <artifactId>bcpkix-jdk18on</artifactId>
-    <version>1.78.1</version>
+    <version>1.81</version>
 </dependency>
 ```
 <p class="alert alert-info">It is always a good idea to check for a newer version of the Bouncy Castle libraries. If you are using a more recent java version you might adapt the <b>artifactId</b> as well.</p>
