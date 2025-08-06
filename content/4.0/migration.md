@@ -75,3 +75,6 @@ Apache Commons Logging was replaced by Apache Log4j, some of the obvious reasons
 
 [PDFBOX-5695](https://issues.apache.org/jira/browse/PDFBOX-5695) provides more details about the reasons and the transition itself.
 
+### Overlay behavior different
+
+In 4.0 the real lower left is taken into account instead of (0,0), see [PDFBOX-6048](https://issues.apache.org/jira/browse/PDFBOX-6048).
