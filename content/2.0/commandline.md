@@ -111,6 +111,7 @@ Usage: ``java -jar pdfbox-app-2.y.z.jar OverlayPDF <input.pdf> [OPTIONS] <output
 | --- | --- | --- |
 | inputfile | | The PDF file to be overlayed. |
 | defaultOverlay.pdf  | | Default overlay file. |
+| -adjustRotation | | To rotate the overlay according to the rotation of the page (only when using default overlay) |
 | -odd oddPageOverlay.pdf| | Overlay file used for odd pages. |
 | -even evenPageOverlay.pdf| | Overlay file used for even pages. |
 | -first firstPageOverlay.pdf| | Overlay file used for the first page. |

@@ -121,6 +121,7 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar overlay [OPTIONS] -i=<infile> -o=<outfil
 
 | Command-Line Parameter | Default | Description |
 | --- | --- | --- |
+| -adjustRotation | | To rotate the overlay according to the rotation of the page (only when using default overlay) |
 | -default=\<defaultOverlay> | | the default overlay file. |
 | -even=\<evenPageOverlay>| | overlay file used for even pages. |
 | -first=\<firstPageOverlay| | overlay file used for the first page. |
