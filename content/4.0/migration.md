@@ -34,23 +34,24 @@ This guide describes the updates in Apache PDFBox 4.0 version. Use the informati
 to PDFBox 4.0. It provides information about the new, deprecated and unsupported features in this release.
 
 ## Java Versions
-PDFBox 4.0 requires at least Java 11. Testing has been done up to Java 20.
+
+PDFBox 4.0 requires at least Java 11.0.23. Testing has been done up to Java 25.
 
 ## Dependency Updates
 
 All libraries on which PDFBox depends are updated to their latest stable versions:
 
-- Bouncy Castle 1.77
-- Apache Log4j 2.22.1
-- picocli 4.7.5
+- Bouncy Castle 1.81
+- Apache Log4j 2.25.1
+- picocli 4.7.7
 
 For test support the libraries are updated to
 
-- JUnit 5.10.1
+- JUnit 5.13.4
 - JAI Image Core 1.4.0
 - JAI JPEG2000 1.4.0
 - Apache JBIG ImageIO Plugin 3.0.4
-- Apache Commons IO 2.15.0
+- Apache Commons IO 2.20.0
 
 ## General Changes for PDFBox 4.0
 
