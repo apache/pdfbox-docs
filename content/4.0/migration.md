@@ -35,7 +35,7 @@ to PDFBox 4.0. It provides information about the new, deprecated and unsupported
 
 ## Java Versions
 
-PDFBox 4.0 requires at least Java 11.0.23. Testing has been done up to Java 25.
+PDFBox 4.0 requires at least Java 11.0.23 (or 17.0.11). Testing has been done up to Java 25.
 
 ## Dependency Updates
 
