@@ -121,13 +121,13 @@ Public key encryption/decryption and signing/verifying PDFs requires the *bcprov
 <dependency>
     <groupId>org.bouncycastle</groupId>
     <artifactId>bcprov-jdk18on</artifactId>
-    <version>1.81</version>
+    <version>1.82</version>
 </dependency>
 
 <dependency>
     <groupId>org.bouncycastle</groupId>
     <artifactId>bcmail-jdk18on</artifactId>
-    <version>1.81</version>
+    <version>1.82</version>
 </dependency>
 
 <dependency>
