@@ -79,3 +79,9 @@ Apache Commons Logging was replaced by Apache Log4j, some of the obvious reasons
 ### Overlay behavior different
 
 In 4.0 the real lower left is taken into account instead of (0,0), see [PDFBOX-6048](https://issues.apache.org/jira/browse/PDFBOX-6048).
+
+### ICOSVisitor derived classes
+
+If you have implemented your own `ICOSVisitor` class, you'll have to implement the new `visitFromObject` method.
+The default implementation found in 3.0 has been moved to the `COSWriter` class.
+
