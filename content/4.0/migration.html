@@ -105,21 +105,21 @@ contribution to improve the guide.
 <p>This guide describes the updates in Apache PDFBox 4.0 version. Use the information provided to upgrade your PDFBox 3.x applications
 to PDFBox 4.0. It provides information about the new, deprecated and unsupported features in this release.</p>
 <h2 id="java-versions" tabindex="-1">Java Versions</h2>
-<p>PDFBox 4.0 requires at least Java 11. Testing has been done up to Java 20.</p>
+<p>PDFBox 4.0 requires at least Java 11.0.23 (or 17.0.11). Testing has been done up to Java 25.</p>
 <h2 id="dependency-updates" tabindex="-1">Dependency Updates</h2>
 <p>All libraries on which PDFBox depends are updated to their latest stable versions:</p>
 <ul>
-<li>Bouncy Castle 1.77</li>
-<li>Apache Log4j 2.22.1</li>
-<li>picocli 4.7.5</li>
+<li>Bouncy Castle 1.81</li>
+<li>Apache Log4j 2.25.1</li>
+<li>picocli 4.7.7</li>
 </ul>
 <p>For test support the libraries are updated to</p>
 <ul>
-<li>JUnit 5.10.1</li>
+<li>JUnit 5.13.4</li>
 <li>JAI Image Core 1.4.0</li>
 <li>JAI JPEG2000 1.4.0</li>
 <li>Apache JBIG ImageIO Plugin 3.0.4</li>
-<li>Apache Commons IO 2.15.0</li>
+<li>Apache Commons IO 2.20.0</li>
 </ul>
 <h2 id="general-changes-for-pdfbox-4.0" tabindex="-1">General Changes for PDFBox 4.0</h2>
 <p>This section explains the fundamental differences between PDFBox 4.0 and 3.x releases.</p>
@@ -137,6 +137,11 @@ was stream lined to fit their needs. But VeraPDF is still using the PDFBox parse
 <li>lambda logging support</li>
 </ul>
 <p><a href="https://issues.apache.org/jira/browse/PDFBOX-5695">PDFBOX-5695</a> provides more details about the reasons and the transition itself.</p>
+<h3 id="overlay-behavior-different" tabindex="-1">Overlay behavior different</h3>
+<p>In 4.0 the real lower left is taken into account instead of (0,0), see <a href="https://issues.apache.org/jira/browse/PDFBOX-6048">PDFBOX-6048</a>.</p>
+<h3 id="icosvisitor-derived-classes" tabindex="-1">ICOSVisitor derived classes</h3>
+<p>If you have implemented your own <code>ICOSVisitor</code> class, you'll have to implement the new <code>visitFromObject</code> method.
+The default implementation found in 3.0 has been moved to the <code>COSWriter</code> class.</p>
 
     </section>
     <aside>
@@ -162,6 +167,12 @@ was stream lined to fit their needs. But VeraPDF is still using the PDFBox parse
             		</li>
 
                     <li><a href="#switch-to-apache-log4j">Switch to Apache Log4j</a>
+            		</li>
+
+                    <li><a href="#overlay-behavior-different">Overlay behavior different</a>
+            		</li>
+
+                    <li><a href="#icosvisitor-derived-classes">ICOSVisitor derived classes</a>
             		</li>
                 </ol>
             		</li>
