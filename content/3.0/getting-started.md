@@ -32,7 +32,7 @@ To use the latest release you'll need to add the following dependency:
 <dependency>
   <groupId>org.apache.pdfbox</groupId>
   <artifactId>pdfbox</artifactId>
-  <version>3.0.5</version>
+  <version>3.0.6</version>
 </dependency>
 ```
 
