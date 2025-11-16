@@ -74,18 +74,88 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar encrypt [OPTIONS] -i=<infile>``
 
 ## ExtractImages
 
-This application will extract all images from the given PDF document.
+This application will export all images from the given PDF document.
 
 Usage: ``java -jar pdfbox-app-3.y.z.jar export:images [OPTIONS] -i=<infile>``
 
 | Command-Line Parameter | Description |
 | --- | --- |
 | -h, --help | Show help message and exit. |
-| -i, --input=\<infile> | The PDF file to decrypt. |
+| -i, --input=\<infile> | The PDF file to export images from. |
 | -noColorConvert | Images are extracted with their original colorspace if possible. |
 | -password=[\<password>] | Password for the PDF or certificate in keystore. |
 | -prefix=\<prefix> | the image prefix (default to pdf name). |
 | -useDirectJPEG | Forces the direct extraction of JPEG/JPX images regardless of colorspace or masking. |
+| -V, --version | Print version information and exit. |
+
+## Export XMP
+
+This application will export the xmp metadata stream from the given PDF document.
+
+Usage: ``java -jar pdfbox-app-3.y.z.jar export:xmp [OPTIONS] -i=<infile>``
+
+| Command-Line Parameter | Description |
+| --- | --- |
+| -h, --help | Show help message and exit. |
+| -i, --input=\<infile> | The PDF file to export from. |
+| -o, --output=\<outfile> | The exported xmp file. |
+| -console | Send text to console instead of file. |
+| -password=[\<password>] | Password for the PDF or certificate in keystore. |
+| -page=\<page> | The specific page to extract xmp from (1-based). |
+| -V, --version | Print version information and exit. |
+
+## Export FDF
+
+This application will export the AcroForm data from a PDF document to FDF.
+
+Usage: ``java -jar pdfbox-app-3.y.z.jar export:fdf [OPTIONS] -i=<infile>``
+
+| Command-Line Parameter | Description |
+| --- | --- |
+| -h, --help | Show help message and exit. |
+| -i, --input=\<infile> | The PDF file to export from. |
+| -o, --output=\<outfile> | The exported FDF file. |
+| -V, --version | Print version information and exit. |
+
+## Export XFDF
+
+This application will export the AcroForm data from a PDF document to XFDF.
+
+Usage: ``java -jar pdfbox-app-3.y.z.jar export:xfdf [OPTIONS] -i=<infile>``
+
+| Command-Line Parameter | Description |
+| --- | --- |
+| -h, --help | Show help message and exit. |
+| -i, --input=\<infile> | The PDF file to export from. |
+| -o, --output=\<outfile> | The exported XFDF file. |
+| -V, --version | Print version information and exit. |
+
+## Import FDF
+
+This application will import the AcroForm data from an FDF document to a PDF document.
+
+Usage: ``java -jar pdfbox-app-3.y.z.jar import:fdf [OPTIONS] -i=<infile>``
+
+| Command-Line Parameter | Description |
+| --- | --- |
+| -h, --help | Show help message and exit. |
+| -i, --input=\<infile> | The PDF file to import to. |
+| -o, --output=\<outfile> | The PDF file to save to; if omitted, the original file will be used. |
+| --data=\<infile> | the FDF data file to import from. |
+| -V, --version | Print version information and exit. |
+
+## Import XFDF
+
+This application will import the AcroForm data from an XFDF document to a PDF document.
+
+Usage: ``java -jar pdfbox-app-3.y.z.jar import:xfdf [OPTIONS] -i=<infile>``
+
+| Command-Line Parameter | Description |
+| --- | --- |
+| -h, --help | Show help message and exit. |
+| -i, --input=\<infile> | The PDF file to import to. |
+| -o, --output=\<outfile> | The PDF file to save to; if omitted, the original file will be used. |
+| --data=\<infile> | the XFDF data file to import from. |
 | -V, --version | Print version information and exit. |
 
 ## ExtractText ##
@@ -252,7 +322,7 @@ mediaSize and tray can only be combined when running on jdk 1.8.
 
 This application will create a PDF document from a text file.
 
-Usage: ``java -jar pdfbox-app-3.y.z.jar fromText [OPTIONS] -i=<infile> -o=<outfile>``
+Usage: ``java -jar pdfbox-app-3.y.z.jar fromtext [OPTIONS] -i=<infile> -o=<outfile>``
 
 | Command-Line Parameter | Default | Description |
 | --- | --- | --- |
@@ -285,6 +355,23 @@ The following font names can be used for the parameter ``standardFont``:
  - Times-Italic
  - Times-BoldItalic
  - ZapfDingbats
+
+## ImageToPDF ##
+
+This application will create a PDF document from image files.
+
+Usage: ``java -jar pdfbox-app-3.y.z.jar fromimage [OPTIONS] -i=<infile> -o=<outfile>``
+
+| Command-Line Parameter | Default | Description |
+| --- | --- | --- |
+| -h, --help | | Show help message and exit. |
+| -i, --input=\<infile> | | The image file(s) to convert. |
+| -landscape | | Set orientation to landscape. |
+| -o, --output=\<outfile> | | The generated PDF file. |
+| -pageSize=\<pageSize> | LETTER | The page size to use (LETTER, LEGAL, A0, A1, A2, A3, A4, A5, A6). |
+| -resize | | Resize to page size. |
+| -autoOrientation | | Set orientation depending of image proportion. |
+| -V, --version | | Print version information and exit. |
 
 ## WriteDecodedDoc ##
 
