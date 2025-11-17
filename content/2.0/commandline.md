@@ -29,7 +29,7 @@ PDFBox comes with a series of command-line utilities. They are available as stan
 See the [Dependencies](/2.0/dependencies.html) page for instructions on how to set your classpath in order to run
 PDFBox tools as Java applications.
 
-## Decrypt ##
+## Decryption ##
 
 This application will decrypt a PDF document.
 
@@ -45,7 +45,7 @@ Usage: ``java -jar pdfbox-app-2.y.z.jar Decrypt [OPTIONS] <inputfile> [outputfil
 | inputfile | The PDF file to decrypt. |
 | outputfile | The file to save the decrypted document to. If left blank then it will be the same as the input file. |
 
-## Encrypt ##
+## Encryption ##
 
 This application will encrypt a PDF document.
 
@@ -68,7 +68,7 @@ Usage: ``java -jar pdfbox-app-2.y.z.jar Encrypt [OPTIONS] <password> <inputfile>
 | inputfile |  |The PDF file to encrypt. |
 | outputfile |  |The file to save the encrypted document to. If left blank then it will be the same as the input file. |
 
-## ExtractImages
+## Extract images
 
 This application will extract all images from the given PDF document.
 
@@ -80,7 +80,7 @@ Usage: ``java -jar pdfbox-app-2.y.z.jar ExtractImages [OPTIONS] <inputfile> ``
 | -prefix | PDF name | Image prefix to use. |
 | -directJPEG | false | Forces the direct extraction of JPEG images regardless of colorspace. |
 
-## ExtractText ##
+## Extract text ##
 
 This application will extract all text from the given PDF document.
 
@@ -101,7 +101,7 @@ Usage: ``java -jar pdfbox-app-2.y.z.jar ExtractText [OPTIONS] <inputfile> [Text 
 | -startPage | 1 | The first page to extract, one based. |
 | -endPage | Integer.MAX_INT | The last page to extract, one based. |
 
-## OverlayPDF ##
+## Overlay ##
 
 This application will overlay one document with the content of another document
 
@@ -139,13 +139,13 @@ Usage: ``java -jar pdfbox-app-2.y.z.jar PDFDebugger [inputfile] ``
 | -viewstructure | | Activates the "view structure" view on startup. |
 | inputfile | | the name of an optional PDF file to open. |
 
-## PDFMerger ##
+## Merge documents ##
 
 This application will take a list of pdf documents and merge them, saving the result in a new document.
 
 Usage: ``java -jar pdfbox-app-2.y.z.jar PDFMerger <Source PDF files (2 ..n)> <Target PDF file>``
 
-## PDFSplit ##
+## Split documents ##
 
 This application will take an existing PDF document and split it into a number of new documents.
 
@@ -170,7 +170,7 @@ Examples:
  - PDFSplit -startPage 5 -endPage 10 sample_with_13_pages.pdf will provide a pdf containing all pages from 5 to 10 of the source pdf
  - PDFSplit -split 2 -startPage 5 -endPage 10 sample_with_13_pages.pdf will provide 3 pdfs containing all pages from 5 to 10 of the source pdf 2 pages each
 
-## PDFToImage ##
+## Convert PDF to images ##
 
 This application will create an image for every page in the PDF document.
 
@@ -189,7 +189,7 @@ Usage: ``java -jar pdfbox-app-2.y.z.jar PDFToImage [OPTIONS] <PDF file>``
 | -cropbox \<int\> \<int\> \<int\> \<int\> | | The page area to export. |
 | -time | | Prints timing information to stdout. |
 
-## PrintPDF ##
+## Print ##
 
 This application will send a pdf document to the printer.
 
@@ -214,7 +214,7 @@ Usage: ``java -jar pdfbox-app-2.y.z.jar PrintPDF [OPTIONS] <inputfile>``
 
 mediaSize and tray cannot be combined. Running the command without parameters will show a help text and all available settings for all printers.
 
-## TextToPDF ##
+## Create PDF from text ##
 
 This application will create a PDF document from a text file.
 
@@ -246,9 +246,9 @@ The following font names can be used for the parameter ``standardFont``:
  - Times-BoldItalic
  - ZapfDingbats
 
-## WriteDecodedDoc ##
+## Decompress ##
 
-An application to decompress PDF documents.
+An application to decompress PDF documents. This is helpful if wanting to inspect a PDF with a text editor.
 
 Usage: ``java -jar pdfbox-app-2.y.z.jar WriteDecodedDoc <input-file> <output-file>``
 

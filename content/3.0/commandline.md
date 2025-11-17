@@ -29,7 +29,7 @@ PDFBox comes with a series of command-line utilities. They are available as stan
 See the [Dependencies](/3.0/dependencies.html) page for instructions on how to set your classpath in order to run
 PDFBox tools as Java applications.
 
-## Decrypt ##
+## Decryption ##
 
 This application will decrypt a PDF document.
 
@@ -47,7 +47,7 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar decrypt [OPTIONS] -i=<infile>``
 | -password=[\<password>] | Password to the PDF or certificate in keystore. |
 | -V, --version | Print version information and exit. |
 
-## Encrypt ##
+## Encryption ##
 
 This application will encrypt a PDF document.
 
@@ -72,7 +72,7 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar encrypt [OPTIONS] -i=<infile>``
 | -U=[\<userPassword>] | | set the user password (ignored if certFile is set) |
 | -V, --version | | Print version information and exit. |
 
-## ExtractImages
+## Export images
 
 This application will export all images from the given PDF document.
 
@@ -158,7 +158,7 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar import:xfdf [OPTIONS] -i=<infile>``
 | --data=\<infile> | the XFDF data file to import from. |
 | -V, --version | Print version information and exit. |
 
-## ExtractText ##
+## Extract text ##
 
 This application will extract all text from the given PDF document.
 
@@ -183,7 +183,7 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar export:text [OPTIONS] -i=<infile>``
 | -startPage=\<startPage> | 1 | The first page to start extraction (1 based, inclusive) |
 | -V, --version | | Print version information and exit. |
 
-## OverlayPDF ##
+## Overlay ##
 
 This application will overlay one document with the content of another document
 
@@ -225,7 +225,7 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar debug [inputfile]``
 | -password=[\<password>] | password to derypt the PDF. |
 | -viewstructure | Activates the "view structure" view on startup. |
 
-## PDFMerger ##
+## Merge documents ##
 
 This application will take a list of pdf documents and merge them, saving the result in a new document.
 
@@ -239,7 +239,7 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar merge [-hV] -o=outfile -i=<infile> [-i=<
 | -V, --version | Print version information and exit. |
 
 
-## PDFSplit ##
+## Split documents ##
 
 This application will take an existing PDF document and split it into a number of new documents.
 
@@ -267,7 +267,7 @@ Examples:
  - PDFSplit -startPage=5 -endPage=10 -i=sample_with_13_pages.pdf will provide a pdf containing all pages from 5 to 10 of the source pdf
  - PDFSplit -split=2 -startPage=5 -endPage=10 -isample_with_13_pages.pdf will provide 3 pdfs containing all pages from 5 to 10 of the source pdf 2 pages each
 
-## PDFToImage ##
+## Convert PDF to images ##
 
 This application will create an image for every page in the PDF document.
 
@@ -291,7 +291,7 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar render [OPTIONS] -i=<infile>``
 | -time | | print timing information to stdout. |
 | -V, --version | | print version information and exit. |
 
-## PrintPDF ##
+## Print ##
 
 This application will send a pdf document to the printer.
 
@@ -318,7 +318,7 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar print [OPTIONS] -i=<infile>``
 
 mediaSize and tray can only be combined when running on jdk 1.8.
 
-## TextToPDF ##
+## Create PDF from text ##
 
 This application will create a PDF document from a text file.
 
@@ -356,7 +356,7 @@ The following font names can be used for the parameter ``standardFont``:
  - Times-BoldItalic
  - ZapfDingbats
 
-## ImageToPDF ##
+## Create PDF from images ##
 
 This application will create a PDF document from image files.
 
@@ -373,9 +373,9 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar fromimage [OPTIONS] -i=<infile> -o=<outf
 | -autoOrientation | | Set orientation depending of image proportion. |
 | -V, --version | | Print version information and exit. |
 
-## WriteDecodedDoc ##
+## Decompress ##
 
-An application to decompress PDF documents.
+An application to decompress PDF documents. This is helpful if wanting to inspect a PDF with a text editor.
 
 Usage: ``java -jar pdfbox-app-3.y.z.jar decode [OPTIONS] <input-file> <output-file>``
 
