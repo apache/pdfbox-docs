@@ -105,7 +105,7 @@ However there are some caveats: PDFBox will support only one language in a speci
 best to use a font that is specific enough, e.g. the [Lohit fonts](https://pagure.io/lohit).
 For example, the Mangal font is meant to be a Devangari font, but PDFBox will choose Bengali
 because that one is also claimed to be supported and is checked first.
-Since 3.0.3 it is possible to deactivate the feature by calling ``PDFont.setEnableGsub(false)``.
+Since 3.0.3 it is possible to deactivate the feature by calling ``TrueTypeFont.setEnableGsub(false)``.
 The features may be incomplete because we do not yet support all GSUB table formats,
 and we don't support GPOS at all. Text extraction may be incorrect.
 
