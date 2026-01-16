@@ -117,7 +117,7 @@
 <p>PDFBox comes with a series of command-line utilities. They are available as standard Java applications.</p>
 <p>See the <a href="/3.0/dependencies.html">Dependencies</a> page for instructions on how to set your classpath in order to run
 PDFBox tools as Java applications.</p>
-<h2 id="decrypt" tabindex="-1">Decrypt</h2>
+<h2 id="decryption" tabindex="-1">Decryption</h2>
 <p>This application will decrypt a PDF document.</p>
 <p>NOTE: You must have the owner password to decrypt the document!</p>
 <p>Usage: <code>java -jar pdfbox-app-3.y.z.jar decrypt [OPTIONS] -i=&lt;infile&gt;</code></p>
@@ -159,7 +159,7 @@ PDFBox tools as Java applications.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="encrypt" tabindex="-1">Encrypt</h2>
+<h2 id="encryption" tabindex="-1">Encryption</h2>
 <p>This application will encrypt a PDF document.</p>
 <p>Usage: <code>java -jar pdfbox-app-3.y.z.jar encrypt [OPTIONS] -i=&lt;infile&gt;</code></p>
 <table>
@@ -253,8 +253,8 @@ PDFBox tools as Java applications.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="extractimages" tabindex="-1">ExtractImages</h2>
-<p>This application will extract all images from the given PDF document.</p>
+<h2 id="export-images" tabindex="-1">Export images</h2>
+<p>This application will export all images from the given PDF document.</p>
 <p>Usage: <code>java -jar pdfbox-app-3.y.z.jar export:images [OPTIONS] -i=&lt;infile&gt;</code></p>
 <table>
 <thead>
@@ -270,7 +270,7 @@ PDFBox tools as Java applications.</p>
 </tr>
 <tr>
 <td>-i, --input=&lt;infile&gt;</td>
-<td>The PDF file to decrypt.</td>
+<td>The PDF file to export images from.</td>
 </tr>
 <tr>
 <td>-noColorConvert</td>
@@ -294,7 +294,172 @@ PDFBox tools as Java applications.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="extracttext" tabindex="-1">ExtractText</h2>
+<h2 id="export-xmp" tabindex="-1">Export XMP</h2>
+<p>This application will export the xmp metadata stream from the given PDF document.</p>
+<p>Usage: <code>java -jar pdfbox-app-3.y.z.jar export:xmp [OPTIONS] -i=&lt;infile&gt;</code></p>
+<table>
+<thead>
+<tr>
+<th>Command-Line Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-h, --help</td>
+<td>Show help message and exit.</td>
+</tr>
+<tr>
+<td>-i, --input=&lt;infile&gt;</td>
+<td>The PDF file to export from.</td>
+</tr>
+<tr>
+<td>-o, --output=&lt;outfile&gt;</td>
+<td>The exported xmp file.</td>
+</tr>
+<tr>
+<td>-console</td>
+<td>Send text to console instead of file.</td>
+</tr>
+<tr>
+<td>-password=[&lt;password&gt;]</td>
+<td>Password for the PDF or certificate in keystore.</td>
+</tr>
+<tr>
+<td>-page=&lt;page&gt;</td>
+<td>The specific page to extract xmp from (1-based).</td>
+</tr>
+<tr>
+<td>-V, --version</td>
+<td>Print version information and exit.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="export-fdf" tabindex="-1">Export FDF</h2>
+<p>This application will export the AcroForm data from a PDF document to FDF.</p>
+<p>Usage: <code>java -jar pdfbox-app-3.y.z.jar export:fdf [OPTIONS] -i=&lt;infile&gt;</code></p>
+<table>
+<thead>
+<tr>
+<th>Command-Line Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-h, --help</td>
+<td>Show help message and exit.</td>
+</tr>
+<tr>
+<td>-i, --input=&lt;infile&gt;</td>
+<td>The PDF file to export from.</td>
+</tr>
+<tr>
+<td>-o, --output=&lt;outfile&gt;</td>
+<td>The exported FDF file.</td>
+</tr>
+<tr>
+<td>-V, --version</td>
+<td>Print version information and exit.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="export-xfdf" tabindex="-1">Export XFDF</h2>
+<p>This application will export the AcroForm data from a PDF document to XFDF.</p>
+<p>Usage: <code>java -jar pdfbox-app-3.y.z.jar export:xfdf [OPTIONS] -i=&lt;infile&gt;</code></p>
+<table>
+<thead>
+<tr>
+<th>Command-Line Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-h, --help</td>
+<td>Show help message and exit.</td>
+</tr>
+<tr>
+<td>-i, --input=&lt;infile&gt;</td>
+<td>The PDF file to export from.</td>
+</tr>
+<tr>
+<td>-o, --output=&lt;outfile&gt;</td>
+<td>The exported XFDF file.</td>
+</tr>
+<tr>
+<td>-V, --version</td>
+<td>Print version information and exit.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="import-fdf" tabindex="-1">Import FDF</h2>
+<p>This application will import the AcroForm data from an FDF document to a PDF document.</p>
+<p>Usage: <code>java -jar pdfbox-app-3.y.z.jar import:fdf [OPTIONS] -i=&lt;infile&gt;</code></p>
+<table>
+<thead>
+<tr>
+<th>Command-Line Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-h, --help</td>
+<td>Show help message and exit.</td>
+</tr>
+<tr>
+<td>-i, --input=&lt;infile&gt;</td>
+<td>The PDF file to import to.</td>
+</tr>
+<tr>
+<td>-o, --output=&lt;outfile&gt;</td>
+<td>The PDF file to save to; if omitted, the original file will be used.</td>
+</tr>
+<tr>
+<td>--data=&lt;infile&gt;</td>
+<td>the FDF data file to import from.</td>
+</tr>
+<tr>
+<td>-V, --version</td>
+<td>Print version information and exit.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="import-xfdf" tabindex="-1">Import XFDF</h2>
+<p>This application will import the AcroForm data from an XFDF document to a PDF document.</p>
+<p>Usage: <code>java -jar pdfbox-app-3.y.z.jar import:xfdf [OPTIONS] -i=&lt;infile&gt;</code></p>
+<table>
+<thead>
+<tr>
+<th>Command-Line Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-h, --help</td>
+<td>Show help message and exit.</td>
+</tr>
+<tr>
+<td>-i, --input=&lt;infile&gt;</td>
+<td>The PDF file to import to.</td>
+</tr>
+<tr>
+<td>-o, --output=&lt;outfile&gt;</td>
+<td>The PDF file to save to; if omitted, the original file will be used.</td>
+</tr>
+<tr>
+<td>--data=&lt;infile&gt;</td>
+<td>the XFDF data file to import from.</td>
+</tr>
+<tr>
+<td>-V, --version</td>
+<td>Print version information and exit.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="extract-text" tabindex="-1">Extract text</h2>
 <p>This application will extract all text from the given PDF document.</p>
 <p>Usage: <code>java -jar pdfbox-app-3.y.z.jar export:text [OPTIONS] -i=&lt;infile&gt;</code></p>
 <table>
@@ -388,7 +553,7 @@ PDFBox tools as Java applications.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="overlaypdf" tabindex="-1">OverlayPDF</h2>
+<h2 id="overlay" tabindex="-1">Overlay</h2>
 <p>This application will overlay one document with the content of another document</p>
 <p>Usage: <code>java -jar pdfbox-app-3.y.z.jar overlay [OPTIONS] -i=&lt;infile&gt; -o=&lt;outfile&gt;</code></p>
 <table>
@@ -503,7 +668,7 @@ It is used as replacement for the PDFReader which was removed in 2.0.0.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="pdfmerger" tabindex="-1">PDFMerger</h2>
+<h2 id="merge-documents" tabindex="-1">Merge documents</h2>
 <p>This application will take a list of pdf documents and merge them, saving the result in a new document.</p>
 <p>Usage: <code>java -jar pdfbox-app-3.y.z.jar merge [-hV] -o=outfile -i=&lt;infile&gt; [-i=&lt;infile&gt;]</code></p>
 <table>
@@ -532,7 +697,7 @@ It is used as replacement for the PDFReader which was removed in 2.0.0.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="pdfsplit" tabindex="-1">PDFSplit</h2>
+<h2 id="split-documents" tabindex="-1">Split documents</h2>
 <p>This application will take an existing PDF document and split it into a number of new documents.</p>
 <p>Per default the resulting files will be named after the original filenmame with <code>-&lt;nr&gt;</code> appended before the suffix.
 To override the filename use the <code>outputPrefix</code> option.</p>
@@ -590,7 +755,7 @@ To override the filename use the <code>outputPrefix</code> option.</p>
 <li>PDFSplit -startPage=5 -endPage=10 -i=sample_with_13_pages.pdf will provide a pdf containing all pages from 5 to 10 of the source pdf</li>
 <li>PDFSplit -split=2 -startPage=5 -endPage=10 -isample_with_13_pages.pdf will provide 3 pdfs containing all pages from 5 to 10 of the source pdf 2 pages each</li>
 </ul>
-<h2 id="pdftoimage" tabindex="-1">PDFToImage</h2>
+<h2 id="convert-pdf-to-images" tabindex="-1">Convert PDF to images</h2>
 <p>This application will create an image for every page in the PDF document.</p>
 <p>Usage: <code>java -jar pdfbox-app-3.y.z.jar render [OPTIONS] -i=&lt;infile&gt;</code></p>
 <table>
@@ -679,7 +844,7 @@ To override the filename use the <code>outputPrefix</code> option.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="printpdf" tabindex="-1">PrintPDF</h2>
+<h2 id="print" tabindex="-1">Print</h2>
 <p>This application will send a pdf document to the printer.</p>
 <p class="alert alert-info">You must have the correct permissions to print the document!</p>
 <p>Usage: <code>java -jar pdfbox-app-3.y.z.jar print [OPTIONS] -i=&lt;infile&gt;</code></p>
@@ -765,9 +930,9 @@ To override the filename use the <code>outputPrefix</code> option.</p>
 </tbody>
 </table>
 <p>mediaSize and tray can only be combined when running on jdk 1.8.</p>
-<h2 id="texttopdf" tabindex="-1">TextToPDF</h2>
+<h2 id="create-pdf-from-text" tabindex="-1">Create PDF from text</h2>
 <p>This application will create a PDF document from a text file.</p>
-<p>Usage: <code>java -jar pdfbox-app-3.y.z.jar fromText [OPTIONS] -i=&lt;infile&gt; -o=&lt;outfile&gt;</code></p>
+<p>Usage: <code>java -jar pdfbox-app-3.y.z.jar fromtext [OPTIONS] -i=&lt;infile&gt; -o=&lt;outfile&gt;</code></p>
 <table>
 <thead>
 <tr>
@@ -856,8 +1021,62 @@ To override the filename use the <code>outputPrefix</code> option.</p>
 <li>Times-BoldItalic</li>
 <li>ZapfDingbats</li>
 </ul>
-<h2 id="writedecodeddoc" tabindex="-1">WriteDecodedDoc</h2>
-<p>An application to decompress PDF documents.</p>
+<h2 id="create-pdf-from-images" tabindex="-1">Create PDF from images</h2>
+<p>This application will create a PDF document from image files.</p>
+<p>Usage: <code>java -jar pdfbox-app-3.y.z.jar fromimage [OPTIONS] -i=&lt;infile&gt; -o=&lt;outfile&gt;</code></p>
+<table>
+<thead>
+<tr>
+<th>Command-Line Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-h, --help</td>
+<td></td>
+<td>Show help message and exit.</td>
+</tr>
+<tr>
+<td>-i, --input=&lt;infile&gt;</td>
+<td></td>
+<td>The image file(s) to convert.</td>
+</tr>
+<tr>
+<td>-landscape</td>
+<td></td>
+<td>Set orientation to landscape.</td>
+</tr>
+<tr>
+<td>-o, --output=&lt;outfile&gt;</td>
+<td></td>
+<td>The generated PDF file.</td>
+</tr>
+<tr>
+<td>-pageSize=&lt;pageSize&gt;</td>
+<td>LETTER</td>
+<td>The page size to use (LETTER, LEGAL, A0, A1, A2, A3, A4, A5, A6).</td>
+</tr>
+<tr>
+<td>-resize</td>
+<td></td>
+<td>Resize to page size.</td>
+</tr>
+<tr>
+<td>-autoOrientation</td>
+<td></td>
+<td>Set orientation depending of image proportion.</td>
+</tr>
+<tr>
+<td>-V, --version</td>
+<td></td>
+<td>Print version information and exit.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="decompress" tabindex="-1">Decompress</h2>
+<p>An application to decompress PDF documents. This is helpful if wanting to inspect a PDF with a text editor.</p>
 <p>Usage: <code>java -jar pdfbox-app-3.y.z.jar decode [OPTIONS] &lt;input-file&gt; &lt;output-file&gt;</code></p>
 <table>
 <thead>
@@ -904,40 +1123,58 @@ To override the filename use the <code>outputPrefix</code> option.</p>
       <nav class="toc">
                 <ol>
                     
-                    <li><a href="#decrypt">Decrypt</a>
+                    <li><a href="#decryption">Decryption</a>
             		</li>
 
-                    <li><a href="#encrypt">Encrypt</a>
+                    <li><a href="#encryption">Encryption</a>
             		</li>
 
-                    <li><a href="#extractimages">ExtractImages</a>
+                    <li><a href="#export-images">Export images</a>
             		</li>
 
-                    <li><a href="#extracttext">ExtractText</a>
+                    <li><a href="#export-xmp">Export XMP</a>
             		</li>
 
-                    <li><a href="#overlaypdf">OverlayPDF</a>
+                    <li><a href="#export-fdf">Export FDF</a>
+            		</li>
+
+                    <li><a href="#export-xfdf">Export XFDF</a>
+            		</li>
+
+                    <li><a href="#import-fdf">Import FDF</a>
+            		</li>
+
+                    <li><a href="#import-xfdf">Import XFDF</a>
+            		</li>
+
+                    <li><a href="#extract-text">Extract text</a>
+            		</li>
+
+                    <li><a href="#overlay">Overlay</a>
             		</li>
 
                     <li><a href="#pdfdebugger">PDFDebugger</a>
             		</li>
 
-                    <li><a href="#pdfmerger">PDFMerger</a>
+                    <li><a href="#merge-documents">Merge documents</a>
             		</li>
 
-                    <li><a href="#pdfsplit">PDFSplit</a>
+                    <li><a href="#split-documents">Split documents</a>
             		</li>
 
-                    <li><a href="#pdftoimage">PDFToImage</a>
+                    <li><a href="#convert-pdf-to-images">Convert PDF to images</a>
             		</li>
 
-                    <li><a href="#printpdf">PrintPDF</a>
+                    <li><a href="#print">Print</a>
             		</li>
 
-                    <li><a href="#texttopdf">TextToPDF</a>
+                    <li><a href="#create-pdf-from-text">Create PDF from text</a>
             		</li>
 
-                    <li><a href="#writedecodeddoc">WriteDecodedDoc</a>
+                    <li><a href="#create-pdf-from-images">Create PDF from images</a>
+            		</li>
+
+                    <li><a href="#decompress">Decompress</a>
             		</li>
                 </ol>
             </nav>
@@ -952,7 +1189,7 @@ To override the filename use the <code>outputPrefix</code> option.</p>
                 <!-- nothing in here on purpose -->
             </div>
             <div class="span9">
-                <p>Copyright © 2009&ndash;2025 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+                <p>Copyright © 2009&ndash;2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
                     <br>Apache PDFBox, PDFBox, Apache, the Apache logo and the Apache PDFBox project logos are trademarks of The Apache Software Foundation.</p>
             </div>
         </div>
