@@ -160,7 +160,7 @@ If a byte array is provided as source PDFBox uses `org.apache.pdfbox.io.RandomAc
 
 If a file is provided as source PDFBox uses `org.apache.pdfbox.io.RandomAccessReadBufferedFile` to wrap the source data using the in-memory cache as described above.
 
-### Changes in PDF Generation
+### Changes when generating PDF
 
 Complex scripts are now partially supported. This applies to latin ligatures and some indian scripts.
 This may result in slight visual differences even if you're not writing Indian text,
