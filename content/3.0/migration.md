@@ -160,6 +160,13 @@ If a byte array is provided as source PDFBox uses `org.apache.pdfbox.io.RandomAc
 
 If a file is provided as source PDFBox uses `org.apache.pdfbox.io.RandomAccessReadBufferedFile` to wrap the source data using the in-memory cache as described above.
 
+### Changes in PDF Generation
+
+Complex scripts are now partially supported. This applies to latin ligatures and some indian scripts.
+This may result in slight visual differences even if you're not writing Indian text,
+as shown in [PDFBOX-6149](https://issues.apache.org/jira/browse/PDFBOX-6149).
+If you do not want this to happen, deactivate the feature by calling ``TrueTypeFont.setEnableGsub(false)``.
+
 ### Changes when saving PDF
 
 #### Compressed saving by default
