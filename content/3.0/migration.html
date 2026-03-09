@@ -218,7 +218,7 @@ as they are treated to be of <strong>internal use only</strong>.</p>
 <li><em><strong>using a file as input</strong></em></li>
 </ul>
 <p>If a file is provided as source PDFBox uses <code>org.apache.pdfbox.io.RandomAccessReadBufferedFile</code> to wrap the source data using the in-memory cache as described above.</p>
-<h3 id="changes-in-pdf-generation" tabindex="-1">Changes in PDF Generation</h3>
+<h3 id="changes-when-generating-pdf" tabindex="-1">Changes when generating PDF</h3>
 <p>Complex scripts are now partially supported. This applies to latin ligatures and some indian scripts.
 This may result in slight visual differences even if you're not writing Indian text,
 as shown in <a href="https://issues.apache.org/jira/browse/PDFBOX-6149">PDFBOX-6149</a>.
@@ -320,7 +320,7 @@ of Adobe Reader. If you'd like to bypass this use <code>PDDocumentCatalog.getAcr
                     <li><a href="#use-loader-to-get-a-pdf-document">Use Loader to get a PDF document</a>
             		</li>
 
-                    <li><a href="#changes-in-pdf-generation">Changes in PDF Generation</a>
+                    <li><a href="#changes-when-generating-pdf">Changes when generating PDF</a>
             		</li>
 
                     <li><a href="#changes-when-saving-pdf">Changes when saving PDF</a>
