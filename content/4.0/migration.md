@@ -50,7 +50,7 @@ For test support the libraries are updated to
 - JUnit 5.13.4
 - JAI Image Core 1.4.0
 - JAI JPEG2000 1.4.0
-- Apache JBIG ImageIO Plugin 3.0.4
+- Apache JBIG ImageIO Plugin 3.0.5
 - Apache Commons IO 2.20.0
 
 ## General Changes for PDFBox 4.0

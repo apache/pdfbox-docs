@@ -49,7 +49,7 @@ For test support the libraries are updated to
 - JUnit 5.10.0
 - JAI Image Core 1.4.0
 - JAI JPEG2000 1.4.0
-- Apache JBIG ImageIO Plugin 3.0.4
+- Apache JBIG ImageIO Plugin 3.0.5
 - Apache Commons IO 2.13
 - Apache Log4j 2.20.0
 
