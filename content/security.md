@@ -26,8 +26,8 @@ title:   Security
 
 Processing untrusted PDFs is only supported to a point: malformed PDFs
 will not cause remote code execution or other privilege escalation
-problems. However, processing them they may cause unchecked exceptions
-such as `StackOverflowException` or `NullPointerException`, or even use
+problems. However, processing them may cause unchecked exceptions
+such as `StackOverflowError` or `NullPointerException`, or even use
 unexpected amounts of memory or cpu usage, including exhaustion of these.
 
 ## Reporting security issues
@@ -46,8 +46,22 @@ An overview of the vulnerability handling process is:
 
 * The reporter reports the vulnerability privately to [security@apache.org](security@apache.org).
 * The PDFBox security team works privately with the reporter to resolve the vulnerability.
-* The PDFBox project creates a new release of the package the vulnerabilty affects to deliver its fix.
+* The PDFBox project creates a new release of the package the vulnerability affects to deliver its fix.
 * The PDFBox project publicly announces the vulnerability and describes how to apply the fix.
 
 Committers should read [a more detailed description of the process](https://www.apache.org/security/committers.html). Reporters of security vulnerabilities may also find it useful
+
+## Known vulnerabilities
+
+| CVE | Summary | Affected versions | Fixed in |
+|-----|---------|-------------------|----------|
+| CVE-2021-31811 | OutOfMemory loading a crafted PDF | ≤ 2.0.23 | 2.0.24 |
+| CVE-2021-31812 | Infinite loop loading a crafted PDF | ≤ 2.0.23 | 2.0.24 |
+| CVE-2021-27807 | Infinite loop loading a crafted PDF | ≤ 2.0.22 | 2.0.23 |
+| CVE-2021-27906 | OutOfMemory loading a crafted PDF | ≤ 2.0.22 | 2.0.23 |
+| CVE-2019-0228  | XML External Entity vulnerability | 2.0.14 only | 2.0.15 |
+| CVE-2018-11797 | DoS in parser | 1.8.0–1.8.15, 2.0.0RC1–2.0.11 | 1.8.16 / 2.0.12 |
+| CVE-2018-8036  | DoS (OOM) in AFMParser | 1.8.0–1.8.14, 2.0.0RC1–2.0.10 | 1.8.15 / 2.0.11 |
+| CVE-2016-2175  | XML External Entity vulnerability | 1.8.0–1.8.11, 2.0.0 | 1.8.12 / 2.0.1 |
+
 
