@@ -158,8 +158,8 @@
 <h2 id="security-model" tabindex="-1">Security Model</h2>
 <p>Processing untrusted PDFs is only supported to a point: malformed PDFs
 will not cause remote code execution or other privilege escalation
-problems. However, processing them they may cause unchecked exceptions
-such as <code>StackOverflowException</code> or <code>NullPointerException</code>, or even use
+problems. However, processing them may cause unchecked exceptions
+such as <code>StackOverflowError</code> or <code>NullPointerException</code>, or even use
 unexpected amounts of memory or cpu usage, including exhaustion of these.</p>
 <h2 id="reporting-security-issues" tabindex="-1">Reporting security issues</h2>
 <p>The Apache Software Foundation takes a very active stance in eliminating and disclosing security problems against its products.</p>
@@ -171,10 +171,71 @@ unexpected amounts of memory or cpu usage, including exhaustion of these.</p>
 <ul>
 <li>The reporter reports the vulnerability privately to <a href="security@apache.org">security@apache.org</a>.</li>
 <li>The PDFBox security team works privately with the reporter to resolve the vulnerability.</li>
-<li>The PDFBox project creates a new release of the package the vulnerabilty affects to deliver its fix.</li>
+<li>The PDFBox project creates a new release of the package the vulnerability affects to deliver its fix.</li>
 <li>The PDFBox project publicly announces the vulnerability and describes how to apply the fix.</li>
 </ul>
 <p>Committers should read <a href="https://www.apache.org/security/committers.html">a more detailed description of the process</a>. Reporters of security vulnerabilities may also find it useful</p>
+<h2 id="known-vulnerabilities" tabindex="-1">Known vulnerabilities</h2>
+<table>
+<thead>
+<tr>
+<th>CVE</th>
+<th>Summary</th>
+<th>Affected versions</th>
+<th>Fixed in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE-2021-31811</td>
+<td>OutOfMemory loading a crafted PDF</td>
+<td>≤ 2.0.23</td>
+<td>2.0.24</td>
+</tr>
+<tr>
+<td>CVE-2021-31812</td>
+<td>Infinite loop loading a crafted PDF</td>
+<td>≤ 2.0.23</td>
+<td>2.0.24</td>
+</tr>
+<tr>
+<td>CVE-2021-27807</td>
+<td>Infinite loop loading a crafted PDF</td>
+<td>≤ 2.0.22</td>
+<td>2.0.23</td>
+</tr>
+<tr>
+<td>CVE-2021-27906</td>
+<td>OutOfMemory loading a crafted PDF</td>
+<td>≤ 2.0.22</td>
+<td>2.0.23</td>
+</tr>
+<tr>
+<td>CVE-2019-0228</td>
+<td>XML External Entity vulnerability</td>
+<td>2.0.14 only</td>
+<td>2.0.15</td>
+</tr>
+<tr>
+<td>CVE-2018-11797</td>
+<td>DoS in parser</td>
+<td>1.8.0–1.8.15, 2.0.0RC1–2.0.11</td>
+<td>1.8.16 / 2.0.12</td>
+</tr>
+<tr>
+<td>CVE-2018-8036</td>
+<td>DoS (OOM) in AFMParser</td>
+<td>1.8.0–1.8.14, 2.0.0RC1–2.0.10</td>
+<td>1.8.15 / 2.0.11</td>
+</tr>
+<tr>
+<td>CVE-2016-2175</td>
+<td>XML External Entity vulnerability</td>
+<td>1.8.0–1.8.11, 2.0.0</td>
+<td>1.8.12 / 2.0.1</td>
+</tr>
+</tbody>
+</table>
 
             </div>
         </div>
