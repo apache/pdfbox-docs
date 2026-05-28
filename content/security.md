@@ -55,6 +55,8 @@ Committers should read [a more detailed description of the process](https://www.
 
 | CVE | Summary | Affected versions | Fixed in |
 |-----|---------|-------------------|----------|
+| CVE-2026-33929 | Path traversal in ExtractEmbeddedFiles example (incomplete fix for CVE-2026-23907) ¹ | 2.0.24–2.0.36, 3.0.0–3.0.7 | 2.0.37 / 3.0.8 |
+| CVE-2026-23907 | Path traversal in ExtractEmbeddedFiles example ¹ | 2.0.24–2.0.35, 3.0.0–3.0.6 | 2.0.36 / 3.0.7 |
 | CVE-2021-31811 | OutOfMemory loading a crafted PDF | ≤ 2.0.23 | 2.0.24 |
 | CVE-2021-31812 | Infinite loop loading a crafted PDF | ≤ 2.0.23 | 2.0.24 |
 | CVE-2021-27807 | Infinite loop loading a crafted PDF | ≤ 2.0.22 | 2.0.23 |
@@ -64,4 +66,6 @@ Committers should read [a more detailed description of the process](https://www.
 | CVE-2018-8036  | DoS (OOM) in AFMParser | 1.8.0–1.8.14, 2.0.0RC1–2.0.10 | 1.8.15 / 2.0.11 |
 | CVE-2016-2175  | XML External Entity vulnerability | 1.8.0–1.8.11, 2.0.0 | 1.8.12 / 2.0.1 |
 
-
+¹ Affects the `examples` module only, not the core library. Users who copied
+`ExtractEmbeddedFiles` into production code should apply the fix from
+[GitHub PR 427](https://github.com/apache/pdfbox/pull/427/changes).
