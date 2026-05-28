@@ -187,6 +187,18 @@ unexpected amounts of memory or cpu usage, including exhaustion of these.</p>
 </thead>
 <tbody>
 <tr>
+<td>CVE-2026-33929</td>
+<td>Path traversal in ExtractEmbeddedFiles example (incomplete fix for CVE-2026-23907) ¹</td>
+<td>2.0.24–2.0.36, 3.0.0–3.0.7</td>
+<td>2.0.37 / 3.0.8</td>
+</tr>
+<tr>
+<td>CVE-2026-23907</td>
+<td>Path traversal in ExtractEmbeddedFiles example ¹</td>
+<td>2.0.24–2.0.35, 3.0.0–3.0.6</td>
+<td>2.0.36 / 3.0.7</td>
+</tr>
+<tr>
 <td>CVE-2021-31811</td>
 <td>OutOfMemory loading a crafted PDF</td>
 <td>≤ 2.0.23</td>
@@ -236,6 +248,9 @@ unexpected amounts of memory or cpu usage, including exhaustion of these.</p>
 </tr>
 </tbody>
 </table>
+<p>¹ Affects the <code>examples</code> module only, not the core library. Users who copied
+<code>ExtractEmbeddedFiles</code> into production code should apply the fix from
+<a href="https://github.com/apache/pdfbox/pull/427/changes">GitHub PR 427</a>.</p>
 
             </div>
         </div>
