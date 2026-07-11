@@ -37,6 +37,13 @@
     <release>
       <Version>
         <name>Apache PDFBox JBIG2 ImageIO Plugin</name>
+        <created>2026-07-11</created>
+        <revision>3.0.8</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
+        <name>Apache PDFBox JBIG2 ImageIO Plugin</name>
         <created>2026-05-20</created>
         <revision>3.0.5</revision>
       </Version>
