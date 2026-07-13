@@ -265,3 +265,14 @@ A workaround is to use a specific dpi for the constructors of ``PDFPageable`` an
 PDFBox will then render into an image
 and print that one. You should experiment with 300, 600 and 1200 dpi by trying it with
 the command-line app.
+
+## PDF signatures
+
+<a name="extradata"></a>
+
+### IOException: Extra data detected in stream
+
+This happens since 1.85 of the Bouncy Castle cryptographic library and is because PDF signatures
+are written into a larger zero-allocated area.
+The fix is to wrap the byte array retrieved from `PDSignature.getContents()`
+into a `ByteArrayInputStream` before passing it to the `CMSSignedData` constructor.
