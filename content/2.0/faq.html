@@ -284,6 +284,13 @@ and related issues for sample files.</p>
 PDFBox will then render into an image
 and print that one. You should experiment with 300, 600 and 1200 dpi by trying it with
 the command-line app.</p>
+<h2 id="pdf-signatures" tabindex="-1">PDF signatures</h2>
+<p><a name="extradata"></a></p>
+<h3 id="ioexception%3A-extra-data-detected-in-stream" tabindex="-1">IOException: Extra data detected in stream</h3>
+<p>This happens since 1.85 of the Bouncy Castle cryptographic library and is because PDF signatures
+are written into a larger zero-allocated area.
+The fix is to wrap the byte array retrieved from <code>PDSignature.getContents()</code>
+into a <code>ByteArrayInputStream</code> before passing it to the <code>CMSSignedData</code> constructor.</p>
 
     </section>
     <aside>
@@ -381,6 +388,15 @@ the command-line app.</p>
             		</li>
 
                     <li><a href="#why-is-printing-so-slow-for-some-pdfs%3F">Why is printing so slow for some PDFs?</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#pdf-signatures">PDF signatures</a>
+            
+                <ol>
+                    
+                    <li><a href="#ioexception%3A-extra-data-detected-in-stream">IOException: Extra data detected in stream</a>
             		</li>
                 </ol>
             		</li>
