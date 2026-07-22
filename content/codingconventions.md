@@ -113,6 +113,10 @@ Over the years the PDFBox project has come to adopt a number of coding conventio
 
 - Avoid unnecesary abstraction. While you're encouraged to avoid brittle designs, it's unlikey that an API designed for "future use" will have the correct API without any code which actually uses it.
 
+### AI
+
+If you're using AI to contribute code, read the [ASF Generative Tooling Guidance](https://www.apache.org/legal/generative-tooling.html) first.
+
 ### Example
 
 Here's an example of PDFBox's formatting style:
