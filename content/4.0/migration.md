@@ -85,6 +85,10 @@ In 4.0 the real lower left is taken into account instead of (0,0), see [PDFBOX-6
 If you have implemented your own `ICOSVisitor` class, you'll have to implement the new `visitFromObject` method.
 The default implementation found in 3.0 has been moved to the `COSWriter` class.
 
+### Signing
+
+``PDVisibleSigBuilder.appendRawCommands()`` has been renamed to ``writeRawCommands()`` and gets a ``PDStream`` instead of an ``OutputStream`` as first parameter.
+
 ### Deprecations
 
 In the PDIndexed class, the no parameter constructor and two methods were removed. Let us know if you need them.
