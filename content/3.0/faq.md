@@ -286,6 +286,10 @@ PDFBox will then render into an image
 and print that one. You should experiment with 300, 600 and 1200 dpi by trying it with
 the command-line app.
 
+### What to do if annotations aren't displayed properly?
+
+Try calling `PDAcroForm.refreshAppearances()` before rendering. This isn't done by default.
+
 ## PDF signatures
 
 <a name="extradata"></a>
