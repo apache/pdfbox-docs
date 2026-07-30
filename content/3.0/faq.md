@@ -109,13 +109,19 @@ Since 3.0.3 it is possible to deactivate the feature by calling ``TrueTypeFont.s
 The features may be incomplete because we do not yet support all GSUB table formats,
 and we don't support GPOS at all. Text extraction may be incorrect or incomplete.
 
-Starting with 3.0.9 there is a more advanced solution that uses awt (and HarfBuzz under the hood),
+Starting with 3.0.9 there is a more advanced solution that uses AWT (and HarfBuzz under the hood),
 and also supports kerning and optional latin ligatures. (Mandatory ligatures are always done)
 It requires JDK9 and higher (it will not fail with JDK8, but it will look bad except for the DIN 91379 characters).
 To use it, include the ``pdfbox-layout-awt`` artifact.
 To understand the usage, look at the source code of the ``GlyphLayoutHelloWorldAWT.java`` example.
 We tested the feature with Indian scripts, Thai and Arabic.
 Text extraction may be incorrect or incomplete.
+
+Another alternative is the new ``pdfbox-layout-fop`` artifact which is based on [Apache FOP](https://xmlgraphics.apache.org/fop/).
+It supports only DIN 91379 characters, some ligatures and arabic characters, but not
+complex scripts like in Indian languages. It is an alternative if one wants to avoid AWT but
+needs DIN 91379.
+To understand the usage, look at the source code of the ``GlyphLayoutHelloWorldFOP.java`` example.
 
 ### What fonts do I need on my system?
 
