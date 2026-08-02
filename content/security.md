@@ -27,7 +27,7 @@ title:   Security
 Processing untrusted PDFs is only supported to a point: malformed PDFs
 will not cause remote code execution or other privilege escalation
 problems. However, processing them may cause unchecked exceptions
-such as `StackOverflowError` or `NullPointerException`, or even use
+such as `StackOverflowError` or `NullPointerException`, infinite loops, or even use
 unexpected amounts of memory or cpu usage, including exhaustion of these.
 
 ## Reporting security issues
