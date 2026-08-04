@@ -29,6 +29,8 @@ will not cause remote code execution or other privilege escalation
 problems. However, processing them may cause unchecked exceptions
 such as `StackOverflowError` or `NullPointerException`, infinite loops, or even use
 unexpected amounts of memory or cpu usage, including exhaustion of these.
+See also our [Security Scan Guidance](https://github.com/apache/pdfbox/security/policy)
+for security scanners and vulnerability researchers.
 
 ## Reporting security issues
 
