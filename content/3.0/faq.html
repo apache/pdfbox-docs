@@ -156,7 +156,19 @@ For example, the Mangal font is meant to be a Devangari font, but PDFBox will ch
 because that one is also claimed to be supported and is checked first.
 Since 3.0.3 it is possible to deactivate the feature by calling <code>TrueTypeFont.setEnableGsub(false)</code>.
 The features may be incomplete because we do not yet support all GSUB table formats,
-and we don't support GPOS at all. Text extraction may be incorrect.</p>
+and we don't support GPOS at all. Text extraction may be incorrect or incomplete.</p>
+<p>Starting with 3.0.9 there is a more advanced solution that uses AWT (and HarfBuzz under the hood),
+and also supports kerning and optional latin ligatures. (Mandatory ligatures are always done)
+It requires JDK9 and higher (it will not fail with JDK8, but it will look bad except for the DIN 91379 characters).
+To use it, include the <code>pdfbox-layout-awt</code> artifact.
+To understand the usage, look at the source code of the <code>GlyphLayoutHelloWorldAWT.java</code> example.
+We tested the feature with Indian scripts, Thai and Arabic.
+Text extraction may be incorrect or incomplete.</p>
+<p>Another alternative is the new <code>pdfbox-layout-fop</code> artifact which is based on <a href="https://xmlgraphics.apache.org/fop/">Apache FOP</a>.
+It supports only DIN 91379 characters, some ligatures and arabic characters, but not
+complex scripts like in Indian languages. It is an alternative if one wants to avoid AWT but
+needs DIN 91379.
+To understand the usage, look at the source code of the <code>GlyphLayoutHelloWorldFOP.java</code> example.</p>
 <h3 id="what-fonts-do-i-need-on-my-system%3F" tabindex="-1">What fonts do I need on my system?</h3>
 <p>Windows or Mac usually have the minimum fonts needed. You do need fonts that aren't embedded in PDFs
 if these fonts are outside of the &quot;Standard 14 fonts&quot; set, and any specific fonts that you want
@@ -281,6 +293,8 @@ and related issues for sample files.</p>
 PDFBox will then render into an image
 and print that one. You should experiment with 300, 600 and 1200 dpi by trying it with
 the command-line app.</p>
+<h3 id="what-to-do-if-annotations-aren't-displayed-properly%3F" tabindex="-1">What to do if annotations aren't displayed properly?</h3>
+<p>Try calling <code>PDAcroForm.refreshAppearances()</code> before rendering. This isn't done by default.</p>
 <h2 id="pdf-signatures" tabindex="-1">PDF signatures</h2>
 <p><a name="extradata"></a></p>
 <h3 id="ioexception%3A-extra-data-detected-in-stream" tabindex="-1">IOException: Extra data detected in stream</h3>
@@ -388,6 +402,9 @@ into a <code>ByteArrayInputStream</code> before passing it to the <code>CMSSigne
             		</li>
 
                     <li><a href="#why-is-printing-so-slow-for-some-pdfs%3F">Why is printing so slow for some PDFs?</a>
+            		</li>
+
+                    <li><a href="#what-to-do-if-annotations-aren't-displayed-properly%3F">What to do if annotations aren't displayed properly?</a>
             		</li>
                 </ol>
             		</li>

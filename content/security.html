@@ -159,8 +159,10 @@
 <p>Processing untrusted PDFs is only supported to a point: malformed PDFs
 will not cause remote code execution or other privilege escalation
 problems. However, processing them may cause unchecked exceptions
-such as <code>StackOverflowError</code> or <code>NullPointerException</code>, or even use
-unexpected amounts of memory or cpu usage, including exhaustion of these.</p>
+such as <code>StackOverflowError</code> or <code>NullPointerException</code>, infinite loops, or even use
+unexpected amounts of memory or cpu usage, including exhaustion of these.
+See also our <a href="https://github.com/apache/pdfbox/security/policy">Security Scan Guidance</a>
+for security scanners and vulnerability researchers.</p>
 <h2 id="reporting-security-issues" tabindex="-1">Reporting security issues</h2>
 <p>The Apache Software Foundation takes a very active stance in eliminating and disclosing security problems against its products.</p>
 <p>We strongly encourage folks to report such problems to our private security mailing list first, before disclosing them in a public forum.</p>

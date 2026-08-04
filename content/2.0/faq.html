@@ -284,6 +284,8 @@ and related issues for sample files.</p>
 PDFBox will then render into an image
 and print that one. You should experiment with 300, 600 and 1200 dpi by trying it with
 the command-line app.</p>
+<h3 id="what-to-do-if-annotations-aren't-displayed-properly%3F" tabindex="-1">What to do if annotations aren't displayed properly?</h3>
+<p>Try calling <code>PDAcroForm.refreshAppearances()</code> before rendering. This isn't done by default.</p>
 <h2 id="pdf-signatures" tabindex="-1">PDF signatures</h2>
 <p><a name="extradata"></a></p>
 <h3 id="ioexception%3A-extra-data-detected-in-stream" tabindex="-1">IOException: Extra data detected in stream</h3>
@@ -388,6 +390,9 @@ into a <code>ByteArrayInputStream</code> before passing it to the <code>CMSSigne
             		</li>
 
                     <li><a href="#why-is-printing-so-slow-for-some-pdfs%3F">Why is printing so slow for some PDFs?</a>
+            		</li>
+
+                    <li><a href="#what-to-do-if-annotations-aren't-displayed-properly%3F">What to do if annotations aren't displayed properly?</a>
             		</li>
                 </ol>
             		</li>
