@@ -280,3 +280,14 @@ This happens since 1.85 of the Bouncy Castle cryptographic library and is becaus
 are written into a larger zero-allocated area.
 The fix is to wrap the byte array retrieved from `PDSignature.getContents()`
 into a `ByteArrayInputStream` before passing it to the `CMSSignedData` constructor.
+
+### How can I check signed PDFs?
+
+Parsing does not include the verification or the validation of electronic signatures.
+This applies to certification constraints (DocMDP) and usage rights (UR3) as well.
+The ShowSignature example does a partial verification and validation,
+but it can't detect allowed or forbidden changes, annd UR3 isn't supported at all.
+Certificates are checked up to the root certificate,
+but it does not check the root certificate against AATL and EUTL.
+This is mostly a developer tool to create your own.
+The gold standard is Adobe Reader.
