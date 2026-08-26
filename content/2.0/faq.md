@@ -290,4 +290,3 @@ but it can't detect allowed or forbidden changes, annd UR3 isn't supported at al
 Certificates are checked up to the root certificate,
 but it does not check the root certificate against AATL and EUTL.
 This is mostly a developer tool to create your own.
-The gold standard is Adobe Reader.
