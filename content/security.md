@@ -24,13 +24,59 @@ title:   Security
 
 ## Security Model
 
-Processing untrusted PDFs is only supported to a point: malformed PDFs
-will not cause remote code execution or other privilege escalation
-problems. However, processing them may cause unchecked exceptions
-such as `StackOverflowError` or `NullPointerException`, infinite loops, or even use
-unexpected amounts of memory or cpu usage, including exhaustion of these.
-See also our [Security Scan Guidance](https://github.com/apache/pdfbox/security/policy)
-for security scanners and vulnerability researchers.
+Processing untrusted PDFs is supported, but only to a defined extent. See
+our [Security Scan Guidance](https://github.com/apache/pdfbox/security/policy)
+for the full threat model, aimed at automated scanners and vulnerability
+researchers.
+
+### In scope
+
+Please report security issues privately if processing an untrusted PDF can
+result in:
+
+* remote code execution;
+* privilege escalation or escape from the application's or execution
+  environment's intended security boundary; or
+* unauthorized access to data that the application or PDFBox would not
+  otherwise be permitted to access.
+
+These issues are considered security vulnerabilities when the security
+impact is a direct result of processing the untrusted PDF.
+
+### Not vulnerabilities under this policy
+
+Malformed or specially crafted PDFs may cause unchecked exceptions such as
+`NullPointerException` or `StackOverflowError`, infinite loops, or resource
+consumption that is disproportionate to the size or complexity of the input.
+
+These behaviors may be bugs or robustness limitations, but they are not
+considered security vulnerabilities under this policy. In particular,
+denial-of-service conditions that are limited to excessive CPU, memory,
+recursion, or processing time are outside the security scope described here.
+
+Applications that process untrusted documents at scale should apply
+appropriate timeouts, memory limits, resource controls, and sandboxing.
+
+### Document validation
+
+PDFBox is a low-level library. It does not automatically validate
+signatures, permissions, PDF/A or other standards conformance, or similar
+document-level properties unless the application explicitly invokes the
+relevant PDFBox verification API.
+
+The absence of such validation is not itself a vulnerability. However, an
+incorrect security-relevant result from an explicitly invoked PDFBox
+verification API is within scope.
+
+### Encryption and signatures
+
+PDF encryption and signatures rely on the Java Cryptography Architecture
+(JCA) and Bouncy Castle. Vulnerabilities in those underlying cryptographic
+libraries should be reported to their respective upstream projects.
+
+Incorrect use of those libraries within PDFBox remains in scope. Examples
+include a flawed key derivation implementation or a permission bypass caused
+by PDFBox's handling of encryption or signatures.
 
 ## Reporting security issues
 
