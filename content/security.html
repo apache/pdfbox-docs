@@ -156,13 +156,47 @@
             <div class="col-xs-12 col-sm-9">
                 <h1 id="security" tabindex="-1">Security</h1>
 <h2 id="security-model" tabindex="-1">Security Model</h2>
-<p>Processing untrusted PDFs is only supported to a point: malformed PDFs
-will not cause remote code execution or other privilege escalation
-problems. However, processing them may cause unchecked exceptions
-such as <code>StackOverflowError</code> or <code>NullPointerException</code>, infinite loops, or even use
-unexpected amounts of memory or cpu usage, including exhaustion of these.
-See also our <a href="https://github.com/apache/pdfbox/security/policy">Security Scan Guidance</a>
-for security scanners and vulnerability researchers.</p>
+<p>Processing untrusted PDFs is supported, but only to a defined extent. See
+our <a href="https://github.com/apache/pdfbox/security/policy">Security Scan Guidance</a>
+for the full threat model, aimed at automated scanners and vulnerability
+researchers.</p>
+<h3 id="in-scope" tabindex="-1">In scope</h3>
+<p>Please report security issues privately if processing an untrusted PDF can
+result in:</p>
+<ul>
+<li>remote code execution;</li>
+<li>privilege escalation or escape from the application's or execution
+environment's intended security boundary; or</li>
+<li>unauthorized access to data that the application or PDFBox would not
+otherwise be permitted to access.</li>
+</ul>
+<p>These issues are considered security vulnerabilities when the security
+impact is a direct result of processing the untrusted PDF.</p>
+<h3 id="not-vulnerabilities-under-this-policy" tabindex="-1">Not vulnerabilities under this policy</h3>
+<p>Malformed or specially crafted PDFs may cause unchecked exceptions such as
+<code>NullPointerException</code> or <code>StackOverflowError</code>, infinite loops, or resource
+consumption that is disproportionate to the size or complexity of the input.</p>
+<p>These behaviors may be bugs or robustness limitations, but they are not
+considered security vulnerabilities under this policy. In particular,
+denial-of-service conditions that are limited to excessive CPU, memory,
+recursion, or processing time are outside the security scope described here.</p>
+<p>Applications that process untrusted documents at scale should apply
+appropriate timeouts, memory limits, resource controls, and sandboxing.</p>
+<h3 id="document-validation" tabindex="-1">Document validation</h3>
+<p>PDFBox is a low-level library. It does not automatically validate
+signatures, permissions, PDF/A or other standards conformance, or similar
+document-level properties unless the application explicitly invokes the
+relevant PDFBox verification API.</p>
+<p>The absence of such validation is not itself a vulnerability. However, an
+incorrect security-relevant result from an explicitly invoked PDFBox
+verification API is within scope.</p>
+<h3 id="encryption-and-signatures" tabindex="-1">Encryption and signatures</h3>
+<p>PDF encryption and signatures rely on the Java Cryptography Architecture
+(JCA) and Bouncy Castle. Vulnerabilities in those underlying cryptographic
+libraries should be reported to their respective upstream projects.</p>
+<p>Incorrect use of those libraries within PDFBox remains in scope. Examples
+include a flawed key derivation implementation or a permission bypass caused
+by PDFBox's handling of encryption or signatures.</p>
 <h2 id="reporting-security-issues" tabindex="-1">Reporting security issues</h2>
 <p>The Apache Software Foundation takes a very active stance in eliminating and disclosing security problems against its products.</p>
 <p>We strongly encourage folks to report such problems to our private security mailing list first, before disclosing them in a public forum.</p>
