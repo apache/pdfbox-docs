@@ -164,6 +164,7 @@ PDFBox being a low level PDF library provides the APIs to create page content su
 But PDFBox is the foundation of some projects which might help in that case. This includes projects such as
 - [Boxable](http://dhorions.github.io/boxable/)
 - [BoxTable](https://github.com/errt/BoxTable)
+- [dynamic-pdf-tables](https://github.com/the13thclown/dynamic-pdf-tables)
 - [easytable](https://github.com/vandeseer/easytable)
 - [pdfbox-layout](https://github.com/ralfstuckert/pdfbox-layout)
 - [PdfLayoutManager](https://github.com/GlenKPeterson/PdfLayoutManager)
