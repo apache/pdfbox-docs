@@ -281,6 +281,7 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar render [OPTIONS] -i=<infile>``
 | -endPage=\<endPage> | Integer.MAX_INT | The last page to convert, (one based, inclusive). |
 | -format=\<imageFormat> | jpg | The image file format. |
 | -h, --help | | Show help message and exit. |
+| -hinting | | Activate TrueType hinting. |
 | -i, --input=\<infile> | | the PDF file to convert. |
 | -page=\<page> | | The only page to extract (1-based). |
 | -password=[\<password>] | | Password for the PDF.
@@ -305,6 +306,7 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar print [OPTIONS] -i=<infile>``
 | -dpi=\<dpi> | | render into intermediate image with specific dpi and then print.  Use -1 for automatic detection of printer resolution. |
 | -duplex=\<duplex> | DOCUMENT | print using duplex (SIMPLEX, DUPLEX, TUMBLE, DOCUMENT). |
 | -h, --help | | Show help message and exit. |
+| -hinting | | Activate TrueType hinting. |
 | -i, --input=\<infile> | | the PDF file to print. |
 | -listPrinters | | list all printers with available settings |
 | -mediaSize=\<mediaSize> | | print using media size name. |
@@ -313,6 +315,7 @@ Usage: ``java -jar pdfbox-app-3.y.z.jar print [OPTIONS] -i=<infile>``
 | -password=[\<password>] | | Password for the PDF.
 | -printerName=\<printerName> | | print to specified printer. |
 | -silentPrint | | print without printer dialog box. |
+| -subsampling | | activate subsampling (for PDFs with huge images). |
 | -tray=\<tray> | | print using tray. |
 | -V, --version | | print version information and exit. |
 
