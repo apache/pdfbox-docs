@@ -296,6 +296,14 @@ the command-line app.
 
 Try calling `PDAcroForm.refreshAppearances()` before rendering. This isn't done by default.
 
+### Why are some Chinese fonts rendered poorly?
+
+Certain Chinese fonts (MingLiu and DFKai-SB) render poorly because they need
+[hinting](https://en.wikipedia.org/wiki/Font_hinting) at any size.
+The problem has been described in [PDFBOX-3293](https://issues.apache.org/jira/browse/PDFBOX-3293)
+and has been fixed in version 3.0.9. Hinting can be enabled in the ``PDFRenderer`` class and in the
+command line tools.
+
 ## PDF signatures
 
 <a name="extradata"></a>
