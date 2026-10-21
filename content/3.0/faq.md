@@ -118,9 +118,8 @@ We tested the feature with Indian scripts, Thai and Arabic.
 Text extraction may be incorrect or incomplete.
 
 Another alternative is the new ``pdfbox-layout-fop`` artifact which is based on [Apache FOP](https://xmlgraphics.apache.org/fop/).
-It supports only DIN 91379 characters, some ligatures and arabic characters, but not
-complex scripts like in Indian languages. It is an alternative if one wants to avoid AWT but
-needs DIN 91379.
+It supports only DIN 91379 characters, some ligatures and arabic characters, but not on all
+complex scripts. It is an alternative if one wants to avoid AWT but needs DIN 91379.
 To understand the usage, look at the source code of the ``GlyphLayoutHelloWorldFOP.java`` example.
 
 ### What fonts do I need on my system?
